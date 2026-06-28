@@ -141,11 +141,10 @@ OpenCLI 发布、远程部署、云端上传都属于 L4 或更高，必须有�
 
 ## 当前最高优先级任务
 
-1. **S04-T01**: Build semantic graph from content metadata
-2. **S04-T02**: Add semantic graph validation
-3. **S04-T03**: Implement 2D graph browser MVP
-4. **S04-T04**: Evaluate 3D graph feasibility
-5. **S04-T05**: Define experimental input guardrails
+1. **S04-T03**: Implement 2D graph browser MVP
+2. **S04-T04**: Evaluate 3D graph feasibility
+3. **S04-T05**: Define experimental input guardrails
+4. S05 Polish remains queued until S04 is complete
 
 ## 决策记录
 

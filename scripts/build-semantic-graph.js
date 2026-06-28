@@ -60,6 +60,25 @@ function main() {
   const nodes = [];
   const edges = [];
   const slugToId = new Map(); // 用于 wiki links 匹配
+  const sourceSummary = {
+    content_sources: {
+      resume: 0,
+      notes: 0,
+      projects: 0,
+      decks: 0
+    },
+    node_types: {
+      resume: 0,
+      note: 0,
+      project: 0,
+      deck: 0
+    },
+    edge_types: {
+      link: 0,
+      owner: 0,
+      tag_overlap: 0
+    }
+  };
 
   // 1. 扫描 Resume
   const resumePath = join(CONTENT_DIR, 'resume/resume.yaml');
@@ -78,6 +97,7 @@ function main() {
           metadata: { summary: resumeData.basics.summary },
           tags: []
         });
+        sourceSummary.content_sources.resume = 1;
 
         // 收集技能词和简历项目词用于标签碰撞
         const skillsKeywords = (resumeData.skills || []).flatMap(s => s.keywords || []);
@@ -96,6 +116,7 @@ function main() {
   const noteLinks = []; // 暂存出度
   if (existsSync(notesDir)) {
     const noteFiles = readdirSync(notesDir).filter(f => f.endsWith('.md'));
+    sourceSummary.content_sources.notes = noteFiles.length;
     for (const file of noteFiles) {
       const filePath = join(notesDir, file);
       const slug = slugify(basename(file, '.md'));
@@ -125,6 +146,7 @@ function main() {
   const projectLinks = [];
   if (existsSync(projectsDir)) {
     const projectFiles = readdirSync(projectsDir).filter(f => f.endsWith('.md'));
+    sourceSummary.content_sources.projects = projectFiles.length;
     for (const file of projectFiles) {
       const filePath = join(projectsDir, file);
       const slug = slugify(basename(file, '.md'));
@@ -154,6 +176,7 @@ function main() {
   const deckLinks = [];
   if (existsSync(decksDir)) {
     const deckFiles = readdirSync(decksDir).filter(f => f.endsWith('.md'));
+    sourceSummary.content_sources.decks = deckFiles.length;
     for (const file of deckFiles) {
       const filePath = join(decksDir, file);
       const slug = slugify(basename(file, '.md'));
@@ -256,6 +279,12 @@ function main() {
     type,
     metadata
   }));
+  cleanNodes.forEach((node) => {
+    sourceSummary.node_types[node.type] = (sourceSummary.node_types[node.type] || 0) + 1;
+  });
+  edges.forEach((edge) => {
+    sourceSummary.edge_types[edge.type] = (sourceSummary.edge_types[edge.type] || 0) + 1;
+  });
 
   const graph = {
     nodes: cleanNodes,
@@ -264,7 +293,8 @@ function main() {
       generated_at: new Date().toISOString(),
       version: '0.1.0',
       total_nodes: cleanNodes.length,
-      total_edges: edges.length
+      total_edges: edges.length,
+      source_summary: sourceSummary
     }
   };
 

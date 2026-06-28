@@ -79,17 +79,51 @@ export function validateResumeAsset(resume) {
 }
 
 export function validateSemanticGraph(graph) {
+  const allowedNodeTypes = new Set(['note', 'project', 'deck', 'resume']);
+  const allowedEdgeTypes = new Set(['link', 'owner', 'tag_overlap']);
+
+  assert(graph && typeof graph === 'object', 'Semantic graph must be an object');
   assert(Array.isArray(graph.nodes), 'Semantic graph nodes must be an array');
   assert(Array.isArray(graph.edges), 'Semantic graph edges must be an array');
   assert(graph.metadata, 'Semantic graph metadata is required');
+  assert(typeof graph.metadata.generated_at === 'string', 'Semantic graph metadata missing generated_at');
+  assert(!Number.isNaN(Date.parse(graph.metadata.generated_at)), 'Semantic graph generated_at must be an ISO timestamp');
   assert(graph.metadata.total_nodes === graph.nodes.length, 'Semantic graph total_nodes mismatch');
   assert(graph.metadata.total_edges === graph.edges.length, 'Semantic graph total_edges mismatch');
+  assert(graph.metadata.source_summary && typeof graph.metadata.source_summary === 'object', 'Semantic graph metadata missing source_summary');
 
-  const nodeIds = new Set(graph.nodes.map((node) => node.id));
-  assert(nodeIds.size === graph.nodes.length, 'Semantic graph contains duplicate node ids');
+  const nodeIds = new Set();
+  const nodeTypeCounts = {};
+  for (const node of graph.nodes) {
+    assert(node && typeof node === 'object', 'Semantic graph node must be an object');
+    assert(typeof node.id === 'string' && node.id.trim(), 'Semantic graph node missing id');
+    assert(!nodeIds.has(node.id), `Semantic graph contains duplicate node id: ${node.id}`);
+    nodeIds.add(node.id);
+    assert(typeof node.label === 'string' && node.label.trim(), `Semantic graph node ${node.id} missing label`);
+    assert(allowedNodeTypes.has(node.type), `Semantic graph node ${node.id} has invalid type: ${node.type}`);
+    assert(node.metadata && typeof node.metadata === 'object' && !Array.isArray(node.metadata), `Semantic graph node ${node.id} metadata must be an object`);
+    nodeTypeCounts[node.type] = (nodeTypeCounts[node.type] || 0) + 1;
+  }
+
+  const edgeTypeCounts = {};
   for (const edge of graph.edges) {
+    assert(edge && typeof edge === 'object', 'Semantic graph edge must be an object');
     assert(nodeIds.has(edge.source), `Semantic graph edge source missing: ${edge.source}`);
     assert(nodeIds.has(edge.target), `Semantic graph edge target missing: ${edge.target}`);
+    assert(edge.source !== edge.target, `Semantic graph edge cannot point to itself: ${edge.source}`);
+    assert(typeof edge.weight === 'number' && edge.weight >= 0 && edge.weight <= 1, `Semantic graph edge weight out of range: ${edge.source} -> ${edge.target}`);
+    assert(allowedEdgeTypes.has(edge.type), `Semantic graph edge has invalid type: ${edge.type}`);
+    edgeTypeCounts[edge.type] = (edgeTypeCounts[edge.type] || 0) + 1;
+  }
+
+  const sourceSummary = graph.metadata.source_summary;
+  assert(sourceSummary.node_types && typeof sourceSummary.node_types === 'object', 'Semantic graph source_summary missing node_types');
+  assert(sourceSummary.edge_types && typeof sourceSummary.edge_types === 'object', 'Semantic graph source_summary missing edge_types');
+  for (const type of allowedNodeTypes) {
+    assert((sourceSummary.node_types[type] || 0) === (nodeTypeCounts[type] || 0), `Semantic graph source_summary node_types mismatch for ${type}`);
+  }
+  for (const type of allowedEdgeTypes) {
+    assert((sourceSummary.edge_types[type] || 0) === (edgeTypeCounts[type] || 0), `Semantic graph source_summary edge_types mismatch for ${type}`);
   }
 }
 

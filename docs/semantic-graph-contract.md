@@ -46,3 +46,39 @@ Edges are generated dynamically at build time utilizing the following determinis
 3.  **Tag / Keyword Overlap (`type: "tag_overlap"`, weight: `0.25 * overlap_count`)**:
     - Triggered when two distinct nodes share tags or keywords.
     - Each shared tag increases the weight by `0.25`, capped at a maximum weight of `1.0`.
+
+---
+
+## 4. Metadata Schema
+
+The graph root contains a `metadata` object with the following fields:
+
+| Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `generated_at` | String | Yes | ISO timestamp for the graph build. |
+| `version` | String | Yes | Graph contract version. |
+| `total_nodes` | Number | Yes | Must equal `nodes.length`. |
+| `total_edges` | Number | Yes | Must equal `edges.length`. |
+| `source_summary` | Object | Yes | Build-time source, node type, and edge type counts. |
+
+`source_summary` contains:
+
+| Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `content_sources` | Object | Yes | Number of source files/entities scanned for resume, notes, projects, and decks. |
+| `node_types` | Object | Yes | Counts for `resume`, `note`, `project`, and `deck` nodes. |
+| `edge_types` | Object | Yes | Counts for `link`, `owner`, and `tag_overlap` edges. |
+
+---
+
+## 5. Validation Rules
+
+`scripts/validate-pipeline.js` validates the semantic graph during `npm run validate:pipeline` and `npm run verify`.
+
+- Reject duplicate node IDs.
+- Reject edges whose `source` or `target` does not exist in `nodes`.
+- Reject self-referential edges.
+- Reject unsupported node or edge types.
+- Reject edge weights outside the inclusive `0.0` to `1.0` range.
+- Require a valid `metadata.generated_at` timestamp.
+- Require `metadata.source_summary.node_types` and `metadata.source_summary.edge_types` to match the actual graph.

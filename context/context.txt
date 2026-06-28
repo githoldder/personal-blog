@@ -31,11 +31,24 @@
 - **Verification**: Run `env ASTRO_TELEMETRY_DISABLED=1 npm run build` successfully. All builders ran and compiled 6 static routes without issue.
 - **Status**: S03-T06 marked done; S03-T07 (Add pipeline regression checks) is active.
 
-## 2026-06-28T13:52:00+08:00
-- **Action**: Completed S03-T07 pipeline regression checks.
+## 2026-06-28T14:41:00+08:00
+- **Action**: Completed S04-T01: Build semantic graph from content metadata.
 - **Progress Details**:
-  1. Added `scripts/validate-pipeline.js` to validate generated resume JSON, deck manifest, semantic graph structure, and notes/projects frontmatter contracts.
-  2. Added `tests/pipeline-regression.test.js` with Node built-in test coverage for malformed content fixtures, duplicate deck slugs, dangling semantic graph edges, and resume asset shape.
-  3. Added `validate:pipeline`, `test`, and `verify` npm scripts.
-- **Verification**: `npm run validate:prd`, `npm run validate:pipeline`, `npm test`, and `env ASTRO_TELEMETRY_DISABLED=1 npm run build` passed.
-- **Status**: S03-T07 marked done; Sprint 03 is ready for sign-off.
+  1. User completed S03-T07 (pipeline validator, regression tests, ASTRO_TELEMETRY_DISABLED defaults, and S03 signoff; commit 3069f93).
+  2. S04-T01: Refactored `scripts/build-semantic-graph.js` to parse resume, notes, projects, and decks metadata dynamically using `yaml` parsing.
+  3. Implemented deterministic relationship heuristics: Wiki-links (based on `[[slug]]` parsing), Resume ownership (linking resume Basics to matching project entities), and Tag/Keyword overlap (generating edges dynamically weighted by shared tag counts).
+  4. Created `docs/semantic-graph-contract.md` to document node/edge specifications.
+  5. Committed changes (commit 29081fb).
+- **Verification**: `npm run verify` passed (prd validate, pipeline validate, node test suite, and astro builds compile successfully). Output confirms 4 nodes and 2 edges computed dynamically.
+- **Status**: S04-T01 marked done; S04-T02 (Add semantic graph validation) is active.
+
+## 2026-06-28T16:42:36+08:00
+- **Action**: Completed S04-T02: Add semantic graph validation.
+- **Review Notes**:
+  1. Audited S04-T01 implementation and found one acceptance gap: graph metadata had `generated_at` but no source summary.
+  2. Extended `scripts/build-semantic-graph.js` to emit `metadata.source_summary` with scanned source counts, node type counts, and edge type counts.
+  3. Strengthened `validateSemanticGraph` to reject duplicate node ids, dangling edges, self-edges, unsupported node/edge types, invalid weights, missing/invalid `generated_at`, and mismatched summary counts.
+  4. Added `tests/semantic-graph.test.js` with S04-specific contract coverage.
+  5. Updated semantic graph contract docs and S04/current task state.
+- **Verification**: `npm test` passed with 8 tests after regenerating `public/assets/semantic_graph.json`.
+- **Status**: S04-T02 marked done; S04-T03 (Implement 2D graph browser MVP) is the next active task.

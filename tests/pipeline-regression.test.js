@@ -53,7 +53,15 @@ test('rejects semantic graph edges that point to missing nodes', () => {
   const graph = {
     nodes: [{ id: 'note:a', label: 'A', type: 'note', metadata: {} }],
     edges: [{ source: 'note:a', target: 'project:missing', weight: 1, type: 'related' }],
-    metadata: { total_nodes: 1, total_edges: 1 }
+    metadata: {
+      generated_at: '2026-06-28T00:00:00.000Z',
+      total_nodes: 1,
+      total_edges: 1,
+      source_summary: {
+        node_types: { note: 1, project: 0, deck: 0, resume: 0 },
+        edge_types: { link: 0, owner: 0, tag_overlap: 0 }
+      }
+    }
   };
 
   assert.throws(() => validateSemanticGraph(graph), /edge target missing/);

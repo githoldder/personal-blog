@@ -8,13 +8,13 @@
     {
       "id": "M01",
       "title": "Semantic graph generation",
-      "status": "todo",
+      "status": "done",
       "tasks": ["S04-T01", "S04-T02"]
     },
     {
       "id": "M02",
       "title": "Graph interaction surface",
-      "status": "todo",
+      "status": "in_progress",
       "tasks": ["S04-T03", "S04-T04"]
     },
     {
@@ -42,7 +42,7 @@
     {
       "id": "S04-T02",
       "title": "Add semantic graph validation",
-      "status": "in_progress",
+      "status": "done",
       "owner": "agent",
       "inputs": ["public/assets/semantic_graph.json"],
       "outputs": ["tests/semantic-graph.test.*", "package.json"],
@@ -51,7 +51,7 @@
         "Graph validation rejects edges pointing at missing nodes",
         "Graph metadata includes generated_at and source summary"
       ],
-      "notes": "Validation should run locally without network access."
+      "notes": "Added contract-level graph validation for duplicate node ids, dangling edges, generated_at, source_summary consistency, node/edge types, self-edges, and edge weight bounds. Validation runs locally without network access."
     },
     {
       "id": "S04-T03",

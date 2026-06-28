@@ -1,6 +1,6 @@
 # Sprint 04: Semantic Lab
 
-**Status:** Todo
+**Status:** In Progress
 **Created:** 2026-06-27
 
 ## Objective
@@ -13,7 +13,7 @@
 
 ## Milestones
 
-- [ ] **M01: Semantic graph generation** — 从内容元数据生成图谱
+- [x] **M01: Semantic graph generation** — 从内容元数据生成图谱
 - [ ] **M02: Graph interaction surface** — 可检查、可浏览的图谱页面
 - [ ] **M03: Experimental input policy** — MediaPipe/WebGPU 等实验边界
 
@@ -21,8 +21,8 @@
 
 | ID | Title | Status |
 |----|-------|--------|
-| S04-T01 | Build semantic graph from content metadata | Todo |
-| S04-T02 | Add semantic graph validation | Todo |
+| S04-T01 | Build semantic graph from content metadata | Done |
+| S04-T02 | Add semantic graph validation | Done |
 | S04-T03 | Implement 2D graph browser MVP | Todo |
 | S04-T04 | Evaluate 3D graph feasibility | Todo |
 | S04-T05 | Define experimental input guardrails | Todo |

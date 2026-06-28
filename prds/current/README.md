@@ -4,11 +4,10 @@ Active sprint: S04 — Semantic Lab.
 
 Current priority:
 
-1. Build semantic graph from content metadata.
-2. Add semantic graph validation.
-3. Implement 2D graph browser MVP.
-4. Evaluate 3D graph feasibility before any 3D implementation.
-5. Keep all experimental inputs gated by Sense permissions.
+1. Implement 2D graph browser MVP.
+2. Evaluate 3D graph feasibility before any 3D implementation.
+3. Keep all experimental inputs gated by Sense permissions.
+4. Prepare S05 polish only after S04 graph surface and guardrails are complete.
 
 Non-goals:
 
