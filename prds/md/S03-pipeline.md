@@ -1,6 +1,6 @@
 # Sprint 03: Asset Build Pipeline
 
-**Status:** In Progress
+**Status:** Done
 **Created:** 2026-06-27
 
 ## Objective
@@ -15,8 +15,8 @@
 
 - [x] **M01: Resume pipeline** — 简历 YAML 校验与 Web/PDF 产物
 - [x] **M02: Deck pipeline** — 演示文稿元数据与本地输出清单
-- [ ] **M03: Content collections** — 笔记与项目内容集合
-- [ ] **M04: Pipeline verification** — 构建编排与回归校验
+- [x] **M03: Content collections** — 笔记与项目内容集合
+- [x] **M04: Pipeline verification** — 构建编排与回归校验
 
 ## Tasks
 
@@ -27,8 +27,8 @@
 | S03-T03 | Define deck metadata and build manifest | Done |
 | S03-T04 | Make deck outputs browsable | Done |
 | S03-T05 | Promote notes and projects to typed content collections | Done |
-| S03-T06 | Add asset build orchestration | Todo |
-| S03-T07 | Add pipeline regression checks | Todo |
+| S03-T06 | Add asset build orchestration | Done |
+| S03-T07 | Add pipeline regression checks | Done |
 
 ## Acceptance Criteria
 
@@ -43,4 +43,6 @@
 - 本 sprint 不做 3D 图谱、MediaPipe、WebGPU 或生产部署。
 - S03-T03 已生成 `public/assets/decks/manifest.json`，Slidev HTML/PDF 导出仍留给后续本地构建步骤。
 - S03-T05 已通过 Astro content collections 从 `content/notes/` 与 `content/projects/` 渲染真实元数据。
+- S03-T07 已加入 `validate:pipeline`、`test` 与 `verify`，覆盖生成资产和坏 fixture 回归检查。
+- S03 已完成，后续进入 S04 Semantic Lab 的规划边界。
 - JSON 文件是执行真源；本 MD 仅做评审摘要。

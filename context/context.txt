@@ -21,12 +21,21 @@
 - **Verification**: Run `env ASTRO_TELEMETRY_DISABLED=1 npm run build` successfully (all 6 static pages compiled).
 - **Status**: S03-T04 marked done; S03-T05 (Promote notes and projects to typed content collections) is active.
 
-## 2026-06-28T13:19:00+08:00
-- **Action**: Completed S03-T05 typed content collections for notes and projects.
+## 2026-06-28T13:38:00+08:00
+- **Action**: Completed S03-T06: Add asset build orchestration.
 - **Progress Details**:
-  1. Added `src/content.config.ts` using Astro content collections with `astro/loaders` glob sources for `content/notes/` and `content/projects/`.
-  2. Defined explicit schemas for note frontmatter (`title`, `date`, `tags`, `status`, optional `slug`) and project frontmatter (`title`, `description`, `status`, `date`, `tech`, optional `slug`).
-  3. Updated `src/pages/notes/index.astro` to render real note metadata from `getCollection('notes')`.
-  4. Updated `src/pages/projects/index.astro` to render real project metadata from `getCollection('projects')`.
-- **Verification**: `env ASTRO_TELEMETRY_DISABLED=1 npm run build` passed.
-- **Status**: S03-T05 marked done; S03-T06 (Add asset build orchestration) is next.
+  1. User completed S03-T05 (Astro typed content collections, main rendering pages, git commit 21ca344).
+  2. S03-T06: Refactored `scripts/build-assets.js` to run the asset pipelines sequentially (Resume -> Decks -> Semantic Graph). Added process aborts on sub-script failure and formatted terminal summary printing.
+  3. Linked asset compiler to `package.json` build task via `"build": "npm run build:assets && astro build"`.
+  4. Committed changes (commit 5610f0b).
+- **Verification**: Run `env ASTRO_TELEMETRY_DISABLED=1 npm run build` successfully. All builders ran and compiled 6 static routes without issue.
+- **Status**: S03-T06 marked done; S03-T07 (Add pipeline regression checks) is active.
+
+## 2026-06-28T13:52:00+08:00
+- **Action**: Completed S03-T07 pipeline regression checks.
+- **Progress Details**:
+  1. Added `scripts/validate-pipeline.js` to validate generated resume JSON, deck manifest, semantic graph structure, and notes/projects frontmatter contracts.
+  2. Added `tests/pipeline-regression.test.js` with Node built-in test coverage for malformed content fixtures, duplicate deck slugs, dangling semantic graph edges, and resume asset shape.
+  3. Added `validate:pipeline`, `test`, and `verify` npm scripts.
+- **Verification**: `npm run validate:prd`, `npm run validate:pipeline`, `npm test`, and `env ASTRO_TELEMETRY_DISABLED=1 npm run build` passed.
+- **Status**: S03-T07 marked done; Sprint 03 is ready for sign-off.
