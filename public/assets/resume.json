@@ -1,0 +1,131 @@
+{
+  "basics": {
+    "name": "曹磊",
+    "label": "全栈工程师 / 知识系统架构师",
+    "email": "caolei@example.com",
+    "phone": "+86 138-0000-0000",
+    "url": "https://caolei.dev",
+    "summary": "专注于知识管理系统与开发者工具的全栈工程师，热衷于将复杂信息结构化并构建高效的工作流工具。",
+    "location": "北京, 中国"
+  },
+  "education": [
+    {
+      "institution": "清华大学",
+      "area": "计算机科学与技术",
+      "studyType": "本科",
+      "startDate": "2018-09",
+      "endDate": "2022-06"
+    }
+  ],
+  "experience": [
+    {
+      "company": "示例科技有限公司",
+      "position": "高级全栈工程师",
+      "startDate": "2022-07",
+      "endDate": "至今",
+      "summary": "负责内部知识管理平台的架构设计与核心开发，主导了从单体应用到微服务的迁移。",
+      "highlights": [
+        "设计并实现了基于 Markdown 的知识图谱系统",
+        "构建了支持多格式内容的统一构建管线",
+        "将团队知识检索效率提升 40%"
+      ]
+    },
+    {
+      "company": "创新工场",
+      "position": "全栈工程师",
+      "startDate": "2022-07",
+      "endDate": "2024-06",
+      "summary": "参与多个开发者工具项目的全栈开发，负责前端架构与 API 设计。",
+      "highlights": [
+        "开发了支持实时协作的文档编辑器",
+        "设计了基于 GraphQL 的内容聚合 API",
+        "优化了前端构建流程，构建时间减少 60%"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Personal Knowledge Asset OS",
+      "description": "个人知识资产操作系统，统一管理笔记、简历、项目、演示文稿与语义图谱",
+      "highlights": [
+        "基于 Astro + React + Tailwind 的静态优先架构",
+        "YAML → Typst → PDF 简历自动构建管线",
+        "语义图谱预计算与可视化（规划中）"
+      ],
+      "keywords": [
+        "Astro",
+        "React",
+        "TailwindCSS",
+        "Typst",
+        "知识管理"
+      ],
+      "startDate": "2026-06",
+      "endDate": "至今",
+      "type": "personal",
+      "url": "https://github.com/caolei/personal-blog"
+    },
+    {
+      "name": "Knowledge Graph Visualizer",
+      "description": "基于 Three.js 的知识图谱 3D 可视化工具",
+      "highlights": [
+        "支持力导向布局与节点交互",
+        "实现了基于语义相似度的边权重计算"
+      ],
+      "keywords": [
+        "Three.js",
+        "WebGL",
+        "D3.js",
+        "知识图谱"
+      ],
+      "startDate": "2025-01",
+      "endDate": "2025-06",
+      "type": "personal",
+      "url": "https://github.com/caolei/kg-visualizer"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "level": "Advanced",
+      "keywords": [
+        "React",
+        "TypeScript",
+        "Astro",
+        "TailwindCSS",
+        "Three.js"
+      ]
+    },
+    {
+      "name": "Backend",
+      "level": "Advanced",
+      "keywords": [
+        "Node.js",
+        "Python",
+        "PostgreSQL",
+        "GraphQL",
+        "REST API"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "Intermediate",
+      "keywords": [
+        "Docker",
+        "CI/CD",
+        "Cloudflare",
+        "Vercel"
+      ]
+    },
+    {
+      "name": "Knowledge Management",
+      "level": "Advanced",
+      "keywords": [
+        "Obsidian",
+        "Markdown",
+        "Typst",
+        "LaTeX",
+        "知识图谱"
+      ]
+    }
+  ]
+}

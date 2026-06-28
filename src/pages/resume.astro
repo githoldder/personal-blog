@@ -1,42 +1,227 @@
 ---
+import { readFileSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+import YAML from 'yaml';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const ROOT = process.cwd();
+const YAML_PATH = join(ROOT, 'content/resume/resume.yaml');
+const PDF_PATH = join(ROOT, 'public/assets/resume.pdf');
+const JSON_PATH = join(ROOT, 'public/assets/resume.json');
+
+let resume = null;
+let hasPdf = false;
+let hasJson = false;
+
+if (existsSync(YAML_PATH)) {
+  try {
+    const raw = readFileSync(YAML_PATH, 'utf-8');
+    resume = YAML.parse(raw);
+  } catch (e) {
+    console.error('Failed to parse resume.yaml in Astro page:', e.message);
+  }
+}
+
+if (existsSync(PDF_PATH)) {
+  hasPdf = true;
+}
+
+if (existsSync(JSON_PATH)) {
+  hasJson = true;
+}
 ---
 
-<BaseLayout title="Resume — Personal Knowledge Asset OS">
-  <main class="max-w-4xl mx-auto px-6 py-12">
-    <header class="mb-8">
-      <a href="/" class="text-sm text-surface-500 hover:text-accent transition-colors">← 返回工作台</a>
-      <h1 class="text-2xl font-bold mt-4">简历</h1>
-      <p class="text-surface-500 mt-1">
-        从 <code>content/resume/resume.yaml</code> 生成，使用 Typst 排版。
-      </p>
+<BaseLayout title={resume ? `${resume.basics.name} — 个人简历` : "简历 — Personal Knowledge Asset OS"}>
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <header class="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-6 border-b border-surface-200">
+      <div>
+        <a href="/" class="text-sm text-surface-500 hover:text-accent transition-colors flex items-center gap-1">
+          <span>←</span> 返回工作台
+        </a>
+        {resume && (
+          <div class="mt-4">
+            <h1 class="text-3xl font-bold tracking-tight text-surface-900">{resume.basics.name}</h1>
+            <p class="text-lg text-accent font-medium mt-1">{resume.basics.label}</p>
+          </div>
+        )}
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        {hasPdf ? (
+          <a href="/assets/resume.pdf" download class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-dark rounded-md transition-colors shadow-sm">
+            <svg class="w-4 height-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            下载 PDF 简历
+          </a>
+        ) : (
+          <button disabled class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-surface-400 bg-surface-100 border border-surface-200 rounded-md cursor-not-allowed" title="Typst 本地未编译 PDF，可在命令行运行 npm run build:resume">
+            <svg class="w-4 height-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            PDF 暂无 (未编译)
+          </button>
+        )}
+
+        {hasJson && (
+          <a href="/assets/resume.json" download class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-surface-700 bg-surface-50 hover:bg-surface-100 border border-surface-200 rounded-md transition-colors">
+            <svg class="w-4 height-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            导出 JSON 数据
+          </a>
+        )}
+      </div>
     </header>
 
-    <section class="workspace-card mb-6">
-      <h2 class="font-semibold mb-3">数据源</h2>
-      <dl class="text-sm space-y-2">
-        <div class="flex gap-2">
-          <dt class="text-surface-500 w-24">YAML:</dt>
-          <dd><code>content/resume/resume.yaml</code></dd>
-        </div>
-        <div class="flex gap-2">
-          <dt class="text-surface-500 w-24">模板:</dt>
-          <dd><code>content/resume/template.typ</code></dd>
-        </div>
-        <div class="flex gap-2">
-          <dt class="text-surface-500 w-24">输出:</dt>
-          <dd><code>public/assets/resume.pdf</code></dd>
-        </div>
-      </dl>
-    </section>
-
-    <section class="workspace-card">
-      <h2 class="font-semibold mb-3">预览</h2>
-      <div class="text-sm text-surface-500">
-        <!-- TODO: 实现 YAML 数据读取与简历展示 -->
-        <p>简历预览功能将在 S02 阶段实现。</p>
-        <p class="mt-2">构建命令: <code>npm run build:resume</code></p>
+    {!resume ? (
+      <div class="workspace-card p-8 text-center text-surface-500">
+        <p>未找到有效的简历数据。请确认 <code>content/resume/resume.yaml</code> 存在且格式正确。</p>
       </div>
-    </section>
+    ) : (
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- 左侧/窄栏: 个人简介, 联络信息, 技能树 -->
+        <div class="space-y-6">
+          <section class="workspace-card">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-surface-400 mb-4">基本信息</h2>
+            <dl class="space-y-3 text-sm text-surface-700">
+              <div>
+                <dt class="text-surface-400 font-medium">现居地</dt>
+                <dd class="mt-1">{resume.basics.location}</dd>
+              </div>
+              <div>
+                <dt class="text-surface-400 font-medium">电子邮箱</dt>
+                <dd class="mt-1">
+                  <a href={`mailto:${resume.basics.email}`} class="hover:underline">{resume.basics.email}</a>
+                </dd>
+              </div>
+              <div>
+                <dt class="text-surface-400 font-medium">联系电话</dt>
+                <dd class="mt-1">{resume.basics.phone}</dd>
+              </div>
+              {resume.basics.url && (
+                <div>
+                  <dt class="text-surface-400 font-medium">个人主页</dt>
+                  <dd class="mt-1">
+                    <a href={resume.basics.url} target="_blank" rel="noopener noreferrer" class="hover:underline break-all">
+                      {resume.basics.url.replace(/^https?:\/\//, '')}
+                    </a>
+                  </dd>
+                </div>
+              )}
+            </dl>
+          </section>
+
+          <section class="workspace-card">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-surface-400 mb-4">专业技能</h2>
+            <div class="space-y-4">
+              {resume.skills.map((skill) => (
+                <div>
+                  <div class="flex items-center justify-between text-sm mb-1.5">
+                    <span class="font-medium text-surface-800">{skill.name}</span>
+                    <span class="text-xs text-accent font-medium bg-blue-50 px-2 py-0.5 rounded">{skill.level}</span>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5">
+                    {skill.keywords.map((kw) => (
+                      <span class="text-xs px-2 py-0.5 bg-surface-100 text-surface-600 rounded">
+                        {kw}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
+
+        <!-- 右侧/宽栏: 个人简介, 工作经历, 项目经历, 教育经历 -->
+        <div class="lg:col-span-2 space-y-6">
+          <section class="workspace-card">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-surface-400 mb-3">个人简介</h2>
+            <p class="text-sm leading-relaxed text-surface-700">{resume.basics.summary}</p>
+          </section>
+
+          <section class="workspace-card">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-surface-400 mb-6">工作履历</h2>
+            <div class="relative pl-6 border-l border-surface-200 space-y-8">
+              {resume.experience.map((exp) => (
+                <div class="relative">
+                  <!-- 时间线圆点 -->
+                  <div class="absolute -left-[30px] top-1.5 w-2 h-2 rounded-full bg-accent border border-white" />
+                  
+                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
+                    <h3 class="text-base font-semibold text-surface-900">{exp.company}</h3>
+                    <span class="text-xs text-surface-400 font-mono">{exp.startDate} 至 {exp.endDate}</span>
+                  </div>
+                  <p class="text-sm text-surface-500 font-medium mb-2">{exp.position}</p>
+                  <p class="text-sm text-surface-700 mb-3 leading-relaxed">{exp.summary}</p>
+                  <ul class="list-disc pl-4 text-xs text-surface-600 space-y-1.5">
+                    {exp.highlights.map((highlight) => (
+                      <li>{highlight}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section class="workspace-card">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-surface-400 mb-6">核心项目经历</h2>
+            <div class="space-y-6">
+              {resume.projects.map((project) => (
+                <div class="border-b border-surface-100 last:border-b-0 pb-6 last:pb-0">
+                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
+                    <div class="flex items-center gap-2">
+                      <h3 class="text-base font-semibold text-surface-900">{project.name}</h3>
+                      <span class="text-[10px] px-1.5 py-0.5 bg-surface-100 text-surface-500 font-medium rounded uppercase tracking-wider">
+                        {project.type}
+                      </span>
+                    </div>
+                    <span class="text-xs text-surface-400 font-mono">{project.startDate} 至 {project.endDate}</span>
+                  </div>
+                  <p class="text-sm text-surface-700 mb-3 leading-relaxed">{project.description}</p>
+                  
+                  <div class="mb-3 flex flex-wrap gap-1.5">
+                    {project.keywords.map((kw) => (
+                      <span class="text-[10px] px-2 py-0.5 bg-surface-50 border border-surface-200 text-surface-500 rounded font-mono">
+                        {kw}
+                      </span>
+                    ))}
+                  </div>
+
+                  <ul class="list-disc pl-4 text-xs text-surface-600 space-y-1.5">
+                    {project.highlights.map((highlight) => (
+                      <li>{highlight}</li>
+                    ))}
+                  </ul>
+
+                  {project.url && (
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-accent hover:underline mt-3">
+                      查看项目仓库 <span>→</span>
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section class="workspace-card">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-surface-400 mb-4">教育背景</h2>
+            <div class="space-y-4">
+              {resume.education.map((edu) => (
+                <div class="flex justify-between items-start gap-4">
+                  <div>
+                    <h3 class="text-sm font-semibold text-surface-900">{edu.institution}</h3>
+                    <p class="text-xs text-surface-500 mt-1">{edu.studyType} · {edu.area}</p>
+                  </div>
+                  <span class="text-xs text-surface-400 font-mono">{edu.startDate} 至 {edu.endDate}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    )}
   </main>
 </BaseLayout>
+

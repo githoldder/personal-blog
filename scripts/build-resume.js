@@ -1,29 +1,10 @@
 #!/usr/bin/env node
 
-/**
- * build-resume.js — 简历构建脚本
- *
- * 输入:
- *   - content/resume/resume.yaml (结构化简历数据)
- *   - content/resume/template.typ (Typst 模板)
- *
- * 输出:
- *   - public/assets/resume.pdf
- *
- * 依赖:
- *   - typst CLI (需单独安装)
- *
- * 状态: 占位脚本 — 第一阶段不实现真正编译
- * TODO:
- *   1. 读取 resume.yaml
- *   2. 注入数据到 template.typ
- *   3. 调用 typst compile 生成 PDF
- *   4. 输出到 public/assets/resume.pdf
- */
-
-import { readFileSync, existsSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execSync } from 'node:child_process';
+import YAML from 'yaml';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -32,38 +13,120 @@ const INPUT_YAML = join(ROOT, 'content/resume/resume.yaml');
 const INPUT_TYP = join(ROOT, 'content/resume/template.typ');
 const OUTPUT_DIR = join(ROOT, 'public/assets');
 const OUTPUT_PDF = join(OUTPUT_DIR, 'resume.pdf');
+const OUTPUT_JSON = join(OUTPUT_DIR, 'resume.json');
+
+function validateResume(data) {
+  // basics validation
+  const basics = data.basics;
+  if (!basics) throw new Error('Missing "basics" section');
+  for (const field of ['name', 'label', 'email', 'phone']) {
+    if (!basics[field]) throw new Error(`Missing field "basics.${field}"`);
+  }
+
+  // education validation
+  const education = data.education;
+  if (!education || !Array.isArray(education)) throw new Error('"education" must be an array');
+  education.forEach((edu, idx) => {
+    for (const field of ['institution', 'area', 'studyType', 'startDate', 'endDate']) {
+      if (!edu[field]) throw new Error(`Missing field "education[${idx}].${field}"`);
+    }
+  });
+
+  // experience validation
+  const experience = data.experience;
+  if (!experience || !Array.isArray(experience)) throw new Error('"experience" must be an array');
+  experience.forEach((exp, idx) => {
+    for (const field of ['company', 'position', 'startDate', 'endDate', 'summary', 'highlights']) {
+      if (!exp[field]) throw new Error(`Missing field "experience[${idx}].${field}"`);
+    }
+    if (!Array.isArray(exp.highlights)) throw new Error(`"experience[${idx}].highlights" must be an array`);
+  });
+
+  // projects validation
+  const projects = data.projects;
+  if (!projects || !Array.isArray(projects)) throw new Error('"projects" must be an array');
+  projects.forEach((proj, idx) => {
+    for (const field of ['name', 'description', 'highlights', 'keywords', 'startDate', 'endDate', 'type']) {
+      if (!proj[field]) throw new Error(`Missing field "projects[${idx}].${field}"`);
+    }
+    if (!Array.isArray(proj.highlights)) throw new Error(`"projects[${idx}].highlights" must be an array`);
+    if (!Array.isArray(proj.keywords)) throw new Error(`"projects[${idx}].keywords" must be an array`);
+  });
+
+  // skills validation
+  const skills = data.skills;
+  if (!skills || !Array.isArray(skills)) throw new Error('"skills" must be an array');
+  skills.forEach((skill, idx) => {
+    for (const field of ['name', 'level', 'keywords']) {
+      if (!skill[field]) throw new Error(`Missing field "skills[${idx}].${field}"`);
+    }
+    if (!Array.isArray(skill.keywords)) throw new Error(`"skills[${idx}].keywords" must be an array`);
+  });
+}
 
 function main() {
-  console.log('[build-resume] Starting...');
+  console.log('[build-resume] Starting validation...');
 
-  // 检查输入文件
   if (!existsSync(INPUT_YAML)) {
-    console.error(`[build-resume] Error: ${INPUT_YAML} not found`);
+    console.error(`[build-resume] Error: Input YAML file not found at ${INPUT_YAML}`);
     process.exit(1);
   }
 
-  if (!existsSync(INPUT_TYP)) {
-    console.error(`[build-resume] Error: ${INPUT_TYP} not found`);
+  const yamlRaw = readFileSync(INPUT_YAML, 'utf-8');
+  let resumeData;
+  try {
+    resumeData = YAML.parse(yamlRaw);
+  } catch (e) {
+    console.error('[build-resume] Error: YAML parse failed:', e.message);
     process.exit(1);
   }
 
-  // 确保输出目录存在
+  try {
+    validateResume(resumeData);
+    console.log('[build-resume] YAML validation passed.');
+  } catch (e) {
+    console.error('[build-resume] Validation Failed:', e.message);
+    process.exit(1);
+  }
+
+  // Ensure output directory exists
   if (!existsSync(OUTPUT_DIR)) {
     mkdirSync(OUTPUT_DIR, { recursive: true });
   }
 
-  // TODO: 实现真正的构建逻辑
-  // 1. 读取 YAML 数据
-  // const yamlContent = readFileSync(INPUT_YAML, 'utf-8');
-  // 2. 解析并注入到 Typst 模板
-  // 3. 调用 typst compile
-  // 4. 输出 PDF
+  // Output structured resume.json
+  try {
+    writeFileSync(OUTPUT_JSON, JSON.stringify(resumeData, null, 2), 'utf-8');
+    console.log(`[build-resume] Structured JSON exported to ${OUTPUT_JSON}`);
+  } catch (e) {
+    console.error('[build-resume] Error: Failed to write JSON output:', e.message);
+    process.exit(1);
+  }
 
-  console.log('[build-resume] Input YAML:', INPUT_YAML);
-  console.log('[build-resume] Input Template:', INPUT_TYP);
-  console.log('[build-resume] Output:', OUTPUT_PDF);
-  console.log('[build-resume] TODO: Implement Typst compilation');
-  console.log('[build-resume] Done (placeholder).');
+  // Compile PDF via Typst
+  console.log('[build-resume] Compiling PDF via Typst...');
+  let typstAvailable = false;
+  try {
+    execSync('typst --version', { stdio: 'ignore' });
+    typstAvailable = true;
+  } catch (e) {
+    // typst CLI is not installed locally
+  }
+
+  if (typstAvailable) {
+    try {
+      execSync(`typst compile "${INPUT_TYP}" "${OUTPUT_PDF}"`, { cwd: dirname(INPUT_TYP), stdio: 'inherit' });
+      console.log(`[build-resume] PDF resume successfully compiled to ${OUTPUT_PDF}`);
+    } catch (e) {
+      console.error('[build-resume] Error: Typst compilation failed:', e.message);
+      process.exit(1);
+    }
+  } else {
+    console.warn('[build-resume] WARNING: "typst" CLI is not available in this environment.');
+    console.warn('[build-resume] Path to install: https://github.com/typst/typst');
+    console.warn('[build-resume] PDF compilation was skipped, but validation was successful.');
+  }
+  console.log('[build-resume] Done.');
 }
 
 main();

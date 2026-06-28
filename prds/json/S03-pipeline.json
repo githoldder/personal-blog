@@ -2,7 +2,7 @@
   "sprint_id": "S03",
   "title": "Asset Build Pipeline",
   "objective": "把内容真源到多端输出的核心构建管线做成可用闭环，使简历、演示文稿、笔记和项目都能从 content/ 稳定生成 Web 与静态资产",
-  "status": "todo",
+  "status": "in_progress",
   "created_at": "2026-06-27",
   "milestones": [
     {
@@ -34,7 +34,7 @@
     {
       "id": "S03-T01",
       "title": "Make resume YAML validation explicit",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
       "inputs": ["content/resume/resume.yaml", "context/project-brief.md"],
       "outputs": ["scripts/build-resume.js", "docs/resume-pipeline.md"],
@@ -48,7 +48,7 @@
     {
       "id": "S03-T02",
       "title": "Generate resume web and PDF artifacts",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
       "inputs": ["content/resume/resume.yaml", "content/resume/template.typ"],
       "outputs": ["public/assets/resume.pdf", "public/assets/resume.json", "src/pages/resume.astro"],
@@ -62,7 +62,7 @@
     {
       "id": "S03-T03",
       "title": "Define deck metadata and build manifest",
-      "status": "todo",
+      "status": "in_progress",
       "owner": "agent",
       "inputs": ["content/decks/*.md"],
       "outputs": ["public/assets/decks/manifest.json", "docs/deck-pipeline.md"],
