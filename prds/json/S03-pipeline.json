@@ -104,7 +104,7 @@
     {
       "id": "S03-T06",
       "title": "Add asset build orchestration",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
       "inputs": ["scripts/build-assets.js", "package.json"],
       "outputs": ["scripts/build-assets.js", "package.json"],
@@ -118,7 +118,7 @@
     {
       "id": "S03-T07",
       "title": "Add pipeline regression checks",
-      "status": "todo",
+      "status": "in_progress",
       "owner": "agent",
       "inputs": ["scripts/validate-prd.js", "package.json", "generated assets"],
       "outputs": ["tests/", "package.json"],

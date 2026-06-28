@@ -5,7 +5,7 @@
   "description": "Personal Knowledge Asset OS — 统一管理笔记、简历、项目、演示文稿与语义图谱的知识基础设施",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "npm run build:assets && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "build:resume": "node scripts/build-resume.js",
