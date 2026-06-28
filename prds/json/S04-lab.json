@@ -56,7 +56,7 @@
     {
       "id": "S04-T03",
       "title": "Implement 2D graph browser MVP",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
       "inputs": ["public/assets/semantic_graph.json", "src/pages/lab/graph.astro"],
       "outputs": ["src/pages/lab/graph.astro", "src/components/"],
@@ -70,7 +70,7 @@
     {
       "id": "S04-T04",
       "title": "Evaluate 3D graph feasibility",
-      "status": "todo",
+      "status": "in_progress",
       "owner": "agent",
       "inputs": ["2D graph MVP", "browser capability constraints"],
       "outputs": ["docs/3d-graph-feasibility.md"],
