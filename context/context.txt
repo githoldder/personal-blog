@@ -1,15 +1,22 @@
 # ST-Memory: Context Log
 
-## 2026-06-27T10:28:00+08:00
-- **Action**: Restructured `implementation_plan.md` to establish the Sense Framework (v1.0).
-- **Core Integration**:
-  1. Taste v3.0: Working directory governance base. Added file rules, metadata contracts (JSON/MD prds), dual-gate validation, and commit sandboxing.
-  2. ruflo: Multi-agent orchestrator. Orchestrates Editor-Agent, Graph-Agent, and Publisher-Agent using a Hierarchical topology.
-  3. OpenCLI: Command-line extension bridge to user Chrome session. Automates third-party publishing (Juejin, Zhihu) directly bypassing API limitations.
-- **Status**: Waiting for user approval on the Sense governance and integration plan.
+## 2026-06-28T12:56:00+08:00
+- **Action**: Connected remote repository and completed first S03 milestones.
+- **Progress Details**:
+  1. Linked remote repository `https://github.com/githoldder/personal-blog` and successfully pushed `main` branch.
+  2. S02 signed off; initiated Sprint 03 (Asset Build Pipeline).
+  3. Created `task.md` checklist.
+  4. S03-T01: Implemented explicit YAML schema validation in `scripts/build-resume.js`, verified success, and documented schema rules in `docs/resume-pipeline.md`.
+  5. S03-T02: Updated Astro view `src/pages/resume.astro` to dynamically read and render structured resume content (responsive sidebar & main grid, timeline timeline, keywords badges), generated `public/assets/resume.json`, and handled the Typst local blocker gracefully.
+- **Verification**: Run `env ASTRO_TELEMETRY_DISABLED=1 npm run build` successfully (all 6 static pages compiled).
+- **Status**: S03-T01 & S03-T02 marked done; S03-T03 (Define deck metadata and build manifest) is active.
 
-## 2026-06-27
-- **Decision**: Adopt Taste v4.0 Sense as the project harness engineering framework.
-- **Action**: Added Sense governance directories, rules, workflows, skills, tool registries, queues, run/state records, and S02 PRD.
-- **Status**: S01 Foundation marked done; S02 Sense v4.0 Harness Adoption is active.
-- **Verification**: `npm run validate:prd`, `npm run build:semantic`, and `npm run build:assets` passed. `npm run build` failed because Astro dependencies are not installed; `npm install` hung without output and was interrupted. The workspace is not a Git repository.
+## 2026-06-28T13:07:00+08:00
+- **Action**: Completed S03-T03 deck metadata manifest.
+- **Progress Details**:
+  1. Reworked `scripts/build-decks.js` from placeholder output into a deterministic deck manifest generator.
+  2. Parsed required deck frontmatter fields `title` and `date`, with optional `slug` fallback to filename.
+  3. Generated `public/assets/decks/manifest.json` with stable deck metadata, source path, and planned HTML/PDF output targets.
+  4. Added `docs/deck-pipeline.md` documenting the deck frontmatter and manifest contract.
+- **Verification**: `npm run build:decks` passed.
+- **Status**: S03-T03 marked done; S03-T04 (Make deck outputs browsable) is the next deck-pipeline task.

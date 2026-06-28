@@ -8,13 +8,13 @@
     {
       "id": "M01",
       "title": "Resume pipeline",
-      "status": "todo",
+      "status": "done",
       "tasks": ["S03-T01", "S03-T02"]
     },
     {
       "id": "M02",
       "title": "Deck pipeline",
-      "status": "todo",
+      "status": "in_progress",
       "tasks": ["S03-T03", "S03-T04"]
     },
     {
@@ -62,7 +62,7 @@
     {
       "id": "S03-T03",
       "title": "Define deck metadata and build manifest",
-      "status": "in_progress",
+      "status": "done",
       "owner": "agent",
       "inputs": ["content/decks/*.md"],
       "outputs": ["public/assets/decks/manifest.json", "docs/deck-pipeline.md"],
@@ -71,7 +71,7 @@
         "Deck manifest is deterministic and checked by the build script",
         "Deck pipeline documentation explains Markdown frontmatter requirements"
       ],
-      "notes": "This task prepares for Slidev export without requiring remote publishing."
+      "notes": "Implemented deterministic manifest generation in scripts/build-decks.js. The script parses title/date/slug/sourcePath, validates duplicate slugs, writes public/assets/decks/manifest.json, and documents the frontmatter contract in docs/deck-pipeline.md. Slidev HTML/PDF export remains pending for later local build work."
     },
     {
       "id": "S03-T04",

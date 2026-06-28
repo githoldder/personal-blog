@@ -1,6 +1,6 @@
 # Sprint 03: Asset Build Pipeline
 
-**Status:** Todo
+**Status:** In Progress
 **Created:** 2026-06-27
 
 ## Objective
@@ -13,7 +13,7 @@
 
 ## Milestones
 
-- [ ] **M01: Resume pipeline** — 简历 YAML 校验与 Web/PDF 产物
+- [x] **M01: Resume pipeline** — 简历 YAML 校验与 Web/PDF 产物
 - [ ] **M02: Deck pipeline** — 演示文稿元数据与本地输出清单
 - [ ] **M03: Content collections** — 笔记与项目内容集合
 - [ ] **M04: Pipeline verification** — 构建编排与回归校验
@@ -22,9 +22,9 @@
 
 | ID | Title | Status |
 |----|-------|--------|
-| S03-T01 | Make resume YAML validation explicit | Todo |
-| S03-T02 | Generate resume web and PDF artifacts | Todo |
-| S03-T03 | Define deck metadata and build manifest | Todo |
+| S03-T01 | Make resume YAML validation explicit | Done |
+| S03-T02 | Generate resume web and PDF artifacts | Done |
+| S03-T03 | Define deck metadata and build manifest | Done |
 | S03-T04 | Make deck outputs browsable | Todo |
 | S03-T05 | Promote notes and projects to typed content collections | Todo |
 | S03-T06 | Add asset build orchestration | Todo |
@@ -41,4 +41,5 @@
 ## Notes
 
 - 本 sprint 不做 3D 图谱、MediaPipe、WebGPU 或生产部署。
+- S03-T03 已生成 `public/assets/decks/manifest.json`，Slidev HTML/PDF 导出仍留给后续本地构建步骤。
 - JSON 文件是执行真源；本 MD 仅做评审摘要。
