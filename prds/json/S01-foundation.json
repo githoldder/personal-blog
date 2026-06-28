@@ -1,0 +1,164 @@
+{
+  "sprint_id": "S01",
+  "title": "Foundation",
+  "objective": "建立工程骨架与治理结构，为后续功能迭代打下坚实地基",
+  "status": "done",
+  "created_at": "2026-06-26",
+  "milestones": [
+    {
+      "id": "M01",
+      "title": "治理结构建立",
+      "status": "done",
+      "tasks": ["S01-T01"]
+    },
+    {
+      "id": "M02",
+      "title": "工程初始化",
+      "status": "done",
+      "tasks": ["S01-T02", "S01-T03"]
+    },
+    {
+      "id": "M03",
+      "title": "内容管线与页面",
+      "status": "done",
+      "tasks": ["S01-T04", "S01-T05", "S01-T06"]
+    },
+    {
+      "id": "M04",
+      "title": "部署与扩展预留",
+      "status": "done",
+      "tasks": ["S01-T07", "S01-T08"]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "S01-T01",
+      "title": "Agent governance scaffold",
+      "status": "done",
+      "owner": "agent",
+      "inputs": ["governance spec"],
+      "outputs": ["Agent.md", ".agent/", "context/", "prds/README.md"],
+      "acceptance_criteria": [
+        "Agent.md exists and contains required sections",
+        ".agent/rules/, .agent/workflows/, .agent/skills/ exist",
+        "context/project-brief.md exists",
+        "context/directory-map.md exists",
+        "context/memory.md exists",
+        "prds/README.md exists"
+      ],
+      "notes": "Completed 2026-06-26"
+    },
+    {
+      "id": "S01-T02",
+      "title": "Astro project scaffold",
+      "status": "done",
+      "owner": "agent",
+      "inputs": ["tech stack decision"],
+      "outputs": ["package.json", "astro.config.mjs", "tsconfig.json", "tailwind.config.mjs", "src/"],
+      "acceptance_criteria": [
+        "package.json exists with correct dependencies",
+        "astro.config.mjs exists",
+        "tsconfig.json exists",
+        "tailwind.config.mjs exists",
+        "src/pages/ exists with basic pages",
+        "src/layouts/BaseLayout.astro exists",
+        "src/styles/global.css exists"
+      ],
+      "notes": "Completed 2026-06-26"
+    },
+    {
+      "id": "S01-T03",
+      "title": "Content source-of-truth scaffold",
+      "status": "done",
+      "owner": "agent",
+      "inputs": ["content model design"],
+      "outputs": ["content/resume/", "content/notes/", "content/projects/", "content/decks/"],
+      "acceptance_criteria": [
+        "content/resume/resume.yaml exists with sample data",
+        "content/resume/template.typ exists",
+        "content/notes/ contains at least 1 example note",
+        "content/projects/ contains at least 1 example project",
+        "content/decks/ contains at least 1 example deck"
+      ],
+      "notes": "Completed 2026-06-26"
+    },
+    {
+      "id": "S01-T04",
+      "title": "Resume data and Typst pipeline placeholder",
+      "status": "done",
+      "owner": "agent",
+      "inputs": ["resume.yaml", "template.typ"],
+      "outputs": ["scripts/build-resume.js"],
+      "acceptance_criteria": [
+        "scripts/build-resume.js exists",
+        "Script documents input/output contract",
+        "Script has clear TODO for Typst compilation"
+      ],
+      "notes": "Completed 2026-06-26"
+    },
+    {
+      "id": "S01-T05",
+      "title": "Slidev deck pipeline placeholder",
+      "status": "done",
+      "owner": "agent",
+      "inputs": ["content/decks/*.md"],
+      "outputs": ["scripts/build-decks.js"],
+      "acceptance_criteria": [
+        "scripts/build-decks.js exists",
+        "Script documents input/output contract",
+        "Script has clear TODO for Slidev build"
+      ],
+      "notes": "Completed 2026-06-26"
+    },
+    {
+      "id": "S01-T06",
+      "title": "Basic pages and routing",
+      "status": "done",
+      "owner": "agent",
+      "inputs": ["page design"],
+      "outputs": ["/", "/resume", "/notes", "/projects", "/decks", "/lab/graph"],
+      "acceptance_criteria": [
+        "/ shows project定位和入口",
+        "/resume shows resume data model direction",
+        "/notes shows notes list placeholder",
+        "/projects shows projects list placeholder",
+        "/decks shows decks list placeholder",
+        "/lab/graph shows lab placeholder"
+      ],
+      "notes": "Completed 2026-06-26. Visual: 工程工具感, not marketing landing page."
+    },
+    {
+      "id": "S01-T07",
+      "title": "Deployment plan document",
+      "status": "done",
+      "owner": "agent",
+      "inputs": ["deployment considerations"],
+      "outputs": ["docs/deployment-plan.md"],
+      "acceptance_criteria": [
+        "docs/deployment-plan.md exists",
+        "Covers Astro static build",
+        "Covers Typst pre-build",
+        "Covers Slidev pre-build",
+        "Covers Obsidian Git sync concept",
+        "Covers PicGo + Cloudflare R2 asset scheme",
+        "Covers Cloudflare Pages / Vercel deployment path"
+      ],
+      "notes": "Completed 2026-06-27. docs/deployment-plan.md exists and covers Astro, Typst, Slidev, Obsidian Git, R2, and Cloudflare/Vercel paths."
+    },
+    {
+      "id": "S01-T08",
+      "title": "Semantic graph placeholder contract",
+      "status": "done",
+      "owner": "agent",
+      "inputs": ["semantic graph design"],
+      "outputs": ["scripts/build-semantic-graph.js", "public/assets/semantic_graph.json"],
+      "acceptance_criteria": [
+        "scripts/build-semantic-graph.js exists",
+        "Script generates placeholder semantic_graph.json",
+        "JSON follows agreed schema (nodes, edges, metadata)",
+        "Script documents Phase 3 embedding TODO"
+      ],
+      "notes": "Completed 2026-06-26"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "nodes": [
+    {
+      "id": "note:2026-06-26-personal-knowledge-asset-os",
+      "label": "2026-06-26-personal-knowledge-asset-os",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/2026-06-26-personal-knowledge-asset-os.md"
+      }
+    },
+    {
+      "id": "project:personal-knowledge-asset-os",
+      "label": "personal-knowledge-asset-os",
+      "type": "project",
+      "metadata": {
+        "file": "content/projects/personal-knowledge-asset-os.md"
+      }
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "generated_at": "2026-06-27T04:36:46.362Z",
+    "version": "0.1.0",
+    "total_nodes": 2,
+    "total_edges": 0,
+    "note": "Phase 1 placeholder — no embedding computed yet"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "sprint_id": "S04",
+  "title": "Semantic Lab",
+  "objective": "在已有内容管线之上实现可解释的语义图谱实验区，让知识资产之间的关系可以被生成、检查和交互式浏览",
+  "status": "todo",
+  "created_at": "2026-06-27",
+  "milestones": [
+    {
+      "id": "M01",
+      "title": "Semantic graph generation",
+      "status": "todo",
+      "tasks": ["S04-T01", "S04-T02"]
+    },
+    {
+      "id": "M02",
+      "title": "Graph interaction surface",
+      "status": "todo",
+      "tasks": ["S04-T03", "S04-T04"]
+    },
+    {
+      "id": "M03",
+      "title": "Experimental input policy",
+      "status": "todo",
+      "tasks": ["S04-T05"]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "S04-T01",
+      "title": "Build semantic graph from content metadata",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["content/notes/*.md", "content/projects/*.md", "content/decks/*.md", "content/resume/resume.yaml"],
+      "outputs": ["scripts/build-semantic-graph.js", "public/assets/semantic_graph.json", "docs/semantic-graph-contract.md"],
+      "acceptance_criteria": [
+        "Semantic graph contains nodes for notes, projects, decks and resume entities",
+        "Edges are generated from explicit metadata, tags, links or documented heuristics",
+        "Graph contract documents node and edge fields"
+      ],
+      "notes": "Embedding-based edges are optional and must have a deterministic fallback."
+    },
+    {
+      "id": "S04-T02",
+      "title": "Add semantic graph validation",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["public/assets/semantic_graph.json"],
+      "outputs": ["tests/semantic-graph.test.*", "package.json"],
+      "acceptance_criteria": [
+        "Graph validation rejects duplicate node ids",
+        "Graph validation rejects edges pointing at missing nodes",
+        "Graph metadata includes generated_at and source summary"
+      ],
+      "notes": "Validation should run locally without network access."
+    },
+    {
+      "id": "S04-T03",
+      "title": "Implement 2D graph browser MVP",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["public/assets/semantic_graph.json", "src/pages/lab/graph.astro"],
+      "outputs": ["src/pages/lab/graph.astro", "src/components/"],
+      "acceptance_criteria": [
+        "Graph page renders non-empty nodes and edges from semantic_graph.json",
+        "Users can inspect node title, type and linked source",
+        "Graph surface remains usable on desktop and mobile"
+      ],
+      "notes": "Start with a stable 2D view before considering Three.js."
+    },
+    {
+      "id": "S04-T04",
+      "title": "Evaluate 3D graph feasibility",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["2D graph MVP", "browser capability constraints"],
+      "outputs": ["docs/3d-graph-feasibility.md"],
+      "acceptance_criteria": [
+        "Feasibility doc compares 2D, Three.js and WebGL options",
+        "Performance, accessibility and maintenance risks are recorded",
+        "Decision recommends whether 3D should enter a later sprint"
+      ],
+      "notes": "This is a decision task, not a commitment to build 3D."
+    },
+    {
+      "id": "S04-T05",
+      "title": "Define experimental input guardrails",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["Agent.md", ".agent/rules/sense-permissions.md"],
+      "outputs": ["docs/lab-input-policy.md", "Agent.md"],
+      "acceptance_criteria": [
+        "MediaPipe and WebGPU experiments have explicit opt-in criteria",
+        "Browser permission prompts and device access are documented as external-sensitive actions",
+        "Agent.md reflects the current lab boundary after this sprint"
+      ],
+      "notes": "MediaPipe and WebGPU should stay behind a documented decision gate."
+    }
+  ]
+}

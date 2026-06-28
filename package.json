@@ -1,0 +1,30 @@
+{
+  "name": "personal-knowledge-asset-os",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Personal Knowledge Asset OS — 统一管理笔记、简历、项目、演示文稿与语义图谱的知识基础设施",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "build:resume": "node scripts/build-resume.js",
+    "build:decks": "node scripts/build-decks.js",
+    "build:semantic": "node scripts/build-semantic-graph.js",
+    "build:assets": "node scripts/build-assets.js",
+    "validate:prd": "node scripts/validate-prd.js"
+  },
+  "dependencies": {
+    "astro": "^5.10.1",
+    "@astrojs/react": "^4.4.2",
+    "@astrojs/tailwind": "^6.0.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "typescript": "^5.8.3"
+  }
+}

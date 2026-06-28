@@ -1,0 +1,15 @@
+# ST-Memory: Context Log
+
+## 2026-06-27T10:28:00+08:00
+- **Action**: Restructured `implementation_plan.md` to establish the Sense Framework (v1.0).
+- **Core Integration**:
+  1. Taste v3.0: Working directory governance base. Added file rules, metadata contracts (JSON/MD prds), dual-gate validation, and commit sandboxing.
+  2. ruflo: Multi-agent orchestrator. Orchestrates Editor-Agent, Graph-Agent, and Publisher-Agent using a Hierarchical topology.
+  3. OpenCLI: Command-line extension bridge to user Chrome session. Automates third-party publishing (Juejin, Zhihu) directly bypassing API limitations.
+- **Status**: Waiting for user approval on the Sense governance and integration plan.
+
+## 2026-06-27
+- **Decision**: Adopt Taste v4.0 Sense as the project harness engineering framework.
+- **Action**: Added Sense governance directories, rules, workflows, skills, tool registries, queues, run/state records, and S02 PRD.
+- **Status**: S01 Foundation marked done; S02 Sense v4.0 Harness Adoption is active.
+- **Verification**: `npm run validate:prd`, `npm run build:semantic`, and `npm run build:assets` passed. `npm run build` failed because Astro dependencies are not installed; `npm install` hung without output and was interrupted. The workspace is not a Git repository.

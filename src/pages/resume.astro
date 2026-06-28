@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Resume — Personal Knowledge Asset OS">
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <header class="mb-8">
+      <a href="/" class="text-sm text-surface-500 hover:text-accent transition-colors">← 返回工作台</a>
+      <h1 class="text-2xl font-bold mt-4">简历</h1>
+      <p class="text-surface-500 mt-1">
+        从 <code>content/resume/resume.yaml</code> 生成，使用 Typst 排版。
+      </p>
+    </header>
+
+    <section class="workspace-card mb-6">
+      <h2 class="font-semibold mb-3">数据源</h2>
+      <dl class="text-sm space-y-2">
+        <div class="flex gap-2">
+          <dt class="text-surface-500 w-24">YAML:</dt>
+          <dd><code>content/resume/resume.yaml</code></dd>
+        </div>
+        <div class="flex gap-2">
+          <dt class="text-surface-500 w-24">模板:</dt>
+          <dd><code>content/resume/template.typ</code></dd>
+        </div>
+        <div class="flex gap-2">
+          <dt class="text-surface-500 w-24">输出:</dt>
+          <dd><code>public/assets/resume.pdf</code></dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="workspace-card">
+      <h2 class="font-semibold mb-3">预览</h2>
+      <div class="text-sm text-surface-500">
+        <!-- TODO: 实现 YAML 数据读取与简历展示 -->
+        <p>简历预览功能将在 S02 阶段实现。</p>
+        <p class="mt-2">构建命令: <code>npm run build:resume</code></p>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

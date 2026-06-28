@@ -1,0 +1,133 @@
+{
+  "sprint_id": "S03",
+  "title": "Asset Build Pipeline",
+  "objective": "把内容真源到多端输出的核心构建管线做成可用闭环，使简历、演示文稿、笔记和项目都能从 content/ 稳定生成 Web 与静态资产",
+  "status": "todo",
+  "created_at": "2026-06-27",
+  "milestones": [
+    {
+      "id": "M01",
+      "title": "Resume pipeline",
+      "status": "todo",
+      "tasks": ["S03-T01", "S03-T02"]
+    },
+    {
+      "id": "M02",
+      "title": "Deck pipeline",
+      "status": "todo",
+      "tasks": ["S03-T03", "S03-T04"]
+    },
+    {
+      "id": "M03",
+      "title": "Content collections",
+      "status": "todo",
+      "tasks": ["S03-T05", "S03-T06"]
+    },
+    {
+      "id": "M04",
+      "title": "Pipeline verification",
+      "status": "todo",
+      "tasks": ["S03-T07"]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "S03-T01",
+      "title": "Make resume YAML validation explicit",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["content/resume/resume.yaml", "context/project-brief.md"],
+      "outputs": ["scripts/build-resume.js", "docs/resume-pipeline.md"],
+      "acceptance_criteria": [
+        "Resume build script validates required YAML sections before generation",
+        "Validation errors name the missing or malformed field",
+        "Resume pipeline documentation describes input schema and output path"
+      ],
+      "notes": "Keep resume data as the source of truth; do not hand-edit generated assets."
+    },
+    {
+      "id": "S03-T02",
+      "title": "Generate resume web and PDF artifacts",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["content/resume/resume.yaml", "content/resume/template.typ"],
+      "outputs": ["public/assets/resume.pdf", "public/assets/resume.json", "src/pages/resume.astro"],
+      "acceptance_criteria": [
+        "Resume page reads structured resume content rather than placeholder copy",
+        "PDF generation path is implemented or a documented local dependency blocker is captured",
+        "Generated resume artifacts are reproducible from npm scripts"
+      ],
+      "notes": "Typst is preferred for PDF output; if the binary is unavailable, preserve a clean fallback contract."
+    },
+    {
+      "id": "S03-T03",
+      "title": "Define deck metadata and build manifest",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["content/decks/*.md"],
+      "outputs": ["public/assets/decks/manifest.json", "docs/deck-pipeline.md"],
+      "acceptance_criteria": [
+        "Each deck has parsed title, date, slug and source path",
+        "Deck manifest is deterministic and checked by the build script",
+        "Deck pipeline documentation explains Markdown frontmatter requirements"
+      ],
+      "notes": "This task prepares for Slidev export without requiring remote publishing."
+    },
+    {
+      "id": "S03-T04",
+      "title": "Make deck outputs browsable",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["public/assets/decks/manifest.json", "src/pages/decks/index.astro"],
+      "outputs": ["src/pages/decks/index.astro", "public/assets/decks/"],
+      "acceptance_criteria": [
+        "Deck index lists generated deck metadata",
+        "Each listed deck has a stable local output target or documented placeholder",
+        "Deck build command can run without external write side effects"
+      ],
+      "notes": "Do not introduce a hosted slide service in this sprint."
+    },
+    {
+      "id": "S03-T05",
+      "title": "Promote notes and projects to typed content collections",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["content/notes/*.md", "content/projects/*.md", "Astro content collection patterns"],
+      "outputs": ["src/content.config.ts", "src/pages/notes/index.astro", "src/pages/projects/index.astro"],
+      "acceptance_criteria": [
+        "Notes and projects have explicit frontmatter schemas",
+        "Notes index renders real note metadata from content/",
+        "Projects index renders real project metadata from content/"
+      ],
+      "notes": "Prefer Astro native content collections if compatible with the installed Astro version."
+    },
+    {
+      "id": "S03-T06",
+      "title": "Add asset build orchestration",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["scripts/build-assets.js", "package.json"],
+      "outputs": ["scripts/build-assets.js", "package.json"],
+      "acceptance_criteria": [
+        "One npm command runs resume, deck and semantic asset builders in deterministic order",
+        "Build script reports skipped optional steps clearly",
+        "Generated asset paths match page expectations"
+      ],
+      "notes": "Keep the orchestration local-only and audit-friendly."
+    },
+    {
+      "id": "S03-T07",
+      "title": "Add pipeline regression checks",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["scripts/validate-prd.js", "package.json", "generated assets"],
+      "outputs": ["tests/", "package.json"],
+      "acceptance_criteria": [
+        "PRD validation remains part of the verification flow",
+        "Pipeline build checks fail on malformed content fixtures",
+        "npm run build passes or documents a concrete dependency blocker"
+      ],
+      "notes": "Test coverage should focus on schema and generated manifest contracts."
+    }
+  ]
+}

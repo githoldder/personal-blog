@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// TODO: 实现内容集合读取
+const decks = [
+  { slug: 'pk-asset-os-roadmap', title: 'PK Asset OS 路线图', date: '2026-06-26' },
+];
+---
+
+<BaseLayout title="演示文稿 — Personal Knowledge Asset OS">
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <header class="mb-8">
+      <a href="/" class="text-sm text-surface-500 hover:text-accent transition-colors">← 返回工作台</a>
+      <h1 class="text-2xl font-bold mt-4">演示文稿</h1>
+      <p class="text-surface-500 mt-1">
+        Slidev 风格演示文稿。来源: <code>content/decks/</code>
+      </p>
+    </header>
+
+    <section>
+      <div class="space-y-3">
+        {decks.map((deck) => (
+          <div class="workspace-card">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="font-medium">{deck.title}</h3>
+                <time class="text-sm text-surface-500">{deck.date}</time>
+              </div>
+              <div class="flex gap-2">
+                <!-- TODO: 构建后启用链接 -->
+                <span class="text-sm text-surface-400">预览: 待构建</span>
+                <span class="text-sm text-surface-400">PDF: 待构建</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-8 workspace-card">
+      <h2 class="font-semibold mb-2">构建说明</h2>
+      <p class="text-sm text-surface-500">
+        构建命令: <code>npm run build:decks</code><br />
+        输入: <code>content/decks/*.md</code><br />
+        输出: <code>public/slides/&lt;slug&gt;/</code> + <code>public/assets/&lt;slug&gt;.pdf</code>
+      </p>
+    </section>
+  </main>
+</BaseLayout>

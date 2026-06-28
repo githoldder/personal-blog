@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// TODO: 实现内容集合读取
+const projects = [
+  { slug: 'personal-knowledge-asset-os', title: 'Personal Knowledge Asset OS', status: 'in_progress', description: '个人知识资产操作系统' },
+];
+---
+
+<BaseLayout title="项目 — Personal Knowledge Asset OS">
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <header class="mb-8">
+      <a href="/" class="text-sm text-surface-500 hover:text-accent transition-colors">← 返回工作台</a>
+      <h1 class="text-2xl font-bold mt-4">项目</h1>
+      <p class="text-surface-500 mt-1">
+        项目文档与进展追踪。来源: <code>content/projects/</code>
+      </p>
+    </header>
+
+    <section>
+      <div class="space-y-3">
+        {projects.map((project) => (
+          <a href={`/projects/${project.slug}`} class="workspace-card block group">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="flex items-center gap-3">
+                  <h3 class="font-medium group-hover:text-accent transition-colors">
+                    {project.title}
+                  </h3>
+                  <span class={`status-tag status-tag--${project.status}`}>
+                    {project.status === 'in_progress' ? '进行中' : project.status === 'done' ? '已完成' : '待开始'}
+                  </span>
+                </div>
+                <p class="text-sm text-surface-500 mt-1">{project.description}</p>
+              </div>
+              <span class="text-surface-400 group-hover:text-accent transition-colors">→</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

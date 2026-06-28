@@ -1,0 +1,30 @@
+{
+  "version": "0.1.0",
+  "agents": [
+    {
+      "id": "planner-agent",
+      "role": "Planner-Agent",
+      "responsibility": "Break PRD tasks into scoped execution plans"
+    },
+    {
+      "id": "executor-agent",
+      "role": "Executor-Agent",
+      "responsibility": "Implement local changes inside owned files"
+    },
+    {
+      "id": "reviewer-agent",
+      "role": "Reviewer-Agent",
+      "responsibility": "Review outputs against acceptance criteria"
+    },
+    {
+      "id": "guard-agent",
+      "role": "Guard-Agent",
+      "responsibility": "Check permissions, secrets, side effects, and scope"
+    },
+    {
+      "id": "archivist-agent",
+      "role": "Archivist-Agent",
+      "responsibility": "Update context, PRD state, run records, and walkthrough notes"
+    }
+  ]
+}

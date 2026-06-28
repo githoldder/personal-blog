@@ -1,0 +1,195 @@
+{
+  "sprint_id": "S02",
+  "title": "Sense v4.0 Harness Adoption",
+  "objective": "把 Taste v4.0 Sense 规范落地到当前 Personal Knowledge Asset OS 项目，使项目具备长期、多智能体、工具桥、权限审计和 Skill 蒸馏的治理底座",
+  "status": "done",
+  "created_at": "2026-06-27",
+  "milestones": [
+    {
+      "id": "M01",
+      "title": "Sense governance hardening",
+      "status": "done",
+      "tasks": ["S02-T01", "S02-T02"]
+    },
+    {
+      "id": "M02",
+      "title": "Tool bridge and skill distillation",
+      "status": "done",
+      "tasks": ["S02-T03", "S02-T04", "S02-T05"]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "S02-T01",
+      "title": "Harden Sense v4.0 governance scaffold",
+      "status": "done",
+      "owner": "agent",
+      "role": "Executor-Agent",
+      "permission_level": "L1",
+      "external_side_effects": false,
+      "owned_files": [
+        "Agent.md",
+        ".agent/**",
+        "sense/**",
+        "prds/**",
+        "context/**",
+        "README.md"
+      ],
+      "out_of_scope": [
+        "ruflo installation",
+        "OpenCLI publishing",
+        "production deployment"
+      ],
+      "inputs": [
+        "output/taste-v4.0-sense-framework.md",
+        "current project scaffold"
+      ],
+      "outputs": [
+        ".agent/rules/",
+        ".agent/workflows/",
+        ".agent/skills/",
+        "sense/registry/",
+        "sense/runs/",
+        "sense/queues/",
+        "sense/state/"
+      ],
+      "acceptance_criteria": [
+        "Sense v4.0 directories exist",
+        "Core rules and workflows exist",
+        "Tool registry exists",
+        "Agent.md references active Sense workflow",
+        "S01 status is synchronized"
+      ],
+      "verification": [
+        "npm run validate:prd",
+        "npm run build"
+      ],
+      "notes": "Sense v4.0 physical scaffold, rules, workflows, skills, registries, queues, state, and run record added. Dependency blocker resolved by changing @astrojs/react to ^4.4.2 and running npm install with npmmirror. PRD validation passed. Astro build passed with ASTRO_TELEMETRY_DISABLED=1 because the default telemetry config path is outside the sandbox."
+    },
+    {
+      "id": "S02-T02",
+      "title": "Add permission and external side-effect guardrails",
+      "status": "done",
+      "owner": "agent",
+      "role": "Guard-Agent",
+      "permission_level": "L1",
+      "external_side_effects": false,
+      "owned_files": [
+        ".agent/rules/sense-permissions.md",
+        ".agent/rules/external-side-effects.md",
+        ".agent/permissions/README.md"
+      ],
+      "out_of_scope": [
+        "actual external account operations"
+      ],
+      "inputs": [
+        "Taste v4.0 permission model"
+      ],
+      "outputs": [
+        "permission policy docs"
+      ],
+      "acceptance_criteria": [
+        "L0-L5 permission model is documented",
+        "External write requirements are documented"
+      ],
+      "verification": [
+        "manual review"
+      ],
+      "notes": "Permission and external side-effect policy added under .agent/rules/ and .agent/permissions/."
+    },
+    {
+      "id": "S02-T03",
+      "title": "Add Skill distillation workflow",
+      "status": "done",
+      "owner": "agent",
+      "role": "Archivist-Agent",
+      "permission_level": "L1",
+      "external_side_effects": false,
+      "owned_files": [
+        ".agent/workflows/skill-distillation.md",
+        ".agent/skills/**"
+      ],
+      "out_of_scope": [
+        "installing external tools"
+      ],
+      "inputs": [
+        "vibe coding Skill distillation workflow"
+      ],
+      "outputs": [
+        "Skill SOP and initial project skills"
+      ],
+      "acceptance_criteria": [
+        "Repeated-task distillation criteria are documented",
+        "Initial project skills have SKILL.md files"
+      ],
+      "verification": [
+        "manual review"
+      ],
+      "notes": "Skill distillation workflow and initial project skills added."
+    },
+    {
+      "id": "S02-T04",
+      "title": "Add OpenCLI and OfficeCLI adapter contracts",
+      "status": "done",
+      "owner": "agent",
+      "role": "Guard-Agent",
+      "permission_level": "L1",
+      "external_side_effects": false,
+      "owned_files": [
+        ".agent/adapters/opencli/**",
+        ".agent/adapters/officecli/**",
+        ".agent/skills/opencli-bridge/**",
+        ".agent/skills/officecli-bridge/**"
+      ],
+      "out_of_scope": [
+        "actual OpenCLI platform operations",
+        "actual Office document mutation"
+      ],
+      "inputs": [
+        "OpenCLI and OfficeCLI tool positioning"
+      ],
+      "outputs": [
+        "adapter README files and skills"
+      ],
+      "acceptance_criteria": [
+        "OpenCLI is constrained to audited external actions",
+        "OfficeCLI has render gate guidance"
+      ],
+      "verification": [
+        "manual review"
+      ],
+      "notes": "OpenCLI and OfficeCLI adapter contracts added. No external operation or Office document mutation was performed."
+    },
+    {
+      "id": "S02-T05",
+      "title": "Document ruflo swarm integration policy",
+      "status": "done",
+      "owner": "agent",
+      "role": "Planner-Agent",
+      "permission_level": "L1",
+      "external_side_effects": false,
+      "owned_files": [
+        ".agent/swarms/README.md",
+        ".agent/workflows/ruflo-swarm-run.md"
+      ],
+      "out_of_scope": [
+        "running ruflo init",
+        "adding ruflo-generated files"
+      ],
+      "inputs": [
+        "ruflo integration plan"
+      ],
+      "outputs": [
+        "swarm integration policy"
+      ],
+      "acceptance_criteria": [
+        "ruflo is positioned as optional harness",
+        "ruflo cannot replace PRD or context"
+      ],
+      "verification": [
+        "manual review"
+      ],
+      "notes": "ruflo is documented as optional swarm harness only. No ruflo init/install was performed."
+    }
+  ]
+}

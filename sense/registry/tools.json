@@ -1,0 +1,54 @@
+{
+  "version": "0.1.0",
+  "tools": [
+    {
+      "id": "npm",
+      "category": "build",
+      "permission_level": "L1",
+      "structured_output": false,
+      "external_side_effects": false,
+      "commands": ["npm run build", "npm run dev", "npm run validate:prd"]
+    },
+    {
+      "id": "typst",
+      "category": "document",
+      "permission_level": "L1",
+      "structured_output": false,
+      "external_side_effects": false,
+      "commands": ["typst compile"]
+    },
+    {
+      "id": "slidev",
+      "category": "presentation",
+      "permission_level": "L1",
+      "structured_output": false,
+      "external_side_effects": false,
+      "commands": ["slidev build", "slidev export"]
+    },
+    {
+      "id": "playwright",
+      "category": "browser-test",
+      "permission_level": "L1",
+      "structured_output": true,
+      "external_side_effects": false,
+      "commands": ["playwright test", "playwright screenshot"]
+    },
+    {
+      "id": "opencli",
+      "category": "external-browser-bridge",
+      "permission_level": "L4",
+      "structured_output": true,
+      "external_side_effects": true,
+      "commands": ["opencli"],
+      "notes": "External writes require human approval"
+    },
+    {
+      "id": "officecli",
+      "category": "office-document",
+      "permission_level": "L1",
+      "structured_output": true,
+      "external_side_effects": false,
+      "commands": ["officecli view", "officecli validate", "officecli batch"]
+    }
+  ]
+}
