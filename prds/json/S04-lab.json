@@ -2,7 +2,7 @@
   "sprint_id": "S04",
   "title": "Semantic Lab",
   "objective": "在已有内容管线之上实现可解释的语义图谱实验区，让知识资产之间的关系可以被生成、检查和交互式浏览",
-  "status": "todo",
+  "status": "in_progress",
   "created_at": "2026-06-27",
   "milestones": [
     {
@@ -28,7 +28,7 @@
     {
       "id": "S04-T01",
       "title": "Build semantic graph from content metadata",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
       "inputs": ["content/notes/*.md", "content/projects/*.md", "content/decks/*.md", "content/resume/resume.yaml"],
       "outputs": ["scripts/build-semantic-graph.js", "public/assets/semantic_graph.json", "docs/semantic-graph-contract.md"],
@@ -42,7 +42,7 @@
     {
       "id": "S04-T02",
       "title": "Add semantic graph validation",
-      "status": "todo",
+      "status": "in_progress",
       "owner": "agent",
       "inputs": ["public/assets/semantic_graph.json"],
       "outputs": ["tests/semantic-graph.test.*", "package.json"],

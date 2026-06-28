@@ -1,8 +1,16 @@
 {
   "nodes": [
     {
+      "id": "resume:basics",
+      "label": "曹磊的简历",
+      "type": "resume",
+      "metadata": {
+        "summary": "专注于知识管理系统与开发者工具的全栈工程师，热衷于将复杂信息结构化并构建高效的工作流工具。"
+      }
+    },
+    {
       "id": "note:2026-06-26-personal-knowledge-asset-os",
-      "label": "2026-06-26-personal-knowledge-asset-os",
+      "label": "Personal Knowledge Asset OS 架构设计",
       "type": "note",
       "metadata": {
         "file": "content/notes/2026-06-26-personal-knowledge-asset-os.md"
@@ -10,19 +18,44 @@
     },
     {
       "id": "project:personal-knowledge-asset-os",
-      "label": "personal-knowledge-asset-os",
+      "label": "Personal Knowledge Asset OS",
       "type": "project",
       "metadata": {
         "file": "content/projects/personal-knowledge-asset-os.md"
       }
+    },
+    {
+      "id": "deck:pk-asset-os-roadmap",
+      "label": "PK Asset OS 路线图",
+      "type": "deck",
+      "metadata": {
+        "file": "content/decks/pk-asset-os-roadmap.md"
+      }
     }
   ],
-  "edges": [],
+  "edges": [
+    {
+      "source": "resume:basics",
+      "target": "project:personal-knowledge-asset-os",
+      "weight": 1,
+      "type": "owner"
+    },
+    {
+      "source": "resume:basics",
+      "target": "note:2026-06-26-personal-knowledge-asset-os",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "Astro"
+        ]
+      }
+    }
+  ],
   "metadata": {
-    "generated_at": "2026-06-28T05:59:00.194Z",
+    "generated_at": "2026-06-28T06:42:56.776Z",
     "version": "0.1.0",
-    "total_nodes": 2,
-    "total_edges": 0,
-    "note": "Phase 1 placeholder — no embedding computed yet"
+    "total_nodes": 4,
+    "total_edges": 2
   }
 }
