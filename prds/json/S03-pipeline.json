@@ -14,13 +14,13 @@
     {
       "id": "M02",
       "title": "Deck pipeline",
-      "status": "in_progress",
+      "status": "done",
       "tasks": ["S03-T03", "S03-T04"]
     },
     {
       "id": "M03",
       "title": "Content collections",
-      "status": "todo",
+      "status": "in_progress",
       "tasks": ["S03-T05", "S03-T06"]
     },
     {
@@ -90,7 +90,7 @@
     {
       "id": "S03-T05",
       "title": "Promote notes and projects to typed content collections",
-      "status": "in_progress",
+      "status": "done",
       "owner": "agent",
       "inputs": ["content/notes/*.md", "content/projects/*.md", "Astro content collection patterns"],
       "outputs": ["src/content.config.ts", "src/pages/notes/index.astro", "src/pages/projects/index.astro"],
@@ -99,7 +99,7 @@
         "Notes index renders real note metadata from content/",
         "Projects index renders real project metadata from content/"
       ],
-      "notes": "Prefer Astro native content collections if compatible with the installed Astro version."
+      "notes": "Added src/content.config.ts with Astro content collections for content/notes and content/projects via astro/loaders glob. Notes and projects index pages now read getCollection metadata, sort by date, and render real frontmatter fields from content/."
     },
     {
       "id": "S03-T06",

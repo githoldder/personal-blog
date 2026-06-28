@@ -1,10 +1,27 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-// TODO: 实现内容集合读取
-const projects = [
-  { slug: 'personal-knowledge-asset-os', title: 'Personal Knowledge Asset OS', status: 'in_progress', description: '个人知识资产操作系统' },
-];
+const projects = (await getCollection('projects'))
+  .map((entry) => ({
+    id: entry.id,
+    slug: entry.data.slug ?? entry.id,
+    title: entry.data.title,
+    description: entry.data.description,
+    status: entry.data.status,
+    date: entry.data.date,
+    tech: entry.data.tech
+  }))
+  .sort((a, b) => b.date.getTime() - a.date.getTime());
+
+const formatDate = (date: Date) => date.toISOString().slice(0, 10);
+
+const statusLabels = {
+  todo: '待开始',
+  in_progress: '进行中',
+  done: '已完成',
+  archived: '已归档'
+};
 ---
 
 <BaseLayout title="项目 — Personal Knowledge Asset OS">
@@ -18,26 +35,40 @@ const projects = [
     </header>
 
     <section>
-      <div class="space-y-3">
-        {projects.map((project) => (
-          <a href={`/projects/${project.slug}`} class="workspace-card block group">
-            <div class="flex items-center justify-between">
+      {projects.length === 0 ? (
+        <div class="workspace-card p-8 text-center text-surface-500">
+          <p>暂无项目。请在 <code>content/projects/</code> 中添加 Markdown 文件。</p>
+        </div>
+      ) : (
+        <div class="space-y-3">
+          {projects.map((project) => (
+            <article class="workspace-card block">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
               <div>
-                <div class="flex items-center gap-3">
-                  <h3 class="font-medium group-hover:text-accent transition-colors">
+                <div class="flex flex-wrap items-center gap-3">
+                  <h3 class="font-medium text-surface-900">
                     {project.title}
                   </h3>
                   <span class={`status-tag status-tag--${project.status}`}>
-                    {project.status === 'in_progress' ? '进行中' : project.status === 'done' ? '已完成' : '待开始'}
+                    {statusLabels[project.status]}
                   </span>
                 </div>
                 <p class="text-sm text-surface-500 mt-1">{project.description}</p>
+                <div class="flex flex-wrap items-center gap-2 mt-3">
+                  <time class="text-xs text-surface-400 font-mono" datetime={formatDate(project.date)}>
+                    {formatDate(project.date)}
+                  </time>
+                  {project.tech.map((item) => (
+                    <span class="status-tag status-tag--todo">{item}</span>
+                  ))}
+                </div>
               </div>
-              <span class="text-surface-400 group-hover:text-accent transition-colors">→</span>
+              <code class="text-xs text-surface-400 shrink-0">{project.slug}</code>
             </div>
-          </a>
-        ))}
-      </div>
+            </article>
+          ))}
+        </div>
+      )}
     </section>
   </main>
 </BaseLayout>

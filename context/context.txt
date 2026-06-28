@@ -11,12 +11,22 @@
 - **Verification**: Run `env ASTRO_TELEMETRY_DISABLED=1 npm run build` successfully (all 6 static pages compiled).
 - **Status**: S03-T01 & S03-T02 marked done; S03-T03 (Define deck metadata and build manifest) is active.
 
-## 2026-06-28T13:07:00+08:00
-- **Action**: Completed S03-T03 deck metadata manifest.
+## 2026-06-28T13:14:00+08:00
+- **Action**: Completed S03-T04: Make deck outputs browsable.
 - **Progress Details**:
-  1. Reworked `scripts/build-decks.js` from placeholder output into a deterministic deck manifest generator.
-  2. Parsed required deck frontmatter fields `title` and `date`, with optional `slug` fallback to filename.
-  3. Generated `public/assets/decks/manifest.json` with stable deck metadata, source path, and planned HTML/PDF output targets.
-  4. Added `docs/deck-pipeline.md` documenting the deck frontmatter and manifest contract.
-- **Verification**: `npm run build:decks` passed.
-- **Status**: S03-T03 marked done; S03-T04 (Make deck outputs browsable) is the next deck-pipeline task.
+  1. User completed S03-T03 (manifest generator, metadata schemas, git commit 5fcfbe1).
+  2. S03-T04: Refactored `src/pages/decks/index.astro` to dynamically load `public/assets/decks/manifest.json`.
+  3. Added responsive layout card representation. Implemented physical filesystem check (`existsSync`) to dynamically toggle between "在线预览 ↗" (if `public/slides/<slug>/index.html` exists) or "预览: 待构建", and "下载 PDF 💾" (if `public/assets/<slug>.pdf` exists) or "PDF: 待构建".
+  4. Committed changes (commit d6189c8).
+- **Verification**: Run `env ASTRO_TELEMETRY_DISABLED=1 npm run build` successfully (all 6 static pages compiled).
+- **Status**: S03-T04 marked done; S03-T05 (Promote notes and projects to typed content collections) is active.
+
+## 2026-06-28T13:19:00+08:00
+- **Action**: Completed S03-T05 typed content collections for notes and projects.
+- **Progress Details**:
+  1. Added `src/content.config.ts` using Astro content collections with `astro/loaders` glob sources for `content/notes/` and `content/projects/`.
+  2. Defined explicit schemas for note frontmatter (`title`, `date`, `tags`, `status`, optional `slug`) and project frontmatter (`title`, `description`, `status`, `date`, `tech`, optional `slug`).
+  3. Updated `src/pages/notes/index.astro` to render real note metadata from `getCollection('notes')`.
+  4. Updated `src/pages/projects/index.astro` to render real project metadata from `getCollection('projects')`.
+- **Verification**: `env ASTRO_TELEMETRY_DISABLED=1 npm run build` passed.
+- **Status**: S03-T05 marked done; S03-T06 (Add asset build orchestration) is next.

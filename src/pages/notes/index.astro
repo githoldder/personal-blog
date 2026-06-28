@@ -1,12 +1,19 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-// TODO: 实现内容集合读取
-// import { getCollection } from 'astro:content';
-// const notes = await getCollection('notes');
-const notes = [
-  { slug: 'personal-knowledge-asset-os', title: 'Personal Knowledge Asset OS 架构设计', date: '2026-06-26', tags: ['架构', '知识管理'] },
-];
+const notes = (await getCollection('notes'))
+  .map((entry) => ({
+    id: entry.id,
+    slug: entry.data.slug ?? entry.id,
+    title: entry.data.title,
+    date: entry.data.date,
+    tags: entry.data.tags,
+    status: entry.data.status
+  }))
+  .sort((a, b) => b.date.getTime() - a.date.getTime());
+
+const formatDate = (date: Date) => date.toISOString().slice(0, 10);
 ---
 
 <BaseLayout title="笔记 — Personal Knowledge Asset OS">
@@ -20,28 +27,35 @@ const notes = [
     </header>
 
     <section>
-      <div class="space-y-3">
-        {notes.map((note) => (
-          <a href={`/notes/${note.slug}`} class="workspace-card block group">
-            <div class="flex items-center justify-between">
+      {notes.length === 0 ? (
+        <div class="workspace-card p-8 text-center text-surface-500">
+          <p>暂无笔记。请在 <code>content/notes/</code> 中添加 Markdown 文件。</p>
+        </div>
+      ) : (
+        <div class="space-y-3">
+          {notes.map((note) => (
+            <article class="workspace-card block">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
               <div>
-                <h3 class="font-medium group-hover:text-accent transition-colors">
+                <h3 class="font-medium text-surface-900">
                   {note.title}
                 </h3>
-                <div class="flex items-center gap-3 mt-1 text-sm text-surface-500">
-                  <time>{note.date}</time>
-                  <div class="flex gap-1">
+                <div class="flex flex-wrap items-center gap-3 mt-2 text-sm text-surface-500">
+                  <time datetime={formatDate(note.date)}>{formatDate(note.date)}</time>
+                  <span class="status-tag status-tag--todo">{note.status}</span>
+                  <div class="flex flex-wrap gap-1">
                     {note.tags.map((tag) => (
                       <span class="status-tag status-tag--todo">{tag}</span>
                     ))}
                   </div>
                 </div>
               </div>
-              <span class="text-surface-400 group-hover:text-accent transition-colors">→</span>
+              <code class="text-xs text-surface-400 shrink-0">{note.slug}</code>
             </div>
-          </a>
-        ))}
-      </div>
+            </article>
+          ))}
+        </div>
+      )}
     </section>
   </main>
 </BaseLayout>
