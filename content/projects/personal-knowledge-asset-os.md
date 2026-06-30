@@ -1,7 +1,7 @@
 ---
 title: "Personal Knowledge Asset OS"
 description: "个人知识资产操作系统"
-status: "in_progress"
+status: "done"
 date: 2026-06-26
 tech: ["Astro", "React", "TailwindCSS", "Typst"]
 ---

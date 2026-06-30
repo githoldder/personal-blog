@@ -1,11 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 
 import {
   parseLocalDate,
   toRFC822,
   toISO8601,
-  escapeCdata
+  escapeCdata,
+  isPublishableStatus
 } from '../scripts/build-feeds.js';
 
 test('parseLocalDate parses YYYY-MM-DD to UTC midnight (GMT+8 08:00)', () => {
@@ -40,4 +43,32 @@ test('escapeCdata escapes CDATA end tag boundary', () => {
   const safe = escapeCdata(unsafe);
   
   assert.equal(safe, 'This contains ]]]]><![CDATA[> end tag');
+});
+
+test('isPublishableStatus only allows public feed statuses', () => {
+  assert.equal(isPublishableStatus(undefined), true);
+  assert.equal(isPublishableStatus('published'), true);
+  assert.equal(isPublishableStatus('done'), true);
+  assert.equal(isPublishableStatus(' DONE '), true);
+
+  assert.equal(isPublishableStatus('active'), false);
+  assert.equal(isPublishableStatus('draft'), false);
+  assert.equal(isPublishableStatus('todo'), false);
+  assert.equal(isPublishableStatus('in_progress'), false);
+});
+
+test('generated feeds include public project and exclude draft note', () => {
+  execFileSync('node', ['scripts/build-feeds.js'], { encoding: 'utf-8' });
+
+  const rss = readFileSync('public/rss.xml', 'utf-8');
+  const atom = readFileSync('public/atom.xml', 'utf-8');
+
+  assert.match(rss, /<item>/);
+  assert.match(atom, /<entry>/);
+
+  assert.match(rss, /https:\/\/[^/]+\/projects#personal-knowledge-asset-os/);
+  assert.match(atom, /https:\/\/[^/]+\/projects#personal-knowledge-asset-os/);
+
+  assert.doesNotMatch(rss, /https:\/\/[^/]+\/notes#2026-06-26-personal-knowledge-asset-os/);
+  assert.doesNotMatch(atom, /https:\/\/[^/]+\/notes#2026-06-26-personal-knowledge-asset-os/);
 });

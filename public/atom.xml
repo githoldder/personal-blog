@@ -4,10 +4,17 @@
   <subtitle>专注于知识管理系统与开发者工具的全栈工程师，热衷于将复杂信息结构化并构建高效的工作流工具。</subtitle>
   <link href="https://caolei.dev/atom.xml" rel="self" />
   <link href="https://caolei.dev" />
-  <updated>2026-06-30T09:37:54+08:00</updated>
+  <updated>2026-06-30T12:32:46+08:00</updated>
   <id>https://caolei.dev/</id>
   <author>
     <name>曹磊</name>
   </author>
-  
+  <entry>
+    <title>Personal Knowledge Asset OS</title>
+    <link href="https://caolei.dev/projects#personal-knowledge-asset-os" />
+    <id>https://caolei.dev/projects#personal-knowledge-asset-os</id>
+    <published>2026-06-26T08:00:00+08:00</published>
+    <updated>2026-06-26T08:00:00+08:00</updated>
+    <summary type="html"><![CDATA[个人知识资产操作系统]]></summary>
+  </entry>
 </feed>

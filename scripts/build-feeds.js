@@ -81,6 +81,13 @@ export function escapeXml(unsafe) {
   });
 }
 
+export const PUBLISHABLE_STATUSES = [undefined, 'published', 'done'];
+
+export function isPublishableStatus(status) {
+  const normalizedStatus = status ? String(status).toLowerCase().trim() : undefined;
+  return PUBLISHABLE_STATUSES.includes(normalizedStatus);
+}
+
 function main() {
   console.log('[build-feeds] Starting RSS and Atom feeds generation...');
 
@@ -105,9 +112,6 @@ function main() {
   const siteTitle = `${authorName}的个人知识资产操作系统`;
   const items = [];
   
-  // 公开边界白名单
-  const allowedStatuses = [undefined, 'published', 'done', 'active'];
-
   // 2. 扫描并解析 Notes
   const notesDir = join(CONTENT_DIR, 'notes');
   if (existsSync(notesDir)) {
@@ -127,8 +131,7 @@ function main() {
 
         // 边界过滤：拦截非公开状态（如 draft/todo 等）
         const status = frontmatter.status;
-        const normalizedStatus = status ? String(status).toLowerCase().trim() : undefined;
-        if (status !== undefined && !allowedStatuses.includes(normalizedStatus)) {
+        if (!isPublishableStatus(status)) {
           console.log(`[build-feeds] Skipping draft/private note: ${file}`);
           continue;
         }
@@ -167,8 +170,7 @@ function main() {
 
         // 边界过滤：拦截非公开状态
         const status = frontmatter.status;
-        const normalizedStatus = status ? String(status).toLowerCase().trim() : undefined;
-        if (status !== undefined && !allowedStatuses.includes(normalizedStatus)) {
+        if (!isPublishableStatus(status)) {
           console.log(`[build-feeds] Skipping draft/private project: ${file}`);
           continue;
         }

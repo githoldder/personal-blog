@@ -4,8 +4,14 @@
     <title>曹磊的个人知识资产操作系统</title>
     <link>https://caolei.dev</link>
     <description>专注于知识管理系统与开发者工具的全栈工程师，热衷于将复杂信息结构化并构建高效的工作流工具。</description>
-    <lastBuildDate>Tue, 30 Jun 2026 09:37:54 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 12:32:46 +0800</lastBuildDate>
     <atom:link href="https://caolei.dev/rss.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>Personal Knowledge Asset OS</title>
+      <link>https://caolei.dev/projects#personal-knowledge-asset-os</link>
+      <guid>https://caolei.dev/projects#personal-knowledge-asset-os</guid>
+      <pubDate>Fri, 26 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[个人知识资产操作系统]]></description>
+    </item>
   </channel>
 </rss>
