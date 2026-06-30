@@ -1,11 +1,37 @@
 ---
+import { readFileSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+
 interface Props {
   title: string;
   description?: string;
 }
 
-const { title, description = 'Personal Knowledge Asset OS' } = Astro.props;
+const { title, description } = Astro.props;
 const pathname = Astro.url.pathname;
+
+// 动态读取 resume.json 中的全局元数据
+let siteUrl = 'https://caolei.net';
+let siteDescription = '个人知识资产操作系统 - 聚合笔记、简历、项目与演示文稿';
+let authorName = '曹磊';
+
+const resumePath = join(process.cwd(), 'public/assets/resume.json');
+if (existsSync(resumePath)) {
+  try {
+    const resume = JSON.parse(readFileSync(resumePath, 'utf-8'));
+    if (resume?.basics) {
+      if (resume.basics.url) siteUrl = resume.basics.url.replace(/\/$/, '');
+      if (resume.basics.name) authorName = resume.basics.name;
+      if (resume.basics.summary) siteDescription = resume.basics.summary;
+    }
+  } catch (e) {
+    // ignore
+  }
+}
+
+const pageTitle = title ? `${title} — ${authorName}的知识系统` : `${authorName}的个人知识资产操作系统`;
+const pageDescription = description || siteDescription;
+const canonicalUrl = `${siteUrl}${pathname}`;
 
 const isActive = (path: string) => {
   if (path === '/') {
@@ -30,9 +56,26 @@ const navItems = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title}</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>{pageTitle}</title>
+    <meta name="title" content={pageTitle} />
+    <meta name="description" content={pageDescription} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:site_name" content={`${authorName}的知识系统`} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta property="twitter:title" content={pageTitle} />
+    <meta property="twitter:description" content={pageDescription} />
   </head>
   <body class="bg-surface-50 text-surface-900 min-h-screen flex flex-col">
     <header class="sticky top-0 z-40 w-full border-b border-surface-200 bg-white/80 backdrop-blur">

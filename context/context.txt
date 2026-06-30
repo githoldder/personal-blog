@@ -128,3 +128,13 @@
 - **Verification**: Run `npm run verify` successfully. Verified that generated RSS and Atom XML structures match the feed contract perfectly.
 - **Status**: S05-T04 marked done; S05-T05 (Performance and SEO pass) is active.
 
+## 2026-06-30T12:35:00+08:00
+- **Action**: Completed S05-T05: Performance and SEO pass.
+- **Progress Details**:
+  1. Updated src/layouts/BaseLayout.astro to support complete canonical, Open Graph, and Twitter metadata tags, automatically parsing info from public/assets/resume.json.
+  2. Created scripts/build-seo-assets.js to dynamically collect static website routes and Slidev compile statuses to output public/robots.txt and public/sitemap.xml.
+  3. Integrated SEO asset builder into scripts/build-assets.js.
+  4. Conducted a detailed SEO & Accessibility pass and output sense/reports/performance-seo.md.
+- **Verification**: Run `npm run verify` successfully. All 14 tests passed, and sitemap/robots generated cleanly.
+- **Status**: S05-T05 marked done; S05-T06 (Release walkthrough and deployment decision) is active.
+

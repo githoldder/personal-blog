@@ -21,6 +21,7 @@ const scripts = [
   { name: 'build-semantic-graph.js', label: 'Semantic Graph' },
   { name: 'build-search-index.js', label: 'Search Index' },
   { name: 'build-feeds.js', label: 'RSS & Atom Feeds' },
+  { name: 'build-seo-assets.js', label: 'SEO Assets' },
 ];
 
 function main() {
