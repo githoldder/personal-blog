@@ -138,3 +138,12 @@
 - **Verification**: Run `npm run verify` successfully. All 14 tests passed, and sitemap/robots generated cleanly.
 - **Status**: S05-T05 marked done; S05-T06 (Release walkthrough and deployment decision) is active.
 
+## 2026-06-30T13:12:00+08:00
+- **Action**: Completed S06-T01: Create release checklist and rollback plan.
+- **Progress Details**:
+  1. Updated prds/json/S06-launch-ops.json, prds/md/S06-launch-ops.md, and Agent.md to mark Sprint 06 Active.
+  2. Created docs/release-checklist.md compiling build verification, visual QA inspection criteria, and L4 release approval requirements.
+  3. Created sense/reports/rollback-plan.md covering local repository reverts, asset generator restores, and Edge deployment rollback actions.
+- **Verification**: Run `npm run verify` successfully. All PRDs, contracts, and test files are fully compliant.
+- **Status**: S06-T01 marked done; S06-T02 (Define publication channel policy) is active.
+

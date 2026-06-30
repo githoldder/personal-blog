@@ -1,6 +1,6 @@
 # Sprint 06: Launch & Operations
 
-**Status:** Todo
+**Status:** In Progress
 **Created:** 2026-06-30
 
 ## Objective
@@ -13,7 +13,7 @@
 
 ## Milestones
 
-- [ ] **M01: Controlled launch preparation** — 发布前控制面
+- [/] **M01: Controlled launch preparation** — 发布前控制面
 - [ ] **M02: Content operations loop** — 内容运营节奏
 - [ ] **M03: Feedback and maintenance** — 反馈与维护闭环
 
@@ -21,7 +21,7 @@
 
 | ID | Title | Status |
 |----|-------|--------|
-| S06-T01 | Create release checklist and rollback plan | Todo |
+| S06-T01 | Create release checklist and rollback plan | In Progress |
 | S06-T02 | Define publication channel policy | Todo |
 | S06-T03 | Create content cadence and editorial queue | Todo |
 | S06-T04 | Add content quality checklist | Todo |

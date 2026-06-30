@@ -2,13 +2,13 @@
   "sprint_id": "S06",
   "title": "Launch & Operations",
   "objective": "在 S05 发布就绪基础上建立可控发布、内容运营与轻量反馈闭环，让 Personal Knowledge Asset OS 可以长期维护而不引入外部副作用失控风险",
-  "status": "todo",
+  "status": "in_progress",
   "created_at": "2026-06-30",
   "milestones": [
     {
       "id": "M01",
       "title": "Controlled launch preparation",
-      "status": "todo",
+      "status": "in_progress",
       "tasks": ["S06-T01", "S06-T02"]
     },
     {
@@ -28,7 +28,7 @@
     {
       "id": "S06-T01",
       "title": "Create release checklist and rollback plan",
-      "status": "todo",
+      "status": "in_progress",
       "owner": "agent",
       "inputs": ["docs/deployment-plan.md", "sense/reports/release-readiness.md"],
       "outputs": ["docs/release-checklist.md", "sense/reports/rollback-plan.md"],
