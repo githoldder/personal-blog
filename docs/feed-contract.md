@@ -14,7 +14,7 @@
 | 元素层级 | 契约字段 | 来源 / 规范 |
 |----------|----------|-------------|
 | `/rss/channel/title` | `siteTitle` | `${authorName}的个人知识资产操作系统` |
-| `/rss/channel/link` | `siteUrl` | 取自 `public/assets/resume.json`basics.url` 兜底 `https://caolei.net` |
+| `/rss/channel/link` | `siteUrl` | 取自 `public/assets/resume.json` 中的 `basics.url`，兜底 `https://caolei.net` |
 | `/rss/channel/description` | `siteDescription` | 取自简历 Basics 概要说明 |
 | `/rss/channel/lastBuildDate` | - | 本地资产构建时的系统时刻 (RFC 822 规范) |
 | `/rss/channel/item/title` | `item.title` | 文章或项目的 `frontmatter.title` |
@@ -42,6 +42,5 @@
 ## 3. 日期时区安全性
 
 由于 JS 在解析本地纯日期字符（如 `2026-06-30`）时，在某些时区会被解析为前一天的 GMT 时刻导致显示错位，本管线采用了以下安全转换规则：
-- 解析阶段：提取 YYYY, MM, DD 并构造 `new Date(YYYY, MM - 1, DD, 8, 0, 0)`（硬性绑定东八区 08:00 早上）。
-- RSS 输出：格式化为 RFC 822 的 `+0800` 时区字串。
-- Atom 输出：格式化为 RFC 3339 (ISO 8601) 的 `+08:00` 时区字串。
+- 解析阶段：提取 YYYY, MM, DD 并构造 `new Date(Date.UTC(YYYY, MM - 1, DD, 0, 0, 0))` (对应东八区 08:00 早上，以 UTC 为基准实现环境/时区无关)。
+- 格式化输出：将 Date 在 UTC 轴上平移 8 小时偏置，全部采用 `getUTC*` API 提取时间数值，彻底消除宿主机器本地时区的物理差异。

@@ -18,45 +18,56 @@ const PUBLIC_DIR = join(ROOT, 'public');
 const RSS_OUTPUT = join(PUBLIC_DIR, 'rss.xml');
 const ATOM_OUTPUT = join(PUBLIC_DIR, 'atom.xml');
 
-// 时区稳定日期解析 (默认东八区)
-function parseLocalDate(dateStr) {
+// 时区稳定日期解析 (以 UTC 基准计算，对应东八区早上 8 点)
+export function parseLocalDate(dateStr) {
   if (!dateStr) return new Date();
   const m = String(dateStr).match(/^(\d{4})-(\d{2})-(\d{2})/);
   if (m) {
-    return new Date(parseInt(m[1]), parseInt(m[2]) - 1, parseInt(m[3]), 8, 0, 0);
+    return new Date(Date.UTC(parseInt(m[1]), parseInt(m[2]) - 1, parseInt(m[3]), 0, 0, 0));
   }
   return new Date(dateStr);
 }
 
-// 格式化为 RFC 822 日期串
-function toRFC822(date) {
+// 格式化为 RFC 822 日期串 (使用 UTC 平移法以东八区展示)
+export function toRFC822(date) {
   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   
-  const dayName = days[date.getDay()];
-  const day = String(date.getDate()).padStart(2, '0');
-  const monthName = months[date.getMonth()];
-  const year = date.getFullYear();
-  const hours = String(date.getHours()).padStart(2, '0');
-  const minutes = String(date.getMinutes()).padStart(2, '0');
-  const seconds = String(date.getSeconds()).padStart(2, '0');
+  // 时区平移 8 小时
+  const bjDate = new Date(date.getTime() + 8 * 3600 * 1000);
+  
+  const dayName = days[bjDate.getUTCDay()];
+  const day = String(bjDate.getUTCDate()).padStart(2, '0');
+  const monthName = months[bjDate.getUTCMonth()];
+  const year = bjDate.getUTCFullYear();
+  const hours = String(bjDate.getUTCHours()).padStart(2, '0');
+  const minutes = String(bjDate.getUTCMinutes()).padStart(2, '0');
+  const seconds = String(bjDate.getUTCSeconds()).padStart(2, '0');
   
   return `${dayName}, ${day} ${monthName} ${year} ${hours}:${minutes}:${seconds} +0800`;
 }
 
-// 格式化为 ISO 8601 (RFC 3339) 日期串
-function toISO8601(date) {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
-  const hours = String(date.getHours()).padStart(2, '0');
-  const minutes = String(date.getMinutes()).padStart(2, '0');
-  const seconds = String(date.getSeconds()).padStart(2, '0');
+// 格式化为 ISO 8601 (RFC 3339) 日期串 (使用 UTC 平移法以东八区展示)
+export function toISO8601(date) {
+  const bjDate = new Date(date.getTime() + 8 * 3600 * 1000);
+  
+  const year = bjDate.getUTCFullYear();
+  const month = String(bjDate.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(bjDate.getUTCDate()).padStart(2, '0');
+  const hours = String(bjDate.getUTCHours()).padStart(2, '0');
+  const minutes = String(bjDate.getUTCMinutes()).padStart(2, '0');
+  const seconds = String(bjDate.getUTCSeconds()).padStart(2, '0');
   return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}+08:00`;
 }
 
+// CDATA 转义，防 ]]> 字符截断 XML
+export function escapeCdata(str) {
+  if (!str) return '';
+  return String(str).replace(/\]\]>/g, ']]]]><![CDATA[>');
+}
+
 // XML 安全实体转义
-function escapeXml(unsafe) {
+export function escapeXml(unsafe) {
   if (!unsafe) return '';
   return String(unsafe).replace(/[<>&'"]/g, c => {
     switch (c) {
@@ -73,7 +84,6 @@ function escapeXml(unsafe) {
 function main() {
   console.log('[build-feeds] Starting RSS and Atom feeds generation...');
 
-  // 1. 读取简历元数据自适应主域与作者
   let siteUrl = 'https://caolei.net';
   let authorName = '曹磊';
   let siteDescription = '个人知识资产操作系统 - 聚合笔记、简历、项目与演示文稿';
@@ -94,6 +104,9 @@ function main() {
 
   const siteTitle = `${authorName}的个人知识资产操作系统`;
   const items = [];
+  
+  // 公开边界白名单
+  const allowedStatuses = [undefined, 'published', 'done', 'active'];
 
   // 2. 扫描并解析 Notes
   const notesDir = join(CONTENT_DIR, 'notes');
@@ -110,6 +123,14 @@ function main() {
         if (match) {
           frontmatter = YAML.parse(match[1]) || {};
           body = raw.slice(match[0].length);
+        }
+
+        // 边界过滤：拦截非公开状态（如 draft/todo 等）
+        const status = frontmatter.status;
+        const normalizedStatus = status ? String(status).toLowerCase().trim() : undefined;
+        if (status !== undefined && !allowedStatuses.includes(normalizedStatus)) {
+          console.log(`[build-feeds] Skipping draft/private note: ${file}`);
+          continue;
         }
 
         const slug = frontmatter.slug || basename(file, '.md');
@@ -142,6 +163,14 @@ function main() {
         if (match) {
           frontmatter = YAML.parse(match[1]) || {};
           body = raw.slice(match[0].length);
+        }
+
+        // 边界过滤：拦截非公开状态
+        const status = frontmatter.status;
+        const normalizedStatus = status ? String(status).toLowerCase().trim() : undefined;
+        if (status !== undefined && !allowedStatuses.includes(normalizedStatus)) {
+          console.log(`[build-feeds] Skipping draft/private project: ${file}`);
+          continue;
         }
 
         const slug = frontmatter.slug || basename(file, '.md');
@@ -177,7 +206,7 @@ function main() {
       <link>${escapeXml(item.link)}</link>
       <guid>${escapeXml(item.link)}</guid>
       <pubDate>${toRFC822(item.date)}</pubDate>
-      <description><![CDATA[${item.description}]]></description>
+      <description><![CDATA[${escapeCdata(item.description)}]]></description>
     </item>`).join('').trim()}
   </channel>
 </rss>`;
@@ -201,7 +230,7 @@ function main() {
     <id>${escapeXml(item.link)}</id>
     <published>${toISO8601(item.date)}</published>
     <updated>${toISO8601(item.date)}</updated>
-    <summary type="html"><![CDATA[${item.description}]]></summary>
+    <summary type="html"><![CDATA[${escapeCdata(item.description)}]]></summary>
   </entry>`).join('').trim()}
 </feed>`;
 
@@ -214,4 +243,7 @@ function main() {
   Total feed items: ${items.length}`);
 }
 
-main();
+// 仅当直接执行时启动自启动，支持 ES 单元测试导入
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
+  main();
+}

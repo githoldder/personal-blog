@@ -4,37 +4,10 @@
   <subtitle>专注于知识管理系统与开发者工具的全栈工程师，热衷于将复杂信息结构化并构建高效的工作流工具。</subtitle>
   <link href="https://caolei.dev/atom.xml" rel="self" />
   <link href="https://caolei.dev" />
-  <updated>2026-06-30T09:23:46+08:00</updated>
+  <updated>2026-06-30T09:37:54+08:00</updated>
   <id>https://caolei.dev/</id>
   <author>
     <name>曹磊</name>
   </author>
-  <entry>
-    <title>Personal Knowledge Asset OS 架构设计</title>
-    <link href="https://caolei.dev/notes#2026-06-26-personal-knowledge-asset-os" />
-    <id>https://caolei.dev/notes#2026-06-26-personal-knowledge-asset-os</id>
-    <published>2026-06-26T08:00:00+08:00</published>
-    <updated>2026-06-26T08:00:00+08:00</updated>
-    <summary type="html"><![CDATA[Personal Knowledge Asset OS 架构设计
-
- 背景
-
-传统个人博客只能承载文章发布，无法统一管理笔记、简历、项目、演示文稿等多元知识资产。需要一个「操作系统级」的基础设施来统一管理。
-
- 核心设计
-
- 内容真源
-
-所有内容统一存放在 content/ 目录：
- resume/ — 简历（YAML 数据 + Typst 模板）
- notes/...]]></summary>
-  </entry>
-  <entry>
-    <title>Personal Knowledge Asset OS</title>
-    <link href="https://caolei.dev/projects#personal-knowledge-asset-os" />
-    <id>https://caolei.dev/projects#personal-knowledge-asset-os</id>
-    <published>2026-06-26T08:00:00+08:00</published>
-    <updated>2026-06-26T08:00:00+08:00</updated>
-    <summary type="html"><![CDATA[个人知识资产操作系统]]></summary>
-  </entry>
+  
 </feed>
