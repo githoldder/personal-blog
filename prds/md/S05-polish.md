@@ -1,6 +1,6 @@
 # Sprint 05: Public Surface Polish
 
-**Status:** In Progress
+**Status:** Done
 **Created:** 2026-06-27
 
 ## Objective
@@ -15,7 +15,7 @@
 
 - [x] **M01: Interface polish** — 响应式与视觉系统统一
 - [x] **M02: Discovery surfaces** — 搜索、RSS 和 Atom
-- [/] **M03: Release readiness** — 性能 SEO 与发布决策
+- [x] **M03: Release readiness** — 性能 SEO 与发布决策
 
 ## Tasks
 
@@ -25,8 +25,8 @@
 | S05-T02 | Unify visual system and navigation | Done |
 | S05-T03 | Add local search index | Done |
 | S05-T04 | Add RSS and Atom feeds | Done |
-| S05-T05 | Performance and SEO pass | In Progress |
-| S05-T06 | Release walkthrough and deployment decision | Todo |
+| S05-T05 | Performance and SEO pass | Done |
+| S05-T06 | Release walkthrough and deployment decision | Done |
 
 ## Acceptance Criteria
 
@@ -40,3 +40,4 @@
 
 - 本 sprint 目标是发布就绪，不是外部发布本身。
 - JSON 文件是执行真源；本 MD 仅做评审摘要。
+- S05 已完成本地发布就绪收口；外部部署仍需 Sense L4 人类授权。

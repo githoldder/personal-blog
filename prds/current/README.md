@@ -1,22 +1,22 @@
 # Current PRD Boundary
 
-Active sprint: S05 — Public Surface Polish.
+Active sprint: S06 — Launch & Operations.
 
 Current priority:
 
-1. Performance and SEO pass (S05-T05).
-2. Release walkthrough and deployment decision (S05-T06).
-3. Keep layout clean and functional (avoid marketing landing page elements).
+1. Create release checklist and rollback plan (S06-T01).
+2. Define publication channel policy (S06-T02).
+3. Keep external deployment and publishing gated by explicit Sense L4 approval.
 
 Non-goals:
 
-- No production deployment yet.
-- No external publishing yet.
+- No production deployment has been performed.
+- No external publishing has been performed.
 - Any experimental work (WebGPU, MediaPipe, 3D Graph) must strictly follow `docs/lab-input-policy.md`.
 
 ## Upcoming Sprint Queue
 
-后续阶段按大目标拆分如下，当前 S05 已进入 active boundary：
+后续阶段按大目标拆分如下，当前 S06 已进入 active boundary：
 
 | Sprint | Phase | Goal | PRD |
 |--------|-------|------|-----|

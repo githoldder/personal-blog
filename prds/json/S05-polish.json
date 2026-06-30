@@ -2,7 +2,7 @@
   "sprint_id": "S05",
   "title": "Public Surface Polish",
   "objective": "把 Personal Knowledge Asset OS 的公开展示层打磨到可发布状态，完善响应式体验、搜索订阅、性能 SEO 和发布前检查",
-  "status": "in_progress",
+  "status": "done",
   "created_at": "2026-06-27",
   "milestones": [
     {
@@ -20,7 +20,7 @@
     {
       "id": "M03",
       "title": "Release readiness",
-      "status": "in_progress",
+      "status": "done",
       "tasks": ["S05-T05", "S05-T06"]
     }
   ],
@@ -84,7 +84,7 @@
     {
       "id": "S05-T05",
       "title": "Performance and SEO pass",
-      "status": "in_progress",
+      "status": "done",
       "owner": "agent",
       "inputs": ["Astro build output", "src/layouts/BaseLayout.astro"],
       "outputs": ["src/layouts/BaseLayout.astro", "public/robots.txt", "public/sitemap.xml", "sense/reports/performance-seo.md"],
@@ -93,12 +93,12 @@
         "Sitemap and robots files exist or generation is documented",
         "Performance report captures bundle, asset and image risks"
       ],
-      "notes": "Prefer static metadata derived from content frontmatter."
+      "notes": "Completed 2026-06-30. Static SEO metadata, canonical tags, Open Graph/Twitter Card headers, robots.txt, sitemap.xml and performance/SEO report are in place."
     },
     {
       "id": "S05-T06",
       "title": "Release walkthrough and deployment decision",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
       "inputs": ["docs/deployment-plan.md", ".agent/workflows/release-walkthrough.md"],
       "outputs": ["sense/reports/release-readiness.md", "docs/deployment-plan.md"],
@@ -107,7 +107,7 @@
         "Deployment target recommendation is updated with rationale",
         "No external deploy or publish action is performed without explicit human approval"
       ],
-      "notes": "Publishing remains gated by Sense L4 approval."
+      "notes": "Completed 2026-06-30. Release readiness report records local verification, Cloudflare Pages is recommended as first deployment target, and external publish/deploy remains gated by explicit Sense L4 approval."
     }
   ]
 }
