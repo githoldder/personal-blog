@@ -169,12 +169,18 @@ export default function SemanticGraph({ initialData }) {
     return () => cancelAnimationFrame(animFrameId);
   }, [nodes, links, draggedNode, dimensions]);
 
-  const handleMouseDown = (node, e) => {
-    e.preventDefault();
+  const handlePointerDown = (node, e) => {
+    if (e.pointerId !== undefined && typeof e.target.setPointerCapture === 'function') {
+      try {
+        e.target.setPointerCapture(e.pointerId);
+      } catch (err) {
+        console.error('Failed to set pointer capture:', err);
+      }
+    }
     setDraggedNode(node);
   };
 
-  const handleMouseMove = e => {
+  const handlePointerMove = e => {
     if (!draggedNode || !containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     const mouseX = e.clientX - rect.left;
@@ -189,7 +195,14 @@ export default function SemanticGraph({ initialData }) {
     );
   };
 
-  const handleMouseUp = () => {
+  const handlePointerUp = e => {
+    if (draggedNode && e && e.pointerId !== undefined && typeof e.target.releasePointerCapture === 'function') {
+      try {
+        e.target.releasePointerCapture(e.pointerId);
+      } catch (err) {
+        // Safe release
+      }
+    }
     setDraggedNode(null);
   };
 
@@ -226,13 +239,15 @@ export default function SemanticGraph({ initialData }) {
   return (
     <div 
       className="grid grid-cols-1 lg:grid-cols-4 gap-6"
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
+      onPointerLeave={handlePointerUp}
+      onPointerCancel={handlePointerUp}
     >
       <div 
         ref={containerRef}
         className="lg:col-span-3 workspace-card p-0 h-[500px] relative overflow-hidden bg-surface-50 cursor-grab active:cursor-grabbing select-none"
+        style={{ touchAction: 'none' }}
       >
         <svg className="w-full h-full">
           <g>
@@ -272,7 +287,7 @@ export default function SemanticGraph({ initialData }) {
                   transform={`translate(${node.x}, ${node.y})`}
                   className="cursor-pointer"
                   onClick={() => setSelectedNode(node)}
-                  onMouseDown={(e) => handleMouseDown(node, e)}
+                  onPointerDown={(e) => handlePointerDown(node, e)}
                   style={{ opacity, transition: 'opacity 0.2s' }}
                 >
                   <circle

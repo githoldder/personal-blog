@@ -2,7 +2,7 @@
   "sprint_id": "S04",
   "title": "Semantic Lab",
   "objective": "在已有内容管线之上实现可解释的语义图谱实验区，让知识资产之间的关系可以被生成、检查和交互式浏览",
-  "status": "in_progress",
+  "status": "done",
   "created_at": "2026-06-27",
   "milestones": [
     {
@@ -14,13 +14,13 @@
     {
       "id": "M02",
       "title": "Graph interaction surface",
-      "status": "in_progress",
+      "status": "done",
       "tasks": ["S04-T03", "S04-T04"]
     },
     {
       "id": "M03",
       "title": "Experimental input policy",
-      "status": "todo",
+      "status": "done",
       "tasks": ["S04-T05"]
     }
   ],
@@ -70,7 +70,7 @@
     {
       "id": "S04-T04",
       "title": "Evaluate 3D graph feasibility",
-      "status": "in_progress",
+      "status": "done",
       "owner": "agent",
       "inputs": ["2D graph MVP", "browser capability constraints"],
       "outputs": ["docs/3d-graph-feasibility.md"],
@@ -79,12 +79,12 @@
         "Performance, accessibility and maintenance risks are recorded",
         "Decision recommends whether 3D should enter a later sprint"
       ],
-      "notes": "This is a decision task, not a commitment to build 3D."
+      "notes": "Decision recorded: do not implement production 3D in S04. Keep 2D as the primary graph browser; revisit 3D only as an opt-in experimental view after mobile pointer, deterministic layout, reduced-motion, fallback, and visual QA gates exist."
     },
     {
       "id": "S04-T05",
       "title": "Define experimental input guardrails",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
       "inputs": ["Agent.md", ".agent/rules/sense-permissions.md"],
       "outputs": ["docs/lab-input-policy.md", "Agent.md"],

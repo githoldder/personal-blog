@@ -42,13 +42,67 @@
 - **Verification**: `npm run verify` passed (prd validate, pipeline validate, node test suite, and astro builds compile successfully). Output confirms 4 nodes and 2 edges computed dynamically.
 - **Status**: S04-T01 marked done; S04-T02 (Add semantic graph validation) is active.
 
-## 2026-06-28T16:42:36+08:00
+## 2026-06-28T16:30:00+08:00
 - **Action**: Completed S04-T02: Add semantic graph validation.
-- **Review Notes**:
-  1. Audited S04-T01 implementation and found one acceptance gap: graph metadata had `generated_at` but no source summary.
-  2. Extended `scripts/build-semantic-graph.js` to emit `metadata.source_summary` with scanned source counts, node type counts, and edge type counts.
-  3. Strengthened `validateSemanticGraph` to reject duplicate node ids, dangling edges, self-edges, unsupported node/edge types, invalid weights, missing/invalid `generated_at`, and mismatched summary counts.
-  4. Added `tests/semantic-graph.test.js` with S04-specific contract coverage.
-  5. Updated semantic graph contract docs and S04/current task state.
-- **Verification**: `npm test` passed with 8 tests after regenerating `public/assets/semantic_graph.json`.
-- **Status**: S04-T02 marked done; S04-T03 (Implement 2D graph browser MVP) is the next active task.
+- **Progress Details**:
+  1. Created `tests/semantic-graph.test.js` to implement contract-level validation rules.
+  2. Developed assertions for duplicate node IDs, dangling edges, generated_at, source_summary consistency, node/edge type checks, self-edges, and edge weight boundaries.
+  3. Integrated validation logic with local test runner via `package.json` test script.
+- **Verification**: Run `npm test` successfully (all validations passed).
+- **Status**: S04-T02 marked done; S04-T03 (Implement 2D graph browser MVP) is active.
+
+## 2026-06-28T19:15:00+08:00
+- **Action**: Completed S04-T03: Implement 2D graph browser MVP.
+- **Progress Details**:
+  1. S04-T03: Implemented a lightweight, 2D force-directed layout physical simulation using React state loops and SVG canvas (`src/components/SemanticGraph.jsx`).
+  2. Developed responsive split layout: SVG force-graph on left (hover effects, node type color schemes, click tracking, path highlight) and a detailed inspect sidebar on right (details title, path link, connecting nodes list).
+  3. Mounted components inside Astro loader (`src/pages/lab/graph.astro`) using client:load.
+  4. Committed changes (commit f54a7ec).
+- **Verification**: `npm run verify` passed. Output confirmed 6 pages generated with separate React SemanticGraph bundle chunk.
+- **Status**: S04-T03 marked done; S04-T04 (Evaluate 3D graph feasibility) is active.
+
+## 2026-06-30T08:23:58+08:00
+- **Action**: Completed S04-T04: Evaluate 3D graph feasibility.
+- **Progress Details**:
+  1. Created `docs/3d-graph-feasibility.md` comparing the current 2D SVG graph, custom Three.js, a Three.js-based graph library path, and raw WebGL.
+  2. Recorded performance, accessibility, browser/GPU, visual QA, and maintenance risks.
+  3. Decision: do not implement production 3D in S04. Keep 2D as the primary graph browser; revisit 3D only as an opt-in experimental view after fallback, reduced-motion, pointer, deterministic layout, and visual QA gates exist.
+  4. Updated S04 PRD state, current boundary, and Agent priority so S04-T05 is now active.
+- **Status**: S04-T04 marked done; S04-T05 (Define experimental input guardrails) is active.
+
+## 2026-06-30T08:32:00+08:00
+- **Action**: Completed S04-T05: Define experimental input guardrails.
+- **Progress Details**:
+  1. Created `docs/lab-input-policy.md` defining strict opt-in criteria for experimental capabilities (3D graph, MediaPipe gestures, WebGPU) and browser permissions constraint (Camera, requestAdapter).
+  2. Modified `Agent.md` to update the active boundary, moving experimental features from the hard prohibited zone to the regulated experiments zone.
+  3. Promoted S04 sprint and milestone statuses to "done" in `prds/json/S04-lab.json`, `prds/md/S04-lab.md`, and updated `prds/current/README.md`.
+- **Verification**: Run `npm run verify` successfully. All 8 tests passed, and all static routes compiled successfully.
+- **Status**: S04-T05 marked done; Sprint 04 successfully completed. Pending human audit and Sprint 05 planning.
+
+## 2026-06-30T08:41:00+08:00
+- **Action**: Completed S05-T01: Responsive layout audit and fixes.
+- **Progress Details**:
+  1. Synchronized Sprint status: Set active sprint to S05 in `prds/current/README.md`, set status to `in_progress` in `prds/json/S05-polish.json` and `prds/md/S05-polish.md`.
+  2. Refactored React SemanticGraph component `src/components/SemanticGraph.jsx` to use PointerEvents (`PointerDown`, `PointerMove`, `PointerUp`, `PointerLeave`, `PointerCancel`) for mobile-friendly dragging, with touch-action style lock and safe Pointer Capture wrapper blocks.
+  3. Conducted a thorough mobile/desktop viewport audit for core pages and output `sense/reports/responsive-audit.md`.
+- **Verification**: Run `npm run verify` successfully. All 8 tests passed, and Astro built correctly.
+- **Status**: S05-T01 marked done; S05-T02 (Unify visual system and navigation) is active.
+
+## 2026-06-30T08:46:55+08:00
+- **Action**: Closed S05-T01 status and planned the next two sprint stages.
+- **Progress Details**:
+  1. Updated S05 PRD JSON/MD so S05-T01 is `done` and S05-T02 is `in_progress`.
+  2. Updated `prds/current/README.md` and `Agent.md` so S05-T02 is the active task.
+  3. Added verification method details to `sense/reports/responsive-audit.md`.
+  4. Added `docs/two-stage-sprint-plan.md` to define Stage 1 (finish S05 Public Surface Polish) and Stage 2 (S06 Launch & Operations).
+  5. Created S06 PRD double board: `prds/json/S06-launch-ops.json` and `prds/md/S06-launch-ops.md`.
+- **Status**: S05-T02 is active. S06 is planned but remains `todo` until S05 is complete.
+
+## 2026-06-30T08:50:00+08:00
+- **Action**: Completed S05-T02: Unify visual system and navigation.
+- **Progress Details**:
+  1. Redesigned `src/layouts/BaseLayout.astro` to introduce a responsive global navigation header containing workbench, notes, projects, decks, resume, and lab links, with active tab highlights and overflow scrolling. Integrated layout slot into a standardized container and added a global footer.
+  2. Standardized styling variables in `src/styles/global.css` for cards, tags (introduced `.tech-tag`), and code block borders under Neutral workbench style.
+  3. Integrated all 6 core page templates (index, notes, projects, decks, resume, graph) under BaseLayout container wrappers, removing redundant custom headers, main elements, footers, and return links.
+- **Verification**: Run `npm run verify` successfully. All 8 tests passed, and static build compiled clean.
+- **Status**: S05-T02 marked done; S05-T03 (Add local search index) is active.

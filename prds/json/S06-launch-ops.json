@@ -1,0 +1,113 @@
+{
+  "sprint_id": "S06",
+  "title": "Launch & Operations",
+  "objective": "在 S05 发布就绪基础上建立可控发布、内容运营与轻量反馈闭环，让 Personal Knowledge Asset OS 可以长期维护而不引入外部副作用失控风险",
+  "status": "todo",
+  "created_at": "2026-06-30",
+  "milestones": [
+    {
+      "id": "M01",
+      "title": "Controlled launch preparation",
+      "status": "todo",
+      "tasks": ["S06-T01", "S06-T02"]
+    },
+    {
+      "id": "M02",
+      "title": "Content operations loop",
+      "status": "todo",
+      "tasks": ["S06-T03", "S06-T04"]
+    },
+    {
+      "id": "M03",
+      "title": "Feedback and maintenance",
+      "status": "todo",
+      "tasks": ["S06-T05", "S06-T06"]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "S06-T01",
+      "title": "Create release checklist and rollback plan",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["docs/deployment-plan.md", "sense/reports/release-readiness.md"],
+      "outputs": ["docs/release-checklist.md", "sense/reports/rollback-plan.md"],
+      "acceptance_criteria": [
+        "Checklist records build, verify, preview and manual review commands",
+        "Rollback plan identifies repository, hosting and asset rollback steps",
+        "External deploy remains gated by explicit Sense L4 approval"
+      ],
+      "notes": "This task prepares launch; it must not perform deployment."
+    },
+    {
+      "id": "S06-T02",
+      "title": "Define publication channel policy",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["docs/deployment-plan.md", ".agent/rules/external-side-effects.md"],
+      "outputs": ["docs/publication-channel-policy.md", "Agent.md"],
+      "acceptance_criteria": [
+        "Allowed and prohibited publication channels are documented",
+        "Each external write path declares approval and rollback requirements",
+        "Agent.md reflects publication boundaries"
+      ],
+      "notes": "No external account mutation is allowed without human approval."
+    },
+    {
+      "id": "S06-T03",
+      "title": "Create content cadence and editorial queue",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["content/notes", "content/projects", "prds/json/S05-polish.json"],
+      "outputs": ["docs/content-cadence.md", "sense/queues/editorial-queue.json"],
+      "acceptance_criteria": [
+        "Editorial queue separates draft, review and publishable content",
+        "Cadence document defines weekly or monthly maintenance rhythm",
+        "No content is auto-published"
+      ],
+      "notes": "Keep content operations local-first."
+    },
+    {
+      "id": "S06-T04",
+      "title": "Add content quality checklist",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["content/**", "docs/semantic-graph-contract.md"],
+      "outputs": ["docs/content-quality-checklist.md"],
+      "acceptance_criteria": [
+        "Checklist covers metadata, links, graph visibility and public readiness",
+        "Checklist distinguishes private notes from publishable assets",
+        "Checklist can be used before search/feed inclusion"
+      ],
+      "notes": "This is a human-friendly review checklist, not a publishing automation."
+    },
+    {
+      "id": "S06-T05",
+      "title": "Design feedback intake model",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["Agent.md", "docs/deployment-plan.md"],
+      "outputs": ["docs/feedback-intake.md"],
+      "acceptance_criteria": [
+        "Feedback intake options are compared without adding external services by default",
+        "Privacy and moderation risks are documented",
+        "Recommended default is local or repository-based unless explicitly approved"
+      ],
+      "notes": "Avoid analytics, forms or hosted comments unless later approved."
+    },
+    {
+      "id": "S06-T06",
+      "title": "Create maintenance runbook",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["package.json", "scripts", "sense/reports"],
+      "outputs": ["docs/maintenance-runbook.md"],
+      "acceptance_criteria": [
+        "Runbook documents recurring verification commands",
+        "Runbook lists known environment blockers such as missing Typst CLI",
+        "Runbook defines when to update dependencies, content and generated assets"
+      ],
+      "notes": "Keep maintenance repeatable before adding automation."
+    }
+  ]
+}
