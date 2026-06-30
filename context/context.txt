@@ -118,3 +118,13 @@
 - **Verification**: Run `npm run verify` successfully. All pipeline checks and 8 contract tests passed.
 - **Status**: S05-T03 marked done; S05-T04 (Add RSS and Atom feeds) is active.
 
+## 2026-06-30T09:25:00+08:00
+- **Action**: Completed S05-T04: Add RSS and Atom feeds.
+- **Progress Details**:
+  1. Created scripts/build-feeds.js to parse YAML frontmatters of notes and projects, extract resume url as XML host, and stably convert timestamps without local timezone bias.
+  2. Integrated feed compiler into scripts/build-assets.js to export public/rss.xml (RSS 2.0) and public/atom.xml (Atom 1.0) on every build.
+  3. Appended links to public feeds in BaseLayout.astro global footer.
+  4. Created docs/feed-contract.md to document aggregate feeds node specifications.
+- **Verification**: Run `npm run verify` successfully. Verified that generated RSS and Atom XML structures match the feed contract perfectly.
+- **Status**: S05-T04 marked done; S05-T05 (Performance and SEO pass) is active.
+

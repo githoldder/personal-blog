@@ -20,6 +20,7 @@ const scripts = [
   { name: 'build-decks.js', label: 'Decks' },
   { name: 'build-semantic-graph.js', label: 'Semantic Graph' },
   { name: 'build-search-index.js', label: 'Search Index' },
+  { name: 'build-feeds.js', label: 'RSS & Atom Feeds' },
 ];
 
 function main() {

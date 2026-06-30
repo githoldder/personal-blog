@@ -4,8 +4,8 @@ Active sprint: S05 — Public Surface Polish.
 
 Current priority:
 
-1. Add RSS and Atom feeds (S05-T04).
-2. Performance and SEO pass (S05-T05).
+1. Performance and SEO pass (S05-T05).
+2. Release walkthrough and deployment decision (S05-T06).
 3. Keep layout clean and functional (avoid marketing landing page elements).
 
 Non-goals:
