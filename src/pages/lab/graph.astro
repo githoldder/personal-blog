@@ -19,20 +19,15 @@ if (existsSync(GRAPH_PATH)) {
 ---
 
 <BaseLayout title="全息语义图谱 — Personal Knowledge Asset OS">
-  <main class="max-w-6xl mx-auto px-6 py-12">
-    <header class="mb-12 pb-6 border-b border-surface-200">
-      <a href="/" class="text-sm text-surface-500 hover:text-accent transition-colors flex items-center gap-1">
-        <span>←</span> 返回工作台
-      </a>
-      <h1 class="text-3xl font-bold mt-4 tracking-tight text-surface-900">全息语义图谱</h1>
-      <p class="text-surface-500 mt-1">
-        基于内容元数据多维特征与启发式连线算法，对笔记、项目、演示文稿与简历进行关系映射。
-      </p>
-    </header>
+  <header class="mb-10 pb-6 border-b border-surface-200">
+    <h1 class="text-3xl font-bold tracking-tight text-surface-900">全息语义图谱</h1>
+    <p class="text-surface-500 mt-1">
+      基于内容元数据多维特征与启发式连线算法，对笔记、项目、演示文稿与简历进行关系映射。
+    </p>
+  </header>
 
-    <section>
-      <SemanticGraph client:load initialData={graphData} />
-    </section>
-  </main>
+  <section>
+    <SemanticGraph client:load initialData={graphData} />
+  </section>
 </BaseLayout>
 

@@ -1,6 +1,6 @@
 # Sprint 05: Public Surface Polish
 
-**Status:** Todo
+**Status:** In Progress
 **Created:** 2026-06-27
 
 ## Objective
@@ -13,18 +13,18 @@
 
 ## Milestones
 
-- [ ] **M01: Interface polish** — 响应式与视觉系统统一
-- [ ] **M02: Discovery surfaces** — 搜索、RSS 和 Atom
+- [x] **M01: Interface polish** — 响应式与视觉系统统一
+- [/] **M02: Discovery surfaces** — 搜索、RSS 和 Atom
 - [ ] **M03: Release readiness** — 性能 SEO 与发布决策
 
 ## Tasks
 
 | ID | Title | Status |
 |----|-------|--------|
-| S05-T01 | Responsive layout audit and fixes | Todo |
-| S05-T02 | Unify visual system and navigation | Todo |
-| S05-T03 | Add local search index | Todo |
-| S05-T04 | Add RSS and Atom feeds | Todo |
+| S05-T01 | Responsive layout audit and fixes | Done |
+| S05-T02 | Unify visual system and navigation | Done |
+| S05-T03 | Add local search index | Done |
+| S05-T04 | Add RSS and Atom feeds | In Progress |
 | S05-T05 | Performance and SEO pass | Todo |
 | S05-T06 | Release walkthrough and deployment decision | Todo |
 

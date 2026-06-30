@@ -1,0 +1,56 @@
+[
+  {
+    "id": "note:2026-06-26-personal-knowledge-asset-os",
+    "type": "note",
+    "title": "Personal Knowledge Asset OS 架构设计",
+    "summary": "# Personal Knowledge Asset OS 架构设计\n\n## 背景\n\n传统个人博客只能承载文章发布，无法统一管理笔记、简历、项目、演示文稿等多元知识资产。需要一个「操作系统级」的基础设施来统一管理。\n\n## 核心设计\n\n#...",
+    "url": "/notes#2026-06-26-personal-knowledge-asset-os",
+    "tags": [
+      "架构",
+      "知识管理",
+      "Astro"
+    ],
+    "sourcePath": "content/notes/2026-06-26-personal-knowledge-asset-os.md",
+    "text": "Personal Knowledge Asset OS 架构设计 背景 传统个人博客只能承载文章发布，无法统一管理笔记、简历、项目、演示文稿等多元知识资产。需要一个「操作系统级」的基础设施来统一管理。 核心设计 内容真源 所有内容统一存放在 content/ 目录： resume/ — 简历（YAML 数据 + Typst 模板） notes/ — 笔记（Markdown） projects/ — 项目（Markdown） decks/ — 演示文稿（Markdown） 构建管线 content/ → scripts/ → public/assets/ 每个内容类型有独立的构建脚本，最终输出"
+  },
+  {
+    "id": "project:personal-knowledge-asset-os",
+    "type": "project",
+    "title": "Personal Knowledge Asset OS",
+    "summary": "个人知识资产操作系统",
+    "url": "/projects#personal-knowledge-asset-os",
+    "tags": [
+      "Astro",
+      "React",
+      "TailwindCSS",
+      "Typst"
+    ],
+    "sourcePath": "content/projects/personal-knowledge-asset-os.md",
+    "text": "Personal Knowledge Asset OS 项目目标 建立一个统一管理个人知识资产的操作系统，将笔记、简历、项目、演示文稿、语义图谱统一管理。 核心闭环 内容真源 → 构建管线 → 多端输出 当前进展 S01 — Foundation（进行中） x Agent 治理结构建立 x Astro 工程骨架初始化 x 内容真源目录建立 简历 Typst 管线可用 Slidev 构建管线可用 基础页面完善 部署规划文档 技术架构 content/ ├── resume/ → YAML + Typst → PDF ├── notes/ → Markdown → Web ├── project"
+  },
+  {
+    "id": "deck:pk-asset-os-roadmap",
+    "type": "deck",
+    "title": "PK Asset OS 路线图",
+    "summary": "Slidev 风格演示文稿",
+    "url": "/slides/pk-asset-os-roadmap/",
+    "tags": [],
+    "sourcePath": "content/decks/pk-asset-os-roadmap.md",
+    "text": "PK Asset OS 路线图 "
+  },
+  {
+    "id": "resume:basics",
+    "type": "resume",
+    "title": "曹磊的简历",
+    "summary": "全栈工程师 / 知识系统架构师",
+    "url": "/resume",
+    "tags": [
+      "Frontend",
+      "Backend",
+      "DevOps",
+      "Knowledge Management"
+    ],
+    "sourcePath": "content/resume/resume.yaml",
+    "text": "曹磊 全栈工程师 / 知识系统架构师 专注于知识管理系统与开发者工具的全栈工程师，热衷于将复杂信息结构化并构建高效的工作流工具。 Frontend React TypeScript Astro TailwindCSS Three.js Backend Node.js Python PostgreSQL GraphQL REST API DevOps Docker CI/CD Cloudflare Vercel Knowledge Management Obsidian Markdown Typst LaTeX 知识图谱 示例科技有限公司 高级全栈工程师 负责内部知识管理平台的架构设计与核心开发，主导了从单体应用到微服务的迁移。 设计并实现了基于 Markdown 的知识图谱系统 构建了支持多格式内容的统一构建管线 将团队知识检索效率提升 40% 创新工场 全栈工程师 参与多个开发者工具项目的全栈开发，负责前端架构与 API 设计。 开发了支持实时协作的文档编辑器 设计了基于 GraphQL 的内容聚合 API 优化了前端构建流程，构建时间减少 60% Personal Knowledge Asset OS 个人知识资产操作系统，统一管理笔记、简历、项目、演示文稿与语义图谱 基于 Astro + React + Tailwind 的静态优先架构 YAML → Typst → PDF 简历自动构建管线 语义图谱预计算与可视化（规划中） Knowledge Graph Visualizer 基于 Three.js 的知识图谱 3D 可视化工具 支持力导向布局与节点交互 实现了基于语义相似度的边权重计算"
+  }
+]

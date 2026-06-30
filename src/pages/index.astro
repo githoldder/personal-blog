@@ -31,59 +31,53 @@ const sections = [
 ---
 
 <BaseLayout title="Personal Knowledge Asset OS">
-  <main class="max-w-4xl mx-auto px-6 py-12">
-    <header class="mb-12">
-      <h1 class="text-3xl font-bold mb-2">Personal Knowledge Asset OS</h1>
-      <p class="text-surface-500">
-        个人知识资产操作系统 — 统一管理笔记、简历、项目、演示文稿与语义图谱。
-      </p>
-    </header>
+  <header class="mb-10">
+    <h1 class="text-3xl font-bold mb-2">Personal Knowledge Asset OS</h1>
+    <p class="text-surface-500">
+      个人知识资产操作系统 — 统一管理笔记、简历、项目、演示文稿与语义图谱。
+    </p>
+  </header>
 
-    <section class="mb-12">
-      <h2 class="text-lg font-semibold mb-4 text-surface-700">资产目录</h2>
-      <div class="grid gap-3">
-        {sections.map((section) => (
-          <a href={section.href} class="workspace-card group">
-            <div class="flex items-center justify-between">
-              <div>
-                <h3 class="font-medium group-hover:text-accent transition-colors">
-                  {section.title}
-                </h3>
-                <p class="text-sm text-surface-500 mt-1">{section.description}</p>
-              </div>
-              <span class="text-surface-400 group-hover:text-accent transition-colors">→</span>
+  <section class="mb-10">
+    <h2 class="text-lg font-semibold mb-4 text-surface-700">资产目录</h2>
+    <div class="grid gap-3">
+      {sections.map((section) => (
+        <a href={section.href} class="workspace-card group">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="font-medium group-hover:text-accent transition-colors">
+                {section.title}
+              </h3>
+              <p class="text-sm text-surface-500 mt-1">{section.description}</p>
             </div>
-          </a>
-        ))}
-      </div>
-    </section>
+            <span class="text-surface-400 group-hover:text-accent transition-colors">→</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
 
-    <section class="mb-12">
-      <h2 class="text-lg font-semibold mb-4 text-surface-700">系统状态</h2>
-      <div class="workspace-card">
-        <dl class="grid grid-cols-2 gap-4 text-sm">
-          <div>
-            <dt class="text-surface-500">阶段</dt>
-            <dd class="font-medium">S01 — Foundation</dd>
-          </div>
-          <div>
-            <dt class="text-surface-500">技术栈</dt>
-            <dd class="font-medium">Astro + React + Tailwind</dd>
-          </div>
-          <div>
-            <dt class="text-surface-500">内容真源</dt>
-            <dd class="font-medium">content/</dd>
-          </div>
-          <div>
-            <dt class="text-surface-500">构建状态</dt>
-            <dd class="font-medium text-amber-600">骨架搭建中</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <footer class="text-sm text-surface-400 border-t border-surface-200 pt-6">
-      <p>Personal Knowledge Asset OS v0.1.0 — 地基搭建阶段</p>
-    </footer>
-  </main>
+  <section class="mb-10">
+    <h2 class="text-lg font-semibold mb-4 text-surface-700">系统状态</h2>
+    <div class="workspace-card">
+      <dl class="grid grid-cols-2 gap-4 text-sm">
+        <div>
+          <dt class="text-surface-500">阶段</dt>
+          <dd class="font-medium text-accent">S05 — Public Surface Polish</dd>
+        </div>
+        <div>
+          <dt class="text-surface-500">技术栈</dt>
+          <dd class="font-medium">Astro + React + Tailwind</dd>
+        </div>
+        <div>
+          <dt class="text-surface-500">内容真源</dt>
+          <dd class="font-medium">content/</dd>
+        </div>
+        <div>
+          <dt class="text-surface-500">构建状态</dt>
+          <dd class="font-medium text-green-600">已就绪</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
 </BaseLayout>

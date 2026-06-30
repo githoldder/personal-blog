@@ -32,70 +32,65 @@ function checkBuildStatus(deck) {
 ---
 
 <BaseLayout title="演示文稿 — Personal Knowledge Asset OS">
-  <main class="max-w-4xl mx-auto px-6 py-12">
-    <header class="mb-12 pb-6 border-b border-surface-200">
-      <a href="/" class="text-sm text-surface-500 hover:text-accent transition-colors flex items-center gap-1">
-        <span>←</span> 返回工作台
-      </a>
-      <h1 class="text-3xl font-bold mt-4 tracking-tight text-surface-900">演示文稿</h1>
-      <p class="text-surface-500 mt-1">
-        Slidev 风格演示文稿。统一存储于 <code>content/decks/</code> 真源。
-      </p>
-    </header>
+  <header class="mb-10 pb-6 border-b border-surface-200">
+    <h1 class="text-3xl font-bold tracking-tight text-surface-900">演示文稿</h1>
+    <p class="text-surface-500 mt-1">
+      Slidev 风格演示文稿。统一存储于 <code>content/decks/</code> 真源。
+    </p>
+  </header>
 
-    <section class="space-y-4">
-      {decks.length === 0 ? (
-        <div class="workspace-card p-8 text-center text-surface-500">
-          <p>暂无演示文稿数据，请先在 <code>content/decks/</code> 中创建幻灯片并运行构建。</p>
-        </div>
-      ) : (
-        <div class="space-y-3">
-          {decks.map((deck) => {
-            const { hasHtml, hasPdf } = checkBuildStatus(deck);
-            return (
-              <div class="workspace-card p-5">
-                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                  <div>
-                    <h3 class="font-semibold text-surface-900 text-base">{deck.title}</h3>
-                    <time class="text-xs text-surface-400 font-mono mt-1 block">{deck.date}</time>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    {hasHtml ? (
-                      <a href={`/slides/${deck.slug}/`} target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-accent hover:underline inline-flex items-center gap-0.5 px-3 py-1.5 bg-blue-50 text-accent rounded-md">
-                        在线预览 <span>↗</span>
-                      </a>
-                    ) : (
-                      <span class="text-xs text-surface-400 bg-surface-100 px-3 py-1.5 rounded-md font-medium" title="Slidev 本地未编译，可在命令行运行 npm run build:decks">
-                        预览: 待构建
-                      </span>
-                    )}
+  <section class="space-y-4">
+    {decks.length === 0 ? (
+      <div class="workspace-card p-8 text-center text-surface-500">
+        <p>暂无演示文稿数据，请先在 <code>content/decks/</code> 中创建幻灯片并运行构建。</p>
+      </div>
+    ) : (
+      <div class="space-y-3">
+        {decks.map((deck) => {
+          const { hasHtml, hasPdf } = checkBuildStatus(deck);
+          return (
+            <div class="workspace-card p-5">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div>
+                  <h3 class="font-semibold text-surface-900 text-base">{deck.title}</h3>
+                  <time class="text-xs text-surface-400 font-mono mt-1 block">{deck.date}</time>
+                </div>
+                <div class="flex items-center gap-3">
+                  {hasHtml ? (
+                    <a href={`/slides/${deck.slug}/`} target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-accent hover:underline inline-flex items-center gap-0.5 px-3 py-1.5 bg-blue-50 text-accent rounded-md">
+                      在线预览 <span>↗</span>
+                    </a>
+                  ) : (
+                    <span class="text-xs text-surface-400 bg-surface-100 px-3 py-1.5 rounded-md font-medium" title="Slidev 本地未编译，可在命令行运行 npm run build:decks">
+                      预览: 待构建
+                    </span>
+                  )}
 
-                    {hasPdf ? (
-                      <a href={`/assets/${deck.slug}.pdf`} download class="text-xs font-semibold text-surface-700 hover:bg-surface-100 border border-surface-200 inline-flex items-center gap-0.5 px-3 py-1.5 rounded-md transition-colors">
-                        下载 PDF <span>💾</span>
-                      </a>
-                    ) : (
-                      <span class="text-xs text-surface-400 bg-surface-100 px-3 py-1.5 rounded-md font-medium" title="Playwright 导出未生成，可在命令行运行 npm run build:decks">
-                        PDF: 待构建
-                      </span>
-                    )}
-                  </div>
+                  {hasPdf ? (
+                    <a href={`/assets/${deck.slug}.pdf`} download class="text-xs font-semibold text-surface-700 hover:bg-surface-100 border border-surface-200 inline-flex items-center gap-0.5 px-3 py-1.5 rounded-md transition-colors">
+                      下载 PDF <span>💾</span>
+                    </a>
+                  ) : (
+                    <span class="text-xs text-surface-400 bg-surface-100 px-3 py-1.5 rounded-md font-medium" title="Playwright 导出未生成，可在命令行运行 npm run build:decks">
+                      PDF: 待构建
+                    </span>
+                  )}
                 </div>
               </div>
-            );
-          })}
-        </div>
-      )}
-    </section>
-
-    <section class="mt-12 workspace-card">
-      <h2 class="font-semibold text-sm text-surface-700 uppercase tracking-wider mb-3">构建说明</h2>
-      <div class="text-xs text-surface-500 space-y-2 font-mono">
-        <p>构建命令: <code>npm run build:decks</code></p>
-        <p>输入路径: <code>content/decks/*.md</code></p>
-        <p>输出预览: <code>public/slides/&lt;slug&gt;/</code></p>
-        <p>输出文件: <code>public/assets/&lt;slug&gt;.pdf</code></p>
+            </div>
+          );
+        })}
       </div>
-    </section>
-  </main>
+    )}
+  </section>
+
+  <section class="mt-12 workspace-card">
+    <h2 class="font-semibold text-sm text-surface-700 uppercase tracking-wider mb-3">构建说明</h2>
+    <div class="text-xs text-surface-500 space-y-2 font-mono">
+      <p>构建命令: <code>npm run build:decks</code></p>
+      <p>输入路径: <code>content/decks/*.md</code></p>
+      <p>输出预览: <code>public/slides/&lt;slug&gt;/</code></p>
+      <p>输出文件: <code>public/assets/&lt;slug&gt;.pdf</code></p>
+    </div>
+  </section>
 </BaseLayout>

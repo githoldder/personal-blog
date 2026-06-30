@@ -25,25 +25,23 @@ const statusLabels = {
 ---
 
 <BaseLayout title="项目 — Personal Knowledge Asset OS">
-  <main class="max-w-4xl mx-auto px-6 py-12">
-    <header class="mb-8">
-      <a href="/" class="text-sm text-surface-500 hover:text-accent transition-colors">← 返回工作台</a>
-      <h1 class="text-2xl font-bold mt-4">项目</h1>
-      <p class="text-surface-500 mt-1">
-        项目文档与进展追踪。来源: <code>content/projects/</code>
-      </p>
-    </header>
+  <header class="mb-8">
+    <h1 class="text-2xl font-bold">项目</h1>
+    <p class="text-surface-500 mt-1">
+      项目文档与进展追踪。来源: <code>content/projects/</code>
+    </p>
+  </header>
 
-    <section>
-      {projects.length === 0 ? (
-        <div class="workspace-card p-8 text-center text-surface-500">
-          <p>暂无项目。请在 <code>content/projects/</code> 中添加 Markdown 文件。</p>
-        </div>
-      ) : (
-        <div class="space-y-3">
-          {projects.map((project) => (
-            <article class="workspace-card block">
-              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+  <section>
+    {projects.length === 0 ? (
+      <div class="workspace-card p-8 text-center text-surface-500">
+        <p>暂无项目。请在 <code>content/projects/</code> 中添加 Markdown 文件。</p>
+      </div>
+    ) : (
+      <div class="space-y-3">
+        {projects.map((project) => (
+          <article class="workspace-card block">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
               <div>
                 <div class="flex flex-wrap items-center gap-3">
                   <h3 class="font-medium text-surface-900">
@@ -55,20 +53,19 @@ const statusLabels = {
                 </div>
                 <p class="text-sm text-surface-500 mt-1">{project.description}</p>
                 <div class="flex flex-wrap items-center gap-2 mt-3">
-                  <time class="text-xs text-surface-400 font-mono" datetime={formatDate(project.date)}>
+                  <time class="text-xs text-surface-400 font-mono mr-1" datetime={formatDate(project.date)}>
                     {formatDate(project.date)}
                   </time>
                   {project.tech.map((item) => (
-                    <span class="status-tag status-tag--todo">{item}</span>
+                    <span class="tech-tag">{item}</span>
                   ))}
                 </div>
               </div>
               <code class="text-xs text-surface-400 shrink-0">{project.slug}</code>
             </div>
-            </article>
-          ))}
-        </div>
-      )}
-    </section>
-  </main>
+          </article>
+        ))}
+      </div>
+    )}
+  </section>
 </BaseLayout>

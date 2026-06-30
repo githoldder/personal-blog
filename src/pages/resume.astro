@@ -32,19 +32,15 @@ if (existsSync(JSON_PATH)) {
 ---
 
 <BaseLayout title={resume ? `${resume.basics.name} — 个人简历` : "简历 — Personal Knowledge Asset OS"}>
-  <main class="max-w-5xl mx-auto px-6 py-12">
-    <header class="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-6 border-b border-surface-200">
-      <div>
-        <a href="/" class="text-sm text-surface-500 hover:text-accent transition-colors flex items-center gap-1">
-          <span>←</span> 返回工作台
-        </a>
-        {resume && (
-          <div class="mt-4">
-            <h1 class="text-3xl font-bold tracking-tight text-surface-900">{resume.basics.name}</h1>
-            <p class="text-lg text-accent font-medium mt-1">{resume.basics.label}</p>
-          </div>
-        )}
-      </div>
+  <header class="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-6 border-b border-surface-200">
+    <div>
+      {resume && (
+        <div>
+          <h1 class="text-3xl font-bold tracking-tight text-surface-900">{resume.basics.name}</h1>
+          <p class="text-lg text-accent font-medium mt-1">{resume.basics.label}</p>
+        </div>
+      )}
+    </div>
 
       <div class="flex flex-wrap gap-3">
         {hasPdf ? (
@@ -92,7 +88,7 @@ if (existsSync(JSON_PATH)) {
               <div>
                 <dt class="text-surface-400 font-medium">电子邮箱</dt>
                 <dd class="mt-1">
-                  <a href={`mailto:${resume.basics.email}`} class="hover:underline">{resume.basics.email}</a>
+                  <a href={`mailto:${resume.basics.email}`} class="text-accent hover:underline">{resume.basics.email}</a>
                 </dd>
               </div>
               <div>
@@ -103,7 +99,7 @@ if (existsSync(JSON_PATH)) {
                 <div>
                   <dt class="text-surface-400 font-medium">个人主页</dt>
                   <dd class="mt-1">
-                    <a href={resume.basics.url} target="_blank" rel="noopener noreferrer" class="hover:underline break-all">
+                    <a href={resume.basics.url} target="_blank" rel="noopener noreferrer" class="text-accent hover:underline break-all">
                       {resume.basics.url.replace(/^https?:\/\//, '')}
                     </a>
                   </dd>
@@ -222,6 +218,5 @@ if (existsSync(JSON_PATH)) {
         </div>
       </div>
     )}
-  </main>
 </BaseLayout>
 

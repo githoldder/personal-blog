@@ -19,6 +19,7 @@ const scripts = [
   { name: 'build-resume.js', label: 'Resume' },
   { name: 'build-decks.js', label: 'Decks' },
   { name: 'build-semantic-graph.js', label: 'Semantic Graph' },
+  { name: 'build-search-index.js', label: 'Search Index' },
 ];
 
 function main() {

@@ -2,19 +2,19 @@
   "sprint_id": "S05",
   "title": "Public Surface Polish",
   "objective": "把 Personal Knowledge Asset OS 的公开展示层打磨到可发布状态，完善响应式体验、搜索订阅、性能 SEO 和发布前检查",
-  "status": "todo",
+  "status": "in_progress",
   "created_at": "2026-06-27",
   "milestones": [
     {
       "id": "M01",
       "title": "Interface polish",
-      "status": "todo",
+      "status": "done",
       "tasks": ["S05-T01", "S05-T02"]
     },
     {
       "id": "M02",
       "title": "Discovery surfaces",
-      "status": "todo",
+      "status": "in_progress",
       "tasks": ["S05-T03", "S05-T04"]
     },
     {
@@ -28,7 +28,7 @@
     {
       "id": "S05-T01",
       "title": "Responsive layout audit and fixes",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
       "inputs": ["src/pages/**/*.astro", "src/styles/global.css"],
       "outputs": ["src/pages/**/*.astro", "src/styles/global.css", "sense/reports/responsive-audit.md"],
@@ -37,12 +37,12 @@
         "Text does not overlap or overflow fixed UI elements",
         "Layout keeps a workbench feel rather than a marketing landing page"
       ],
-      "notes": "Use browser verification when a local dev server is available."
+      "notes": "Completed responsive audit report and migrated SemanticGraph drag handling from mouse events to pointer events for mobile touch support. Browser verification should be used when a local dev server is available."
     },
     {
       "id": "S05-T02",
       "title": "Unify visual system and navigation",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
       "inputs": ["src/layouts/BaseLayout.astro", "src/styles/global.css"],
       "outputs": ["src/layouts/BaseLayout.astro", "src/styles/global.css"],
@@ -56,7 +56,7 @@
     {
       "id": "S05-T03",
       "title": "Add local search index",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
       "inputs": ["content/**", "public/assets/semantic_graph.json"],
       "outputs": ["public/assets/search-index.json", "src/pages/search.astro"],
@@ -70,7 +70,7 @@
     {
       "id": "S05-T04",
       "title": "Add RSS and Atom feeds",
-      "status": "todo",
+      "status": "in_progress",
       "owner": "agent",
       "inputs": ["content/notes/*.md", "content/projects/*.md"],
       "outputs": ["public/rss.xml", "public/atom.xml", "docs/feed-contract.md"],

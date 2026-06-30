@@ -17,25 +17,23 @@ const formatDate = (date: Date) => date.toISOString().slice(0, 10);
 ---
 
 <BaseLayout title="笔记 — Personal Knowledge Asset OS">
-  <main class="max-w-4xl mx-auto px-6 py-12">
-    <header class="mb-8">
-      <a href="/" class="text-sm text-surface-500 hover:text-accent transition-colors">← 返回工作台</a>
-      <h1 class="text-2xl font-bold mt-4">笔记</h1>
-      <p class="text-surface-500 mt-1">
-        知识碎片与思考记录。来源: <code>content/notes/</code>
-      </p>
-    </header>
+  <header class="mb-8">
+    <h1 class="text-2xl font-bold">笔记</h1>
+    <p class="text-surface-500 mt-1">
+      知识碎片与思考记录。来源: <code>content/notes/</code>
+    </p>
+  </header>
 
-    <section>
-      {notes.length === 0 ? (
-        <div class="workspace-card p-8 text-center text-surface-500">
-          <p>暂无笔记。请在 <code>content/notes/</code> 中添加 Markdown 文件。</p>
-        </div>
-      ) : (
-        <div class="space-y-3">
-          {notes.map((note) => (
-            <article class="workspace-card block">
-              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+  <section>
+    {notes.length === 0 ? (
+      <div class="workspace-card p-8 text-center text-surface-500">
+        <p>暂无笔记。请在 <code>content/notes/</code> 中添加 Markdown 文件。</p>
+      </div>
+    ) : (
+      <div class="space-y-3">
+        {notes.map((note) => (
+          <article class="workspace-card block">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
               <div>
                 <h3 class="font-medium text-surface-900">
                   {note.title}
@@ -52,10 +50,9 @@ const formatDate = (date: Date) => date.toISOString().slice(0, 10);
               </div>
               <code class="text-xs text-surface-400 shrink-0">{note.slug}</code>
             </div>
-            </article>
-          ))}
-        </div>
-      )}
-    </section>
-  </main>
+          </article>
+        ))}
+      </div>
+    )}
+  </section>
 </BaseLayout>
