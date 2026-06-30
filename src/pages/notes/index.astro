@@ -32,7 +32,7 @@ const formatDate = (date: Date) => date.toISOString().slice(0, 10);
     ) : (
       <div class="space-y-3">
         {notes.map((note) => (
-          <article class="workspace-card block">
+          <article class="workspace-card block" id={note.slug}>
             <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
               <div>
                 <h3 class="font-medium text-surface-900">

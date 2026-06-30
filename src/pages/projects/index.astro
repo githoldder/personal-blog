@@ -40,7 +40,7 @@ const statusLabels = {
     ) : (
       <div class="space-y-3">
         {projects.map((project) => (
-          <article class="workspace-card block">
+          <article class="workspace-card block" id={project.slug}>
             <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
               <div>
                 <div class="flex flex-wrap items-center gap-3">

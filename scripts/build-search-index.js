@@ -109,15 +109,33 @@ function main() {
       const manifest = JSON.parse(raw);
       const list = manifest.decks || [];
       for (const deck of list) {
+        // 1. 读取 deck Markdown 正文内容以做索引
+        const deckMdPath = join(CONTENT_DIR, 'decks', `${deck.slug}.md`);
+        let deckBody = '';
+        if (existsSync(deckMdPath)) {
+          try {
+            const rawMd = readFileSync(deckMdPath, 'utf-8');
+            const match = rawMd.match(/^---\n([\s\S]*?)\n---\n?/);
+            deckBody = match ? rawMd.slice(match[0].length) : rawMd;
+          } catch (err) {
+            console.warn(`[build-search-index] Failed to read deck md file for ${deck.slug}`);
+          }
+        }
+
+        // 2. 检测本地是否存在预览 HTML，如果不存在则退化跳转到 /decks#slug
+        const htmlPhysicalPath = join(PUBLIC_DIR, 'slides', deck.slug, 'index.html');
+        const hasHtml = existsSync(htmlPhysicalPath);
+        const url = hasHtml ? `/slides/${deck.slug}/` : `/decks#${deck.slug}`;
+
         decks.push({
           id: `deck:${deck.slug}`,
           type: 'deck',
           title: deck.title,
           summary: deck.description || 'Slidev 风格演示文稿',
-          url: `/slides/${deck.slug}/`,
+          url,
           tags: [],
           sourcePath: `content/decks/${deck.slug}.md`,
-          text: `${deck.title} ${deck.description || ''}`
+          text: `${deck.title} ${deck.description || ''} ${cleanMarkdownText(deckBody)}`.trim()
         });
       }
     } catch (e) {

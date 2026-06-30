@@ -106,3 +106,15 @@
   3. Integrated all 6 core page templates (index, notes, projects, decks, resume, graph) under BaseLayout container wrappers, removing redundant custom headers, main elements, footers, and return links.
 - **Verification**: Run `npm run verify` successfully. All 8 tests passed, and static build compiled clean.
 - **Status**: S05-T02 marked done; S05-T03 (Add local search index) is active.
+
+## 2026-06-30T09:05:00+08:00
+- **Action**: Completed S05-T03: Add local search index and implemented safety & integration patches.
+- **Progress Details**:
+  1. Rules Hardening: Added Task Rollback Rule to Agent.md PRD section to enforce Git commits per finished task.
+  2. Downgraded global a styling in global.css and explicitly corrected resume.astro email/url link classes.
+  3. Created scripts/build-search-index.js which parses notes/projects Markdown bodies, resume JSON segments, and deck Markdown contents. Added automated fallback to /decks#slug if Slidev preview builds are missing. Output index to public/assets/search-index.json.
+  4. Integrated index compiler into scripts/build-assets.js and added search button to BaseLayout.astro global nav.
+  5. Implemented secure client search page src/pages/search.astro utilizing escapeHtml and sanitizeUrl logic. Added id anchors to notes, projects, and decks item containers.
+- **Verification**: Run `npm run verify` successfully. All pipeline checks and 8 contract tests passed.
+- **Status**: S05-T03 marked done; S05-T04 (Add RSS and Atom feeds) is active.
+
