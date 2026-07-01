@@ -135,14 +135,14 @@ node scripts/build-semantic-graph.js
 2. **禁止** `git add .`，必须精确 `git add <file>`
 3. Commit 消息必须带 Task ID，格式：`type: description (S01-T0X)`
 4. **禁止自动 Push**，待 Sprint 结束由人类审计后手动执行
-5. 若项目尚未初始化 Git，在 walkthrough 中说明，不伪造 commit。
+5. 若项目尚未初始化 Git，在 `context/context.txt` 中说明，不伪造 commit。
 6. Commit 属于 L2；除非任务或用户明确要求，本项目默认不自动 commit。
 
 ## 当前最高优先级任务
 
-1. **S06-T02**: Define publication channel policy
-2. S06-T03 content cadence and editorial queue remains queued
-3. S06 rollback plan completed, remaining tasks are planning-only
+1. **S06-T03**: Create content cadence and editorial queue
+2. S06-T04 Add content quality checklist remains queued
+3. S06 publication policy completed, remaining tasks are planning-only
 
 ## 决策记录
 
