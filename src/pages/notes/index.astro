@@ -3,6 +3,12 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const notes = (await getCollection('notes'))
+  .filter((entry) => {
+    const status = entry.data.status;
+    const normalized = status ? String(status).toLowerCase().trim() : undefined;
+    const allowedStatuses = [undefined, 'published'];
+    return status === undefined || allowedStatuses.includes(normalized);
+  })
   .map((entry) => ({
     id: entry.id,
     slug: entry.data.slug ?? entry.id,

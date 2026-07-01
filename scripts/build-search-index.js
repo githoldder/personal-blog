@@ -53,6 +53,13 @@ function main() {
         }
       }
 
+      const status = frontmatter.status;
+      const normalized = status ? String(status).toLowerCase().trim() : undefined;
+      const allowedStatuses = [undefined, 'published'];
+      if (status !== undefined && !allowedStatuses.includes(normalized)) {
+        continue;
+      }
+
       const slug = frontmatter.slug || basename(file, '.md');
       notes.push({
         id: `note:${slug}`,
@@ -85,6 +92,13 @@ function main() {
         } catch (e) {
           console.warn(`[build-search-index] Failed to parse frontmatter for project ${file}`);
         }
+      }
+
+      const status = frontmatter.status;
+      const normalized = status ? String(status).toLowerCase().trim() : undefined;
+      const allowedStatuses = [undefined, 'done'];
+      if (status !== undefined && !allowedStatuses.includes(normalized)) {
+        continue;
       }
 
       const slug = frontmatter.slug || basename(file, '.md');

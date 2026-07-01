@@ -72,3 +72,14 @@ test('generated feeds include public project and exclude draft note', () => {
   assert.doesNotMatch(rss, /https:\/\/[^/]+\/notes#2026-06-26-personal-knowledge-asset-os/);
   assert.doesNotMatch(atom, /https:\/\/[^/]+\/notes#2026-06-26-personal-knowledge-asset-os/);
 });
+
+test('generated search index excludes draft note and includes done project', () => {
+  execFileSync('node', ['scripts/build-search-index.js'], { encoding: 'utf-8' });
+  const index = JSON.parse(readFileSync('public/assets/search-index.json', 'utf-8'));
+  
+  const hasDraftNote = index.some(item => item.id === 'note:2026-06-26-personal-knowledge-asset-os');
+  const hasDoneProject = index.some(item => item.id === 'project:personal-knowledge-asset-os');
+  
+  assert.equal(hasDraftNote, false);
+  assert.equal(hasDoneProject, true);
+});

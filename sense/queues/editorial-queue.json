@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-07-01T20:48:00+08:00",
+  "queues": {
+    "draft": [
+      "content/notes/2026-06-26-personal-knowledge-asset-os.md"
+    ],
+    "review": [],
+    "publishable": [
+      "content/projects/personal-knowledge-asset-os.md"
+    ]
+  }
+}

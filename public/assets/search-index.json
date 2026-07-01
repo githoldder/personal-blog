@@ -1,19 +1,5 @@
 [
   {
-    "id": "note:2026-06-26-personal-knowledge-asset-os",
-    "type": "note",
-    "title": "Personal Knowledge Asset OS 架构设计",
-    "summary": "# Personal Knowledge Asset OS 架构设计\n\n## 背景\n\n传统个人博客只能承载文章发布，无法统一管理笔记、简历、项目、演示文稿等多元知识资产。需要一个「操作系统级」的基础设施来统一管理。\n\n## 核心设计\n\n#...",
-    "url": "/notes#2026-06-26-personal-knowledge-asset-os",
-    "tags": [
-      "架构",
-      "知识管理",
-      "Astro"
-    ],
-    "sourcePath": "content/notes/2026-06-26-personal-knowledge-asset-os.md",
-    "text": "Personal Knowledge Asset OS 架构设计 背景 传统个人博客只能承载文章发布，无法统一管理笔记、简历、项目、演示文稿等多元知识资产。需要一个「操作系统级」的基础设施来统一管理。 核心设计 内容真源 所有内容统一存放在 content/ 目录： resume/ — 简历（YAML 数据 + Typst 模板） notes/ — 笔记（Markdown） projects/ — 项目（Markdown） decks/ — 演示文稿（Markdown） 构建管线 content/ → scripts/ → public/assets/ 每个内容类型有独立的构建脚本，最终输出"
-  },
-  {
     "id": "project:personal-knowledge-asset-os",
     "type": "project",
     "title": "Personal Knowledge Asset OS",
