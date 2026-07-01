@@ -147,3 +147,12 @@
 - **Verification**: Run `npm run verify` successfully. All PRDs, contracts, and test files are fully compliant.
 - **Status**: S06-T01 marked done; S06-T02 (Define publication channel policy) is active.
 
+## 2026-07-01T20:13:00+08:00
+- **Action**: Completed S06-T02 Hotfix: Publishing Policy Alignment & PM2 Integration.
+- **Progress Details**:
+  1. Updated docs/publication-channel-policy.md to clarify Git Push approval gates and correct walkthrough.md audit log references to context/context.txt.
+  2. Updated Agent.md behavior rules to bind publication-channel-policy and advanced priority task queue to S06-T03.
+  3. Added ecosystem.config.cjs to manage local PM2 dev and preview environments on loopback 127.0.0.1.
+- **Verification**: Run `npm run verify` successfully. Verified PM2 ecosystem startups and aligned boundary definitions.
+- **Status**: S06-T02 Hotfix marked done; S06-T03 (Create content cadence and editorial queue) is active.
+

@@ -34,13 +34,13 @@
 
 | 渠道路径 | 前置门禁校验 (Gate) | 人类审批凭证 (Approval) | 回滚与灾备路径 (Rollback) |
 |----------|-------------------|----------------------|--------------------------|
-| **Cloudflare Pages / Vercel 静态站部署** | 1. `npm run verify` 通过<br>2. 人工 `npm run preview` 视觉走查<br>3. 检查 [release-checklist.md](file:///Users/caolei/Desktop/personal-blog/docs/release-checklist.md) | 需在 Walkthrough 中呈现构建版本，并在获得人类明确的 **"Proceed" 或部署指令** 后方可执行。 | 1. **Pages 控制台**：一键点击历史 Deployment 的 `Rollback` 瞬间切回上个版本。<br>2. **Vercel CLI**：执行 `vercel alias set <healthy_id> caolei.net` 进行快速指向。 |
+| **Cloudflare Pages / Vercel 静态站部署** | 1. `npm run verify` 通过<br>2. 人工 `npm run preview` 视觉走查<br>3. 检查 [release-checklist.md](file:///Users/caolei/Desktop/personal-blog/docs/release-checklist.md) | 需在本地 `context/context.txt` 日志中呈现构建版本，并在获得人类明确的 **"Proceed" 或部署指令** 后方可执行。 | 1. **Pages 控制台**：一键点击历史 Deployment 的 `Rollback` 瞬间切回上个版本。<br>2. **Vercel CLI**：执行 `vercel alias set <healthy_id> caolei.net` 进行快速指向。 |
 | **Cloudflare R2 资产上传** | 1. 本地校验 PDF/图片 文件完整性<br>2. 走查 `content-quality-checklist.md` 规范 | 必须获得人类对特定资产（如 resume.pdf）的**上传授权确认**。 | 1. **物理删除**：通过 S3 API 或 R2 仪表板手动删除已上传文件。<br>2. **路径降级**：将本站内容引用退化为指向本地物理路径 `/assets/`。 |
-| **GitHub 远程同步 (Git Push)** | 1. `validate-pipeline` 校验全绿<br>2. 确认无未处理的构建时间戳等杂音 | 本地单元测试与回归校验全绿通过即可进行代码级同步。 | 1. **指针回滚**：本地及远端执行 `git reset --hard HEAD~1` 或 `git revert` 并强推（需要人类最终确认）。 |
+| **GitHub 远程同步 (Git Push)** | 1. `validate-pipeline` 校验全绿<br>2. 确认无未处理的构建时间戳等杂音 | 禁止静默 push；待 Sprint 结束或发布前，由人类显式授权后执行（如人类审计确认后执行推送）。 | 1. **指针回滚**：本地及远端执行 `git reset --hard HEAD~1` 或 `git revert` 并强推（需要人类最终确认）。 |
 
 ---
 
 ## 3. L4 门禁行为红线
 
 - **禁止静默操作**：任何静默的 `git push`、`picgo upload`、`wrangler pages deploy` 或外部 API 请求均属于严重越权违规。
-- **报告审计义务**：所有外部写入操作的触发时间、提交哈希（Commit Hash）、部署 URL 必须白纸黑字记录在最新一轮的 `walkthrough.md` 报告中供人类审计。
+- **报告审计义务**：所有外部写入操作的触发时间、提交哈希（Commit Hash）、部署 URL 必须白纸黑字记录在本地 `context/context.txt` 运行日志或提交信息中供人类审计。

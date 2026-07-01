@@ -120,7 +120,7 @@ node scripts/build-semantic-graph.js
 | L4 | External write | 发布、上传、部署、修改远程内容 |
 | L5 | Sensitive | 删除、付款、密码、OAuth、Token |
 
-所有外部写入操作（含 CF Pages/Vercel 部署、R2 资产上传及 Git Push 等）均属于 L4 级。必须严格执行 `docs/publication-channel-policy.md` 政策。禁止任何形式的静默操作，且所有外部写均需在 `walkthrough.md` 中记录审计凭证。
+所有外部写入操作（含 CF Pages/Vercel 部署、R2 资产上传及 Git Push 等）均属于 L4 级。必须严格执行 `docs/publication-channel-policy.md` 政策。禁止任何形式的静默操作，且所有外部写均需在 `context/context.txt` 或提交信息中记录审计凭证。
 
 ### 工具层策略
 
