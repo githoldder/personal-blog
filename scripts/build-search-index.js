@@ -55,8 +55,7 @@ function main() {
 
       const status = frontmatter.status;
       const normalized = status ? String(status).toLowerCase().trim() : undefined;
-      const allowedStatuses = [undefined, 'published'];
-      if (status !== undefined && !allowedStatuses.includes(normalized)) {
+      if (normalized !== 'published') {
         continue;
       }
 
@@ -96,8 +95,7 @@ function main() {
 
       const status = frontmatter.status;
       const normalized = status ? String(status).toLowerCase().trim() : undefined;
-      const allowedStatuses = [undefined, 'done'];
-      if (status !== undefined && !allowedStatuses.includes(normalized)) {
+      if (normalized !== 'done') {
         continue;
       }
 

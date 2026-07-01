@@ -140,9 +140,9 @@ node scripts/build-semantic-graph.js
 
 ## 当前最高优先级任务
 
-1. **S06-T03**: Create content cadence and editorial queue
-2. S06-T04 Add content quality checklist remains queued
-3. S06 publication policy completed, remaining tasks are planning-only
+1. **S06-T04**: Add content quality checklist
+2. S06-T05 Design feedback intake model remains queued
+3. S06 content cadence and queue completed, remaining tasks are planning-only
 
 ## 决策记录
 
@@ -163,5 +163,6 @@ node scripts/build-semantic-graph.js
 - 2026-06-30: S05-T06 完成发布就绪与部署决策报告，Sprint 05 正式收口，S06-T01 成为当前任务
 - 2026-07-01: S06-T01 完成发布清单 docs/release-checklist.md 与应急回退方案 sense/reports/rollback-plan.md
 - 2026-07-01: S06-T02 完成发布渠道边界 docs/publication-channel-policy.md 制定与 Agent.md 行为硬化
+- 2026-07-01: S06-T03 完成本地内容队列定义、Surfaces 发布过滤硬化以及缺省边界单元测试
 
 

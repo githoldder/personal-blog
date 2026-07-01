@@ -81,10 +81,11 @@ export function escapeXml(unsafe) {
   });
 }
 
-export const PUBLISHABLE_STATUSES = [undefined, 'published', 'done'];
+export const PUBLISHABLE_STATUSES = ['published', 'done'];
 
 export function isPublishableStatus(status) {
-  const normalizedStatus = status ? String(status).toLowerCase().trim() : undefined;
+  if (!status) return false;
+  const normalizedStatus = String(status).toLowerCase().trim();
   return PUBLISHABLE_STATUSES.includes(normalizedStatus);
 }
 

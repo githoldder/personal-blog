@@ -45,8 +45,9 @@ test('escapeCdata escapes CDATA end tag boundary', () => {
   assert.equal(safe, 'This contains ]]]]><![CDATA[> end tag');
 });
 
-test('isPublishableStatus only allows public feed statuses', () => {
-  assert.equal(isPublishableStatus(undefined), true);
+test('isPublishableStatus only allows explicit public feed statuses', () => {
+  assert.equal(isPublishableStatus(undefined), false);
+  assert.equal(isPublishableStatus(''), false);
   assert.equal(isPublishableStatus('published'), true);
   assert.equal(isPublishableStatus('done'), true);
   assert.equal(isPublishableStatus(' DONE '), true);

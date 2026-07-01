@@ -19,7 +19,7 @@
   - 参照 `docs/content-quality-checklist.md` 进行人工逐项走查。
 - **月度静态同步 (Monthly Publication)**：
   - 对已通过评审、被判定为可公开发布的内容进行状态提升。
-  - 提升方式：将 Frontmatter 里的 `status` 变更为白名单公开状态（Notes 改为 `published`；Projects 改为 `done`；或者缺省不配置状态）。
+  - 提升方式：将 Frontmatter 里的 `status` 变更为白名单公开状态（Notes 改为 `published`；Projects 改为 `done`）。
   - 执行 `npm run verify` 回归门禁校验，确保构建全绿、草稿排除彻底。
   - 由人类确认后，手动执行推送与静态站部署。
 
@@ -33,7 +33,7 @@
 |--------------|------------|----------------------------|---------------------------------|-----------------------------------|
 | **Draft (草稿)** | 新入库的初始创意、资料摘录或未完结笔记。 | Notes: `draft`<br>Projects: `todo` | `queues.draft` | **强行拦截**（不出现在前台、不索引、不入 Feed） |
 | **Review (打磨中)** | 正处于文本打磨、关联图谱建立、待评审状态的篇目。 | Notes: `draft`<br>Projects: `in_progress` | `queues.review` | **强行拦截**（不出现在前台、不索引、不入 Feed） |
-| **Publishable (发布)** | 已完成品控校验、达到公开发布级别的资产。 | Notes: `published` 或不配置<br>Projects: `done` 或不配置 | `queues.publishable` | **放行准入**（全 Surfaces 显示、索引并生成 Feeds） |
+| **Publishable (发布)** | 已完成品控校验、达到公开发布级别的资产。 | Notes: `published`<br>Projects: `done` | `queues.publishable` | **放行准入**（全 Surfaces 显示、索引并生成 Feeds） |
 
 ---
 

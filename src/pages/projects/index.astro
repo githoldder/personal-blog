@@ -6,8 +6,7 @@ const projects = (await getCollection('projects'))
   .filter((entry) => {
     const status = entry.data.status;
     const normalized = status ? String(status).toLowerCase().trim() : undefined;
-    const allowedStatuses = [undefined, 'done'];
-    return status === undefined || allowedStatuses.includes(normalized);
+    return normalized === 'done';
   })
   .map((entry) => ({
     id: entry.id,

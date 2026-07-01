@@ -56,7 +56,7 @@
     {
       "id": "S06-T03",
       "title": "Create content cadence and editorial queue",
-      "status": "in_progress",
+      "status": "done",
       "owner": "agent",
       "inputs": ["content/notes", "content/projects", "prds/json/S05-polish.json"],
       "outputs": ["docs/content-cadence.md", "sense/queues/editorial-queue.json"],
@@ -70,7 +70,7 @@
     {
       "id": "S06-T04",
       "title": "Add content quality checklist",
-      "status": "todo",
+      "status": "in_progress",
       "owner": "agent",
       "inputs": ["content/**", "docs/semantic-graph-contract.md"],
       "outputs": ["docs/content-quality-checklist.md"],
