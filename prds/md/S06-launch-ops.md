@@ -14,8 +14,8 @@
 ## Milestones
 
 - [x] **M01: Controlled launch preparation** — 发布前控制面
-- [/] **M02: Content operations loop** — 内容运营节奏
-- [ ] **M03: Feedback and maintenance** — 反馈与维护闭环
+- [x] **M02: Content operations loop** — 内容运营节奏
+- [/] **M03: Feedback and maintenance** — 反馈与维护闭环
 
 ## Tasks
 
@@ -24,8 +24,8 @@
 | S06-T01 | Create release checklist and rollback plan | Done |
 | S06-T02 | Define publication channel policy | Done |
 | S06-T03 | Create content cadence and editorial queue | Done |
-| S06-T04 | Add content quality checklist | In Progress |
-| S06-T05 | Design feedback intake model | Todo |
+| S06-T04 | Add content quality checklist | Done |
+| S06-T05 | Design feedback intake model | In Progress |
 | S06-T06 | Create maintenance runbook | Todo |
 
 ## Acceptance Criteria

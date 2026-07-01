@@ -14,13 +14,13 @@
     {
       "id": "M02",
       "title": "Content operations loop",
-      "status": "in_progress",
+      "status": "done",
       "tasks": ["S06-T03", "S06-T04"]
     },
     {
       "id": "M03",
       "title": "Feedback and maintenance",
-      "status": "todo",
+      "status": "in_progress",
       "tasks": ["S06-T05", "S06-T06"]
     }
   ],
@@ -70,7 +70,7 @@
     {
       "id": "S06-T04",
       "title": "Add content quality checklist",
-      "status": "in_progress",
+      "status": "done",
       "owner": "agent",
       "inputs": ["content/**", "docs/semantic-graph-contract.md"],
       "outputs": ["docs/content-quality-checklist.md"],
@@ -84,7 +84,7 @@
     {
       "id": "S06-T05",
       "title": "Design feedback intake model",
-      "status": "todo",
+      "status": "in_progress",
       "owner": "agent",
       "inputs": ["Agent.md", "docs/deployment-plan.md"],
       "outputs": ["docs/feedback-intake.md"],

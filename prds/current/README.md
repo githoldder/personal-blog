@@ -4,7 +4,7 @@ Active sprint: S06 — Launch & Operations.
 
 Current priority:
 
-1. Add content quality checklist (S06-T04).
+1. Design feedback intake model (S06-T05).
 2. Keep external deployment and publishing gated by explicit Sense L4 approval and `docs/publication-channel-policy.md`.
 
 Non-goals:
