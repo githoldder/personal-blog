@@ -4,9 +4,8 @@ Active sprint: S06 — Launch & Operations.
 
 Current priority:
 
-1. Create release checklist and rollback plan (S06-T01).
-2. Define publication channel policy (S06-T02).
-3. Keep external deployment and publishing gated by explicit Sense L4 approval.
+1. Create content cadence and editorial queue (S06-T03).
+2. Keep external deployment and publishing gated by explicit Sense L4 approval and `docs/publication-channel-policy.md`.
 
 Non-goals:
 
