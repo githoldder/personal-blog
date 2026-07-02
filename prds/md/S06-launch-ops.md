@@ -25,8 +25,8 @@
 | S06-T02 | Define publication channel policy | Done |
 | S06-T03 | Create content cadence and editorial queue | Done |
 | S06-T04 | Add content quality checklist | Done |
-| S06-T05 | Design feedback intake model | In Progress |
-| S06-T06 | Create maintenance runbook | Todo |
+| S06-T05 | Design feedback intake model | Done |
+| S06-T06 | Create maintenance runbook | In Progress |
 
 ## Acceptance Criteria
 

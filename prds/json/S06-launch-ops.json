@@ -84,7 +84,7 @@
     {
       "id": "S06-T05",
       "title": "Design feedback intake model",
-      "status": "in_progress",
+      "status": "done",
       "owner": "agent",
       "inputs": ["Agent.md", "docs/deployment-plan.md"],
       "outputs": ["docs/feedback-intake.md"],
@@ -98,7 +98,7 @@
     {
       "id": "S06-T06",
       "title": "Create maintenance runbook",
-      "status": "todo",
+      "status": "in_progress",
       "owner": "agent",
       "inputs": ["package.json", "scripts", "sense/reports"],
       "outputs": ["docs/maintenance-runbook.md"],

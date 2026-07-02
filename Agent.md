@@ -140,9 +140,8 @@ node scripts/build-semantic-graph.js
 
 ## 当前最高优先级任务
 
-1. **S06-T05**: Design feedback intake model
-2. S06-T06 Create maintenance runbook remains queued
-3. S06 content quality checklist completed, remaining tasks are planning-only
+1. **S06-T06**: Create maintenance runbook
+2. S06 feedback intake model completed, remaining tasks are planning-only
 
 ## 决策记录
 
@@ -165,4 +164,5 @@ node scripts/build-semantic-graph.js
 - 2026-07-01: S06-T02 完成发布渠道边界 docs/publication-channel-policy.md 制定与 Agent.md 行为硬化
 - 2026-07-01: S06-T03 完成本地内容队列定义、Surfaces 发布过滤硬化以及缺省边界单元测试
 - 2026-07-01: S06-T04 完成内容质量清单 docs/content-quality-checklist.md 建立，覆盖 metadata, links, graph, privacy 四个维度
+- 2026-07-02: S06-T05 完成低侵入反馈机制设计 docs/feedback-intake.md，默认推荐静态 mailto 与 GitHub 仓库反馈
 

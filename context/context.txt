@@ -182,3 +182,12 @@
   3. Swapped active task target from S06-T04 to S06-T05 in `prds/current/README.md`.
   4. Pointed active priorities to S06-T05 and logged S06-T04 completion in `Agent.md`.
 - **Status**: S06-T04 state sync verified; S06-T05 is active.
+
+## 2026-07-02T16:58:00+08:00
+- **Action**: Completed S06-T05: Design feedback intake model.
+- **Progress Details**:
+  1. Drafted `docs/feedback-intake.md` evaluating feedback intake options, zero-trust privacy criteria, and moderation/spam risks.
+  2. Defined dual-track static/local feedback recommendation (pre-filled `mailto:` links & repo-based Issues/Discussions links) with no external JS dependencies.
+  3. Outlined approval gate rules for optional comment integrations (like Giscus).
+  4. Synchronized status to Done for S06-T05 and In Progress for S06-T06 in S06-launch-ops json/md, current README, and Agent.md.
+- **Status**: S06-T05 marked done; S06-T06 (Create maintenance runbook) is active.
