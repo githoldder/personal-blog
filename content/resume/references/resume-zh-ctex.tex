@@ -1,0 +1,95 @@
+%% ModernCV 中文简历模板 (ctex 适配版)
+%% 基于 moderncv template-zh.tex 改进
+%% 编译方式: xelatex resume-zh-ctex.tex
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% ==================== 主题样式 ====================
+\moderncvstyle{casual}              % 可选: casual, classic, banking, oldstyle, fancy
+\moderncvcolor{blue}                % 可选: blue, orange, green, red, purple, grey, burgundy
+
+% ==================== 中文支持 (ctex) ====================
+\usepackage{ctex}                   % 使用 ctex 宏包，自动处理中文字体
+\setCJKmainfont{SimSun}             % 设置中文主字体（可改为其他字体）
+% \setCJKsansfont{SimHei}           % 无衬线字体
+% \setCJKmonofont{FangSong}         % 等宽字体
+
+% ==================== 页面设置 ====================
+\usepackage[scale=0.75,top=2cm,bottom=2cm]{geometry}
+% \setlength{\hintscolumnwidth}{3cm}  % 调整日期栏宽度
+
+% ==================== 其他宏包 ====================
+\usepackage{fontawesome5}            % 图标支持（需要安装）
+\usepackage{enumitem}                % 列表定制
+
+% ==================== 个人信息 ====================
+\name{曹}{磊}
+\title{个人简历}
+\address{广东省广州市}{510000}
+\phone[mobile]{+86~138~0000~0000}
+\email{example@email.com}
+% \homepage{www.example.com}
+% \social[linkedin]{your-linkedin}
+% \social[github]{your-github}
+\extrainfo{在校创业者 | 校园水果O2O}
+\photo[64pt][0.4pt]{../img/photo}    % 照片，放在 img/ 目录
+% \quote{简洁、专业、高效}
+
+% ==================== 文档开始 ====================
+\begin{document}
+\maketitle
+
+% -------------------- 个人简介 --------------------
+\section{个人简介}
+\cvitem{}{%
+  在校创业者，专注于校园水果O2O领域。具备产品思维与技术落地能力，
+  善于从用户需求出发设计解决方案。追求简洁高效的工作方式。
+}
+
+% -------------------- 教育背景 --------------------
+\section{教育背景}
+\cventry{2021.09 -- 2025.06}{本科 · 计算机科学与技术}{XX大学}{广州}{}{}
+\cvitem{主修课程}{数据结构、算法设计、数据库原理、软件工程}
+
+% -------------------- 项目经历 --------------------
+\section{项目经历}
+
+\subsection{校园水果O2O平台}
+\cventry{2024.03 -- 至今}{创始人 \& 产品负责人}{}{}{}{%
+  \begin{itemize}
+    \item 搭建校园水果配送体系，覆盖3个校区，日均订单200+
+    \item 设计用户小程序 + 商家管理后台，实现订单自动化处理
+    \item 建立供应链体系，与本地果园合作，降低成本30\%
+  \end{itemize}
+}
+
+\subsection{考研英语App}
+\cventry{2025.01 -- 2025.03}{产品设计 \& 开发}{}{}{}{%
+  \begin{itemize}
+    \item 基于考研真题阅读的单词记忆应用
+    \item 间隔重复算法 + 三时段闹钟提醒
+    \item 本地RAG知识库，支持真题智能答疑
+  \end{itemize}
+}
+
+% -------------------- 技能特长 --------------------
+\section{技能特长}
+\cvdoubleitem{编程语言}{Python, JavaScript, SQL}{产品设计}{Figma, Axure}
+\cvdoubleitem{后端开发}{FastAPI, Node.js}{前端开发}{React, 微信小程序}
+\cvdoubleitem{工具链}{Git, Docker, Linux}{语言能力}{英语 CET-6}
+
+% -------------------- 获奖荣誉 --------------------
+\section{获奖荣誉}
+\cvlistitem{XX大赛省级一等奖（2024）}
+\cvlistitem{校级优秀学生干部（2023）}
+\cvlistitem{互联网+创新创业大赛铜奖（2023）}
+
+% -------------------- 自我评价 --------------------
+\section{自我评价}
+\cvitem{}{%
+  \textbf{学习能力强}：快速掌握新技术栈，具备独立解决问题能力\\[3pt]
+  \textbf{执行力高}：从0到1完成多个项目落地，注重结果导向\\[3pt]
+  \textbf{团队协作}：良好的沟通能力，善于跨部门协作推进项目
+}
+
+\end{document}

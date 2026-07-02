@@ -241,35 +241,61 @@ function main() {
     });
   }
 
-  // Heuristic 3: Tag / Keyword Overlap
-  for (let i = 0; i < nodes.length; i++) {
-    for (let j = i + 1; j < nodes.length; j++) {
-      const nodeA = nodes[i];
-      const nodeB = nodes[j];
+  // Heuristic 3: Tag / Keyword Overlap (Optimized with Inverted Index & Set)
+  const linkedSet = new Set();
+  edges.forEach(e => {
+    const key = e.source < e.target ? `${e.source}&&${e.target}` : `${e.target}&&${e.source}`;
+    linkedSet.add(key);
+  });
 
-      // 如果已经有 link 边或者 owner 边，则跳过
-      const alreadyLinked = edges.some(e => 
-        (e.source === nodeA.id && e.target === nodeB.id) ||
-        (e.source === nodeB.id && e.target === nodeA.id)
-      );
-      if (alreadyLinked) continue;
+  const tagToNodes = new Map();
+  for (const node of nodes) {
+    // 过滤掉 'Obsidian' 全局共有标签，避免生成无意义的全连接边
+    const tags = (node.tags || []).filter(t => t !== 'Obsidian');
+    for (const tag of tags) {
+      if (!tagToNodes.has(tag)) {
+        tagToNodes.set(tag, []);
+      }
+      tagToNodes.get(tag).push(node);
+    }
+  }
 
-      const tagsA = nodeA.tags || [];
-      const tagsB = nodeB.tags || [];
+  const overlapCandidates = new Map();
+  for (const [tag, nodeList] of tagToNodes.entries()) {
+    // 如果某个标签被超过 50 个节点共有，忽略其连边以防止图谱边数爆炸和卡死
+    if (nodeList.length > 50) {
+      console.log(`[build-semantic-graph] Skipping overlap connections for broad tag "${tag}" (${nodeList.length} nodes)`);
+      continue;
+    }
 
-      if (tagsA.length > 0 && tagsB.length > 0) {
-        const shared = tagsA.filter(t => tagsB.includes(t));
-        if (shared.length > 0) {
-          edges.push({
+    for (let i = 0; i < nodeList.length; i++) {
+      for (let j = i + 1; j < nodeList.length; j++) {
+        const nodeA = nodeList[i];
+        const nodeB = nodeList[j];
+        const key = nodeA.id < nodeB.id ? `${nodeA.id}&&${nodeB.id}` : `${nodeB.id}&&${nodeA.id}`;
+        
+        if (linkedSet.has(key)) continue;
+
+        if (!overlapCandidates.has(key)) {
+          overlapCandidates.set(key, {
             source: nodeA.id,
             target: nodeB.id,
-            weight: Math.min(1.0, shared.length * 0.25),
-            type: 'tag_overlap',
-            metadata: { shared_tags: shared }
+            sharedTags: []
           });
         }
+        overlapCandidates.get(key).sharedTags.push(tag);
       }
     }
+  }
+
+  for (const candidate of overlapCandidates.values()) {
+    edges.push({
+      source: candidate.source,
+      target: candidate.target,
+      weight: Math.min(1.0, candidate.sharedTags.length * 0.25),
+      type: 'tag_overlap',
+      metadata: { shared_tags: candidate.sharedTags }
+    });
   }
 
   // 整理输出结构，清理 nodes 的临时 tags 属性（保持 semantic_graph.json 的纯净）

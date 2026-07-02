@@ -16,6 +16,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const scripts = [
+  { name: 'build-notes-index.js', label: 'Notes Index' },
   { name: 'build-resume.js', label: 'Resume' },
   { name: 'build-decks.js', label: 'Decks' },
   { name: 'build-semantic-graph.js', label: 'Semantic Graph' },
