@@ -191,3 +191,12 @@
   3. Outlined approval gate rules for optional comment integrations (like Giscus).
   4. Synchronized status to Done for S06-T05 and In Progress for S06-T06 in S06-launch-ops json/md, current README, and Agent.md.
 - **Status**: S06-T05 marked done; S06-T06 (Create maintenance runbook) is active.
+
+## 2026-07-02T17:05:00+08:00
+- **Action**: Completed S06-T06: Create maintenance runbook.
+- **Progress Details**:
+  1. Created `docs/maintenance-runbook.md` detailing daily/monthly/quarterly maintenance cycles.
+  2. Documented recurring verification commands (`npm run verify`, `validate-prd.js`, `npm run preview`).
+  3. Identified known environment blockers (missing Typst/Slidev CLI) and specified safe fallback rendering degradation methods.
+  4. Standardized dependency upgrade workflows and locked status to Done across all S06 control boards (JSON, MD, current README, Agent.md).
+- **Status**: S06-T06 marked done; Sprint 06 completed and ready for final auditing.

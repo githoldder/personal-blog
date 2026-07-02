@@ -1,10 +1,10 @@
 # Current PRD Boundary
 
-Active sprint: S06 — Launch & Operations.
+Active sprint: S06 — Launch & Operations (Completed).
 
 Current priority:
 
-1. Create maintenance runbook (S06-T06).
+1. All tasks under S06 have been completed. Ready for final audit.
 2. Keep external deployment and publishing gated by explicit Sense L4 approval and `docs/publication-channel-policy.md`.
 
 Non-goals:

@@ -2,7 +2,7 @@
   "sprint_id": "S06",
   "title": "Launch & Operations",
   "objective": "在 S05 发布就绪基础上建立可控发布、内容运营与轻量反馈闭环，让 Personal Knowledge Asset OS 可以长期维护而不引入外部副作用失控风险",
-  "status": "in_progress",
+  "status": "done",
   "created_at": "2026-06-30",
   "milestones": [
     {
@@ -20,7 +20,7 @@
     {
       "id": "M03",
       "title": "Feedback and maintenance",
-      "status": "in_progress",
+      "status": "done",
       "tasks": ["S06-T05", "S06-T06"]
     }
   ],
@@ -98,7 +98,7 @@
     {
       "id": "S06-T06",
       "title": "Create maintenance runbook",
-      "status": "in_progress",
+      "status": "done",
       "owner": "agent",
       "inputs": ["package.json", "scripts", "sense/reports"],
       "outputs": ["docs/maintenance-runbook.md"],
