@@ -1,0 +1,21 @@
+{
+  "nodes": [
+    {
+      "id": "deck:pk-asset-os-roadmap",
+      "label": "PK Asset OS 路线图",
+      "type": "deck",
+      "metadata": {
+        "file": "content/decks/pk-asset-os-roadmap.md",
+        "degree": 0,
+        "tags": [],
+        "scope": "Decks"
+      }
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "scope": "Decks",
+    "total_nodes": 1,
+    "total_edges": 0
+  }
+}

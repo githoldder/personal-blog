@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-07-03T07:46:13.236Z",
+  "scopes": {
+    "Projects": {
+      "file": "public/assets/graphs/projects.json",
+      "total_nodes": 9,
+      "total_edges": 0
+    },
+    "Areas": {
+      "file": "public/assets/graphs/areas.json",
+      "total_nodes": 0,
+      "total_edges": 0
+    },
+    "Resources-Books": {
+      "file": "public/assets/graphs/resources-books.json",
+      "total_nodes": 11,
+      "total_edges": 55
+    },
+    "Resources-Notes": {
+      "file": "public/assets/graphs/resources-notes.json",
+      "total_nodes": 444,
+      "total_edges": 4003
+    },
+    "Archives": {
+      "file": "public/assets/graphs/archives.json",
+      "total_nodes": 0,
+      "total_edges": 0
+    },
+    "Decks": {
+      "file": "public/assets/graphs/decks.json",
+      "total_nodes": 1,
+      "total_edges": 0
+    },
+    "Resume": {
+      "file": "public/assets/graphs/resume.json",
+      "total_nodes": 1,
+      "total_edges": 0
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "sprint_id": "S07",
+  "title": "Product Prototype and Visual Direction",
+  "objective": "以 Maggie Appleton 的知识花园阅读体验和 Amelia Wattenberger 的科学可视化气质为参照，完成 Personal Knowledge Asset OS 的用户端与管理端纯前端原型、信息架构和视觉系统定义",
+  "status": "done",
+  "created_at": "2026-07-02",
+  "milestones": [
+    {
+      "id": "M01",
+      "title": "Visual language and information architecture",
+      "status": "done",
+      "tasks": ["S07-T01", "S07-T02"]
+    },
+    {
+      "id": "M02",
+      "title": "Public reading and knowledge surfaces",
+      "status": "done",
+      "tasks": ["S07-T03", "S07-T04", "S07-T05"]
+    },
+    {
+      "id": "M03",
+      "title": "Admin console prototype",
+      "status": "done",
+      "tasks": ["S07-T06"]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "S07-T01",
+      "title": "Define visual direction and design tokens",
+      "status": "done",
+      "owner": "agent",
+      "inputs": ["README.md", "context/project-brief.md", "docs/content-cadence.md"],
+      "outputs": ["docs/design-direction.md"],
+      "acceptance_criteria": [
+        "Document explains how Maggie Appleton and Amelia Wattenberger are translated into this product without copying assets",
+        "Design tokens cover color, typography, layout density, illustration style and graph visualization mood",
+        "User-facing and admin-facing visual rules are clearly separated"
+      ],
+      "notes": "This sprint is prototype-only and must not introduce backend API or deployment side effects."
+    },
+    {
+      "id": "S07-T02",
+      "title": "Prototype public landing page",
+      "status": "done",
+      "owner": "agent",
+      "inputs": ["docs/design-direction.md", "public/assets/semantic_graph.json", "public/assets/resume.json"],
+      "outputs": ["src/pages/index.astro", "docs/frontend-prototype-spec.md"],
+      "acceptance_criteria": [
+        "Landing page presents identity, knowledge garden, portfolio, timeline and graph entry in the first browsing path",
+        "The page feels like a reading-oriented knowledge atlas rather than a generic portfolio landing page",
+        "No decorative-only visual treatment overrides content clarity"
+      ],
+      "notes": "Use static data already available in public/assets and content."
+    },
+    {
+      "id": "S07-T03",
+      "title": "Prototype note reading surface",
+      "status": "done",
+      "owner": "agent",
+      "inputs": ["content/notes", "docs/content-quality-checklist.md"],
+      "outputs": ["src/pages/notes/index.astro", "docs/frontend-prototype-spec.md"],
+      "acceptance_criteria": [
+        "Notes surface supports reading hierarchy, tags, timestamps and source provenance",
+        "Draft and private content remain excluded from public surfaces",
+        "Design includes space for future backlinks, table of contents and related notes"
+      ],
+      "notes": "Do not expose private Obsidian content beyond current publish filters."
+    },
+    {
+      "id": "S07-T04",
+      "title": "Prototype library timeline and portfolio surfaces",
+      "status": "done",
+      "owner": "agent",
+      "inputs": ["content/projects", "content/decks", "public/assets/search-index.json"],
+      "outputs": ["src/pages/projects/index.astro", "src/pages/decks/index.astro", "docs/frontend-prototype-spec.md"],
+      "acceptance_criteria": [
+        "Library surface organizes notes, projects, decks and resume as one knowledge asset system",
+        "Portfolio and timeline affordances are represented in the frontend prototype",
+        "The prototype makes future filtering and chronology features obvious without requiring backend work"
+      ],
+      "notes": "Keep the first implementation static and build-time driven."
+    },
+    {
+      "id": "S07-T05",
+      "title": "Prototype semantic graph visual upgrade",
+      "status": "done",
+      "owner": "agent",
+      "inputs": ["src/components/SemanticGraph.jsx", "public/assets/semantic_graph.json", "docs/semantic-graph-contract.md"],
+      "outputs": ["src/components/SemanticGraph.jsx", "src/pages/lab/graph.astro"],
+      "acceptance_criteria": [
+        "Graph view improves scanning, clustering cues and scientific visualization feel",
+        "Large graph performance remains acceptable for the current Obsidian-scale dataset",
+        "The design leaves a clear path toward future 3D or richer interaction without implementing it prematurely"
+      ],
+      "notes": "3D remains gated by lab-input-policy unless explicitly approved later."
+    },
+    {
+      "id": "S07-T06",
+      "title": "Prototype local admin console shell",
+      "status": "done",
+      "owner": "agent",
+      "inputs": ["sense/queues/editorial-queue.json", "docs/feedback-intake.md"],
+      "outputs": ["src/pages/admin/index.astro", "docs/admin-console-prototype.md"],
+      "acceptance_criteria": [
+        "Admin shell shows source tree, preview panel, publish queue and quality gate placeholders",
+        "Prototype clearly communicates that admin is local-first and not intended for public exposure by default",
+        "No write action, GitHub token, deployment trigger or external mutation is implemented in this sprint"
+      ],
+      "notes": "This is a clickable or static prototype shell only."
+    }
+  ]
+}

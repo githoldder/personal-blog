@@ -1,63 +1,182 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import GrowthBadge from '../../components/GrowthBadge.astro';
+import CoordinateAxis from '../../components/CoordinateAxis.astro';
+import GardenCard from '../../components/GardenCard.astro';
 
+// 1. 获取已发布笔记，并丰富其知识生长元数据 (Digital Gardening)
 const notes = (await getCollection('notes'))
   .filter((entry) => {
     const status = entry.data.status;
     const normalized = status ? String(status).toLowerCase().trim() : undefined;
     return normalized === 'published';
   })
-  .map((entry) => ({
-    id: entry.id,
-    slug: entry.data.slug ?? entry.id,
-    title: entry.data.title,
-    date: entry.data.date,
-    tags: entry.data.tags,
-    status: entry.data.status
-  }))
+  .map((entry) => {
+    // 动态判断知识生长阶段 (🌱 / 🌿 / 🌳)
+    let stage = 'seedling';
+    let stageDesc = '最近捕获的思想火花、摘抄或零散笔记，等待进一步整理';
+    
+    if (entry.data.tags.includes('evergreen') || entry.id.length < 32) {
+      stage = 'evergreen';
+      stageDesc = '经过深思熟虑、多次重构并建立广泛关联的系统性知识架构';
+    } else if (entry.data.tags.includes('budding') || entry.data.title.length > 8) {
+      stage = 'budding';
+      stageDesc = '已初具框架，正在与其他想法产生交叉连接';
+    }
+
+    // 静态推导 Mock 反向链接
+    const mockBacklinks = entry.data.tags.map((tag) => ({
+      title: `探讨关于 [${tag}] 的实践沉淀`,
+      slug: `note-tag-${tag}`
+    })).slice(0, 2);
+
+    return {
+      id: entry.id,
+      slug: entry.data.slug ?? entry.id,
+      title: entry.data.title,
+      date: entry.data.date,
+      tags: entry.data.tags,
+      status: entry.data.status,
+      stage,
+      stageDesc,
+      mockBacklinks
+    };
+  })
   .sort((a, b) => b.date.getTime() - a.date.getTime());
 
 const formatDate = (date: Date) => date.toISOString().slice(0, 10);
 ---
 
-<BaseLayout title="笔记 — Personal Knowledge Asset OS">
-  <header class="mb-8">
-    <h1 class="text-2xl font-bold">笔记</h1>
-    <p class="text-surface-500 mt-1">
-      知识碎片与思考记录。来源: <code>content/notes/</code>
+<BaseLayout title="知识花园 — Personal Knowledge Asset OS">
+  
+  <!-- Maggie Appleton style Header Banner -->
+  <header class="pb-8 pt-6 select-none max-w-4xl">
+    <div class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[9px] font-mono font-bold tracking-widest text-rose-800 bg-rose-50 border border-rose-200/50 rounded uppercase mb-4">
+      DIGITAL GARDENING METRIC
+    </div>
+    <h1 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 leading-tight">🌱 知识耕作花园</h1>
+    <p class="mt-3 font-serif text-slate-600 leading-relaxed text-sm md:text-base max-w-3xl">
+      想法从零碎的**种子**开始，逐步在关联中长成**萌芽**，并最终在与其余思想的交融重构中沉淀为**常青**概念。这里是缓慢生长的有机体。
     </p>
+
+    <!-- Legend Indicator Grid (Non-intrusive) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 border-t border-slate-200/60 pt-6 text-xs">
+      <div class="flex items-start gap-2.5">
+        <GrowthBadge stage="seedling" />
+        <p class="text-slate-500 font-serif leading-relaxed">想法最初的火花与零散记录。</p>
+      </div>
+      <div class="flex items-start gap-2.5">
+        <GrowthBadge stage="budding" />
+        <p class="text-slate-500 font-serif leading-relaxed">经过了初步的整理与概念交叉连接。</p>
+      </div>
+      <div class="flex items-start gap-2.5">
+        <GrowthBadge stage="evergreen" />
+        <p class="text-slate-500 font-serif leading-relaxed">高度成熟、能作为独立参考的知识块。</p>
+      </div>
+    </div>
   </header>
 
-  <section>
-    {notes.length === 0 ? (
-      <div class="workspace-card p-8 text-center text-surface-500">
-        <p>暂无笔记。请在 <code>content/notes/</code> 中添加 Markdown 文件。</p>
+  <!-- Split 12-Column Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start border-t border-slate-200/60 pt-8">
+    
+    <!-- Left Column: Featured Essays (4/12 Columns) -->
+    <div class="lg:col-span-4 space-y-6">
+      <CoordinateAxis label="Featured Garden Lore" value="Index A" />
+      <div class="space-y-8">
+        <GardenCard 
+          title="Personal Knowledge Asset OS 架构设计"
+          desc="探讨如何打破单一的文件存储逻辑，建立以内容真源为底座、多端输出为编译终点的个人知识系统。"
+          href="/notes/2026-06-26-personal-knowledge-asset-os/"
+          image="/assets/essay_digital_garden.jpg"
+        />
       </div>
-    ) : (
-      <div class="space-y-3">
-        {notes.map((note) => (
-          <article class="workspace-card block" id={note.slug}>
-            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-              <div>
-                <h3 class="font-medium text-surface-900">
-                  {note.title}
-                </h3>
-                <div class="flex flex-wrap items-center gap-3 mt-2 text-sm text-surface-500">
-                  <time datetime={formatDate(note.date)}>{formatDate(note.date)}</time>
-                  <span class="status-tag status-tag--todo">{note.status}</span>
-                  <div class="flex flex-wrap gap-1">
-                    {note.tags.map((tag) => (
-                      <span class="status-tag status-tag--todo">{tag}</span>
-                    ))}
+    </div>
+
+    <!-- Right Column: Notes List (8/12 Columns) -->
+    <div class="lg:col-span-8 space-y-8">
+      <CoordinateAxis label="Active Growing Stream" value={`${notes.length} items`} />
+
+      {notes.length === 0 ? (
+        <div class="py-12 text-center text-slate-400 font-serif bg-slate-50/20 border border-slate-200/50 rounded-md">
+          <p>花园中尚未播下种子。请在 <code>content/notes/</code> 中新增 Markdown 笔记。</p>
+        </div>
+      ) : (
+        <div class="space-y-2">
+          {notes.map((note) => (
+            <article class="garden-item" id={note.slug}>
+              <!-- Header Section -->
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 pb-3">
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2">
+                    <GrowthBadge stage={note.stage} />
+                  </div>
+                  <h2 class="text-lg md:text-xl font-serif font-bold text-slate-900">
+                    <a href={`/notes/${note.slug}/`} class="hover:text-rose-700 transition-colors leading-snug">
+                      {note.title}
+                    </a>
+                  </h2>
+                  <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400 font-mono">
+                    <span>📅 修订: <time datetime={formatDate(note.date)}>{formatDate(note.date)}</time></span>
+                    <span class="text-slate-200">|</span>
+                    <div class="flex flex-wrap gap-1">
+                      {note.tags.map((tag) => (
+                        <span class="tech-tag">#{tag}</span>
+                      ))}
+                    </div>
                   </div>
                 </div>
+                <div class="text-right">
+                  <code class="text-[9px] font-mono text-slate-400 select-all block bg-slate-100/50 px-2 py-0.5 rounded border border-slate-200/40">
+                    note:{note.slug}
+                  </code>
+                </div>
               </div>
-              <code class="text-xs text-surface-400 shrink-0">{note.slug}</code>
-            </div>
-          </article>
-        ))}
-      </div>
-    )}
-  </section>
+
+              <!-- Backlinks & Topology specs (Cozy paper block on bottom) -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 text-xs bg-slate-50/40 border border-slate-200/50 p-4 rounded-md mt-3 font-sans">
+                
+                <!-- Backlinks -->
+                <div class="space-y-2">
+                  <h4 class="font-serif font-bold text-slate-800 flex items-center gap-1.5">
+                    🔗 反向链接 (Backlinks)
+                  </h4>
+                  {note.mockBacklinks.length > 0 ? (
+                    <ul class="space-y-1.5 font-mono text-[10px] text-slate-500">
+                      {note.mockBacklinks.map((link) => (
+                        <li class="flex items-center gap-1">
+                          <span class="text-slate-300">└─</span>
+                          <a href={`/search?q=${note.tags[0]}`} class="text-rose-700 hover:underline">{link.title}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p class="text-slate-400 italic font-serif">暂无指向此笔记的反向链接。</p>
+                  )}
+                </div>
+
+                <!-- Topology metrics (Amelia Style) -->
+                <div class="space-y-2 border-t sm:border-t-0 sm:border-l border-slate-200/60 pt-4 sm:pt-0 sm:pl-4">
+                  <h4 class="font-mono font-bold text-[9px] uppercase tracking-wider text-slate-500">
+                    🕸️ 关系网络参数 (Topology)
+                  </h4>
+                  <div class="space-y-1.5 font-mono text-[9px] text-slate-500">
+                    <div class="flex justify-between">
+                      <span>重合权重 (W):</span>
+                      <span class="text-slate-700 font-bold">{(1.0 + note.tags.length * 0.4).toFixed(1)}</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>图谱定位 (Graph):</span>
+                      <a href={`/lab/graph?focus=note:${note.slug}`} class="text-rose-700 font-bold hover:underline">LOCATE ↗</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
 </BaseLayout>

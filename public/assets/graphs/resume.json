@@ -1,0 +1,41 @@
+{
+  "nodes": [
+    {
+      "id": "resume:basics",
+      "label": "曹磊的简历",
+      "type": "resume",
+      "metadata": {
+        "summary": "常州工学院软件工程专业本科生。主修软件工程，具备扎实的全栈与分布式应用技术基础。作为核心成员参与龙虎塘派出所政务信息化系统“治慧租”APP的研发，并自主创业“常工生鲜”小程序。多次获得校级优秀学生干部及国家级/省级学科竞赛奖项（包含揭榜挂帅擂台赛全国二等奖、iCAN创新创业大赛全国三等奖及省级一等奖、亚太数学建模二等奖等）。熟悉 Python 爬虫、自然语言处理（NLP）及微服务架构，热衷于构建高效实用的工程工具。",
+        "degree": 2,
+        "tags": [
+          "Python",
+          "Java",
+          "JavaScript",
+          "SQL",
+          "React",
+          "FastAPI",
+          "Spring Boot",
+          "微信小程序",
+          "Vite",
+          "Docker",
+          "Celery",
+          "Redis",
+          "PM2",
+          "LaTeX",
+          "Obsidian",
+          "项目策划",
+          "需求调研",
+          "日语 N2",
+          "普通话二甲"
+        ],
+        "scope": "Resume"
+      }
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "scope": "Resume",
+    "total_nodes": 1,
+    "total_edges": 0
+  }
+}

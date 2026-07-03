@@ -1,85 +1,304 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-export default function SemanticGraph({ initialData }) {
-  const containerRef = useRef(null);
+export default function SemanticGraph() {
+  // 1. 状态管理 (低频交互)
+  const [activeScope, setActiveScope] = useState('Projects');
+  const [graphMode, setGraphMode] = useState('para'); // 'para' (大脑版图) or 'full' (全量细节)
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [selectedNode, setSelectedNode] = useState(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [dateFilter, setDateFilter] = useState('all'); // 'all', '30d', '90d'
+  
+  // 物理参数配置
+  const [kLink, setKLink] = useState(0.04);
+  const [restLength, setRestLength] = useState(120);
+  const [charge, setCharge] = useState(-1000);
+  const [gravity, setGravity] = useState(0.02);
+  const [friction, setFriction] = useState(0.85);
+
+  // 节点和连线数据 (仅在初始化/合并时触发低频重绘)
   const [nodes, setNodes] = useState([]);
   const [links, setLinks] = useState([]);
-  const [selectedNode, setSelectedNode] = useState(null);
-  const [draggedNode, setDraggedNode] = useState(null);
+  
+  // 2. Refs 机制 (高频物理运算隔离)
+  const nodesRef = useRef([]);
+  const linksRef = useRef([]);
+  const animFrameIdRef = useRef(null);
+  const draggedNodeRef = useRef(null);
+  const crossScopeIndexRef = useRef(null);
+  const containerRef = useRef(null);
+
   const [dimensions, setDimensions] = useState({ width: 800, height: 500 });
+  const [isMobile, setIsMobile] = useState(false);
 
-  // 记录选中的关联节点和边
-  const activeNeighbors = selectedNode
-    ? new Set(
-        links
-          .filter(l => l.source.id === selectedNode.id || l.target.id === selectedNode.id)
-          .flatMap(l => [l.source.id, l.target.id])
-      )
-    : new Set();
-
-  // 1. 初始化数据，预测物理分布
+  // 移动端及视口检测
   useEffect(() => {
-    if (!initialData || !initialData.nodes) return;
+    const handleResize = () => {
+      const w = containerRef.current ? containerRef.current.clientWidth : 800;
+      const h = containerRef.current ? containerRef.current.clientHeight || 500 : 500;
+      setDimensions({ width: w, height: h });
+      
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      if (mobile) setIsPaused(true);
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-    const w = containerRef.current ? containerRef.current.clientWidth : 800;
-    const h = 500;
-    setDimensions({ width: w, height: h });
+  // 3. 获取 Cross-Scope 索引数据
+  useEffect(() => {
+    fetch('/assets/graphs/cross_scope_index.json')
+      .then(res => res.json())
+      .then(data => {
+        crossScopeIndexRef.current = data;
+      })
+      .catch(err => console.warn('Failed to load cross-scope graph index:', err));
+  }, []);
 
-    const initialNodes = initialData.nodes.map(n => ({
+  // 4. 加载 Scoped / PARA 拓扑图
+  useEffect(() => {
+    let active = true;
+    const fileUrl = graphMode === 'para'
+      ? '/assets/graphs/para.json'
+      : `/assets/graphs/${activeScope.toLowerCase()}.json`;
+
+    fetch(fileUrl)
+      .then(res => res.json())
+      .then(data => {
+        if (!active) return;
+        
+        const rawNodes = data.nodes || [];
+        const rawEdges = data.edges || [];
+
+        // 80 节点抽样逻辑：如果是 para 模式全量加载所有节点，细节子图模式只取前 80 高 Degree 节点
+        const sortedNodes = [...rawNodes].sort((a, b) => {
+          const degA = a.metadata?.degree || 0;
+          const degB = b.metadata?.degree || 0;
+          return degB - degA;
+        });
+
+        const sampledNodes = graphMode === 'para' ? rawNodes : sortedNodes.slice(0, 80);
+        const sampledNodeIds = new Set(sampledNodes.map(n => n.id));
+
+        const sampledEdges = rawEdges.filter(e => 
+          sampledNodeIds.has(e.source) && sampledNodeIds.has(e.target)
+        );
+
+        // 初始化物理坐标
+        const w = dimensions.width;
+        const h = dimensions.height;
+        
+        const initializedNodes = sampledNodes.map(n => ({
+          ...n,
+          x: w / 2 + (Math.random() - 0.5) * 250,
+          y: h / 2 + (Math.random() - 0.5) * 250,
+          vx: 0,
+          vy: 0
+        }));
+
+        const initializedLinks = sampledEdges.map(e => {
+          const sourceNode = initializedNodes.find(n => n.id === e.source);
+          const targetNode = initializedNodes.find(n => n.id === e.target);
+          return {
+            ...e,
+            source: sourceNode,
+            target: targetNode
+          };
+        }).filter(l => l.source && l.target);
+
+        // 写入 Refs 及 States
+        nodesRef.current = initializedNodes;
+        linksRef.current = initializedLinks;
+        setNodes(initializedNodes);
+        setLinks(initializedLinks);
+
+        if (initializedNodes.length > 0) {
+          setSelectedNode(initializedNodes[0]);
+        } else {
+          setSelectedNode(null);
+        }
+      })
+      .catch(err => {
+        console.warn(`Failed to load graph database from [${fileUrl}]:`, err);
+      });
+
+    return () => {
+      active = false;
+    };
+  }, [activeScope, dimensions.width]);
+
+  // 5. 邻域动态扩展加载 (Neighborhood Expansion)
+  const expandNeighborhood = async () => {
+    if (!selectedNode || !crossScopeIndexRef.current) return;
+
+    const index = crossScopeIndexRef.current;
+    const neighbors = index.node_to_neighbors[selectedNode.id] || [];
+    if (neighbors.length === 0) {
+      alert('该节点在全局图谱中暂无关联的其他邻居。');
+      return;
+    }
+
+    const currentIds = new Set(nodesRef.current.map(n => n.id));
+    const targetIds = neighbors.filter(id => !currentIds.has(id));
+
+    if (targetIds.length === 0) {
+      alert('所有关联邻居已全部呈现在当前画布中。');
+      return;
+    }
+
+    // 确定邻居所属的 scope，按 scope 聚合获取
+    const scopeGroups = {};
+    targetIds.forEach(id => {
+      const scope = index.node_to_scope[id] || 'Archives';
+      if (!scopeGroups[scope]) scopeGroups[scope] = [];
+      scopeGroups[scope].push(id);
+    });
+
+    const newNodesToLoad = [];
+    const newEdgesToLoad = [];
+
+    // 并行拉取各 scoped 关系文件
+    await Promise.all(
+      Object.keys(scopeGroups).map(async (scope) => {
+        try {
+          const res = await fetch(`/assets/graphs/${scope.toLowerCase()}.json`);
+          const data = await res.json();
+          const targetSet = new Set(scopeGroups[scope]);
+          
+          (data.nodes || []).forEach(n => {
+            if (targetSet.has(n.id)) newNodesToLoad.push(n);
+          });
+          (data.edges || []).forEach(e => {
+            newEdgesToLoad.push(e);
+          });
+        } catch (e) {
+          // ignore
+        }
+      })
+    );
+
+    if (newNodesToLoad.length === 0) return;
+
+    // 初始化新节点坐标 (放在当前 focus 节点附近)
+    const refX = selectedNode.x;
+    const refY = selectedNode.y;
+
+    const initializedNewNodes = newNodesToLoad.map(n => ({
       ...n,
-      x: w / 2 + (Math.random() - 0.5) * 150,
-      y: h / 2 + (Math.random() - 0.5) * 150,
+      x: refX + (Math.random() - 0.5) * 100,
+      y: refY + (Math.random() - 0.5) * 100,
       vx: 0,
       vy: 0
     }));
 
-    const initialLinks = initialData.edges.map(e => {
-      const sourceNode = initialNodes.find(n => n.id === e.source);
-      const targetNode = initialNodes.find(n => n.id === e.target);
+    const combinedNodes = [...nodesRef.current, ...initializedNewNodes];
+    const combinedNodeIds = new Set(combinedNodes.map(n => n.id));
+
+    // 合并 edges 并重新匹配引用
+    const allUniqueEdges = [];
+    const seenEdges = new Set();
+
+    // 保留原边
+    linksRef.current.forEach(l => {
+      const key = `${l.source.id}&&${l.target.id}`;
+      allUniqueEdges.push({ source: l.source.id, target: l.target.id, weight: l.weight, type: l.type });
+      seenEdges.add(key);
+    });
+
+    // 注入新拉取的跨 scope 连边
+    newEdgesToLoad.forEach(e => {
+      const key1 = `${e.source}&&${e.target}`;
+      const key2 = `${e.target}&&${e.source}`;
+      if (combinedNodeIds.has(e.source) && combinedNodeIds.has(e.target) && !seenEdges.has(key1) && !seenEdges.has(key2)) {
+        allUniqueEdges.push(e);
+        seenEdges.add(key1);
+      }
+    });
+
+    const combinedLinks = allUniqueEdges.map(e => {
+      const sNode = combinedNodes.find(n => n.id === e.source);
+      const tNode = combinedNodes.find(n => n.id === e.target);
       return {
         ...e,
-        source: sourceNode,
-        target: targetNode
+        source: sNode,
+        target: tNode
       };
     }).filter(l => l.source && l.target);
 
-    setNodes(initialNodes);
-    setLinks(initialLinks);
+    // 更新 Refs
+    nodesRef.current = combinedNodes;
+    linksRef.current = combinedLinks;
 
-    if (initialNodes.length > 0) {
-      setSelectedNode(initialNodes[0]);
-    }
-  }, [initialData]);
+    // 低频重绘 React elements 以挂载 DOM nodes
+    setNodes(combinedNodes);
+    setLinks(combinedLinks);
+  };
 
-  // 2. 简易力导向仿真核心
+  // 重置返回 Scope
+  const resetScope = () => {
+    setActiveScope(activeScope); // 触发重新加载
+    // 强制触发重新加载
+    const url = `/assets/graphs/${activeScope.toLowerCase()}.json`;
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        const initializedNodes = (data.nodes || []).slice(0, 80).map(n => ({
+          ...n,
+          x: dimensions.width / 2 + (Math.random() - 0.5) * 200,
+          y: dimensions.height / 2 + (Math.random() - 0.5) * 200,
+          vx: 0,
+          vy: 0
+        }));
+        const initializedLinks = (data.edges || []).map(e => {
+          const s = initializedNodes.find(node => node.id === e.source);
+          const t = initializedNodes.find(node => node.id === e.target);
+          return { ...e, source: s, target: t };
+        }).filter(l => l.source && l.target);
+
+        nodesRef.current = initializedNodes;
+        linksRef.current = initializedLinks;
+        setNodes(initializedNodes);
+        setLinks(initializedLinks);
+        if (initializedNodes.length > 0) setSelectedNode(initializedNodes[0]);
+      });
+  };
+
+  // 6. Verlet 坐标仿真步长 (免 setState，直接操作 SVG 属性)
   useEffect(() => {
-    if (nodes.length === 0) return;
+    if (isPaused) {
+      if (animFrameIdRef.current) cancelAnimationFrame(animFrameIdRef.current);
+      return;
+    }
 
-    let animFrameId;
-    const kLink = 0.04;      
-    const restLength = 120;  
-    const charge = -1200;    
-    const gravity = 0.015;   
-    const friction = 0.85;   
+    const tick = () => {
+      const currentNodes = nodesRef.current;
+      const currentLinks = linksRef.current;
+      if (currentNodes.length === 0) {
+        animFrameIdRef.current = requestAnimationFrame(tick);
+        return;
+      }
 
-    const step = () => {
       const cx = dimensions.width / 2;
       const cy = dimensions.height / 2;
 
-      const fx = new Array(nodes.length).fill(0);
-      const fy = new Array(nodes.length).fill(0);
+      const fx = new Array(currentNodes.length).fill(0);
+      const fy = new Array(currentNodes.length).fill(0);
 
-      // 计算斥力
-      for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j++) {
-          const nA = nodes[i];
-          const nB = nodes[j];
+      // A. 计算粒子斥力
+      for (let i = 0; i < currentNodes.length; i++) {
+        for (let j = i + 1; j < currentNodes.length; j++) {
+          const nA = currentNodes[i];
+          const nB = currentNodes[j];
           const dx = nB.x - nA.x;
           const dy = nB.y - nA.y;
           const distSq = dx * dx + dy * dy + 0.1;
           const dist = Math.sqrt(distSq);
 
-          if (dist < 400) {
+          if (dist < 350) {
             const force = charge / distSq;
             const forceX = (dx / dist) * force;
             const forceY = (dy / dist) * force;
@@ -92,18 +311,18 @@ export default function SemanticGraph({ initialData }) {
         }
       }
 
-      // 计算弹簧引力
-      links.forEach(link => {
+      // B. 计算弹簧拉力
+      currentLinks.forEach(link => {
         const nA = link.source;
         const nB = link.target;
-        const idxA = nodes.indexOf(nA);
-        const idxB = nodes.indexOf(nB);
+        const idxA = currentNodes.findIndex(n => n.id === nA.id);
+        const idxB = currentNodes.findIndex(n => n.id === nB.id);
 
         if (idxA !== -1 && idxB !== -1) {
           const dx = nB.x - nA.x;
           const dy = nB.y - nA.y;
           const dist = Math.sqrt(dx * dx + dy * dy) || 0.1;
-          
+
           const force = kLink * link.weight * (dist - restLength);
           const forceX = (dx / dist) * force;
           const forceY = (dy / dist) * force;
@@ -115,10 +334,11 @@ export default function SemanticGraph({ initialData }) {
         }
       });
 
-      // 更新物理量
-      const updatedNodes = nodes.map((node, idx) => {
-        if (draggedNode && node.id === draggedNode.id) {
-          return node;
+      // C. 更新物理位置与速度
+      currentNodes.forEach((node, idx) => {
+        if (draggedNodeRef.current && node.id === draggedNodeRef.current.id) {
+          // 被拖拽节点由鼠标事件接管，不更新物理力学
+          return;
         }
 
         const gravX = (cx - node.x) * gravity;
@@ -127,300 +347,483 @@ export default function SemanticGraph({ initialData }) {
         const totalFx = fx[idx] + gravX;
         const totalFy = fy[idx] + gravY;
 
-        const vx = (node.vx + totalFx) * friction;
-        const vy = (node.vy + totalFy) * friction;
+        node.vx = (node.vx + totalFx) * friction;
+        node.vy = (node.vy + totalFy) * friction;
 
-        let nextX = node.x + vx;
-        let nextY = node.y + vy;
+        node.x += node.vx;
+        node.y += node.vy;
+
+        // 边界吸附
         const margin = 20;
-
-        if (nextX < margin) nextX = margin;
-        if (nextX > dimensions.width - margin) nextX = dimensions.width - margin;
-        if (nextY < margin) nextY = margin;
-        if (nextY > dimensions.height - margin) nextY = dimensions.height - margin;
-
-        return {
-          ...node,
-          x: nextX,
-          y: nextY,
-          vx,
-          vy
-        };
+        if (node.x < margin) node.x = margin;
+        if (node.x > dimensions.width - margin) node.x = dimensions.width - margin;
+        if (node.y < margin) node.y = margin;
+        if (node.y > dimensions.height - margin) node.y = dimensions.height - margin;
       });
 
-      links.forEach(link => {
-        link.source = updatedNodes.find(n => n.id === link.source.id);
-        link.target = updatedNodes.find(n => n.id === link.target.id);
+      // D. 直接操作 DOM 元素坐标，极速渲染，不通过 React 重绘
+      currentNodes.forEach(node => {
+        const el = document.getElementById(`d3-node-${node.id}`);
+        if (el) {
+          el.setAttribute('transform', `translate(${node.x}, ${node.y})`);
+        }
       });
 
-      setNodes(updatedNodes);
-      
+      currentLinks.forEach((link, idx) => {
+        const el = document.getElementById(`d3-link-${idx}`);
+        if (el) {
+          el.setAttribute('x1', String(link.source.x));
+          el.setAttribute('y1', String(link.source.y));
+          el.setAttribute('x2', String(link.target.x));
+          el.setAttribute('y2', String(link.target.y));
+        }
+      });
+
+      // 如果选中的是当前物理变化的节点，手动更新其瞬时速度坐标板
       if (selectedNode) {
-        const freshSelected = updatedNodes.find(n => n.id === selectedNode.id);
-        if (freshSelected) {
-          setSelectedNode(freshSelected);
+        const currentSelected = currentNodes.find(n => n.id === selectedNode.id);
+        if (currentSelected) {
+          const vxVal = document.getElementById('sensor-vx');
+          const vyVal = document.getElementById('sensor-vy');
+          const xVal = document.getElementById('sensor-x');
+          const yVal = document.getElementById('sensor-y');
+          if (vxVal) vxVal.innerText = currentSelected.vx.toFixed(3);
+          if (vyVal) vyVal.innerText = currentSelected.vy.toFixed(3);
+          if (xVal) xVal.innerText = currentSelected.x.toFixed(1);
+          if (yVal) yVal.innerText = currentSelected.y.toFixed(1);
         }
       }
 
-      animFrameId = requestAnimationFrame(step);
+      animFrameIdRef.current = requestAnimationFrame(tick);
     };
 
-    animFrameId = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(animFrameId);
-  }, [nodes, links, draggedNode, dimensions]);
+    animFrameIdRef.current = requestAnimationFrame(tick);
+    return () => {
+      if (animFrameIdRef.current) cancelAnimationFrame(animFrameIdRef.current);
+    };
+  }, [kLink, restLength, charge, gravity, friction, isPaused, selectedNode]);
 
+  // 7. 鼠标拖拽事件管理
   const handlePointerDown = (node, e) => {
-    if (e.pointerId !== undefined && typeof e.target.setPointerCapture === 'function') {
-      try {
-        e.target.setPointerCapture(e.pointerId);
-      } catch (err) {
-        console.error('Failed to set pointer capture:', err);
+    if (isPaused) return;
+    draggedNodeRef.current = node;
+    const svg = containerRef.current?.querySelector('svg');
+    if (svg && typeof svg.setPointerCapture === 'function') {
+      svg.setPointerCapture(e.pointerId);
+    }
+  };
+
+  const handlePointerMove = (e) => {
+    if (!draggedNodeRef.current || !containerRef.current) return;
+    
+    const svg = containerRef.current.querySelector('svg');
+    if (!svg) return;
+
+    const rect = svg.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const node = nodesRef.current.find(n => n.id === draggedNodeRef.current.id);
+    if (node) {
+      node.x = Math.max(20, Math.min(dimensions.width - 20, x));
+      node.y = Math.max(20, Math.min(dimensions.height - 20, y));
+      node.vx = 0;
+      node.vy = 0;
+    }
+  };
+
+  const handlePointerUp = () => {
+    draggedNodeRef.current = null;
+  };
+
+  // 过滤显示节点 (供静态 SVG nodes render 初始化定位)
+  const filteredNodes = nodes.filter(n => {
+    const matchesSearch = n.label.toLowerCase().includes(searchQuery.toLowerCase()) || n.id.toLowerCase().includes(searchQuery.toLowerCase());
+    if (!matchesSearch) return false;
+
+    // 时间线过滤 (基于 2026-07-02 预置基准)
+    if (dateFilter !== 'all') {
+      const nodeDateStr = n.metadata?.date;
+      if (nodeDateStr) {
+        try {
+          const nodeTime = new Date(nodeDateStr).getTime();
+          const baseTime = new Date('2026-07-02').getTime();
+          const limitDays = dateFilter === '30d' ? 30 : 90;
+          const diffDays = (baseTime - nodeTime) / (1000 * 60 * 60 * 24);
+          if (diffDays > limitDays) return false;
+        } catch (e) {
+          // ignore
+        }
       }
     }
-    setDraggedNode(node);
-  };
+    return true;
+  });
 
-  const handlePointerMove = e => {
-    if (!draggedNode || !containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
+  const filteredNodeIds = new Set(filteredNodes.map(n => n.id));
+  const filteredLinks = links.filter(l => 
+    filteredNodeIds.has(l.source.id) && filteredNodeIds.has(l.target.id)
+  );
 
-    setNodes(prev =>
-      prev.map(n =>
-        n.id === draggedNode.id
-          ? { ...n, x: mouseX, y: mouseY, vx: 0, vy: 0 }
-          : n
-      )
-    );
-  };
-
-  const handlePointerUp = e => {
-    if (draggedNode && e && e.pointerId !== undefined && typeof e.target.releasePointerCapture === 'function') {
-      try {
-        e.target.releasePointerCapture(e.pointerId);
-      } catch (err) {
-        // Safe release
-      }
-    }
-    setDraggedNode(null);
-  };
-
-  const getNodeColor = type => {
+  // 拓扑节点底色定义
+  const getNodeColor = (type) => {
     switch (type) {
-      case 'resume':
-        return {
-          fill: '#fef3c7',
-          stroke: '#d97706',
-          text: '#92400e'
-        };
+      case 'folder':
+        return { fill: 'hsl(199, 89%, 95%)', stroke: 'hsl(199, 89%, 48%)', text: 'hsl(199, 89%, 28%)' };
+      case 'book':
+        return { fill: 'hsl(120, 40%, 96%)', stroke: 'hsl(120, 40%, 45%)', text: 'hsl(120, 40%, 25%)' };
       case 'project':
-        return {
-          fill: '#dcfce7',
-          stroke: '#16a34a',
-          text: '#166534'
-        };
+        return { fill: 'hsl(142, 60%, 96%)', stroke: 'hsl(142, 45%, 42%)', text: 'hsl(142, 45%, 26%)' };
       case 'deck':
-        return {
-          fill: '#f3e8ff',
-          stroke: '#9333ea',
-          text: '#6b21a8'
-        };
-      case 'note':
-      default:
-        return {
-          fill: '#dbeafe',
-          stroke: '#2563eb',
-          text: '#1e40af'
-        };
+        return { fill: 'hsl(217, 70%, 97%)', stroke: 'hsl(217, 60%, 55%)', text: 'hsl(217, 60%, 30%)' };
+      case 'resume':
+        return { fill: 'hsl(340, 100%, 97%)', stroke: 'hsl(340, 82%, 52%)', text: 'hsl(340, 82%, 35%)' };
+      default: // note
+        return { fill: 'hsl(35, 60%, 98%)', stroke: 'hsl(35, 30%, 45%)', text: 'hsl(35, 30%, 30%)' };
     }
   };
+
+  // Fullscreen Shell Toggle
+  const toggleFullscreen = () => {
+    setIsFullscreen(!isFullscreen);
+  };
+
+  // 全屏或常规布局的 Shell Classes
+  const outerShellClasses = isFullscreen
+    ? "fixed inset-0 z-50 bg-[#FCFAF7] p-6 flex flex-col gap-4 overflow-hidden"
+    : "grid grid-cols-1 xl:grid-cols-12 gap-10 items-start";
+
+  const canvasContainerClasses = isFullscreen
+    ? "flex-grow relative overflow-hidden bg-white border border-slate-200 rounded-md shadow-inner"
+    : "h-[540px] relative overflow-hidden bg-white cursor-grab active:cursor-grabbing select-none border border-slate-200 rounded-md shadow-inner";
 
   return (
     <div 
-      className="grid grid-cols-1 lg:grid-cols-4 gap-6"
+      className={outerShellClasses}
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
       onPointerLeave={handlePointerUp}
       onPointerCancel={handlePointerUp}
+      id="graph-workbench"
     >
-      <div 
-        ref={containerRef}
-        className="lg:col-span-3 workspace-card p-0 h-[500px] relative overflow-hidden bg-surface-50 cursor-grab active:cursor-grabbing select-none"
-        style={{ touchAction: 'none' }}
-      >
-        <svg className="w-full h-full">
-          <g>
-            {links.map((link, idx) => {
-              const isSelected = selectedNode && (link.source.id === selectedNode.id || link.target.id === selectedNode.id);
-              return (
+      {/* 1. Left Scope Rail (View Mode Switch & Aria list) */}
+      <aside className={isFullscreen ? "flex flex-col gap-3 shrink-0 border-b xl:border-b-0 xl:border-r border-slate-200/60 pb-3 xl:pb-0 xl:pr-4" : "xl:col-span-3 space-y-4 select-none"}>
+        
+        {/* View Mode Switcher */}
+        <div className="space-y-1.5">
+          <div className="font-mono text-[9px] font-bold text-slate-400 tracking-widest uppercase mb-1 hidden xl:block">View Selector</div>
+          <div className="flex border border-slate-200/60 p-1 rounded-md bg-stone-50 gap-1 w-full">
+            <button
+              onClick={() => {
+                setGraphMode('para');
+                setIsPaused(false);
+              }}
+              className={`flex-1 py-1.5 text-center text-[10px] font-mono font-bold rounded transition-all ${
+                graphMode === 'para'
+                  ? 'bg-slate-900 text-white shadow-sm'
+                  : 'bg-transparent text-slate-500 hover:text-slate-800'
+              }`}
+            >
+              🧠 大脑版图
+            </button>
+            <button
+              onClick={() => {
+                setGraphMode('full');
+                setIsPaused(false);
+              }}
+              className={`flex-1 py-1.5 text-center text-[10px] font-mono font-bold rounded transition-all ${
+                graphMode === 'full'
+                  ? 'bg-slate-900 text-white shadow-sm'
+                  : 'bg-transparent text-slate-500 hover:text-slate-800'
+              }`}
+            >
+              🔬 微观细节
+            </button>
+          </div>
+        </div>
+
+        {graphMode === 'para' ? (
+          /* PARA Legend */
+          <div className="bg-stone-50 border border-slate-200/60 p-3 rounded-md space-y-2.5 font-mono text-[10px] w-full">
+            <div className="font-bold text-slate-400 border-b border-slate-200 pb-1 uppercase tracking-wider text-[9px]">Map Legend</div>
+            <div className="space-y-2 text-slate-600">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: 'hsl(199, 89%, 48%)' }}></span>
+                <span>📁 文件夹 (Areas)</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: 'hsl(142, 45%, 42%)' }}></span>
+                <span>💻 项目 (Projects)</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: 'hsl(120, 40%, 45%)' }}></span>
+                <span>📖 书籍 (Books)</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: 'hsl(217, 60%, 55%)' }}></span>
+                <span>🎴 幻灯片 (Decks)</span>
+              </div>
+            </div>
+            <p className="text-[9px] text-slate-450 font-serif leading-relaxed mt-2 border-t border-slate-200/60 pt-2 select-text">
+              大脑版图已将底层的千余篇复杂笔记，按物理二级目录折叠聚合展示，从而为您清晰呈现宏观知识结构体系。
+            </p>
+          </div>
+        ) : (
+          /* Full Scopes Rail */
+          <div className="space-y-2 w-full">
+            <div className="font-mono text-[9px] font-bold text-slate-400 tracking-widest uppercase mb-1 hidden xl:block">Scope Rail</div>
+            <div className="flex flex-wrap xl:flex-col gap-1.5 w-full">
+              {['Projects', 'Areas', 'Resources-Books', 'Resources-Notes', 'Decks', 'Resume', 'Archives'].map(scope => (
+                <button
+                  key={scope}
+                  onClick={() => setActiveScope(scope)}
+                  className={`px-3 py-1.5 text-left text-xs font-mono font-bold rounded transition-all w-full flex items-center justify-between ${
+                    activeScope === scope 
+                      ? 'bg-rose-50 border border-rose-200/50 text-rose-800' 
+                      : 'bg-white border border-slate-200/40 text-slate-600 hover:bg-slate-50'
+                  }`}
+                >
+                  <span>{scope.replace('-', ' ')}</span>
+                  <span className="text-[10px] opacity-50">➔</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </aside>
+
+      {/* 2. Central Simulation Canvas (Grid visualizer) */}
+      <div className={isFullscreen ? "flex-grow flex flex-col space-y-3 min-h-0" : "xl:col-span-7 space-y-4"}>
+        
+        {/* Controls Toolbar */}
+        <div className="border border-slate-200/60 rounded-md p-3 bg-stone-50/50 flex flex-wrap items-center justify-between gap-3 text-xs font-mono select-none">
+          <div className="relative w-full sm:w-56">
+            <span className="absolute left-2.5 top-2 text-slate-400 font-mono">🔍</span>
+            <input 
+              type="text" 
+              placeholder="检索图谱标签..."
+              className="w-full pl-8 pr-3 py-1.5 border border-slate-200 bg-white hover:border-slate-350 rounded focus:outline-none focus:ring-1 focus:ring-rose-500 font-sans"
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
+            />
+          </div>
+
+          <div className="flex items-center gap-2">
+            <select
+              value={dateFilter}
+              onChange={e => setDateFilter(e.target.value)}
+              className="px-2 py-1.5 border border-slate-200 bg-white rounded focus:outline-none focus:ring-1 focus:ring-rose-500 font-sans font-bold text-slate-700"
+            >
+              <option value="all">📅 显示全部时区</option>
+              <option value="30d">📅 最近30天笔记</option>
+              <option value="90d">📅 最近90天笔记</option>
+            </select>
+          </div>
+
+          <div className="flex gap-2 shrink-0">
+            <button 
+              onClick={() => setIsPaused(!isPaused)} 
+              className={`px-3 py-1.5 border font-mono font-bold rounded transition-colors ${
+                isPaused 
+                  ? 'bg-rose-900 text-white border-rose-950 shadow-sm' 
+                  : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
+              }`}
+            >
+              {isPaused ? '▶ 启动物理模拟' : '⏸ 暂停物理仿真'}
+            </button>
+
+            <button
+              onClick={toggleFullscreen}
+              className="px-3 py-1.5 bg-rose-50 border border-rose-200 text-rose-800 font-mono font-bold rounded hover:bg-rose-100/60 transition-colors"
+            >
+              {isFullscreen ? '收回全屏 ↙' : '💻 全屏画布 ↗'}
+            </button>
+          </div>
+        </div>
+
+        {/* Visual Viewport */}
+        <div 
+          ref={containerRef}
+          className={canvasContainerClasses}
+          style={{ touchAction: 'none' }}
+        >
+          {/* Grid Background Pattern */}
+          <div className="absolute inset-0 pointer-events-none grid-bg opacity-30"></div>
+
+          {/* Real-time coordinates dashboard */}
+          {selectedNode && (
+            <div className="absolute top-4 left-4 bg-slate-900/90 backdrop-blur-sm border border-slate-800 text-[#00ff66] p-3 rounded font-mono text-[9px] leading-relaxed shadow-lg select-none z-10 w-44">
+              <div class="flex items-center justify-between border-b border-slate-800 pb-1.5 mb-1.5">
+                <span class="font-bold text-white">⚡ SENSOR ACTIVE</span>
+                <span class="animate-pulse">●</span>
+              </div>
+              <div class="flex justify-between">
+                <span>NODE ID:</span>
+                <span class="text-white truncate max-w-[80px]">{selectedNode.id}</span>
+              </div>
+              <div class="flex justify-between">
+                <span>COORD X:</span>
+                <span class="text-white" id="sensor-x">{selectedNode.x.toFixed(1)}</span>
+              </div>
+              <div class="flex justify-between">
+                <span>COORD Y:</span>
+                <span class="text-white" id="sensor-y">{selectedNode.y.toFixed(1)}</span>
+              </div>
+              <div class="flex justify-between">
+                <span>VEL VX:</span>
+                <span class="text-white" id="sensor-vx">{selectedNode.vx.toFixed(3)}</span>
+              </div>
+              <div class="flex justify-between">
+                <span>VEL VY:</span>
+                <span class="text-white" id="sensor-vy">{selectedNode.vy.toFixed(3)}</span>
+              </div>
+            </div>
+          )}
+
+          <svg 
+            className="w-full h-full block" 
+            viewBox={`0 0 ${dimensions.width} ${dimensions.height}`}
+          >
+            {/* Draw Links */}
+            <g className="links-group">
+              {filteredLinks.map((link, idx) => (
                 <line
                   key={`link-${idx}`}
+                  id={`d3-link-${idx}`}
                   x1={link.source.x}
                   y1={link.source.y}
                   x2={link.target.x}
                   y2={link.target.y}
-                  stroke={isSelected ? '#2563eb' : '#d4d4d4'}
-                  strokeWidth={isSelected ? 2 : 1}
-                  strokeDasharray={link.type === 'tag_overlap' ? '4 4' : '0'}
-                  opacity={selectedNode ? (isSelected ? 1.0 : 0.25) : 0.6}
+                  stroke={link.type === 'link' ? 'hsl(340, 60%, 88%)' : 'rgba(148, 163, 184, 0.15)'}
+                  strokeWidth={link.type === 'link' ? 1.5 : 1}
+                  strokeDasharray={link.type === 'tag_overlap' ? '3,3' : 'none'}
                 />
-              );
-            })}
-          </g>
+              ))}
+            </g>
 
-          <g>
-            {nodes.map((node) => {
-              const color = getNodeColor(node.type);
-              const isSelected = selectedNode && node.id === selectedNode.id;
-              const isActiveNeighbor = activeNeighbors.has(node.id);
-              const radius = node.type === 'resume' ? 24 : 18;
-
-              let opacity = 1.0;
-              if (selectedNode) {
-                opacity = (isSelected || isActiveNeighbor) ? 1.0 : 0.3;
-              }
-
-              return (
-                <g
-                  key={node.id}
-                  transform={`translate(${node.x}, ${node.y})`}
-                  className="cursor-pointer"
-                  onClick={() => setSelectedNode(node)}
-                  onPointerDown={(e) => handlePointerDown(node, e)}
-                  style={{ opacity, transition: 'opacity 0.2s' }}
-                >
-                  <circle
-                    r={radius}
-                    fill={color.fill}
-                    stroke={isSelected ? '#2563eb' : color.stroke}
-                    strokeWidth={isSelected ? 3 : 1.5}
-                    className="transition-all duration-150 hover:scale-105"
-                  />
-                  <text
-                    dy=".3em"
-                    textAnchor="middle"
-                    className="font-mono font-bold text-xs select-none pointer-events-none"
-                    fill={color.text}
+            {/* Draw Nodes */}
+            <g className="nodes-group">
+              {filteredNodes.map((node) => {
+                const color = getNodeColor(node.type);
+                const isSelected = selectedNode && selectedNode.id === node.id;
+                
+                return (
+                  <g
+                    key={node.id}
+                    id={`d3-node-${node.id}`}
+                    transform={`translate(${node.x}, ${node.y})`}
+                    className="cursor-pointer select-none"
+                    onClick={() => setSelectedNode(node)}
+                    onPointerDown={(e) => handlePointerDown(node, e)}
                   >
-                    {node.type.slice(0, 2).toUpperCase()}
-                  </text>
-                  <text
-                    y={radius + 15}
-                    textAnchor="middle"
-                    className="text-[10px] font-medium select-none pointer-events-none fill-surface-700"
-                  >
-                    {node.label.length > 10 ? `${node.label.slice(0, 9)}...` : node.label}
-                  </text>
-                </g>
-              );
-            })}
-          </g>
-        </svg>
+                    {/* Outer glow ring for selection */}
+                    <circle
+                      r={isSelected ? 18 : 10}
+                      fill="transparent"
+                      stroke={isSelected ? 'var(--color-rose)' : 'transparent'}
+                      strokeWidth={1.5}
+                      className="transition-all duration-300"
+                    />
+                    
+                    {/* Circle Node */}
+                    <circle
+                      r={node.type === 'folder' ? 10 : (node.type === 'project' ? 8 : 6)}
+                      fill={color.fill}
+                      stroke={isSelected ? 'var(--color-rose)' : color.stroke}
+                      strokeWidth={isSelected ? 2 : 1.2}
+                    />
 
-        <div className="absolute bottom-3 left-3 flex flex-wrap gap-2 text-[10px] font-mono pointer-events-none bg-white/80 backdrop-blur-sm p-2 rounded border border-surface-200">
-          <div className="flex items-center gap-1">
-            <span className="w-2.5 h-2.5 rounded-full bg-amber-100 border border-amber-600 block"></span>
-            <span>简历 (RE)</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <span className="w-2.5 h-2.5 rounded-full bg-blue-100 border border-blue-600 block"></span>
-            <span>笔记 (NO)</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <span className="w-2.5 h-2.5 rounded-full bg-green-100 border border-green-600 block"></span>
-            <span>项目 (PR)</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <span className="w-2.5 h-2.5 rounded-full bg-purple-100 border border-purple-600 block"></span>
-            <span>文稿 (DE)</span>
-          </div>
+                    {/* Text Label */}
+                    <text
+                      y={node.type === 'folder' ? -15 : (node.type === 'project' ? -13 : -10)}
+                      textAnchor="middle"
+                      className="text-[9px] font-sans font-bold"
+                      fill={color.text}
+                    >
+                      {node.label}
+                    </text>
+                  </g>
+                );
+              })}
+            </g>
+          </svg>
         </div>
       </div>
 
-      <div className="lg:col-span-1 workspace-card flex flex-col justify-between h-[500px]">
-        {selectedNode ? (
-          <div className="space-y-4 overflow-y-auto">
-            <div>
-              <span className="text-[10px] uppercase font-mono tracking-wider font-semibold text-accent bg-blue-50 px-2 py-0.5 rounded">
-                {selectedNode.type}
-              </span>
-              <h2 className="text-lg font-bold text-surface-900 mt-2">{selectedNode.label}</h2>
-              <p className="text-xs text-surface-400 font-mono mt-1 break-all">ID: {selectedNode.id}</p>
-            </div>
-
-            {selectedNode.metadata && selectedNode.metadata.summary && (
-              <div className="border-t border-surface-100 pt-3">
-                <h4 className="text-xs font-semibold text-surface-400 uppercase tracking-wider mb-1">简介/概述</h4>
-                <p className="text-xs text-surface-600 leading-relaxed">{selectedNode.metadata.summary}</p>
+      {/* 3. Right Details Inspector */}
+      <aside className={isFullscreen ? "w-full xl:w-72 shrink-0 border-t xl:border-t-0 xl:border-l border-slate-200/60 pt-3 xl:pt-0 xl:pl-4 flex flex-col justify-between" : "xl:col-span-3 space-y-4 select-none"}>
+        <div className="space-y-4">
+          <div className="flex justify-between items-center border-b border-slate-200 pb-1 mb-2 font-mono text-[9px] font-bold text-slate-400 tracking-widest uppercase">
+            <span>Sensor Inspector</span>
+            <span>SELECTION</span>
+          </div>
+          {selectedNode ? (
+            <div className="bg-stone-50 border border-slate-200/60 p-4 rounded-md space-y-4 font-mono text-[10px]">
+              <div>
+                <span className="text-slate-400 block mb-0.5">ASSET CLASS</span>
+                <span className="text-slate-800 font-bold uppercase">{selectedNode.type}</span>
               </div>
-            )}
-
-            {selectedNode.metadata && selectedNode.metadata.file && (
-              <div className="border-t border-surface-100 pt-3">
-                <h4 className="text-xs font-semibold text-surface-400 uppercase tracking-wider mb-1">数据源物理路径</h4>
-                <code className="text-[10px] text-surface-500 block break-all">{selectedNode.metadata.file}</code>
+              <div>
+                <span className="text-slate-400 block mb-0.5">LABEL NAME</span>
+                <span className="text-slate-900 font-bold text-xs font-serif">{selectedNode.label}</span>
               </div>
-            )}
-
-            <div className="border-t border-surface-100 pt-3">
-              <h4 className="text-xs font-semibold text-surface-400 uppercase tracking-wider mb-2">关联资产关系网</h4>
-              {links.filter(l => l.source.id === selectedNode.id || l.target.id === selectedNode.id).length === 0 ? (
-                <p className="text-xs text-surface-400 italic">该资产目前为孤立节点，无直接关系</p>
-              ) : (
-                <ul className="space-y-1.5 max-h-[180px] overflow-y-auto pr-1">
-                  {links
-                    .filter(l => l.source.id === selectedNode.id || l.target.id === selectedNode.id)
-                    .map((link, idx) => {
-                      const relationNode = link.source.id === selectedNode.id ? link.target : link.source;
-                      return (
-                        <li 
-                          key={`rel-${idx}`}
-                          onClick={() => setSelectedNode(relationNode)}
-                          className="flex items-center justify-between p-1.5 rounded text-xs bg-surface-50 hover:bg-surface-100 cursor-pointer transition-colors"
-                        >
-                          <span className="font-medium text-surface-700 truncate max-w-[120px]">{relationNode.label}</span>
-                          <span className="text-[9px] font-mono text-surface-400 font-medium px-1 bg-white border border-surface-200 rounded uppercase">
-                            {link.type === 'link' ? '双链' : link.type === 'owner' ? '所有' : '标签碰撞'}
-                          </span>
-                        </li>
-                      );
-                    })}
-                </ul>
+              {selectedNode.metadata?.date && (
+                <div>
+                  <span className="text-slate-400 block mb-0.5">PUBLISH TIME</span>
+                  <span className="text-slate-800 font-bold">{selectedNode.metadata.date}</span>
+                </div>
               )}
+              {selectedNode.metadata?.stage && (
+                <div>
+                  <span className="text-slate-400 block mb-0.5">STAGE STABILITY</span>
+                  <span className="text-slate-800 font-bold capitalize">{selectedNode.metadata.stage}</span>
+                </div>
+              )}
+              
+              <div className="pt-2 border-t border-slate-200/60 flex flex-col gap-2">
+                {/* 2阶邻域动态扩展 */}
+                <button
+                  onClick={expandNeighborhood}
+                  className="py-1.5 px-3 bg-rose-50 border border-rose-200 text-rose-800 font-bold rounded text-center transition-colors w-full"
+                >
+                  🔗 扩展关联邻域
+                </button>
+                <button
+                  onClick={resetScope}
+                  className="py-1.5 px-3 bg-white border border-slate-200 text-slate-600 rounded text-center transition-colors w-full"
+                >
+                  ↩ 重置 Scope 视图
+                </button>
+              </div>
             </div>
-          </div>
-        ) : (
-          <div className="h-full flex items-center justify-center text-center p-4">
-            <p className="text-xs text-surface-400 italic">在左侧画布上选择一个节点，以调阅其知识资产契约和关联关系</p>
-          </div>
-        )}
+          ) : (
+            <div className="text-center py-10 text-slate-400 font-serif italic text-xs border border-dashed border-slate-200 rounded-md">
+              未选中任何节点。请点击图谱上的圆点进行参数分析。
+            </div>
+          )}
+        </div>
 
-        {selectedNode && (
-          <div className="border-t border-surface-100 pt-4 mt-auto">
-            {selectedNode.type === 'resume' && (
-              <a href="/resume" className="w-full text-center block text-xs font-medium text-white bg-accent hover:bg-accent-dark py-2 px-3 rounded transition-colors">
-                调阅完整简历页面 <span>→</span>
-              </a>
-            )}
-            {selectedNode.type === 'deck' && (
-              <a href="/decks" className="w-full text-center block text-xs font-medium text-white bg-accent hover:bg-accent-dark py-2 px-3 rounded transition-colors">
-                调阅演示文稿页面 <span>→</span>
-              </a>
-            )}
-            {selectedNode.type === 'note' && (
-              <a href="/notes" className="w-full text-center block text-xs font-medium text-white bg-accent hover:bg-accent-dark py-2 px-3 rounded transition-colors">
-                调阅个人笔记中心 <span>→</span>
-              </a>
-            )}
-            {selectedNode.type === 'project' && (
-              <a href="/projects" className="w-full text-center block text-xs font-medium text-white bg-accent hover:bg-accent-dark py-2 px-3 rounded transition-colors">
-                调阅核心项目详情 <span>→</span>
-              </a>
-            )}
+        {/* Action Link directly to document */}
+        {selectedNode && (selectedNode.type === 'note' || selectedNode.type === 'book') && (
+          <div className="pt-4 border-t border-slate-200/60 mt-4">
+            <a
+              href={`/notes/${selectedNode.id.replace('note:', '')}/`}
+              className="py-2 px-4 bg-slate-900 text-white font-serif font-bold text-xs rounded text-center block w-full hover:bg-rose-900 transition-colors animate-fade-in"
+            >
+              📖 进入沉浸式阅读
+            </a>
           </div>
         )}
-      </div>
+        {selectedNode && selectedNode.type === 'project' && (
+          <div className="pt-4 border-t border-slate-200/60 mt-4">
+            <a
+              href={`/projects/${selectedNode.id.replace('project:', '')}/`}
+              className="py-2 px-4 bg-slate-900 text-white font-serif font-bold text-xs rounded text-center block w-full hover:bg-rose-900 transition-colors animate-fade-in"
+            >
+              💻 查看项目研发看板
+            </a>
+          </div>
+        )}
+      </aside>
     </div>
   );
 }

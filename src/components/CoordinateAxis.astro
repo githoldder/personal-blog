@@ -1,0 +1,23 @@
+---
+interface Props {
+  label: string;
+  value: string;
+  vertical?: boolean;
+}
+
+const { label, value, vertical = false } = Astro.props;
+---
+
+{vertical ? (
+  <div class="relative flex flex-col items-center select-none font-mono text-[9px] text-slate-400/80 h-full w-4 shrink-0">
+    <div class="writing-mode-vertical rotate-180 uppercase tracking-widest pb-2 font-bold">{label}</div>
+    <div class="flex-grow border-l border-dashed border-slate-300/60 my-2"></div>
+    <div class="font-bold text-rose-600">{value}</div>
+  </div>
+) : (
+  <div class="relative flex items-center justify-between select-none font-mono text-[9px] text-slate-400/80 w-full py-2">
+    <div class="uppercase tracking-widest font-bold pr-3">{label}</div>
+    <div class="flex-grow border-t border-dashed border-slate-350/50 mr-3"></div>
+    <div class="font-bold text-rose-600 bg-slate-50/50 px-1.5 py-0.2 rounded border border-slate-200/40 uppercase">{value}</div>
+  </div>
+)}

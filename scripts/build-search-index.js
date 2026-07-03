@@ -65,7 +65,7 @@ function main() {
         type: 'note',
         title: frontmatter.title || slug,
         summary: frontmatter.summary || (body.slice(0, 120).trim() + '...'),
-        url: `/notes#${slug}`,
+        url: `/notes/${slug}/`,
         tags: frontmatter.tags || [],
         sourcePath: `content/notes/${file}`,
         text: cleanMarkdownText(body)
@@ -105,7 +105,7 @@ function main() {
         type: 'project',
         title: frontmatter.title || slug,
         summary: frontmatter.description || (body.slice(0, 120).trim() + '...'),
-        url: `/projects#${slug}`,
+        url: `/projects/${slug}/`,
         tags: frontmatter.tech || [],
         sourcePath: `content/projects/${file}`,
         text: cleanMarkdownText(body)

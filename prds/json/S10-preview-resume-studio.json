@@ -1,0 +1,107 @@
+{
+  "sprint_id": "S10",
+  "title": "Universal Preview Pipeline and Resume Studio",
+  "objective": "建立多格式预览能力和 Resume Studio，使 Markdown、多媒体、PDF、Typst、LaTeX 与简历模板下载进入可维护的本地工作流",
+  "status": "todo",
+  "created_at": "2026-07-02",
+  "milestones": [
+    {
+      "id": "M01",
+      "title": "Universal preview pipeline",
+      "status": "todo",
+      "tasks": ["S10-T01", "S10-T02", "S10-T03"]
+    },
+    {
+      "id": "M02",
+      "title": "Resume and document studio",
+      "status": "todo",
+      "tasks": ["S10-T04", "S10-T05", "S10-T06"]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "S10-T01",
+      "title": "Implement rich Markdown preview",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["content/notes", "docs/preview-api-contract.md"],
+      "outputs": ["docs/preview-pipeline.md", "src/components/preview"],
+      "acceptance_criteria": [
+        "Markdown preview supports frontmatter, headings, code blocks, callouts and wiki-link rendering",
+        "Unsafe HTML and script injection are sanitized",
+        "Preview can distinguish source-only links from public user links"
+      ],
+      "notes": "This is a foundation for both admin and public reading surfaces."
+    },
+    {
+      "id": "S10-T02",
+      "title": "Implement media and document preview adapters",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["content", "docs/preview-api-contract.md"],
+      "outputs": ["src/components/preview", "docs/preview-pipeline.md"],
+      "acceptance_criteria": [
+        "Images, PDFs, audio, video and code files have appropriate preview modes",
+        "Unsupported Office-style files fall back to metadata and download/open actions",
+        "Preview adapters do not expose local absolute paths on public surfaces"
+      ],
+      "notes": "Office conversion can be staged if dependency risk is high."
+    },
+    {
+      "id": "S10-T03",
+      "title": "Implement Typst and LaTeX compile preview plan",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["content/resume", "content/resume/references"],
+      "outputs": ["docs/typst-latex-preview.md", "scripts"],
+      "acceptance_criteria": [
+        "Typst compile path is documented and verified for resume output",
+        "LaTeX compile path has a safe fallback and clear environment requirements",
+        "Compile artifacts are routed to controlled output directories and do not pollute source files"
+      ],
+      "notes": "Compilation is local and must not perform external upload."
+    },
+    {
+      "id": "S10-T04",
+      "title": "Build Resume Studio interface",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["content/resume/resume.yaml", "public/assets/resume.pdf"],
+      "outputs": ["src/pages/admin/resume.astro", "docs/resume-studio.md"],
+      "acceptance_criteria": [
+        "Resume Studio shows structured resume facts, generated PDF preview and compile status",
+        "Resume data edits are treated as local source changes requiring human review",
+        "The page links evidence records to resume sections where possible"
+      ],
+      "notes": "Avoid silent changes to resume facts."
+    },
+    {
+      "id": "S10-T05",
+      "title": "Bind evidence files to resume facts",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["content/resume/references/evidence", "content/resume/resume.yaml"],
+      "outputs": ["content/resume/evidence-manifest.json", "docs/resume-studio.md"],
+      "acceptance_criteria": [
+        "Evidence manifest maps awards, roles, projects and certificates to resume entries",
+        "Evidence files can be previewed or opened from the admin interface",
+        "Private or sensitive evidence publication is explicitly gated"
+      ],
+      "notes": "Evidence publication is separate from local evidence management."
+    },
+    {
+      "id": "S10-T06",
+      "title": "Add resume template download package",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["content/resume", "public/assets/resume.pdf"],
+      "outputs": ["public/assets/resume-package.zip", "docs/resume-studio.md"],
+      "acceptance_criteria": [
+        "Download package contains resume YAML, Typst template, generated PDF and a manifest",
+        "Package generation is reproducible and documented",
+        "Sensitive evidence files are not bundled unless explicitly approved"
+      ],
+      "notes": "Keep public package separate from private evidence archive."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "sprint_id": "S13",
+  "title": "Documentation, Maintenance and Project Handoff",
+  "objective": "完成用户手册、管理员手册、开发者文档、架构留档和长期维护计划，为 Personal Knowledge Asset OS 的后续迭代和交接提供自包含资料",
+  "status": "todo",
+  "created_at": "2026-07-02",
+  "milestones": [
+    {
+      "id": "M01",
+      "title": "User and admin documentation",
+      "status": "todo",
+      "tasks": ["S13-T01", "S13-T02", "S13-T03"]
+    },
+    {
+      "id": "M02",
+      "title": "Architecture and handoff archive",
+      "status": "todo",
+      "tasks": ["S13-T04", "S13-T05", "S13-T06"]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "S13-T01",
+      "title": "Write public user manual",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["src/pages", "docs/design-direction.md"],
+      "outputs": ["docs/user-manual.md"],
+      "acceptance_criteria": [
+        "Manual explains how readers use library, notes, graph, projects, timeline and resume surfaces",
+        "Manual avoids internal implementation detail unless useful to readers",
+        "Manual reflects final production routes"
+      ],
+      "notes": "Reader-facing documentation."
+    },
+    {
+      "id": "S13-T02",
+      "title": "Write admin manual",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["src/pages/admin", "docs/api-contract.md", "docs/content-quality-checklist.md"],
+      "outputs": ["docs/admin-manual.md"],
+      "acceptance_criteria": [
+        "Manual covers source sync, preview, whitelist review, publish manifest and quality gates",
+        "Manual explains local-only admin assumptions and production exposure risks",
+        "Manual includes recovery steps for common admin workflow errors"
+      ],
+      "notes": "Maintainer-facing documentation."
+    },
+    {
+      "id": "S13-T03",
+      "title": "Write developer guide",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["README.md", "package.json", "scripts", "server"],
+      "outputs": ["docs/developer-guide.md"],
+      "acceptance_criteria": [
+        "Guide covers local setup, scripts, test commands, API structure and source adapters",
+        "Guide explains how to add new content types or preview adapters",
+        "Guide includes coding and PRD synchronization conventions"
+      ],
+      "notes": "Engineering handoff documentation."
+    },
+    {
+      "id": "S13-T04",
+      "title": "Create final architecture document",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["docs/api-contract.md", "docs/publish-manifest-schema.md", "docs/preview-pipeline.md"],
+      "outputs": ["docs/architecture.md"],
+      "acceptance_criteria": [
+        "Architecture document explains source truth, admin, public projection, API, preview and deployment boundaries",
+        "Data flow diagrams identify private and public data transitions",
+        "Permission levels and external write gates are visible in the architecture"
+      ],
+      "notes": "Use diagrams where they clarify the system."
+    },
+    {
+      "id": "S13-T05",
+      "title": "Write troubleshooting and maintenance archive",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["docs/maintenance-runbook.md", "docs/defect-management.md", "sense/reports"],
+      "outputs": ["docs/troubleshooting.md", "docs/maintenance-archive.md"],
+      "acceptance_criteria": [
+        "Troubleshooting covers build failures, preview failures, API failures, content leaks and deployment incidents",
+        "Maintenance archive records recurring commands and known environment blockers",
+        "Critical privacy or deployment incidents have escalation guidance"
+      ],
+      "notes": "Keep this practical and searchable."
+    },
+    {
+      "id": "S13-T06",
+      "title": "Create final handoff and next roadmap",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["prds/json", "context/context.txt", "docs"],
+      "outputs": ["docs/final-handoff.md", "docs/next-roadmap.md"],
+      "acceptance_criteria": [
+        "Handoff summarizes completed capabilities, remaining risks and operational rules",
+        "Next roadmap distinguishes near-term improvements from experimental ideas",
+        "Project can be resumed by a future maintainer without reconstructing context from chat"
+      ],
+      "notes": "This closes the productization program."
+    }
+  ]
+}

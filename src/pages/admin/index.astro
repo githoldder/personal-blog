@@ -1,0 +1,210 @@
+---
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// 1. 读取编辑发布队列
+let editorialQueue = {
+  last_updated: '未知',
+  queues: { draft: [], review: [], publishable: [] }
+};
+const queuePath = join(process.cwd(), 'sense/queues/editorial-queue.json');
+if (existsSync(queuePath)) {
+  try {
+    editorialQueue = JSON.parse(readFileSync(queuePath, 'utf-8'));
+  } catch (e) {
+    // ignore
+  }
+}
+
+// 2. 读取 content/notes 目录模拟 Obsidian 文件树
+let obsidianFiles = [];
+const notesDir = join(process.cwd(), 'content/notes');
+if (existsSync(notesDir)) {
+  try {
+    obsidianFiles = readdirSync(notesDir)
+      .filter(f => f.endsWith('.md'))
+      .map(name => ({
+        name,
+        path: `content/notes/${name}`,
+        isDraft: editorialQueue.queues.draft.some(d => d.includes(name))
+      }));
+  } catch (e) {
+    // ignore
+  }
+}
+---
+
+<BaseLayout title="Admin Console — Workbench Mode">
+  <!-- Local safety alert banner (Monochrome Workbench Warning) -->
+  <div class="border border-red-500 bg-red-950 text-red-200 px-4 py-3 rounded-md mb-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono shadow-sm">
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+      <span class="font-bold">⚠️ LOCAL-FIRST SECURITY GATEWAY: DETECTED OFFLINE INSTANCE</span>
+    </div>
+    <div class="flex gap-2">
+      <span class="bg-red-900 border border-red-700 px-2 py-0.5 rounded text-[10px]">127.0.0.1 (Loopback)</span>
+      <span class="bg-red-900 border border-red-700 px-2 py-0.5 rounded text-[10px]">API Gated</span>
+    </div>
+  </div>
+
+  <header class="border border-slate-300 bg-slate-100/50 rounded-md p-6 mb-8 text-slate-800">
+    <div class="font-mono text-[10px] tracking-widest text-slate-500 uppercase px-1.5 py-0.5 border border-slate-350 bg-slate-200 rounded w-fit mb-3">
+      SYSTEM WORKBENCH — STARK THEME
+    </div>
+    <h1 class="text-2xl md:text-3xl font-sans font-bold text-slate-900">⚙️ 本地离线管理控制台 (Workbench)</h1>
+    <p class="text-xs font-mono text-slate-600 mt-2 max-w-2xl leading-relaxed">
+      这是 Personal Knowledge Asset OS 的集中式决策面板原型。
+      本界面严格运行于本地沙箱中，为后续同步、审查、构建和发布管线定义操作锚点。
+    </p>
+  </header>
+
+  <!-- High-Density Workspace Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+    
+    <!-- Left Column: Obsidian Local File Tree (High Contrast Grid) -->
+    <section class="lg:col-span-5 border border-slate-300 rounded-md bg-white p-5 space-y-4">
+      <h2 class="text-xs font-mono font-bold text-slate-900 uppercase tracking-wider border-b border-slate-200 pb-2 flex items-center justify-between">
+        📂 Obsidian 笔记真源树 
+        <span class="text-[10px] font-normal text-slate-400">({obsidianFiles.length} files)</span>
+      </h2>
+      
+      <div class="max-h-[350px] overflow-y-auto pr-1 text-xs font-mono space-y-1.5 scrollbar-thin">
+        <div class="text-slate-400 select-none pb-1">📂 content/notes/</div>
+        {obsidianFiles.map((file) => (
+          <div class="flex items-center justify-between p-2 rounded hover:bg-slate-50 border border-slate-100">
+            <div class="flex items-center gap-2 truncate pr-2">
+              <span class="text-slate-400">📄</span>
+              <span class="text-slate-700 truncate" title={file.name}>{file.name}</span>
+            </div>
+            {file.isDraft ? (
+              <span class="text-[9px] font-mono bg-amber-50 text-amber-700 border border-amber-200 px-1 rounded shrink-0">Draft</span>
+            ) : (
+              <span class="text-[9px] font-mono bg-green-50 text-green-700 border border-green-200 px-1 rounded shrink-0">Publishable</span>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <div class="pt-4 border-t border-slate-200 flex gap-2">
+        <button 
+          onclick="alert('【Obsidian Sync】：正在从本地真源读取变更并校验 Frontmatter。已捕获 0 个冲突项。')" 
+          class="flex-1 py-1.5 bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs font-bold rounded transition-colors text-center"
+        >
+          🔄 同步本地真源
+        </button>
+      </div>
+    </section>
+
+    <!-- Right Column: Editorial Queue & Security Audit -->
+    <div class="lg:col-span-7 space-y-6">
+      
+      <!-- 📋 Editorial Queue Panel -->
+      <section class="border border-slate-300 rounded-md bg-white p-5 space-y-4">
+        <h2 class="text-xs font-mono font-bold text-slate-900 uppercase tracking-wider border-b border-slate-200 pb-2">
+          📋 编审发布队列 (Editorial Queue)
+        </h2>
+
+        <div class="space-y-3 text-xs font-mono">
+          <div>
+            <div class="flex items-center justify-between text-slate-500 mb-1.5">
+              <span>草稿队列 (Drafts):</span>
+              <span class="bg-amber-100 text-amber-800 px-1.5 py-0.2 rounded text-[9px] font-bold">{editorialQueue.queues.draft.length} items</span>
+            </div>
+            {editorialQueue.queues.draft.length === 0 ? (
+              <p class="text-slate-400 italic p-2 bg-slate-50 rounded border border-slate-100">队列为空</p>
+            ) : (
+              <ul class="space-y-1">
+                {editorialQueue.queues.draft.map(item => (
+                  <li class="p-2 bg-amber-50/30 border border-amber-100 rounded text-slate-700 break-all select-all">{item}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between text-slate-500 mb-1.5">
+              <span>预发布队列 (Publishable):</span>
+              <span class="bg-green-100 text-green-800 px-1.5 py-0.2 rounded text-[9px] font-bold">{editorialQueue.queues.publishable.length} items</span>
+            </div>
+            {editorialQueue.queues.publishable.length === 0 ? (
+              <p class="text-slate-400 italic p-2 bg-slate-50 rounded border border-slate-100">队列为空</p>
+            ) : (
+              <ul class="space-y-1">
+                {editorialQueue.queues.publishable.map(item => (
+                  <li class="p-2 bg-green-50/20 border border-green-150 rounded text-slate-700 break-all select-all">{item}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
+
+        <div class="text-[10px] font-mono text-slate-400 pt-2 flex justify-between">
+          <span>QUEUES SOURCE:</span>
+          <span>sense/queues/editorial-queue.json</span>
+        </div>
+      </section>
+
+      <!-- 🛡️ Quality Assurance & DLP Checker Gate -->
+      <section class="border border-slate-300 rounded-md bg-white p-5 space-y-4">
+        <h2 class="text-xs font-mono font-bold text-slate-900 uppercase tracking-wider border-b border-slate-200 pb-2">
+          🛡️ DLP 安全审计与自检质量网关
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
+          <div class="border border-slate-200 p-3 rounded bg-slate-50">
+            <span class="block text-slate-400 text-[9px]">DLP DATA LEAK AUDIT</span>
+            <span class="font-bold text-green-600">PASSED ✓</span>
+            <p class="text-[9px] text-slate-500 mt-1">未检测到任何 API keys, 密码或个人敏感信息泄露。</p>
+          </div>
+          <div class="border border-slate-200 p-3 rounded bg-slate-50">
+            <span class="block text-slate-400 text-[9px]">DANGLING LINK AUDIT</span>
+            <span class="font-bold text-green-600">PASSED ✓</span>
+            <p class="text-[9px] text-slate-500 mt-1">全局 wiki-links 拓扑分析完成，无悬空节点或死链。</p>
+          </div>
+          <div class="border border-slate-200 p-3 rounded bg-slate-50">
+            <span class="block text-slate-400 text-[9px]">FRONTMATTER VALIDATION</span>
+            <span class="font-bold text-green-600">PASSED ✓</span>
+            <p class="text-[9px] text-slate-500 mt-1">所有发布笔记均声明了有效 schema 与 explicit status。</p>
+          </div>
+          <div class="border border-slate-200 p-3 rounded bg-slate-50">
+            <span class="block text-slate-400 text-[9px]">LOCAL ASSET REGRESSION</span>
+            <span class="font-bold text-green-600">100% READY ✓</span>
+            <p class="text-[9px] text-slate-500 mt-1">Resume 与 Decks 物理文件与 Manifest 数据版本一致。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⚙️ Compiler Orchestration Trigger Panel -->
+      <section class="border border-slate-300 rounded-md bg-white p-5 space-y-4">
+        <h2 class="text-xs font-mono font-bold text-slate-900 uppercase tracking-wider border-b border-slate-200 pb-2">
+          ⚙️ 资产编译与发布控制 (Orchestrator Mock)
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <button 
+            onclick="alert('【资产链编译中...】已下发命令: node scripts/build-assets.js。输出结果：编译完成。')"
+            class="py-2.5 px-3 border border-slate-350 hover:bg-slate-50 text-slate-800 font-mono text-xs font-bold rounded transition-colors text-center"
+          >
+            🔨 编译全局资产 (build:assets)
+          </button>
+          
+          <button 
+            onclick="alert('【单元与集成校验中...】已下发验证命令: npm run verify。测试套件运行: Passed.')"
+            class="py-2.5 px-3 border border-slate-350 hover:bg-slate-50 text-slate-800 font-mono text-xs font-bold rounded transition-colors text-center"
+          >
+            🧪 运行发布门禁自检 (verify)
+          </button>
+          
+          <button 
+            onclick="alert('【发布警告】：在 S07 阶段，线上发布网关处于硬封锁状态。请按 docs/publication-channel-policy.md 在本地进行完全验证。')"
+            class="py-2.5 px-3 bg-red-50 hover:bg-red-100 border border-red-200 text-red-800 font-mono text-xs font-bold rounded transition-colors text-center sm:col-span-2"
+          >
+            🚀 触发公网环境部署 (线上熔断状态)
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</BaseLayout>

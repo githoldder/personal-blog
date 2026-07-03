@@ -142,7 +142,7 @@ function main() {
         
         items.push({
           title: frontmatter.title || slug,
-          link: `${siteUrl}/notes#${slug}`,
+          link: `${siteUrl}/notes/${slug}/`,
           date,
           description: frontmatter.summary || (body.slice(0, 200).replace(/[#*`~_\-[\]()]/g, '').trim() + '...')
         });
@@ -181,7 +181,7 @@ function main() {
 
         items.push({
           title: frontmatter.title || slug,
-          link: `${siteUrl}/projects#${slug}`,
+          link: `${siteUrl}/projects/${slug}/`,
           date,
           description: frontmatter.description || (body.slice(0, 200).replace(/[#*`~_\-[\]()]/g, '').trim() + '...')
         });

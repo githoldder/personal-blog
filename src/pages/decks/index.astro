@@ -2,6 +2,8 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ParchmentStack from '../../components/ParchmentStack.astro';
+import CoordinateAxis from '../../components/CoordinateAxis.astro';
 
 const ROOT = process.cwd();
 const MANIFEST_PATH = join(ROOT, 'public/assets/decks/manifest.json');
@@ -19,11 +21,9 @@ if (existsSync(MANIFEST_PATH)) {
 
 // 动态检测本地物理构建产物是否存在
 function checkBuildStatus(deck) {
-  // 检查 html 预览 index.html
   const htmlPhysicalPath = join(ROOT, 'public/slides', deck.slug, 'index.html');
   const hasHtml = existsSync(htmlPhysicalPath);
 
-  // 检查 pdf 文件
   const pdfPhysicalPath = join(ROOT, 'public/assets', `${deck.slug}.pdf`);
   const hasPdf = existsSync(pdfPhysicalPath);
 
@@ -31,66 +31,70 @@ function checkBuildStatus(deck) {
 }
 ---
 
-<BaseLayout title="演示文稿 — Personal Knowledge Asset OS">
-  <header class="mb-10 pb-6 border-b border-surface-200">
-    <h1 class="text-3xl font-bold tracking-tight text-surface-900">演示文稿</h1>
-    <p class="text-surface-500 mt-1">
-      Slidev 风格演示文稿。统一存储于 <code>content/decks/</code> 真源。
+<BaseLayout title="文稿库 — Personal Knowledge Asset OS">
+  
+  <header class="pb-8 pt-6 select-none max-w-4xl">
+    <div class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[9px] font-mono font-bold tracking-widest text-rose-800 bg-rose-50 border border-rose-200/50 rounded uppercase mb-4">
+      SLIDE COMPILING PIPELINE
+    </div>
+    <h1 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 leading-tight">🎴 演示文稿管线</h1>
+    <p class="mt-3 font-serif text-slate-600 leading-relaxed text-sm md:text-base max-w-3xl">
+      集成自 Slidev 现代化幻灯片构建管线。所有演示幻灯片均以单一 Markdown 格式存储在 <code>content/decks/</code> 中，并支持编译为静态 HTML 和高精度 PDF 离线包。
     </p>
   </header>
 
-  <section class="space-y-4">
-    {decks.length === 0 ? (
-      <div class="workspace-card p-8 text-center text-surface-500">
-        <p>暂无演示文稿数据，请先在 <code>content/decks/</code> 中创建幻灯片并运行构建。</p>
-      </div>
-    ) : (
-      <div class="space-y-3">
-        {decks.map((deck) => {
-          const { hasHtml, hasPdf } = checkBuildStatus(deck);
-          return (
-            <div class="workspace-card p-5" id={deck.slug}>
-              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <div>
-                  <h3 class="font-semibold text-surface-900 text-base">{deck.title}</h3>
-                  <time class="text-xs text-surface-400 font-mono mt-1 block">{deck.date}</time>
-                </div>
-                <div class="flex items-center gap-3">
-                  {hasHtml ? (
-                    <a href={`/slides/${deck.slug}/`} target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-accent hover:underline inline-flex items-center gap-0.5 px-3 py-1.5 bg-blue-50 text-accent rounded-md">
-                      在线预览 <span>↗</span>
-                    </a>
-                  ) : (
-                    <span class="text-xs text-surface-400 bg-surface-100 px-3 py-1.5 rounded-md font-medium" title="Slidev 本地未编译，可在命令行运行 npm run build:decks">
-                      预览: 待构建
-                    </span>
-                  )}
+  <!-- Asymmetric Split Grid Layout -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start border-t border-slate-200/60 pt-8">
+    
+    <!-- Left Column: Decks grid of Offset Stacks (8/12 Columns) -->
+    <section class="lg:col-span-8 space-y-6">
+      <CoordinateAxis label="Active Slide Stacks" value={`${decks.length} item(s)`} />
+      
+      {decks.length === 0 ? (
+        <div class="py-12 text-center text-slate-400 font-serif border border-slate-200/50 rounded-md">
+          <p>暂无演示文稿数据，请先在 <code>content/decks/</code> 中创建幻灯片并运行构建。</p>
+        </div>
+      ) : (
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {decks.map((deck) => {
+            const { hasHtml, hasPdf } = checkBuildStatus(deck);
+            return (
+              <ParchmentStack 
+                slug={deck.slug}
+                title={deck.title}
+                date={deck.date}
+                hasHtml={hasHtml}
+                hasPdf={hasPdf}
+              />
+            );
+          })}
+        </div>
+      )}
+    </section>
 
-                  {hasPdf ? (
-                    <a href={`/assets/${deck.slug}.pdf`} download class="text-xs font-semibold text-surface-700 hover:bg-surface-100 border border-surface-200 inline-flex items-center gap-0.5 px-3 py-1.5 rounded-md transition-colors">
-                      下载 PDF <span>💾</span>
-                    </a>
-                  ) : (
-                    <span class="text-xs text-surface-400 bg-surface-100 px-3 py-1.5 rounded-md font-medium" title="Playwright 导出未生成，可在命令行运行 npm run build:decks">
-                      PDF: 待构建
-                    </span>
-                  )}
-                </div>
-              </div>
-            </div>
-          );
-        })}
+    <!-- Right Column: Precision configuration specs (4/12 Columns) -->
+    <section class="lg:col-span-4 space-y-4">
+      <CoordinateAxis label="Slidev Compiler Registry" value="Port=3000" />
+      
+      <div class="font-mono text-[9px] text-slate-500 space-y-2.5 bg-slate-50/50 border border-slate-200/50 p-4 rounded-md leading-relaxed">
+        <div class="flex justify-between border-b border-slate-200/40 pb-1">
+          <span>COMPILER CMD</span>
+          <span class="text-slate-800 font-bold">npm run build:decks</span>
+        </div>
+        <div class="flex justify-between border-b border-slate-200/40 pb-1">
+          <span>SOURCE DIR</span>
+          <span class="text-slate-800 font-bold">content/decks/*.md</span>
+        </div>
+        <div class="flex justify-between border-b border-slate-200/40 pb-1">
+          <span>PREVIEW DIR</span>
+          <span class="text-slate-800 font-bold truncate max-w-[150px]" title="public/slides/<slug>/index.html">public/slides/&lt;slug&gt;/</span>
+        </div>
+        <div class="flex justify-between">
+          <span>PDF EXPORTED</span>
+          <span class="text-slate-800 font-bold">public/assets/&lt;slug&gt;.pdf</span>
+        </div>
       </div>
-    )}
-  </section>
+    </section>
 
-  <section class="mt-12 workspace-card">
-    <h2 class="font-semibold text-sm text-surface-700 uppercase tracking-wider mb-3">构建说明</h2>
-    <div class="text-xs text-surface-500 space-y-2 font-mono">
-      <p>构建命令: <code>npm run build:decks</code></p>
-      <p>输入路径: <code>content/decks/*.md</code></p>
-      <p>输出预览: <code>public/slides/&lt;slug&gt;/</code></p>
-      <p>输出文件: <code>public/assets/&lt;slug&gt;.pdf</code></p>
-    </div>
-  </section>
+  </div>
 </BaseLayout>

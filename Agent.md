@@ -14,22 +14,23 @@
 2. `context/project-brief.md`
 3. `context/directory-map.md`
 4. `prds/current/README.md`
-5. Active PRD JSON: `prds/json/S06-launch-ops.json`
+5. Active PRD JSON: `prds/json/S08-api-source-sync.json`
 6. Relevant `.agent/rules/`, `.agent/workflows/`, `.agent/skills/`
 
 ## 当前阶段
 
-**S06 — Launch & Operations**
+**S08 — RESTful API and Cloud Source Sync**
 
-当前 Sprint 目标：在 S05 发布就绪基础上建立可控发布、内容运营与轻量反馈闭环，让 Personal Knowledge Asset OS 可以长期维护而不引入外部副作用失控风险。
+当前 Sprint 目标：建立 RESTful API 与 GitHub Obsidian_vault 云端真源同步层，替代本地硬编码路径，并为管理端提供文件树、内容读取、发布清单与预览接口。
 
-S01 至 S05 已全部完成，包括地基、治理、管线、语义实验室与公开展示层发布就绪收口。S06 聚焦发布检查、回滚计划、发布渠道边界、内容运营节奏、反馈入口与维护 runbook。
+S01 至 S07 已全部完成，包括地基、治理、管线、语义实验室、公开展示层发布就绪、本地运营闭环以及 Maggie & Amelia 风格的纯前端视觉原型。S08 聚焦后端 API 与云端同步层，不实现公网部署。
 
 **不做的事情（禁止碰区）：**
 - 违反 `docs/lab-input-policy.md` 准入规则的 3D 图谱、MediaPipe 手势、WebGPU 语义计算实验性功能
-- 营销型大首页、紫蓝渐变、发光球等装饰性视觉
+- 泛化营销型大首页、紫蓝渐变、发光球等装饰性视觉
 - 多云容灾、复杂 CI/CD
 - 违反 `docs/publication-channel-policy.md` 规定的一切静默外部部署、大资产自动同步或未授权账号变更
+- S07 阶段的 RESTful API、GitHub 真源同步、管理端真实写操作、Typst/LaTeX 编译工作台、3D/手势/WebGPU/LLM Agent 实现和公网部署实现
 - ruflo 初始化或安装
 - OfficeCLI 真实文档改写
 - hosted search、hosted slide service 或外部发布平台接入
@@ -140,7 +141,9 @@ node scripts/build-semantic-graph.js
 
 ## 当前最高优先级任务
 
-1. S06 Sprint completed. Ready for final manual auditing.
+1. **S08-T01**: Design RESTful API contract
+2. **S08-T02**: Configure GitHub Obsidian source adapter
+3. S08 is backend-only: do not execute external public deployment yet
 
 ## 决策记录
 
@@ -165,4 +168,5 @@ node scripts/build-semantic-graph.js
 - 2026-07-01: S06-T04 完成内容质量清单 docs/content-quality-checklist.md 建立，覆盖 metadata, links, graph, privacy 四个维度
 - 2026-07-02: S06-T05 完成低侵入反馈机制设计 docs/feedback-intake.md，默认推荐静态 mailto 与 GitHub 仓库反馈
 - 2026-07-02: S06-T06 完成本地维护文档 docs/maintenance-runbook.md，记录常用校验命令、环境阻碍降级及依赖更新规范
-
+- 2026-07-02: 规划 S07-S14 产品化阶段，S07 进入 Maggie Appleton 风格知识花园与 Amelia Wattenberger 风格科学可视化原型阶段；S14 明确承接 embedding、聚类、LLM Agent、Three.js 3D 图谱、WebGPU 与 MediaPipe 手势识别
+- 2026-07-02: S07-T01 至 S07-T06 纯前端 Maggie-style 知识花园、Amelia-style 科学可视化图谱物理滑块面板、以及 stark admin console 静态原型全量通过，Sprint 07 正式收口，项目进入 S08 RESTful API 与云端同步阶段。

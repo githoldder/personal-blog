@@ -1,0 +1,1097 @@
+{
+  "nodes": [
+    {
+      "id": "resume:basics",
+      "label": "曹磊的简历",
+      "type": "resume",
+      "metadata": {
+        "summary": "常州工学院软件工程专业本科生。主修软件工程，具备扎实的全栈与分布式应用技术基础。作为核心成员参与龙虎塘派出所政务信息化系统“治慧租”APP的研发，并自主创业“常工生鲜”小程序。多次获得校级优秀学生干部及国家级/省级学科竞赛奖项（包含揭榜挂帅擂台赛全国二等奖、iCAN创新创业大赛全国三等奖及省级一等奖、亚太数学建模二等奖等）。熟悉 Python 爬虫、自然语言处理（NLP）及微服务架构，热衷于构建高效实用的工程工具。"
+      }
+    },
+    {
+      "id": "note:book-博弈论",
+      "label": "博弈论",
+      "type": "book",
+      "metadata": {
+        "file": "content/notes/book-博弈论.md",
+        "stage": "evergreen",
+        "date": "2026-07-03"
+      }
+    },
+    {
+      "id": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "label": "向上社交：如何让优秀的人靠近你【每个和高手相交的机会，都令你更靠近成功。突破圈层的局限，获取更优质的目标资源，从提供价值开始，实现..._(Z-Library)",
+      "type": "book",
+      "metadata": {
+        "file": "content/notes/book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library.md",
+        "stage": "budding",
+        "date": "2026-07-03"
+      }
+    },
+    {
+      "id": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "label": "市场营销 原理与实践（第16版·全新版） (菲利普·科特勒 加里·阿姆斯特朗)",
+      "type": "book",
+      "metadata": {
+        "file": "content/notes/book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗.md",
+        "stage": "budding",
+        "date": "2026-07-03"
+      }
+    },
+    {
+      "id": "note:book-战略管理",
+      "label": "战略管理",
+      "type": "book",
+      "metadata": {
+        "file": "content/notes/book-战略管理.md",
+        "stage": "evergreen",
+        "date": "2026-07-03"
+      }
+    },
+    {
+      "id": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "label": "正则表达式必知必会_(Ben_Forta)_(Z-Library)",
+      "type": "book",
+      "metadata": {
+        "file": "content/notes/book-正则表达式必知必会-ben-forta-z-library.md",
+        "stage": "budding",
+        "date": "2026-07-03"
+      }
+    },
+    {
+      "id": "note:book-深入设计模式-1",
+      "label": "深入设计模式(1)",
+      "type": "book",
+      "metadata": {
+        "file": "content/notes/book-深入设计模式-1.md",
+        "stage": "evergreen",
+        "date": "2026-07-03"
+      }
+    },
+    {
+      "id": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "label": "算法图解_(（美）巴尔加瓦（Aditya_Bhargava）著,_袁国忠译)_(Z-Library)",
+      "type": "book",
+      "metadata": {
+        "file": "content/notes/book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library.md",
+        "stage": "budding",
+        "date": "2026-07-03"
+      }
+    },
+    {
+      "id": "note:book-终身成长",
+      "label": "终身成长",
+      "type": "book",
+      "metadata": {
+        "file": "content/notes/book-终身成长.md",
+        "stage": "evergreen",
+        "date": "2026-07-03"
+      }
+    },
+    {
+      "id": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "label": "软技能：代码之外的生存指南（第2版） (约翰•Z·森梅兹)",
+      "type": "book",
+      "metadata": {
+        "file": "content/notes/book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹.md",
+        "stage": "evergreen",
+        "date": "2026-07-03"
+      }
+    },
+    {
+      "id": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "label": "金字塔原理大全集_(芭芭拉·明托)_(Z-Library)",
+      "type": "book",
+      "metadata": {
+        "file": "content/notes/book-金字塔原理大全集-芭芭拉-明托-z-library.md",
+        "stage": "evergreen",
+        "date": "2026-07-03"
+      }
+    },
+    {
+      "id": "note:book-金字塔原理笔记",
+      "label": "金字塔原理笔记",
+      "type": "book",
+      "metadata": {
+        "file": "content/notes/book-金字塔原理笔记.md",
+        "stage": "evergreen",
+        "date": "2026-07-03"
+      }
+    },
+    {
+      "id": "project:cit-scie-thesis-latex",
+      "label": "常州工学院毕业设计说明书（论文）LaTeX 模板",
+      "type": "project",
+      "metadata": {
+        "file": "content/projects/cit-scie-thesis-latex.md",
+        "date": "2026-05-15"
+      }
+    },
+    {
+      "id": "project:czu-beamer-template",
+      "label": "Beamer 讲座/汇报演示文稿 LaTeX 模板",
+      "type": "project",
+      "metadata": {
+        "file": "content/projects/czu-beamer-template.md",
+        "date": "2025-11-20"
+      }
+    },
+    {
+      "id": "project:darwin-skill",
+      "label": "达尔文技能进化插件 (darwin-skill)",
+      "type": "project",
+      "metadata": {
+        "file": "content/projects/darwin-skill.md",
+        "date": "2026-04-01"
+      }
+    },
+    {
+      "id": "project:file-processor-assistant",
+      "label": "文件处理全能助手 (v1.0.1)",
+      "type": "project",
+      "metadata": {
+        "file": "content/projects/file-processor-assistant.md",
+        "date": "2026-03-11"
+      }
+    },
+    {
+      "id": "project:lingobridge",
+      "label": "LingoBridge 中文学习直播课堂 MVP",
+      "type": "project",
+      "metadata": {
+        "file": "content/projects/lingobridge.md",
+        "date": "2025-03-15"
+      }
+    },
+    {
+      "id": "project:personal-knowledge-asset-os",
+      "label": "Personal Knowledge Asset OS",
+      "type": "project",
+      "metadata": {
+        "file": "content/projects/personal-knowledge-asset-os.md",
+        "date": "2026-06-26"
+      }
+    },
+    {
+      "id": "project:school-gtd-dashboard",
+      "label": "校园 GTD 事务管理仪表盘",
+      "type": "project",
+      "metadata": {
+        "file": "content/projects/school-gtd-dashboard.md",
+        "date": "2025-08-10"
+      }
+    },
+    {
+      "id": "project:springboot-lgg",
+      "label": "“绿果果生鲜”分布式微服务运营系统",
+      "type": "project",
+      "metadata": {
+        "file": "content/projects/springboot-lgg.md",
+        "date": "2025-12-20"
+      }
+    },
+    {
+      "id": "project:thuthesis-manual-writing-kit",
+      "label": "thuthesis Manual 写作辅助包",
+      "type": "project",
+      "metadata": {
+        "file": "content/projects/thuthesis-manual-writing-kit.md",
+        "date": "2026-02-10"
+      }
+    },
+    {
+      "id": "deck:pk-asset-os-roadmap",
+      "label": "PK Asset OS 路线图",
+      "type": "deck",
+      "metadata": {
+        "file": "content/decks/pk-asset-os-roadmap.md"
+      }
+    },
+    {
+      "id": "folder:inbox",
+      "label": "Inbox",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "Inbox"
+      }
+    },
+    {
+      "id": "folder:007-cs自学",
+      "label": "CS自学",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "007_CS自学"
+      }
+    },
+    {
+      "id": "folder:010-时间管理",
+      "label": "时间管理",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "010_时间管理"
+      }
+    },
+    {
+      "id": "folder:019-计算机基础",
+      "label": "计算机基础",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "019_计算机基础"
+      }
+    },
+    {
+      "id": "folder:009-日语学习",
+      "label": "日语学习",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "009_日语学习"
+      }
+    },
+    {
+      "id": "folder:001-个人规划",
+      "label": "个人规划",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "001_个人规划"
+      }
+    },
+    {
+      "id": "folder:003-思维方式",
+      "label": "思维方式",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "003_思维方式"
+      }
+    },
+    {
+      "id": "folder:018-数学学习",
+      "label": "数学学习",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "018_数学学习"
+      }
+    },
+    {
+      "id": "folder:002-知识体系构建",
+      "label": "知识体系构建",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "002_知识体系构建"
+      }
+    },
+    {
+      "id": "folder:011-项目经验",
+      "label": "项目经验",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "011_项目经验"
+      }
+    },
+    {
+      "id": "folder:017-英语学习",
+      "label": "英语学习",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "017_英语学习"
+      }
+    },
+    {
+      "id": "folder:000-个人看板",
+      "label": "个人看板",
+      "type": "folder",
+      "metadata": {
+        "scope": "Projects",
+        "originalName": "000_个人看板"
+      }
+    },
+    {
+      "id": "folder:004-阅读",
+      "label": "阅读",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "004_阅读"
+      }
+    },
+    {
+      "id": "folder:015-视频媒体文档",
+      "label": "视频媒体文档",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "015_视频媒体文档"
+      }
+    },
+    {
+      "id": "folder:006-待人处事",
+      "label": "待人处事",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "006_待人处事"
+      }
+    },
+    {
+      "id": "folder:013-应试学习",
+      "label": "应试学习",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "013_应试学习"
+      }
+    },
+    {
+      "id": "folder:005-个人身体健康",
+      "label": "个人身体健康",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "005_个人身体健康"
+      }
+    },
+    {
+      "id": "folder:016-实验",
+      "label": "实验",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "016-实验"
+      }
+    },
+    {
+      "id": "folder:014-学生会",
+      "label": "学生会",
+      "type": "folder",
+      "metadata": {
+        "scope": "Areas",
+        "originalName": "014_学生会"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "para-edge:folder:inbox-folder:003-思维方式",
+      "source": "folder:inbox",
+      "target": "folder:003-思维方式",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:010-时间管理-folder:001-个人规划",
+      "source": "folder:010-时间管理",
+      "target": "folder:001-个人规划",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:011-项目经验-folder:inbox",
+      "source": "folder:011-项目经验",
+      "target": "folder:inbox",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:001-个人规划-folder:011-项目经验",
+      "source": "folder:001-个人规划",
+      "target": "folder:011-项目经验",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:010-时间管理-folder:011-项目经验",
+      "source": "folder:010-时间管理",
+      "target": "folder:011-项目经验",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:004-阅读-folder:003-思维方式",
+      "source": "folder:004-阅读",
+      "target": "folder:003-思维方式",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:019-计算机基础-folder:003-思维方式",
+      "source": "folder:019-计算机基础",
+      "target": "folder:003-思维方式",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:019-计算机基础-folder:002-知识体系构建",
+      "source": "folder:019-计算机基础",
+      "target": "folder:002-知识体系构建",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:019-计算机基础-folder:007-cs自学",
+      "source": "folder:019-计算机基础",
+      "target": "folder:007-cs自学",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:000-个人看板-folder:002-知识体系构建",
+      "source": "folder:000-个人看板",
+      "target": "folder:002-知识体系构建",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:002-知识体系构建-folder:015-视频媒体文档",
+      "source": "folder:002-知识体系构建",
+      "target": "folder:015-视频媒体文档",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:010-时间管理-folder:009-日语学习",
+      "source": "folder:010-时间管理",
+      "target": "folder:009-日语学习",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:010-时间管理-folder:019-计算机基础",
+      "source": "folder:010-时间管理",
+      "target": "folder:019-计算机基础",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:010-时间管理-folder:000-个人看板",
+      "source": "folder:010-时间管理",
+      "target": "folder:000-个人看板",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:010-时间管理-folder:015-视频媒体文档",
+      "source": "folder:010-时间管理",
+      "target": "folder:015-视频媒体文档",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:010-时间管理-folder:002-知识体系构建",
+      "source": "folder:010-时间管理",
+      "target": "folder:002-知识体系构建",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:resume:basics-project:file-processor-assistant",
+      "source": "resume:basics",
+      "target": "project:file-processor-assistant",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:resume:basics-project:lingobridge",
+      "source": "resume:basics",
+      "target": "project:lingobridge",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-博弈论-note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "source": "note:book-博弈论",
+      "target": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-博弈论-note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "source": "note:book-博弈论",
+      "target": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-博弈论-note:book-战略管理",
+      "source": "note:book-博弈论",
+      "target": "note:book-战略管理",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-博弈论-note:book-正则表达式必知必会-ben-forta-z-library",
+      "source": "note:book-博弈论",
+      "target": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-博弈论-note:book-深入设计模式-1",
+      "source": "note:book-博弈论",
+      "target": "note:book-深入设计模式-1",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-博弈论-note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "source": "note:book-博弈论",
+      "target": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-博弈论-note:book-终身成长",
+      "source": "note:book-博弈论",
+      "target": "note:book-终身成长",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-博弈论-note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "source": "note:book-博弈论",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-博弈论-note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "source": "note:book-博弈论",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-博弈论-note:book-金字塔原理笔记",
+      "source": "note:book-博弈论",
+      "target": "note:book-金字塔原理笔记",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library-note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library-note:book-战略管理",
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-战略管理",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library-note:book-正则表达式必知必会-ben-forta-z-library",
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library-note:book-深入设计模式-1",
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-深入设计模式-1",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library-note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library-note:book-终身成长",
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-终身成长",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library-note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library-note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library-note:book-金字塔原理笔记",
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-金字塔原理笔记",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗-note:book-战略管理",
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-战略管理",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗-note:book-正则表达式必知必会-ben-forta-z-library",
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗-note:book-深入设计模式-1",
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-深入设计模式-1",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗-note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗-note:book-终身成长",
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-终身成长",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗-note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗-note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗-note:book-金字塔原理笔记",
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-金字塔原理笔记",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-战略管理-note:book-正则表达式必知必会-ben-forta-z-library",
+      "source": "note:book-战略管理",
+      "target": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-战略管理-note:book-深入设计模式-1",
+      "source": "note:book-战略管理",
+      "target": "note:book-深入设计模式-1",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-战略管理-note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "source": "note:book-战略管理",
+      "target": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-战略管理-note:book-终身成长",
+      "source": "note:book-战略管理",
+      "target": "note:book-终身成长",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-战略管理-note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "source": "note:book-战略管理",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-战略管理-note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "source": "note:book-战略管理",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-战略管理-note:book-金字塔原理笔记",
+      "source": "note:book-战略管理",
+      "target": "note:book-金字塔原理笔记",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-正则表达式必知必会-ben-forta-z-library-note:book-深入设计模式-1",
+      "source": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "target": "note:book-深入设计模式-1",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-正则表达式必知必会-ben-forta-z-library-note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "source": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "target": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-正则表达式必知必会-ben-forta-z-library-note:book-终身成长",
+      "source": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "target": "note:book-终身成长",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-正则表达式必知必会-ben-forta-z-library-note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "source": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-正则表达式必知必会-ben-forta-z-library-note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "source": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-正则表达式必知必会-ben-forta-z-library-note:book-金字塔原理笔记",
+      "source": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "target": "note:book-金字塔原理笔记",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-深入设计模式-1-note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "source": "note:book-深入设计模式-1",
+      "target": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-深入设计模式-1-note:book-终身成长",
+      "source": "note:book-深入设计模式-1",
+      "target": "note:book-终身成长",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-深入设计模式-1-note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "source": "note:book-深入设计模式-1",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-深入设计模式-1-note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "source": "note:book-深入设计模式-1",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-深入设计模式-1-note:book-金字塔原理笔记",
+      "source": "note:book-深入设计模式-1",
+      "target": "note:book-金字塔原理笔记",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library-note:book-终身成长",
+      "source": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "target": "note:book-终身成长",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library-note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "source": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library-note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "source": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library-note:book-金字塔原理笔记",
+      "source": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "target": "note:book-金字塔原理笔记",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-终身成长-note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "source": "note:book-终身成长",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-终身成长-note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "source": "note:book-终身成长",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-终身成长-note:book-金字塔原理笔记",
+      "source": "note:book-终身成长",
+      "target": "note:book-金字塔原理笔记",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹-note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "source": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹-note:book-金字塔原理笔记",
+      "source": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "target": "note:book-金字塔原理笔记",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-金字塔原理大全集-芭芭拉-明托-z-library-note:book-金字塔原理笔记",
+      "source": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "target": "note:book-金字塔原理笔记",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-博弈论-folder:004-阅读",
+      "source": "note:book-博弈论",
+      "target": "folder:004-阅读",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library-folder:004-阅读",
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "folder:004-阅读",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗-folder:004-阅读",
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "folder:004-阅读",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-战略管理-folder:004-阅读",
+      "source": "note:book-战略管理",
+      "target": "folder:004-阅读",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-正则表达式必知必会-ben-forta-z-library-folder:004-阅读",
+      "source": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "target": "folder:004-阅读",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-深入设计模式-1-folder:004-阅读",
+      "source": "note:book-深入设计模式-1",
+      "target": "folder:004-阅读",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library-folder:004-阅读",
+      "source": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "target": "folder:004-阅读",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-终身成长-folder:004-阅读",
+      "source": "note:book-终身成长",
+      "target": "folder:004-阅读",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹-folder:004-阅读",
+      "source": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "target": "folder:004-阅读",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-金字塔原理大全集-芭芭拉-明托-z-library-folder:004-阅读",
+      "source": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "target": "folder:004-阅读",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:note:book-金字塔原理笔记-folder:004-阅读",
+      "source": "note:book-金字塔原理笔记",
+      "target": "folder:004-阅读",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:007-cs自学-folder:003-思维方式",
+      "source": "folder:007-cs自学",
+      "target": "folder:003-思维方式",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:007-cs自学-folder:011-项目经验",
+      "source": "folder:007-cs自学",
+      "target": "folder:011-项目经验",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:007-cs自学-folder:009-日语学习",
+      "source": "folder:007-cs自学",
+      "target": "folder:009-日语学习",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:007-cs自学-folder:017-英语学习",
+      "source": "folder:007-cs自学",
+      "target": "folder:017-英语学习",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:009-日语学习-folder:017-英语学习",
+      "source": "folder:009-日语学习",
+      "target": "folder:017-英语学习",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:011-项目经验-folder:004-阅读",
+      "source": "folder:011-项目经验",
+      "target": "folder:004-阅读",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:011-项目经验-folder:002-知识体系构建",
+      "source": "folder:011-项目经验",
+      "target": "folder:002-知识体系构建",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:001-个人规划-folder:002-知识体系构建",
+      "source": "folder:001-个人规划",
+      "target": "folder:002-知识体系构建",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:inbox-folder:014-学生会",
+      "source": "folder:inbox",
+      "target": "folder:014-学生会",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:007-cs自学-folder:010-时间管理",
+      "source": "folder:007-cs自学",
+      "target": "folder:010-时间管理",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:003-思维方式-folder:002-知识体系构建",
+      "source": "folder:003-思维方式",
+      "target": "folder:002-知识体系构建",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:003-思维方式-folder:001-个人规划",
+      "source": "folder:003-思维方式",
+      "target": "folder:001-个人规划",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:002-知识体系构建-folder:inbox",
+      "source": "folder:002-知识体系构建",
+      "target": "folder:inbox",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:001-个人规划-folder:inbox",
+      "source": "folder:001-个人规划",
+      "target": "folder:inbox",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:009-日语学习-folder:019-计算机基础",
+      "source": "folder:009-日语学习",
+      "target": "folder:019-计算机基础",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:001-个人规划-folder:004-阅读",
+      "source": "folder:001-个人规划",
+      "target": "folder:004-阅读",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:001-个人规划-folder:007-cs自学",
+      "source": "folder:001-个人规划",
+      "target": "folder:007-cs自学",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:004-阅读-folder:002-知识体系构建",
+      "source": "folder:004-阅读",
+      "target": "folder:002-知识体系构建",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:004-阅读-folder:010-时间管理",
+      "source": "folder:004-阅读",
+      "target": "folder:010-时间管理",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:004-阅读-folder:007-cs自学",
+      "source": "folder:004-阅读",
+      "target": "folder:007-cs自学",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:002-知识体系构建-folder:007-cs自学",
+      "source": "folder:002-知识体系构建",
+      "target": "folder:007-cs自学",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:010-时间管理-folder:003-思维方式",
+      "source": "folder:010-时间管理",
+      "target": "folder:003-思维方式",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:017-英语学习-folder:010-时间管理",
+      "source": "folder:017-英语学习",
+      "target": "folder:010-时间管理",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:009-日语学习-folder:002-知识体系构建",
+      "source": "folder:009-日语学习",
+      "target": "folder:002-知识体系构建",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:009-日语学习-folder:003-思维方式",
+      "source": "folder:009-日语学习",
+      "target": "folder:003-思维方式",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:006-待人处事-folder:009-日语学习",
+      "source": "folder:006-待人处事",
+      "target": "folder:009-日语学习",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:006-待人处事-folder:011-项目经验",
+      "source": "folder:006-待人处事",
+      "target": "folder:011-项目经验",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:009-日语学习-folder:011-项目经验",
+      "source": "folder:009-日语学习",
+      "target": "folder:011-项目经验",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:019-计算机基础-folder:001-个人规划",
+      "source": "folder:019-计算机基础",
+      "target": "folder:001-个人规划",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:011-项目经验-folder:003-思维方式",
+      "source": "folder:011-项目经验",
+      "target": "folder:003-思维方式",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:009-日语学习-folder:004-阅读",
+      "source": "folder:009-日语学习",
+      "target": "folder:004-阅读",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:009-日语学习-folder:001-个人规划",
+      "source": "folder:009-日语学习",
+      "target": "folder:001-个人规划",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:inbox-folder:010-时间管理",
+      "source": "folder:inbox",
+      "target": "folder:010-时间管理",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:014-学生会-folder:010-时间管理",
+      "source": "folder:014-学生会",
+      "target": "folder:010-时间管理",
+      "type": "para_link"
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-07-03T07:46:13.278Z",
+    "total_nodes": 41,
+    "total_edges": 118
+  }
+}

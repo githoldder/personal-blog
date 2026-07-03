@@ -1,0 +1,92 @@
+---
+interface Props {
+  slug: string;
+  title: string;
+  date: string;
+  hasHtml: boolean;
+  hasPdf: boolean;
+}
+
+const { slug, title, date, hasHtml, hasPdf } = Astro.props;
+---
+
+<div class="relative group select-none py-4">
+  <!-- Underlaying offset rotating sheets (Parchment stack visual effect) -->
+  <div class="absolute inset-0 bg-stone-100/50 border border-slate-200/50 rounded-md rotate-[-1.5deg] translate-y-1 scale-[0.99] pointer-events-none transition-transform duration-300 group-hover:rotate-[-2.5deg]"></div>
+  <div class="absolute inset-0 bg-stone-50 border border-slate-200/50 rounded-md rotate-[1deg] translate-x-0.5 scale-[0.995] pointer-events-none transition-transform duration-300 group-hover:rotate-[2deg]"></div>
+  
+  <!-- Main sheet -->
+  <div class="relative bg-white border border-slate-200 rounded-md p-6 transition-all duration-300 group-hover:border-rose-400/80 shadow-[0_2px_4px_rgba(0,0,0,0.015)]">
+    <div class="space-y-4">
+      <div class="flex items-center justify-between">
+        <span class="font-mono text-[9px] font-bold tracking-widest text-rose-600 bg-rose-50 border border-rose-200 px-1.5 py-0.2 rounded uppercase">
+          SLIDEV SOURCE
+        </span>
+        <code class="text-[9px] font-mono text-slate-400 select-all">/{slug}</code>
+      </div>
+
+      <div>
+        <h3 class="font-serif font-bold text-lg text-slate-900 leading-snug group-hover:text-rose-700 transition-colors">
+          {title}
+        </h3>
+        <div class="flex items-center gap-1.5 pt-2 text-[10px] font-mono text-slate-400">
+          <span>📅 PUBLISHED:</span>
+          <time datetime={date}>{date}</time>
+        </div>
+      </div>
+
+      <!-- Manifest pipeline check specs -->
+      <div class="border-t border-slate-100 pt-3 space-y-1.5 font-mono text-[9px] text-slate-500">
+        <div class="flex justify-between">
+          <span>PREVIEW COMPILER:</span>
+          <span class={hasHtml ? "text-green-600 font-bold" : "text-amber-600 font-bold"}>
+            {hasHtml ? "✓ READY" : "⚡ PENDING"}
+          </span>
+        </div>
+        <div class="flex justify-between">
+          <span>PDF COMPILER:</span>
+          <span class={hasPdf ? "text-green-600 font-bold" : "text-amber-600 font-bold"}>
+            {hasPdf ? "✓ EXPORTED" : "⚡ PENDING"}
+          </span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3 pt-4 border-t border-slate-100/50">
+        {hasHtml ? (
+          <a 
+            href={`/slides/${slug}/`} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="flex-1 text-center py-2 px-3 bg-rose-50 border border-rose-200 hover:bg-rose-100/60 text-rose-800 font-sans font-bold text-xs rounded transition-colors"
+          >
+            在线预览 ↗
+          </a>
+        ) : (
+          <span 
+            class="flex-1 text-center py-2 px-3 bg-slate-50 border border-slate-200 text-slate-400 font-sans text-xs rounded cursor-not-allowed select-none" 
+            title="未检测到本地编译包。可在命令行运行 npm run build:decks 编译。"
+          >
+            待编译
+          </span>
+        )}
+
+        {hasPdf ? (
+          <a 
+            href={`/assets/${slug}.pdf`} 
+            download 
+            class="flex-1 text-center py-2 px-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 font-sans font-bold text-xs rounded transition-colors"
+          >
+            下载 PDF 💾
+          </a>
+        ) : (
+          <span 
+            class="flex-1 text-center py-2 px-3 bg-slate-50 border border-slate-200 text-slate-400 font-sans text-xs rounded cursor-not-allowed select-none" 
+            title="未检测到导出的 PDF。可在命令行运行 npm run build:decks 导出。"
+          >
+            待导出
+          </span>
+        )}
+      </div>
+    </div>
+  </div>
+</div>

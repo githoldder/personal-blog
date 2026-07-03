@@ -1,0 +1,145 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CoordinateAxis from '../../components/CoordinateAxis.astro';
+
+// 生成所有项目实体路径
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((entry) => ({
+    params: { slug: entry.data.slug ?? entry.id },
+    props: { entry }
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+
+const formatDate = (date: Date) => date.toISOString().slice(0, 7);
+
+// 默认 GitHub fallback 规则
+const githubUrl = entry.data.github || `https://github.com/githoldder/${entry.data.slug ?? entry.id}`;
+---
+
+<BaseLayout title={entry.data.title}>
+  
+  <div class="w-full flex flex-col lg:flex-row gap-10 items-start select-none">
+    
+    {/* Left Pane: Project content body */}
+    <div class="flex-grow w-full max-w-3xl space-y-6">
+      
+      {/* Top navigation header */}
+      <div class="flex items-center justify-between border-b border-slate-200/60 pb-4">
+        <a 
+          href="/projects" 
+          class="text-xs font-mono font-bold text-slate-500 hover:text-rose-700 transition-colors uppercase"
+        >
+          🎎 BACK TO PROJECTS
+        </a>
+
+        {/* GitHub link button */}
+        <a 
+          href={githubUrl}
+          target="_blank"
+          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#24292f] border border-[#24292f] hover:bg-[#1a1e22] text-white font-mono font-bold text-xs rounded transition-colors"
+        >
+          🐙 GitHub Repository ↗
+        </a>
+      </div>
+
+      {/* Project Header details */}
+      <header class="space-y-4 select-text">
+        <span class="inline-flex items-center text-[9px] font-mono font-bold text-rose-800 bg-rose-50 border border-rose-200 px-1.5 py-0.2 rounded uppercase">
+          PROJECT LIFE STAGE
+        </span>
+        <h1 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 leading-tight">
+          {entry.data.title}
+        </h1>
+        <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400 font-mono">
+          <span>📅 TIME_COORD: <span class="text-rose-700 font-bold">{formatDate(entry.data.date)}</span></span>
+          <span class="text-slate-200">|</span>
+          <span>STATUS: <span class="text-slate-700 font-bold uppercase">{entry.data.status}</span></span>
+        </div>
+      </header>
+
+      {/* Actual markdown details body */}
+      <article class="markdown-body font-serif text-slate-800 leading-relaxed text-sm md:text-base border-t border-slate-200/40 pt-6 select-text">
+        <Content />
+      </article>
+
+      {/* Project links footer */}
+      <section class="border-t border-slate-200/60 pt-6 mt-12 space-y-4">
+        <CoordinateAxis label="Engineering repository pipeline" value="ONLINE" />
+        <div class="p-4 bg-stone-50 border border-slate-200 rounded-md font-sans text-xs flex items-center justify-between">
+          <div class="space-y-1">
+            <h4 class="font-serif font-bold text-slate-800">🐙 项目源码库</h4>
+            <p class="text-[10px] font-mono text-slate-500">点击右侧按钮直接跳转至 GitHub 访问最新源码和提交树。</p>
+          </div>
+          <a 
+            href={githubUrl}
+            target="_blank"
+            class="px-4 py-2 bg-slate-900 hover:bg-rose-900 text-white font-mono font-bold rounded transition-colors text-center shrink-0 uppercase"
+          >
+            访问仓库 ↗
+          </a>
+        </div>
+      </section>
+    </div>
+
+    {/* Right Area: Sidebar TOC Index */}
+    {headings.length > 0 && (
+      <aside class="toc-sidebar hidden lg:block shrink-0 w-60 border-l border-slate-200/60 pl-6 sticky top-8 max-h-[85vh] overflow-y-auto">
+        <CoordinateAxis label="Project Index" value="TOC" />
+        <ul class="space-y-2.5 font-sans text-xs text-slate-500 pt-2">
+          {headings.map((h) => (
+            <li style={{ paddingLeft: `${(h.depth - 1) * 8}px` }}>
+              <a 
+                href={`#${h.slug}`} 
+                class="hover:text-rose-700 transition-colors leading-normal block"
+              >
+                {h.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    )}
+  </div>
+</BaseLayout>
+
+<style is:global>
+  .markdown-body {
+    max-width: 65ch;
+  }
+  .markdown-body p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+  .markdown-body h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0f172a;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    padding-bottom: 0.25rem;
+  }
+  .markdown-body h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1e293b;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .markdown-body ul, .markdown-body ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    list-style-type: disc;
+  }
+  .markdown-body li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+</style>

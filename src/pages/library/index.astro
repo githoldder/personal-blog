@@ -1,0 +1,202 @@
+---
+import { readFileSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CoordinateAxis from '../../components/CoordinateAxis.astro';
+
+const ROOT = process.cwd();
+const LIBRARY_JSON = join(ROOT, 'public/assets/library.json');
+
+let books = [];
+if (existsSync(LIBRARY_JSON)) {
+  try {
+    const raw = readFileSync(LIBRARY_JSON, 'utf-8');
+    const data = JSON.parse(raw);
+    books = data.books || [];
+  } catch (e) {
+    // ignore
+  }
+}
+
+// 抽取唯一的作者与标签列表
+const uniqueAuthors = Array.from(new Set(books.map(b => b.author).filter(Boolean)));
+const uniqueTags = Array.from(new Set(books.flatMap(b => b.tags || []).filter(t => t !== 'book' && t !== 'reading')));
+---
+
+<BaseLayout title="个人图书馆 — Personal Knowledge Asset OS">
+  
+  <header class="pb-8 pt-6 select-none max-w-4xl">
+    <div class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[9px] font-mono font-bold tracking-widest text-rose-800 bg-rose-50 border border-rose-200/50 rounded uppercase mb-4">
+      OBSIDIAN LITERARY DATABASE
+    </div>
+    <h1 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 leading-tight">📚 个人馆藏中心</h1>
+    <p class="mt-3 font-serif text-slate-650 leading-relaxed text-sm md:text-base max-w-3xl">
+      此页面扫描自 Obsidian 库中的 <code>02-Resources/004_阅读/书籍标注/</code>。展示当前已索引的纸质书籍批注与电子书摘录，提供交互大纲与沉浸式阅读预览功能。
+    </p>
+  </header>
+
+  <!-- Filter & Search Controls (Functioning Query UI) -->
+  <div class="border border-slate-200 bg-stone-50/50 rounded-md p-4 mb-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono select-none">
+    <div>
+      <label class="block font-bold mb-1.5 text-slate-500">🔍 快速检索 (书名/作者)</label>
+      <input 
+        type="text" 
+        id="search-input" 
+        placeholder="输入关键词进行实时检索..." 
+        class="w-full px-2.5 py-1.5 border border-slate-200 rounded focus:outline-none focus:ring-1 focus:ring-rose-500 font-sans"
+      />
+    </div>
+    <div>
+      <label class="block font-bold mb-1.5 text-slate-500">✍️ 按著者筛选</label>
+      <select id="author-select" class="w-full px-2 py-1.5 border border-slate-200 bg-white rounded focus:outline-none focus:ring-1 focus:ring-rose-500 font-sans font-bold text-slate-700">
+        <option value="all">显示全部著者</option>
+        {uniqueAuthors.map(author => (
+          <option value={author.toLowerCase()}>{author}</option>
+        ))}
+      </select>
+    </div>
+    <div>
+      <label class="block font-bold mb-1.5 text-slate-500">🏷️ 按标签筛选</label>
+      <select id="tag-select" class="w-full px-2 py-1.5 border border-slate-200 bg-white rounded focus:outline-none focus:ring-1 focus:ring-rose-500 font-sans font-bold text-slate-700">
+        <option value="all">显示所有标签</option>
+        {uniqueTags.map(tag => (
+          <option value={tag.toLowerCase()}>#{tag}</option>
+        ))}
+      </select>
+    </div>
+  </div>
+
+  <!-- 12-Column Grid Split -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+    
+    <!-- Left Column: Books List (8/12 Columns) -->
+    <section class="lg:col-span-8 space-y-6">
+      <CoordinateAxis label="Active Catalog Books" value={`${books.length} items`} />
+
+      {books.length === 0 ? (
+        <div class="py-12 text-center text-slate-400 font-serif border border-slate-200/50 rounded-md">
+          <p>图书馆中暂无馆藏，或尚未同步本地 Obsidian 库。可在命令行运行 <code>npm run build</code> 同步。</p>
+        </div>
+      ) : (
+        <div class="space-y-1" id="books-container">
+          {books.map((book) => (
+            <article 
+              class="garden-item book-card transition-all duration-300"
+              data-title={book.title.toLowerCase()}
+              data-author={book.author.toLowerCase()}
+              data-tags={book.tags.join(',').toLowerCase()}
+            >
+              <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                <div class="space-y-2 flex-grow max-w-xl">
+                  <div class="flex items-center gap-2">
+                    <span class="inline-flex items-center text-[9px] font-mono font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-1.5 py-0.2 rounded uppercase">
+                      LITERATURE INDEX
+                    </span>
+                  </div>
+                  <h3 class="font-serif font-bold text-lg md:text-xl text-slate-900">
+                    <a href={`/notes/${book.slug}/`} class="hover:text-rose-700 transition-colors leading-snug">
+                      《{book.title}》
+                    </a>
+                  </h3>
+                  <div class="flex items-center gap-3 text-xs text-slate-400 font-mono">
+                    <span>✍️ 著者: <span class="text-slate-600 font-serif font-bold">{book.author}</span></span>
+                    <span class="text-slate-200">|</span>
+                    <span>📅 标注修订: {book.date}</span>
+                  </div>
+                  <p class="text-xs md:text-sm text-slate-600 leading-relaxed font-serif line-clamp-3">
+                    {book.summary}
+                  </p>
+                  <div class="flex flex-wrap gap-1 pt-1">
+                    {book.tags.slice(0, 3).map((t) => (
+                      <span class="tech-tag">#{t}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <div class="shrink-0 flex items-center md:flex-col gap-2 mt-2 md:mt-0 select-none">
+                  <a 
+                    href={`/notes/${book.slug}/`}
+                    class="py-1.5 px-4 bg-rose-50 border border-rose-200 hover:bg-rose-100/60 text-rose-800 font-mono font-bold text-xs rounded transition-colors text-center block w-full"
+                  >
+                    在线调阅 ➔
+                  </a>
+                  <code class="text-[9px] font-mono text-slate-400 select-all block bg-slate-100/50 px-2 py-0.5 rounded border border-slate-200/40 text-center">
+                    slug:{book.slug}
+                  </code>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </section>
+
+    <!-- Right Column: Literary Specs (4/12 Columns) -->
+    <section class="lg:col-span-4 space-y-4">
+      <CoordinateAxis label="Library Metadata Pipeline" value="STATUS: OK" />
+      
+      <div class="font-mono text-[9px] text-slate-500 space-y-2.5 bg-slate-50/50 border border-slate-200/50 p-4 rounded-md leading-relaxed select-none">
+        <div class="flex justify-between border-b border-slate-200/40 pb-1">
+          <span>CATALOG SOURCE</span>
+          <span class="text-slate-800 font-bold truncate max-w-[120px]" title="02-Resources/004_阅读/书籍标注">Obsidian 阅读/书籍标注</span>
+        </div>
+        <div class="flex justify-between border-b border-slate-200/40 pb-1">
+          <span>PARSED FORMAT</span>
+          <span class="text-slate-800 font-bold">MARKDOWN / YAML</span>
+        </div>
+        <div class="flex justify-between border-b border-slate-200/40 pb-1">
+          <span>TOTAL BOOKS</span>
+          <span class="text-slate-800 font-bold" id="total-count-badge">{books.length}</span>
+        </div>
+        <div class="flex justify-between">
+          <span>COMPILER OUT</span>
+          <span class="text-slate-800 font-bold">public/assets/library.json</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>
+
+<script>
+  // 前端客户端过滤器，无刷实时交互
+  const searchInput = document.getElementById('search-input') as HTMLInputElement | null;
+  const authorSelect = document.getElementById('author-select') as HTMLSelectElement | null;
+  const tagSelect = document.getElementById('tag-select') as HTMLSelectElement | null;
+  const cards = document.querySelectorAll('.book-card');
+  const countBadge = document.getElementById('total-count-badge');
+
+  function filterBooks() {
+    const q = searchInput?.value.toLowerCase().trim() || '';
+    const author = authorSelect?.value || 'all';
+    const tag = tagSelect?.value || 'all';
+
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const htmlCard = card as HTMLElement;
+      const title = htmlCard.getAttribute('data-title') || '';
+      const bookAuthor = htmlCard.getAttribute('data-author') || '';
+      const tagsStr = htmlCard.getAttribute('data-tags') || '';
+      
+      const matchesSearch = title.includes(q) || bookAuthor.includes(q);
+      const matchesAuthor = author === 'all' || bookAuthor === author;
+      const matchesTag = tag === 'all' || tagsStr.split(',').includes(tag);
+
+      if (matchesSearch && matchesAuthor && matchesTag) {
+        htmlCard.style.display = '';
+        visibleCount++;
+      } else {
+        htmlCard.style.display = 'none';
+      }
+    });
+
+    if (countBadge) {
+      countBadge.innerText = String(visibleCount);
+    }
+  }
+
+  searchInput?.addEventListener('input', filterBooks);
+  authorSelect?.addEventListener('change', filterBooks);
+  tagSelect?.addEventListener('change', filterBooks);
+</script>

@@ -1,0 +1,343 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GrowthBadge from '../../components/GrowthBadge.astro';
+import CoordinateAxis from '../../components/CoordinateAxis.astro';
+import CanvasViewer from '../../components/CanvasViewer.jsx';
+import ExcalidrawViewer from '../../components/ExcalidrawViewer.jsx';
+
+// 1. 生成所有笔记（包含我们同步拷入的书本）的动态路径
+export async function getStaticPaths() {
+  const notes = await getCollection('notes');
+  return notes.map((entry) => ({
+    params: { slug: entry.data.slug ?? entry.id },
+    props: { entry }
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+
+const isExcalidraw = entry.data.tags?.includes('excalidraw');
+const isCanvas = entry.data.tags?.includes('canvas') || entry.data.tags?.includes('个人看板');
+
+const formatDate = (date: Date) => date.toISOString().slice(0, 10);
+const hasBacklinks = entry.data.tags && entry.data.tags.length > 0;
+---
+
+<BaseLayout title={entry.data.title}>
+  
+  {entry.data.pdfAsset ? (
+    /* Book Note Layout: Twin-pane view */
+    <div class="w-full flex flex-col xl:flex-row gap-8 items-stretch min-h-[80vh]">
+      
+      {/* Left Pane: Embedded PDF frame (Desktop only) */}
+      <div class="hidden xl:block xl:w-1/2 bg-stone-150 border border-slate-200 rounded-md relative min-h-[680px] overflow-hidden shadow-inner">
+        <iframe 
+          src={entry.data.pdfAsset} 
+          class="absolute inset-0 w-full h-full border-0 bg-stone-100" 
+          title={`PDF Preview: ${entry.data.title}`}
+        ></iframe>
+      </div>
+
+      {/* Right Pane: Markdown contents & parsed annotations (Right 50%) */}
+      <div class="w-full xl:w-1/2 flex flex-col space-y-6">
+        
+        {/* Actions header for Book note */}
+        <div class="flex items-center justify-between border-b border-slate-200/60 pb-4 select-none">
+          <a 
+            href="/library" 
+            class="text-xs font-mono font-bold text-slate-500 hover:text-rose-700 transition-colors uppercase"
+          >
+            🎎 BACK TO LIBRARY
+          </a>
+          <a 
+            href={entry.data.pdfAsset}
+            target="_blank"
+            class="px-3 py-1.5 bg-rose-50 border border-rose-200 hover:bg-rose-100/60 text-rose-800 font-mono font-bold text-xs rounded transition-colors"
+          >
+            📖 新窗口打开原始 PDF ↗
+          </a>
+        </div>
+
+        {/* Article Header */}
+        <header class="space-y-4 select-text">
+          <span class="inline-flex items-center text-[9px] font-mono font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-1.5 py-0.2 rounded uppercase">
+            BOOK CATALOGUE
+          </span>
+          <h1 class="text-2xl md:text-3xl font-serif font-bold text-slate-900 leading-tight">
+            {entry.data.title}
+          </h1>
+          <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400 font-mono">
+            {entry.data.author && (
+              <span>著者: <span class="text-slate-700 font-serif font-bold">{entry.data.author}</span></span>
+            )}
+            <span>📅 标注修订: <time datetime={formatDate(entry.data.date)}>{formatDate(entry.data.date)}</time></span>
+            {entry.data.annotationCount !== undefined && (
+              <span>📌 包含批注: <span class="text-rose-800 font-bold font-sans">{entry.data.annotationCount} 条</span></span>
+            )}
+          </div>
+        </header>
+
+        {/* Clean Contents (Including parsed cards stream) */}
+        <article class="markdown-body font-serif text-slate-800 leading-relaxed text-sm md:text-base border-t border-slate-200/40 pt-6 flex-grow select-text">
+          <Content />
+        </article>
+      </div>
+
+    </div>
+  ) : (
+    /* Standard Note Layout */
+    <div class="thought-article w-full flex flex-col lg:flex-row gap-10 items-start select-none" id="reader-container">
+      
+      {/* Left Area: Main Reading Body */}
+      <div class="flex-grow w-full max-w-3xl space-y-6">
+        
+        {/* Top actions bar */}
+        <div class="flex items-center justify-between border-b border-slate-200/60 pb-4">
+          <a 
+            href="/notes" 
+            class="text-xs font-mono font-bold text-slate-500 hover:text-rose-700 transition-colors uppercase"
+          >
+            🎎 BACK TO GARDEN
+          </a>
+
+          <div class="flex items-center gap-3">
+            <button 
+              id="zen-toggle"
+              class="px-3 py-1 bg-stone-50 border border-slate-350 hover:bg-slate-100 hover:border-rose-350 font-sans font-bold text-xs text-slate-700 rounded transition-colors"
+            >
+              沉浸阅读 📖
+            </button>
+          </div>
+        </div>
+
+        {/* Article Header */}
+        <header class="space-y-5">
+          <div class="thought-kicker">thought document</div>
+          <div class="flex flex-wrap items-center gap-2">
+            <GrowthBadge stage={entry.data.tags.includes('evergreen') ? 'evergreen' : 'budding'} />
+          </div>
+
+          <h1 class="text-4xl md:text-6xl font-serif font-bold text-slate-950 leading-[0.95] tracking-tight">
+            {entry.data.title}
+          </h1>
+
+          <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400 font-mono">
+            {entry.data.author && (
+              <span>著者: <span class="text-slate-700 font-serif font-bold">{entry.data.author}</span></span>
+            )}
+            <span>📅 PUBLISHED: <time datetime={formatDate(entry.data.date)}>{formatDate(entry.data.date)}</time></span>
+            <span class="text-slate-200">|</span>
+            <div class="flex flex-wrap gap-1">
+              {entry.data.tags.map((t) => (
+                <span class="tech-tag">#{t}</span>
+              ))}
+            </div>
+          </div>
+        </header>
+
+        <section class="thought-loop" aria-label="reading rhythm">
+          <div class="thought-loop__step">
+            <strong>take in</strong>
+            <span>先让原文完整进入视野。</span>
+          </div>
+          <div class="thought-loop__step">
+            <strong>transform</strong>
+            <span>在段落与链接之间重新组织想法。</span>
+          </div>
+          <div class="thought-loop__step">
+            <strong>send out</strong>
+            <span>把下一步行动或判断沉淀成新笔记。</span>
+          </div>
+        </section>
+
+        {/* Render Canvas or Excalidraw previews if matching tags */}
+        {isExcalidraw && (
+          <ExcalidrawViewer client:load fileName={entry.data.title} />
+        )}
+        {isCanvas && (
+          <CanvasViewer client:load canvasName={entry.data.title} />
+        )}
+
+        {/* Rendered Markdown Body (Zen-reading styled) */}
+        <article class="markdown-body thought-reading-body font-serif text-slate-800 leading-relaxed text-base md:text-lg border-t border-slate-200/40 pt-8">
+          <Content />
+        </article>
+
+        {/* Backlinks footer */}
+        {hasBacklinks && (
+          <section class="border-t border-slate-200/60 pt-6 mt-12 space-y-4">
+            <CoordinateAxis label="Incoming Backlinks network" value="LOC_GRAPH" />
+            <div class="p-4 bg-slate-50/50 border border-slate-200/50 rounded-md font-sans text-xs">
+              <h4 class="font-serif font-bold text-slate-800 mb-2">🔗 反向引用网络</h4>
+              <ul class="space-y-1.5 font-mono text-[10px] text-slate-500">
+                <li class="flex items-center gap-1">
+                  <span class="text-slate-300">└─</span>
+                  <a href={`/search?q=${entry.data.tags[0]}`} class="text-rose-700 hover:underline">探讨关于 [{entry.data.tags[0]}] 的多维度知识关联</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+        )}
+      </div>
+
+      {/* Right Area: TOC Outline Sidebar */}
+      {!isExcalidraw && headings.length > 0 && (
+        <aside 
+          id="outline-sidebar"
+          class="toc-sidebar hidden lg:block shrink-0 w-60 border-l border-slate-200/60 pl-6 sticky top-8 max-h-[85vh] overflow-y-auto"
+        >
+          <CoordinateAxis label="Document Outline" value="TOC INDEX" />
+          <ul class="space-y-2.5 font-sans text-xs text-slate-500 pt-2">
+            {headings.map((h) => (
+              <li style={{ paddingLeft: `${(h.depth - 1) * 8}px` }}>
+                <a 
+                  href={`#${h.slug}`} 
+                  class="hover:text-rose-700 transition-colors leading-normal block"
+                >
+                  {h.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
+
+    </div>
+  )}
+</BaseLayout>
+
+<script>
+  // 1. Zen mode 沉浸式切换 (仅在标准 note 时生效)
+  const toggleBtn = document.getElementById('zen-toggle');
+  const sidebar = document.getElementById('outline-sidebar');
+
+  toggleBtn?.addEventListener('click', () => {
+    const isZen = document.body.classList.toggle('zen-reading');
+    if (isZen) {
+      toggleBtn.innerText = '退出沉浸 ↙';
+      if (sidebar) sidebar.style.display = 'none';
+    } else {
+      toggleBtn.innerText = '沉浸阅读 📖';
+      if (sidebar) sidebar.style.display = '';
+    }
+  });
+
+  // 2. 双栏 PDF 批注高亮定位器
+  const annotationCards = document.querySelectorAll('.annotation-card');
+  const pdfIframe = document.querySelector('iframe');
+
+  annotationCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const base64Quote = card.getAttribute('data-quote-base64');
+      if (!base64Quote || !pdfIframe) return;
+      try {
+        // Base64 解码为 UTF-8，避免中文摘录经 atob 变成乱码
+        const binaryQuote = window.atob(base64Quote);
+        const quoteBytes = Uint8Array.from(binaryQuote, (char) => char.charCodeAt(0));
+        const rawQuote = new TextDecoder('utf-8').decode(quoteBytes);
+        const currentSrc = pdfIframe.getAttribute('src') || '';
+        const baseUrl = currentSrc.split('#')[0];
+        
+        // 拼接标准 PDF #search="text" 参数 (加双引号匹配整句)
+        // 浏览器将执行渐进高亮定位，无匹配时优雅回落
+        const newSrc = `${baseUrl}#search=${encodeURIComponent('"' + rawQuote + '"')}`;
+        pdfIframe.setAttribute('src', newSrc);
+      } catch (e) {
+        console.warn('[build-library-index] Failed to base64 decode and sync PDF iframe:', e);
+      }
+    });
+  });
+
+  // 3. Obsidian Excalidraw markdown hygiene: keep readable text, hide plugin internals.
+  const readerContainer = document.getElementById('reader-container');
+  readerContainer?.querySelectorAll('.obsidian-trigger, a[href^="obsidian://"]').forEach((node) => {
+    node.remove();
+  });
+
+  const isExcalidrawReader = Array.from(document.querySelectorAll('.tech-tag'))
+    .some((tag) => tag.textContent?.trim().toLowerCase() === '#excalidraw');
+
+  if (readerContainer && isExcalidrawReader) {
+    const markdownBody = readerContainer.querySelector('.markdown-body');
+    if (markdownBody) {
+      markdownBody.querySelectorAll('p').forEach((paragraph) => {
+        const text = paragraph.textContent || '';
+        if (text.includes('Switch to EXCALIDRAW VIEW') || text.includes('Decompress current Excalidraw file')) {
+          paragraph.remove();
+        }
+      });
+
+      markdownBody.querySelectorAll('pre, code').forEach((block) => {
+        const text = block.textContent || '';
+        if (text.includes('compressed-json') || text.length > 1200) {
+          block.closest('pre')?.remove();
+        }
+      });
+
+      markdownBody.querySelectorAll('h1, h2, h3').forEach((heading) => {
+        const text = heading.textContent?.trim().toLowerCase();
+        if (text === 'excalidraw data' || text === 'drawing') {
+          heading.remove();
+        }
+      });
+
+      markdownBody.querySelectorAll('p, li').forEach((block) => {
+        const textWalker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT);
+        const textNodes = [];
+        while (textWalker.nextNode()) {
+          textNodes.push(textWalker.currentNode);
+        }
+        textNodes.forEach((node) => {
+          node.nodeValue = node.nodeValue?.replace(/\s*\^[A-Za-z0-9_-]+/g, '') || '';
+        });
+      });
+    }
+  }
+</script>
+
+<style is:global>
+  /* Markdown 正文优雅排版 */
+  .markdown-body {
+    max-width: 65ch;
+  }
+  .markdown-body p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+  .markdown-body h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0f172a;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    padding-bottom: 0.25rem;
+  }
+  .markdown-body h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1e293b;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .markdown-body ul, .markdown-body ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    list-style-type: disc;
+  }
+  .markdown-body li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  .markdown-body blockquote {
+    border-left: 3px solid var(--color-rose);
+    padding-left: 1rem;
+    color: #475569;
+    font-style: italic;
+    margin: 1.5rem 0;
+  }
+</style>

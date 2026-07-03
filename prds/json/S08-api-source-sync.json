@@ -1,0 +1,128 @@
+{
+  "sprint_id": "S08",
+  "title": "RESTful API and Cloud Source Sync",
+  "objective": "建立 RESTful API 与 GitHub Obsidian_vault 云端真源同步层，替代本地硬编码路径，并为管理端提供文件树、内容读取、发布清单与预览接口",
+  "status": "todo",
+  "created_at": "2026-07-02",
+  "milestones": [
+    {
+      "id": "M01",
+      "title": "API contract and source configuration",
+      "status": "todo",
+      "tasks": ["S08-T01", "S08-T02"]
+    },
+    {
+      "id": "M02",
+      "title": "Content normalization and manifest APIs",
+      "status": "todo",
+      "tasks": ["S08-T03", "S08-T04", "S08-T05"]
+    },
+    {
+      "id": "M03",
+      "title": "Preview and security boundary",
+      "status": "todo",
+      "tasks": ["S08-T06", "S08-T07"]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "S08-T01",
+      "title": "Design RESTful API contract",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["docs/maintenance-runbook.md", "docs/publication-channel-policy.md"],
+      "outputs": ["docs/api-contract.md"],
+      "acceptance_criteria": [
+        "API contract covers source tree, file content, normalized content items, publish manifest, preview and verify endpoints",
+        "Contract separates read-only operations from local admin write operations",
+        "External write operations remain gated and excluded from default API behavior"
+      ],
+      "notes": "Contract first; implementation follows after human review."
+    },
+    {
+      "id": "S08-T02",
+      "title": "Configure GitHub Obsidian source adapter",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["https://github.com/githoldder/Obsidian_vault", "scripts/build-notes-index.js"],
+      "outputs": ["docs/source-sync-config.md", "scripts/build-notes-index.js"],
+      "acceptance_criteria": [
+        "Hardcoded local Obsidian path is replaced by documented configuration",
+        "Public GitHub blob/raw URL mapping is supported for cloud source links",
+        "Private repository token handling is documented and never exposed to client-side code"
+      ],
+      "notes": "Network access and GitHub reads are L3; writes to GitHub remain L4."
+    },
+    {
+      "id": "S08-T03",
+      "title": "Normalize Markdown metadata and source records",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["content/notes", "content/projects", "docs/content-quality-checklist.md"],
+      "outputs": ["docs/source-record-schema.md", "scripts/build-notes-index.js"],
+      "acceptance_criteria": [
+        "Normalized records include id, title, path, sourceUrl, rawUrl, updatedAt, tags, status and media references",
+        "Normalized records include embedding-ready text fields, stable chunk ids and graph classification metadata",
+        "Frontmatter parse failures are reported without crashing unrelated records",
+        "Generated records preserve enough provenance for admin review"
+      ],
+      "notes": "Keep generated local index files out of Git unless explicitly intended."
+    },
+    {
+      "id": "S08-T04",
+      "title": "Define publish manifest schema",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["sense/queues/editorial-queue.json", "docs/content-cadence.md"],
+      "outputs": ["docs/publish-manifest-schema.md", "content/publish-manifest.json"],
+      "acceptance_criteria": [
+        "Manifest records the whitelist of public source files and their public metadata overrides",
+        "Manifest distinguishes source path, public slug, public status and review notes",
+        "Manifest can drive user-facing public projection without exposing the full Obsidian vault"
+      ],
+      "notes": "The manifest is the boundary between private source truth and public projection."
+    },
+    {
+      "id": "S08-T05",
+      "title": "Implement local API skeleton",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["docs/api-contract.md", "package.json"],
+      "outputs": ["server", "package.json"],
+      "acceptance_criteria": [
+        "Local API can serve source tree, source file metadata and publish manifest data",
+        "API is bound to 127.0.0.1 by default for local admin usage",
+        "No deployment, remote mutation or token-bearing browser endpoint is introduced"
+      ],
+      "notes": "Implementation choice should respect the existing Astro/Node project shape."
+    },
+    {
+      "id": "S08-T06",
+      "title": "Add preview API contracts",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["docs/api-contract.md", "content/resume", "content/notes"],
+      "outputs": ["docs/preview-api-contract.md"],
+      "acceptance_criteria": [
+        "Preview contract covers Markdown, PDF, image, code, Typst and LaTeX preview categories",
+        "Unsupported file types have a safe metadata-only fallback",
+        "Preview endpoints never leak local absolute paths to public user surfaces"
+      ],
+      "notes": "Full preview implementation is scheduled for S10."
+    },
+    {
+      "id": "S08-T07",
+      "title": "Document API security and permissions",
+      "status": "todo",
+      "owner": "agent",
+      "inputs": ["Agent.md", "docs/publication-channel-policy.md"],
+      "outputs": ["docs/api-security-policy.md"],
+      "acceptance_criteria": [
+        "Admin API local-only default is documented",
+        "Public user frontend cannot access secrets or private source files",
+        "L3 reads and L4 writes are explicitly separated"
+      ],
+      "notes": "This task prevents accidental admin exposure during later development."
+    }
+  ]
+}

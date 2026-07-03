@@ -1,83 +1,367 @@
 ---
+import { getCollection } from 'astro:content';
+import { readFileSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import GardenCard from '../components/GardenCard.astro';
+import GrowthBadge from '../components/GrowthBadge.astro';
+import CoordinateAxis from '../components/CoordinateAxis.astro';
 
-const sections = [
-  {
-    title: '笔记',
-    href: '/notes',
-    description: '知识碎片与思考记录',
-  },
-  {
-    title: '项目',
-    href: '/projects',
-    description: '项目文档与进展追踪',
-  },
-  {
-    title: '演示文稿',
-    href: '/decks',
-    description: 'Slidev 风格演示文稿',
-  },
-  {
-    title: '简历',
-    href: '/resume',
-    description: '结构化简历数据',
-  },
-  {
-    title: '语义图谱',
-    href: '/lab/graph',
-    description: '知识关联可视化（实验室）',
-  },
+// 1. 读取基础简历元数据
+let basics = {
+  name: '曹磊',
+  label: '软件工程学子 / 在校创业者 / 知识系统架构师',
+  summary: '常州工学院软件工程专业本科生。主修软件工程，构建高效实用的工程工具。'
+};
+
+const resumePath = join(process.cwd(), 'public/assets/resume.json');
+if (existsSync(resumePath)) {
+  try {
+    const resume = JSON.parse(readFileSync(resumePath, 'utf-8'));
+    if (resume?.basics) {
+      basics = resume.basics;
+    }
+  } catch (e) {
+    // ignore
+  }
+}
+
+// 2. 读取语义图谱数据得到统计
+let graphStats = { nodesCount: 0, edgesCount: 0 };
+const graphPath = join(process.cwd(), 'public/assets/semantic_graph.json');
+if (existsSync(graphPath)) {
+  try {
+    const graph = JSON.parse(readFileSync(graphPath, 'utf-8'));
+    graphStats.nodesCount = graph?.nodes?.length || 0;
+    graphStats.edgesCount = graph?.edges?.length || 0;
+  } catch (e) {
+    // ignore
+  }
+}
+
+// 3. 读取 Library 书籍用于阅读地层 (Reading Strata)
+let books = [];
+const libraryPath = join(process.cwd(), 'public/assets/library.json');
+if (existsSync(libraryPath)) {
+  try {
+    const libraryData = JSON.parse(readFileSync(libraryPath, 'utf-8'));
+    books = libraryData.books || [];
+  } catch (e) {
+    // ignore
+  }
+}
+
+// 4. 读取 Content Collections 笔记并筛选
+const allNotes = await getCollection('notes');
+const notes = allNotes
+  .filter((entry) => entry.data.status === 'published' && !entry.data.tags.includes('book'))
+  .map((entry) => {
+    let stage = 'seedling';
+    if (entry.data.tags.includes('evergreen') || entry.id.length < 32) {
+      stage = 'evergreen';
+    } else if (entry.data.tags.includes('budding') || entry.data.title.length > 8) {
+      stage = 'budding';
+    }
+    return {
+      slug: entry.data.slug ?? entry.id,
+      title: entry.data.title,
+      date: entry.data.date,
+      tags: entry.data.tags,
+      stage
+    };
+  })
+  .sort((a, b) => b.date.getTime() - a.date.getTime())
+  .slice(0, 4);
+
+const formatDate = (date: Date) => date.toISOString().slice(0, 10);
+const buildTime = new Date().toISOString();
+
+// 定义书脊颜色循环
+const spineColors = [
+  'bg-[#e2ecc8] text-[#3d5a23] border-[#ccd9a3] hover:bg-[#d9e5b8]', // moss-green
+  'bg-[#fde2e4] text-[#8a333a] border-[#fbc4c6] hover:bg-[#fcd2d5]', // rose-pink
+  'bg-[#fef2cd] text-[#785b00] border-[#fce498] hover:bg-[#fdeba7]', // gold-yellow
+  'bg-[#e3ecf5] text-[#2c5270] border-[#c0d5e8] hover:bg-[#d2e4f2]'  // blue-ice
 ];
 ---
 
-<BaseLayout title="Personal Knowledge Asset OS">
-  <header class="mb-10">
-    <h1 class="text-3xl font-bold mb-2">Personal Knowledge Asset OS</h1>
-    <p class="text-surface-500">
-      个人知识资产操作系统 — 统一管理笔记、简历、项目、演示文稿与语义图谱。
+<BaseLayout title="OS Instance Workbench">
+  
+  <!-- Cozy Asymmetric Banner (Maggie Style) -->
+  <header class="pb-10 pt-4 select-none max-w-4xl">
+    <div class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[9px] font-mono font-bold tracking-widest text-rose-800 bg-rose-50 border border-rose-200/50 rounded uppercase mb-4">
+      WORKSPACE INSTANCE ROOT
+    </div>
+    <h1 class="text-3xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
+      {basics.name} <span class="text-base md:text-lg font-mono text-slate-400 block sm:inline sm:pl-3 font-normal">{basics.label}</span>
+    </h1>
+    <p class="mt-4 font-serif text-slate-700 leading-relaxed text-sm md:text-base max-w-2xl">
+      {basics.summary}
     </p>
   </header>
 
-  <section class="mb-10">
-    <h2 class="text-lg font-semibold mb-4 text-surface-700">资产目录</h2>
-    <div class="grid gap-3">
-      {sections.map((section) => (
-        <a href={section.href} class="workspace-card group">
-          <div class="flex items-center justify-between">
-            <div>
-              <h3 class="font-medium group-hover:text-accent transition-colors">
-                {section.title}
-              </h3>
-              <p class="text-sm text-surface-500 mt-1">{section.description}</p>
+  <!-- Reading Strata / Book Spines Shelf (Artistic Showcase) -->
+  {books.length > 0 && (
+    <section class="border-t border-slate-200/60 pt-8 pb-10 space-y-4 max-w-5xl">
+      <CoordinateAxis label="Literary Strata Shelf (Interaction focusable)" value={`${books.length} Library Items`} />
+      
+      {/* Desktop: Horizontal Spines Shelf */}
+      <div class="hidden lg:flex items-end gap-3 min-h-[300px] py-4 px-2 overflow-x-auto scrollbar-none" id="desktop-shelf">
+        {books.slice(0, 8).map((book, idx) => {
+          const colorClass = spineColors[idx % spineColors.length];
+          return (
+            <div 
+              class={`book-spine border transition-all duration-300 rounded ${colorClass}`}
+              tabindex="0"
+              role="button"
+              aria-label={`书籍《${book.title}》`}
+            >
+              {/* Vertical Title (Default) */}
+              <div class="spine-title-vertical text-center font-bold tracking-wider text-xs whitespace-nowrap">
+                《{book.title}》
+              </div>
+              
+              {/* Horizontal detail description (Visible on hover) */}
+              <div class="spine-detail hidden w-full h-full flex-col justify-between text-left space-y-2">
+                <div>
+                  <h4 class="font-serif font-bold text-sm leading-tight border-b border-black/10 pb-1.5 mb-1.5">
+                    《{book.title}》
+                  </h4>
+                  <p class="text-[9px] font-mono opacity-85 uppercase">著者: {book.author}</p>
+                  <p class="text-[10px] font-serif leading-relaxed line-clamp-4 mt-2">
+                    {book.summary}
+                  </p>
+                </div>
+                <a 
+                  href={`/notes/${book.slug}/`} 
+                  class="py-1 px-2.5 bg-black/5 hover:bg-black/10 text-center font-mono font-bold text-[9px] rounded border border-black/15 transition-colors uppercase block w-full mt-auto"
+                >
+                  在线调阅 ➔
+                </a>
+              </div>
             </div>
-            <span class="text-surface-400 group-hover:text-accent transition-colors">→</span>
-          </div>
-        </a>
-      ))}
-    </div>
-  </section>
+          );
+        })}
+      </div>
 
-  <section class="mb-10">
-    <h2 class="text-lg font-semibold mb-4 text-surface-700">系统状态</h2>
-    <div class="workspace-card">
-      <dl class="grid grid-cols-2 gap-4 text-sm">
-        <div>
-          <dt class="text-surface-500">阶段</dt>
-          <dd class="font-medium text-accent">S05 — Public Surface Polish</dd>
+      {/* Tablet: Double Row Grid Spines */}
+      <div class="hidden md:grid lg:hidden grid-cols-4 gap-4 py-2">
+        {books.slice(0, 4).map((book, idx) => {
+          const colorClass = spineColors[idx % spineColors.length];
+          return (
+            <div class={`border p-4 rounded-md flex flex-col justify-between h-48 transition-all ${colorClass}`}>
+              <div>
+                <h4 class="font-serif font-bold text-sm line-clamp-2">《{book.title}》</h4>
+                <p class="text-[9px] font-mono opacity-80 mt-1">著者: {book.author}</p>
+                <p class="text-[10px] font-serif leading-normal line-clamp-3 mt-2">{book.summary}</p>
+              </div>
+              <a href={`/notes/${book.slug}/`} class="text-[9px] font-mono font-bold hover:underline block text-right mt-2">
+                在线调阅 ➔
+              </a>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Mobile: Horizontal Swiping cards stack */}
+      <div class="flex md:hidden gap-4 overflow-x-auto pb-4 scrollbar-none snap-x snap-mandatory">
+        {books.slice(0, 5).map((book, idx) => {
+          const colorClass = spineColors[idx % spineColors.length];
+          return (
+            <div class={`flex-shrink-0 w-72 border p-5 rounded-md snap-center flex flex-col justify-between h-52 ${colorClass}`}>
+              <div>
+                <span class="text-[8px] font-mono font-bold uppercase tracking-wider opacity-75">Literature Preview</span>
+                <h4 class="font-serif font-bold text-base line-clamp-2 mt-1">《{book.title}》</h4>
+                <p class="text-[9px] font-mono opacity-80 mt-0.5">著者: {book.author}</p>
+                <p class="text-xs font-serif leading-relaxed line-clamp-3 mt-3">{book.summary}</p>
+              </div>
+              <a href={`/notes/${book.slug}/`} class="text-[10px] font-mono font-bold underline block mt-2 text-right">
+                在线调阅 ➔
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  )}
+
+  <!-- Asymmetric 12-Column Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start border-t border-slate-200/60 pt-10">
+    
+    <!-- Left Column: The Garden (8/12 Columns in Large View) -->
+    <div class="lg:col-span-8 space-y-12">
+      
+      <!-- Essays Section (图文卡片) -->
+      <section class="space-y-6">
+        <h2 class="text-xl md:text-2xl font-serif font-bold text-slate-900 border-b border-slate-100 pb-3">
+          📖 核心论述 (Essays)
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <GardenCard 
+            title="Personal Knowledge Asset OS 架构设计"
+            desc="探讨如何打破单一的文件存储逻辑，建立以内容真源为底座、多端输出为编译终点的个人知识系统。"
+            href="/notes/2026-06-26-personal-knowledge-asset-os/"
+            image="/assets/essay_digital_garden.jpg"
+          />
+          <GardenCard 
+            title="结构化简历数据与 Typst 预览管线"
+            desc="如何基于单一 YAML 源，通过编译管线自动生成符合打印精度要求的 PDF 与响应式 Web 简历。"
+            href="/resume"
+            image="/assets/essay_ai_enlightenment.jpg"
+          />
         </div>
-        <div>
-          <dt class="text-surface-500">技术栈</dt>
-          <dd class="font-medium">Astro + React + Tailwind</dd>
+      </section>
+
+      <!-- Notes Garden Stream -->
+      <section class="space-y-6">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+          <h2 class="text-xl md:text-2xl font-serif font-bold text-slate-900">
+            🌱 知识生长轨迹 (Notes)
+          </h2>
+          <a href="/notes" class="text-xs font-mono text-rose-700 hover:underline font-bold">调阅所有笔记 ↗</a>
         </div>
-        <div>
-          <dt class="text-surface-500">内容真源</dt>
-          <dd class="font-medium">content/</dd>
+
+        <div class="space-y-1">
+          {notes.map((note) => (
+            <article class="garden-item">
+              <div class="flex items-start justify-between gap-4">
+                <div class="space-y-1.5">
+                  <div class="flex items-center gap-2">
+                    <GrowthBadge stage={note.stage} />
+                  </div>
+                  <h3 class="font-serif font-bold text-base md:text-lg text-slate-900">
+                    <a href={`/notes/${note.slug}/`} class="hover:text-rose-700 transition-colors leading-snug">
+                      {note.title}
+                    </a>
+                  </h3>
+                  <div class="flex items-center gap-3 text-xs text-slate-400 font-mono">
+                    <time datetime={formatDate(note.date)}>{formatDate(note.date)}</time>
+                    <div class="flex gap-1">
+                      {note.tags.slice(0, 2).map((t) => (
+                        <span class="tech-tag">#{t}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <code class="text-[9px] font-mono text-slate-400/80 uppercase">/{note.slug.slice(0, 10)}</code>
+              </div>
+            </article>
+          ))}
         </div>
-        <div>
-          <dt class="text-surface-500">构建状态</dt>
-          <dd class="font-medium text-green-600">已就绪</dd>
-        </div>
-      </dl>
+      </section>
     </div>
-  </section>
+
+    <!-- Right Column: Scientific viz & control metrics (4/12 Columns) -->
+    <div class="lg:col-span-4 space-y-10 lg:pl-4">
+      
+      <!-- 🕸️ Exploarble Graph preview (Amelia style) -->
+      <section class="space-y-4">
+        <CoordinateAxis label="Topology Visual Matrix" value="Y-AXIS 2D" />
+        
+        <div class="relative aspect-square w-full rounded-full border border-dashed border-slate-350/60 overflow-hidden flex items-center justify-center bg-white/40 coordinate-grid group hover:border-rose-400 transition-colors duration-300">
+          <svg class="w-3/4 h-3/4 animate-spin-slow" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="2.5" fill="var(--color-rose)" class="animate-ping" style="animation-duration: 3s;"></circle>
+            <circle cx="50" cy="50" r="3.5" fill="var(--color-rose)"></circle>
+            
+            <line x1="50" y1="50" x2="25" y2="25" stroke="#cbd5e1" stroke-width="0.75" stroke-dasharray="2,2"></line>
+            <circle cx="25" cy="25" r="2" fill="var(--color-moss)"></circle>
+            
+            <line x1="50" y1="50" x2="78" y2="42" stroke="#cbd5e1" stroke-width="0.75"></line>
+            <circle cx="78" cy="42" r="3" fill="var(--color-rose)"></circle>
+            
+            <line x1="50" y1="50" x2="40" y2="78" stroke="#cbd5e1" stroke-width="0.75"></line>
+            <circle cx="40" cy="78" r="2.5" fill="var(--color-signal)"></circle>
+          </svg>
+          <div class="absolute bottom-4 text-center">
+            <a href="/lab/graph" class="inline-flex items-center justify-center px-4 py-1.5 border border-slate-900/10 hover:border-slate-900 text-[10px] font-mono font-bold text-slate-800 bg-white/90 backdrop-blur-sm rounded transition-all">
+              交互式拓扑图谱 ↗
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 📊 Technical Stats (Metric list) -->
+      <section class="space-y-4 pt-4">
+        <CoordinateAxis label="System runtime benchmarks" value={`t=${buildTime.slice(0, 10)}`} />
+        
+        <div class="font-mono text-[10px] text-slate-500 space-y-2.5">
+          <div class="flex justify-between border-b border-slate-100 pb-1.5">
+            <span>GRAPH NODES COMPUTED</span>
+            <span class="font-bold text-slate-800">{graphStats.nodesCount}</span>
+          </div>
+          <div class="flex justify-between border-b border-slate-100 pb-1.5">
+            <span>GRAPH EDGES CALCULATED</span>
+            <span class="font-bold text-slate-800">{graphStats.edgesCount}</span>
+          </div>
+          <div class="flex justify-between border-b border-slate-100 pb-1.5">
+            <span>PUBLISHABLE NOTES</span>
+            <span class="font-bold text-slate-800">{allNotes.length}</span>
+          </div>
+          <div class="flex justify-between border-b border-slate-100 pb-1.5">
+            <span>PIPELINE ENGINE</span>
+            <span class="text-slate-800">ASTRO 5.10 / ESBUILD</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⚙️ Command Gateway -->
+      <section class="pt-8 border-t border-slate-200/50">
+        <a 
+          href="/admin" 
+          class="inline-flex items-center gap-1 text-[9px] font-mono font-bold text-slate-400 hover:text-rose-700 transition-colors uppercase tracking-widest"
+        >
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-rose-500"></span>
+          Offline Admin console gate ➔
+        </a>
+      </section>
+
+    </div>
+  </div>
 </BaseLayout>
+
+<style>
+  @keyframes spin-slow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .animate-spin-slow {
+    animation: spin-slow 60s linear infinite;
+  }
+
+  /* 书架 Spines Shelf 动画细节与排版 */
+  .book-spine {
+    writing-mode: vertical-rl;
+    text-orient: mixed;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 280px;
+    width: 44px;
+    padding: 1.5rem 0.5rem;
+    position: relative;
+    outline: none;
+  }
+  .book-spine:focus-visible {
+    ring: 2px solid var(--color-rose);
+  }
+
+  @media (min-width: 1024px) {
+    .book-spine:hover, .book-spine:focus {
+      width: 240px;
+      writing-mode: horizontal-tb;
+      padding: 1.5rem 1.25rem;
+    }
+    .book-spine .spine-detail {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      display: none;
+    }
+    .book-spine:hover .spine-detail, .book-spine:focus .spine-detail {
+      opacity: 1;
+      display: flex;
+    }
+    .book-spine:hover .spine-title-vertical, .book-spine:focus .spine-title-vertical {
+      display: none;
+    }
+  }
+</style>

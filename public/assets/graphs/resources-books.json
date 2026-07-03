@@ -1,0 +1,847 @@
+{
+  "nodes": [
+    {
+      "id": "note:book-博弈论",
+      "label": "博弈论",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/book-博弈论.md",
+        "stage": "evergreen",
+        "date": "2026-07-03",
+        "degree": 11,
+        "tags": [
+          "book",
+          "reading"
+        ],
+        "scope": "Resources-Books"
+      }
+    },
+    {
+      "id": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "label": "向上社交：如何让优秀的人靠近你【每个和高手相交的机会，都令你更靠近成功。突破圈层的局限，获取更优质的目标资源，从提供价值开始，实现..._(Z-Library)",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library.md",
+        "stage": "budding",
+        "date": "2026-07-03",
+        "degree": 11,
+        "tags": [
+          "book",
+          "reading"
+        ],
+        "scope": "Resources-Books"
+      }
+    },
+    {
+      "id": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "label": "市场营销 原理与实践（第16版·全新版） (菲利普·科特勒 加里·阿姆斯特朗)",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗.md",
+        "stage": "budding",
+        "date": "2026-07-03",
+        "degree": 11,
+        "tags": [
+          "book",
+          "reading"
+        ],
+        "scope": "Resources-Books"
+      }
+    },
+    {
+      "id": "note:book-战略管理",
+      "label": "战略管理",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/book-战略管理.md",
+        "stage": "evergreen",
+        "date": "2026-07-03",
+        "degree": 11,
+        "tags": [
+          "book",
+          "reading"
+        ],
+        "scope": "Resources-Books"
+      }
+    },
+    {
+      "id": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "label": "正则表达式必知必会_(Ben_Forta)_(Z-Library)",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/book-正则表达式必知必会-ben-forta-z-library.md",
+        "stage": "budding",
+        "date": "2026-07-03",
+        "degree": 11,
+        "tags": [
+          "book",
+          "reading"
+        ],
+        "scope": "Resources-Books"
+      }
+    },
+    {
+      "id": "note:book-深入设计模式-1",
+      "label": "深入设计模式(1)",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/book-深入设计模式-1.md",
+        "stage": "evergreen",
+        "date": "2026-07-03",
+        "degree": 11,
+        "tags": [
+          "book",
+          "reading"
+        ],
+        "scope": "Resources-Books"
+      }
+    },
+    {
+      "id": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "label": "算法图解_(（美）巴尔加瓦（Aditya_Bhargava）著,_袁国忠译)_(Z-Library)",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library.md",
+        "stage": "budding",
+        "date": "2026-07-03",
+        "degree": 11,
+        "tags": [
+          "book",
+          "reading"
+        ],
+        "scope": "Resources-Books"
+      }
+    },
+    {
+      "id": "note:book-终身成长",
+      "label": "终身成长",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/book-终身成长.md",
+        "stage": "evergreen",
+        "date": "2026-07-03",
+        "degree": 11,
+        "tags": [
+          "book",
+          "reading"
+        ],
+        "scope": "Resources-Books"
+      }
+    },
+    {
+      "id": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "label": "软技能：代码之外的生存指南（第2版） (约翰•Z·森梅兹)",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹.md",
+        "stage": "evergreen",
+        "date": "2026-07-03",
+        "degree": 11,
+        "tags": [
+          "book",
+          "reading"
+        ],
+        "scope": "Resources-Books"
+      }
+    },
+    {
+      "id": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "label": "金字塔原理大全集_(芭芭拉·明托)_(Z-Library)",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/book-金字塔原理大全集-芭芭拉-明托-z-library.md",
+        "stage": "evergreen",
+        "date": "2026-07-03",
+        "degree": 11,
+        "tags": [
+          "book",
+          "reading"
+        ],
+        "scope": "Resources-Books"
+      }
+    },
+    {
+      "id": "note:book-金字塔原理笔记",
+      "label": "金字塔原理笔记",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/book-金字塔原理笔记.md",
+        "stage": "evergreen",
+        "date": "2026-07-03",
+        "degree": 11,
+        "tags": [
+          "book",
+          "reading"
+        ],
+        "scope": "Resources-Books"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "note:book-博弈论",
+      "target": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-博弈论",
+      "target": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-博弈论",
+      "target": "note:book-战略管理",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-博弈论",
+      "target": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-博弈论",
+      "target": "note:book-深入设计模式-1",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-博弈论",
+      "target": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-博弈论",
+      "target": "note:book-终身成长",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-博弈论",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-博弈论",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-博弈论",
+      "target": "note:book-金字塔原理笔记",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-战略管理",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-深入设计模式-1",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-终身成长",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "target": "note:book-金字塔原理笔记",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-战略管理",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-深入设计模式-1",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-终身成长",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "target": "note:book-金字塔原理笔记",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-战略管理",
+      "target": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-战略管理",
+      "target": "note:book-深入设计模式-1",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-战略管理",
+      "target": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-战略管理",
+      "target": "note:book-终身成长",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-战略管理",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-战略管理",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-战略管理",
+      "target": "note:book-金字塔原理笔记",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "target": "note:book-深入设计模式-1",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "target": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "target": "note:book-终身成长",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "target": "note:book-金字塔原理笔记",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-深入设计模式-1",
+      "target": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-深入设计模式-1",
+      "target": "note:book-终身成长",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-深入设计模式-1",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-深入设计模式-1",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-深入设计模式-1",
+      "target": "note:book-金字塔原理笔记",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "target": "note:book-终身成长",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "target": "note:book-金字塔原理笔记",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-终身成长",
+      "target": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-终身成长",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-终身成长",
+      "target": "note:book-金字塔原理笔记",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "target": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "target": "note:book-金字塔原理笔记",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    },
+    {
+      "source": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "target": "note:book-金字塔原理笔记",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "book",
+          "reading"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "scope": "Resources-Books",
+    "total_nodes": 11,
+    "total_edges": 55
+  }
+}

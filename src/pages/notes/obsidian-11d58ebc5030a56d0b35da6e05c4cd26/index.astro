@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="笔记已迁移">
+  <meta http-equiv="refresh" content="0; url=/notes/" />
+  <section class="max-w-2xl py-16 space-y-4">
+    <p class="text-xs font-mono font-bold text-slate-400 uppercase">Stale Obsidian Note Route</p>
+    <h1 class="text-3xl font-serif font-bold text-slate-900">这篇同步笔记已迁移</h1>
+    <p class="font-serif text-slate-600 leading-relaxed">
+      这个 Obsidian 同步地址不在当前内容集合中。正在返回知识花园，你可以从最新笔记列表继续打开有效页面。
+    </p>
+    <a href="/notes/" class="inline-flex px-4 py-2 rounded border border-rose-200 bg-rose-50 text-rose-800 text-xs font-mono font-bold">
+      返回知识花园
+    </a>
+  </section>
+</BaseLayout>

@@ -8,7 +8,11 @@ const notes = defineCollection({
     date: z.coerce.date(),
     tags: z.array(z.string()).default([]),
     status: z.enum(['draft', 'published', 'archived']).default('draft'),
-    slug: z.string().optional()
+    slug: z.string().optional(),
+    author: z.string().optional(),
+    annotationTarget: z.string().optional(),
+    pdfAsset: z.string().optional(),
+    annotationCount: z.number().optional()
   })
 });
 
@@ -20,7 +24,8 @@ const projects = defineCollection({
     status: z.enum(['todo', 'in_progress', 'done', 'archived']).default('todo'),
     date: z.coerce.date(),
     tech: z.array(z.string()).default([]),
-    slug: z.string().optional()
+    slug: z.string().optional(),
+    github: z.string().optional()
   })
 });
 

@@ -1,33 +1,21 @@
 ---
-import { readFileSync, existsSync } from 'node:fs';
-import { join } from 'node:path';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SemanticGraph from '../../components/SemanticGraph.jsx';
-
-const ROOT = process.cwd();
-const GRAPH_PATH = join(ROOT, 'public/assets/semantic_graph.json');
-
-let graphData = { nodes: [], edges: [] };
-if (existsSync(GRAPH_PATH)) {
-  try {
-    const raw = readFileSync(GRAPH_PATH, 'utf-8');
-    graphData = JSON.parse(raw);
-  } catch (e) {
-    console.error('Failed to parse semantic_graph.json in Astro page:', e.message);
-  }
-}
 ---
 
 <BaseLayout title="全息语义图谱 — Personal Knowledge Asset OS">
-  <header class="mb-10 pb-6 border-b border-surface-200">
-    <h1 class="text-3xl font-bold tracking-tight text-surface-900">全息语义图谱</h1>
-    <p class="text-surface-500 mt-1">
-      基于内容元数据多维特征与启发式连线算法，对笔记、项目、演示文稿与简历进行关系映射。
+  
+  <header class="pb-8 pt-6 select-none max-w-4xl">
+    <div class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[9px] font-mono font-bold tracking-widest text-rose-800 bg-rose-50 border border-rose-200/50 rounded uppercase mb-4">
+      KNOWLEDGE GRAPH VISUALIZATION
+    </div>
+    <h1 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 leading-tight">🕸️ 全息语义大脑图谱</h1>
+    <p class="mt-3 font-serif text-slate-650 leading-relaxed text-sm md:text-base max-w-3xl">
+      此页面通过提取并分析文章元数据多维特征，对笔记、项目、演示文稿与个人简历进行连线映射。你可以在下方拖拽节点，并通过物理滑块实时干预图谱重力场和弹簧长度，直观探索知识链路。
     </p>
   </header>
 
-  <section>
-    <SemanticGraph client:load initialData={graphData} />
+  <section class="w-full border-t border-slate-200/60 pt-6">
+    <SemanticGraph client:load />
   </section>
 </BaseLayout>
-

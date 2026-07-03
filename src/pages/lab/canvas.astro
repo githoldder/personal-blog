@@ -1,0 +1,63 @@
+---
+import { readFileSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CanvasVisualizer from '../../components/CanvasVisualizer.jsx';
+
+const ROOT = process.cwd();
+const CANVAS_PREVIEWS_JSON = join(ROOT, 'public/assets/canvas_previews.json');
+const EXCALIDRAW_PREVIEWS_JSON = join(ROOT, 'public/assets/excalidraw_previews.json');
+
+// 1. 读取 Canvas 预览打包数据
+let canvasData = { files: [] };
+if (existsSync(CANVAS_PREVIEWS_JSON)) {
+  try {
+    canvasData = JSON.parse(readFileSync(CANVAS_PREVIEWS_JSON, 'utf-8'));
+  } catch (e) {
+    // ignore
+  }
+}
+
+// 2. 读取 Excalidraw 预览打包数据
+let excalidrawData = { files: [] };
+if (existsSync(EXCALIDRAW_PREVIEWS_JSON)) {
+  try {
+    excalidrawData = JSON.parse(readFileSync(EXCALIDRAW_PREVIEWS_JSON, 'utf-8'));
+  } catch (e) {
+    // ignore
+  }
+}
+
+// 3. 检查本地库挂载状态
+const obsidianMounted = existsSync(process.env.OBSIDIAN_ROOT || '/nonexistent');
+---
+
+<BaseLayout title="无限白板与原型设计索引 — Personal Knowledge Asset OS">
+  
+  <header class="pb-8 pt-6 select-none max-w-4xl">
+    <div class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[9px] font-mono font-bold tracking-widest text-rose-800 bg-rose-50 border border-rose-200/50 rounded uppercase mb-4">
+      INFINITE CANVAS & PROTOTYPES GATEWAY
+    </div>
+    <h1 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 leading-tight">🎨 无限画布与手绘原型</h1>
+    <p class="mt-3 font-serif text-slate-650 leading-relaxed text-sm md:text-base max-w-3xl">
+      展示自本地 Obsidian 库中提取的 <code>.canvas</code> 关系白板以及使用 Excalidraw 插件手绘的系统架构图。您可以在下方查看所有画布资源并管理它们在公开网络网关的**白名单准入状态**。
+    </p>
+  </header>
+
+  <!-- Mount State Warning Banner -->
+  {!obsidianMounted && (
+    <div class="border border-amber-200 bg-amber-50/50 rounded-md p-4 mb-6 text-xs text-amber-800 font-mono select-none">
+      ⚠️ <strong>本地 Obsidian 库未挂载</strong>：当前处于生产部署或离线构建状态，未能直接读取物理路径。预览区域已加载由上一次本地运行缓存的预览数据库。
+    </div>
+  )}
+
+  <div class="border-t border-slate-200/60 pt-8">
+    {/* RENDER DUAL-PANE INTERACTIVE VIEWPORT */}
+    <CanvasVisualizer 
+      canvasData={canvasData} 
+      excalidrawData={excalidrawData} 
+      client:load 
+    />
+  </div>
+
+</BaseLayout>
