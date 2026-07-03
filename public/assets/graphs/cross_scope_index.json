@@ -1116,9 +1116,24 @@
   "node_to_neighbors": {
     "resume:basics": [
       "project:file-processor-assistant",
-      "project:lingobridge"
+      "project:personal-knowledge-asset-os",
+      "note:2026-06-26-personal-knowledge-asset-os",
+      "note:obsidian-be4cc536b2a4ab5a0eef95423b20fc01",
+      "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
+      "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
+      "note:obsidian-7bc37adaa34cd72d14f852e7e6e32282",
+      "note:obsidian-a432cb067ceedb9c4cc1690c3e029bd7",
+      "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
+      "note:obsidian-e5275201532f699889138f717b939d2e",
+      "note:obsidian-6c507681d537a7d1002a2b47e9091777",
+      "note:obsidian-9ceed5107c8c106d6ac5db7c118d08e6",
+      "note:obsidian-9f5215a6b5e76d998ae990d891a975be"
     ],
-    "note:2026-06-26-personal-knowledge-asset-os": [],
+    "note:2026-06-26-personal-knowledge-asset-os": [
+      "resume:basics"
+    ],
     "note:book-博弈论": [
       "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
       "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
@@ -1532,6 +1547,7 @@
     ],
     "note:obsidian-03d27d1d8a5626150f870d961e7de620": [
       "note:obsidian-a432cb067ceedb9c4cc1690c3e029bd7",
+      "resume:basics",
       "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
       "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
       "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
@@ -4004,6 +4020,7 @@
     "note:obsidian-50b7a43f70e759f87485fa3963312739": [],
     "note:obsidian-50d6b96e671aa113429d701c7b33ebb5": [
       "note:obsidian-a432cb067ceedb9c4cc1690c3e029bd7",
+      "resume:basics",
       "note:obsidian-03d27d1d8a5626150f870d961e7de620",
       "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
       "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
@@ -4064,6 +4081,7 @@
       "note:obsidian-e5275201532f699889138f717b939d2e",
       "note:obsidian-a432cb067ceedb9c4cc1690c3e029bd7",
       "note:obsidian-f3032ec279e0e380b907a23481c7e24b",
+      "resume:basics",
       "note:obsidian-03d27d1d8a5626150f870d961e7de620",
       "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
       "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
@@ -5064,6 +5082,11 @@
       "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
       "note:obsidian-a432cb067ceedb9c4cc1690c3e029bd7",
       "note:obsidian-f3032ec279e0e380b907a23481c7e24b",
+      "resume:basics",
+      "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
+      "note:obsidian-e5275201532f699889138f717b939d2e",
       "note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
       "note:obsidian-02fd883b046eaba05c9008c29b2f8690",
       "note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
@@ -5074,15 +5097,12 @@
       "note:obsidian-8f8a2232d5c01e32b197d893a6981b98",
       "note:obsidian-b071de3ca76fdd838c1621d11344b304",
       "note:obsidian-be4cc536b2a4ab5a0eef95423b20fc01",
-      "note:obsidian-ed8e28c31a1e34c1773e67f8e8d1167d",
-      "note:obsidian-03d27d1d8a5626150f870d961e7de620",
-      "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
-      "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
-      "note:obsidian-e5275201532f699889138f717b939d2e"
+      "note:obsidian-ed8e28c31a1e34c1773e67f8e8d1167d"
     ],
     "note:obsidian-6b80b60c0510e4455b2d0977690b1f89": [],
     "note:obsidian-6bc3a24bd8d1485eda32bd0a1f96e7aa": [],
     "note:obsidian-6c507681d537a7d1002a2b47e9091777": [
+      "resume:basics",
       "note:obsidian-9ceed5107c8c106d6ac5db7c118d08e6",
       "note:obsidian-9f5215a6b5e76d998ae990d891a975be"
     ],
@@ -5655,6 +5675,7 @@
       "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
       "note:obsidian-a432cb067ceedb9c4cc1690c3e029bd7",
       "note:obsidian-f3032ec279e0e380b907a23481c7e24b",
+      "resume:basics",
       "note:obsidian-03d27d1d8a5626150f870d961e7de620",
       "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
       "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b"
@@ -6630,12 +6651,13 @@
     ],
     "note:obsidian-9c52f2545564eb9ea6e5687b76c42b2e": [],
     "note:obsidian-9ceed5107c8c106d6ac5db7c118d08e6": [
+      "resume:basics",
+      "note:obsidian-6c507681d537a7d1002a2b47e9091777",
+      "note:obsidian-9f5215a6b5e76d998ae990d891a975be",
       "note:obsidian-3e4d2d6d3de3a87cba08c36aae68be31",
       "note:obsidian-48d88e8a97131b35c29d8d0f85de2d35",
       "note:obsidian-d2bc64e5cfbab1776722bf7c762fb072",
-      "note:obsidian-f20f9e4ad6390309a2478c2f24f87930",
-      "note:obsidian-6c507681d537a7d1002a2b47e9091777",
-      "note:obsidian-9f5215a6b5e76d998ae990d891a975be"
+      "note:obsidian-f20f9e4ad6390309a2478c2f24f87930"
     ],
     "note:obsidian-9d10c254ad6df9e41b194e110733277c": [
       "note:obsidian-266c54d2275ec7fda81f32c7ab108f3a",
@@ -6731,6 +6753,7 @@
     "note:obsidian-9e86dc0b7af8467bfa6ace72c08d915e": [],
     "note:obsidian-9e9338420a5d32a5b993f89841389708": [],
     "note:obsidian-9f5215a6b5e76d998ae990d891a975be": [
+      "resume:basics",
       "note:obsidian-6c507681d537a7d1002a2b47e9091777",
       "note:obsidian-9ceed5107c8c106d6ac5db7c118d08e6"
     ],
@@ -6930,7 +6953,8 @@
       "note:obsidian-e5275201532f699889138f717b939d2e",
       "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
       "note:obsidian-03d27d1d8a5626150f870d961e7de620",
-      "note:obsidian-50d6b96e671aa113429d701c7b33ebb5"
+      "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "resume:basics"
     ],
     "note:obsidian-a48633bac9dac6ff14b78c305aa0fe03": [],
     "note:obsidian-a4b2fbba0b3ab9c52fcec32f278100b0": [],
@@ -8320,6 +8344,7 @@
       "note:obsidian-f036f18ba32c1713a99b47d95917f8ae"
     ],
     "note:obsidian-be4cc536b2a4ab5a0eef95423b20fc01": [
+      "resume:basics",
       "note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
       "note:obsidian-02fd883b046eaba05c9008c29b2f8690",
       "note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
@@ -8688,6 +8713,7 @@
       "note:obsidian-7bc37adaa34cd72d14f852e7e6e32282",
       "note:obsidian-a432cb067ceedb9c4cc1690c3e029bd7",
       "note:obsidian-ba469015b8279216c6c12f6cf072a1cc",
+      "resume:basics",
       "note:obsidian-03d27d1d8a5626150f870d961e7de620",
       "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
       "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
@@ -9784,6 +9810,7 @@
       "note:obsidian-bd2417dabd5c81287e114be7264e865b",
       "note:obsidian-750ab548f7b0a7bf56c0312bbe1e2e7e",
       "note:obsidian-f3032ec279e0e380b907a23481c7e24b",
+      "resume:basics",
       "note:obsidian-03d27d1d8a5626150f870d961e7de620",
       "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
       "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
@@ -10534,10 +10561,10 @@
     "project:file-processor-assistant": [
       "resume:basics"
     ],
-    "project:lingobridge": [
+    "project:lingobridge": [],
+    "project:personal-knowledge-asset-os": [
       "resume:basics"
     ],
-    "project:personal-knowledge-asset-os": [],
     "project:school-gtd-dashboard": [],
     "project:springboot-lgg": [],
     "project:thuthesis-manual-writing-kit": [],

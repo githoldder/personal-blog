@@ -1,0 +1,74 @@
+---
+import { readFileSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const resumePath = join(process.cwd(), 'public/assets/resume.json');
+const evidencePath = join(process.cwd(), 'content/resume/evidence-manifest.json');
+const resume = existsSync(resumePath) ? JSON.parse(readFileSync(resumePath, 'utf-8')) : null;
+const evidence = existsSync(evidencePath) ? JSON.parse(readFileSync(evidencePath, 'utf-8')) : { records: [] };
+---
+
+<BaseLayout title="Resume Studio">
+  <main class="mx-auto max-w-6xl px-6 py-10">
+    <header class="mb-8 border-b border-slate-200 pb-5">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-blue-700">Local Admin</p>
+      <h1 class="mt-2 text-3xl font-bold text-slate-950">Resume Studio</h1>
+      <p class="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+        结构化简历、Typst PDF、头像与证据绑定的本地预览面板。原始证书默认不公开，只作为人工审阅证据。
+      </p>
+    </header>
+
+    <div class="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+      <section class="rounded border border-slate-200 bg-white p-5">
+        <h2 class="text-sm font-bold text-slate-900">Structured Facts</h2>
+        {resume ? (
+          <div class="mt-4 space-y-4 text-sm text-slate-700">
+            <div>
+              <p class="text-2xl font-bold text-slate-950">{resume.basics.name}</p>
+              <p class="text-blue-700">{resume.basics.label}</p>
+              <p class="mt-2 text-slate-600">{resume.basics.summary}</p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Projects</h3>
+              <ul class="mt-2 space-y-2">
+                {resume.projects.map((project) => (
+                  <li class="rounded border border-slate-100 p-3">
+                    <p class="font-semibold">{project.name}</p>
+                    <p class="text-xs text-slate-500">{project.keywords.join(' / ')}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ) : (
+          <p class="mt-4 text-sm text-amber-700">尚未生成 resume.json，请先运行 npm run build:resume。</p>
+        )}
+      </section>
+
+      <aside class="space-y-6">
+        <section class="rounded border border-slate-200 bg-white p-5">
+          <h2 class="text-sm font-bold text-slate-900">Build Commands</h2>
+          <div class="mt-3 space-y-2 font-mono text-xs text-slate-700">
+            <p>npm run build:resume</p>
+            <p>npm run build:resume-package</p>
+            <p>npm run verify</p>
+          </div>
+          <a class="mt-4 inline-flex rounded bg-blue-700 px-3 py-2 text-xs font-bold text-white" href="/assets/resume.pdf">Open PDF</a>
+        </section>
+
+        <section class="rounded border border-slate-200 bg-white p-5">
+          <h2 class="text-sm font-bold text-slate-900">Evidence Bindings</h2>
+          <ul class="mt-3 space-y-2 text-xs text-slate-600">
+            {evidence.records.map((record) => (
+              <li class="rounded border border-slate-100 p-2">
+                <p class="font-semibold text-slate-900">{record.title}</p>
+                <p>{record.bound_to.join(', ')}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+</BaseLayout>

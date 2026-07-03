@@ -1,0 +1,5409 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-03T11:04:35.408Z",
+  "model": "deterministic-hash-v1",
+  "vectors": [
+    {
+      "id": "chunk:note:book-博弈论",
+      "source_id": "note:book-博弈论",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.466619,
+        0.351614,
+        0.225297,
+        0.230953,
+        0.427027,
+        0.206444,
+        0.233781,
+        0.228125,
+        0.38555,
+        0.16968,
+        0.065987,
+        0.202673
+      ]
+    },
+    {
+      "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "source_id": "note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.338603,
+        0.338603,
+        0.305259,
+        0.27896,
+        0.274264,
+        0.255948,
+        0.232936,
+        0.288352,
+        0.304789,
+        0.26581,
+        0.282247,
+        0.279899
+      ]
+    },
+    {
+      "id": "chunk:note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "source_id": "note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.186631,
+        0.305562,
+        0.404367,
+        0.237863,
+        0.395218,
+        0.331178,
+        0.239692,
+        0.153696,
+        0.356794,
+        0.281776,
+        0.217736,
+        0.225055
+      ]
+    },
+    {
+      "id": "chunk:note:book-战略管理",
+      "source_id": "note:book-战略管理",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.588255,
+        0.547214,
+        0.184685,
+        0.136804,
+        0.068402,
+        0.314648,
+        0.314648,
+        0.314648,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "chunk:note:book-正则表达式必知必会-ben-forta-z-library",
+      "source_id": "note:book-正则表达式必知必会-ben-forta-z-library",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.209327,
+        0.324167,
+        0.278376,
+        0.237674,
+        0.271108,
+        0.261659,
+        0.231859,
+        0.232586,
+        0.215869,
+        0.386674,
+        0.349606,
+        0.385947
+      ]
+    },
+    {
+      "id": "chunk:note:book-深入设计模式-1",
+      "source_id": "note:book-深入设计模式-1",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.322544,
+        0.417721,
+        0.412433,
+        0.259092,
+        0.047588,
+        0.449446,
+        0.211504,
+        0.259092,
+        0.216792,
+        0.052876,
+        0.24323,
+        0.24323
+      ]
+    },
+    {
+      "id": "chunk:note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "source_id": "note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.192848,
+        0.208919,
+        0.405338,
+        0.353555,
+        0.426765,
+        0.282129,
+        0.237489,
+        0.203562,
+        0.35534,
+        0.358911,
+        0.11428,
+        0.046426
+      ]
+    },
+    {
+      "id": "chunk:note:book-终身成长",
+      "source_id": "note:book-终身成长",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.200771,
+        0.332621,
+        0.432507,
+        0.225742,
+        0.211758,
+        0.353597,
+        0.364584,
+        0.203768,
+        0.064926,
+        0.317638,
+        0.312643,
+        0.252712
+      ]
+    },
+    {
+      "id": "chunk:note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "source_id": "note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.230362,
+        0.201828,
+        0.521969,
+        0.148239,
+        0.17747,
+        0.155199,
+        0.496219,
+        0.10509,
+        0.139192,
+        0.120401,
+        0.490651,
+        0.155895
+      ]
+    },
+    {
+      "id": "chunk:note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "source_id": "note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.251924,
+        0.265678,
+        0.339518,
+        0.203421,
+        0.2512,
+        0.239617,
+        0.44883,
+        0.235998,
+        0.246856,
+        0.249028,
+        0.430008,
+        0.154195
+      ]
+    },
+    {
+      "id": "chunk:note:book-金字塔原理笔记",
+      "source_id": "note:book-金字塔原理笔记",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.281625,
+        0.168288,
+        0.229535,
+        0.266742,
+        0.323983,
+        0.298224,
+        0.360044,
+        0.317114,
+        0.319403,
+        0.314824,
+        0.285631,
+        0.248425
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
+      "source_id": "note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.328805,
+        0.296158,
+        0.276336,
+        0.247187,
+        0.281,
+        0.324141,
+        0.377776,
+        0.366116,
+        0.268174,
+        0.205212,
+        0.242523,
+        0.181892
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-000ea51c82d267f202adb4730c67f9b5",
+      "source_id": "note:obsidian-000ea51c82d267f202adb4730c67f9b5",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.348211,
+        0.210602,
+        0.288381,
+        0.272825,
+        0.19026,
+        0.263253,
+        0.2465,
+        0.348211,
+        0.357784,
+        0.375733,
+        0.275219,
+        0.210602
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-00107033f2646145e8503a682d72e890",
+      "source_id": "note:obsidian-00107033f2646145e8503a682d72e890",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.345245,
+        0.24724,
+        0.189328,
+        0.250581,
+        0.292902,
+        0.40093,
+        0.405385,
+        0.3497,
+        0.25615,
+        0.19601,
+        0.231649,
+        0.173736
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
+      "source_id": "note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.341397,
+        0.255497,
+        0.286333,
+        0.312763,
+        0.346903,
+        0.388752,
+        0.345802,
+        0.253294,
+        0.193825,
+        0.229066,
+        0.1718,
+        0.252193
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
+      "source_id": "note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.332662,
+        0.274859,
+        0.365692,
+        0.398723,
+        0.370411,
+        0.27132,
+        0.207619,
+        0.245368,
+        0.184026,
+        0.270141,
+        0.254805,
+        0.187565
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
+      "source_id": "note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.269156,
+        0.293839,
+        0.264455,
+        0.285611,
+        0.357308,
+        0.379639,
+        0.369061,
+        0.270331,
+        0.206862,
+        0.244474,
+        0.183355,
+        0.269156
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-00675466a5316f83ed30c3317fd0342d",
+      "source_id": "note:obsidian-00675466a5316f83ed30c3317fd0342d",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.342832,
+        0.42322,
+        0.349925,
+        0.371204,
+        0.271901,
+        0.208064,
+        0.245893,
+        0.18442,
+        0.270719,
+        0.255351,
+        0.187967,
+        0.239982
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-008440bc163e50d1ed67d05b4e99cb81",
+      "source_id": "note:obsidian-008440bc163e50d1ed67d05b4e99cb81",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.326483,
+        0.272265,
+        0.325304,
+        0.439632,
+        0.370092,
+        0.271087,
+        0.20744,
+        0.245157,
+        0.183868,
+        0.269908,
+        0.254586,
+        0.187403
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-013ff4f65e1209c89fb93912ffad85a8",
+      "source_id": "note:obsidian-013ff4f65e1209c89fb93912ffad85a8",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.282929,
+        0.276123,
+        0.23626,
+        0.359738,
+        0.417101,
+        0.323764,
+        0.288762,
+        0.234316,
+        0.2489,
+        0.198342,
+        0.275151,
+        0.253761
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
+      "source_id": "note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.314203,
+        0.282585,
+        0.235158,
+        0.232194,
+        0.307287,
+        0.395224,
+        0.340881,
+        0.334952,
+        0.30531,
+        0.213421,
+        0.236146,
+        0.196624
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
+      "source_id": "note:obsidian-01b173d4eeb6541a6146e57643fc6978",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.38553,
+        0.370032,
+        0.358408,
+        0.314817,
+        0.231512,
+        0.285757,
+        0.222794,
+        0.300287,
+        0.282851,
+        0.220857,
+        0.215045,
+        0.191796
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-023f710ebbcde9d7b61d6e221fa44f60",
+      "source_id": "note:obsidian-023f710ebbcde9d7b61d6e221fa44f60",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.326459,
+        0.353833,
+        0.368027,
+        0.363972,
+        0.301113,
+        0.222033,
+        0.254476,
+        0.17641,
+        0.267656,
+        0.218991,
+        0.245351,
+        0.290975
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
+      "source_id": "note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.284334,
+        0.227689,
+        0.304326,
+        0.247681,
+        0.268784,
+        0.272116,
+        0.255456,
+        0.336535,
+        0.404287,
+        0.348753,
+        0.255456,
+        0.195479
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
+      "source_id": "note:obsidian-026e79c61dc2f281f9a01f1136085c07",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.343465,
+        0.382471,
+        0.399807,
+        0.361885,
+        0.274122,
+        0.231866,
+        0.244868,
+        0.188527,
+        0.255703,
+        0.253536,
+        0.202612,
+        0.223198
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-02d9a7bf8259b453917cf0edbd5204f7",
+      "source_id": "note:obsidian-02d9a7bf8259b453917cf0edbd5204f7",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.282439,
+        0.279277,
+        0.339348,
+        0.428927,
+        0.412065,
+        0.242391,
+        0.196021,
+        0.223422,
+        0.264523,
+        0.260307,
+        0.235014,
+        0.18232
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-02dfbed17d9b57d937067d6d31bb00e1",
+      "source_id": "note:obsidian-02dfbed17d9b57d937067d6d31bb00e1",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.290138,
+        0.254016,
+        0.241199,
+        0.297129,
+        0.283146,
+        0.406659,
+        0.346068,
+        0.365876,
+        0.267999,
+        0.205077,
+        0.242364,
+        0.181773
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-02fd883b046eaba05c9008c29b2f8690",
+      "source_id": "note:obsidian-02fd883b046eaba05c9008c29b2f8690",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.304792,
+        0.400258,
+        0.326688,
+        0.239104,
+        0.255745,
+        0.141886,
+        0.317053,
+        0.261,
+        0.204946,
+        0.275013,
+        0.294282,
+        0.352963
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
+      "source_id": "note:obsidian-033825fc58a99bb5ea676b8b25423830",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.41777,
+        0.367954,
+        0.275117,
+        0.251341,
+        0.191336,
+        0.261531,
+        0.257002,
+        0.202658,
+        0.250209,
+        0.233226,
+        0.317007,
+        0.348707
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
+      "source_id": "note:obsidian-03417612e22e00099fc8f015a97b0509",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.334004,
+        0.29255,
+        0.367168,
+        0.377827,
+        0.371905,
+        0.272415,
+        0.208456,
+        0.246358,
+        0.184768,
+        0.27123,
+        0.255833,
+        0.188321
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-036d8332a5de4818371ebae7c17a13d8",
+      "source_id": "note:obsidian-036d8332a5de4818371ebae7c17a13d8",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.211413,
+        0.271408,
+        0.301882,
+        0.237125,
+        0.268551,
+        0.349498,
+        0.349498,
+        0.317119,
+        0.372353,
+        0.262837,
+        0.178082,
+        0.279027
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-037c9ce97a15c2ecb51ac60145305a0e",
+      "source_id": "note:obsidian-037c9ce97a15c2ecb51ac60145305a0e",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.390994,
+        0.432254,
+        0.387064,
+        0.304543,
+        0.255423,
+        0.231845,
+        0.18862,
+        0.23774,
+        0.225951,
+        0.163078,
+        0.23774,
+        0.269177
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-039d44a1fdbb157562193678f3020ecd",
+      "source_id": "note:obsidian-039d44a1fdbb157562193678f3020ecd",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.315621,
+        0.377158,
+        0.343412,
+        0.217362,
+        0.251108,
+        0.333487,
+        0.330509,
+        0.319592,
+        0.230265,
+        0.222325,
+        0.255078,
+        0.199497
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "source_id": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.31539,
+        0.300588,
+        0.24252,
+        0.3393,
+        0.253906,
+        0.31539,
+        0.384844,
+        0.357518,
+        0.261876,
+        0.200392,
+        0.236827,
+        0.17762
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-03da95fbe5223d10b8c816673b655eac",
+      "source_id": "note:obsidian-03da95fbe5223d10b8c816673b655eac",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.266355,
+        0.336114,
+        0.383678,
+        0.432298,
+        0.324488,
+        0.186026,
+        0.230418,
+        0.169114,
+        0.342456,
+        0.239931,
+        0.182855,
+        0.228304
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
+      "source_id": "note:obsidian-042d65970c228b553d022590707d14a8",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.315994,
+        0.403323,
+        0.434348,
+        0.360808,
+        0.264286,
+        0.202236,
+        0.239006,
+        0.179255,
+        0.263137,
+        0.248199,
+        0.182702,
+        0.233261
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+      "source_id": "note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.259139,
+        0.28425,
+        0.320409,
+        0.24106,
+        0.270188,
+        0.280232,
+        0.200883,
+        0.260144,
+        0.319404,
+        0.337484,
+        0.323422,
+        0.333466
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
+      "source_id": "note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.390606,
+        0.219912,
+        0.298452,
+        0.233526,
+        0.341387,
+        0.410502,
+        0.346623,
+        0.249234,
+        0.187449,
+        0.224101,
+        0.167552,
+        0.273319
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0518f776fa045bc32b01bef5df461d98",
+      "source_id": "note:obsidian-0518f776fa045bc32b01bef5df461d98",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.243221,
+        0.262817,
+        0.326215,
+        0.321604,
+        0.444944,
+        0.361949,
+        0.265122,
+        0.202876,
+        0.239762,
+        0.179822,
+        0.263969,
+        0.248984
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
+      "source_id": "note:obsidian-06191f9faa32249e6b7366d3f412dc72",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.288829,
+        0.286412,
+        0.275536,
+        0.210277,
+        0.258617,
+        0.248949,
+        0.327501,
+        0.385509,
+        0.379466,
+        0.277953,
+        0.212694,
+        0.251366
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+      "source_id": "note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.288561,
+        0.362357,
+        0.295184,
+        0.326405,
+        0.339651,
+        0.358573,
+        0.286669,
+        0.180706,
+        0.238418,
+        0.186382,
+        0.248825,
+        0.281939
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
+      "source_id": "note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.268365,
+        0.225046,
+        0.245121,
+        0.31591,
+        0.2578,
+        0.259913,
+        0.237725,
+        0.289496,
+        0.353946,
+        0.385643,
+        0.331758,
+        0.243008
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
+      "source_id": "note:obsidian-06d7750252ee0287029a796ccf4f45f7",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.324212,
+        0.413812,
+        0.381981,
+        0.370191,
+        0.271159,
+        0.207496,
+        0.245222,
+        0.183917,
+        0.26998,
+        0.254654,
+        0.187453,
+        0.239327
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-06e4adaabe837b9b7e215bf8943c207c",
+      "source_id": "note:obsidian-06e4adaabe837b9b7e215bf8943c207c",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.245879,
+        0.278518,
+        0.22412,
+        0.307893,
+        0.283958,
+        0.225208,
+        0.280694,
+        0.264375,
+        0.34162,
+        0.375347,
+        0.34162,
+        0.250231
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
+      "source_id": "note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.2401,
+        0.260368,
+        0.353394,
+        0.29155,
+        0.305582,
+        0.238021,
+        0.255171,
+        0.29103,
+        0.232305,
+        0.323252,
+        0.326889,
+        0.315456
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-075855a12ddf37ce7ef24b0ab97ce8ba",
+      "source_id": "note:obsidian-075855a12ddf37ce7ef24b0ab97ce8ba",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.257209,
+        0.291352,
+        0.232171,
+        0.319804,
+        0.276556,
+        0.20258,
+        0.235585,
+        0.251518,
+        0.324356,
+        0.39378,
+        0.357361,
+        0.261761
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-07adec8081d87504519dc7bf991e6a71",
+      "source_id": "note:obsidian-07adec8081d87504519dc7bf991e6a71",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.385774,
+        0.372717,
+        0.28844,
+        0.216033,
+        0.270635,
+        0.185171,
+        0.278944,
+        0.261139,
+        0.301497,
+        0.254017,
+        0.244521,
+        0.337107
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-07b13eeb35e47a316c0bc7d6d54d0a14",
+      "source_id": "note:obsidian-07b13eeb35e47a316c0bc7d6d54d0a14",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.382424,
+        0.377068,
+        0.275303,
+        0.262448,
+        0.230312,
+        0.176751,
+        0.303154,
+        0.329935,
+        0.18532,
+        0.226027,
+        0.293513,
+        0.332077
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
+      "source_id": "note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.354846,
+        0.317883,
+        0.198545,
+        0.292537,
+        0.206993,
+        0.335836,
+        0.257686,
+        0.17003,
+        0.258742,
+        0.257686,
+        0.3295,
+        0.393921
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-07d0b6f45396132c9e94b834ed5d2aac",
+      "source_id": "note:obsidian-07d0b6f45396132c9e94b834ed5d2aac",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.322373,
+        0.178334,
+        0.285792,
+        0.246924,
+        0.233206,
+        0.32123,
+        0.269787,
+        0.357811,
+        0.353238,
+        0.358954,
+        0.262928,
+        0.201197
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
+      "source_id": "note:obsidian-07e70256f06659df5cc18b67c453469c",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.227578,
+        0.290734,
+        0.320134,
+        0.182934,
+        0.321223,
+        0.267867,
+        0.351711,
+        0.4018,
+        0.341911,
+        0.250445,
+        0.191645,
+        0.226489
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+      "source_id": "note:obsidian-07f20087eeab4bc69b140299e47b252a",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.305211,
+        0.294354,
+        0.375181,
+        0.366736,
+        0.3788,
+        0.277465,
+        0.212321,
+        0.250925,
+        0.188193,
+        0.276258,
+        0.260576,
+        0.191813
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-07f732d360082b974905b4f9ebedadbd",
+      "source_id": "note:obsidian-07f732d360082b974905b4f9ebedadbd",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.232997,
+        0.361188,
+        0.389771,
+        0.339534,
+        0.276304,
+        0.237327,
+        0.194019,
+        0.228666,
+        0.35166,
+        0.335203,
+        0.195752,
+        0.226067
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0804c3212b169e8129bf86c0a7a5ea57",
+      "source_id": "note:obsidian-0804c3212b169e8129bf86c0a7a5ea57",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.278534,
+        0.244097,
+        0.301829,
+        0.207634,
+        0.291701,
+        0.357536,
+        0.321073,
+        0.400076,
+        0.321073,
+        0.239033,
+        0.182313,
+        0.243084
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
+      "source_id": "note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.28008,
+        0.301533,
+        0.244325,
+        0.380194,
+        0.361124,
+        0.374235,
+        0.274121,
+        0.209762,
+        0.247901,
+        0.185925,
+        0.272929,
+        0.257435
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+      "source_id": "note:obsidian-08420f06891b6afc612d00c03081313b",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.331628,
+        0.258651,
+        0.272508,
+        0.302068,
+        0.371349,
+        0.350103,
+        0.35195,
+        0.272508,
+        0.206921,
+        0.236481,
+        0.190293,
+        0.253109
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-086c3bcafb1e153e7c235a46050cd9c0",
+      "source_id": "note:obsidian-086c3bcafb1e153e7c235a46050cd9c0",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.257511,
+        0.291694,
+        0.232444,
+        0.317901,
+        0.276881,
+        0.202818,
+        0.235862,
+        0.251814,
+        0.324737,
+        0.393103,
+        0.357781,
+        0.262069
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
+      "source_id": "note:obsidian-091de108d221d2ddf0a4633557224fb5",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.348148,
+        0.29032,
+        0.346967,
+        0.390633,
+        0.370571,
+        0.271437,
+        0.207708,
+        0.245474,
+        0.184105,
+        0.270257,
+        0.254915,
+        0.187646
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-09558897dda6a39209b217240a76efc6",
+      "source_id": "note:obsidian-09558897dda6a39209b217240a76efc6",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.340321,
+        0.308451,
+        0.391539,
+        0.388125,
+        0.357393,
+        0.261785,
+        0.200322,
+        0.236745,
+        0.177559,
+        0.260647,
+        0.24585,
+        0.180973
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0974bd740dd05e81565e2821a5e9011a",
+      "source_id": "note:obsidian-0974bd740dd05e81565e2821a5e9011a",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.296043,
+        0.254493,
+        0.333438,
+        0.171393,
+        0.280462,
+        0.279423,
+        0.38953,
+        0.3646,
+        0.329283,
+        0.245144,
+        0.186974,
+        0.249299
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-09a9b52aaca7919c633efdfdce81b6f0",
+      "source_id": "note:obsidian-09a9b52aaca7919c633efdfdce81b6f0",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.280165,
+        0.236986,
+        0.326357,
+        0.254057,
+        0.332382,
+        0.472967,
+        0.360499,
+        0.249036,
+        0.186777,
+        0.216902,
+        0.167697,
+        0.241002
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0a642835b2616eec47b987c4727435b9",
+      "source_id": "note:obsidian-0a642835b2616eec47b987c4727435b9",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.339248,
+        0.30498,
+        0.408925,
+        0.368946,
+        0.358666,
+        0.262717,
+        0.201036,
+        0.237588,
+        0.178191,
+        0.261575,
+        0.246726,
+        0.181618
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
+      "source_id": "note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.289128,
+        0.236046,
+        0.309457,
+        0.251857,
+        0.221363,
+        0.276704,
+        0.259763,
+        0.356892,
+        0.385127,
+        0.354633,
+        0.259763,
+        0.198775
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0a6ddcce65a681315573dfb985fed15e",
+      "source_id": "note:obsidian-0a6ddcce65a681315573dfb985fed15e",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.294271,
+        0.261047,
+        0.406996,
+        0.390384,
+        0.372585,
+        0.272913,
+        0.208838,
+        0.246808,
+        0.185106,
+        0.271726,
+        0.256301,
+        0.188666
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0a902d16ffaa92d5cbf5a6e79cdea22d",
+      "source_id": "note:obsidian-0a902d16ffaa92d5cbf5a6e79cdea22d",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.263384,
+        0.353201,
+        0.33014,
+        0.381117,
+        0.381117,
+        0.279162,
+        0.21362,
+        0.25246,
+        0.189345,
+        0.277949,
+        0.26217,
+        0.192986
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0aa06849135e018b501707f4093e03a5",
+      "source_id": "note:obsidian-0aa06849135e018b501707f4093e03a5",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.221602,
+        0.343089,
+        0.313842,
+        0.276721,
+        0.300343,
+        0.228351,
+        0.345339,
+        0.332965,
+        0.353213,
+        0.258723,
+        0.197979,
+        0.233975
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0ab2aa2fd9c7df8a160cccfe9e13de6a",
+      "source_id": "note:obsidian-0ab2aa2fd9c7df8a160cccfe9e13de6a",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.315994,
+        0.403323,
+        0.434348,
+        0.360808,
+        0.264286,
+        0.202236,
+        0.239006,
+        0.179255,
+        0.263137,
+        0.248199,
+        0.182702,
+        0.233261
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
+      "source_id": "note:obsidian-0ada2093b534275849443dfa0a3400ee",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.383716,
+        0.294677,
+        0.242737,
+        0.321176,
+        0.211998,
+        0.286197,
+        0.307397,
+        0.203518,
+        0.256517,
+        0.245917,
+        0.297857,
+        0.355096
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
+      "source_id": "note:obsidian-0b18ea498fe124f684180f7350ee5450",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.226917,
+        0.307722,
+        0.295546,
+        0.22581,
+        0.303294,
+        0.226917,
+        0.397381,
+        0.370816,
+        0.34757,
+        0.25459,
+        0.194817,
+        0.230238
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
+      "source_id": "note:obsidian-0b1cc29442f6247f754a9450beb6e321",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.340148,
+        0.382188,
+        0.400024,
+        0.293011,
+        0.224217,
+        0.264984,
+        0.198738,
+        0.291737,
+        0.275176,
+        0.20256,
+        0.258614,
+        0.252244
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
+      "source_id": "note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.362397,
+        0.443909,
+        0.426285,
+        0.267667,
+        0.214795,
+        0.24784,
+        0.187257,
+        0.255551,
+        0.259957,
+        0.177343,
+        0.244536,
+        0.226911
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
+      "source_id": "note:obsidian-0b75b36e82164472b563061dafa7948b",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.32304,
+        0.402646,
+        0.424567,
+        0.362266,
+        0.265354,
+        0.203054,
+        0.239972,
+        0.179979,
+        0.2642,
+        0.249202,
+        0.18344,
+        0.234204
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0baba57a3a85093d7ccbad708a35db2e",
+      "source_id": "note:obsidian-0baba57a3a85093d7ccbad708a35db2e",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.226981,
+        0.27927,
+        0.266198,
+        0.276894,
+        0.256691,
+        0.192518,
+        0.331559,
+        0.244807,
+        0.331559,
+        0.355327,
+        0.373153,
+        0.273328
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0bad078ffc81f1773ef3f686fd1a9269",
+      "source_id": "note:obsidian-0bad078ffc81f1773ef3f686fd1a9269",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.369589,
+        0.221121,
+        0.305358,
+        0.342212,
+        0.261134,
+        0.236916,
+        0.222174,
+        0.302199,
+        0.353794,
+        0.330629,
+        0.262187,
+        0.189533
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
+      "source_id": "note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.379439,
+        0.268009,
+        0.229585,
+        0.271851,
+        0.251679,
+        0.329488,
+        0.25456,
+        0.198845,
+        0.274733,
+        0.274733,
+        0.324685,
+        0.353503
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
+      "source_id": "note:obsidian-0be35e638ad661bfa204064e57457c5a",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.327638,
+        0.295107,
+        0.275355,
+        0.24631,
+        0.280003,
+        0.322991,
+        0.38573,
+        0.364817,
+        0.267223,
+        0.204483,
+        0.241662,
+        0.181247
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
+      "source_id": "note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.290832,
+        0.234029,
+        0.311281,
+        0.253342,
+        0.21358,
+        0.278335,
+        0.261294,
+        0.32037,
+        0.412391,
+        0.356724,
+        0.261294,
+        0.199947
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0c63749384221322924164e1b7defd64",
+      "source_id": "note:obsidian-0c63749384221322924164e1b7defd64",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.261235,
+        0.353672,
+        0.369749,
+        0.374571,
+        0.327951,
+        0.270881,
+        0.226672,
+        0.225868,
+        0.25159,
+        0.233906,
+        0.31509,
+        0.170406
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0c9b186483cd29e5ae87e4f57bdec3ee",
+      "source_id": "note:obsidian-0c9b186483cd29e5ae87e4f57bdec3ee",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.282982,
+        0.20213,
+        0.234696,
+        0.241433,
+        0.278491,
+        0.321163,
+        0.201007,
+        0.276245,
+        0.235819,
+        0.402015,
+        0.355974,
+        0.352605
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0d518430ba476ba8e0bc82df489315fc",
+      "source_id": "note:obsidian-0d518430ba476ba8e0bc82df489315fc",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.286984,
+        0.271187,
+        0.299271,
+        0.373869,
+        0.333498,
+        0.365093,
+        0.247491,
+        0.196588,
+        0.238714,
+        0.213263,
+        0.331743,
+        0.24047
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
+      "source_id": "note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.369991,
+        0.310792,
+        0.195567,
+        0.21988,
+        0.18711,
+        0.24208,
+        0.325592,
+        0.208252,
+        0.270622,
+        0.28225,
+        0.347791,
+        0.403819
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
+      "source_id": "note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.370545,
+        0.416489,
+        0.365552,
+        0.274663,
+        0.231716,
+        0.273664,
+        0.225723,
+        0.248695,
+        0.258683,
+        0.165797,
+        0.270668,
+        0.266673
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
+      "source_id": "note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.245417,
+        0.280476,
+        0.230078,
+        0.354978,
+        0.336352,
+        0.215835,
+        0.232269,
+        0.221313,
+        0.322109,
+        0.365934,
+        0.344022,
+        0.25199
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
+      "source_id": "note:obsidian-0f255939168b22e784f3e71b3e35cc89",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.368552,
+        0.304185,
+        0.255391,
+        0.264735,
+        0.252276,
+        0.378934,
+        0.36959,
+        0.334292,
+        0.241895,
+        0.188948,
+        0.220093,
+        0.195177
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
+      "source_id": "note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.364755,
+        0.246619,
+        0.17936,
+        0.311292,
+        0.266452,
+        0.278525,
+        0.341473,
+        0.215576,
+        0.271626,
+        0.259554,
+        0.320778,
+        0.348371
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
+      "source_id": "note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.333867,
+        0.279875,
+        0.279875,
+        0.255634,
+        0.317339,
+        0.25894,
+        0.18291,
+        0.273264,
+        0.242411,
+        0.317339,
+        0.333867,
+        0.345987
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0fd006309dd0e86057e11f5960f7a058",
+      "source_id": "note:obsidian-0fd006309dd0e86057e11f5960f7a058",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.343581,
+        0.256179,
+        0.286318,
+        0.245128,
+        0.361664,
+        0.450071,
+        0.33253,
+        0.2391,
+        0.179828,
+        0.214989,
+        0.16074,
+        0.262207
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0fd2e4accd424529d03d9675721a32d6",
+      "source_id": "note:obsidian-0fd2e4accd424529d03d9675721a32d6",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.283041,
+        0.315138,
+        0.436719,
+        0.354044,
+        0.290822,
+        0.248025,
+        0.255807,
+        0.166323,
+        0.266506,
+        0.286931,
+        0.202311,
+        0.266506
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
+      "source_id": "note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.281181,
+        0.359673,
+        0.390474,
+        0.356693,
+        0.279194,
+        0.25038,
+        0.295091,
+        0.182817,
+        0.296085,
+        0.239451,
+        0.249387,
+        0.20865
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-112fa661110db5f27a1fba58d3f407c6",
+      "source_id": "note:obsidian-112fa661110db5f27a1fba58d3f407c6",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.361512,
+        0.238093,
+        0.248783,
+        0.298345,
+        0.356653,
+        0.31195,
+        0.410103,
+        0.241008,
+        0.192418,
+        0.294458,
+        0.17201,
+        0.240036
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
+      "source_id": "note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.282627,
+        0.225218,
+        0.305811,
+        0.288147,
+        0.232946,
+        0.269379,
+        0.302499,
+        0.324579,
+        0.383092,
+        0.346659,
+        0.253923,
+        0.194306
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-14f8b98931997454721a799dd971bb15",
+      "source_id": "note:obsidian-14f8b98931997454721a799dd971bb15",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.416564,
+        0.371932,
+        0.276947,
+        0.238037,
+        0.180816,
+        0.273513,
+        0.254058,
+        0.201416,
+        0.248336,
+        0.249481,
+        0.31929,
+        0.341033
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
+      "source_id": "note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.362982,
+        0.276786,
+        0.214533,
+        0.250927,
+        0.200167,
+        0.293067,
+        0.307433,
+        0.227941,
+        0.254758,
+        0.261462,
+        0.343827,
+        0.398418
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
+      "source_id": "note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.417885,
+        0.407047,
+        0.378144,
+        0.276985,
+        0.211953,
+        0.25049,
+        0.187868,
+        0.27578,
+        0.260125,
+        0.191481,
+        0.244469,
+        0.238448
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
+      "source_id": "note:obsidian-15f69b30b581333b247b705ccd4c4938",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.292277,
+        0.234251,
+        0.306246,
+        0.258966,
+        0.335259,
+        0.247146,
+        0.232102,
+        0.264338,
+        0.217058,
+        0.33096,
+        0.362122,
+        0.337408
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-15f79b42c0a521e94e4155b80f4f1da1",
+      "source_id": "note:obsidian-15f79b42c0a521e94e4155b80f4f1da1",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.292829,
+        0.240469,
+        0.301555,
+        0.416941,
+        0.351976,
+        0.3161,
+        0.225924,
+        0.26374,
+        0.300586,
+        0.253074,
+        0.240469,
+        0.187139
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-1639497d9752084addd03e6757555719",
+      "source_id": "note:obsidian-1639497d9752084addd03e6757555719",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.269755,
+        0.250254,
+        0.19067,
+        0.274088,
+        0.312005,
+        0.228587,
+        0.236171,
+        0.287088,
+        0.358589,
+        0.398673,
+        0.340172,
+        0.249171
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-1676754dc65c12cc278c57b506b48985",
+      "source_id": "note:obsidian-1676754dc65c12cc278c57b506b48985",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.397217,
+        0.365832,
+        0.359947,
+        0.318754,
+        0.234407,
+        0.289331,
+        0.173598,
+        0.224599,
+        0.273638,
+        0.241272,
+        0.229503,
+        0.268734
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
+      "source_id": "note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.302549,
+        0.228783,
+        0.305756,
+        0.176398,
+        0.343174,
+        0.282237,
+        0.226645,
+        0.225576,
+        0.295066,
+        0.330345,
+        0.350658,
+        0.335691
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
+      "source_id": "note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.228364,
+        0.313441,
+        0.298888,
+        0.228364,
+        0.331352,
+        0.228364,
+        0.372771,
+        0.352621,
+        0.351502,
+        0.257469,
+        0.19702,
+        0.232842
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
+      "source_id": "note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.31558,
+        0.182065,
+        0.324407,
+        0.289098,
+        0.198617,
+        0.271443,
+        0.231719,
+        0.334338,
+        0.421509,
+        0.346476,
+        0.253788,
+        0.194203
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-16f85841237279ed9f23e6cd2318998c",
+      "source_id": "note:obsidian-16f85841237279ed9f23e6cd2318998c",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.338603,
+        0.469208,
+        0.379719,
+        0.278138,
+        0.212836,
+        0.251534,
+        0.18865,
+        0.276929,
+        0.261208,
+        0.192278,
+        0.245487,
+        0.239441
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
+      "source_id": "note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.348461,
+        0.404866,
+        0.393585,
+        0.288295,
+        0.220608,
+        0.260719,
+        0.195539,
+        0.287041,
+        0.270746,
+        0.199299,
+        0.254452,
+        0.248184
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
+      "source_id": "note:obsidian-178238e0db04d6cd772cce495e35f955",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.294658,
+        0.259699,
+        0.217747,
+        0.276679,
+        0.297655,
+        0.363578,
+        0.409525,
+        0.366575,
+        0.296656,
+        0.175796,
+        0.220744,
+        0.176795
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-17f1a8a8c3c99484139e2485180f7d77",
+      "source_id": "note:obsidian-17f1a8a8c3c99484139e2485180f7d77",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.329081,
+        0.276381,
+        0.322055,
+        0.445021,
+        0.367728,
+        0.269355,
+        0.206115,
+        0.24359,
+        0.182693,
+        0.268184,
+        0.252959,
+        0.186206
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-18062e14a079ba5f7b5b794f84709870",
+      "source_id": "note:obsidian-18062e14a079ba5f7b5b794f84709870",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.262658,
+        0.183748,
+        0.276185,
+        0.322404,
+        0.392296,
+        0.422733,
+        0.353968,
+        0.259276,
+        0.198402,
+        0.234476,
+        0.175857,
+        0.258149
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
+      "source_id": "note:obsidian-180fae3c2928cb3f23fc503af416b07d",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.331962,
+        0.317996,
+        0.261057,
+        0.316921,
+        0.227754,
+        0.379231,
+        0.368488,
+        0.337333,
+        0.247091,
+        0.189079,
+        0.223456,
+        0.167592
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-183665454ae199435161348053d4a3e7",
+      "source_id": "note:obsidian-183665454ae199435161348053d4a3e7",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.373842,
+        0.270096,
+        0.211069,
+        0.29335,
+        0.279934,
+        0.435553,
+        0.372053,
+        0.303188,
+        0.215541,
+        0.1744,
+        0.206597,
+        0.196759
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
+      "source_id": "note:obsidian-188b05adccb53c30e7b6a565f855cf28",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.294418,
+        0.339619,
+        0.421469,
+        0.383598,
+        0.280979,
+        0.21501,
+        0.254103,
+        0.190577,
+        0.279758,
+        0.263876,
+        0.194242,
+        0.247995
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-18f26e53563c98e7b69f6f1bc6ca53a6",
+      "source_id": "note:obsidian-18f26e53563c98e7b69f6f1bc6ca53a6",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.244504,
+        0.257662,
+        0.336605,
+        0.290555,
+        0.184201,
+        0.315773,
+        0.260951,
+        0.345376,
+        0.368401,
+        0.34428,
+        0.252179,
+        0.192972
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
+      "source_id": "note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.268088,
+        0.246203,
+        0.333742,
+        0.272465,
+        0.208999,
+        0.303104,
+        0.216659,
+        0.374229,
+        0.375323,
+        0.34359,
+        0.251674,
+        0.192586
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
+      "source_id": "note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.244305,
+        0.262743,
+        0.326124,
+        0.321514,
+        0.444819,
+        0.361847,
+        0.265048,
+        0.202819,
+        0.239695,
+        0.179771,
+        0.263895,
+        0.248914
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
+      "source_id": "note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.254904,
+        0.337478,
+        0.394921,
+        0.359019,
+        0.375774,
+        0.275248,
+        0.210625,
+        0.24892,
+        0.18669,
+        0.274052,
+        0.258494,
+        0.19028
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
+      "source_id": "note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.236307,
+        0.325502,
+        0.30581,
+        0.236307,
+        0.251366,
+        0.230516,
+        0.318552,
+        0.410063,
+        0.363728,
+        0.266425,
+        0.203873,
+        0.240941
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
+      "source_id": "note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.391435,
+        0.391435,
+        0.387731,
+        0.284007,
+        0.217327,
+        0.256841,
+        0.192631,
+        0.282772,
+        0.266719,
+        0.196335,
+        0.250667,
+        0.244493
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
+      "source_id": "note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.290615,
+        0.400643,
+        0.400643,
+        0.375528,
+        0.275068,
+        0.210487,
+        0.248757,
+        0.186568,
+        0.273872,
+        0.258325,
+        0.190156,
+        0.242777
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-1a546b9f3bfa8be806de2adc35c67f77",
+      "source_id": "note:obsidian-1a546b9f3bfa8be806de2adc35c67f77",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.438547,
+        0.332183,
+        0.245455,
+        0.195546,
+        0.19391,
+        0.158728,
+        0.271637,
+        0.32891,
+        0.244637,
+        0.313365,
+        0.278183,
+        0.344456
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
+      "source_id": "note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.320762,
+        0.308425,
+        0.392541,
+        0.42058,
+        0.352166,
+        0.257956,
+        0.197392,
+        0.233282,
+        0.174961,
+        0.256834,
+        0.242254,
+        0.178326
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
+      "source_id": "note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.349516,
+        0.242595,
+        0.270448,
+        0.265057,
+        0.345922,
+        0.348618,
+        0.420498,
+        0.244392,
+        0.20935,
+        0.210249,
+        0.201264,
+        0.26326
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
+      "source_id": "note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.257083,
+        0.307561,
+        0.40382,
+        0.400299,
+        0.368604,
+        0.269996,
+        0.206606,
+        0.24417,
+        0.183128,
+        0.268822,
+        0.253562,
+        0.18665
+      ]
+    }
+  ],
+  "neighbors": [
+    {
+      "id": "chunk:note:book-博弈论",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-07adec8081d87504519dc7bf991e6a71",
+          "score": 0.948322
+        },
+        {
+          "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
+          "score": 0.941493
+        },
+        {
+          "id": "chunk:note:obsidian-00675466a5316f83ed30c3317fd0342d",
+          "score": 0.940713
+        },
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.938417
+        },
+        {
+          "id": "chunk:note:obsidian-1676754dc65c12cc278c57b506b48985",
+          "score": 0.936392
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-07adec8081d87504519dc7bf991e6a71",
+          "score": 0.989821
+        },
+        {
+          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
+          "score": 0.989476
+        },
+        {
+          "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
+          "score": 0.988584
+        },
+        {
+          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+          "score": 0.98836
+        },
+        {
+          "id": "chunk:note:obsidian-1676754dc65c12cc278c57b506b48985",
+          "score": 0.988241
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-07f732d360082b974905b4f9ebedadbd",
+          "score": 0.975093
+        },
+        {
+          "id": "chunk:note:obsidian-0518f776fa045bc32b01bef5df461d98",
+          "score": 0.974282
+        },
+        {
+          "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
+          "score": 0.974223
+        },
+        {
+          "id": "chunk:note:obsidian-0fd2e4accd424529d03d9675721a32d6",
+          "score": 0.973851
+        },
+        {
+          "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
+          "score": 0.971582
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:book-战略管理",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
+          "score": 0.824603
+        },
+        {
+          "id": "chunk:note:book-深入设计模式-1",
+          "score": 0.82268
+        },
+        {
+          "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
+          "score": 0.817848
+        },
+        {
+          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
+          "score": 0.815495
+        },
+        {
+          "id": "chunk:note:obsidian-183665454ae199435161348053d4a3e7",
+          "score": 0.815485
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:book-正则表达式必知必会-ben-forta-z-library",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+          "score": 0.987751
+        },
+        {
+          "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
+          "score": 0.986426
+        },
+        {
+          "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
+          "score": 0.985484
+        },
+        {
+          "id": "chunk:note:obsidian-0c9b186483cd29e5ae87e4f57bdec3ee",
+          "score": 0.98476
+        },
+        {
+          "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
+          "score": 0.984326
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:book-深入设计模式-1",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
+          "score": 0.957167
+        },
+        {
+          "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
+          "score": 0.955316
+        },
+        {
+          "id": "chunk:note:obsidian-16f85841237279ed9f23e6cd2318998c",
+          "score": 0.953458
+        },
+        {
+          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
+          "score": 0.953432
+        },
+        {
+          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
+          "score": 0.95227
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
+      "nearest": [
+        {
+          "id": "chunk:note:book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
+          "score": 0.96139
+        },
+        {
+          "id": "chunk:note:obsidian-02d9a7bf8259b453917cf0edbd5204f7",
+          "score": 0.961032
+        },
+        {
+          "id": "chunk:note:obsidian-15f79b42c0a521e94e4155b80f4f1da1",
+          "score": 0.956897
+        },
+        {
+          "id": "chunk:note:obsidian-07f732d360082b974905b4f9ebedadbd",
+          "score": 0.954057
+        },
+        {
+          "id": "chunk:note:obsidian-0a6ddcce65a681315573dfb985fed15e",
+          "score": 0.951471
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:book-终身成长",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-039d44a1fdbb157562193678f3020ecd",
+          "score": 0.958862
+        },
+        {
+          "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
+          "score": 0.954355
+        },
+        {
+          "id": "chunk:note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+          "score": 0.949894
+        },
+        {
+          "id": "chunk:note:book-正则表达式必知必会-ben-forta-z-library",
+          "score": 0.949434
+        },
+        {
+          "id": "chunk:note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
+          "score": 0.947767
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
+      "nearest": [
+        {
+          "id": "chunk:note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+          "score": 0.947681
+        },
+        {
+          "id": "chunk:note:book-终身成长",
+          "score": 0.907464
+        },
+        {
+          "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
+          "score": 0.873038
+        },
+        {
+          "id": "chunk:note:obsidian-02fd883b046eaba05c9008c29b2f8690",
+          "score": 0.870179
+        },
+        {
+          "id": "chunk:note:obsidian-039d44a1fdbb157562193678f3020ecd",
+          "score": 0.869286
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:book-金字塔原理大全集-芭芭拉-明托-z-library",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0baba57a3a85093d7ccbad708a35db2e",
+          "score": 0.96822
+        },
+        {
+          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
+          "score": 0.960242
+        },
+        {
+          "id": "chunk:note:obsidian-039d44a1fdbb157562193678f3020ecd",
+          "score": 0.959933
+        },
+        {
+          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
+          "score": 0.959475
+        },
+        {
+          "id": "chunk:note:book-金字塔原理笔记",
+          "score": 0.955508
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:book-金字塔原理笔记",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-07d0b6f45396132c9e94b834ed5d2aac",
+          "score": 0.985135
+        },
+        {
+          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
+          "score": 0.984495
+        },
+        {
+          "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
+          "score": 0.982002
+        },
+        {
+          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
+          "score": 0.981696
+        },
+        {
+          "id": "chunk:note:obsidian-06e4adaabe837b9b7e215bf8943c207c",
+          "score": 0.980771
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
+          "score": 0.999963
+        },
+        {
+          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
+          "score": 0.995534
+        },
+        {
+          "id": "chunk:note:obsidian-03d27d1d8a5626150f870d961e7de620",
+          "score": 0.994562
+        },
+        {
+          "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
+          "score": 0.994093
+        },
+        {
+          "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
+          "score": 0.993951
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-000ea51c82d267f202adb4730c67f9b5",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
+          "score": 0.996002
+        },
+        {
+          "id": "chunk:note:obsidian-07d0b6f45396132c9e94b834ed5d2aac",
+          "score": 0.995615
+        },
+        {
+          "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
+          "score": 0.995182
+        },
+        {
+          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
+          "score": 0.994919
+        },
+        {
+          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
+          "score": 0.993593
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-00107033f2646145e8503a682d72e890",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
+          "score": 0.99595
+        },
+        {
+          "id": "chunk:note:obsidian-183665454ae199435161348053d4a3e7",
+          "score": 0.994221
+        },
+        {
+          "id": "chunk:note:obsidian-02dfbed17d9b57d937067d6d31bb00e1",
+          "score": 0.993875
+        },
+        {
+          "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
+          "score": 0.993733
+        },
+        {
+          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
+          "score": 0.993575
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+          "score": 0.998261
+        },
+        {
+          "id": "chunk:note:obsidian-0fd006309dd0e86057e11f5960f7a058",
+          "score": 0.995224
+        },
+        {
+          "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
+          "score": 0.995122
+        },
+        {
+          "id": "chunk:note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
+          "score": 0.994418
+        },
+        {
+          "id": "chunk:note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
+          "score": 0.994191
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
+          "score": 0.999619
+        },
+        {
+          "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
+          "score": 0.999553
+        },
+        {
+          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+          "score": 0.998744
+        },
+        {
+          "id": "chunk:note:obsidian-09558897dda6a39209b217240a76efc6",
+          "score": 0.998694
+        },
+        {
+          "id": "chunk:note:obsidian-008440bc163e50d1ed67d05b4e99cb81",
+          "score": 0.998325
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+          "score": 0.996393
+        },
+        {
+          "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
+          "score": 0.995122
+        },
+        {
+          "id": "chunk:note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
+          "score": 0.992256
+        },
+        {
+          "id": "chunk:note:obsidian-18062e14a079ba5f7b5b794f84709870",
+          "score": 0.991283
+        },
+        {
+          "id": "chunk:note:obsidian-0fd006309dd0e86057e11f5960f7a058",
+          "score": 0.990738
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-00675466a5316f83ed30c3317fd0342d",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
+          "score": 0.999266
+        },
+        {
+          "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
+          "score": 0.997224
+        },
+        {
+          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
+          "score": 0.997056
+        },
+        {
+          "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
+          "score": 0.996638
+        },
+        {
+          "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
+          "score": 0.99565
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-008440bc163e50d1ed67d05b4e99cb81",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-17f1a8a8c3c99484139e2485180f7d77",
+          "score": 0.999957
+        },
+        {
+          "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
+          "score": 0.998325
+        },
+        {
+          "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
+          "score": 0.998167
+        },
+        {
+          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
+          "score": 0.996973
+        },
+        {
+          "id": "chunk:note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
+          "score": 0.996277
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-013ff4f65e1209c89fb93912ffad85a8",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
+          "score": 0.996096
+        },
+        {
+          "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
+          "score": 0.99222
+        },
+        {
+          "id": "chunk:note:obsidian-0518f776fa045bc32b01bef5df461d98",
+          "score": 0.992173
+        },
+        {
+          "id": "chunk:note:obsidian-0d518430ba476ba8e0bc82df489315fc",
+          "score": 0.99013
+        },
+        {
+          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+          "score": 0.98806
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-02dfbed17d9b57d937067d6d31bb00e1",
+          "score": 0.995467
+        },
+        {
+          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
+          "score": 0.993951
+        },
+        {
+          "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
+          "score": 0.993943
+        },
+        {
+          "id": "chunk:note:obsidian-00107033f2646145e8503a682d72e890",
+          "score": 0.993733
+        },
+        {
+          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
+          "score": 0.993592
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
+          "score": 0.995268
+        },
+        {
+          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
+          "score": 0.994252
+        },
+        {
+          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
+          "score": 0.994232
+        },
+        {
+          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
+          "score": 0.993947
+        },
+        {
+          "id": "chunk:note:obsidian-1676754dc65c12cc278c57b506b48985",
+          "score": 0.992514
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-023f710ebbcde9d7b61d6e221fa44f60",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
+          "score": 0.994527
+        },
+        {
+          "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
+          "score": 0.994126
+        },
+        {
+          "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
+          "score": 0.993808
+        },
+        {
+          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
+          "score": 0.993712
+        },
+        {
+          "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
+          "score": 0.993181
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
+          "score": 0.998365
+        },
+        {
+          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
+          "score": 0.998137
+        },
+        {
+          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
+          "score": 0.997123
+        },
+        {
+          "id": "chunk:note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
+          "score": 0.994782
+        },
+        {
+          "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
+          "score": 0.994513
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
+          "score": 0.998489
+        },
+        {
+          "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
+          "score": 0.99847
+        },
+        {
+          "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
+          "score": 0.99797
+        },
+        {
+          "id": "chunk:note:obsidian-0ab2aa2fd9c7df8a160cccfe9e13de6a",
+          "score": 0.99797
+        },
+        {
+          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
+          "score": 0.997661
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-02d9a7bf8259b453917cf0edbd5204f7",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-008440bc163e50d1ed67d05b4e99cb81",
+          "score": 0.993752
+        },
+        {
+          "id": "chunk:note:obsidian-17f1a8a8c3c99484139e2485180f7d77",
+          "score": 0.99348
+        },
+        {
+          "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
+          "score": 0.992834
+        },
+        {
+          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+          "score": 0.99196
+        },
+        {
+          "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
+          "score": 0.991929
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-02dfbed17d9b57d937067d6d31bb00e1",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
+          "score": 0.995467
+        },
+        {
+          "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
+          "score": 0.995358
+        },
+        {
+          "id": "chunk:note:obsidian-00107033f2646145e8503a682d72e890",
+          "score": 0.993875
+        },
+        {
+          "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
+          "score": 0.993491
+        },
+        {
+          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
+          "score": 0.992597
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-02fd883b046eaba05c9008c29b2f8690",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-07b13eeb35e47a316c0bc7d6d54d0a14",
+          "score": 0.990111
+        },
+        {
+          "id": "chunk:note:obsidian-07adec8081d87504519dc7bf991e6a71",
+          "score": 0.987325
+        },
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.978148
+        },
+        {
+          "id": "chunk:note:obsidian-1a546b9f3bfa8be806de2adc35c67f77",
+          "score": 0.97741
+        },
+        {
+          "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
+          "score": 0.976791
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-14f8b98931997454721a799dd971bb15",
+          "score": 0.999603
+        },
+        {
+          "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
+          "score": 0.991681
+        },
+        {
+          "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
+          "score": 0.988377
+        },
+        {
+          "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
+          "score": 0.988136
+        },
+        {
+          "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
+          "score": 0.987682
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
+          "score": 0.999619
+        },
+        {
+          "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
+          "score": 0.999608
+        },
+        {
+          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+          "score": 0.9994
+        },
+        {
+          "id": "chunk:note:obsidian-09558897dda6a39209b217240a76efc6",
+          "score": 0.999103
+        },
+        {
+          "id": "chunk:note:obsidian-0a642835b2616eec47b987c4727435b9",
+          "score": 0.998665
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-036d8332a5de4818371ebae7c17a13d8",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0804c3212b169e8129bf86c0a7a5ea57",
+          "score": 0.990541
+        },
+        {
+          "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
+          "score": 0.987729
+        },
+        {
+          "id": "chunk:note:obsidian-0974bd740dd05e81565e2821a5e9011a",
+          "score": 0.987597
+        },
+        {
+          "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
+          "score": 0.987377
+        },
+        {
+          "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
+          "score": 0.987243
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-037c9ce97a15c2ecb51ac60145305a0e",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
+          "score": 0.996001
+        },
+        {
+          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
+          "score": 0.995577
+        },
+        {
+          "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
+          "score": 0.995365
+        },
+        {
+          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
+          "score": 0.995124
+        },
+        {
+          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
+          "score": 0.994286
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-039d44a1fdbb157562193678f3020ecd",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
+          "score": 0.990151
+        },
+        {
+          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
+          "score": 0.989709
+        },
+        {
+          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
+          "score": 0.98779
+        },
+        {
+          "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
+          "score": 0.985869
+        },
+        {
+          "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
+          "score": 0.983137
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
+          "score": 0.996258
+        },
+        {
+          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
+          "score": 0.99461
+        },
+        {
+          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
+          "score": 0.994562
+        },
+        {
+          "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
+          "score": 0.993181
+        },
+        {
+          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
+          "score": 0.992752
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-03da95fbe5223d10b8c816673b655eac",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
+          "score": 0.993312
+        },
+        {
+          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
+          "score": 0.991375
+        },
+        {
+          "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
+          "score": 0.9887
+        },
+        {
+          "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
+          "score": 0.987968
+        },
+        {
+          "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
+          "score": 0.987771
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0ab2aa2fd9c7df8a160cccfe9e13de6a",
+          "score": 1
+        },
+        {
+          "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
+          "score": 0.999922
+        },
+        {
+          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
+          "score": 0.99865
+        },
+        {
+          "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
+          "score": 0.998354
+        },
+        {
+          "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
+          "score": 0.99797
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
+          "score": 0.991385
+        },
+        {
+          "id": "chunk:note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
+          "score": 0.991031
+        },
+        {
+          "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
+          "score": 0.990184
+        },
+        {
+          "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
+          "score": 0.988764
+        },
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.98836
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0fd006309dd0e86057e11f5960f7a058",
+          "score": 0.996801
+        },
+        {
+          "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
+          "score": 0.994418
+        },
+        {
+          "id": "chunk:note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
+          "score": 0.992388
+        },
+        {
+          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+          "score": 0.991538
+        },
+        {
+          "id": "chunk:note:obsidian-09a9b52aaca7919c633efdfdce81b6f0",
+          "score": 0.990519
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0518f776fa045bc32b01bef5df461d98",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
+          "score": 0.999999
+        },
+        {
+          "id": "chunk:note:obsidian-013ff4f65e1209c89fb93912ffad85a8",
+          "score": 0.992173
+        },
+        {
+          "id": "chunk:note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
+          "score": 0.989721
+        },
+        {
+          "id": "chunk:note:obsidian-0d518430ba476ba8e0bc82df489315fc",
+          "score": 0.987996
+        },
+        {
+          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+          "score": 0.986818
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
+          "score": 0.996238
+        },
+        {
+          "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
+          "score": 0.99258
+        },
+        {
+          "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
+          "score": 0.992567
+        },
+        {
+          "id": "chunk:note:obsidian-0974bd740dd05e81565e2821a5e9011a",
+          "score": 0.992056
+        },
+        {
+          "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
+          "score": 0.992052
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
+          "score": 0.993884
+        },
+        {
+          "id": "chunk:note:obsidian-0d518430ba476ba8e0bc82df489315fc",
+          "score": 0.989116
+        },
+        {
+          "id": "chunk:note:obsidian-013ff4f65e1209c89fb93912ffad85a8",
+          "score": 0.98806
+        },
+        {
+          "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
+          "score": 0.986873
+        },
+        {
+          "id": "chunk:note:obsidian-0518f776fa045bc32b01bef5df461d98",
+          "score": 0.986818
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-06e4adaabe837b9b7e215bf8943c207c",
+          "score": 0.995678
+        },
+        {
+          "id": "chunk:note:obsidian-1639497d9752084addd03e6757555719",
+          "score": 0.99521
+        },
+        {
+          "id": "chunk:note:obsidian-086c3bcafb1e153e7c235a46050cd9c0",
+          "score": 0.994139
+        },
+        {
+          "id": "chunk:note:obsidian-075855a12ddf37ce7ef24b0ab97ce8ba",
+          "score": 0.99413
+        },
+        {
+          "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
+          "score": 0.990111
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-00675466a5316f83ed30c3317fd0342d",
+          "score": 0.999266
+        },
+        {
+          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
+          "score": 0.999115
+        },
+        {
+          "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
+          "score": 0.998898
+        },
+        {
+          "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
+          "score": 0.99847
+        },
+        {
+          "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
+          "score": 0.998354
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-06e4adaabe837b9b7e215bf8943c207c",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-086c3bcafb1e153e7c235a46050cd9c0",
+          "score": 0.9979
+        },
+        {
+          "id": "chunk:note:obsidian-075855a12ddf37ce7ef24b0ab97ce8ba",
+          "score": 0.997857
+        },
+        {
+          "id": "chunk:note:obsidian-1639497d9752084addd03e6757555719",
+          "score": 0.996118
+        },
+        {
+          "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
+          "score": 0.995678
+        },
+        {
+          "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
+          "score": 0.995116
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
+          "score": 0.994543
+        },
+        {
+          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+          "score": 0.990184
+        },
+        {
+          "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
+          "score": 0.988451
+        },
+        {
+          "id": "chunk:note:book-正则表达式必知必会-ben-forta-z-library",
+          "score": 0.985484
+        },
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.984043
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-075855a12ddf37ce7ef24b0ab97ce8ba",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-086c3bcafb1e153e7c235a46050cd9c0",
+          "score": 0.999997
+        },
+        {
+          "id": "chunk:note:obsidian-06e4adaabe837b9b7e215bf8943c207c",
+          "score": 0.997857
+        },
+        {
+          "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
+          "score": 0.996386
+        },
+        {
+          "id": "chunk:note:obsidian-1639497d9752084addd03e6757555719",
+          "score": 0.994745
+        },
+        {
+          "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
+          "score": 0.99413
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-07adec8081d87504519dc7bf991e6a71",
+      "nearest": [
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.989821
+        },
+        {
+          "id": "chunk:note:obsidian-02fd883b046eaba05c9008c29b2f8690",
+          "score": 0.987325
+        },
+        {
+          "id": "chunk:note:obsidian-1a546b9f3bfa8be806de2adc35c67f77",
+          "score": 0.987065
+        },
+        {
+          "id": "chunk:note:obsidian-07b13eeb35e47a316c0bc7d6d54d0a14",
+          "score": 0.98696
+        },
+        {
+          "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
+          "score": 0.986529
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-07b13eeb35e47a316c0bc7d6d54d0a14",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-02fd883b046eaba05c9008c29b2f8690",
+          "score": 0.990111
+        },
+        {
+          "id": "chunk:note:obsidian-1a546b9f3bfa8be806de2adc35c67f77",
+          "score": 0.987645
+        },
+        {
+          "id": "chunk:note:obsidian-07adec8081d87504519dc7bf991e6a71",
+          "score": 0.98696
+        },
+        {
+          "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
+          "score": 0.983209
+        },
+        {
+          "id": "chunk:note:obsidian-14f8b98931997454721a799dd971bb15",
+          "score": 0.981101
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
+          "score": 0.995219
+        },
+        {
+          "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
+          "score": 0.99415
+        },
+        {
+          "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
+          "score": 0.993561
+        },
+        {
+          "id": "chunk:note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
+          "score": 0.989
+        },
+        {
+          "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
+          "score": 0.988136
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-07d0b6f45396132c9e94b834ed5d2aac",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
+          "score": 0.995852
+        },
+        {
+          "id": "chunk:note:obsidian-000ea51c82d267f202adb4730c67f9b5",
+          "score": 0.995615
+        },
+        {
+          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
+          "score": 0.994319
+        },
+        {
+          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
+          "score": 0.994044
+        },
+        {
+          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
+          "score": 0.994003
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
+          "score": 0.996116
+        },
+        {
+          "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
+          "score": 0.996076
+        },
+        {
+          "id": "chunk:note:obsidian-0974bd740dd05e81565e2821a5e9011a",
+          "score": 0.994175
+        },
+        {
+          "id": "chunk:note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
+          "score": 0.993564
+        },
+        {
+          "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
+          "score": 0.992567
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
+          "score": 0.9994
+        },
+        {
+          "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
+          "score": 0.998744
+        },
+        {
+          "id": "chunk:note:obsidian-0a6ddcce65a681315573dfb985fed15e",
+          "score": 0.998527
+        },
+        {
+          "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
+          "score": 0.998259
+        },
+        {
+          "id": "chunk:note:obsidian-09558897dda6a39209b217240a76efc6",
+          "score": 0.998052
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-07f732d360082b974905b4f9ebedadbd",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
+          "score": 0.988247
+        },
+        {
+          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
+          "score": 0.987974
+        },
+        {
+          "id": "chunk:note:obsidian-0fd2e4accd424529d03d9675721a32d6",
+          "score": 0.986835
+        },
+        {
+          "id": "chunk:note:obsidian-03da95fbe5223d10b8c816673b655eac",
+          "score": 0.985229
+        },
+        {
+          "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
+          "score": 0.984723
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0804c3212b169e8129bf86c0a7a5ea57",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0974bd740dd05e81565e2821a5e9011a",
+          "score": 0.992467
+        },
+        {
+          "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
+          "score": 0.991751
+        },
+        {
+          "id": "chunk:note:obsidian-036d8332a5de4818371ebae7c17a13d8",
+          "score": 0.990541
+        },
+        {
+          "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
+          "score": 0.98997
+        },
+        {
+          "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
+          "score": 0.989174
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-013ff4f65e1209c89fb93912ffad85a8",
+          "score": 0.996096
+        },
+        {
+          "id": "chunk:note:obsidian-0d518430ba476ba8e0bc82df489315fc",
+          "score": 0.994832
+        },
+        {
+          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+          "score": 0.993884
+        },
+        {
+          "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
+          "score": 0.989766
+        },
+        {
+          "id": "chunk:note:obsidian-0518f776fa045bc32b01bef5df461d98",
+          "score": 0.989721
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
+          "score": 0.998261
+        },
+        {
+          "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
+          "score": 0.996393
+        },
+        {
+          "id": "chunk:note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
+          "score": 0.995496
+        },
+        {
+          "id": "chunk:note:obsidian-112fa661110db5f27a1fba58d3f407c6",
+          "score": 0.993993
+        },
+        {
+          "id": "chunk:note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
+          "score": 0.991538
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-086c3bcafb1e153e7c235a46050cd9c0",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-075855a12ddf37ce7ef24b0ab97ce8ba",
+          "score": 0.999997
+        },
+        {
+          "id": "chunk:note:obsidian-06e4adaabe837b9b7e215bf8943c207c",
+          "score": 0.9979
+        },
+        {
+          "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
+          "score": 0.99633
+        },
+        {
+          "id": "chunk:note:obsidian-1639497d9752084addd03e6757555719",
+          "score": 0.994836
+        },
+        {
+          "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
+          "score": 0.994139
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
+          "score": 0.999608
+        },
+        {
+          "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
+          "score": 0.999553
+        },
+        {
+          "id": "chunk:note:obsidian-09558897dda6a39209b217240a76efc6",
+          "score": 0.998479
+        },
+        {
+          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+          "score": 0.998259
+        },
+        {
+          "id": "chunk:note:obsidian-008440bc163e50d1ed67d05b4e99cb81",
+          "score": 0.998167
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-09558897dda6a39209b217240a76efc6",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0a642835b2616eec47b987c4727435b9",
+          "score": 0.999655
+        },
+        {
+          "id": "chunk:note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
+          "score": 0.999229
+        },
+        {
+          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
+          "score": 0.999103
+        },
+        {
+          "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
+          "score": 0.998694
+        },
+        {
+          "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
+          "score": 0.998479
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0974bd740dd05e81565e2821a5e9011a",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
+          "score": 0.994175
+        },
+        {
+          "id": "chunk:note:obsidian-0804c3212b169e8129bf86c0a7a5ea57",
+          "score": 0.992467
+        },
+        {
+          "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
+          "score": 0.992056
+        },
+        {
+          "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
+          "score": 0.991882
+        },
+        {
+          "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
+          "score": 0.990433
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-09a9b52aaca7919c633efdfdce81b6f0",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0fd006309dd0e86057e11f5960f7a058",
+          "score": 0.995556
+        },
+        {
+          "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
+          "score": 0.991491
+        },
+        {
+          "id": "chunk:note:obsidian-18062e14a079ba5f7b5b794f84709870",
+          "score": 0.991303
+        },
+        {
+          "id": "chunk:note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
+          "score": 0.990519
+        },
+        {
+          "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
+          "score": 0.989879
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0a642835b2616eec47b987c4727435b9",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-09558897dda6a39209b217240a76efc6",
+          "score": 0.999655
+        },
+        {
+          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
+          "score": 0.998665
+        },
+        {
+          "id": "chunk:note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
+          "score": 0.998275
+        },
+        {
+          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+          "score": 0.998023
+        },
+        {
+          "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
+          "score": 0.997885
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
+          "score": 0.998918
+        },
+        {
+          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
+          "score": 0.998365
+        },
+        {
+          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
+          "score": 0.997665
+        },
+        {
+          "id": "chunk:note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
+          "score": 0.997554
+        },
+        {
+          "id": "chunk:note:obsidian-000ea51c82d267f202adb4730c67f9b5",
+          "score": 0.996002
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0a6ddcce65a681315573dfb985fed15e",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+          "score": 0.998527
+        },
+        {
+          "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
+          "score": 0.998271
+        },
+        {
+          "id": "chunk:note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
+          "score": 0.998142
+        },
+        {
+          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
+          "score": 0.997841
+        },
+        {
+          "id": "chunk:note:obsidian-0a642835b2616eec47b987c4727435b9",
+          "score": 0.997424
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0a902d16ffaa92d5cbf5a6e79cdea22d",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
+          "score": 0.997443
+        },
+        {
+          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+          "score": 0.996266
+        },
+        {
+          "id": "chunk:note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
+          "score": 0.995743
+        },
+        {
+          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
+          "score": 0.994815
+        },
+        {
+          "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
+          "score": 0.994032
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0aa06849135e018b501707f4093e03a5",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
+          "score": 0.997203
+        },
+        {
+          "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
+          "score": 0.995785
+        },
+        {
+          "id": "chunk:note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
+          "score": 0.99423
+        },
+        {
+          "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
+          "score": 0.99066
+        },
+        {
+          "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
+          "score": 0.989782
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0ab2aa2fd9c7df8a160cccfe9e13de6a",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
+          "score": 1
+        },
+        {
+          "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
+          "score": 0.999922
+        },
+        {
+          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
+          "score": 0.99865
+        },
+        {
+          "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
+          "score": 0.998354
+        },
+        {
+          "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
+          "score": 0.99797
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
+          "score": 0.99426
+        },
+        {
+          "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
+          "score": 0.994251
+        },
+        {
+          "id": "chunk:note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
+          "score": 0.99395
+        },
+        {
+          "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
+          "score": 0.993561
+        },
+        {
+          "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
+          "score": 0.991681
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
+          "score": 0.999093
+        },
+        {
+          "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
+          "score": 0.996076
+        },
+        {
+          "id": "chunk:note:obsidian-0aa06849135e018b501707f4093e03a5",
+          "score": 0.995785
+        },
+        {
+          "id": "chunk:note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
+          "score": 0.99416
+        },
+        {
+          "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
+          "score": 0.99258
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
+          "score": 0.999613
+        },
+        {
+          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
+          "score": 0.998294
+        },
+        {
+          "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
+          "score": 0.995843
+        },
+        {
+          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
+          "score": 0.995565
+        },
+        {
+          "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
+          "score": 0.995416
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-16f85841237279ed9f23e6cd2318998c",
+          "score": 0.997827
+        },
+        {
+          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
+          "score": 0.997188
+        },
+        {
+          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
+          "score": 0.996519
+        },
+        {
+          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
+          "score": 0.996199
+        },
+        {
+          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
+          "score": 0.995416
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
+          "score": 0.999922
+        },
+        {
+          "id": "chunk:note:obsidian-0ab2aa2fd9c7df8a160cccfe9e13de6a",
+          "score": 0.999922
+        },
+        {
+          "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
+          "score": 0.998898
+        },
+        {
+          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
+          "score": 0.998816
+        },
+        {
+          "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
+          "score": 0.998489
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0baba57a3a85093d7ccbad708a35db2e",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-06e4adaabe837b9b7e215bf8943c207c",
+          "score": 0.995049
+        },
+        {
+          "id": "chunk:note:obsidian-086c3bcafb1e153e7c235a46050cd9c0",
+          "score": 0.992267
+        },
+        {
+          "id": "chunk:note:obsidian-075855a12ddf37ce7ef24b0ab97ce8ba",
+          "score": 0.992137
+        },
+        {
+          "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
+          "score": 0.986991
+        },
+        {
+          "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
+          "score": 0.986725
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0bad078ffc81f1773ef3f686fd1a9269",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-000ea51c82d267f202adb4730c67f9b5",
+          "score": 0.991619
+        },
+        {
+          "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
+          "score": 0.99061
+        },
+        {
+          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
+          "score": 0.989745
+        },
+        {
+          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
+          "score": 0.988604
+        },
+        {
+          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
+          "score": 0.987951
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
+          "score": 0.995219
+        },
+        {
+          "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
+          "score": 0.99426
+        },
+        {
+          "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
+          "score": 0.994204
+        },
+        {
+          "id": "chunk:note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
+          "score": 0.992159
+        },
+        {
+          "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
+          "score": 0.987682
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
+          "score": 0.999963
+        },
+        {
+          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
+          "score": 0.995436
+        },
+        {
+          "id": "chunk:note:obsidian-03d27d1d8a5626150f870d961e7de620",
+          "score": 0.99461
+        },
+        {
+          "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
+          "score": 0.994372
+        },
+        {
+          "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
+          "score": 0.993592
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
+          "score": 0.998918
+        },
+        {
+          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
+          "score": 0.998137
+        },
+        {
+          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
+          "score": 0.997699
+        },
+        {
+          "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
+          "score": 0.996809
+        },
+        {
+          "id": "chunk:note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
+          "score": 0.995622
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0c63749384221322924164e1b7defd64",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
+          "score": 0.993152
+        },
+        {
+          "id": "chunk:note:obsidian-0a902d16ffaa92d5cbf5a6e79cdea22d",
+          "score": 0.992743
+        },
+        {
+          "id": "chunk:note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
+          "score": 0.991843
+        },
+        {
+          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+          "score": 0.990876
+        },
+        {
+          "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
+          "score": 0.990847
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0c9b186483cd29e5ae87e4f57bdec3ee",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
+          "score": 0.988988
+        },
+        {
+          "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
+          "score": 0.98783
+        },
+        {
+          "id": "chunk:note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
+          "score": 0.985872
+        },
+        {
+          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+          "score": 0.98538
+        },
+        {
+          "id": "chunk:note:book-正则表达式必知必会-ben-forta-z-library",
+          "score": 0.98476
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0d518430ba476ba8e0bc82df489315fc",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
+          "score": 0.994832
+        },
+        {
+          "id": "chunk:note:obsidian-013ff4f65e1209c89fb93912ffad85a8",
+          "score": 0.99013
+        },
+        {
+          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+          "score": 0.989116
+        },
+        {
+          "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
+          "score": 0.988049
+        },
+        {
+          "id": "chunk:note:obsidian-0518f776fa045bc32b01bef5df461d98",
+          "score": 0.987996
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
+          "score": 0.996628
+        },
+        {
+          "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
+          "score": 0.989
+        },
+        {
+          "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
+          "score": 0.988881
+        },
+        {
+          "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
+          "score": 0.987598
+        },
+        {
+          "id": "chunk:note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
+          "score": 0.987493
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
+          "score": 0.99693
+        },
+        {
+          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
+          "score": 0.996861
+        },
+        {
+          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
+          "score": 0.996133
+        },
+        {
+          "id": "chunk:note:obsidian-037c9ce97a15c2ecb51ac60145305a0e",
+          "score": 0.996001
+        },
+        {
+          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
+          "score": 0.995843
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-075855a12ddf37ce7ef24b0ab97ce8ba",
+          "score": 0.996386
+        },
+        {
+          "id": "chunk:note:obsidian-086c3bcafb1e153e7c235a46050cd9c0",
+          "score": 0.99633
+        },
+        {
+          "id": "chunk:note:obsidian-06e4adaabe837b9b7e215bf8943c207c",
+          "score": 0.995116
+        },
+        {
+          "id": "chunk:note:obsidian-1639497d9752084addd03e6757555719",
+          "score": 0.991437
+        },
+        {
+          "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
+          "score": 0.990111
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
+          "score": 0.997152
+        },
+        {
+          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
+          "score": 0.995534
+        },
+        {
+          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
+          "score": 0.995436
+        },
+        {
+          "id": "chunk:note:obsidian-183665454ae199435161348053d4a3e7",
+          "score": 0.994996
+        },
+        {
+          "id": "chunk:note:obsidian-00107033f2646145e8503a682d72e890",
+          "score": 0.993575
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
+          "score": 0.99395
+        },
+        {
+          "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
+          "score": 0.992482
+        },
+        {
+          "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
+          "score": 0.992159
+        },
+        {
+          "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
+          "score": 0.987934
+        },
+        {
+          "id": "chunk:note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
+          "score": 0.987493
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
+          "score": 0.995411
+        },
+        {
+          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+          "score": 0.991385
+        },
+        {
+          "id": "chunk:note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
+          "score": 0.990367
+        },
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.988584
+        },
+        {
+          "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
+          "score": 0.988451
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0fd006309dd0e86057e11f5960f7a058",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
+          "score": 0.996801
+        },
+        {
+          "id": "chunk:note:obsidian-09a9b52aaca7919c633efdfdce81b6f0",
+          "score": 0.995556
+        },
+        {
+          "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
+          "score": 0.995224
+        },
+        {
+          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+          "score": 0.991342
+        },
+        {
+          "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
+          "score": 0.990738
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-0fd2e4accd424529d03d9675721a32d6",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
+          "score": 0.997636
+        },
+        {
+          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
+          "score": 0.993584
+        },
+        {
+          "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
+          "score": 0.993065
+        },
+        {
+          "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
+          "score": 0.992609
+        },
+        {
+          "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
+          "score": 0.992417
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
+          "score": 0.994645
+        },
+        {
+          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
+          "score": 0.994241
+        },
+        {
+          "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
+          "score": 0.994167
+        },
+        {
+          "id": "chunk:note:obsidian-023f710ebbcde9d7b61d6e221fa44f60",
+          "score": 0.993181
+        },
+        {
+          "id": "chunk:note:obsidian-0fd2e4accd424529d03d9675721a32d6",
+          "score": 0.992609
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-112fa661110db5f27a1fba58d3f407c6",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+          "score": 0.993993
+        },
+        {
+          "id": "chunk:note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
+          "score": 0.993953
+        },
+        {
+          "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
+          "score": 0.991485
+        },
+        {
+          "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
+          "score": 0.988572
+        },
+        {
+          "id": "chunk:note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
+          "score": 0.986005
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
+          "score": 0.997699
+        },
+        {
+          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
+          "score": 0.997665
+        },
+        {
+          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
+          "score": 0.997123
+        },
+        {
+          "id": "chunk:note:obsidian-18f26e53563c98e7b69f6f1bc6ca53a6",
+          "score": 0.994813
+        },
+        {
+          "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
+          "score": 0.994471
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-14f8b98931997454721a799dd971bb15",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
+          "score": 0.999603
+        },
+        {
+          "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
+          "score": 0.990075
+        },
+        {
+          "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
+          "score": 0.987812
+        },
+        {
+          "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
+          "score": 0.987754
+        },
+        {
+          "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
+          "score": 0.987377
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
+          "score": 0.996628
+        },
+        {
+          "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
+          "score": 0.994251
+        },
+        {
+          "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
+          "score": 0.994204
+        },
+        {
+          "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
+          "score": 0.99415
+        },
+        {
+          "id": "chunk:note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
+          "score": 0.992482
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
+          "score": 0.999316
+        },
+        {
+          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
+          "score": 0.997037
+        },
+        {
+          "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
+          "score": 0.996199
+        },
+        {
+          "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
+          "score": 0.996133
+        },
+        {
+          "id": "chunk:note:obsidian-037c9ce97a15c2ecb51ac60145305a0e",
+          "score": 0.995577
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
+          "score": 0.995411
+        },
+        {
+          "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
+          "score": 0.994543
+        },
+        {
+          "id": "chunk:note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
+          "score": 0.992001
+        },
+        {
+          "id": "chunk:note:obsidian-0c9b186483cd29e5ae87e4f57bdec3ee",
+          "score": 0.988988
+        },
+        {
+          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+          "score": 0.988764
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-15f79b42c0a521e94e4155b80f4f1da1",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-02d9a7bf8259b453917cf0edbd5204f7",
+          "score": 0.991923
+        },
+        {
+          "id": "chunk:note:obsidian-008440bc163e50d1ed67d05b4e99cb81",
+          "score": 0.989815
+        },
+        {
+          "id": "chunk:note:obsidian-17f1a8a8c3c99484139e2485180f7d77",
+          "score": 0.989336
+        },
+        {
+          "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
+          "score": 0.987843
+        },
+        {
+          "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
+          "score": 0.987312
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-1639497d9752084addd03e6757555719",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-06e4adaabe837b9b7e215bf8943c207c",
+          "score": 0.996118
+        },
+        {
+          "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
+          "score": 0.99521
+        },
+        {
+          "id": "chunk:note:obsidian-086c3bcafb1e153e7c235a46050cd9c0",
+          "score": 0.994836
+        },
+        {
+          "id": "chunk:note:obsidian-075855a12ddf37ce7ef24b0ab97ce8ba",
+          "score": 0.994745
+        },
+        {
+          "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
+          "score": 0.991437
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-1676754dc65c12cc278c57b506b48985",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
+          "score": 0.994568
+        },
+        {
+          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
+          "score": 0.993579
+        },
+        {
+          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
+          "score": 0.992918
+        },
+        {
+          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
+          "score": 0.992875
+        },
+        {
+          "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
+          "score": 0.992514
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
+          "score": 0.992001
+        },
+        {
+          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+          "score": 0.991031
+        },
+        {
+          "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
+          "score": 0.990367
+        },
+        {
+          "id": "chunk:note:obsidian-0c9b186483cd29e5ae87e4f57bdec3ee",
+          "score": 0.985872
+        },
+        {
+          "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
+          "score": 0.983072
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
+          "score": 0.999093
+        },
+        {
+          "id": "chunk:note:obsidian-0aa06849135e018b501707f4093e03a5",
+          "score": 0.997203
+        },
+        {
+          "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
+          "score": 0.996116
+        },
+        {
+          "id": "chunk:note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
+          "score": 0.993348
+        },
+        {
+          "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
+          "score": 0.992052
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
+          "score": 0.996809
+        },
+        {
+          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
+          "score": 0.995744
+        },
+        {
+          "id": "chunk:note:obsidian-000ea51c82d267f202adb4730c67f9b5",
+          "score": 0.995182
+        },
+        {
+          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
+          "score": 0.994513
+        },
+        {
+          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
+          "score": 0.994471
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-16f85841237279ed9f23e6cd2318998c",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
+          "score": 0.997827
+        },
+        {
+          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
+          "score": 0.997437
+        },
+        {
+          "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
+          "score": 0.995443
+        },
+        {
+          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
+          "score": 0.995432
+        },
+        {
+          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
+          "score": 0.995261
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
+          "score": 0.999613
+        },
+        {
+          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
+          "score": 0.998907
+        },
+        {
+          "id": "chunk:note:obsidian-16f85841237279ed9f23e6cd2318998c",
+          "score": 0.997437
+        },
+        {
+          "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
+          "score": 0.997188
+        },
+        {
+          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
+          "score": 0.997037
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-00107033f2646145e8503a682d72e890",
+          "score": 0.99595
+        },
+        {
+          "id": "chunk:note:obsidian-02dfbed17d9b57d937067d6d31bb00e1",
+          "score": 0.995358
+        },
+        {
+          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
+          "score": 0.994372
+        },
+        {
+          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
+          "score": 0.994093
+        },
+        {
+          "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
+          "score": 0.993943
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-17f1a8a8c3c99484139e2485180f7d77",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-008440bc163e50d1ed67d05b4e99cb81",
+          "score": 0.999957
+        },
+        {
+          "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
+          "score": 0.997955
+        },
+        {
+          "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
+          "score": 0.997916
+        },
+        {
+          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
+          "score": 0.996548
+        },
+        {
+          "id": "chunk:note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
+          "score": 0.996208
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-18062e14a079ba5f7b5b794f84709870",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
+          "score": 0.992519
+        },
+        {
+          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+          "score": 0.991501
+        },
+        {
+          "id": "chunk:note:obsidian-09a9b52aaca7919c633efdfdce81b6f0",
+          "score": 0.991303
+        },
+        {
+          "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
+          "score": 0.991283
+        },
+        {
+          "id": "chunk:note:obsidian-0fd006309dd0e86057e11f5960f7a058",
+          "score": 0.989304
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
+          "score": 0.997152
+        },
+        {
+          "id": "chunk:note:obsidian-03d27d1d8a5626150f870d961e7de620",
+          "score": 0.996258
+        },
+        {
+          "id": "chunk:note:obsidian-02dfbed17d9b57d937067d6d31bb00e1",
+          "score": 0.993491
+        },
+        {
+          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
+          "score": 0.99318
+        },
+        {
+          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
+          "score": 0.99308
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-183665454ae199435161348053d4a3e7",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
+          "score": 0.994996
+        },
+        {
+          "id": "chunk:note:obsidian-00107033f2646145e8503a682d72e890",
+          "score": 0.994221
+        },
+        {
+          "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
+          "score": 0.991738
+        },
+        {
+          "id": "chunk:note:obsidian-02dfbed17d9b57d937067d6d31bb00e1",
+          "score": 0.990583
+        },
+        {
+          "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
+          "score": 0.988578
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
+          "score": 0.997777
+        },
+        {
+          "id": "chunk:note:obsidian-0fd2e4accd424529d03d9675721a32d6",
+          "score": 0.997636
+        },
+        {
+          "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
+          "score": 0.99664
+        },
+        {
+          "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
+          "score": 0.99656
+        },
+        {
+          "id": "chunk:note:obsidian-0ab2aa2fd9c7df8a160cccfe9e13de6a",
+          "score": 0.99656
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-18f26e53563c98e7b69f6f1bc6ca53a6",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
+          "score": 0.997679
+        },
+        {
+          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
+          "score": 0.995893
+        },
+        {
+          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
+          "score": 0.995079
+        },
+        {
+          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
+          "score": 0.994813
+        },
+        {
+          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
+          "score": 0.992071
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-18f26e53563c98e7b69f6f1bc6ca53a6",
+          "score": 0.997679
+        },
+        {
+          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
+          "score": 0.997554
+        },
+        {
+          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
+          "score": 0.995622
+        },
+        {
+          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
+          "score": 0.994782
+        },
+        {
+          "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
+          "score": 0.994095
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0518f776fa045bc32b01bef5df461d98",
+          "score": 0.999999
+        },
+        {
+          "id": "chunk:note:obsidian-013ff4f65e1209c89fb93912ffad85a8",
+          "score": 0.99222
+        },
+        {
+          "id": "chunk:note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
+          "score": 0.989766
+        },
+        {
+          "id": "chunk:note:obsidian-0d518430ba476ba8e0bc82df489315fc",
+          "score": 0.988049
+        },
+        {
+          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+          "score": 0.986873
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
+          "score": 0.998561
+        },
+        {
+          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+          "score": 0.997563
+        },
+        {
+          "id": "chunk:note:obsidian-0a902d16ffaa92d5cbf5a6e79cdea22d",
+          "score": 0.997443
+        },
+        {
+          "id": "chunk:note:obsidian-0a6ddcce65a681315573dfb985fed15e",
+          "score": 0.99572
+        },
+        {
+          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
+          "score": 0.995271
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
+          "score": 0.996238
+        },
+        {
+          "id": "chunk:note:obsidian-0aa06849135e018b501707f4093e03a5",
+          "score": 0.99423
+        },
+        {
+          "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
+          "score": 0.99416
+        },
+        {
+          "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
+          "score": 0.993564
+        },
+        {
+          "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
+          "score": 0.993348
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
+          "score": 0.999316
+        },
+        {
+          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
+          "score": 0.998907
+        },
+        {
+          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
+          "score": 0.998294
+        },
+        {
+          "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
+          "score": 0.996861
+        },
+        {
+          "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
+          "score": 0.996519
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
+          "score": 0.999115
+        },
+        {
+          "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
+          "score": 0.998816
+        },
+        {
+          "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
+          "score": 0.99865
+        },
+        {
+          "id": "chunk:note:obsidian-0ab2aa2fd9c7df8a160cccfe9e13de6a",
+          "score": 0.99865
+        },
+        {
+          "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
+          "score": 0.997777
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-1a546b9f3bfa8be806de2adc35c67f77",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-07b13eeb35e47a316c0bc7d6d54d0a14",
+          "score": 0.987645
+        },
+        {
+          "id": "chunk:note:obsidian-07adec8081d87504519dc7bf991e6a71",
+          "score": 0.987065
+        },
+        {
+          "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
+          "score": 0.979795
+        },
+        {
+          "id": "chunk:note:obsidian-14f8b98931997454721a799dd971bb15",
+          "score": 0.979716
+        },
+        {
+          "id": "chunk:note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
+          "score": 0.978643
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-09558897dda6a39209b217240a76efc6",
+          "score": 0.999229
+        },
+        {
+          "id": "chunk:note:obsidian-0a642835b2616eec47b987c4727435b9",
+          "score": 0.998275
+        },
+        {
+          "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
+          "score": 0.998134
+        },
+        {
+          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
+          "score": 0.99781
+        },
+        {
+          "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
+          "score": 0.99733
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+          "score": 0.995496
+        },
+        {
+          "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
+          "score": 0.994191
+        },
+        {
+          "id": "chunk:note:obsidian-112fa661110db5f27a1fba58d3f407c6",
+          "score": 0.993953
+        },
+        {
+          "id": "chunk:note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
+          "score": 0.992388
+        },
+        {
+          "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
+          "score": 0.992256
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
+          "score": 0.998561
+        },
+        {
+          "id": "chunk:note:obsidian-0a6ddcce65a681315573dfb985fed15e",
+          "score": 0.998142
+        },
+        {
+          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+          "score": 0.997585
+        },
+        {
+          "id": "chunk:note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
+          "score": 0.997189
+        },
+        {
+          "id": "chunk:note:obsidian-09558897dda6a39209b217240a76efc6",
+          "score": 0.996147
+        }
+      ]
+    }
+  ]
+}

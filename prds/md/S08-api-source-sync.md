@@ -1,6 +1,6 @@
 # Sprint 08: RESTful API and Cloud Source Sync
 
-**Status:** Todo
+**Status:** Done
 **Created:** 2026-07-02
 
 ## Objective
@@ -13,21 +13,21 @@
 
 ## Milestones
 
-- [ ] **M01: API contract and source configuration** — API 契约与真源配置
-- [ ] **M02: Content normalization and manifest APIs** — 内容归一化与发布清单
-- [ ] **M03: Preview and security boundary** — 预览接口与安全边界
+- [~] **M01: API contract and source configuration** — API 契约与真源配置
+- [x] **M02: Content normalization and manifest APIs** — 内容归一化与发布清单
+- [x] **M03: Preview and security boundary** — 预览接口与安全边界
 
 ## Tasks
 
 | ID | Title | Status |
 |----|-------|--------|
-| S08-T01 | Design RESTful API contract | Todo |
-| S08-T02 | Configure GitHub Obsidian source adapter | Todo |
-| S08-T03 | Normalize Markdown metadata and source records | Todo |
-| S08-T04 | Define publish manifest schema | Todo |
-| S08-T05 | Implement local API skeleton | Todo |
-| S08-T06 | Add preview API contracts | Todo |
-| S08-T07 | Document API security and permissions | Todo |
+| S08-T01 | Design RESTful API contract | Done |
+| S08-T02 | Configure GitHub Obsidian source adapter | Done |
+| S08-T03 | Normalize Markdown metadata and source records | Done |
+| S08-T04 | Define publish manifest schema | Done |
+| S08-T05 | Implement local API skeleton | Done |
+| S08-T06 | Add preview API contracts | Done |
+| S08-T07 | Document API security and permissions | Done |
 
 ## Acceptance Criteria
 

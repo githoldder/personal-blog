@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-03",
+  "policy": "Only records listed here are eligible for public projection. Full Obsidian source trees and private evidence folders are excluded.",
+  "records": [
+    {
+      "source_path": "content/notes/2026-06-26-personal-knowledge-asset-os.md",
+      "public_slug": "personal-knowledge-asset-os",
+      "status": "publishable",
+      "type": "note",
+      "review_notes": "Anchor article for the product narrative and public portfolio."
+    },
+    {
+      "source_path": "content/decks/pk-asset-os-roadmap.md",
+      "public_slug": "pk-asset-os-roadmap",
+      "status": "publishable",
+      "type": "deck",
+      "review_notes": "Public roadmap deck."
+    },
+    {
+      "source_path": "content/resume/resume.yaml",
+      "public_slug": "resume",
+      "status": "publishable",
+      "type": "resume",
+      "review_notes": "Public outputs are generated resume.json and resume.pdf only."
+    }
+  ]
+}

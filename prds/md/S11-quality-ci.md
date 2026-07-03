@@ -1,6 +1,6 @@
 # Sprint 11: Testing, Quality Control, Defect Management and CI
 
-**Status:** Todo
+**Status:** Done
 **Created:** 2026-07-02
 
 ## Objective
@@ -13,19 +13,19 @@
 
 ## Milestones
 
-- [ ] **M01: Automated testing expansion** — 自动化测试扩展
-- [ ] **M02: Quality governance and CI** — 质量治理与 CI
+- [x] **M01: Automated testing expansion** — 自动化测试扩展
+- [x] **M02: Quality governance and CI** — 质量治理与 CI
 
 ## Tasks
 
 | ID | Title | Status |
 |----|-------|--------|
-| S11-T01 | Expand parser and manifest unit tests | Todo |
-| S11-T02 | Add integration tests for source to public projection | Todo |
-| S11-T03 | Add end-to-end tests for admin and public flows | Todo |
-| S11-T04 | Define visual regression and accessibility gates | Todo |
-| S11-T05 | Create defect management plan | Todo |
-| S11-T06 | Add CI validation pipeline | Todo |
+| S11-T01 | Expand parser and manifest unit tests | Done |
+| S11-T02 | Add integration tests for source to public projection | Done |
+| S11-T03 | Add end-to-end tests for admin and public flows | Done |
+| S11-T04 | Define visual regression and accessibility gates | Done |
+| S11-T05 | Create defect management plan | Done |
+| S11-T06 | Add CI validation pipeline | Done |
 
 ## Acceptance Criteria
 

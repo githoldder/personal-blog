@@ -5,28 +5,45 @@
       "label": "曹磊的简历",
       "type": "resume",
       "metadata": {
-        "summary": "常州工学院软件工程专业本科生。主修软件工程，具备扎实的全栈与分布式应用技术基础。作为核心成员参与龙虎塘派出所政务信息化系统“治慧租”APP的研发，并自主创业“常工生鲜”小程序。多次获得校级优秀学生干部及国家级/省级学科竞赛奖项（包含揭榜挂帅擂台赛全国二等奖、iCAN创新创业大赛全国三等奖及省级一等奖、亚太数学建模二等奖等）。熟悉 Python 爬虫、自然语言处理（NLP）及微服务架构，热衷于构建高效实用的工程工具。",
-        "degree": 2,
+        "summary": "软件工程本科在读，长期围绕个人知识资产系统、AI 方言学习、政务信息化与校园商业验证构建真实项目。擅长把需求调研、原型设计、后端脚本、数据管线、前端可视化和产品复盘串成闭环。",
+        "degree": 15,
         "tags": [
           "Python",
-          "Java",
           "JavaScript",
+          "TypeScript",
+          "Node.js",
+          "Java",
           "SQL",
+          "Shell",
+          "Astro",
           "React",
           "FastAPI",
+          "Flask",
           "Spring Boot",
           "微信小程序",
           "Vite",
+          "NLP",
+          "Embedding",
+          "TTS",
+          "Praat 语图",
+          "多智能体",
+          "Neo4j",
+          "数学建模",
           "Docker",
           "Celery",
           "Redis",
           "PM2",
+          "Typst",
           "LaTeX",
           "Obsidian",
-          "项目策划",
+          "draw.io",
           "需求调研",
-          "日语 N2",
-          "普通话二甲"
+          "PRD",
+          "OKR",
+          "项目章程",
+          "GTD",
+          "路演叙事",
+          "活动策划"
         ],
         "scope": "Resume"
       }
@@ -39,7 +56,7 @@
         "file": "content/notes/2026-06-26-personal-knowledge-asset-os.md",
         "stage": "budding",
         "date": "2026-06-26",
-        "degree": 0,
+        "degree": 1,
         "tags": [
           "架构",
           "知识管理",
@@ -606,7 +623,7 @@
         "file": "content/notes/obsidian-03d27d1d8a5626150f870d961e7de620.md",
         "stage": "seedling",
         "date": "2026-06-11",
-        "degree": 8,
+        "degree": 9,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -5806,7 +5823,7 @@
         "file": "content/notes/obsidian-50d6b96e671aa113429d701c7b33ebb5.md",
         "stage": "budding",
         "date": "2026-06-11",
-        "degree": 18,
+        "degree": 19,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -6050,7 +6067,7 @@
         "file": "content/notes/obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b.md",
         "stage": "seedling",
         "date": "2026-07-03",
-        "degree": 12,
+        "degree": 13,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -7858,7 +7875,7 @@
         "file": "content/notes/obsidian-6b7f6b443f948d73bd22e494beb371bc.md",
         "stage": "seedling",
         "date": "2026-07-02",
-        "degree": 21,
+        "degree": 22,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -7911,7 +7928,7 @@
         "file": "content/notes/obsidian-6c507681d537a7d1002a2b47e9091777.md",
         "stage": "seedling",
         "date": "2026-06-11",
-        "degree": 2,
+        "degree": 3,
         "tags": [
           "Obsidian",
           "品润红色经典活动.md",
@@ -8930,7 +8947,7 @@
         "file": "content/notes/obsidian-7bc37adaa34cd72d14f852e7e6e32282.md",
         "stage": "seedling",
         "date": "2026-07-03",
-        "degree": 14,
+        "degree": 15,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -11060,7 +11077,7 @@
         "file": "content/notes/obsidian-9ceed5107c8c106d6ac5db7c118d08e6.md",
         "stage": "seedling",
         "date": "2026-06-11",
-        "degree": 6,
+        "degree": 7,
         "tags": [
           "Obsidian",
           "014_学生会",
@@ -11214,7 +11231,7 @@
         "file": "content/notes/obsidian-9f5215a6b5e76d998ae990d891a975be.md",
         "stage": "seedling",
         "date": "2026-06-11",
-        "degree": 2,
+        "degree": 3,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -11565,7 +11582,7 @@
         "file": "content/notes/obsidian-a432cb067ceedb9c4cc1690c3e029bd7.md",
         "stage": "seedling",
         "date": "2026-06-30",
-        "degree": 9,
+        "degree": 10,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -13692,7 +13709,7 @@
         "file": "content/notes/obsidian-be4cc536b2a4ab5a0eef95423b20fc01.md",
         "stage": "budding",
         "date": "2026-06-27",
-        "degree": 13,
+        "degree": 14,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -14443,7 +14460,7 @@
         "file": "content/notes/obsidian-c8deb3be42a192e02ebe6650af59de52.md",
         "stage": "seedling",
         "date": "2026-06-11",
-        "degree": 8,
+        "degree": 9,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -16623,7 +16640,7 @@
         "file": "content/notes/obsidian-e5275201532f699889138f717b939d2e.md",
         "stage": "seedling",
         "date": "2026-07-03",
-        "degree": 26,
+        "degree": 27,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -18367,7 +18384,7 @@
       "metadata": {
         "file": "content/projects/lingobridge.md",
         "date": "2025-03-15",
-        "degree": 1,
+        "degree": 0,
         "tags": [],
         "scope": "Projects"
       }
@@ -18379,7 +18396,7 @@
       "metadata": {
         "file": "content/projects/personal-knowledge-asset-os.md",
         "date": "2026-06-26",
-        "degree": 0,
+        "degree": 1,
         "tags": [],
         "scope": "Projects"
       }
@@ -21387,9 +21404,364 @@
     },
     {
       "source": "resume:basics",
-      "target": "project:lingobridge",
+      "target": "project:personal-knowledge-asset-os",
       "weight": 1,
       "type": "owner"
+    },
+    {
+      "source": "resume:basics",
+      "target": "note:2026-06-26-personal-knowledge-asset-os",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "Astro"
+        ]
+      }
+    },
+    {
+      "source": "resume:basics",
+      "target": "note:obsidian-be4cc536b2a4ab5a0eef95423b20fc01",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "多智能体"
+        ]
+      }
+    },
+    {
+      "source": "resume:basics",
+      "target": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "resume:basics",
+      "target": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "resume:basics",
+      "target": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "resume:basics",
+      "target": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "resume:basics",
+      "target": "note:obsidian-7bc37adaa34cd72d14f852e7e6e32282",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "resume:basics",
+      "target": "note:obsidian-a432cb067ceedb9c4cc1690c3e029bd7",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "resume:basics",
+      "target": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "resume:basics",
+      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "target": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "target": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "target": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "target": "note:obsidian-7bc37adaa34cd72d14f852e7e6e32282",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "target": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "target": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "target": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "target": "note:obsidian-7bc37adaa34cd72d14f852e7e6e32282",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "target": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
+      "target": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
+      "target": "note:obsidian-7bc37adaa34cd72d14f852e7e6e32282",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
+      "target": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
+      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
+      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "resume:basics",
+      "target": "note:obsidian-6c507681d537a7d1002a2b47e9091777",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "活动策划"
+        ]
+      }
+    },
+    {
+      "source": "resume:basics",
+      "target": "note:obsidian-9ceed5107c8c106d6ac5db7c118d08e6",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "活动策划"
+        ]
+      }
+    },
+    {
+      "source": "resume:basics",
+      "target": "note:obsidian-9f5215a6b5e76d998ae990d891a975be",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "活动策划"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-6c507681d537a7d1002a2b47e9091777",
+      "target": "note:obsidian-9ceed5107c8c106d6ac5db7c118d08e6",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "活动策划",
+          "活动"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-6c507681d537a7d1002a2b47e9091777",
+      "target": "note:obsidian-9f5215a6b5e76d998ae990d891a975be",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "活动策划",
+          "活动"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-9ceed5107c8c106d6ac5db7c118d08e6",
+      "target": "note:obsidian-9f5215a6b5e76d998ae990d891a975be",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "活动策划",
+          "活动"
+        ]
+      }
     },
     {
       "source": "note:book-博弈论",
@@ -52515,182 +52887,6 @@
     },
     {
       "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
-      "target": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
-      "target": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
-      "target": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
-      "target": "note:obsidian-7bc37adaa34cd72d14f852e7e6e32282",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
-      "target": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
-      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
-      "target": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
-      "target": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
-      "target": "note:obsidian-7bc37adaa34cd72d14f852e7e6e32282",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
-      "target": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
-      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
-      "target": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
-      "target": "note:obsidian-7bc37adaa34cd72d14f852e7e6e32282",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
-      "target": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
-      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
-      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "GTD"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
       "target": "note:obsidian-31470c2e6b60a4241f5788b4a84a0a4e",
       "weight": 0.25,
       "type": "tag_overlap",
@@ -61364,42 +61560,6 @@
       }
     },
     {
-      "source": "note:obsidian-6c507681d537a7d1002a2b47e9091777",
-      "target": "note:obsidian-9ceed5107c8c106d6ac5db7c118d08e6",
-      "weight": 0.5,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "活动",
-          "活动策划"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-6c507681d537a7d1002a2b47e9091777",
-      "target": "note:obsidian-9f5215a6b5e76d998ae990d891a975be",
-      "weight": 0.5,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "活动",
-          "活动策划"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-9ceed5107c8c106d6ac5db7c118d08e6",
-      "target": "note:obsidian-9f5215a6b5e76d998ae990d891a975be",
-      "weight": 0.5,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "活动",
-          "活动策划"
-        ]
-      }
-    },
-    {
       "source": "note:obsidian-8563baef4cd8a4a2ba966848089c1887",
       "target": "note:obsidian-eef8aa4fbdce1856ada1d4a5c4d5c487",
       "weight": 0.25,
@@ -61500,10 +61660,10 @@
     }
   ],
   "metadata": {
-    "generated_at": "2026-07-03T07:46:13.228Z",
+    "generated_at": "2026-07-03T11:04:35.315Z",
     "version": "0.1.0",
     "total_nodes": 1112,
-    "total_edges": 4071,
+    "total_edges": 4084,
     "source_summary": {
       "content_sources": {
         "resume": 1,
@@ -61520,7 +61680,7 @@
       "edge_types": {
         "link": 491,
         "owner": 2,
-        "tag_overlap": 3578
+        "tag_overlap": 3591
       }
     }
   }

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-03T11:04:35.051Z",
+  "privacy": "Evidence source files are excluded; this package contains only resume data, template, manifest and generated public outputs.",
+  "files": [
+    "content/resume/resume.yaml",
+    "content/resume/template.typ",
+    "content/resume/evidence-manifest.json",
+    "public/assets/resume.json",
+    "public/assets/resume.pdf"
+  ]
+}

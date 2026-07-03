@@ -274,3 +274,38 @@
   6. 升级 `src/components/SemanticGraph.jsx`，增设大图模式 View Selector 控制栏 HUD，在 “🧠 大脑版图 (PARA Theme)” 与 “🔬 微观细节 (Full Scope)” 间平滑物理仿真切换，并针对 folder、book、project 节点进行定制缩放和沉浸式热链重定向。
 - **Verification**: `npm run verify` 运行成功，1121 静态页面完整生成，TS 校验 0 error。
 - **Status**: Wiki 链接、Excalidraw/Canvas 预览器、PARA 脑图折叠与 HUD 控制重构完全交付。
+
+## 2026-07-03T15:50:00+08:00
+- **Action**: 回滚本地 Obsidian 依赖外露并完成 Wattenberger 风格沉浸阅读页修复。
+- **Progress Details**:
+  1. 将前端阅读体验从“跳回本地 Obsidian”纠正为完整网站内阅读路径，移除可见的 `obsidian://` 依赖、本地打开文案和来源路径块。
+  2. 参考 Wattenberger 长文阅读体验，为 `src/pages/notes/[slug].astro`、`src/layouts/BaseLayout.astro` 和 `src/styles/global.css` 增加纸感背景、宽松长文排版、思维节奏块和更强的网页阅读体验。
+  3. 清洗 Excalidraw 同步正文中的插件噪声：`Switch to EXCALIDRAW VIEW`、`compressed-json`、`Excalidraw Data`、`Drawing` 和 Obsidian block id。
+  4. 保持 Excalidraw/Canvas 预览器为网页端增强，不再要求用户回到本地 Obsidian 才能阅读笔记。
+- **Verification**:
+  1. `npm run build` 成功，1121 个静态页面生成。
+  2. Playwright 打开 `/notes/obsidian-b418f4047e24467e96642e625977bf25/`，确认非 404，页面标题正常。
+  3. DOM 检查确认无 `obsidian://`、无本地打开文案、无来源路径、无 Excalidraw 原始 JSON、无 block id 残留。
+  4. Playwright console 检查：0 errors / 0 warnings。
+- **Status**: 前端笔记可见性和沉浸阅读修复完成；PM2 dev/preview 路由均可返回 200。
+
+## 2026-07-03T16:05:00+08:00
+- **Action**: 当前可运行版本归档并推送至 GitHub。
+- **Progress Details**:
+  1. 将 `.playwright-cli/` 与 `scratch/` 加入 `.gitignore`，避免测试缓存和本机绝对路径脚本进入远端仓库。
+  2. 创建归档提交 `f087d1c archive: capture immersive knowledge site snapshot`，覆盖当前网站代码、内容、资产、预览器、图谱、阅读页和生成索引状态。
+  3. 推送 `main` 到 `https://github.com/githoldder/personal-blog`。
+- **Verification**:
+  1. `git status -sb` 显示本地 `main` 与 `origin/main` 同步。
+  2. `git ls-remote origin refs/heads/main` 返回 `f087d1c647b372e20793022f7e7ff5d760c3faeb`。
+- **Status**: 远端 `githoldder/personal-blog` 已持久化当前归档版本。
+
+## 2026-07-03T16:20:00+08:00
+- **Action**: 将初心文档结构化为项目章程与 Master PRD。
+- **Source**: `/Users/caolei/Desktop/Obsidian_root/00-Projects/011_项目经验/personal-blog/idea.md`
+- **Progress Details**:
+  1. 提炼原始目标为四条战略主线：Resume Proof、Technical Showcase、Knowledge Asset Sync、Semantic Exploration。
+  2. 新增 `prds/project-charter.md`，按项目章程方式整理 mission、vision、OKR、里程碑、范围、约束和 Definition of Done。
+  3. 新增 `prds/master-prd.md`，按标准 PRD 方式整理问题定义、目标指标、产品范围、史诗、用户故事、功能/非功能需求、风险和发布策略。
+  4. 将该初心文档确认为 S08-S14 后续路线的上位依据，而不是一次性临时想法。
+- **Status**: 初心已转为可执行的产品治理基准。

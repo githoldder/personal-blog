@@ -2,36 +2,53 @@
   "sprint_id": "S14",
   "title": "Semantic Intelligence, 3D Modeling and Embodied Interaction Lab",
   "objective": "在不偏离 Personal Knowledge Asset OS 初始设想的前提下，正式实现语义智能实验室能力：向量嵌入、聚类分类、大语言模型 Agent、Three.js 3D 知识图谱、WebGPU 本地计算、MediaPipe 手势识别和科学可视化分析",
-  "status": "todo",
+  "status": "in_progress",
   "created_at": "2026-07-02",
   "milestones": [
     {
       "id": "M01",
       "title": "Semantic computation foundation",
-      "status": "todo",
-      "tasks": ["S14-T01", "S14-T02", "S14-T03"]
+      "status": "done",
+      "tasks": [
+        "S14-T01",
+        "S14-T02",
+        "S14-T03"
+      ]
     },
     {
       "id": "M02",
       "title": "3D graph and embodied interaction",
-      "status": "todo",
-      "tasks": ["S14-T04", "S14-T05"]
+      "status": "in_progress",
+      "tasks": [
+        "S14-T04",
+        "S14-T05"
+      ]
     },
     {
       "id": "M03",
       "title": "Science visualization and Agent workflows",
-      "status": "todo",
-      "tasks": ["S14-T06", "S14-T07"]
+      "status": "in_progress",
+      "tasks": [
+        "S14-T06",
+        "S14-T07"
+      ]
     }
   ],
   "tasks": [
     {
       "id": "S14-T01",
       "title": "Build embedding-ready corpus and chunk pipeline",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["docs/source-record-schema.md", "content/publish-manifest.json", "public/assets/search-index.json"],
-      "outputs": ["docs/embedding-pipeline.md", "public/assets/semantic_chunks.json"],
+      "inputs": [
+        "docs/source-record-schema.md",
+        "content/publish-manifest.json",
+        "public/assets/search-index.json"
+      ],
+      "outputs": [
+        "docs/embedding-pipeline.md",
+        "public/assets/semantic_chunks.json"
+      ],
       "acceptance_criteria": [
         "Corpus chunks have stable ids, source provenance, public/private boundary metadata and text suitable for embedding",
         "Private source content is excluded from public embedding artifacts unless explicitly whitelisted",
@@ -42,10 +59,16 @@
     {
       "id": "S14-T02",
       "title": "Implement vector embedding and similarity index prototype",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["public/assets/semantic_chunks.json", "docs/embedding-pipeline.md"],
-      "outputs": ["public/assets/vector_index.json", "docs/vector-index-contract.md"],
+      "inputs": [
+        "public/assets/semantic_chunks.json",
+        "docs/embedding-pipeline.md"
+      ],
+      "outputs": [
+        "public/assets/vector_index.json",
+        "docs/vector-index-contract.md"
+      ],
       "acceptance_criteria": [
         "Vector index supports similarity lookup between public chunks",
         "Embedding generation is reproducible or fixture-backed for tests",
@@ -56,10 +79,16 @@
     {
       "id": "S14-T03",
       "title": "Add clustering and topic modeling layer",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["public/assets/vector_index.json", "public/assets/semantic_graph.json"],
-      "outputs": ["public/assets/semantic_clusters.json", "docs/clustering-contract.md"],
+      "inputs": [
+        "public/assets/vector_index.json",
+        "public/assets/semantic_graph.json"
+      ],
+      "outputs": [
+        "public/assets/semantic_clusters.json",
+        "docs/clustering-contract.md"
+      ],
       "acceptance_criteria": [
         "Clusters combine deterministic taxonomy, graph topology and vector similarity",
         "Cluster labels are inspectable and editable by the admin workflow",
@@ -70,10 +99,17 @@
     {
       "id": "S14-T04",
       "title": "Implement Three.js 3D knowledge graph prototype",
-      "status": "todo",
+      "status": "in_progress",
       "owner": "agent",
-      "inputs": ["public/assets/semantic_graph.json", "public/assets/semantic_clusters.json", "docs/lab-input-policy.md"],
-      "outputs": ["src/components/SemanticGraph3D.jsx", "src/pages/lab/graph-3d.astro"],
+      "inputs": [
+        "public/assets/semantic_graph.json",
+        "public/assets/semantic_clusters.json",
+        "docs/lab-input-policy.md"
+      ],
+      "outputs": [
+        "src/components/SemanticGraph3D.jsx",
+        "src/pages/lab/graph-3d.astro"
+      ],
       "acceptance_criteria": [
         "3D graph uses Three.js and supports orbit, zoom, node selection and cluster coloring",
         "2D fallback remains available and is the default for reduced-motion or unsupported devices",
@@ -84,10 +120,16 @@
     {
       "id": "S14-T05",
       "title": "Add MediaPipe gesture navigation experiment",
-      "status": "todo",
+      "status": "in_progress",
       "owner": "agent",
-      "inputs": ["docs/lab-input-policy.md", "src/pages/lab/graph-3d.astro"],
-      "outputs": ["src/components/GestureGraphControls.jsx", "docs/gesture-controls.md"],
+      "inputs": [
+        "docs/lab-input-policy.md",
+        "src/pages/lab/graph-3d.astro"
+      ],
+      "outputs": [
+        "src/components/GestureGraphControls.jsx",
+        "docs/gesture-controls.md"
+      ],
       "acceptance_criteria": [
         "Gesture controls require explicit camera permission and can be disabled immediately",
         "Mouse, touch and keyboard controls remain fully usable without camera access",
@@ -98,10 +140,16 @@
     {
       "id": "S14-T06",
       "title": "Prototype WebGPU local semantic analytics",
-      "status": "todo",
+      "status": "in_progress",
       "owner": "agent",
-      "inputs": ["public/assets/vector_index.json", "docs/lab-input-policy.md"],
-      "outputs": ["docs/webgpu-semantic-analytics.md", "src/components/SemanticAnalyticsPanel.jsx"],
+      "inputs": [
+        "public/assets/vector_index.json",
+        "docs/lab-input-policy.md"
+      ],
+      "outputs": [
+        "docs/webgpu-semantic-analytics.md",
+        "src/components/SemanticAnalyticsPanel.jsx"
+      ],
       "acceptance_criteria": [
         "Feature detects WebGPU and falls back to CPU/WASM or static analytics",
         "Analytics panel can compute or visualize similarity, density, cluster spread and graph centrality",
@@ -112,10 +160,17 @@
     {
       "id": "S14-T07",
       "title": "Design and implement local LLM Agent workflow prototype",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["docs/api-security-policy.md", "public/assets/semantic_chunks.json", "content/publish-manifest.json"],
-      "outputs": ["docs/llm-agent-workflows.md", "src/pages/admin/agent.astro"],
+      "inputs": [
+        "docs/api-security-policy.md",
+        "public/assets/semantic_chunks.json",
+        "content/publish-manifest.json"
+      ],
+      "outputs": [
+        "docs/llm-agent-workflows.md",
+        "src/pages/admin/agent.astro"
+      ],
       "acceptance_criteria": [
         "Agent workflows cover summarize, classify, suggest links, detect privacy risk and draft publication notes",
         "Agent outputs are suggestions only and require human approval before changing content or publish status",

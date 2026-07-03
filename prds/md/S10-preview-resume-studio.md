@@ -1,6 +1,6 @@
 # Sprint 10: Universal Preview Pipeline and Resume Studio
 
-**Status:** Todo
+**Status:** Done
 **Created:** 2026-07-02
 
 ## Objective
@@ -13,19 +13,19 @@
 
 ## Milestones
 
-- [ ] **M01: Universal preview pipeline** — 多格式预览管线
-- [ ] **M02: Resume and document studio** — 简历与文档工作台
+- [x] **M01: Universal preview pipeline** — 多格式预览管线
+- [x] **M02: Resume and document studio** — 简历与文档工作台
 
 ## Tasks
 
 | ID | Title | Status |
 |----|-------|--------|
-| S10-T01 | Implement rich Markdown preview | Todo |
-| S10-T02 | Implement media and document preview adapters | Todo |
-| S10-T03 | Implement Typst and LaTeX compile preview plan | Todo |
-| S10-T04 | Build Resume Studio interface | Todo |
-| S10-T05 | Bind evidence files to resume facts | Todo |
-| S10-T06 | Add resume template download package | Todo |
+| S10-T01 | Implement rich Markdown preview | Done |
+| S10-T02 | Implement media and document preview adapters | Done |
+| S10-T03 | Implement Typst and LaTeX compile preview plan | Done |
+| S10-T04 | Build Resume Studio interface | Done |
+| S10-T05 | Bind evidence files to resume facts | Done |
+| S10-T06 | Add resume template download package | Done |
 
 ## Acceptance Criteria
 

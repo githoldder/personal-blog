@@ -19,6 +19,15 @@ prds/
     └── S01-foundation.md      # Sprint 01 Markdown
 ```
 
+## 上位产品基准
+
+除 Sprint 双板外，`prds/` 根目录保留两个长期产品基准文件：
+
+- `prds/project-charter.md` — 来自初心文档的项目章程、OKR、里程碑、范围和治理约束。
+- `prds/master-prd.md` — 面向产品经理评审的 Master PRD，包含史诗、用户故事、功能需求、非功能需求和风险。
+
+这两个文件不参与 `scripts/validate-prd.js` 的机器校验，但它们是 S08-S14 后续需求拆分和验收标准的上位依据。
+
 ## JSON 结构规范
 
 ```json

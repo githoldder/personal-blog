@@ -2,30 +2,43 @@
   "sprint_id": "S12",
   "title": "Public Deployment and Release Operations",
   "objective": "在严格遵守 L4 人类授权的前提下，将用户端部署到公网，完成生产 SEO、资产策略、回滚演练和上线留档",
-  "status": "todo",
+  "status": "in_progress",
   "created_at": "2026-07-02",
   "milestones": [
     {
       "id": "M01",
       "title": "Deployment preparation",
-      "status": "todo",
-      "tasks": ["S12-T01", "S12-T02", "S12-T03"]
+      "status": "done",
+      "tasks": [
+        "S12-T01",
+        "S12-T02",
+        "S12-T03"
+      ]
     },
     {
       "id": "M02",
       "title": "Release execution and rollback",
-      "status": "todo",
-      "tasks": ["S12-T04", "S12-T05", "S12-T06"]
+      "status": "in_progress",
+      "tasks": [
+        "S12-T04",
+        "S12-T05",
+        "S12-T06"
+      ]
     }
   ],
   "tasks": [
     {
       "id": "S12-T01",
       "title": "Prepare Cloudflare or Vercel deployment configuration",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["docs/publication-channel-policy.md", "docs/deployment-plan.md"],
-      "outputs": ["docs/public-release-plan.md"],
+      "inputs": [
+        "docs/publication-channel-policy.md",
+        "docs/deployment-plan.md"
+      ],
+      "outputs": [
+        "docs/public-release-plan.md"
+      ],
       "acceptance_criteria": [
         "Deployment target, build command, output directory and environment requirements are documented",
         "Admin routes and private source files are excluded from public deployment",
@@ -36,10 +49,17 @@
     {
       "id": "S12-T02",
       "title": "Finalize production SEO and feed checks",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["public/sitemap.xml", "public/rss.xml", "public/atom.xml", "src/layouts/BaseLayout.astro"],
-      "outputs": ["docs/release-seo-checklist.md"],
+      "inputs": [
+        "public/sitemap.xml",
+        "public/rss.xml",
+        "public/atom.xml",
+        "src/layouts/BaseLayout.astro"
+      ],
+      "outputs": [
+        "docs/release-seo-checklist.md"
+      ],
       "acceptance_criteria": [
         "Canonical URLs, sitemap, robots, RSS and Atom are verified for production domain",
         "Private or admin URLs are absent from sitemap and feeds",
@@ -50,10 +70,15 @@
     {
       "id": "S12-T03",
       "title": "Define R2 or CDN large asset strategy",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["content/resume/references", "public/assets"],
-      "outputs": ["docs/asset-cdn-strategy.md"],
+      "inputs": [
+        "content/resume/references",
+        "public/assets"
+      ],
+      "outputs": [
+        "docs/asset-cdn-strategy.md"
+      ],
       "acceptance_criteria": [
         "Large PDFs, images and generated packages have a documented storage strategy",
         "Upload and deletion rollback procedures are documented",
@@ -64,10 +89,16 @@
     {
       "id": "S12-T04",
       "title": "Create release report and approval gate",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["docs/release-checklist.md", "docs/qa-plan.md", "docs/ci-policy.md"],
-      "outputs": ["sense/reports/public-release-report.md"],
+      "inputs": [
+        "docs/release-checklist.md",
+        "docs/qa-plan.md",
+        "docs/ci-policy.md"
+      ],
+      "outputs": [
+        "sense/reports/public-release-report.md"
+      ],
       "acceptance_criteria": [
         "Report records commit hash, build outputs, test results, visual checks and known risks",
         "Report includes an explicit human approval placeholder before deployment",
@@ -80,8 +111,13 @@
       "title": "Execute deployment only after approval",
       "status": "todo",
       "owner": "human",
-      "inputs": ["sense/reports/public-release-report.md", "docs/publication-channel-policy.md"],
-      "outputs": ["sense/reports/deployment-record.md"],
+      "inputs": [
+        "sense/reports/public-release-report.md",
+        "docs/publication-channel-policy.md"
+      ],
+      "outputs": [
+        "sense/reports/deployment-record.md"
+      ],
       "acceptance_criteria": [
         "Deployment command is run only after human explicitly authorizes it",
         "Deployment URL, timestamp and commit hash are recorded",
@@ -94,8 +130,14 @@
       "title": "Run production smoke test and rollback drill",
       "status": "todo",
       "owner": "agent",
-      "inputs": ["sense/reports/deployment-record.md", "docs/release-checklist.md"],
-      "outputs": ["sense/reports/production-smoke-test.md", "sense/reports/rollback-drill.md"],
+      "inputs": [
+        "sense/reports/deployment-record.md",
+        "docs/release-checklist.md"
+      ],
+      "outputs": [
+        "sense/reports/production-smoke-test.md",
+        "sense/reports/rollback-drill.md"
+      ],
       "acceptance_criteria": [
         "Smoke test verifies homepage, notes, projects, graph, resume, feeds and sitemap",
         "Rollback drill identifies the exact previous deployment or revert path",

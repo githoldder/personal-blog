@@ -82,3 +82,28 @@
 **资产方案（规划）：**
 - PicGo + Cloudflare R2 存储生成资产
 - Obsidian Git 同步内容真源
+
+## 初心归档与产品章程化 (2026-07-03)
+
+**决策：** 将 Obsidian 中的 `personal-blog/idea.md` 确认为 Personal Knowledge Asset OS 的上位产品初心，并整理为 `prds/project-charter.md` 与 `prds/master-prd.md`。
+
+**原始意图：**
+- 第一目的：可靠展示简历 PDF，并探索结构化源数据到 PDF 的热更新预览。
+- 第二目的：完整展示技术面，将 GitHub 项目转化为可演示、可预览、可下载的项目路演资产。
+- 第三目的：同步 Obsidian 笔记库、经验库和多媒体资产，在本地维护的同时投影到 personal-site。
+- 第四目的：尝试更极客的知识图谱与语义智能体验，包括聚类、向量嵌入、3D 可视化、手势控制和类似 Jarvis 的知识 cockpit。
+
+**影响：**
+- 后续 S08-S14 不只是功能堆叠，而是围绕“个人知识资产操作系统”的长期产品路线展开。
+- 公开网站必须优先保证简历、项目、笔记和阅读体验可访问；实验室能力只能作为增强，不可破坏核心路径。
+- 私有 Obsidian 真源与公开网站投影必须通过 publish manifest、source record、隐私过滤和本地/云端适配器明确隔离。
+
+## 前端阅读体验修复与远端归档 (2026-07-03)
+
+**决策：** 网站前端不应依赖用户本地 Obsidian 才能阅读笔记；`obsidian://`、本地路径、插件原始数据都不应出现在公开阅读体验中。
+
+**执行：**
+- 修复 `notes/[slug].astro` 的阅读页体验，增加 Wattenberger 风格的长文阅读节奏。
+- 清理 Excalidraw 插件噪声和 Obsidian block id。
+- 使用 Playwright 对目标笔记页做端到端检查，确认非 404、无控制台错误、无本地链接泄漏。
+- 将当前版本提交为 `f087d1c archive: capture immersive knowledge site snapshot` 并推送至 `githoldder/personal-blog`。

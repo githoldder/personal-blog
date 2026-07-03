@@ -42,6 +42,8 @@
 | 目录 | 角色 | 允许内容 |
 |------|------|----------|
 | `prds/README.md` | 同步协议 | PRD 双板规则 |
+| `prds/project-charter.md` | 项目章程 | 初心、OKR、里程碑、范围、治理约束 |
+| `prds/master-prd.md` | Master PRD | 标准 PRD、史诗、用户故事、功能/非功能需求 |
 | `prds/current/` | 当前边界 | 活跃 Sprint、非目标、开放问题 |
 | `prds/json/` | 机器事实源 | Sprint/Task JSON 文件 |
 | `prds/md/` | 人类评审视图 | Sprint/Task Markdown 文件 |

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-03",
+  "privacy": {
+    "default_publication": "private",
+    "rule": "Evidence files are local review assets. Only generated resume.pdf and resume.json are public by default."
+  },
+  "records": [
+    {
+      "id": "evidence-avatar",
+      "title": "Resume portrait",
+      "kind": "image",
+      "path": "content/resume/references/image.jpg",
+      "bound_to": ["basics.avatar"],
+      "public": false
+    },
+    {
+      "id": "evidence-project-experience",
+      "title": "项目经历原始记录",
+      "kind": "text",
+      "path": "content/resume/references/evidence/项目经历.txt",
+      "bound_to": ["experience", "projects"],
+      "public": false
+    },
+    {
+      "id": "evidence-fangyuan-work",
+      "title": "方圆知音挑战杯工作记录",
+      "kind": "markdown",
+      "path": "content/resume/references/evidence/挑战杯工作.md",
+      "bound_to": ["projects.方圆知音多智能体方言学习系统"],
+      "public": false
+    },
+    {
+      "id": "award-jiebang",
+      "title": "2025 年中国青年科技创新揭榜挂帅全国二等奖",
+      "kind": "certificate",
+      "path": "content/resume/references/evidence/25306680_1.pdf",
+      "bound_to": ["achievements", "projects.方圆知音多智能体方言学习系统"],
+      "public": false
+    },
+    {
+      "id": "award-aic",
+      "title": "第七届全球校园人工智能算法精英大赛省级三等奖",
+      "kind": "certificate",
+      "path": "content/resume/references/evidence/2025AIC省赛三等奖获奖证书-赛马制.pdf",
+      "bound_to": ["achievements"],
+      "public": false
+    },
+    {
+      "id": "certificate-jlpt-n2",
+      "title": "JLPT N2 证书",
+      "kind": "certificate",
+      "path": "content/resume/references/evidence/N2证书.pdf",
+      "bound_to": ["education.highlights", "achievements"],
+      "public": false
+    },
+    {
+      "id": "award-cultural-arts",
+      "title": "大学生文化艺术节先进个人",
+      "kind": "certificate",
+      "path": "content/resume/references/evidence/文化艺术节“先进个人”奖.pdf",
+      "bound_to": ["experience.计算机信息工程学院"],
+      "public": false
+    }
+  ]
+}

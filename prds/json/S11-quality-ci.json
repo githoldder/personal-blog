@@ -2,30 +2,43 @@
   "sprint_id": "S11",
   "title": "Testing, Quality Control, Defect Management and CI",
   "objective": "建立完整的软件测试体系、质量控制、缺陷管理计划和 CI 验证流水线，使双端系统和内容管线具备可持续演进的工程保障",
-  "status": "todo",
+  "status": "done",
   "created_at": "2026-07-02",
   "milestones": [
     {
       "id": "M01",
       "title": "Automated testing expansion",
-      "status": "todo",
-      "tasks": ["S11-T01", "S11-T02", "S11-T03"]
+      "status": "done",
+      "tasks": [
+        "S11-T01",
+        "S11-T02",
+        "S11-T03"
+      ]
     },
     {
       "id": "M02",
       "title": "Quality governance and CI",
-      "status": "todo",
-      "tasks": ["S11-T04", "S11-T05", "S11-T06"]
+      "status": "done",
+      "tasks": [
+        "S11-T04",
+        "S11-T05",
+        "S11-T06"
+      ]
     }
   ],
   "tasks": [
     {
       "id": "S11-T01",
       "title": "Expand parser and manifest unit tests",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["scripts", "content/publish-manifest.json"],
-      "outputs": ["tests"],
+      "inputs": [
+        "scripts",
+        "content/publish-manifest.json"
+      ],
+      "outputs": [
+        "tests"
+      ],
       "acceptance_criteria": [
         "Unit tests cover source parsing, publish manifest validation and private/public filtering",
         "Malformed source records fail safely with actionable messages",
@@ -36,10 +49,15 @@
     {
       "id": "S11-T02",
       "title": "Add integration tests for source to public projection",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["scripts/build-assets.js", "content/publish-manifest.json"],
-      "outputs": ["tests/integration"],
+      "inputs": [
+        "scripts/build-assets.js",
+        "content/publish-manifest.json"
+      ],
+      "outputs": [
+        "tests/integration"
+      ],
       "acceptance_criteria": [
         "Integration tests cover source sync, manifest selection, search index and graph generation",
         "Draft or review content cannot appear in public projection artifacts",
@@ -50,10 +68,16 @@
     {
       "id": "S11-T03",
       "title": "Add end-to-end tests for admin and public flows",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["src/pages/admin", "src/pages"],
-      "outputs": ["tests/e2e", "docs/qa-plan.md"],
+      "inputs": [
+        "src/pages/admin",
+        "src/pages"
+      ],
+      "outputs": [
+        "tests/e2e",
+        "docs/qa-plan.md"
+      ],
       "acceptance_criteria": [
         "E2E tests cover admin preview, whitelist selection and user surface visibility",
         "Tests verify public pages do not expose admin controls",
@@ -64,10 +88,16 @@
     {
       "id": "S11-T04",
       "title": "Define visual regression and accessibility gates",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["docs/design-direction.md", "src/pages"],
-      "outputs": ["docs/qa-plan.md", "tests/visual"],
+      "inputs": [
+        "docs/design-direction.md",
+        "src/pages"
+      ],
+      "outputs": [
+        "docs/qa-plan.md",
+        "tests/visual"
+      ],
       "acceptance_criteria": [
         "Critical pages have desktop and mobile screenshot baselines or documented visual checks",
         "Accessibility checks cover navigation, headings, color contrast and keyboard reachability",
@@ -78,10 +108,14 @@
     {
       "id": "S11-T05",
       "title": "Create defect management plan",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["docs/maintenance-runbook.md"],
-      "outputs": ["docs/defect-management.md"],
+      "inputs": [
+        "docs/maintenance-runbook.md"
+      ],
+      "outputs": [
+        "docs/defect-management.md"
+      ],
       "acceptance_criteria": [
         "Defect severity, triage flow and ownership rules are documented",
         "Bug templates cover UI, API, content leak, build failure and deployment failure categories",
@@ -92,10 +126,16 @@
     {
       "id": "S11-T06",
       "title": "Add CI validation pipeline",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["package.json", "docs/publication-channel-policy.md"],
-      "outputs": [".github/workflows/ci.yml", "docs/ci-policy.md"],
+      "inputs": [
+        "package.json",
+        "docs/publication-channel-policy.md"
+      ],
+      "outputs": [
+        ".github/workflows/ci.yml",
+        "docs/ci-policy.md"
+      ],
       "acceptance_criteria": [
         "CI runs install, PRD validation, unit tests and build checks",
         "CI never deploys, uploads, pushes generated content or mutates external services",

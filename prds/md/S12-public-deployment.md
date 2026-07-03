@@ -1,6 +1,6 @@
 # Sprint 12: Public Deployment and Release Operations
 
-**Status:** Todo
+**Status:** In Progress
 **Created:** 2026-07-02
 
 ## Objective
@@ -13,17 +13,17 @@
 
 ## Milestones
 
-- [ ] **M01: Deployment preparation** — 部署准备
+- [x] **M01: Deployment preparation** — 部署准备
 - [ ] **M02: Release execution and rollback** — 发布执行与回滚
 
 ## Tasks
 
 | ID | Title | Status |
 |----|-------|--------|
-| S12-T01 | Prepare Cloudflare or Vercel deployment configuration | Todo |
-| S12-T02 | Finalize production SEO and feed checks | Todo |
-| S12-T03 | Define R2 or CDN large asset strategy | Todo |
-| S12-T04 | Create release report and approval gate | Todo |
+| S12-T01 | Prepare Cloudflare or Vercel deployment configuration | Done |
+| S12-T02 | Finalize production SEO and feed checks | Done |
+| S12-T03 | Define R2 or CDN large asset strategy | Done |
+| S12-T04 | Create release report and approval gate | Done |
 | S12-T05 | Execute deployment only after approval | Todo |
 | S12-T06 | Run production smoke test and rollback drill | Todo |
 

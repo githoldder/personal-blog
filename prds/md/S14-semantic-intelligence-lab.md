@@ -1,6 +1,6 @@
 # Sprint 14: Semantic Intelligence, 3D Modeling and Embodied Interaction Lab
 
-**Status:** Todo
+**Status:** In Progress
 **Created:** 2026-07-02
 
 ## Objective
@@ -21,13 +21,13 @@
 
 | ID | Title | Status |
 |----|-------|--------|
-| S14-T01 | Build embedding-ready corpus and chunk pipeline | Todo |
-| S14-T02 | Implement vector embedding and similarity index prototype | Todo |
-| S14-T03 | Add clustering and topic modeling layer | Todo |
-| S14-T04 | Implement Three.js 3D knowledge graph prototype | Todo |
-| S14-T05 | Add MediaPipe gesture navigation experiment | Todo |
-| S14-T06 | Prototype WebGPU local semantic analytics | Todo |
-| S14-T07 | Design and implement local LLM Agent workflow prototype | Todo |
+| S14-T01 | Build embedding-ready corpus and chunk pipeline | Done |
+| S14-T02 | Implement vector embedding and similarity index prototype | Done |
+| S14-T03 | Add clustering and topic modeling layer | Done |
+| S14-T04 | Implement Three.js 3D knowledge graph prototype | In Progress |
+| S14-T05 | Add MediaPipe gesture navigation experiment | In Progress |
+| S14-T06 | Prototype WebGPU local semantic analytics | In Progress |
+| S14-T07 | Design and implement local LLM Agent workflow prototype | Done |
 
 ## Acceptance Criteria
 

@@ -1,6 +1,6 @@
 # Sprint 09: Admin and Public User Two-End Implementation
 
-**Status:** Todo
+**Status:** Done
 **Created:** 2026-07-02
 
 ## Objective
@@ -13,21 +13,21 @@
 
 ## Milestones
 
-- [ ] **M01: Public user surfaces** — 用户端公开界面
-- [ ] **M02: Semantic graph and visualization foundations** — 语义图谱与可视化承载
-- [ ] **M03: Local admin workflows** — 本地管理端工作流
+- [x] **M01: Public user surfaces** — 用户端公开界面
+- [x] **M02: Semantic graph and visualization foundations** — 语义图谱与可视化承载
+- [x] **M03: Local admin workflows** — 本地管理端工作流
 
 ## Tasks
 
 | ID | Title | Status |
 |----|-------|--------|
-| S09-T01 | Implement public library and note detail pages | Todo |
-| S09-T02 | Implement portfolio and timeline pages | Todo |
-| S09-T03 | Upgrade public graph explorer and 3D entry point | Todo |
-| S09-T04 | Implement clustering and taxonomy surfaces | Todo |
-| S09-T05 | Implement admin source browser | Todo |
-| S09-T06 | Implement admin preview and whitelist workflow | Todo |
-| S09-T07 | Integrate admin build and verify panel | Todo |
+| S09-T01 | Implement public library and note detail pages | Done |
+| S09-T02 | Implement portfolio and timeline pages | Done |
+| S09-T03 | Upgrade public graph explorer and 3D entry point | Done |
+| S09-T04 | Implement clustering and taxonomy surfaces | Done |
+| S09-T05 | Implement admin source browser | Done |
+| S09-T06 | Implement admin preview and whitelist workflow | Done |
+| S09-T07 | Integrate admin build and verify panel | Done |
 
 ## Acceptance Criteria
 

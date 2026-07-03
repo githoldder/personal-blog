@@ -1,6 +1,6 @@
 # Sprint 13: Documentation, Maintenance and Project Handoff
 
-**Status:** Todo
+**Status:** Done
 **Created:** 2026-07-02
 
 ## Objective
@@ -13,19 +13,19 @@
 
 ## Milestones
 
-- [ ] **M01: User and admin documentation** — 用户与管理员文档
-- [ ] **M02: Architecture and handoff archive** — 架构与交接留档
+- [x] **M01: User and admin documentation** — 用户与管理员文档
+- [x] **M02: Architecture and handoff archive** — 架构与交接留档
 
 ## Tasks
 
 | ID | Title | Status |
 |----|-------|--------|
-| S13-T01 | Write public user manual | Todo |
-| S13-T02 | Write admin manual | Todo |
-| S13-T03 | Write developer guide | Todo |
-| S13-T04 | Create final architecture document | Todo |
-| S13-T05 | Write troubleshooting and maintenance archive | Todo |
-| S13-T06 | Create final handoff and next roadmap | Todo |
+| S13-T01 | Write public user manual | Done |
+| S13-T02 | Write admin manual | Done |
+| S13-T03 | Write developer guide | Done |
+| S13-T04 | Create final architecture document | Done |
+| S13-T05 | Write troubleshooting and maintenance archive | Done |
+| S13-T06 | Create final handoff and next roadmap | Done |
 
 ## Acceptance Criteria
 

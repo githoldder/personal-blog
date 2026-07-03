@@ -2,36 +2,53 @@
   "sprint_id": "S09",
   "title": "Admin and Public User Two-End Implementation",
   "objective": "完成用户端与本地管理端的核心功能开发，使用户端只消费公开投影，管理端负责源内容预览、白名单勾选、发布队列、质量门禁、图谱分类与未来 3D/Agent 能力的产品承载位",
-  "status": "todo",
+  "status": "done",
   "created_at": "2026-07-02",
   "milestones": [
     {
       "id": "M01",
       "title": "Public user surfaces",
-      "status": "todo",
-      "tasks": ["S09-T01", "S09-T02", "S09-T03"]
+      "status": "done",
+      "tasks": [
+        "S09-T01",
+        "S09-T02",
+        "S09-T03"
+      ]
     },
     {
       "id": "M02",
       "title": "Semantic graph and visualization foundations",
-      "status": "todo",
-      "tasks": ["S09-T03", "S09-T04"]
+      "status": "done",
+      "tasks": [
+        "S09-T03",
+        "S09-T04"
+      ]
     },
     {
       "id": "M03",
       "title": "Local admin workflows",
-      "status": "todo",
-      "tasks": ["S09-T05", "S09-T06", "S09-T07"]
+      "status": "done",
+      "tasks": [
+        "S09-T05",
+        "S09-T06",
+        "S09-T07"
+      ]
     }
   ],
   "tasks": [
     {
       "id": "S09-T01",
       "title": "Implement public library and note detail pages",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["content/publish-manifest.json", "docs/frontend-prototype-spec.md"],
-      "outputs": ["src/pages/library.astro", "src/pages/notes/[slug].astro"],
+      "inputs": [
+        "content/publish-manifest.json",
+        "docs/frontend-prototype-spec.md"
+      ],
+      "outputs": [
+        "src/pages/library.astro",
+        "src/pages/notes/[slug].astro"
+      ],
       "acceptance_criteria": [
         "Public library only renders content allowed by the publish manifest",
         "Note detail pages support Markdown body, source metadata, tags and related navigation",
@@ -42,10 +59,17 @@
     {
       "id": "S09-T02",
       "title": "Implement portfolio and timeline pages",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["content/projects", "content/decks", "public/assets/resume.json"],
-      "outputs": ["src/pages/projects/index.astro", "src/pages/timeline.astro"],
+      "inputs": [
+        "content/projects",
+        "content/decks",
+        "public/assets/resume.json"
+      ],
+      "outputs": [
+        "src/pages/projects/index.astro",
+        "src/pages/timeline.astro"
+      ],
       "acceptance_criteria": [
         "Projects, decks, resume events and selected notes can be browsed chronologically",
         "Portfolio cards expose public evidence, skills and project metadata without private leakage",
@@ -56,10 +80,17 @@
     {
       "id": "S09-T03",
       "title": "Upgrade public graph explorer and 3D entry point",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["public/assets/semantic_graph.json", "docs/semantic-graph-contract.md"],
-      "outputs": ["src/pages/lab/graph.astro", "src/components/SemanticGraph.jsx", "docs/graph-visualization-roadmap.md"],
+      "inputs": [
+        "public/assets/semantic_graph.json",
+        "docs/semantic-graph-contract.md"
+      ],
+      "outputs": [
+        "src/pages/lab/graph.astro",
+        "src/components/SemanticGraph.jsx",
+        "docs/graph-visualization-roadmap.md"
+      ],
       "acceptance_criteria": [
         "Graph explorer supports search, filtering, cluster legend and readable node inspection",
         "Large graph data remains responsive on desktop and usable on mobile",
@@ -71,10 +102,16 @@
     {
       "id": "S09-T04",
       "title": "Implement clustering and taxonomy surfaces",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["public/assets/semantic_graph.json", "public/assets/search-index.json"],
-      "outputs": ["src/pages/library.astro", "docs/knowledge-taxonomy.md"],
+      "inputs": [
+        "public/assets/semantic_graph.json",
+        "public/assets/search-index.json"
+      ],
+      "outputs": [
+        "src/pages/library.astro",
+        "docs/knowledge-taxonomy.md"
+      ],
       "acceptance_criteria": [
         "Library and graph surfaces expose stable clusters, tags, source folders and content types",
         "Cluster labels are human-readable and can later be enriched by embeddings or LLM summaries",
@@ -85,10 +122,16 @@
     {
       "id": "S09-T05",
       "title": "Implement admin source browser",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["docs/api-contract.md", "docs/admin-console-prototype.md"],
-      "outputs": ["src/pages/admin/index.astro", "src/components/admin"],
+      "inputs": [
+        "docs/api-contract.md",
+        "docs/admin-console-prototype.md"
+      ],
+      "outputs": [
+        "src/pages/admin/index.astro",
+        "src/components/admin"
+      ],
       "acceptance_criteria": [
         "Admin can browse source tree records from the local API or generated manifest",
         "Admin displays status, tags, source path and public eligibility indicators",
@@ -99,10 +142,16 @@
     {
       "id": "S09-T06",
       "title": "Implement admin preview and whitelist workflow",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["docs/publish-manifest-schema.md", "docs/preview-api-contract.md"],
-      "outputs": ["src/components/admin", "content/publish-manifest.json"],
+      "inputs": [
+        "docs/publish-manifest-schema.md",
+        "docs/preview-api-contract.md"
+      ],
+      "outputs": [
+        "src/components/admin",
+        "content/publish-manifest.json"
+      ],
       "acceptance_criteria": [
         "Admin can preview a source item and mark it draft, review or publishable in the manifest",
         "Manifest changes are explicit local writes and do not publish remotely",
@@ -113,10 +162,16 @@
     {
       "id": "S09-T07",
       "title": "Integrate admin build and verify panel",
-      "status": "todo",
+      "status": "done",
       "owner": "agent",
-      "inputs": ["package.json", "docs/maintenance-runbook.md"],
-      "outputs": ["src/pages/admin/index.astro", "docs/admin-manual.md"],
+      "inputs": [
+        "package.json",
+        "docs/maintenance-runbook.md"
+      ],
+      "outputs": [
+        "src/pages/admin/index.astro",
+        "docs/admin-manual.md"
+      ],
       "acceptance_criteria": [
         "Admin shows build, verify and preview commands with current local status",
         "No one-click public deploy is added",
