@@ -17,6 +17,11 @@ const PUBLIC_DIR = join(ROOT, 'public');
 
 const RSS_OUTPUT = join(PUBLIC_DIR, 'rss.xml');
 const ATOM_OUTPUT = join(PUBLIC_DIR, 'atom.xml');
+const PUBLIC_HANDLE = 'githoldder';
+
+export function publicAlias(value) {
+  return String(value || '').replace(/曹磊/g, PUBLIC_HANDLE);
+}
 
 // 时区稳定日期解析 (以 UTC 基准计算，对应东八区早上 8 点)
 export function parseLocalDate(dateStr) {
@@ -93,7 +98,7 @@ function main() {
   console.log('[build-feeds] Starting RSS and Atom feeds generation...');
 
   let siteUrl = 'https://caolei.net';
-  let authorName = '曹磊';
+  let authorName = PUBLIC_HANDLE;
   let siteDescription = '个人知识资产操作系统 - 聚合笔记、简历、项目与演示文稿';
 
   const resumePath = join(PUBLIC_DIR, 'assets/resume.json');
@@ -102,15 +107,15 @@ function main() {
       const resume = JSON.parse(readFileSync(resumePath, 'utf-8'));
       if (resume?.basics) {
         if (resume.basics.url) siteUrl = resume.basics.url.replace(/\/$/, '');
-        if (resume.basics.name) authorName = resume.basics.name;
-        if (resume.basics.summary) siteDescription = resume.basics.summary;
+        authorName = PUBLIC_HANDLE;
+        if (resume.basics.summary) siteDescription = publicAlias(resume.basics.summary);
       }
     } catch (e) {
       console.warn(`[build-feeds] Failed to parse resume.json for feeds: ${e.message}`);
     }
   }
 
-  const siteTitle = `${authorName}的个人知识资产操作系统`;
+  const siteTitle = `${authorName} knowledge OS`;
   const items = [];
   
   // 2. 扫描并解析 Notes
@@ -141,10 +146,10 @@ function main() {
         const date = parseLocalDate(frontmatter.date);
         
         items.push({
-          title: frontmatter.title || slug,
+          title: publicAlias(frontmatter.title || slug),
           link: `${siteUrl}/notes/${slug}/`,
           date,
-          description: frontmatter.summary || (body.slice(0, 200).replace(/[#*`~_\-[\]()]/g, '').trim() + '...')
+          description: publicAlias(frontmatter.summary || (body.slice(0, 200).replace(/[#*`~_\-[\]()]/g, '').trim() + '...'))
         });
       } catch (err) {
         console.warn(`[build-feeds] Failed to parse note ${file}: ${err.message}`);
@@ -180,10 +185,10 @@ function main() {
         const date = parseLocalDate(frontmatter.date);
 
         items.push({
-          title: frontmatter.title || slug,
+          title: publicAlias(frontmatter.title || slug),
           link: `${siteUrl}/projects/${slug}/`,
           date,
-          description: frontmatter.description || (body.slice(0, 200).replace(/[#*`~_\-[\]()]/g, '').trim() + '...')
+          description: publicAlias(frontmatter.description || (body.slice(0, 200).replace(/[#*`~_\-[\]()]/g, '').trim() + '...'))
         });
       } catch (err) {
         console.warn(`[build-feeds] Failed to parse project ${file}: ${err.message}`);

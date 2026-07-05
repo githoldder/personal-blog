@@ -1,0 +1,326 @@
+---
+interface Topic {
+  label: string;
+  count: number;
+  share: number;
+  color: string;
+  x: number;
+  y: number;
+}
+
+interface Props {
+  topics: Topic[];
+  notesCount: number;
+  graphNodes: number;
+  graphEdges: number;
+}
+
+const { topics, notesCount, graphNodes, graphEdges } = Astro.props;
+const totalTopicCount = topics.reduce((sum, topic) => sum + topic.count, 0);
+---
+
+<section class="topic-constellation" aria-labelledby="topic-constellation-title">
+  <div class="topic-constellation__copy">
+    <button class="math-mark" type="button" aria-label="切换首页数学标识" data-math-mark>
+      <svg viewBox="0 0 96 96" role="img" aria-hidden="true">
+        <circle class="math-mark__orbit" cx="48" cy="48" r="34"></circle>
+        <path class="math-mark__curve" d="M22 58 C36 24 61 22 74 46 S64 76 38 68"></path>
+        <circle class="math-mark__node math-mark__node--a" cx="28" cy="56" r="4"></circle>
+        <circle class="math-mark__node math-mark__node--b" cx="48" cy="31" r="4"></circle>
+        <circle class="math-mark__node math-mark__node--c" cx="72" cy="48" r="4"></circle>
+        <text class="math-mark__symbol" x="48" y="54" text-anchor="middle" data-math-symbol>∇</text>
+      </svg>
+      <span data-math-label>githoldder</span>
+    </button>
+
+    <p class="topic-constellation__eyebrow">DATA-DRIVEN HOME FIELD</p>
+    <h2 id="topic-constellation-title">caolei 的知识系统星图</h2>
+    <p>
+      首页不再只摆静态卡片，而是从已发布笔记的标签里抽取主题重心：标签越高频，节点越大；
+      图谱节点与连线作为系统背景指标，提示这里是一座可计算的个人知识花园。
+    </p>
+    <div class="topic-constellation__metrics" aria-label="知识系统统计">
+      <span><strong>{notesCount}</strong> notes</span>
+      <span><strong>{graphNodes}</strong> nodes</span>
+      <span><strong>{graphEdges}</strong> edges</span>
+      <span><strong>{topics.length}</strong> topics</span>
+    </div>
+  </div>
+
+  <div class="topic-constellation__viz" aria-label="基于笔记标签生成的主题星图">
+    <svg viewBox="0 0 640 420" role="img">
+      <defs>
+        <radialGradient id="topic-core" cx="50%" cy="50%" r="60%">
+          <stop offset="0%" stop-color="#fff7ed" stop-opacity="1"></stop>
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0"></stop>
+        </radialGradient>
+      </defs>
+      <rect width="640" height="420" fill="url(#topic-core)"></rect>
+      <g class="topic-constellation__grid">
+        {Array.from({ length: 9 }).map((_, index) => (
+          <line x1={80 + index * 60} y1="34" x2={80 + index * 60} y2="386"></line>
+        ))}
+        {Array.from({ length: 6 }).map((_, index) => (
+          <line x1="46" y1={70 + index * 54} x2="594" y2={70 + index * 54}></line>
+        ))}
+      </g>
+      <g>
+        {topics.map((topic) => (
+          <line
+            class="topic-constellation__link"
+            x1="320"
+            y1="210"
+            x2={topic.x}
+            y2={topic.y}
+            style={`--topic-color: ${topic.color}`}
+          ></line>
+        ))}
+      </g>
+      <g>
+        <circle class="topic-constellation__center" cx="320" cy="210" r="18"></circle>
+        <text class="topic-constellation__center-label" x="320" y="247" text-anchor="middle">caolei OS</text>
+      </g>
+      <g>
+        {topics.map((topic) => {
+          const radius = Math.max(14, Math.min(46, 12 + topic.share * 120));
+          return (
+            <g class="topic-node" style={`--topic-color: ${topic.color}`}>
+              <circle cx={topic.x} cy={topic.y} r={radius}></circle>
+              <text x={topic.x} y={topic.y - radius - 9} text-anchor="middle">{topic.label}</text>
+              <text class="topic-node__count" x={topic.x} y={topic.y + 4} text-anchor="middle">{topic.count}</text>
+            </g>
+          );
+        })}
+      </g>
+    </svg>
+    <div class="topic-constellation__legend">
+      <span>topic mass = tag frequency</span>
+      <span>{totalTopicCount} tag hits sampled</span>
+    </div>
+  </div>
+</section>
+
+<script>
+  const mark = document.querySelector('[data-math-mark]');
+  const symbol = mark?.querySelector('[data-math-symbol]');
+  const label = mark?.querySelector('[data-math-label]');
+  const states = [
+    { symbol: '∇', label: 'githoldder' },
+    { symbol: 'λ', label: 'caolei' },
+    { symbol: '∫', label: 'knowledge(t) dt' },
+    { symbol: 'Σ', label: 'notes × projects' },
+  ];
+  let stateIndex = 0;
+
+  mark?.addEventListener('click', () => {
+    stateIndex = (stateIndex + 1) % states.length;
+    const state = states[stateIndex];
+    if (symbol) symbol.textContent = state.symbol;
+    if (label) label.textContent = state.label;
+    mark.classList.add('is-switching');
+    window.setTimeout(() => mark.classList.remove('is-switching'), 260);
+  });
+</script>
+
+<style>
+  .topic-constellation {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.25fr);
+    gap: 2.5rem;
+    align-items: center;
+    padding: 1.25rem 0 2rem;
+  }
+
+  .topic-constellation__copy {
+    max-width: 35rem;
+  }
+
+  .topic-constellation__eyebrow {
+    margin: 1rem 0 0.75rem;
+    font: 700 0.62rem/1 var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+    letter-spacing: 0.18em;
+    color: #be123c;
+  }
+
+  .topic-constellation h2 {
+    margin: 0;
+    font-family: var(--font-serif, Georgia, serif);
+    font-size: clamp(2.25rem, 6vw, 5.2rem);
+    line-height: 0.96;
+    color: #0f172a;
+  }
+
+  .topic-constellation p {
+    margin: 1.25rem 0 0;
+    max-width: 32rem;
+    font-family: var(--font-serif, Georgia, serif);
+    color: #475569;
+    line-height: 1.85;
+  }
+
+  .math-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.35rem 0.7rem 0.35rem 0.35rem;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    color: #0f172a;
+    font: 700 0.72rem/1 var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+    cursor: pointer;
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
+    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+  }
+
+  .math-mark:hover,
+  .math-mark:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(190, 18, 60, 0.35);
+    background: rgba(255, 241, 242, 0.84);
+    outline: none;
+  }
+
+  .math-mark svg {
+    width: 2.45rem;
+    height: 2.45rem;
+    overflow: visible;
+  }
+
+  .math-mark__orbit {
+    fill: none;
+    stroke: rgba(15, 23, 42, 0.18);
+    stroke-width: 1.5;
+    stroke-dasharray: 3 5;
+    transform-origin: 48px 48px;
+    transition: transform 260ms ease;
+  }
+
+  .math-mark:hover .math-mark__orbit,
+  .math-mark.is-switching .math-mark__orbit {
+    transform: rotate(34deg) scale(1.08);
+  }
+
+  .math-mark__curve {
+    fill: none;
+    stroke: #be123c;
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+
+  .math-mark__node {
+    fill: #d9b86c;
+    transition: transform 220ms ease;
+    transform-origin: center;
+  }
+
+  .math-mark:hover .math-mark__node--a { transform: translate(-4px, 2px); }
+  .math-mark:hover .math-mark__node--b { transform: translate(0, -5px); }
+  .math-mark:hover .math-mark__node--c { transform: translate(5px, 2px); }
+
+  .math-mark__symbol {
+    fill: #0f172a;
+    font: 800 30px/1 Georgia, serif;
+  }
+
+  .topic-constellation__metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.4rem;
+  }
+
+  .topic-constellation__metrics span {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    padding: 0.45rem 0.65rem;
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.62);
+    color: #64748b;
+    font: 700 0.66rem/1 var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+  }
+
+  .topic-constellation__metrics strong {
+    color: #0f172a;
+    font-size: 0.82rem;
+  }
+
+  .topic-constellation__viz {
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 8px;
+    background:
+      radial-gradient(circle at 24% 18%, rgba(217, 184, 108, 0.13), transparent 18rem),
+      radial-gradient(circle at 80% 12%, rgba(79, 143, 104, 0.1), transparent 16rem),
+      rgba(255, 255, 255, 0.72);
+    box-shadow: 0 22px 70px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+  }
+
+  .topic-constellation__viz svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .topic-constellation__grid line {
+    stroke: rgba(148, 163, 184, 0.16);
+    stroke-width: 1;
+  }
+
+  .topic-constellation__link {
+    stroke: var(--topic-color);
+    stroke-width: 1.5;
+    stroke-opacity: 0.32;
+    stroke-dasharray: 5 8;
+  }
+
+  .topic-constellation__center {
+    fill: #0f172a;
+    stroke: rgba(255, 255, 255, 0.9);
+    stroke-width: 8;
+  }
+
+  .topic-constellation__center-label,
+  .topic-node text {
+    fill: #334155;
+    font: 700 12px/1 var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+  }
+
+  .topic-node circle {
+    fill: color-mix(in srgb, var(--topic-color) 18%, white);
+    stroke: var(--topic-color);
+    stroke-width: 2;
+    filter: drop-shadow(0 12px 18px rgba(15, 23, 42, 0.1));
+  }
+
+  .topic-node__count {
+    fill: #0f172a;
+    font-size: 13px;
+  }
+
+  .topic-constellation__legend {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.18);
+    color: #94a3b8;
+    font: 700 0.62rem/1 var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 900px) {
+    .topic-constellation {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .math-mark,
+    .math-mark * {
+      transition: none;
+    }
+  }
+</style>

@@ -31,19 +31,19 @@
       "metadata": {
         "file": "content/projects/darwin-skill.md",
         "date": "2026-04-01",
-        "degree": 0,
+        "degree": 1,
         "tags": [],
         "scope": "Projects"
       }
     },
     {
       "id": "project:file-processor-assistant",
-      "label": "文件处理全能助手 (v1.0.1)",
+      "label": "文件处理与分布式高并发文档转换系统 (v2.0.0)",
       "type": "project",
       "metadata": {
         "file": "content/projects/file-processor-assistant.md",
-        "date": "2026-03-11",
-        "degree": 1,
+        "date": "2026-06-22",
+        "degree": 0,
         "tags": [],
         "scope": "Projects"
       }
@@ -55,18 +55,18 @@
       "metadata": {
         "file": "content/projects/lingobridge.md",
         "date": "2025-03-15",
-        "degree": 0,
+        "degree": 1,
         "tags": [],
         "scope": "Projects"
       }
     },
     {
-      "id": "project:personal-knowledge-asset-os",
-      "label": "Personal Knowledge Asset OS",
+      "id": "project:personal-blog",
+      "label": "Personal Knowledge Asset OS (personal-blog)",
       "type": "project",
       "metadata": {
-        "file": "content/projects/personal-knowledge-asset-os.md",
-        "date": "2026-06-26",
+        "file": "content/projects/personal-blog.md",
+        "date": "2026-07-03",
         "degree": 1,
         "tags": [],
         "scope": "Projects"
@@ -79,7 +79,7 @@
       "metadata": {
         "file": "content/projects/school-gtd-dashboard.md",
         "date": "2025-08-10",
-        "degree": 0,
+        "degree": 1,
         "tags": [],
         "scope": "Projects"
       }

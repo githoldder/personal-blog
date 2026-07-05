@@ -1,6 +1,51 @@
 {
   "nodes": [
     {
+      "id": "note:excalidraw-ai产业链分层及vibe-coding的git版本管理",
+      "label": "ai产业链分层及vibe coding的git版本管理",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/excalidraw-ai产业链分层及vibe coding的git版本管理.md",
+        "stage": "budding",
+        "date": "2026-06-11",
+        "degree": 18,
+        "tags": [
+          "excalidraw"
+        ],
+        "scope": "Resources-Notes"
+      }
+    },
+    {
+      "id": "note:excalidraw-harness-engineering-ralph组件",
+      "label": "harness_engineering（Ralph组件）",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/excalidraw-harness_engineering（Ralph组件）.md",
+        "stage": "budding",
+        "date": "2026-06-17",
+        "degree": 18,
+        "tags": [
+          "excalidraw"
+        ],
+        "scope": "Resources-Notes"
+      }
+    },
+    {
+      "id": "note:excalidraw-世界观-价值观-人生观视图-14-08-57",
+      "label": "世界观、价值观、人生观视图 14.08.57",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/excalidraw-世界观、价值观、人生观视图 14.08.57.md",
+        "stage": "budding",
+        "date": "2026-06-17",
+        "degree": 18,
+        "tags": [
+          "excalidraw"
+        ],
+        "scope": "Resources-Notes"
+      }
+    },
+    {
       "id": "note:obsidian-000ea51c82d267f202adb4730c67f9b5",
       "label": "Summarize",
       "type": "note",
@@ -222,7 +267,7 @@
         "file": "content/notes/obsidian-03d27d1d8a5626150f870d961e7de620.md",
         "stage": "seedling",
         "date": "2026-06-11",
-        "degree": 9,
+        "degree": 8,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -2367,7 +2412,7 @@
         "file": "content/notes/obsidian-50d6b96e671aa113429d701c7b33ebb5.md",
         "stage": "budding",
         "date": "2026-06-11",
-        "degree": 19,
+        "degree": 18,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -2466,7 +2511,7 @@
         "file": "content/notes/obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b.md",
         "stage": "seedling",
         "date": "2026-07-03",
-        "degree": 13,
+        "degree": 12,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -3250,7 +3295,7 @@
         "file": "content/notes/obsidian-6b7f6b443f948d73bd22e494beb371bc.md",
         "stage": "seedling",
         "date": "2026-07-02",
-        "degree": 22,
+        "degree": 21,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -3268,7 +3313,7 @@
         "file": "content/notes/obsidian-6c507681d537a7d1002a2b47e9091777.md",
         "stage": "seedling",
         "date": "2026-06-11",
-        "degree": 3,
+        "degree": 2,
         "tags": [
           "Obsidian",
           "品润红色经典活动.md",
@@ -3757,7 +3802,7 @@
         "file": "content/notes/obsidian-7bc37adaa34cd72d14f852e7e6e32282.md",
         "stage": "seedling",
         "date": "2026-07-03",
-        "degree": 15,
+        "degree": 14,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -4538,7 +4583,7 @@
         "file": "content/notes/obsidian-9ceed5107c8c106d6ac5db7c118d08e6.md",
         "stage": "seedling",
         "date": "2026-06-11",
-        "degree": 7,
+        "degree": 6,
         "tags": [
           "Obsidian",
           "014_学生会",
@@ -4628,7 +4673,7 @@
         "file": "content/notes/obsidian-9f5215a6b5e76d998ae990d891a975be.md",
         "stage": "seedling",
         "date": "2026-06-11",
-        "degree": 3,
+        "degree": 2,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -4803,7 +4848,7 @@
         "file": "content/notes/obsidian-a432cb067ceedb9c4cc1690c3e029bd7.md",
         "stage": "seedling",
         "date": "2026-06-30",
-        "degree": 10,
+        "degree": 9,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -5459,7 +5504,7 @@
         "file": "content/notes/obsidian-b418f4047e24467e96642e625977bf25.md",
         "stage": "budding",
         "date": "2026-06-11",
-        "degree": 5,
+        "degree": 20,
         "tags": [
           "Obsidian",
           "001_个人规划",
@@ -5874,7 +5919,7 @@
         "file": "content/notes/obsidian-be4cc536b2a4ab5a0eef95423b20fc01.md",
         "stage": "budding",
         "date": "2026-06-27",
-        "degree": 14,
+        "degree": 13,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -6189,7 +6234,7 @@
         "file": "content/notes/obsidian-c8deb3be42a192e02ebe6650af59de52.md",
         "stage": "seedling",
         "date": "2026-06-11",
-        "degree": 9,
+        "degree": 8,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -6445,7 +6490,7 @@
         "file": "content/notes/obsidian-d232279ea251084fd65eb619f194e721.md",
         "stage": "budding",
         "date": "2026-06-11",
-        "degree": 5,
+        "degree": 20,
         "tags": [
           "Obsidian",
           "001_个人规划",
@@ -7025,7 +7070,7 @@
         "file": "content/notes/obsidian-e5275201532f699889138f717b939d2e.md",
         "stage": "seedling",
         "date": "2026-07-03",
-        "degree": 27,
+        "degree": 26,
         "tags": [
           "Obsidian",
           "010_时间管理",
@@ -7482,7 +7527,7 @@
         "file": "content/notes/obsidian-f6741648f67f681cf03101ca32985e34.md",
         "stage": "budding",
         "date": "2026-06-11",
-        "degree": 3,
+        "degree": 18,
         "tags": [
           "Obsidian",
           "002_知识体系构建",
@@ -7705,7 +7750,7 @@
         "file": "content/notes/obsidian-fedcf6b57797485590fc9ce58de61ed0.md",
         "stage": "budding",
         "date": "2026-06-11",
-        "degree": 3,
+        "degree": 18,
         "tags": [
           "Obsidian",
           "001_个人规划",
@@ -10682,214 +10727,233 @@
       "type": "link"
     },
     {
-      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
-      "target": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "source": "note:excalidraw-ai产业链分层及vibe-coding的git版本管理",
+      "target": "note:excalidraw-harness-engineering-ralph组件",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
-      "target": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
+      "source": "note:excalidraw-ai产业链分层及vibe-coding的git版本管理",
+      "target": "note:excalidraw-世界观-价值观-人生观视图-14-08-57",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
-      "target": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
+      "source": "note:excalidraw-ai产业链分层及vibe-coding的git版本管理",
+      "target": "note:obsidian-b418f4047e24467e96642e625977bf25",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
-      "target": "note:obsidian-7bc37adaa34cd72d14f852e7e6e32282",
+      "source": "note:excalidraw-ai产业链分层及vibe-coding的git版本管理",
+      "target": "note:obsidian-d232279ea251084fd65eb619f194e721",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
-      "target": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
+      "source": "note:excalidraw-ai产业链分层及vibe-coding的git版本管理",
+      "target": "note:obsidian-f6741648f67f681cf03101ca32985e34",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
-      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
+      "source": "note:excalidraw-ai产业链分层及vibe-coding的git版本管理",
+      "target": "note:obsidian-fedcf6b57797485590fc9ce58de61ed0",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
-      "target": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
+      "source": "note:excalidraw-harness-engineering-ralph组件",
+      "target": "note:excalidraw-世界观-价值观-人生观视图-14-08-57",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
-      "target": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
+      "source": "note:excalidraw-harness-engineering-ralph组件",
+      "target": "note:obsidian-b418f4047e24467e96642e625977bf25",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
-      "target": "note:obsidian-7bc37adaa34cd72d14f852e7e6e32282",
+      "source": "note:excalidraw-harness-engineering-ralph组件",
+      "target": "note:obsidian-d232279ea251084fd65eb619f194e721",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
-      "target": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
+      "source": "note:excalidraw-harness-engineering-ralph组件",
+      "target": "note:obsidian-f6741648f67f681cf03101ca32985e34",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
-      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
+      "source": "note:excalidraw-harness-engineering-ralph组件",
+      "target": "note:obsidian-fedcf6b57797485590fc9ce58de61ed0",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
-      "target": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
+      "source": "note:excalidraw-世界观-价值观-人生观视图-14-08-57",
+      "target": "note:obsidian-b418f4047e24467e96642e625977bf25",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
-      "target": "note:obsidian-7bc37adaa34cd72d14f852e7e6e32282",
+      "source": "note:excalidraw-世界观-价值观-人生观视图-14-08-57",
+      "target": "note:obsidian-d232279ea251084fd65eb619f194e721",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
-      "target": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
+      "source": "note:excalidraw-世界观-价值观-人生观视图-14-08-57",
+      "target": "note:obsidian-f6741648f67f681cf03101ca32985e34",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
-      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
+      "source": "note:excalidraw-世界观-价值观-人生观视图-14-08-57",
+      "target": "note:obsidian-fedcf6b57797485590fc9ce58de61ed0",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
-      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
+      "source": "note:obsidian-b418f4047e24467e96642e625977bf25",
+      "target": "note:obsidian-d232279ea251084fd65eb619f194e721",
       "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "GTD"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-6c507681d537a7d1002a2b47e9091777",
-      "target": "note:obsidian-9ceed5107c8c106d6ac5db7c118d08e6",
-      "weight": 0.5,
+      "source": "note:obsidian-b418f4047e24467e96642e625977bf25",
+      "target": "note:obsidian-f6741648f67f681cf03101ca32985e34",
+      "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "活动策划",
-          "活动"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-6c507681d537a7d1002a2b47e9091777",
-      "target": "note:obsidian-9f5215a6b5e76d998ae990d891a975be",
-      "weight": 0.5,
+      "source": "note:obsidian-b418f4047e24467e96642e625977bf25",
+      "target": "note:obsidian-fedcf6b57797485590fc9ce58de61ed0",
+      "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "活动策划",
-          "活动"
+          "excalidraw"
         ]
       }
     },
     {
-      "source": "note:obsidian-9ceed5107c8c106d6ac5db7c118d08e6",
-      "target": "note:obsidian-9f5215a6b5e76d998ae990d891a975be",
-      "weight": 0.5,
+      "source": "note:obsidian-d232279ea251084fd65eb619f194e721",
+      "target": "note:obsidian-f6741648f67f681cf03101ca32985e34",
+      "weight": 0.25,
       "type": "tag_overlap",
       "metadata": {
         "shared_tags": [
-          "活动策划",
-          "活动"
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-d232279ea251084fd65eb619f194e721",
+      "target": "note:obsidian-fedcf6b57797485590fc9ce58de61ed0",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-f6741648f67f681cf03101ca32985e34",
+      "target": "note:obsidian-fedcf6b57797485590fc9ce58de61ed0",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
         ]
       }
     },
@@ -41236,6 +41300,182 @@
     },
     {
       "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "target": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "target": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "target": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "target": "note:obsidian-7bc37adaa34cd72d14f852e7e6e32282",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "target": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
+      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "target": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "target": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "target": "note:obsidian-7bc37adaa34cd72d14f852e7e6e32282",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "target": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-50d6b96e671aa113429d701c7b33ebb5",
+      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
+      "target": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
+      "target": "note:obsidian-7bc37adaa34cd72d14f852e7e6e32282",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-5487ac98f806ce7da4d0dd8dd1e9dc3b",
+      "target": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-6b7f6b443f948d73bd22e494beb371bc",
+      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-c8deb3be42a192e02ebe6650af59de52",
+      "target": "note:obsidian-e5275201532f699889138f717b939d2e",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "GTD"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-03d27d1d8a5626150f870d961e7de620",
       "target": "note:obsidian-31470c2e6b60a4241f5788b4a84a0a4e",
       "weight": 0.25,
       "type": "tag_overlap",
@@ -49909,6 +50149,42 @@
       }
     },
     {
+      "source": "note:obsidian-6c507681d537a7d1002a2b47e9091777",
+      "target": "note:obsidian-9ceed5107c8c106d6ac5db7c118d08e6",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "活动",
+          "活动策划"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-6c507681d537a7d1002a2b47e9091777",
+      "target": "note:obsidian-9f5215a6b5e76d998ae990d891a975be",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "活动",
+          "活动策划"
+        ]
+      }
+    },
+    {
+      "source": "note:obsidian-9ceed5107c8c106d6ac5db7c118d08e6",
+      "target": "note:obsidian-9f5215a6b5e76d998ae990d891a975be",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "活动",
+          "活动策划"
+        ]
+      }
+    },
+    {
       "source": "note:obsidian-8563baef4cd8a4a2ba966848089c1887",
       "target": "note:obsidian-eef8aa4fbdce1856ada1d4a5c4d5c487",
       "weight": 0.25,
@@ -49940,77 +50216,11 @@
           "执行清单"
         ]
       }
-    },
-    {
-      "source": "note:obsidian-b418f4047e24467e96642e625977bf25",
-      "target": "note:obsidian-d232279ea251084fd65eb619f194e721",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "excalidraw"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-b418f4047e24467e96642e625977bf25",
-      "target": "note:obsidian-f6741648f67f681cf03101ca32985e34",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "excalidraw"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-b418f4047e24467e96642e625977bf25",
-      "target": "note:obsidian-fedcf6b57797485590fc9ce58de61ed0",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "excalidraw"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-d232279ea251084fd65eb619f194e721",
-      "target": "note:obsidian-f6741648f67f681cf03101ca32985e34",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "excalidraw"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-d232279ea251084fd65eb619f194e721",
-      "target": "note:obsidian-fedcf6b57797485590fc9ce58de61ed0",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "excalidraw"
-        ]
-      }
-    },
-    {
-      "source": "note:obsidian-f6741648f67f681cf03101ca32985e34",
-      "target": "note:obsidian-fedcf6b57797485590fc9ce58de61ed0",
-      "weight": 0.25,
-      "type": "tag_overlap",
-      "metadata": {
-        "shared_tags": [
-          "excalidraw"
-        ]
-      }
     }
   ],
   "metadata": {
     "scope": "Resources-Notes",
-    "total_nodes": 444,
-    "total_edges": 4003
+    "total_nodes": 447,
+    "total_edges": 4018
   }
 }

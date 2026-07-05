@@ -12,6 +12,7 @@ const JSON_PATH = join(ROOT, 'public/assets/resume.json');
 let resume = null;
 let hasPdf = false;
 let hasJson = false;
+const publicName = 'githoldder';
 
 if (existsSync(YAML_PATH)) {
   try {
@@ -31,13 +32,13 @@ if (existsSync(JSON_PATH)) {
 }
 ---
 
-<BaseLayout title={resume ? `${resume.basics.name} — 个人简历` : "简历 — Personal Knowledge Asset OS"}>
+<BaseLayout title={resume ? `${publicName} — 简历` : "简历 — Personal Knowledge Asset OS"}>
   <header class="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-6 border-b border-surface-200">
     <div>
       {resume && (
         <div>
-          <h1 class="text-3xl font-bold tracking-tight text-surface-900">{resume.basics.name}</h1>
-          <p class="text-lg text-accent font-medium mt-1">{resume.basics.label}</p>
+          <h1 class="text-3xl font-bold tracking-tight text-surface-900">{publicName}</h1>
+          <p class="text-lg text-accent font-medium mt-1">{resume.basics.label?.replace(/曹磊/g, 'caolei')}</p>
         </div>
       )}
     </div>
@@ -219,4 +220,3 @@ if (existsSync(JSON_PATH)) {
       </div>
     )}
 </BaseLayout>
-

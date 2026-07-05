@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
-import { readFileSync, existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
-import { join, dirname, basename, relative } from 'node:path';
+import { readFileSync, existsSync, mkdirSync, readdirSync, writeFileSync, statSync } from 'node:fs';
+import { join, dirname, basename, relative, isAbsolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -12,8 +14,13 @@ const OUTPUT_SLIDES = join(ROOT, 'public/slides');
 const OUTPUT_ASSETS = join(ROOT, 'public/assets');
 const OUTPUT_DECK_ASSETS = join(OUTPUT_ASSETS, 'decks');
 const OUTPUT_MANIFEST = join(OUTPUT_DECK_ASSETS, 'manifest.json');
+const PUBLIC_HANDLE = 'githoldder';
 
-function slugify(value) {
+function publicAlias(value) {
+  return String(value || '').replace(/曹磊/g, PUBLIC_HANDLE);
+}
+
+export function slugify(value) {
   return value
     .toLowerCase()
     .trim()
@@ -21,7 +28,7 @@ function slugify(value) {
     .replace(/^-+|-+$/g, '');
 }
 
-function parseDeckFrontmatter(filePath) {
+export function parseDeckFrontmatter(filePath) {
   const raw = readFileSync(filePath, 'utf-8');
   const match = raw.match(/^---\n([\s\S]*?)\n---\n?/);
 
@@ -51,13 +58,37 @@ function parseDeckFrontmatter(filePath) {
   return metadata;
 }
 
-function normalizeDeck(file) {
-  const filePath = join(INPUT_DIR, file);
+export function contentHashFor(raw) {
+  return `sha256:${createHash('sha256').update(raw).digest('hex')}`;
+}
+
+export function formatsForDeck(slug) {
+  return {
+    html: {
+      path: `public/slides/${slug}/`,
+      url: `/slides/${slug}/`
+    },
+    pdf: {
+      path: `public/assets/${slug}.pdf`,
+      url: `/assets/${slug}.pdf`
+    },
+    pptx: {
+      path: `public/assets/${slug}.pptx`,
+      url: `/assets/${slug}.pptx`
+    }
+  };
+}
+
+export function normalizeDeck(file) {
+  const filePath = isAbsolute(file) ? file : join(INPUT_DIR, file);
+  const raw = readFileSync(filePath, 'utf-8');
   const metadata = parseDeckFrontmatter(filePath);
   const fallbackSlug = slugify(basename(file, '.md'));
   const slug = metadata.slug ? slugify(String(metadata.slug)) : fallbackSlug;
-  const title = metadata.title ? String(metadata.title).trim() : '';
+  const title = metadata.title ? publicAlias(metadata.title).trim() : '';
   const date = metadata.date ? String(metadata.date).trim() : '';
+  const formats = formatsForDeck(slug);
+  const buildLog = `public/assets/decks/${slug}.build.log`;
 
   if (!slug) {
     throw new Error(`${file}: slug could not be derived`);
@@ -74,14 +105,34 @@ function normalizeDeck(file) {
     title,
     date,
     sourcePath: relative(ROOT, filePath),
+    content_hash: contentHashFor(raw),
+    updated_at: statSync(filePath).mtime.toISOString(),
+    formats,
+    build_log: buildLog,
     outputs: {
-      html: `public/slides/${slug}/`,
-      pdf: `public/assets/${slug}.pdf`
+      html: formats.html.path,
+      pdf: formats.pdf.path
     },
     build: {
       status: 'pending',
+      engine: 'slidev',
+      log: buildLog,
       requires: '@slidev/cli',
       notes: 'S03-T03 only defines the deterministic manifest; Slidev HTML/PDF export is handled by a later build step.'
+    },
+    export: {
+      status: 'not_requested',
+      adapter: 'scripts/keynote-adapter.js',
+      modes: ['pptx-to-pdf', 'export-pptx']
+    },
+    keynote: {
+      status: 'not_checked',
+      safe_adapter: 'scripts/keynote-adapter.js'
+    },
+    publish: {
+      status: 'not_requested',
+      adapter: 'scripts/publish-cloudflare.js',
+      remote_publish: false
     }
   };
 }
@@ -116,6 +167,16 @@ function main() {
 
   console.log(`[build-decks] Found ${files.length} deck(s).`);
 
+  // 检测全局 slidev 可用性
+  let slidevAvailable = false;
+  try {
+    const stdout = execSync('slidev --version', { encoding: 'utf-8' });
+    console.log(`[build-decks] Found global Slidev CLI version: ${stdout.trim()}`);
+    slidevAvailable = true;
+  } catch (e) {
+    console.warn('[build-decks] WARNING: global "slidev" CLI is not available. Slidev compile will be skipped.');
+  }
+
   const decks = [];
   const seenSlugs = new Set();
 
@@ -133,6 +194,105 @@ function main() {
       process.exit(1);
     }
     seenSlugs.add(deck.slug);
+
+    // 针对不同类型的 Deck 执行具体的物理静态生成
+    if (deck.slug === 'resume-presentation') {
+      console.log(`[build-decks] Processing PPTX resume presentation: ${deck.slug}`);
+      const slideDir = join(ROOT, 'public/slides', deck.slug);
+      if (!existsSync(slideDir)) {
+        mkdirSync(slideDir, { recursive: true });
+      }
+      
+      // 生成优雅的 PDF 全屏预览 iframe HTML 页面
+      const htmlContent = `
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${PUBLIC_HANDLE} - 个人简历演示文稿</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .header {
+      height: 48px;
+      background-color: #1e293b;
+      color: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      font-size: 14px;
+    }
+    .header a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #38bdf8;
+      padding: 4px 12px;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .header a:hover {
+      background-color: #38bdf8;
+      color: #1e293b;
+    }
+    iframe {
+      width: 100%;
+      height: calc(100% - 48px);
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <span>🎴 ${PUBLIC_HANDLE} — 个人求职简历 PPTX 展示</span>
+    <a href="/assets/resume-presentation.pdf" download>下载 PDF 💾</a>
+  </div>
+  <iframe src="/assets/resume-presentation.pdf"></iframe>
+</body>
+</html>
+      `.trim();
+      
+      writeFileSync(join(slideDir, 'index.html'), htmlContent, 'utf-8');
+      deck.build.status = 'success';
+      deck.build.notes = 'PPTX presentation mapped to PDF with custom iframe viewer.';
+    } else if (slidevAvailable) {
+      console.log(`[build-decks] Compiling Slidev deck: ${deck.slug} via global Slidev CLI...`);
+      try {
+        const slideDir = join(ROOT, 'public/slides', deck.slug);
+        const sourceFile = join(ROOT, deck.sourcePath);
+        
+        // 执行 slidev build 编译
+        execSync(`slidev build "${sourceFile}" --out "${slideDir}" --base "/slides/${deck.slug}/"`, { stdio: 'inherit' });
+        console.log(`[build-decks] Slidev compilation succeeded for ${deck.slug}`);
+        
+        deck.build.status = 'success';
+        deck.build.notes = 'Successfully compiled via Slidev CLI.';
+      } catch (err) {
+        console.error(`[build-decks] Slidev compilation failed for ${deck.slug}:`, err.message);
+        deck.build.status = 'failed';
+        deck.build.notes = `Compilation failed: ${err.message}`;
+      }
+    } else {
+      console.log(`[build-decks] Slidev CLI missing. Skipped compile for: ${deck.slug}`);
+    }
+
+    writeFileSync(join(ROOT, deck.build_log), [
+      `deck=${deck.slug}`,
+      `status=${deck.build.status}`,
+      `engine=${deck.build.engine}`,
+      `notes=${deck.build.notes}`
+    ].join('\n') + '\n', 'utf-8');
+
     decks.push(deck);
     console.log(`[build-decks]   - ${deck.slug}: ${deck.title}`);
   }
@@ -151,4 +311,6 @@ function main() {
   console.log('[build-decks] Done.');
 }
 
-main();
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
+  main();
+}

@@ -47,9 +47,9 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
-export function validateDeckManifest(manifest, root = ROOT) {
+export function validateDeckManifest(manifest, root = ROOT, options = {}) {
   assert(manifest && typeof manifest === 'object', 'Deck manifest must be an object');
-  assert(manifest.schema_version === 1, 'Deck manifest schema_version must be 1');
+  assert([1, 2].includes(manifest.schema_version), 'Deck manifest schema_version must be 1 or 2');
   assert(Array.isArray(manifest.decks), 'Deck manifest decks must be an array');
   assert(manifest.count === manifest.decks.length, 'Deck manifest count must match decks length');
 
@@ -64,6 +64,18 @@ export function validateDeckManifest(manifest, root = ROOT) {
     assert(existsSync(join(root, deck.sourcePath)), `Deck sourcePath does not exist: ${deck.sourcePath}`);
     assert(deck.outputs?.html, `Deck ${deck.slug} missing outputs.html`);
     assert(deck.outputs?.pdf, `Deck ${deck.slug} missing outputs.pdf`);
+    if (options.requireS16DeckFields) {
+      assert(deck.formats?.html?.path, `Deck ${deck.slug} missing formats.html.path`);
+      assert(deck.formats?.html?.url, `Deck ${deck.slug} missing formats.html.url`);
+      assert(deck.formats?.pdf?.path, `Deck ${deck.slug} missing formats.pdf.path`);
+      assert(deck.formats?.pdf?.url, `Deck ${deck.slug} missing formats.pdf.url`);
+      assert(deck.formats?.pptx?.path, `Deck ${deck.slug} missing formats.pptx.path`);
+      assert(deck.formats?.pptx?.url, `Deck ${deck.slug} missing formats.pptx.url`);
+      assert(/^sha256:[a-f0-9]{64}$/.test(deck.content_hash || ''), `Deck ${deck.slug} missing valid content_hash`);
+      assert(typeof deck.updated_at === 'string' && !Number.isNaN(Date.parse(deck.updated_at)), `Deck ${deck.slug} missing valid updated_at`);
+      assert(deck.build_log, `Deck ${deck.slug} missing build_log`);
+      assert(deck.build?.log === deck.build_log, `Deck ${deck.slug} build.log must match build_log`);
+    }
   }
 }
 

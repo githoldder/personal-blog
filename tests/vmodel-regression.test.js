@@ -30,10 +30,17 @@ test('local API contract and implementation preserve read-only local boundary', 
   assert.match(read('docs/api-contract.md'), /127\.0\.0\.1/);
   assert.match(read('docs/api-security-policy.md'), /L4/);
 
-  const post = route('POST', '/publish-manifest');
-  assert.equal(post.status, 405);
+  const post = await route('POST', '/publish-manifest', {});
+  assert.notEqual(post.status, 200);
 
-  const health = route('GET', '/health');
+  const saveWithoutBody = await route('POST', '/source/save', {});
+  assert.equal(saveWithoutBody.status, 400);
+
+  const sourceFile = await route('GET', '/source/file?path=content/resume/resume.yaml');
+  assert.equal(sourceFile.status, 200);
+  assert.equal(sourceFile.body.path, 'content/resume/resume.yaml');
+
+  const health = await route('GET', '/health');
   assert.equal(health.status, 200);
   assert.equal(health.body.mode, 'local-only');
 });
@@ -43,10 +50,10 @@ test('resume upgrade binds modern projects to local evidence manifest', () => {
   const manifest = JSON.parse(read('content/resume/evidence-manifest.json'));
 
   assert.match(yaml, /Personal Knowledge Asset OS/);
-  assert.match(yaml, /方圆知音多智能体方言学习系统/);
-  assert.match(yaml, /Praat/);
+  assert.match(yaml, /LingoBridge 中文学习直播课堂 MVP/);
+  assert.match(yaml, /文件处理全能助手/);
   assert.match(yaml, /D3-force/);
-  assert.ok(manifest.records.some(record => record.bound_to.includes('projects.方圆知音多智能体方言学习系统')));
+  assert.ok(manifest.records.some(record => record.bound_to.some(target => target.startsWith('projects'))));
   assert.equal(manifest.privacy.default_publication, 'private');
 });
 

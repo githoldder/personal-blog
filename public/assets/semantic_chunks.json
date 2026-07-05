@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-03T11:04:35.408Z",
+  "generated_at": "2026-07-05T04:15:29.728Z",
   "chunks": [
     {
       "id": "chunk:note:book-博弈论",
@@ -89,6 +89,374 @@
       "type": "note",
       "public": true,
       "text": "金字塔原理笔记\n![[金字塔原理大全集_(芭芭拉·明托)_(Z-Library).pdf#page=57&rect=63,58,576,502|金字塔原理大全集_(芭芭拉·明托)_(Z-Library), p.57]]\n> [!PDF|yellow] [[..."
+    },
+    {
+      "id": "chunk:note:canvas-002-英语语法知识体系认知地图",
+      "source_id": "note:canvas-002-英语语法知识体系认知地图",
+      "title": "002-英语语法知识体系认知地图",
+      "type": "note",
+      "public": true,
+      "text": "002-英语语法知识体系认知地图\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-AI产品经理开发流程",
+      "source_id": "note:canvas-AI产品经理开发流程",
+      "title": "AI产品经理开发流程",
+      "type": "note",
+      "public": true,
+      "text": "AI产品经理开发流程\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-AI发展史-风格化增强版",
+      "source_id": "note:canvas-AI发展史-风格化增强版",
+      "title": "AI发展史-风格化增强版",
+      "type": "note",
+      "public": true,
+      "text": "AI发展史-风格化增强版\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-GTD流程图",
+      "source_id": "note:canvas-GTD流程图",
+      "title": "GTD流程图",
+      "type": "note",
+      "public": true,
+      "text": "GTD流程图\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-GTD看板",
+      "source_id": "note:canvas-GTD看板",
+      "title": "GTD看板",
+      "type": "note",
+      "public": true,
+      "text": "GTD看板\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-TODO看板",
+      "source_id": "note:canvas-TODO看板",
+      "title": "TODO看板",
+      "type": "note",
+      "public": true,
+      "text": "TODO看板\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-TTS实现方法研究",
+      "source_id": "note:canvas-TTS实现方法研究",
+      "title": "TTS实现方法研究",
+      "type": "note",
+      "public": true,
+      "text": "TTS实现方法研究\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-idea的工程级项目存储结构",
+      "source_id": "note:canvas-idea的工程级项目存储结构",
+      "title": "idea的工程级项目存储结构",
+      "type": "note",
+      "public": true,
+      "text": "idea的工程级项目存储结构\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-web应用开发实验",
+      "source_id": "note:canvas-web应用开发实验",
+      "title": "web应用开发实验",
+      "type": "note",
+      "public": true,
+      "text": "web应用开发实验\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-云服务发展史",
+      "source_id": "note:canvas-云服务发展史",
+      "title": "云服务发展史",
+      "type": "note",
+      "public": true,
+      "text": "云服务发展史\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-互联网架构演化史",
+      "source_id": "note:canvas-互联网架构演化史",
+      "title": "互联网架构演化史",
+      "type": "note",
+      "public": true,
+      "text": "互联网架构演化史\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-人工智能发展史及应用技术迭代史",
+      "source_id": "note:canvas-人工智能发展史及应用技术迭代史",
+      "title": "人工智能发展史及应用技术迭代史",
+      "type": "note",
+      "public": true,
+      "text": "人工智能发展史及应用技术迭代史\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-多元思维模式",
+      "source_id": "note:canvas-多元思维模式",
+      "title": "多元思维模式",
+      "type": "note",
+      "public": true,
+      "text": "多元思维模式\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-如何成为一个厉害的人",
+      "source_id": "note:canvas-如何成为一个厉害的人",
+      "title": "如何成为一个厉害的人",
+      "type": "note",
+      "public": true,
+      "text": "如何成为一个厉害的人\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-提高工作效率的方法论",
+      "source_id": "note:canvas-提高工作效率的方法论",
+      "title": "提高工作效率的方法论",
+      "type": "note",
+      "public": true,
+      "text": "提高工作效率的方法论\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-文件格式处理场景及解决方案",
+      "source_id": "note:canvas-文件格式处理场景及解决方案",
+      "title": "文件格式处理场景及解决方案",
+      "type": "note",
+      "public": true,
+      "text": "文件格式处理场景及解决方案\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-日历看板",
+      "source_id": "note:canvas-日历看板",
+      "title": "日历看板",
+      "type": "note",
+      "public": true,
+      "text": "日历看板\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-日语初级-N5所有知识点概览",
+      "source_id": "note:canvas-日语初级-N5所有知识点概览",
+      "title": "日语初级-N5所有知识点概览",
+      "type": "note",
+      "public": true,
+      "text": "日语初级-N5所有知识点概览\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-管理学思维和技巧",
+      "source_id": "note:canvas-管理学思维和技巧",
+      "title": "管理学思维和技巧",
+      "type": "note",
+      "public": true,
+      "text": "管理学思维和技巧\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-编译原理期末复习",
+      "source_id": "note:canvas-编译原理期末复习",
+      "title": "编译原理期末复习",
+      "type": "note",
+      "public": true,
+      "text": "编译原理期末复习\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-考研数学一大纲",
+      "source_id": "note:canvas-考研数学一大纲",
+      "title": "考研数学一大纲",
+      "type": "note",
+      "public": true,
+      "text": "考研数学一大纲\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-苍穹外卖项目整体框架图和工作流",
+      "source_id": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "title": "苍穹外卖项目整体框架图和工作流",
+      "type": "note",
+      "public": true,
+      "text": "苍穹外卖项目整体框架图和工作流\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-解决问题人脑决策思维流程图",
+      "source_id": "note:canvas-解决问题人脑决策思维流程图",
+      "title": "解决问题人脑决策思维流程图",
+      "type": "note",
+      "public": true,
+      "text": "解决问题人脑决策思维流程图\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-计设赛C组教学设计_演示PPT",
+      "source_id": "note:canvas-计设赛C组教学设计_演示PPT",
+      "title": "计设赛C组教学设计_演示PPT",
+      "type": "note",
+      "public": true,
+      "text": "计设赛C组教学设计_演示PPT\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-调研流程工具箱",
+      "source_id": "note:canvas-调研流程工具箱",
+      "title": "调研流程工具箱",
+      "type": "note",
+      "public": true,
+      "text": "调研流程工具箱\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-软件体系结构期末考试复习",
+      "source_id": "note:canvas-软件体系结构期末考试复习",
+      "title": "软件体系结构期末考试复习",
+      "type": "note",
+      "public": true,
+      "text": "软件体系结构期末考试复习\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-软件工程作业四",
+      "source_id": "note:canvas-软件工程作业四",
+      "title": "软件工程作业四",
+      "type": "note",
+      "public": true,
+      "text": "软件工程作业四\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-软件工程期末复习",
+      "source_id": "note:canvas-软件工程期末复习",
+      "title": "软件工程期末复习",
+      "type": "note",
+      "public": true,
+      "text": "软件工程期末复习\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-软件架构-层级图",
+      "source_id": "note:canvas-软件架构-层级图",
+      "title": "软件架构-层级图",
+      "type": "note",
+      "public": true,
+      "text": "软件架构-层级图\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-驾考",
+      "source_id": "note:canvas-驾考",
+      "title": "驾考",
+      "type": "note",
+      "public": true,
+      "text": "驾考\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:canvas-高数上-思维导图",
+      "source_id": "note:canvas-高数上-思维导图",
+      "title": "高数上-思维导图",
+      "type": "note",
+      "public": true,
+      "text": "高数上-思维导图\n（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）..."
+    },
+    {
+      "id": "chunk:note:excalidraw-Docker的入门教程知识拆解",
+      "source_id": "note:excalidraw-Docker的入门教程知识拆解",
+      "title": "Docker的入门教程知识拆解",
+      "type": "note",
+      "public": true,
+      "text": "Docker的入门教程知识拆解\n==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the c..."
+    },
+    {
+      "id": "chunk:note:excalidraw-ai产业链分层",
+      "source_id": "note:excalidraw-ai产业链分层",
+      "title": "ai产业链分层",
+      "type": "note",
+      "public": true,
+      "text": "ai产业链分层\n==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the c..."
+    },
+    {
+      "id": "chunk:note:excalidraw-ai产业链分层及vibe coding的git版本管理",
+      "source_id": "note:excalidraw-ai产业链分层及vibe coding的git版本管理",
+      "title": "ai产业链分层及vibe coding的git版本管理",
+      "type": "note",
+      "public": true,
+      "text": "ai产业链分层及vibe coding的git版本管理\n==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the c..."
+    },
+    {
+      "id": "chunk:note:excalidraw-harness_engineering（Ralph组件）",
+      "source_id": "note:excalidraw-harness_engineering（Ralph组件）",
+      "title": "harness_engineering（Ralph组件）",
+      "type": "note",
+      "public": true,
+      "text": "harness_engineering（Ralph组件）\n==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the c..."
+    },
+    {
+      "id": "chunk:note:excalidraw-umll类图绘制规则",
+      "source_id": "note:excalidraw-umll类图绘制规则",
+      "title": "umll类图绘制规则",
+      "type": "note",
+      "public": true,
+      "text": "umll类图绘制规则\n==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the c..."
+    },
+    {
+      "id": "chunk:note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+      "source_id": "note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+      "title": "世界观、价值观、人生观视图 14.08.57",
+      "type": "note",
+      "public": true,
+      "text": "世界观、价值观、人生观视图 14.08.57\n==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the c..."
+    },
+    {
+      "id": "chunk:note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "source_id": "note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "title": "以应试考试做题家视角解析理工科知识学习",
+      "type": "note",
+      "public": true,
+      "text": "以应试考试做题家视角解析理工科知识学习\n==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the c..."
+    },
+    {
+      "id": "chunk:note:excalidraw-日综拆解",
+      "source_id": "note:excalidraw-日综拆解",
+      "title": "日综拆解",
+      "type": "note",
+      "public": true,
+      "text": "日综拆解\n==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the c..."
+    },
+    {
+      "id": "chunk:note:excalidraw-时间事务管理体系",
+      "source_id": "note:excalidraw-时间事务管理体系",
+      "title": "时间事务管理体系",
+      "type": "note",
+      "public": true,
+      "text": "时间事务管理体系\n==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the c..."
+    },
+    {
+      "id": "chunk:note:excalidraw-智能体工作原理_被动性资产构建工具四象限",
+      "source_id": "note:excalidraw-智能体工作原理_被动性资产构建工具四象限",
+      "title": "智能体工作原理_被动性资产构建工具四象限",
+      "type": "note",
+      "public": true,
+      "text": "智能体工作原理_被动性资产构建工具四象限\n==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the c..."
+    },
+    {
+      "id": "chunk:note:excalidraw-校园水果生鲜C2F+O2O",
+      "source_id": "note:excalidraw-校园水果生鲜C2F+O2O",
+      "title": "校园水果生鲜C2F+O2O",
+      "type": "note",
+      "public": true,
+      "text": "校园水果生鲜C2F+O2O\n==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the c..."
+    },
+    {
+      "id": "chunk:note:excalidraw-知识层级体系_git原理",
+      "source_id": "note:excalidraw-知识层级体系_git原理",
+      "title": "知识层级体系_git原理",
+      "type": "note",
+      "public": true,
+      "text": "知识层级体系_git原理\n==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the c..."
+    },
+    {
+      "id": "chunk:note:excalidraw-编译原理作业二",
+      "source_id": "note:excalidraw-编译原理作业二",
+      "title": "编译原理作业二",
+      "type": "note",
+      "public": true,
+      "text": "编译原理作业二\n==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the c..."
+    },
+    {
+      "id": "chunk:note:excalidraw-金字塔模型_漏斗模型",
+      "source_id": "note:excalidraw-金字塔模型_漏斗模型",
+      "title": "金字塔模型_漏斗模型",
+      "type": "note",
+      "public": true,
+      "text": "金字塔模型_漏斗模型\n==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the c..."
+    },
+    {
+      "id": "chunk:note:excalidraw-高数函数案例图",
+      "source_id": "note:excalidraw-高数函数案例图",
+      "title": "高数函数案例图",
+      "type": "note",
+      "public": true,
+      "text": "高数函数案例图\n==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the c..."
     },
     {
       "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
@@ -593,374 +961,6 @@
       "type": "note",
       "public": true,
       "text": "002_Generate_glossary\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
-      "source_id": "note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
-      "title": "LingoBridge 功能需求文档 (PRD)",
-      "type": "note",
-      "public": true,
-      "text": "LingoBridge 功能需求文档 (PRD)\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
-      "source_id": "note:obsidian-0be35e638ad661bfa204064e57457c5a",
-      "title": "软件工程作业五",
-      "type": "note",
-      "public": true,
-      "text": "软件工程作业五\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
-      "source_id": "note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
-      "title": "02-第二节 极限",
-      "type": "note",
-      "public": true,
-      "text": "02-第二节 极限\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-0c63749384221322924164e1b7defd64",
-      "source_id": "note:obsidian-0c63749384221322924164e1b7defd64",
-      "title": "**软件需求规格说明书 (SRS) - LingoBridge 教学辅助平台**",
-      "type": "note",
-      "public": true,
-      "text": "**软件需求规格说明书 (SRS) - LingoBridge 教学辅助平台**\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-0c9b186483cd29e5ae87e4f57bdec3ee",
-      "source_id": "note:obsidian-0c9b186483cd29e5ae87e4f57bdec3ee",
-      "title": "web应用开发作业三四",
-      "type": "note",
-      "public": true,
-      "text": "web应用开发作业三四\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-0d518430ba476ba8e0bc82df489315fc",
-      "source_id": "note:obsidian-0d518430ba476ba8e0bc82df489315fc",
-      "title": "CulCloud 成员代码分工说明书 - 程志阳 (组员)",
-      "type": "note",
-      "public": true,
-      "text": "CulCloud 成员代码分工说明书 - 程志阳 (组员)\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
-      "source_id": "note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
-      "title": "新建java文件运行逻辑",
-      "type": "note",
-      "public": true,
-      "text": "新建java文件运行逻辑\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
-      "source_id": "note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
-      "title": "004-产品开发任务执行规范",
-      "type": "note",
-      "public": true,
-      "text": "004-产品开发任务执行规范\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
-      "source_id": "note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
-      "title": "006_简易待办事项",
-      "type": "note",
-      "public": true,
-      "text": "006_简易待办事项\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
-      "source_id": "note:obsidian-0f255939168b22e784f3e71b3e35cc89",
-      "title": "LingoBridge 可行性分析报告",
-      "type": "note",
-      "public": true,
-      "text": "LingoBridge 可行性分析报告\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
-      "source_id": "note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
-      "title": "对照学习人生有意义的13件事，形成自己的5年规划",
-      "type": "note",
-      "public": true,
-      "text": "对照学习人生有意义的13件事，形成自己的5年规划\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
-      "source_id": "note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
-      "title": "定积分的应用（元素法）",
-      "type": "note",
-      "public": true,
-      "text": "定积分的应用（元素法）\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-0fd006309dd0e86057e11f5960f7a058",
-      "source_id": "note:obsidian-0fd006309dd0e86057e11f5960f7a058",
-      "title": "LingoBridge 调研数据摘要",
-      "type": "note",
-      "public": true,
-      "text": "LingoBridge 调研数据摘要\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-0fd2e4accd424529d03d9675721a32d6",
-      "source_id": "note:obsidian-0fd2e4accd424529d03d9675721a32d6",
-      "title": "11_需求访谈双方信息对齐模版",
-      "type": "note",
-      "public": true,
-      "text": "11_需求访谈双方信息对齐模版\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
-      "source_id": "note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
-      "title": "065-光里日语初级班第五节课",
-      "type": "note",
-      "public": true,
-      "text": "065-光里日语初级班第五节课\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-112fa661110db5f27a1fba58d3f407c6",
-      "source_id": "note:obsidian-112fa661110db5f27a1fba58d3f407c6",
-      "title": "001_Generate_table_of_contents",
-      "type": "note",
-      "public": true,
-      "text": "001_Generate_table_of_contents\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
-      "source_id": "note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
-      "title": "000-认知的本质",
-      "type": "note",
-      "public": true,
-      "text": "000-认知的本质\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-14f8b98931997454721a799dd971bb15",
-      "source_id": "note:obsidian-14f8b98931997454721a799dd971bb15",
-      "title": "2_Background",
-      "type": "note",
-      "public": true,
-      "text": "2_Background\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
-      "source_id": "note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
-      "title": "03-01-LingoBridge 二次需求访谈",
-      "type": "note",
-      "public": true,
-      "text": "03-01-LingoBridge 二次需求访谈\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
-      "source_id": "note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
-      "title": "后端",
-      "type": "note",
-      "public": true,
-      "text": "后端\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
-      "source_id": "note:obsidian-15f69b30b581333b247b705ccd4c4938",
-      "title": "**实验一黑盒测试**",
-      "type": "note",
-      "public": true,
-      "text": "**实验一黑盒测试**\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-15f79b42c0a521e94e4155b80f4f1da1",
-      "source_id": "note:obsidian-15f79b42c0a521e94e4155b80f4f1da1",
-      "title": "Mac 端常用 Syncthing & Git 操作清单",
-      "type": "note",
-      "public": true,
-      "text": "Mac 端常用 Syncthing & Git 操作清单\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-1639497d9752084addd03e6757555719",
-      "source_id": "note:obsidian-1639497d9752084addd03e6757555719",
-      "title": "营销理念“4p原则”",
-      "type": "note",
-      "public": true,
-      "text": "营销理念“4p原则”\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-1676754dc65c12cc278c57b506b48985",
-      "source_id": "note:obsidian-1676754dc65c12cc278c57b506b48985",
-      "title": "005_逻辑学与逻辑中的谬误",
-      "type": "note",
-      "public": true,
-      "text": "005_逻辑学与逻辑中的谬误\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
-      "source_id": "note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
-      "title": "软件工程文档交付工作流",
-      "type": "note",
-      "public": true,
-      "text": "软件工程文档交付工作流\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
-      "source_id": "note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
-      "title": "033-上瘾原理",
-      "type": "note",
-      "public": true,
-      "text": "033-上瘾原理\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
-      "source_id": "note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
-      "title": "工程经济学作业五六",
-      "type": "note",
-      "public": true,
-      "text": "工程经济学作业五六\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-16f85841237279ed9f23e6cd2318998c",
-      "source_id": "note:obsidian-16f85841237279ed9f23e6cd2318998c",
-      "title": "动词",
-      "type": "note",
-      "public": true,
-      "text": "动词\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
-      "source_id": "note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
-      "title": "宾语",
-      "type": "note",
-      "public": true,
-      "text": "宾语\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
-      "source_id": "note:obsidian-178238e0db04d6cd772cce495e35f955",
-      "title": "🎨 AI发展史Canvas风格化设计",
-      "type": "note",
-      "public": true,
-      "text": "🎨 AI发展史Canvas风格化设计\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-17f1a8a8c3c99484139e2485180f7d77",
-      "source_id": "note:obsidian-17f1a8a8c3c99484139e2485180f7d77",
-      "title": "工厂模式",
-      "type": "note",
-      "public": true,
-      "text": "工厂模式\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-18062e14a079ba5f7b5b794f84709870",
-      "source_id": "note:obsidian-18062e14a079ba5f7b5b794f84709870",
-      "title": "培养读书习惯",
-      "type": "note",
-      "public": true,
-      "text": "培养读书习惯\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
-      "source_id": "note:obsidian-180fae3c2928cb3f23fc503af416b07d",
-      "title": "PPT修改要点",
-      "type": "note",
-      "public": true,
-      "text": "PPT修改要点\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-183665454ae199435161348053d4a3e7",
-      "source_id": "note:obsidian-183665454ae199435161348053d4a3e7",
-      "title": "LingoBridge 当前进度、Sprint 规划与部署扫盲",
-      "type": "note",
-      "public": true,
-      "text": "LingoBridge 当前进度、Sprint 规划与部署扫盲\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
-      "source_id": "note:obsidian-188b05adccb53c30e7b6a565f855cf28",
-      "title": "作业2",
-      "type": "note",
-      "public": true,
-      "text": "作业2\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-18f26e53563c98e7b69f6f1bc6ca53a6",
-      "source_id": "note:obsidian-18f26e53563c98e7b69f6f1bc6ca53a6",
-      "title": "深入设计模式(1)",
-      "type": "note",
-      "public": true,
-      "text": "深入设计模式(1)\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
-      "source_id": "note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
-      "title": "函数的凹凸性与拐点",
-      "type": "note",
-      "public": true,
-      "text": "函数的凹凸性与拐点\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
-      "source_id": "note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
-      "title": "5回目宿題",
-      "type": "note",
-      "public": true,
-      "text": "5回目宿題\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
-      "source_id": "note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
-      "title": "逆向思维",
-      "type": "note",
-      "public": true,
-      "text": "逆向思维\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
-      "source_id": "note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
-      "title": "040-听力模版",
-      "type": "note",
-      "public": true,
-      "text": "040-听力模版\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
-      "source_id": "note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
-      "title": "光纤",
-      "type": "note",
-      "public": true,
-      "text": "光纤\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-      "source_id": "note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-      "title": "元数据",
-      "type": "note",
-      "public": true,
-      "text": "元数据\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-1a546b9f3bfa8be806de2adc35c67f77",
-      "source_id": "note:obsidian-1a546b9f3bfa8be806de2adc35c67f77",
-      "title": "解决 macOS 使用 Homebrew 安装国外镜像切换代理后的配置问题",
-      "type": "note",
-      "public": true,
-      "text": "解决 macOS 使用 Homebrew 安装国外镜像切换代理后的配置问题\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
-      "source_id": "note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
-      "title": "SMTP",
-      "type": "note",
-      "public": true,
-      "text": "SMTP\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
-      "source_id": "note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
-      "title": "Media Note - 收集箱当中的事情如何放进其他分区？",
-      "type": "note",
-      "public": true,
-      "text": "Media Note - 收集箱当中的事情如何放进其他分区？\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
-    },
-    {
-      "id": "chunk:note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
-      "source_id": "note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
-      "title": "反常积分",
-      "type": "note",
-      "public": true,
-      "text": "反常积分\n<div class=\"obsidian-trigger select-none\" style=\"margin-bottom: 2.5rem; padding: 1rem; border: 1px dashed rgba(226, 232..."
     }
   ]
 }

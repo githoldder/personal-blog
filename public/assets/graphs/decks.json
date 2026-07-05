@@ -10,12 +10,23 @@
         "tags": [],
         "scope": "Decks"
       }
+    },
+    {
+      "id": "deck:resume-presentation",
+      "label": "githoldder - 个人求职简历 PPTX 展示",
+      "type": "deck",
+      "metadata": {
+        "file": "content/decks/resume-presentation.md",
+        "degree": 0,
+        "tags": [],
+        "scope": "Decks"
+      }
     }
   ],
   "edges": [],
   "metadata": {
     "scope": "Decks",
-    "total_nodes": 1,
+    "total_nodes": 2,
     "total_edges": 0
   }
 }

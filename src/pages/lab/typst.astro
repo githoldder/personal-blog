@@ -1,0 +1,488 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const initialFiles = [
+  'content/resume/resume.yaml',
+  'content/resume/template.typ',
+];
+
+const helpLinks = [
+  { label: 'Syntax', href: 'https://typst.app/docs/reference/syntax/' },
+  { label: 'Reference', href: 'https://typst.app/docs/reference/' },
+  { label: 'Layout', href: 'https://typst.app/docs/reference/layout/' },
+  { label: 'Text', href: 'https://typst.app/docs/reference/text/' },
+];
+---
+
+<BaseLayout title="Typst Lab" description="Local Typst resume workspace for caolei / githoldder.">
+  <section class="typst-shell" data-typst-lab>
+    <header class="typst-header">
+      <div>
+        <p class="typst-kicker">Local Typst Lab</p>
+        <h1>Resume Workbench</h1>
+        <p class="typst-summary">
+          A focused local workspace for caolei / githoldder resume source files, Typst template editing, PDF review, and build notes.
+        </p>
+      </div>
+      <div class="typst-actions" aria-label="Workbench actions">
+        <a class="typst-link-button" href="/assets/resume.pdf" target="_blank" rel="noreferrer">Open PDF</a>
+        <button type="button" data-action="reload">Reload</button>
+        <button type="button" data-action="save" class="primary">Save</button>
+      </div>
+    </header>
+
+    <div class="typst-grid">
+      <aside class="typst-pane typst-files" aria-labelledby="typst-files-title">
+        <div class="pane-head">
+          <h2 id="typst-files-title">Files</h2>
+          <span data-tree-state>Static targets</span>
+        </div>
+        <nav class="file-list" data-file-list aria-label="Resume source files">
+          {initialFiles.map((file, index) => (
+            <button
+              type="button"
+              class={index === 0 ? 'active' : ''}
+              data-file-path={file}
+              aria-pressed={index === 0 ? 'true' : 'false'}
+            >
+              <span>{file.split('/').pop()}</span>
+              <small>{file}</small>
+            </button>
+          ))}
+        </nav>
+      </aside>
+
+      <section class="typst-pane typst-editor" aria-labelledby="typst-editor-title">
+        <div class="pane-head">
+          <div>
+            <h2 id="typst-editor-title">Editor</h2>
+            <span data-current-file>{initialFiles[0]}</span>
+          </div>
+          <p data-save-state>Ready</p>
+        </div>
+        <textarea
+          data-editor
+          spellcheck="false"
+          autocomplete="off"
+          autocapitalize="off"
+          aria-label="Typst source editor"
+        >Select a source file to load it from the local API.</textarea>
+      </section>
+
+      <section class="typst-pane typst-preview" aria-labelledby="typst-preview-title">
+        <div class="pane-head">
+          <h2 id="typst-preview-title">Preview</h2>
+          <span>/assets/resume.pdf</span>
+        </div>
+        <iframe src="/assets/resume.pdf" title="Resume PDF preview" loading="lazy"></iframe>
+      </section>
+
+      <section class="typst-pane typst-log" aria-labelledby="typst-log-title">
+        <div class="pane-head">
+          <h2 id="typst-log-title">Build Log</h2>
+          <span>Local status</span>
+        </div>
+        <pre data-build-log>Waiting for local API connection.
+GET /source/tree
+GET /source/file?path=content%2Fresume%2Fresume.yaml
+POST /source/save</pre>
+      </section>
+
+      <aside class="typst-pane typst-help" aria-labelledby="typst-help-title">
+        <div class="pane-head">
+          <h2 id="typst-help-title">Help</h2>
+          <span>Typst docs</span>
+        </div>
+        <div class="help-links">
+          {helpLinks.map((link) => (
+            <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+          ))}
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const lab = document.querySelector('[data-typst-lab]');
+
+  if (lab) {
+    const initialFiles = ['content/resume/resume.yaml', 'content/resume/template.typ'];
+    const fileList = /** @type {HTMLElement | null} */ (lab.querySelector('[data-file-list]'));
+    const editorElement = lab.querySelector('[data-editor]');
+    const currentFile = lab.querySelector('[data-current-file]');
+    const saveState = lab.querySelector('[data-save-state]');
+    const treeState = lab.querySelector('[data-tree-state]');
+    const buildLog = lab.querySelector('[data-build-log]');
+    const saveButton = lab.querySelector('[data-action="save"]');
+    const reloadButton = lab.querySelector('[data-action="reload"]');
+    let activePath = initialFiles[0];
+
+    const setLog = (message) => {
+      if (buildLog) buildLog.textContent = message;
+    };
+
+    const setStatus = (message) => {
+      if (saveState) saveState.textContent = message;
+    };
+
+    const normalizeTree = (payload) => {
+      const candidates = Array.isArray(payload)
+        ? payload
+        : payload?.files || payload?.tree || payload?.entries || [];
+
+      return candidates
+        .map((entry) => (typeof entry === 'string' ? entry : entry?.path || entry?.name || ''))
+        .filter((path) => path && (path.endsWith('.yaml') || path.endsWith('.typ')));
+    };
+
+    const renderFiles = (paths) => {
+      if (!fileList) return;
+      const orderedPaths = [...new Set([...initialFiles, ...paths])];
+      fileList.replaceChildren(...orderedPaths.map((path) => {
+        const button = document.createElement('button');
+        const name = document.createElement('span');
+        const detail = document.createElement('small');
+        button.type = 'button';
+        button.dataset.filePath = path;
+        button.className = path === activePath ? 'active' : '';
+        button.setAttribute('aria-pressed', String(path === activePath));
+        name.textContent = path.split('/').pop() || path;
+        detail.textContent = path;
+        button.append(name, detail);
+        return button;
+      }));
+    };
+
+    const selectButton = (path) => {
+      fileList?.querySelectorAll('button').forEach((button) => {
+        const isActive = button.dataset.filePath === path;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+      });
+      if (currentFile) currentFile.textContent = path;
+    };
+
+    const loadFile = async (path) => {
+      activePath = path;
+      selectButton(path);
+      setStatus('Loading');
+
+      try {
+        const response = await fetch(`/source/file?path=${encodeURIComponent(path)}`);
+        if (!response.ok) throw new Error(`GET /source/file ${response.status}`);
+        const payload = await response.json();
+        const content = typeof payload === 'string' ? payload : payload.text || payload.content || payload.source || '';
+        if (editorElement instanceof HTMLTextAreaElement) editorElement.value = content;
+        setStatus('Loaded');
+        setLog(`Loaded ${path}`);
+      } catch (error) {
+        setStatus('Local API unavailable');
+        setLog(`Could not load ${path}.
+${error instanceof Error ? error.message : String(error)}
+
+Start the local API and reload this workbench.`);
+      }
+    };
+
+    const loadTree = async () => {
+      try {
+        const response = await fetch('/source/tree');
+        if (!response.ok) throw new Error(`GET /source/tree ${response.status}`);
+        const payload = await response.json();
+        const paths = normalizeTree(payload);
+        renderFiles(paths);
+        if (treeState) treeState.textContent = 'Local tree';
+        setLog(`Loaded source tree with ${paths.length} Typst/YAML entries.`);
+      } catch (error) {
+        renderFiles(initialFiles);
+        if (treeState) treeState.textContent = 'Static targets';
+        setLog(`Using static targets.
+${error instanceof Error ? error.message : String(error)}`);
+      }
+    };
+
+    const saveFile = async () => {
+      setStatus('Saving');
+
+      try {
+        const response = await fetch('/source/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            path: activePath,
+            text: editorElement instanceof HTMLTextAreaElement ? editorElement.value : '',
+          }),
+        });
+        if (!response.ok) throw new Error(`POST /source/save ${response.status}`);
+        setStatus('Saved');
+        setLog(`Saved ${activePath}`);
+      } catch (error) {
+        setStatus('Save failed');
+        setLog(`Could not save ${activePath}.
+${error instanceof Error ? error.message : String(error)}`);
+      }
+    };
+
+    fileList?.addEventListener('click', (event) => {
+      const button = event.target instanceof Element ? event.target.closest('button[data-file-path]') : null;
+      if (button instanceof HTMLButtonElement && button.dataset.filePath) {
+        loadFile(button.dataset.filePath);
+      }
+    });
+
+    saveButton?.addEventListener('click', saveFile);
+    reloadButton?.addEventListener('click', () => loadFile(activePath));
+
+    loadTree().then(() => loadFile(activePath));
+  }
+</script>
+
+<style>
+  .typst-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: calc(100vh - 10rem);
+    color: #111827;
+  }
+
+  .typst-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(226 232 240 / 0.9);
+  }
+
+  .typst-kicker {
+    margin: 0 0 0.35rem;
+    color: #0f766e;
+    font: 700 0.72rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .typst-header h1 {
+    margin: 0;
+    color: #0f172a;
+    font-size: clamp(1.75rem, 3vw, 2.6rem);
+    line-height: 1.05;
+  }
+
+  .typst-summary {
+    max-width: 54rem;
+    margin: 0.6rem 0 0;
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .typst-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+  .typst-actions button,
+  .typst-link-button {
+    min-height: 2.35rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.45rem;
+    background: #ffffff;
+    color: #0f172a;
+    padding: 0.55rem 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .typst-actions .primary {
+    border-color: #0f766e;
+    background: #0f766e;
+    color: #ffffff;
+  }
+
+  .typst-grid {
+    display: grid;
+    grid-template-columns: minmax(12rem, 0.75fr) minmax(20rem, 1.55fr) minmax(18rem, 1.25fr);
+    grid-template-rows: minmax(27rem, 1fr) minmax(10rem, auto);
+    gap: 0.75rem;
+    flex: 1;
+  }
+
+  .typst-pane {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #dbe4ee;
+    border-radius: 0.5rem;
+    background: rgb(255 255 255 / 0.92);
+    box-shadow: 0 16px 40px rgb(15 23 42 / 0.06);
+  }
+
+  .pane-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-height: 3rem;
+    padding: 0.7rem 0.85rem;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+  }
+
+  .pane-head h2 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 0.82rem;
+    font-weight: 900;
+  }
+
+  .pane-head span,
+  .pane-head p {
+    margin: 0;
+    color: #64748b;
+    font: 600 0.68rem/1.3 ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  .typst-files {
+    grid-row: 1 / span 2;
+  }
+
+  .file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.7rem;
+  }
+
+  .file-list button {
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 0.4rem;
+    background: transparent;
+    padding: 0.7rem;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .file-list button:hover,
+  .file-list button.active {
+    border-color: #99f6e4;
+    background: #f0fdfa;
+  }
+
+  .file-list span {
+    display: block;
+    color: #0f172a;
+    font-size: 0.86rem;
+    font-weight: 850;
+  }
+
+  .file-list small {
+    display: block;
+    margin-top: 0.3rem;
+    overflow-wrap: anywhere;
+    color: #64748b;
+    font: 600 0.68rem/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  .typst-editor {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .typst-editor textarea {
+    flex: 1;
+    min-height: 24rem;
+    resize: none;
+    border: 0;
+    outline: 0;
+    background: #0b1120;
+    color: #dbeafe;
+    padding: 1rem;
+    font: 0.86rem/1.65 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    tab-size: 2;
+  }
+
+  .typst-preview {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .typst-preview iframe {
+    flex: 1;
+    width: 100%;
+    min-height: 24rem;
+    border: 0;
+    background: #e2e8f0;
+  }
+
+  .typst-log,
+  .typst-help {
+    min-height: 10rem;
+  }
+
+  .typst-log pre {
+    height: calc(100% - 3rem);
+    min-height: 7rem;
+    margin: 0;
+    overflow: auto;
+    background: #111827;
+    color: #d1fae5;
+    padding: 0.85rem;
+    font: 0.72rem/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    white-space: pre-wrap;
+  }
+
+  .help-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+    padding: 0.8rem;
+  }
+
+  .help-links a {
+    border: 1px solid #dbe4ee;
+    border-radius: 0.4rem;
+    background: #ffffff;
+    color: #0f766e;
+    padding: 0.75rem;
+    font-size: 0.82rem;
+    font-weight: 850;
+    text-decoration: none;
+  }
+
+  .help-links a:hover {
+    border-color: #14b8a6;
+    background: #f0fdfa;
+  }
+
+  @media (max-width: 980px) {
+    .typst-header {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .typst-actions {
+      justify-content: flex-start;
+    }
+
+    .typst-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    .typst-files {
+      grid-row: auto;
+    }
+
+    .typst-preview iframe,
+    .typst-editor textarea {
+      min-height: 22rem;
+    }
+  }
+</style>

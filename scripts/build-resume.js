@@ -126,6 +126,32 @@ function main() {
     console.warn('[build-resume] Path to install: https://github.com/typst/typst');
     console.warn('[build-resume] PDF compilation was skipped, but validation was successful.');
   }
+
+  // PPTX 自动化转 PDF (仅在 macOS 环境下使用 Keynote 导出)
+  const PPTX_PATH = join(ROOT, 'content/resume/23030301-23软一-曹磊.pptx');
+  const PPTX_OUT_PDF = join(OUTPUT_DIR, 'resume-presentation.pdf');
+
+  if (process.platform === 'darwin' && existsSync(PPTX_PATH)) {
+    console.log('[build-resume] macOS environment detected. Compiling PPTX resume presentation to PDF via Keynote AppleScript...');
+    try {
+      const appleScript = `
+        tell application "Keynote"
+          set theFile to POSIX file "${PPTX_PATH}"
+          set theDoc to open theFile
+          set thePDF to POSIX file "${PPTX_OUT_PDF}"
+          export theDoc to thePDF as PDF
+          close theDoc saving no
+        end tell
+      `.trim();
+      execSync(`osascript -e '${appleScript}'`, { stdio: 'inherit' });
+      console.log(`[build-resume] PPTX presentation successfully compiled to ${PPTX_OUT_PDF}`);
+    } catch (e) {
+      console.error('[build-resume] Warning: Keynote PPTX conversion failed. Ensure Keynote is installed and has GUI Scripting permissions.', e.message);
+    }
+  } else {
+    console.log('[build-resume] Skip PPTX-to-PDF compile (non-macOS or PPTX file missing).');
+  }
+
   console.log('[build-resume] Done.');
 }
 

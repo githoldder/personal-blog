@@ -10,6 +10,7 @@ const ROOT = join(__dirname, '..');
 
 const CONTENT_DIR = join(ROOT, 'content');
 const OUTPUT = join(ROOT, 'public/assets/semantic_graph.json');
+const PUBLIC_HANDLE = 'githoldder';
 
 // 正则匹配 wiki link: [[some-slug]] 或 [[some-slug|label]]
 const WIKI_LINK_REG = /\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g;
@@ -104,7 +105,7 @@ function main() {
         const id = 'resume:basics';
         nodes.push({
           id,
-          label: `${resumeData.basics.name}的简历`,
+          label: `${PUBLIC_HANDLE} 的简历`,
           type: 'resume',
           metadata: { summary: resumeData.basics.summary },
           tags: []

@@ -17,6 +17,9 @@ Thumbs.db
 # Generated assets
 output/tmp/
 public/assets/generated/
+public/slides/
+content/decks/public/
+sense/reports/visual-snapshots/
 
 # Editor
 .vscode/

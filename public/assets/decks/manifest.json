@@ -3,21 +3,108 @@
   "generated_by": "scripts/build-decks.js",
   "source_dir": "content/decks",
   "output_dir": "public/assets/decks",
-  "count": 1,
+  "count": 2,
   "decks": [
     {
       "slug": "pk-asset-os-roadmap",
       "title": "PK Asset OS 路线图",
       "date": "2026-06-26",
       "sourcePath": "content/decks/pk-asset-os-roadmap.md",
+      "content_hash": "sha256:ad4294df680108e09e4d944cfd20db9d0923d8905cdfe16cb412a2710c1c82ec",
+      "updated_at": "2026-06-26T14:17:48.368Z",
+      "formats": {
+        "html": {
+          "path": "public/slides/pk-asset-os-roadmap/",
+          "url": "/slides/pk-asset-os-roadmap/"
+        },
+        "pdf": {
+          "path": "public/assets/pk-asset-os-roadmap.pdf",
+          "url": "/assets/pk-asset-os-roadmap.pdf"
+        },
+        "pptx": {
+          "path": "public/assets/pk-asset-os-roadmap.pptx",
+          "url": "/assets/pk-asset-os-roadmap.pptx"
+        }
+      },
+      "build_log": "public/assets/decks/pk-asset-os-roadmap.build.log",
       "outputs": {
         "html": "public/slides/pk-asset-os-roadmap/",
         "pdf": "public/assets/pk-asset-os-roadmap.pdf"
       },
       "build": {
-        "status": "pending",
+        "status": "success",
+        "engine": "slidev",
+        "log": "public/assets/decks/pk-asset-os-roadmap.build.log",
         "requires": "@slidev/cli",
-        "notes": "S03-T03 only defines the deterministic manifest; Slidev HTML/PDF export is handled by a later build step."
+        "notes": "Successfully compiled via Slidev CLI."
+      },
+      "export": {
+        "status": "not_requested",
+        "adapter": "scripts/keynote-adapter.js",
+        "modes": [
+          "pptx-to-pdf",
+          "export-pptx"
+        ]
+      },
+      "keynote": {
+        "status": "not_checked",
+        "safe_adapter": "scripts/keynote-adapter.js"
+      },
+      "publish": {
+        "status": "not_requested",
+        "adapter": "scripts/publish-cloudflare.js",
+        "remote_publish": false
+      }
+    },
+    {
+      "slug": "resume-presentation",
+      "title": "githoldder - 个人求职简历 PPTX 展示",
+      "date": "2026-07-03",
+      "sourcePath": "content/decks/resume-presentation.md",
+      "content_hash": "sha256:71f9cc8a835e2980528c715dcb3b838e566fece3852d145b6013f0273de3f4e6",
+      "updated_at": "2026-07-04T06:36:32.733Z",
+      "formats": {
+        "html": {
+          "path": "public/slides/resume-presentation/",
+          "url": "/slides/resume-presentation/"
+        },
+        "pdf": {
+          "path": "public/assets/resume-presentation.pdf",
+          "url": "/assets/resume-presentation.pdf"
+        },
+        "pptx": {
+          "path": "public/assets/resume-presentation.pptx",
+          "url": "/assets/resume-presentation.pptx"
+        }
+      },
+      "build_log": "public/assets/decks/resume-presentation.build.log",
+      "outputs": {
+        "html": "public/slides/resume-presentation/",
+        "pdf": "public/assets/resume-presentation.pdf"
+      },
+      "build": {
+        "status": "success",
+        "engine": "slidev",
+        "log": "public/assets/decks/resume-presentation.build.log",
+        "requires": "@slidev/cli",
+        "notes": "PPTX presentation mapped to PDF with custom iframe viewer."
+      },
+      "export": {
+        "status": "not_requested",
+        "adapter": "scripts/keynote-adapter.js",
+        "modes": [
+          "pptx-to-pdf",
+          "export-pptx"
+        ]
+      },
+      "keynote": {
+        "status": "not_checked",
+        "safe_adapter": "scripts/keynote-adapter.js"
+      },
+      "publish": {
+        "status": "not_requested",
+        "adapter": "scripts/publish-cloudflare.js",
+        "remote_publish": false
       }
     }
   ]

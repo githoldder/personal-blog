@@ -1,0 +1,74 @@
+---
+const labels = ['githoldder', 'caolei'];
+---
+
+<a
+  href="/"
+  class="site-mark"
+  aria-label="githoldder workbench mark"
+  data-site-mark
+  data-state="seed"
+>
+  <svg class="site-mark__glyph" viewBox="0 0 44 44" role="img" aria-hidden="true">
+    <path class="site-mark__ground" d="M9 30.5 C16 27.5, 27 27.5, 35 30.5"></path>
+    <g class="site-mark__state site-mark__state--seed" data-logo-part="seed">
+      <path class="site-mark__seed-husk" d="M20.4 24.4 C17.6 20.3, 19.7 16.6, 23.2 16.8 C26.8 17.1, 28.2 21.2, 24.6 24.8 C23.2 26.2, 21.6 26, 20.4 24.4 Z"></path>
+      <circle class="site-mark__seed-core" cx="23.1" cy="21.8" r="1.35"></circle>
+    </g>
+    <g class="site-mark__state site-mark__state--plant" data-logo-part="plant">
+      <path class="site-mark__stem" d="M22 29 C22 25, 22.2 21.8, 22.6 17.8"></path>
+      <path class="site-mark__leaf site-mark__leaf--left" d="M22 22 C17.4 18.8, 14 19, 12.2 23.5 C16.2 24.9, 19.5 24.5, 22 22 Z"></path>
+      <path class="site-mark__leaf site-mark__leaf--right" d="M22.5 19.7 C26.5 16.4, 30.2 16.7, 32.3 20.9 C28.4 22.7, 25.2 22.4, 22.5 19.7 Z"></path>
+    </g>
+    <g class="site-mark__state site-mark__state--tree" data-logo-part="tree">
+      <path class="site-mark__trunk" d="M22 30 L22 18 M22 22 L16.8 17.6 M22 21 L28.5 16.8 M22 25 L28.8 24.2"></path>
+      <circle class="site-mark__canopy site-mark__canopy--a" cx="15.4" cy="16.4" r="4.2"></circle>
+      <circle class="site-mark__canopy site-mark__canopy--b" cx="23" cy="13.2" r="5"></circle>
+      <circle class="site-mark__canopy site-mark__canopy--c" cx="30" cy="17.4" r="4.5"></circle>
+    </g>
+  </svg>
+  <span class="site-mark__text" data-site-mark-text>{labels[0]}</span>
+</a>
+
+<script is:inline define:vars={{ labels }}>
+  const mark = document.querySelector('[data-site-mark]');
+  const text = document.querySelector('[data-site-mark-text]');
+  const states = ['seed', 'plant', 'tree'];
+  let stableStateIndex = 0;
+  let labelIndex = 0;
+  let routeTimer;
+
+  const setState = (state) => {
+    mark?.setAttribute('data-state', state);
+  };
+
+  const restoreStableState = () => {
+    setState(states[stableStateIndex]);
+  };
+
+  mark?.addEventListener('pointerenter', () => setState('plant'));
+  mark?.addEventListener('pointerleave', restoreStableState);
+  mark?.addEventListener('focus', () => setState('plant'));
+  mark?.addEventListener('blur', restoreStableState);
+
+  mark?.addEventListener('click', (event) => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    stableStateIndex = (stableStateIndex + 1) % states.length;
+    labelIndex = (labelIndex + 1) % labels.length;
+    setState(states[stableStateIndex]);
+    if (text) text.textContent = labels[labelIndex];
+    mark.classList.add('site-mark--pulse');
+    window.setTimeout(() => mark.classList.remove('site-mark--pulse'), 260);
+  });
+
+  window.addEventListener('site-mark:route-complete', () => {
+    window.clearTimeout(routeTimer);
+    setState('tree');
+    mark?.classList.add('site-mark--pulse');
+    routeTimer = window.setTimeout(() => {
+      mark?.classList.remove('site-mark--pulse');
+      restoreStableState();
+    }, 280);
+  });
+</script>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Excalidraw High-Fidelity Viewer</title>
+  <style>
+    html, body, #app {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #fafafa;
+    }
+    .loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 13px;
+      color: #64748b;
+    }
+  </style>
+  <!-- 引入 React, ReactDOM 与 Excalidraw 官方 UMD 构建包 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@excalidraw/excalidraw@0.17.6/dist/excalidraw.production.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="loading">正在加载高保真绘图引擎...</div>
+  </div>
+
+  <script>
+    const App = () => {
+      const [elements, setElements] = React.useState([]);
+      const [appState, setAppState] = React.useState({});
+
+      React.useEffect(() => {
+        const handleMessage = (event) => {
+          if (event.data && event.data.type === 'EXCALIDRAW_DATA') {
+            try {
+              const data = typeof event.data.payload === 'string'
+                ? JSON.parse(event.data.payload)
+                : event.data.payload;
+              
+              if (data && Array.isArray(data.elements)) {
+                setElements(data.elements);
+                setAppState({
+                  viewModeEnabled: true,
+                  zenModeEnabled: false,
+                  gridModeEnabled: false,
+                  theme: 'light',
+                  ...data.appState,
+                  zoom: { value: 1 }
+                });
+              }
+            } catch (err) {
+              console.error('Failed to parse Excalidraw JSON payload:', err);
+            }
+          }
+        };
+
+        window.addEventListener('message', handleMessage);
+        
+        // 向父级框架发送就绪信号，请求发送绘图 JSON 数据
+        window.parent.postMessage({ type: 'EXCALIDRAW_VIEWER_READY' }, '*');
+
+        return () => window.removeEventListener('message', handleMessage);
+      }, []);
+
+      if (elements.length === 0) {
+        return React.createElement('div', { className: 'loading' }, '正在接收绘图数据并渲染...');
+      }
+
+      // 渲染官方只读模式 Excalidraw 画布
+      return React.createElement(ExcalidrawLib.Excalidraw, {
+        initialData: {
+          elements: elements,
+          appState: appState
+        },
+        viewModeEnabled: true
+      });
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('app'));
+    root.render(React.createElement(App));
+  </script>
+</body>
+</html>

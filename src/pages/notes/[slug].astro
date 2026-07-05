@@ -23,9 +23,11 @@ const isCanvas = entry.data.tags?.includes('canvas') || entry.data.tags?.include
 
 const formatDate = (date: Date) => date.toISOString().slice(0, 10);
 const hasBacklinks = entry.data.tags && entry.data.tags.length > 0;
+const publicAuthor = entry.data.author?.replace(/曹磊/g, 'githoldder');
+const publicTitle = entry.data.title.replace(/曹磊/g, 'githoldder');
 ---
 
-<BaseLayout title={entry.data.title}>
+<BaseLayout title={publicTitle}>
   
   {entry.data.pdfAsset ? (
     /* Book Note Layout: Twin-pane view */
@@ -36,7 +38,7 @@ const hasBacklinks = entry.data.tags && entry.data.tags.length > 0;
         <iframe 
           src={entry.data.pdfAsset} 
           class="absolute inset-0 w-full h-full border-0 bg-stone-100" 
-          title={`PDF Preview: ${entry.data.title}`}
+          title={`PDF Preview: ${publicTitle}`}
         ></iframe>
       </div>
 
@@ -66,11 +68,11 @@ const hasBacklinks = entry.data.tags && entry.data.tags.length > 0;
             BOOK CATALOGUE
           </span>
           <h1 class="text-2xl md:text-3xl font-serif font-bold text-slate-900 leading-tight">
-            {entry.data.title}
+            {publicTitle}
           </h1>
           <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400 font-mono">
-            {entry.data.author && (
-              <span>著者: <span class="text-slate-700 font-serif font-bold">{entry.data.author}</span></span>
+            {publicAuthor && (
+              <span>著者: <span class="text-slate-700 font-serif font-bold">{publicAuthor}</span></span>
             )}
             <span>📅 标注修订: <time datetime={formatDate(entry.data.date)}>{formatDate(entry.data.date)}</time></span>
             {entry.data.annotationCount !== undefined && (
@@ -88,10 +90,10 @@ const hasBacklinks = entry.data.tags && entry.data.tags.length > 0;
     </div>
   ) : (
     /* Standard Note Layout */
-    <div class="thought-article w-full flex flex-col lg:flex-row gap-10 items-start select-none" id="reader-container">
+    <div class={`thought-article w-full flex flex-col lg:flex-row gap-10 items-start select-none ${isExcalidraw || isCanvas ? 'diagram-note' : ''}`} id="reader-container">
       
       {/* Left Area: Main Reading Body */}
-      <div class="flex-grow w-full max-w-3xl space-y-6">
+      <div class={`flex-grow w-full space-y-6 ${isExcalidraw || isCanvas ? 'max-w-none' : 'max-w-3xl'}`}>
         
         {/* Top actions bar */}
         <div class="flex items-center justify-between border-b border-slate-200/60 pb-4">
@@ -120,12 +122,12 @@ const hasBacklinks = entry.data.tags && entry.data.tags.length > 0;
           </div>
 
           <h1 class="text-4xl md:text-6xl font-serif font-bold text-slate-950 leading-[0.95] tracking-tight">
-            {entry.data.title}
+            {publicTitle}
           </h1>
 
           <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400 font-mono">
-            {entry.data.author && (
-              <span>著者: <span class="text-slate-700 font-serif font-bold">{entry.data.author}</span></span>
+            {publicAuthor && (
+              <span>著者: <span class="text-slate-700 font-serif font-bold">{publicAuthor}</span></span>
             )}
             <span>📅 PUBLISHED: <time datetime={formatDate(entry.data.date)}>{formatDate(entry.data.date)}</time></span>
             <span class="text-slate-200">|</span>
@@ -153,17 +155,21 @@ const hasBacklinks = entry.data.tags && entry.data.tags.length > 0;
         </section>
 
         {/* Render Canvas or Excalidraw previews if matching tags */}
-        {isExcalidraw && (
-          <ExcalidrawViewer client:load fileName={entry.data.title} />
-        )}
-        {isCanvas && (
-          <CanvasViewer client:load canvasName={entry.data.title} />
-        )}
+        <div class={isExcalidraw || isCanvas ? 'diagram-breakout' : ''}>
+          {isExcalidraw && (
+            <ExcalidrawViewer client:load fileName={entry.data.title} />
+          )}
+          {isCanvas && (
+            <CanvasViewer client:load canvasName={entry.data.title} />
+          )}
+        </div>
 
         {/* Rendered Markdown Body (Zen-reading styled) */}
-        <article class="markdown-body thought-reading-body font-serif text-slate-800 leading-relaxed text-base md:text-lg border-t border-slate-200/40 pt-8">
-          <Content />
-        </article>
+        {!isExcalidraw && !isCanvas && (
+          <article class="markdown-body thought-reading-body font-serif text-slate-800 leading-relaxed text-base md:text-lg border-t border-slate-200/40 pt-8">
+            <Content />
+          </article>
+        )}
 
         {/* Backlinks footer */}
         {hasBacklinks && (
@@ -183,7 +189,7 @@ const hasBacklinks = entry.data.tags && entry.data.tags.length > 0;
       </div>
 
       {/* Right Area: TOC Outline Sidebar */}
-      {!isExcalidraw && headings.length > 0 && (
+      {!isExcalidraw && !isCanvas && headings.length > 0 && (
         <aside 
           id="outline-sidebar"
           class="toc-sidebar hidden lg:block shrink-0 w-60 border-l border-slate-200/60 pl-6 sticky top-8 max-h-[85vh] overflow-y-auto"
@@ -239,10 +245,15 @@ const hasBacklinks = entry.data.tags && entry.data.tags.length > 0;
         const rawQuote = new TextDecoder('utf-8').decode(quoteBytes);
         const currentSrc = pdfIframe.getAttribute('src') || '';
         const baseUrl = currentSrc.split('#')[0];
+        const page = card.getAttribute('data-page');
+        const hashParts = [];
+        if (page && Number.isFinite(Number(page)) && Number(page) > 0) {
+          hashParts.push(`page=${encodeURIComponent(page)}`);
+        }
+        hashParts.push(`search=${encodeURIComponent('"' + rawQuote + '"')}`);
         
-        // 拼接标准 PDF #search="text" 参数 (加双引号匹配整句)
-        // 浏览器将执行渐进高亮定位，无匹配时优雅回落
-        const newSrc = `${baseUrl}#search=${encodeURIComponent('"' + rawQuote + '"')}`;
+        // 优先 page + search；没有页码时退回浏览器 PDF viewer 的全文搜索。
+        const newSrc = `${baseUrl}#${hashParts.join('&')}`;
         pdfIframe.setAttribute('src', newSrc);
       } catch (e) {
         console.warn('[build-library-index] Failed to base64 decode and sync PDF iframe:', e);
@@ -339,5 +350,18 @@ const hasBacklinks = entry.data.tags && entry.data.tags.length > 0;
     color: #475569;
     font-style: italic;
     margin: 1.5rem 0;
+  }
+  .diagram-note .thought-loop {
+    margin-bottom: 1.5rem;
+  }
+  .diagram-breakout {
+    width: min(1600px, calc(100vw - 48px));
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  @media (max-width: 768px) {
+    .diagram-breakout {
+      width: calc(100vw - 24px);
+    }
   }
 </style>

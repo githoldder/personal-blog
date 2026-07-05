@@ -1,0 +1,4 @@
+deck=resume-presentation
+status=success
+engine=slidev
+notes=PPTX presentation mapped to PDF with custom iframe viewer.

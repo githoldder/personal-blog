@@ -1,22 +1,34 @@
 ---
-title: "文件处理全能助手 (v1.0.1)"
-description: "高并发分布式文档转换处理系统，支持 PDF、Word、Excel、PPTX、Markdown 等多种格式互转。"
+title: "文件处理与分布式高并发文档转换系统 (v2.0.0)"
+description: "基于 Celery + Redis 异步队列的高并发文档转换系统，集成 Gotenberg 引擎与 Spark 遥测大数据舱。"
 status: "done"
-date: 2026-03-11
-tech: ["FastAPI","React","Celery","Redis","Gotenberg","Docker"]
+date: 2026-06-22
+tech: ["FastAPI","React","Celery","Redis","Gotenberg","Spark","Docker"]
 ---
 
-# 文件处理全能助手 (File Processing All-in-One Helper)
+# 文件处理与高并发转换系统 (File Processor & Telemetry System)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-v1.0.1-blue" alt="Version">
+  <img src="https://img.shields.io/badge/version-v2.0.0--platform-blue" alt="Version">
   <img src="https://img.shields.io/badge/Python-3.11+-green" alt="Python">
   <img src="https://img.shields.io/badge/FastAPI-0.100+-green" alt="FastAPI">
   <img src="https://img.shields.io/badge/React-18+-green" alt="React">
-  <img src="https://img.shields.io/badge/Docker-24.0+-green" alt="Docker">
+  <img src="https://img.shields.io/badge/Celery-5.3+-green" alt="Celery">
+  <img src="https://img.shields.io/badge/Spark-3.4+-green" alt="Spark">
 </p>
 
-> 分布式文档处理系统 - 支持 PDF、Word、Excel、PPTX、Markdown、SVG、PNG 等格式转换
+> 分布式高并发文档处理与大数据监控平台。用户端（蓝白主题）提供云盘与高保真格式转换，管理端（蓝黑大屏）提供容器集群健康监控与 Spark 遥测大数据舱（数据流向桑基图与节点分析）。
+
+## 架构演进与核心亮点 (v2.0.0)
+
+### 1. 异步高并发架构与Gotenberg引擎
+- **Celery + Redis 异步队列**：避免大文件（支持 100MB 级别）转换时阻塞主 API 线程。采用任务分发与进度轮询机制实现吞吐量的横向扩容。
+- **Gotenberg 无损转换引擎**：通过集成 Gotenberg，利用 Office headless 转换管线，保证 Word/Excel/PPTX 转换至 PDF 的字体排版与无损样式还原。
+
+### 2. 管理端大数据舱与 Spark 遥测
+- **Spark 遥测流分析**：基于 Spark 引擎进行服务遥测数据处理，提取节点请求频率、响应时长等日志数据。
+- **蓝黑数据监控 cockpit**：支持展示容器集群的实时健康状态（PM2/Docker Compose）和全球请求拓扑，数据流向通过桑基图渲染。
+- **轻量鉴权与路由隔离**：实现 `demo_user` 与 `admin` 的双入口、两套导航与不同主题，确保管理端状态面板不外泄。
 
 ## 金字塔结构
 

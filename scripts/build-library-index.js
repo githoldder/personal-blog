@@ -1,14 +1,15 @@
 #!/usr/bin/env node
 
 import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync, copyFileSync, statSync } from 'node:fs';
-import { join, basename, dirname } from 'node:path';
+import { join, basename } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import YAML from 'yaml';
 
 const OBSIDIAN_ROOT = process.env.OBSIDIAN_ROOT || '';
 const PROJECT_NOTES_DIR = './content/notes';
 const OUTPUT_JSON = './public/assets/library.json';
 
-function slugify(value) {
+export function slugify(value) {
   return value
     .toLowerCase()
     .trim()
@@ -16,7 +17,7 @@ function slugify(value) {
     .replace(/^-+|-+$/g, '');
 }
 
-function parseFrontmatter(raw) {
+export function parseFrontmatter(raw) {
   const match = raw.match(/^---\n([\s\S]*?)\n---\n?/);
   let frontmatter = {};
   let body = raw;
@@ -42,6 +43,102 @@ function summarizeBody(body) {
     .replace(/\s+/g, ' ') + '...';
 }
 
+function firstString(...values) {
+  const value = values.find(item => (
+    (typeof item === 'string' && item.trim().length > 0) ||
+    (typeof item === 'number' && Number.isFinite(item))
+  ));
+  return value === undefined ? '' : String(value).trim();
+}
+
+export function normalizeIsbn(value) {
+  const raw = firstString(value);
+  if (!raw) return '';
+  const cleaned = raw.replace(/[^0-9Xx]/g, '').toUpperCase();
+  return cleaned.length === 10 || cleaned.length === 13 ? cleaned : raw;
+}
+
+function getManualCatalogFields(frontmatter) {
+  const isbn = normalizeIsbn(frontmatter.isbn || frontmatter.ISBN);
+  const coverUrl = firstString(frontmatter.coverUrl, frontmatter.cover, frontmatter.cover_url);
+  const openLibraryUrl = firstString(
+    frontmatter.openLibraryUrl,
+    frontmatter.openLibrary,
+    frontmatter.open_library_url
+  );
+
+  return { isbn, coverUrl, openLibraryUrl };
+}
+
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function escapeAttribute(value) {
+  return escapeHtml(value).replace(/`/g, '&#96;');
+}
+
+function safeBase64(value) {
+  return Buffer.from(String(value ?? ''), 'utf-8').toString('base64');
+}
+
+function normalizeSelectors(selector) {
+  return Array.isArray(selector) ? selector : selector ? [selector] : [];
+}
+
+export function extractAnnotationMeta(data) {
+  const target = Array.isArray(data.target) ? data.target[0] : data.target;
+  const selectors = normalizeSelectors(target?.selector);
+  const quoteSel = selectors.find(s => s?.type === 'TextQuoteSelector') || {};
+  const positionSel = selectors.find(s => s?.type === 'TextPositionSelector') || {};
+
+  const fragmentValues = [
+    ...selectors
+      .filter(s => s?.type === 'FragmentSelector')
+      .map(s => firstString(s.value, s.conformsTo)),
+    firstString(target?.selector?.value),
+    firstString(target?.source),
+    firstString(data.uri)
+  ].filter(Boolean);
+
+  const pageSelector = selectors.find(s => (
+    s?.type === 'PageSelector' ||
+    s?.type === 'PDFPageSelector' ||
+    Number.isFinite(Number(s?.page)) ||
+    Number.isFinite(Number(s?.pageIndex))
+  ));
+  const fragmentPage = fragmentValues
+    .map(value => value.match(/(?:^|[#&?])page=(\d+)/i)?.[1] || value.match(/page[:=]\s*(\d+)/i)?.[1])
+    .find(Boolean);
+  const rawPage = firstString(
+    data.page,
+    data.pageNumber,
+    target?.page,
+    target?.pageNumber,
+    pageSelector?.page,
+    pageSelector?.pageNumber,
+    fragmentPage
+  );
+  const pageIndex = firstString(data.pageIndex, target?.pageIndex, pageSelector?.pageIndex);
+  const page = rawPage || (pageIndex ? String(Number(pageIndex) + 1) : '');
+
+  return {
+    quote: firstString(quoteSel.exact, data.text),
+    prefix: firstString(quoteSel.prefix),
+    suffix: firstString(quoteSel.suffix),
+    positionStart: Number.isFinite(Number(positionSel.start)) ? Number(positionSel.start) : null,
+    positionEnd: Number.isFinite(Number(positionSel.end)) ? Number(positionSel.end) : null,
+    page: Number.isFinite(Number(page)) ? Number(page) : null,
+    selectorTypes: selectors.map(s => s?.type).filter(Boolean),
+    selectors
+  };
+}
+
 function readExistingBookCatalog() {
   if (!existsSync(PROJECT_NOTES_DIR)) return [];
 
@@ -52,8 +149,9 @@ function readExistingBookCatalog() {
       const { frontmatter, body } = parseFrontmatter(raw);
       const tags = frontmatter.tags || [];
       if (!Array.isArray(tags) || !tags.includes('book')) return null;
+      const manualFields = getManualCatalogFields(frontmatter);
 
-      return {
+      const book = {
         slug: frontmatter.slug || basename(file, '.md'),
         title: frontmatter.title || basename(file, '.md'),
         author: frontmatter.author || '未知作者',
@@ -61,7 +159,14 @@ function readExistingBookCatalog() {
         summary: frontmatter.summary || summarizeBody(body),
         tags,
         annotationCount: frontmatter.annotationCount || 0,
-        pdfAsset: frontmatter.pdfAsset || ''
+        pdfAsset: frontmatter.pdfAsset || '',
+        isbn: manualFields.isbn,
+        coverUrl: manualFields.coverUrl,
+        openLibraryUrl: manualFields.openLibraryUrl
+      };
+      return {
+        ...book,
+        actions: buildBookActions(book)
       };
     })
     .filter(Boolean);
@@ -80,7 +185,7 @@ function writeFallbackLibrary(reason) {
 }
 
 // 行状态机解析器 (Line state-machine)
-function parseAnnotatorFile(rawBody) {
+export function parseAnnotatorFile(rawBody) {
   const lines = rawBody.split(/\r?\n/);
   const annotations = [];
   const cleanBodyLines = [];
@@ -88,7 +193,7 @@ function parseAnnotatorFile(rawBody) {
   let state = 'NORMAL'; // 'NORMAL', 'IN_JSON', 'IN_COMMENT_LOOKUP', 'IN_COMMENT'
   let currentJsonLines = [];
   let currentCommentLines = [];
-  let currentQuote = '';
+  let currentQuote = null;
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
@@ -113,11 +218,9 @@ function parseAnnotatorFile(rawBody) {
         try {
           const jsonStr = currentJsonLines.join('\n').replace(/^>/gm, '').trim();
           const data = JSON.parse(jsonStr);
-          const selector = data.target?.[0]?.selector || [];
-          const quoteSel = selector.find(s => s.type === 'TextQuoteSelector');
-          currentQuote = quoteSel ? quoteSel.exact : (data.text || '');
+          currentQuote = extractAnnotationMeta(data);
         } catch (e) {
-          currentQuote = '';
+          currentQuote = null;
         }
       } else {
         currentJsonLines.push(line);
@@ -128,12 +231,12 @@ function parseAnnotatorFile(rawBody) {
         currentCommentLines = [];
       } else if (trimmed.startsWith('>```annotation-json') || trimmed.startsWith('```annotation-json')) {
         // 连续遇到 JSON，结束上一个
-        if (currentQuote) {
-          annotations.push({ quote: currentQuote, comment: '' });
+        if (currentQuote?.quote) {
+          annotations.push({ ...currentQuote, comment: '' });
         }
         state = 'IN_JSON';
         currentJsonLines = [];
-        currentQuote = '';
+        currentQuote = null;
       } else if (trimmed.startsWith('>%%') || trimmed.startsWith('%%') || trimmed === '') {
         // 忽略间隔空行
       }
@@ -141,10 +244,10 @@ function parseAnnotatorFile(rawBody) {
       if (trimmed.startsWith('>%%TAGS%%') || trimmed.startsWith('%%TAGS%%') || trimmed.startsWith('>%%') || trimmed.startsWith('%%')) {
         state = 'NORMAL';
         const comment = currentCommentLines.join('\n').replace(/^>/gm, '').trim();
-        if (currentQuote || comment) {
-          annotations.push({ quote: currentQuote, comment });
+        if (currentQuote?.quote || comment) {
+          annotations.push({ ...(currentQuote || {}), quote: currentQuote?.quote || '', comment });
         }
-        currentQuote = '';
+        currentQuote = null;
       } else {
         currentCommentLines.push(line);
       }
@@ -152,16 +255,38 @@ function parseAnnotatorFile(rawBody) {
   }
 
   // 兜底遗漏
-  if (state === 'IN_COMMENT' && (currentQuote || currentCommentLines.length > 0)) {
+  if (state === 'IN_COMMENT' && (currentQuote?.quote || currentCommentLines.length > 0)) {
     const comment = currentCommentLines.join('\n').replace(/^>/gm, '').trim();
-    annotations.push({ quote: currentQuote, comment });
-  } else if (state === 'IN_COMMENT_LOOKUP' && currentQuote) {
-    annotations.push({ quote: currentQuote, comment: '' });
+    annotations.push({ ...(currentQuote || {}), quote: currentQuote?.quote || '', comment });
+  } else if (state === 'IN_COMMENT_LOOKUP' && currentQuote?.quote) {
+    annotations.push({ ...currentQuote, comment: '' });
   }
 
   return {
     cleanBody: cleanBodyLines.join('\n').trim(),
     annotations
+  };
+}
+
+export function buildBookActions(book) {
+  const slug = firstString(book?.slug);
+  const annotatorHref = slug ? `/notes/${slug}/` : '';
+  const openLibraryUrl = firstString(book?.openLibraryUrl);
+  const pdfAsset = firstString(book?.pdfAsset);
+  const sourceHref = openLibraryUrl || pdfAsset || annotatorHref;
+  const sourceKind = openLibraryUrl ? 'open-library' : pdfAsset ? 'pdf' : 'annotator-fallback';
+
+  return {
+    source: {
+      label: '看原书/书目来源',
+      href: sourceHref,
+      kind: sourceKind
+    },
+    annotator: {
+      label: '看我的 annotator 笔记',
+      href: annotatorHref,
+      kind: 'annotator'
+    }
   };
 }
 
@@ -261,6 +386,7 @@ function main() {
     const date = frontmatter.date || new Date().toISOString().slice(0, 10);
     const tags = Array.from(new Set([...(frontmatter.tags || []), 'book', 'reading']));
     const status = 'published';
+    const manualFields = getManualCatalogFields(frontmatter);
 
     // 1. 使用状态机清洗 JSON 代码，并提取标注
     const { cleanBody, annotations } = parseAnnotatorFile(body);
@@ -272,13 +398,28 @@ function main() {
     // 3. 将标注重新格式化为优美的 Maggie Style 引用卡，追加到正文底部
     let finalBody = cleanBody;
     if (annotations.length > 0) {
-      const cardsMarkdown = annotations.map((ann, index) => {
+      const cardsMarkdown = annotations.map((ann) => {
         const commentPart = ann.comment 
-          ? `\n\n✍️ **批注**：${ann.comment}`
+          ? `\n\n✍️ **批注**：${escapeHtml(ann.comment)}`
           : '';
-        const base64Quote = Buffer.from(ann.quote, 'utf-8').toString('base64');
-        return `<div class="annotation-card border-l-4 border-rose-400 pl-4 py-3 my-5 bg-stone-50/50 rounded font-serif shadow-sm cursor-pointer hover:bg-rose-50/30 transition-all duration-205" data-quote-base64="${base64Quote}">
-  <p class="text-slate-800 italic leading-relaxed">“ ${ann.quote} ”</p>${commentPart}
+        const attrs = [
+          `data-quote-base64="${safeBase64(ann.quote)}"`,
+          ann.page ? `data-page="${ann.page}"` : '',
+          ann.positionStart !== null ? `data-position-start="${ann.positionStart}"` : '',
+          ann.positionEnd !== null ? `data-position-end="${ann.positionEnd}"` : '',
+          ann.prefix ? `data-prefix-base64="${safeBase64(ann.prefix)}"` : '',
+          ann.suffix ? `data-suffix-base64="${safeBase64(ann.suffix)}"` : '',
+          ann.selectorTypes?.length ? `data-selector-types="${escapeAttribute(ann.selectorTypes.join(','))}"` : ''
+        ].filter(Boolean).join(' ');
+        const metadata = [
+          ann.page ? `page ${ann.page}` : '',
+          ann.positionStart !== null && ann.positionEnd !== null ? `pos ${ann.positionStart}-${ann.positionEnd}` : ''
+        ].filter(Boolean).join(' · ');
+        const metadataLine = metadata
+          ? `\n  <p class="mt-2 text-[10px] font-mono uppercase tracking-wide text-slate-400">${escapeHtml(metadata)}</p>`
+          : '';
+        return `<div class="annotation-card border-l-4 border-rose-400 pl-4 py-3 my-5 bg-stone-50/50 rounded font-serif shadow-sm cursor-pointer hover:bg-rose-50/30 transition-all duration-205" ${attrs}>
+  <p class="text-slate-800 italic leading-relaxed">“ ${escapeHtml(ann.quote)} ”</p>${metadataLine}${commentPart}
 </div>`;
       }).join('\n\n');
       
@@ -312,7 +453,7 @@ function main() {
     writeFileSync(destPath, noteContent, 'utf-8');
 
     // 记录到 JSON catalog
-    libraryCatalog.push({
+    const catalogBook = {
       slug,
       title,
       author,
@@ -320,7 +461,15 @@ function main() {
       summary,
       tags,
       annotationCount: annotations.length,
-      pdfAsset: pdfAssetPath || ''
+      pdfAsset: pdfAssetPath || '',
+      isbn: manualFields.isbn,
+      coverUrl: manualFields.coverUrl,
+      openLibraryUrl: manualFields.openLibraryUrl
+    };
+
+    libraryCatalog.push({
+      ...catalogBook,
+      actions: buildBookActions(catalogBook)
     });
   }
 
@@ -328,4 +477,6 @@ function main() {
   console.log(`[build-library-index] Successfully synced ${libraryCatalog.length} book notes to content/notes/ and registered catalog.`);
 }
 
-main();
+if (process.argv[1] && pathToFileURL(fileURLToPath(import.meta.url)).href === pathToFileURL(process.argv[1]).href) {
+  main();
+}

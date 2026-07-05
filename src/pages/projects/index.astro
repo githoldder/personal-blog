@@ -3,7 +3,16 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CoordinateAxis from '../../components/CoordinateAxis.astro';
 
-// 获取所有项目并按时间倒序
+// 获取所有项目并按权重及时间倒序排序
+const pinnedOrder = [
+  'lingobridge',
+  'school-gtd-dashboard',
+  'springboot-lgg',
+  'file-processor-assistant',
+  'personal-blog',
+  'darwin-skill'
+];
+
 const projects = (await getCollection('projects'))
   .filter((entry) => {
     const status = entry.data.status;
@@ -13,14 +22,25 @@ const projects = (await getCollection('projects'))
   .map((entry) => ({
     id: entry.id,
     slug: entry.data.slug ?? entry.id,
-    title: entry.data.title,
-    description: entry.data.description,
+    title: entry.data.title.replace(/曹磊/g, 'githoldder'),
+    description: entry.data.description.replace(/曹磊/g, 'caolei'),
     status: entry.data.status,
     date: entry.data.date,
     tech: entry.data.tech,
     github: entry.data.github || `https://github.com/githoldder/${entry.data.slug ?? entry.id}`
   }))
-  .sort((a, b) => b.date.getTime() - a.date.getTime());
+  .sort((a, b) => {
+    const idxA = pinnedOrder.indexOf(a.slug);
+    const idxB = pinnedOrder.indexOf(b.slug);
+    
+    if (idxA !== -1 && idxB !== -1) {
+      return idxA - idxB;
+    }
+    if (idxA !== -1) return -1;
+    if (idxB !== -1) return 1;
+    
+    return b.date.getTime() - a.date.getTime();
+  });
 
 const formatDate = (date: Date) => date.toISOString().slice(0, 7);
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>曹磊的个人知识资产操作系统</title>
+    <title>githoldder knowledge OS</title>
     <link>https://caolei.dev</link>
-    <description>软件工程本科在读，长期围绕个人知识资产系统、AI 方言学习、政务信息化与校园商业验证构建真实项目。擅长把需求调研、原型设计、后端脚本、数据管线、前端可视化和产品复盘串成闭环。</description>
-    <lastBuildDate>Fri, 03 Jul 2026 19:04:35 +0800</lastBuildDate>
+    <description>高并发项目管理 × 全链路产品思维 × 技术背景。常州工学院软件工程专业本科生。主修软件工程，习惯用 GTD 管理个人事务与时间精力，在高并发压力下仍能保持理性决策与工程定力。具备扎实的全栈与分布式应用技术基础，主导过多智能体协同、分布式转换系统、政务数字治理以及个人知识资产等软硬件系统的设计与开发。多次获得校级优秀学生干部及国家级/省级学科竞赛奖项（包含揭榜挂帅擂台赛全国二等奖、iCAN创新创业大赛全国三等奖及省级一等奖、亚太数学建模二等奖等），具有极强的工程师思维和学习方法论。</description>
+    <lastBuildDate>Sun, 05 Jul 2026 16:21:11 +0800</lastBuildDate>
     <atom:link href="https://caolei.dev/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>博弈论</title>
@@ -358,6 +358,20 @@
 > !PDF|yellow 金字塔原理大全集芭芭拉·明托ZLibrary.pdfpage=61&selection=10,0,10,8&color=yellow|金字塔原理...]]></description>
     </item>
     <item>
+      <title>管理学思维和技巧</title>
+      <link>https://caolei.dev/notes/canvas-管理学思维和技巧/</link>
+      <guid>https://caolei.dev/notes/canvas-管理学思维和技巧/</guid>
+      <pubDate>Fri, 03 Jul 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>调研流程工具箱</title>
+      <link>https://caolei.dev/notes/canvas-调研流程工具箱/</link>
+      <guid>https://caolei.dev/notes/canvas-调研流程工具箱/</guid>
+      <pubDate>Fri, 03 Jul 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
       <title>2026-07-02</title>
       <link>https://caolei.dev/notes/obsidian-06e4adaabe837b9b7e215bf8943c207c/</link>
       <guid>https://caolei.dev/notes/obsidian-06e4adaabe837b9b7e215bf8943c207c/</guid>
@@ -426,6 +440,13 @@
       <guid>https://caolei.dev/notes/obsidian-e5275201532f699889138f717b939d2e/</guid>
       <pubDate>Fri, 03 Jul 2026 08:00:00 +0800</pubDate>
       <description><![CDATA[<div class="obsidiantrigger selectnone" style="marginbottom: 2.5rem; padding: 1rem; border: 1px dashed rgba226, 232, 240, 0.9; borderradius: 6px; background: rgba148, 163, 184, 0.03; fontsiz...]]></description>
+    </item>
+    <item>
+      <title>Personal Knowledge Asset OS (personal-blog)</title>
+      <link>https://caolei.dev/projects/personal-blog/</link>
+      <guid>https://caolei.dev/projects/personal-blog/</guid>
+      <pubDate>Fri, 03 Jul 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[静态优先的个人能力证明、知识投影与语义漫游系统，打通 Obsidian 物理库投影与编译管线。]]></description>
     </item>
     <item>
       <title>001_可能清单</title>
@@ -547,13 +568,6 @@
       <description><![CDATA[<div class="obsidiantrigger selectnone" style="marginbottom: 2.5rem; padding: 1rem; border: 1px dashed rgba226, 232, 240, 0.9; borderradius: 6px; background: rgba148, 163, 184, 0.03; fontsiz...]]></description>
     </item>
     <item>
-      <title>Personal Knowledge Asset OS</title>
-      <link>https://caolei.dev/projects/personal-knowledge-asset-os/</link>
-      <guid>https://caolei.dev/projects/personal-knowledge-asset-os/</guid>
-      <pubDate>Fri, 26 Jun 2026 08:00:00 +0800</pubDate>
-      <description><![CDATA[个人知识资产操作系统]]></description>
-    </item>
-    <item>
       <title>CulCloud 成员代码分工说明书 - 程志阳 (组员)</title>
       <link>https://caolei.dev/notes/obsidian-0d518430ba476ba8e0bc82df489315fc/</link>
       <guid>https://caolei.dev/notes/obsidian-0d518430ba476ba8e0bc82df489315fc/</guid>
@@ -568,7 +582,7 @@
       <description><![CDATA[<div class="obsidiantrigger selectnone" style="marginbottom: 2.5rem; padding: 1rem; border: 1px dashed rgba226, 232, 240, 0.9; borderradius: 6px; background: rgba148, 163, 184, 0.03; fontsiz...]]></description>
     </item>
     <item>
-      <title>CulCloud 成员代码分工说明书 - 曹磊 (组长)</title>
+      <title>CulCloud 成员代码分工说明书 - githoldder (组长)</title>
       <link>https://caolei.dev/notes/obsidian-71450e92e118e814f8f9808ff56aef58/</link>
       <guid>https://caolei.dev/notes/obsidian-71450e92e118e814f8f9808ff56aef58/</guid>
       <pubDate>Thu, 25 Jun 2026 08:00:00 +0800</pubDate>
@@ -617,11 +631,25 @@
       <description><![CDATA[<div class="obsidiantrigger selectnone" style="marginbottom: 2.5rem; padding: 1rem; border: 1px dashed rgba226, 232, 240, 0.9; borderradius: 6px; background: rgba148, 163, 184, 0.03; fontsiz...]]></description>
     </item>
     <item>
+      <title>文件处理与分布式高并发文档转换系统 (v2.0.0)</title>
+      <link>https://caolei.dev/projects/file-processor-assistant/</link>
+      <guid>https://caolei.dev/projects/file-processor-assistant/</guid>
+      <pubDate>Mon, 22 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[基于 Celery + Redis 异步队列的高并发文档转换系统，集成 Gotenberg 引擎与 Spark 遥测大数据舱。]]></description>
+    </item>
+    <item>
       <title>RSI</title>
       <link>https://caolei.dev/notes/obsidian-0b75b36e82164472b563061dafa7948b/</link>
       <guid>https://caolei.dev/notes/obsidian-0b75b36e82164472b563061dafa7948b/</guid>
       <pubDate>Sun, 21 Jun 2026 08:00:00 +0800</pubDate>
       <description><![CDATA[<div class="obsidiantrigger selectnone" style="marginbottom: 2.5rem; padding: 1rem; border: 1px dashed rgba226, 232, 240, 0.9; borderradius: 6px; background: rgba148, 163, 184, 0.03; fontsiz...]]></description>
+    </item>
+    <item>
+      <title>TODO看板</title>
+      <link>https://caolei.dev/notes/canvas-TODO看板/</link>
+      <guid>https://caolei.dev/notes/canvas-TODO看板/</guid>
+      <pubDate>Thu, 18 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
     </item>
     <item>
       <title>2004年text3</title>
@@ -657,6 +685,41 @@
       <guid>https://caolei.dev/notes/obsidian-d4018d93416193cbb36a88837efd9e38/</guid>
       <pubDate>Thu, 18 Jun 2026 08:00:00 +0800</pubDate>
       <description><![CDATA[<div class="obsidiantrigger selectnone" style="marginbottom: 2.5rem; padding: 1rem; border: 1px dashed rgba226, 232, 240, 0.9; borderradius: 6px; background: rgba148, 163, 184, 0.03; fontsiz...]]></description>
+    </item>
+    <item>
+      <title>GTD看板</title>
+      <link>https://caolei.dev/notes/canvas-GTD看板/</link>
+      <guid>https://caolei.dev/notes/canvas-GTD看板/</guid>
+      <pubDate>Wed, 17 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>Docker的入门教程知识拆解</title>
+      <link>https://caolei.dev/notes/excalidraw-Docker的入门教程知识拆解/</link>
+      <guid>https://caolei.dev/notes/excalidraw-Docker的入门教程知识拆解/</guid>
+      <pubDate>Wed, 17 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plu...]]></description>
+    </item>
+    <item>
+      <title>harness_engineering（Ralph组件）</title>
+      <link>https://caolei.dev/notes/excalidraw-harness_engineering（Ralph组件）/</link>
+      <guid>https://caolei.dev/notes/excalidraw-harness_engineering（Ralph组件）/</guid>
+      <pubDate>Wed, 17 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plu...]]></description>
+    </item>
+    <item>
+      <title>世界观、价值观、人生观视图 14.08.57</title>
+      <link>https://caolei.dev/notes/excalidraw-世界观、价值观、人生观视图 14.08.57/</link>
+      <guid>https://caolei.dev/notes/excalidraw-世界观、价值观、人生观视图 14.08.57/</guid>
+      <pubDate>Wed, 17 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plu...]]></description>
+    </item>
+    <item>
+      <title>编译原理作业二</title>
+      <link>https://caolei.dev/notes/excalidraw-编译原理作业二/</link>
+      <guid>https://caolei.dev/notes/excalidraw-编译原理作业二/</guid>
+      <pubDate>Wed, 17 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plu...]]></description>
     </item>
     <item>
       <title>Mac 端常用 Syncthing &amp; Git 操作清单</title>
@@ -734,6 +797,272 @@
       <guid>https://caolei.dev/notes/obsidian-65da7bd2bd8ab1a9f5c420d59b86fd3e/</guid>
       <pubDate>Fri, 12 Jun 2026 08:00:00 +0800</pubDate>
       <description><![CDATA[<div class="obsidiantrigger selectnone" style="marginbottom: 2.5rem; padding: 1rem; border: 1px dashed rgba226, 232, 240, 0.9; borderradius: 6px; background: rgba148, 163, 184, 0.03; fontsiz...]]></description>
+    </item>
+    <item>
+      <title>002-英语语法知识体系认知地图</title>
+      <link>https://caolei.dev/notes/canvas-002-英语语法知识体系认知地图/</link>
+      <guid>https://caolei.dev/notes/canvas-002-英语语法知识体系认知地图/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>AI产品经理开发流程</title>
+      <link>https://caolei.dev/notes/canvas-AI产品经理开发流程/</link>
+      <guid>https://caolei.dev/notes/canvas-AI产品经理开发流程/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>AI发展史-风格化增强版</title>
+      <link>https://caolei.dev/notes/canvas-AI发展史-风格化增强版/</link>
+      <guid>https://caolei.dev/notes/canvas-AI发展史-风格化增强版/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>GTD流程图</title>
+      <link>https://caolei.dev/notes/canvas-GTD流程图/</link>
+      <guid>https://caolei.dev/notes/canvas-GTD流程图/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>TTS实现方法研究</title>
+      <link>https://caolei.dev/notes/canvas-TTS实现方法研究/</link>
+      <guid>https://caolei.dev/notes/canvas-TTS实现方法研究/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>idea的工程级项目存储结构</title>
+      <link>https://caolei.dev/notes/canvas-idea的工程级项目存储结构/</link>
+      <guid>https://caolei.dev/notes/canvas-idea的工程级项目存储结构/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>web应用开发实验</title>
+      <link>https://caolei.dev/notes/canvas-web应用开发实验/</link>
+      <guid>https://caolei.dev/notes/canvas-web应用开发实验/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>云服务发展史</title>
+      <link>https://caolei.dev/notes/canvas-云服务发展史/</link>
+      <guid>https://caolei.dev/notes/canvas-云服务发展史/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>互联网架构演化史</title>
+      <link>https://caolei.dev/notes/canvas-互联网架构演化史/</link>
+      <guid>https://caolei.dev/notes/canvas-互联网架构演化史/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>人工智能发展史及应用技术迭代史</title>
+      <link>https://caolei.dev/notes/canvas-人工智能发展史及应用技术迭代史/</link>
+      <guid>https://caolei.dev/notes/canvas-人工智能发展史及应用技术迭代史/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>多元思维模式</title>
+      <link>https://caolei.dev/notes/canvas-多元思维模式/</link>
+      <guid>https://caolei.dev/notes/canvas-多元思维模式/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>如何成为一个厉害的人</title>
+      <link>https://caolei.dev/notes/canvas-如何成为一个厉害的人/</link>
+      <guid>https://caolei.dev/notes/canvas-如何成为一个厉害的人/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>提高工作效率的方法论</title>
+      <link>https://caolei.dev/notes/canvas-提高工作效率的方法论/</link>
+      <guid>https://caolei.dev/notes/canvas-提高工作效率的方法论/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>文件格式处理场景及解决方案</title>
+      <link>https://caolei.dev/notes/canvas-文件格式处理场景及解决方案/</link>
+      <guid>https://caolei.dev/notes/canvas-文件格式处理场景及解决方案/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>日历看板</title>
+      <link>https://caolei.dev/notes/canvas-日历看板/</link>
+      <guid>https://caolei.dev/notes/canvas-日历看板/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>日语初级-N5所有知识点概览</title>
+      <link>https://caolei.dev/notes/canvas-日语初级-N5所有知识点概览/</link>
+      <guid>https://caolei.dev/notes/canvas-日语初级-N5所有知识点概览/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>编译原理期末复习</title>
+      <link>https://caolei.dev/notes/canvas-编译原理期末复习/</link>
+      <guid>https://caolei.dev/notes/canvas-编译原理期末复习/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>考研数学一大纲</title>
+      <link>https://caolei.dev/notes/canvas-考研数学一大纲/</link>
+      <guid>https://caolei.dev/notes/canvas-考研数学一大纲/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>苍穹外卖项目整体框架图和工作流</title>
+      <link>https://caolei.dev/notes/canvas-苍穹外卖项目整体框架图和工作流/</link>
+      <guid>https://caolei.dev/notes/canvas-苍穹外卖项目整体框架图和工作流/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>解决问题人脑决策思维流程图</title>
+      <link>https://caolei.dev/notes/canvas-解决问题人脑决策思维流程图/</link>
+      <guid>https://caolei.dev/notes/canvas-解决问题人脑决策思维流程图/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>计设赛C组教学设计_演示PPT</title>
+      <link>https://caolei.dev/notes/canvas-计设赛C组教学设计_演示PPT/</link>
+      <guid>https://caolei.dev/notes/canvas-计设赛C组教学设计_演示PPT/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>软件体系结构期末考试复习</title>
+      <link>https://caolei.dev/notes/canvas-软件体系结构期末考试复习/</link>
+      <guid>https://caolei.dev/notes/canvas-软件体系结构期末考试复习/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>软件工程作业四</title>
+      <link>https://caolei.dev/notes/canvas-软件工程作业四/</link>
+      <guid>https://caolei.dev/notes/canvas-软件工程作业四/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>软件工程期末复习</title>
+      <link>https://caolei.dev/notes/canvas-软件工程期末复习/</link>
+      <guid>https://caolei.dev/notes/canvas-软件工程期末复习/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>软件架构-层级图</title>
+      <link>https://caolei.dev/notes/canvas-软件架构-层级图/</link>
+      <guid>https://caolei.dev/notes/canvas-软件架构-层级图/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>驾考</title>
+      <link>https://caolei.dev/notes/canvas-驾考/</link>
+      <guid>https://caolei.dev/notes/canvas-驾考/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>高数上-思维导图</title>
+      <link>https://caolei.dev/notes/canvas-高数上-思维导图/</link>
+      <guid>https://caolei.dev/notes/canvas-高数上-思维导图/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[（该页面由个人知识脑图系统自动映射。请在上方高保真画布中进行交互探索。）...]]></description>
+    </item>
+    <item>
+      <title>ai产业链分层</title>
+      <link>https://caolei.dev/notes/excalidraw-ai产业链分层/</link>
+      <guid>https://caolei.dev/notes/excalidraw-ai产业链分层/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plu...]]></description>
+    </item>
+    <item>
+      <title>ai产业链分层及vibe coding的git版本管理</title>
+      <link>https://caolei.dev/notes/excalidraw-ai产业链分层及vibe coding的git版本管理/</link>
+      <guid>https://caolei.dev/notes/excalidraw-ai产业链分层及vibe coding的git版本管理/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plu...]]></description>
+    </item>
+    <item>
+      <title>umll类图绘制规则</title>
+      <link>https://caolei.dev/notes/excalidraw-umll类图绘制规则/</link>
+      <guid>https://caolei.dev/notes/excalidraw-umll类图绘制规则/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plu...]]></description>
+    </item>
+    <item>
+      <title>以应试考试做题家视角解析理工科知识学习</title>
+      <link>https://caolei.dev/notes/excalidraw-以应试考试做题家视角解析理工科知识学习/</link>
+      <guid>https://caolei.dev/notes/excalidraw-以应试考试做题家视角解析理工科知识学习/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plu...]]></description>
+    </item>
+    <item>
+      <title>日综拆解</title>
+      <link>https://caolei.dev/notes/excalidraw-日综拆解/</link>
+      <guid>https://caolei.dev/notes/excalidraw-日综拆解/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plu...]]></description>
+    </item>
+    <item>
+      <title>时间事务管理体系</title>
+      <link>https://caolei.dev/notes/excalidraw-时间事务管理体系/</link>
+      <guid>https://caolei.dev/notes/excalidraw-时间事务管理体系/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plu...]]></description>
+    </item>
+    <item>
+      <title>智能体工作原理_被动性资产构建工具四象限</title>
+      <link>https://caolei.dev/notes/excalidraw-智能体工作原理_被动性资产构建工具四象限/</link>
+      <guid>https://caolei.dev/notes/excalidraw-智能体工作原理_被动性资产构建工具四象限/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plu...]]></description>
+    </item>
+    <item>
+      <title>校园水果生鲜C2F+O2O</title>
+      <link>https://caolei.dev/notes/excalidraw-校园水果生鲜C2F+O2O/</link>
+      <guid>https://caolei.dev/notes/excalidraw-校园水果生鲜C2F+O2O/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plu...]]></description>
+    </item>
+    <item>
+      <title>知识层级体系_git原理</title>
+      <link>https://caolei.dev/notes/excalidraw-知识层级体系_git原理/</link>
+      <guid>https://caolei.dev/notes/excalidraw-知识层级体系_git原理/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plu...]]></description>
+    </item>
+    <item>
+      <title>金字塔模型_漏斗模型</title>
+      <link>https://caolei.dev/notes/excalidraw-金字塔模型_漏斗模型/</link>
+      <guid>https://caolei.dev/notes/excalidraw-金字塔模型_漏斗模型/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plu...]]></description>
+    </item>
+    <item>
+      <title>高数函数案例图</title>
+      <link>https://caolei.dev/notes/excalidraw-高数函数案例图/</link>
+      <guid>https://caolei.dev/notes/excalidraw-高数函数案例图/</guid>
+      <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
+      <description><![CDATA[==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plu...]]></description>
     </item>
     <item>
       <title>软件工程作业二</title>
@@ -3025,7 +3354,7 @@
       <description><![CDATA[<div class="obsidiantrigger selectnone" style="marginbottom: 2.5rem; padding: 1rem; border: 1px dashed rgba226, 232, 240, 0.9; borderradius: 6px; background: rgba148, 163, 184, 0.03; fontsiz...]]></description>
     </item>
     <item>
-      <title>23030301曹磊第五次作业</title>
+      <title>23030301githoldder第五次作业</title>
       <link>https://caolei.dev/notes/obsidian-52a170b1e37b5ff259390eb20f344d45/</link>
       <guid>https://caolei.dev/notes/obsidian-52a170b1e37b5ff259390eb20f344d45/</guid>
       <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
@@ -3074,7 +3403,7 @@
       <description><![CDATA[<div class="obsidiantrigger selectnone" style="marginbottom: 2.5rem; padding: 1rem; border: 1px dashed rgba226, 232, 240, 0.9; borderradius: 6px; background: rgba148, 163, 184, 0.03; fontsiz...]]></description>
     </item>
     <item>
-      <title>23030301曹磊第一次作业</title>
+      <title>23030301githoldder第一次作业</title>
       <link>https://caolei.dev/notes/obsidian-5460cd9bba982436f0581837010f451b/</link>
       <guid>https://caolei.dev/notes/obsidian-5460cd9bba982436f0581837010f451b/</guid>
       <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
@@ -4572,7 +4901,7 @@
       <description><![CDATA[<div class="obsidiantrigger selectnone" style="marginbottom: 2.5rem; padding: 1rem; border: 1px dashed rgba226, 232, 240, 0.9; borderradius: 6px; background: rgba148, 163, 184, 0.03; fontsiz...]]></description>
     </item>
     <item>
-      <title>23030301曹磊第二次作业</title>
+      <title>23030301githoldder第二次作业</title>
       <link>https://caolei.dev/notes/obsidian-8c9899eda6fa5207c53a81de8b3f934d/</link>
       <guid>https://caolei.dev/notes/obsidian-8c9899eda6fa5207c53a81de8b3f934d/</guid>
       <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
@@ -5461,7 +5790,7 @@
       <description><![CDATA[<div class="obsidiantrigger selectnone" style="marginbottom: 2.5rem; padding: 1rem; border: 1px dashed rgba226, 232, 240, 0.9; borderradius: 6px; background: rgba148, 163, 184, 0.03; fontsiz...]]></description>
     </item>
     <item>
-      <title>23030301曹磊第四次作业</title>
+      <title>23030301githoldder第四次作业</title>
       <link>https://caolei.dev/notes/obsidian-a9e9cbfeb62473b6bff5c6a17a9cfa97/</link>
       <guid>https://caolei.dev/notes/obsidian-a9e9cbfeb62473b6bff5c6a17a9cfa97/</guid>
       <pubDate>Thu, 11 Jun 2026 08:00:00 +0800</pubDate>
@@ -8000,13 +8329,6 @@
       <guid>https://caolei.dev/projects/darwin-skill/</guid>
       <pubDate>Wed, 01 Apr 2026 08:00:00 +0800</pubDate>
       <description><![CDATA[面向 AI Agent 的本地 Skills 进化与整理插件，支持自动化扫描、审查、蒸馏和演化归档。]]></description>
-    </item>
-    <item>
-      <title>文件处理全能助手 (v1.0.1)</title>
-      <link>https://caolei.dev/projects/file-processor-assistant/</link>
-      <guid>https://caolei.dev/projects/file-processor-assistant/</guid>
-      <pubDate>Wed, 11 Mar 2026 08:00:00 +0800</pubDate>
-      <description><![CDATA[高并发分布式文档转换处理系统，支持 PDF、Word、Excel、PPTX、Markdown 等多种格式互转。]]></description>
     </item>
     <item>
       <title>thuthesis Manual 写作辅助包</title>

@@ -1,0 +1,170 @@
+---
+interface WeatherRow {
+  label: string;
+  color: string;
+  total: number;
+  values: number[];
+}
+
+interface Props {
+  rows: WeatherRow[];
+  months: string[];
+}
+
+const { rows, months } = Astro.props;
+const maxValue = Math.max(1, ...rows.flatMap((row) => row.values));
+---
+
+<section class="knowledge-weather" aria-labelledby="knowledge-weather-title">
+  <div class="knowledge-weather__header">
+    <div>
+      <p>KNOWLEDGE WEATHER</p>
+      <h2 id="knowledge-weather-title">近期主题气候</h2>
+    </div>
+    <span>{months[0]} → {months[months.length - 1]}</span>
+  </div>
+
+  <div class="knowledge-weather__rows">
+    {rows.map((row) => (
+      <article class="weather-row" style={`--weather-color: ${row.color}`}>
+        <div class="weather-row__meta">
+          <strong>{row.label}</strong>
+          <span>{row.total} notes</span>
+        </div>
+        <div class="weather-row__dots" aria-label={`${row.label} 每月笔记分布`}>
+          {row.values.map((value, index) => {
+            const size = 8 + (value / maxValue) * 26;
+            return (
+              <span
+                title={`${months[index]}: ${value}`}
+                style={`width: ${size}px; height: ${size}px; opacity: ${value === 0 ? 0.18 : 0.45 + (value / maxValue) * 0.5}`}
+              ></span>
+            );
+          })}
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <div class="knowledge-weather__months" aria-hidden="true">
+    {months.map((month) => <span>{month}</span>)}
+  </div>
+</section>
+
+<style>
+  .knowledge-weather {
+    padding: 1.25rem;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.68);
+    box-shadow: 0 18px 55px rgba(15, 23, 42, 0.05);
+  }
+
+  .knowledge-weather__header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+  }
+
+  .knowledge-weather__header p,
+  .knowledge-weather__header span,
+  .weather-row__meta span,
+  .knowledge-weather__months {
+    margin: 0;
+    color: #94a3b8;
+    font: 700 0.62rem/1 var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .knowledge-weather__header h2 {
+    margin: 0.35rem 0 0;
+    color: #0f172a;
+    font: 800 1.35rem/1.1 var(--font-serif, Georgia, serif);
+  }
+
+  .knowledge-weather__rows {
+    display: grid;
+    gap: 0.65rem;
+    margin-top: 1rem;
+  }
+
+  .weather-row {
+    display: grid;
+    grid-template-columns: minmax(8rem, 0.78fr) minmax(0, 1.4fr);
+    gap: 1rem;
+    align-items: center;
+    min-height: 3.2rem;
+  }
+
+  .weather-row__meta {
+    min-width: 0;
+  }
+
+  .weather-row__meta strong {
+    display: block;
+    overflow: hidden;
+    color: #334155;
+    font: 800 0.82rem/1.2 var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .weather-row__meta span {
+    display: block;
+    margin-top: 0.25rem;
+    letter-spacing: 0;
+  }
+
+  .weather-row__dots {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(18px, 1fr));
+    align-items: center;
+    gap: 0.55rem;
+    min-height: 2.4rem;
+  }
+
+  .weather-row__dots span {
+    justify-self: center;
+    border: 1px solid color-mix(in srgb, var(--weather-color) 60%, white);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--weather-color) 30%, white);
+    box-shadow: 0 8px 18px color-mix(in srgb, var(--weather-color) 18%, transparent);
+  }
+
+  .knowledge-weather__months {
+    display: grid;
+    grid-template-columns: minmax(8rem, 0.78fr) repeat(6, minmax(18px, 1fr));
+    gap: 0.55rem;
+    margin-top: 0.9rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed rgba(148, 163, 184, 0.22);
+    letter-spacing: 0;
+  }
+
+  .knowledge-weather__months::before {
+    content: "";
+  }
+
+  .knowledge-weather__months span {
+    justify-self: center;
+  }
+
+  @media (max-width: 640px) {
+    .weather-row {
+      grid-template-columns: 1fr;
+      gap: 0.45rem;
+    }
+
+    .knowledge-weather__months {
+      grid-template-columns: repeat(6, minmax(18px, 1fr));
+    }
+
+    .knowledge-weather__months::before {
+      display: none;
+    }
+  }
+</style>

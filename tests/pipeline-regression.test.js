@@ -34,14 +34,32 @@ test('rejects deck manifests with duplicate slugs', () => {
         title: 'Deck A',
         date: '2026-06-28',
         sourcePath: 'content/decks/pk-asset-os-roadmap.md',
-        outputs: { html: 'public/slides/same/', pdf: 'public/assets/same.pdf' }
+        outputs: { html: 'public/slides/same/', pdf: 'public/assets/same.pdf' },
+        formats: {
+          html: { path: 'public/slides/same/', url: '/slides/same/' },
+          pdf: { path: 'public/assets/same.pdf', url: '/assets/same.pdf' },
+          pptx: { path: 'public/assets/same.pptx', url: '/assets/same.pptx' }
+        },
+        content_hash: `sha256:${'a'.repeat(64)}`,
+        updated_at: '2026-06-28T00:00:00.000Z',
+        build_log: 'public/assets/decks/same.build.log',
+        build: { log: 'public/assets/decks/same.build.log' }
       },
       {
         slug: 'same',
         title: 'Deck B',
         date: '2026-06-28',
         sourcePath: 'content/decks/pk-asset-os-roadmap.md',
-        outputs: { html: 'public/slides/same/', pdf: 'public/assets/same.pdf' }
+        outputs: { html: 'public/slides/same/', pdf: 'public/assets/same.pdf' },
+        formats: {
+          html: { path: 'public/slides/same/', url: '/slides/same/' },
+          pdf: { path: 'public/assets/same.pdf', url: '/assets/same.pdf' },
+          pptx: { path: 'public/assets/same.pptx', url: '/assets/same.pptx' }
+        },
+        content_hash: `sha256:${'b'.repeat(64)}`,
+        updated_at: '2026-06-28T00:00:00.000Z',
+        build_log: 'public/assets/decks/same.build.log',
+        build: { log: 'public/assets/decks/same.build.log' }
       }
     ]
   };

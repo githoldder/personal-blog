@@ -16,12 +16,13 @@ const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 
 const formatDate = (date: Date) => date.toISOString().slice(0, 7);
+const publicTitle = entry.data.title.replace(/曹磊/g, 'githoldder');
 
 // 默认 GitHub fallback 规则
 const githubUrl = entry.data.github || `https://github.com/githoldder/${entry.data.slug ?? entry.id}`;
 ---
 
-<BaseLayout title={entry.data.title}>
+<BaseLayout title={publicTitle}>
   
   <div class="w-full flex flex-col lg:flex-row gap-10 items-start select-none">
     
@@ -53,7 +54,7 @@ const githubUrl = entry.data.github || `https://github.com/githoldder/${entry.da
           PROJECT LIFE STAGE
         </span>
         <h1 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 leading-tight">
-          {entry.data.title}
+          {publicTitle}
         </h1>
         <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400 font-mono">
           <span>📅 TIME_COORD: <span class="text-rose-700 font-bold">{formatDate(entry.data.date)}</span></span>

@@ -1,19 +1,23 @@
 ---
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import SiteMark from '../components/SiteMark.astro';
+import SoftCursor from '../components/SoftCursor.astro';
+import { styleVarsForTheme, type ThemeKey } from '../lib/themeTaxonomy';
 
 interface Props {
   title: string;
   description?: string;
+  theme?: ThemeKey;
 }
 
-const { title, description } = Astro.props;
+const { title, description, theme = 'default' } = Astro.props;
 const pathname = Astro.url.pathname;
 
 // 动态读取 resume.json 中的全局元数据
 let siteUrl = 'https://caolei.net';
 let siteDescription = '个人知识资产操作系统 - 聚合笔记、简历、项目与演示文稿';
-let authorName = '曹磊';
+const publicHandle = 'githoldder';
 
 const resumePath = join(process.cwd(), 'public/assets/resume.json');
 if (existsSync(resumePath)) {
@@ -21,7 +25,6 @@ if (existsSync(resumePath)) {
     const resume = JSON.parse(readFileSync(resumePath, 'utf-8'));
     if (resume?.basics) {
       if (resume.basics.url) siteUrl = resume.basics.url.replace(/\/$/, '');
-      if (resume.basics.name) authorName = resume.basics.name;
       if (resume.basics.summary) siteDescription = resume.basics.summary;
     }
   } catch (e) {
@@ -29,9 +32,10 @@ if (existsSync(resumePath)) {
   }
 }
 
-const pageTitle = title ? `${title} — ${authorName}的知识系统` : `${authorName}的个人知识资产操作系统`;
+const pageTitle = title ? `${title} — ${publicHandle} knowledge OS` : `${publicHandle} knowledge OS`;
 const pageDescription = description || siteDescription;
 const canonicalUrl = `${siteUrl}${pathname}`;
+const themeStyle = styleVarsForTheme(theme);
 
 const isActive = (path: string) => {
   if (path === '/') {
@@ -42,12 +46,11 @@ const isActive = (path: string) => {
 
 const navItems = [
   { label: '工作台', href: '/' },
-  { label: '搜索', href: '/search' },
   { label: '笔记', href: '/notes' },
   { label: '项目', href: '/projects' },
-  { label: '文稿', href: '/decks' },
+  { label: '图谱', href: '/lab/graph' },
+  { label: '图书馆', href: '/library' },
   { label: '简历', href: '/resume' },
-  { label: '实验室', href: '/lab/graph' },
 ];
 ---
 
@@ -69,7 +72,7 @@ const navItems = [
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
-    <meta property="og:site_name" content={`${authorName}的知识系统`} />
+    <meta property="og:site_name" content={`${publicHandle} knowledge OS`} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary" />
@@ -77,33 +80,42 @@ const navItems = [
     <meta property="twitter:title" content={pageTitle} />
     <meta property="twitter:description" content={pageDescription} />
   </head>
-  <body class="bg-surface-50 text-surface-900 min-h-screen flex flex-col">
-    <header class="sticky top-0 z-40 w-full border-b border-slate-200/60 bg-[#fbf8f1]/82 backdrop-blur">
+  <body class="bg-surface-50 text-surface-900 min-h-screen flex flex-col" style={themeStyle}>
+    <header class="site-header sticky top-0 z-40 w-full border-b border-slate-200/60 bg-[#fbf8f1]/88 backdrop-blur">
       <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between gap-4">
-        <a href="/" class="font-serif font-bold text-base tracking-tight text-slate-950 hover:text-rose-700 shrink-0">
-          曹磊的思考花园
-        </a>
-        <nav class="flex items-center gap-1 sm:gap-2 overflow-x-auto scrollbar-none py-1 -mr-6 pr-6 sm:mr-0 sm:pr-0">
+        <SiteMark />
+        <nav class="site-nav flex items-center gap-1 overflow-x-auto scrollbar-none py-1 -mr-6 pr-6 sm:mr-0 sm:pr-0" aria-label="Primary">
           {navItems.map((item) => {
             const active = isActive(item.href);
             return (
               <a
                 href={item.href}
-                class={`text-xs sm:text-sm font-sans font-bold px-2 py-1.5 transition-colors shrink-0 ${
+                data-nav-link
+                aria-current={active ? 'page' : undefined}
+                class={`site-nav__link text-xs sm:text-sm font-sans font-bold px-2.5 py-1.5 transition-colors shrink-0 ${
                   active
-                    ? 'text-rose-700 border-b-2 border-rose-600 font-bold'
-                    : 'text-slate-600 hover:text-rose-700 hover:bg-slate-100/50 rounded-md'
+                    ? 'site-nav__link--active text-rose-700 font-bold'
+                    : 'text-slate-600 hover:text-rose-700'
                 }`}
               >
                 {item.label}
               </a>
             );
           })}
+          <a
+            href="/search"
+            class="site-nav__utility text-xs sm:text-sm font-sans font-bold px-2 py-1.5 transition-colors shrink-0 text-slate-500 hover:text-rose-700"
+            aria-label="搜索"
+            title="搜索"
+            data-utility-action
+          >
+            ⌕
+          </a>
         </nav>
       </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-12 w-full flex-grow">
+    <main class="max-w-6xl mx-auto px-6 py-8 md:py-10 w-full flex-grow">
       <slot />
     </main>
 
@@ -118,6 +130,7 @@ const navItems = [
         <p>© 2026 Personal Knowledge Asset OS. All assets managed locally.</p>
       </div>
     </footer>
+    <SoftCursor />
   </body>
 </html>
 

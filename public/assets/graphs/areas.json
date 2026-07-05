@@ -1,9 +1,6993 @@
 {
-  "nodes": [],
-  "edges": [],
+  "nodes": [
+    {
+      "id": "note:canvas-002-英语语法知识体系认知地图",
+      "label": "002-英语语法知识体系认知地图",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-002-英语语法知识体系认知地图.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-ai产品经理开发流程",
+      "label": "AI产品经理开发流程",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-AI产品经理开发流程.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-ai发展史-风格化增强版",
+      "label": "AI发展史-风格化增强版",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-AI发展史-风格化增强版.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-gtd流程图",
+      "label": "GTD流程图",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-GTD流程图.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-gtd看板",
+      "label": "GTD看板",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-GTD看板.md",
+        "stage": "evergreen",
+        "date": "2026-06-17",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-todo看板",
+      "label": "TODO看板",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-TODO看板.md",
+        "stage": "evergreen",
+        "date": "2026-06-18",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-tts实现方法研究",
+      "label": "TTS实现方法研究",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-TTS实现方法研究.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-idea的工程级项目存储结构",
+      "label": "idea的工程级项目存储结构",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-idea的工程级项目存储结构.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-web应用开发实验",
+      "label": "web应用开发实验",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-web应用开发实验.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-云服务发展史",
+      "label": "云服务发展史",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-云服务发展史.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-互联网架构演化史",
+      "label": "互联网架构演化史",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-互联网架构演化史.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-人工智能发展史及应用技术迭代史",
+      "label": "人工智能发展史及应用技术迭代史",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-人工智能发展史及应用技术迭代史.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-多元思维模式",
+      "label": "多元思维模式",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-多元思维模式.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-如何成为一个厉害的人",
+      "label": "如何成为一个厉害的人",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-如何成为一个厉害的人.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-提高工作效率的方法论",
+      "label": "提高工作效率的方法论",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-提高工作效率的方法论.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-文件格式处理场景及解决方案",
+      "label": "文件格式处理场景及解决方案",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-文件格式处理场景及解决方案.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-日历看板",
+      "label": "日历看板",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-日历看板.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-日语初级-n5所有知识点概览",
+      "label": "日语初级-N5所有知识点概览",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-日语初级-N5所有知识点概览.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-管理学思维和技巧",
+      "label": "管理学思维和技巧",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-管理学思维和技巧.md",
+        "stage": "evergreen",
+        "date": "2026-07-03",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-编译原理期末复习",
+      "label": "编译原理期末复习",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-编译原理期末复习.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-考研数学一大纲",
+      "label": "考研数学一大纲",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-考研数学一大纲.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "label": "苍穹外卖项目整体框架图和工作流",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-苍穹外卖项目整体框架图和工作流.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-解决问题人脑决策思维流程图",
+      "label": "解决问题人脑决策思维流程图",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-解决问题人脑决策思维流程图.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-计设赛c组教学设计-演示ppt",
+      "label": "计设赛C组教学设计_演示PPT",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-计设赛C组教学设计_演示PPT.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-调研流程工具箱",
+      "label": "调研流程工具箱",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-调研流程工具箱.md",
+        "stage": "evergreen",
+        "date": "2026-07-03",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-软件体系结构期末考试复习",
+      "label": "软件体系结构期末考试复习",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-软件体系结构期末考试复习.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-软件工程作业四",
+      "label": "软件工程作业四",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-软件工程作业四.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-软件工程期末复习",
+      "label": "软件工程期末复习",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-软件工程期末复习.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-软件架构-层级图",
+      "label": "软件架构-层级图",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-软件架构-层级图.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-驾考",
+      "label": "驾考",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-驾考.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:canvas-高数上-思维导图",
+      "label": "高数上-思维导图",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/canvas-高数上-思维导图.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 30,
+        "tags": [
+          "canvas",
+          "个人看板"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:excalidraw-docker的入门教程知识拆解",
+      "label": "Docker的入门教程知识拆解",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/excalidraw-Docker的入门教程知识拆解.md",
+        "stage": "evergreen",
+        "date": "2026-06-17",
+        "degree": 18,
+        "tags": [
+          "excalidraw"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:excalidraw-ai产业链分层",
+      "label": "ai产业链分层",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/excalidraw-ai产业链分层.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 18,
+        "tags": [
+          "excalidraw"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:excalidraw-umll类图绘制规则",
+      "label": "umll类图绘制规则",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/excalidraw-umll类图绘制规则.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 18,
+        "tags": [
+          "excalidraw"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "label": "以应试考试做题家视角解析理工科知识学习",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/excalidraw-以应试考试做题家视角解析理工科知识学习.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 18,
+        "tags": [
+          "excalidraw"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:excalidraw-日综拆解",
+      "label": "日综拆解",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/excalidraw-日综拆解.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 18,
+        "tags": [
+          "excalidraw"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:excalidraw-时间事务管理体系",
+      "label": "时间事务管理体系",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/excalidraw-时间事务管理体系.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 18,
+        "tags": [
+          "excalidraw"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:excalidraw-智能体工作原理-被动性资产构建工具四象限",
+      "label": "智能体工作原理_被动性资产构建工具四象限",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/excalidraw-智能体工作原理_被动性资产构建工具四象限.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 18,
+        "tags": [
+          "excalidraw"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:excalidraw-校园水果生鲜c2f-o2o",
+      "label": "校园水果生鲜C2F+O2O",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/excalidraw-校园水果生鲜C2F+O2O.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 18,
+        "tags": [
+          "excalidraw"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:excalidraw-知识层级体系-git原理",
+      "label": "知识层级体系_git原理",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/excalidraw-知识层级体系_git原理.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 18,
+        "tags": [
+          "excalidraw"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:excalidraw-编译原理作业二",
+      "label": "编译原理作业二",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/excalidraw-编译原理作业二.md",
+        "stage": "evergreen",
+        "date": "2026-06-17",
+        "degree": 18,
+        "tags": [
+          "excalidraw"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:excalidraw-金字塔模型-漏斗模型",
+      "label": "金字塔模型_漏斗模型",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/excalidraw-金字塔模型_漏斗模型.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 18,
+        "tags": [
+          "excalidraw"
+        ],
+        "scope": "Areas"
+      }
+    },
+    {
+      "id": "note:excalidraw-高数函数案例图",
+      "label": "高数函数案例图",
+      "type": "note",
+      "metadata": {
+        "file": "content/notes/excalidraw-高数函数案例图.md",
+        "stage": "evergreen",
+        "date": "2026-06-11",
+        "degree": 18,
+        "tags": [
+          "excalidraw"
+        ],
+        "scope": "Areas"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-ai产品经理开发流程",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-ai发展史-风格化增强版",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-gtd流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-gtd看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-todo看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-tts实现方法研究",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-idea的工程级项目存储结构",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-web应用开发实验",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-云服务发展史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-互联网架构演化史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-人工智能发展史及应用技术迭代史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-多元思维模式",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-如何成为一个厉害的人",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-提高工作效率的方法论",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-文件格式处理场景及解决方案",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-002-英语语法知识体系认知地图",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-ai发展史-风格化增强版",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-gtd流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-gtd看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-todo看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-tts实现方法研究",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-idea的工程级项目存储结构",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-web应用开发实验",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-云服务发展史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-互联网架构演化史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-人工智能发展史及应用技术迭代史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-多元思维模式",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-如何成为一个厉害的人",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-提高工作效率的方法论",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-文件格式处理场景及解决方案",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai产品经理开发流程",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-gtd流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-gtd看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-todo看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-tts实现方法研究",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-idea的工程级项目存储结构",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-web应用开发实验",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-云服务发展史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-互联网架构演化史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-人工智能发展史及应用技术迭代史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-多元思维模式",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-如何成为一个厉害的人",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-提高工作效率的方法论",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-文件格式处理场景及解决方案",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-ai发展史-风格化增强版",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-gtd看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-todo看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-tts实现方法研究",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-idea的工程级项目存储结构",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-web应用开发实验",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-云服务发展史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-互联网架构演化史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-人工智能发展史及应用技术迭代史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-多元思维模式",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-如何成为一个厉害的人",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-提高工作效率的方法论",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-文件格式处理场景及解决方案",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd流程图",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-todo看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-tts实现方法研究",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-idea的工程级项目存储结构",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-web应用开发实验",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-云服务发展史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-互联网架构演化史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-人工智能发展史及应用技术迭代史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-多元思维模式",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-如何成为一个厉害的人",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-提高工作效率的方法论",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-文件格式处理场景及解决方案",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-gtd看板",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-tts实现方法研究",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-idea的工程级项目存储结构",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-web应用开发实验",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-云服务发展史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-互联网架构演化史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-人工智能发展史及应用技术迭代史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-多元思维模式",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-如何成为一个厉害的人",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-提高工作效率的方法论",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-文件格式处理场景及解决方案",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-todo看板",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-idea的工程级项目存储结构",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-web应用开发实验",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-云服务发展史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-互联网架构演化史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-人工智能发展史及应用技术迭代史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-多元思维模式",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-如何成为一个厉害的人",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-提高工作效率的方法论",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-文件格式处理场景及解决方案",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-tts实现方法研究",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-web应用开发实验",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-云服务发展史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-互联网架构演化史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-人工智能发展史及应用技术迭代史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-多元思维模式",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-如何成为一个厉害的人",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-提高工作效率的方法论",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-文件格式处理场景及解决方案",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-idea的工程级项目存储结构",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-云服务发展史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-互联网架构演化史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-人工智能发展史及应用技术迭代史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-多元思维模式",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-如何成为一个厉害的人",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-提高工作效率的方法论",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-文件格式处理场景及解决方案",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-web应用开发实验",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-互联网架构演化史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-人工智能发展史及应用技术迭代史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-多元思维模式",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-如何成为一个厉害的人",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-提高工作效率的方法论",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-文件格式处理场景及解决方案",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-云服务发展史",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-人工智能发展史及应用技术迭代史",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-多元思维模式",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-如何成为一个厉害的人",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-提高工作效率的方法论",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-文件格式处理场景及解决方案",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-互联网架构演化史",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-多元思维模式",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-如何成为一个厉害的人",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-提高工作效率的方法论",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-文件格式处理场景及解决方案",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-人工智能发展史及应用技术迭代史",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-如何成为一个厉害的人",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-提高工作效率的方法论",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-文件格式处理场景及解决方案",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-多元思维模式",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-提高工作效率的方法论",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-文件格式处理场景及解决方案",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-如何成为一个厉害的人",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-文件格式处理场景及解决方案",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-提高工作效率的方法论",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-文件格式处理场景及解决方案",
+      "target": "note:canvas-日历看板",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-文件格式处理场景及解决方案",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-文件格式处理场景及解决方案",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-文件格式处理场景及解决方案",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-文件格式处理场景及解决方案",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-文件格式处理场景及解决方案",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-文件格式处理场景及解决方案",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-文件格式处理场景及解决方案",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-文件格式处理场景及解决方案",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-文件格式处理场景及解决方案",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-文件格式处理场景及解决方案",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-文件格式处理场景及解决方案",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-文件格式处理场景及解决方案",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-文件格式处理场景及解决方案",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-文件格式处理场景及解决方案",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日历看板",
+      "target": "note:canvas-日语初级-n5所有知识点概览",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日历看板",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日历看板",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日历看板",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日历看板",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日历看板",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日历看板",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日历看板",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日历看板",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日历看板",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日历看板",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日历看板",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日历看板",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日历看板",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日语初级-n5所有知识点概览",
+      "target": "note:canvas-管理学思维和技巧",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日语初级-n5所有知识点概览",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日语初级-n5所有知识点概览",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日语初级-n5所有知识点概览",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日语初级-n5所有知识点概览",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日语初级-n5所有知识点概览",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日语初级-n5所有知识点概览",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日语初级-n5所有知识点概览",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日语初级-n5所有知识点概览",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日语初级-n5所有知识点概览",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日语初级-n5所有知识点概览",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日语初级-n5所有知识点概览",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-日语初级-n5所有知识点概览",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-管理学思维和技巧",
+      "target": "note:canvas-编译原理期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-管理学思维和技巧",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-管理学思维和技巧",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-管理学思维和技巧",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-管理学思维和技巧",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-管理学思维和技巧",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-管理学思维和技巧",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-管理学思维和技巧",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-管理学思维和技巧",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-管理学思维和技巧",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-管理学思维和技巧",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-管理学思维和技巧",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-编译原理期末复习",
+      "target": "note:canvas-考研数学一大纲",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-编译原理期末复习",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-编译原理期末复习",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-编译原理期末复习",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-编译原理期末复习",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-编译原理期末复习",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-编译原理期末复习",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-编译原理期末复习",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-编译原理期末复习",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-编译原理期末复习",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-编译原理期末复习",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-考研数学一大纲",
+      "target": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-考研数学一大纲",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-考研数学一大纲",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-考研数学一大纲",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-考研数学一大纲",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-考研数学一大纲",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-考研数学一大纲",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-考研数学一大纲",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-考研数学一大纲",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-考研数学一大纲",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "target": "note:canvas-解决问题人脑决策思维流程图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-解决问题人脑决策思维流程图",
+      "target": "note:canvas-计设赛c组教学设计-演示ppt",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-解决问题人脑决策思维流程图",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-解决问题人脑决策思维流程图",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-解决问题人脑决策思维流程图",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-解决问题人脑决策思维流程图",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-解决问题人脑决策思维流程图",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-解决问题人脑决策思维流程图",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-解决问题人脑决策思维流程图",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-计设赛c组教学设计-演示ppt",
+      "target": "note:canvas-调研流程工具箱",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-计设赛c组教学设计-演示ppt",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-计设赛c组教学设计-演示ppt",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-计设赛c组教学设计-演示ppt",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-计设赛c组教学设计-演示ppt",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-计设赛c组教学设计-演示ppt",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-计设赛c组教学设计-演示ppt",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-调研流程工具箱",
+      "target": "note:canvas-软件体系结构期末考试复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-调研流程工具箱",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-调研流程工具箱",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-调研流程工具箱",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-调研流程工具箱",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-调研流程工具箱",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-软件体系结构期末考试复习",
+      "target": "note:canvas-软件工程作业四",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-软件体系结构期末考试复习",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-软件体系结构期末考试复习",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-软件体系结构期末考试复习",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-软件体系结构期末考试复习",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-软件工程作业四",
+      "target": "note:canvas-软件工程期末复习",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-软件工程作业四",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-软件工程作业四",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-软件工程作业四",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-软件工程期末复习",
+      "target": "note:canvas-软件架构-层级图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-软件工程期末复习",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-软件工程期末复习",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-软件架构-层级图",
+      "target": "note:canvas-驾考",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-软件架构-层级图",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:canvas-驾考",
+      "target": "note:canvas-高数上-思维导图",
+      "weight": 0.5,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "canvas",
+          "个人看板"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-docker的入门教程知识拆解",
+      "target": "note:excalidraw-ai产业链分层",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-docker的入门教程知识拆解",
+      "target": "note:excalidraw-umll类图绘制规则",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-docker的入门教程知识拆解",
+      "target": "note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-docker的入门教程知识拆解",
+      "target": "note:excalidraw-日综拆解",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-docker的入门教程知识拆解",
+      "target": "note:excalidraw-时间事务管理体系",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-docker的入门教程知识拆解",
+      "target": "note:excalidraw-智能体工作原理-被动性资产构建工具四象限",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-docker的入门教程知识拆解",
+      "target": "note:excalidraw-校园水果生鲜c2f-o2o",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-docker的入门教程知识拆解",
+      "target": "note:excalidraw-知识层级体系-git原理",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-docker的入门教程知识拆解",
+      "target": "note:excalidraw-编译原理作业二",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-docker的入门教程知识拆解",
+      "target": "note:excalidraw-金字塔模型-漏斗模型",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-docker的入门教程知识拆解",
+      "target": "note:excalidraw-高数函数案例图",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-ai产业链分层",
+      "target": "note:excalidraw-umll类图绘制规则",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-ai产业链分层",
+      "target": "note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-ai产业链分层",
+      "target": "note:excalidraw-日综拆解",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-ai产业链分层",
+      "target": "note:excalidraw-时间事务管理体系",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-ai产业链分层",
+      "target": "note:excalidraw-智能体工作原理-被动性资产构建工具四象限",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-ai产业链分层",
+      "target": "note:excalidraw-校园水果生鲜c2f-o2o",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-ai产业链分层",
+      "target": "note:excalidraw-知识层级体系-git原理",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-ai产业链分层",
+      "target": "note:excalidraw-编译原理作业二",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-ai产业链分层",
+      "target": "note:excalidraw-金字塔模型-漏斗模型",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-ai产业链分层",
+      "target": "note:excalidraw-高数函数案例图",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-umll类图绘制规则",
+      "target": "note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-umll类图绘制规则",
+      "target": "note:excalidraw-日综拆解",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-umll类图绘制规则",
+      "target": "note:excalidraw-时间事务管理体系",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-umll类图绘制规则",
+      "target": "note:excalidraw-智能体工作原理-被动性资产构建工具四象限",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-umll类图绘制规则",
+      "target": "note:excalidraw-校园水果生鲜c2f-o2o",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-umll类图绘制规则",
+      "target": "note:excalidraw-知识层级体系-git原理",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-umll类图绘制规则",
+      "target": "note:excalidraw-编译原理作业二",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-umll类图绘制规则",
+      "target": "note:excalidraw-金字塔模型-漏斗模型",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-umll类图绘制规则",
+      "target": "note:excalidraw-高数函数案例图",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "target": "note:excalidraw-日综拆解",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "target": "note:excalidraw-时间事务管理体系",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "target": "note:excalidraw-智能体工作原理-被动性资产构建工具四象限",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "target": "note:excalidraw-校园水果生鲜c2f-o2o",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "target": "note:excalidraw-知识层级体系-git原理",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "target": "note:excalidraw-编译原理作业二",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "target": "note:excalidraw-金字塔模型-漏斗模型",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "target": "note:excalidraw-高数函数案例图",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-日综拆解",
+      "target": "note:excalidraw-时间事务管理体系",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-日综拆解",
+      "target": "note:excalidraw-智能体工作原理-被动性资产构建工具四象限",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-日综拆解",
+      "target": "note:excalidraw-校园水果生鲜c2f-o2o",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-日综拆解",
+      "target": "note:excalidraw-知识层级体系-git原理",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-日综拆解",
+      "target": "note:excalidraw-编译原理作业二",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-日综拆解",
+      "target": "note:excalidraw-金字塔模型-漏斗模型",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-日综拆解",
+      "target": "note:excalidraw-高数函数案例图",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-时间事务管理体系",
+      "target": "note:excalidraw-智能体工作原理-被动性资产构建工具四象限",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-时间事务管理体系",
+      "target": "note:excalidraw-校园水果生鲜c2f-o2o",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-时间事务管理体系",
+      "target": "note:excalidraw-知识层级体系-git原理",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-时间事务管理体系",
+      "target": "note:excalidraw-编译原理作业二",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-时间事务管理体系",
+      "target": "note:excalidraw-金字塔模型-漏斗模型",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-时间事务管理体系",
+      "target": "note:excalidraw-高数函数案例图",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-智能体工作原理-被动性资产构建工具四象限",
+      "target": "note:excalidraw-校园水果生鲜c2f-o2o",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-智能体工作原理-被动性资产构建工具四象限",
+      "target": "note:excalidraw-知识层级体系-git原理",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-智能体工作原理-被动性资产构建工具四象限",
+      "target": "note:excalidraw-编译原理作业二",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-智能体工作原理-被动性资产构建工具四象限",
+      "target": "note:excalidraw-金字塔模型-漏斗模型",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-智能体工作原理-被动性资产构建工具四象限",
+      "target": "note:excalidraw-高数函数案例图",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-校园水果生鲜c2f-o2o",
+      "target": "note:excalidraw-知识层级体系-git原理",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-校园水果生鲜c2f-o2o",
+      "target": "note:excalidraw-编译原理作业二",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-校园水果生鲜c2f-o2o",
+      "target": "note:excalidraw-金字塔模型-漏斗模型",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-校园水果生鲜c2f-o2o",
+      "target": "note:excalidraw-高数函数案例图",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-知识层级体系-git原理",
+      "target": "note:excalidraw-编译原理作业二",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-知识层级体系-git原理",
+      "target": "note:excalidraw-金字塔模型-漏斗模型",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-知识层级体系-git原理",
+      "target": "note:excalidraw-高数函数案例图",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-编译原理作业二",
+      "target": "note:excalidraw-金字塔模型-漏斗模型",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-编译原理作业二",
+      "target": "note:excalidraw-高数函数案例图",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    },
+    {
+      "source": "note:excalidraw-金字塔模型-漏斗模型",
+      "target": "note:excalidraw-高数函数案例图",
+      "weight": 0.25,
+      "type": "tag_overlap",
+      "metadata": {
+        "shared_tags": [
+          "excalidraw"
+        ]
+      }
+    }
+  ],
   "metadata": {
     "scope": "Areas",
-    "total_nodes": 0,
-    "total_edges": 0
+    "total_nodes": 43,
+    "total_edges": 531
   }
 }

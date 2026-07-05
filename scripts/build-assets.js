@@ -17,8 +17,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const scripts = [
   { name: 'build-previews.js', label: 'Canvas & Excalidraw Previews' },
+  { name: 'build-media-index.js', label: 'Media Asset Manifest' },
   { name: 'build-library-index.js', label: 'Library Catalog' },
   { name: 'build-notes-index.js', label: 'Notes Index' },
+  { name: 'build-wiki-index.js', label: 'Wiki Graph & Search' },
   { name: 'build-resume.js', label: 'Resume' },
   { name: 'build-resume-package.js', label: 'Resume Package' },
   { name: 'build-decks.js', label: 'Decks' },

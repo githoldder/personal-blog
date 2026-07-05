@@ -5,6 +5,8 @@ import GrowthBadge from '../../components/GrowthBadge.astro';
 import CoordinateAxis from '../../components/CoordinateAxis.astro';
 import GardenCard from '../../components/GardenCard.astro';
 
+const publicTitle = (value: string) => value.replace(/曹磊/g, 'githoldder');
+
 // 1. 获取已发布笔记，并丰富其知识生长元数据 (Digital Gardening)
 const notes = (await getCollection('notes'))
   .filter((entry) => {
@@ -34,7 +36,7 @@ const notes = (await getCollection('notes'))
     return {
       id: entry.id,
       slug: entry.data.slug ?? entry.id,
-      title: entry.data.title,
+      title: publicTitle(entry.data.title),
       date: entry.data.date,
       tags: entry.data.tags,
       status: entry.data.status,

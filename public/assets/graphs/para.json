@@ -2,10 +2,10 @@
   "nodes": [
     {
       "id": "resume:basics",
-      "label": "曹磊的简历",
+      "label": "githoldder 的简历",
       "type": "resume",
       "metadata": {
-        "summary": "软件工程本科在读，长期围绕个人知识资产系统、AI 方言学习、政务信息化与校园商业验证构建真实项目。擅长把需求调研、原型设计、后端脚本、数据管线、前端可视化和产品复盘串成闭环。"
+        "summary": "高并发项目管理 × 全链路产品思维 × 技术背景。常州工学院软件工程专业本科生。主修软件工程，习惯用 GTD 管理个人事务与时间精力，在高并发压力下仍能保持理性决策与工程定力。具备扎实的全栈与分布式应用技术基础，主导过多智能体协同、分布式转换系统、政务数字治理以及个人知识资产等软硬件系统的设计与开发。多次获得校级优秀学生干部及国家级/省级学科竞赛奖项（包含揭榜挂帅擂台赛全国二等奖、iCAN创新创业大赛全国三等奖及省级一等奖、亚太数学建模二等奖等），具有极强的工程师思维和学习方法论。"
       }
     },
     {
@@ -147,11 +147,11 @@
     },
     {
       "id": "project:file-processor-assistant",
-      "label": "文件处理全能助手 (v1.0.1)",
+      "label": "文件处理与分布式高并发文档转换系统 (v2.0.0)",
       "type": "project",
       "metadata": {
         "file": "content/projects/file-processor-assistant.md",
-        "date": "2026-03-11"
+        "date": "2026-06-22"
       }
     },
     {
@@ -164,12 +164,12 @@
       }
     },
     {
-      "id": "project:personal-knowledge-asset-os",
-      "label": "Personal Knowledge Asset OS",
+      "id": "project:personal-blog",
+      "label": "Personal Knowledge Asset OS (personal-blog)",
       "type": "project",
       "metadata": {
-        "file": "content/projects/personal-knowledge-asset-os.md",
-        "date": "2026-06-26"
+        "file": "content/projects/personal-blog.md",
+        "date": "2026-07-03"
       }
     },
     {
@@ -205,6 +205,14 @@
       "type": "deck",
       "metadata": {
         "file": "content/decks/pk-asset-os-roadmap.md"
+      }
+    },
+    {
+      "id": "deck:resume-presentation",
+      "label": "githoldder - 个人求职简历 PPTX 展示",
+      "type": "deck",
+      "metadata": {
+        "file": "content/decks/resume-presentation.md"
       }
     },
     {
@@ -477,51 +485,33 @@
       "type": "para_link"
     },
     {
-      "id": "para-edge:resume:basics-project:file-processor-assistant",
+      "id": "para-edge:resume:basics-project:darwin-skill",
       "source": "resume:basics",
-      "target": "project:file-processor-assistant",
+      "target": "project:darwin-skill",
       "type": "para_link"
     },
     {
-      "id": "para-edge:resume:basics-project:personal-knowledge-asset-os",
+      "id": "para-edge:resume:basics-project:lingobridge",
       "source": "resume:basics",
-      "target": "project:personal-knowledge-asset-os",
+      "target": "project:lingobridge",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:resume:basics-project:personal-blog",
+      "source": "resume:basics",
+      "target": "project:personal-blog",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:resume:basics-project:school-gtd-dashboard",
+      "source": "resume:basics",
+      "target": "project:school-gtd-dashboard",
       "type": "para_link"
     },
     {
       "id": "para-edge:resume:basics-folder:inbox",
       "source": "resume:basics",
       "target": "folder:inbox",
-      "type": "para_link"
-    },
-    {
-      "id": "para-edge:resume:basics-folder:010-时间管理",
-      "source": "resume:basics",
-      "target": "folder:010-时间管理",
-      "type": "para_link"
-    },
-    {
-      "id": "para-edge:resume:basics-folder:014-学生会",
-      "source": "resume:basics",
-      "target": "folder:014-学生会",
-      "type": "para_link"
-    },
-    {
-      "id": "para-edge:folder:inbox-folder:014-学生会",
-      "source": "folder:inbox",
-      "target": "folder:014-学生会",
-      "type": "para_link"
-    },
-    {
-      "id": "para-edge:folder:inbox-folder:010-时间管理",
-      "source": "folder:inbox",
-      "target": "folder:010-时间管理",
-      "type": "para_link"
-    },
-    {
-      "id": "para-edge:folder:014-学生会-folder:010-时间管理",
-      "source": "folder:014-学生会",
-      "target": "folder:010-时间管理",
       "type": "para_link"
     },
     {
@@ -921,6 +911,24 @@
       "type": "para_link"
     },
     {
+      "id": "para-edge:folder:inbox-folder:001-个人规划",
+      "source": "folder:inbox",
+      "target": "folder:001-个人规划",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:inbox-folder:002-知识体系构建",
+      "source": "folder:inbox",
+      "target": "folder:002-知识体系构建",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:001-个人规划-folder:002-知识体系构建",
+      "source": "folder:001-个人规划",
+      "target": "folder:002-知识体系构建",
+      "type": "para_link"
+    },
+    {
       "id": "para-edge:folder:007-cs自学-folder:003-思维方式",
       "source": "folder:007-cs自学",
       "target": "folder:003-思维方式",
@@ -963,9 +971,9 @@
       "type": "para_link"
     },
     {
-      "id": "para-edge:folder:001-个人规划-folder:002-知识体系构建",
-      "source": "folder:001-个人规划",
-      "target": "folder:002-知识体系构建",
+      "id": "para-edge:folder:inbox-folder:014-学生会",
+      "source": "folder:inbox",
+      "target": "folder:014-学生会",
       "type": "para_link"
     },
     {
@@ -984,18 +992,6 @@
       "id": "para-edge:folder:003-思维方式-folder:001-个人规划",
       "source": "folder:003-思维方式",
       "target": "folder:001-个人规划",
-      "type": "para_link"
-    },
-    {
-      "id": "para-edge:folder:002-知识体系构建-folder:inbox",
-      "source": "folder:002-知识体系构建",
-      "target": "folder:inbox",
-      "type": "para_link"
-    },
-    {
-      "id": "para-edge:folder:001-个人规划-folder:inbox",
-      "source": "folder:001-个人规划",
-      "target": "folder:inbox",
       "type": "para_link"
     },
     {
@@ -1105,11 +1101,23 @@
       "source": "folder:009-日语学习",
       "target": "folder:001-个人规划",
       "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:inbox-folder:010-时间管理",
+      "source": "folder:inbox",
+      "target": "folder:010-时间管理",
+      "type": "para_link"
+    },
+    {
+      "id": "para-edge:folder:014-学生会-folder:010-时间管理",
+      "source": "folder:014-学生会",
+      "target": "folder:010-时间管理",
+      "type": "para_link"
     }
   ],
   "metadata": {
-    "generated_at": "2026-07-03T11:04:35.355Z",
-    "total_nodes": 41,
+    "generated_at": "2026-07-05T04:15:29.695Z",
+    "total_nodes": 42,
     "total_edges": 121
   }
 }

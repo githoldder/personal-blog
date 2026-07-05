@@ -7,6 +7,8 @@ const resumePath = join(process.cwd(), 'public/assets/resume.json');
 const evidencePath = join(process.cwd(), 'content/resume/evidence-manifest.json');
 const resume = existsSync(resumePath) ? JSON.parse(readFileSync(resumePath, 'utf-8')) : null;
 const evidence = existsSync(evidencePath) ? JSON.parse(readFileSync(evidencePath, 'utf-8')) : { records: [] };
+const publicName = 'githoldder';
+const publicText = (value) => String(value || '').replace(/曹磊/g, 'caolei');
 ---
 
 <BaseLayout title="Resume Studio">
@@ -25,9 +27,9 @@ const evidence = existsSync(evidencePath) ? JSON.parse(readFileSync(evidencePath
         {resume ? (
           <div class="mt-4 space-y-4 text-sm text-slate-700">
             <div>
-              <p class="text-2xl font-bold text-slate-950">{resume.basics.name}</p>
-              <p class="text-blue-700">{resume.basics.label}</p>
-              <p class="mt-2 text-slate-600">{resume.basics.summary}</p>
+              <p class="text-2xl font-bold text-slate-950">{publicName}</p>
+              <p class="text-blue-700">{publicText(resume.basics.label)}</p>
+              <p class="mt-2 text-slate-600">{publicText(resume.basics.summary)}</p>
             </div>
             <div>
               <h3 class="font-semibold text-slate-900">Projects</h3>

@@ -15,6 +15,11 @@ const ROOT = join(__dirname, '..');
 const CONTENT_DIR = join(ROOT, 'content');
 const PUBLIC_DIR = join(ROOT, 'public');
 const OUTPUT_PATH = join(PUBLIC_DIR, 'assets/search-index.json');
+const PUBLIC_HANDLE = 'githoldder';
+
+function publicAlias(value) {
+  return String(value || '').replace(/曹磊/g, PUBLIC_HANDLE);
+}
 
 function cleanMarkdownText(body) {
   return body
@@ -63,12 +68,12 @@ function main() {
       notes.push({
         id: `note:${slug}`,
         type: 'note',
-        title: frontmatter.title || slug,
-        summary: frontmatter.summary || (body.slice(0, 120).trim() + '...'),
+        title: publicAlias(frontmatter.title || slug),
+        summary: publicAlias(frontmatter.summary || (body.slice(0, 120).trim() + '...')),
         url: `/notes/${slug}/`,
         tags: frontmatter.tags || [],
         sourcePath: `content/notes/${file}`,
-        text: cleanMarkdownText(body)
+        text: publicAlias(cleanMarkdownText(body))
       });
     }
   }
@@ -103,12 +108,12 @@ function main() {
       projects.push({
         id: `project:${slug}`,
         type: 'project',
-        title: frontmatter.title || slug,
-        summary: frontmatter.description || (body.slice(0, 120).trim() + '...'),
+        title: publicAlias(frontmatter.title || slug),
+        summary: publicAlias(frontmatter.description || (body.slice(0, 120).trim() + '...')),
         url: `/projects/${slug}/`,
         tags: frontmatter.tech || [],
         sourcePath: `content/projects/${file}`,
-        text: cleanMarkdownText(body)
+        text: publicAlias(cleanMarkdownText(body))
       });
     }
   }
@@ -142,12 +147,12 @@ function main() {
         decks.push({
           id: `deck:${deck.slug}`,
           type: 'deck',
-          title: deck.title,
-          summary: deck.description || 'Slidev 风格演示文稿',
+          title: publicAlias(deck.title),
+          summary: publicAlias(deck.description || 'Slidev 风格演示文稿'),
           url,
           tags: [],
           sourcePath: `content/decks/${deck.slug}.md`,
-          text: `${deck.title} ${deck.description || ''} ${cleanMarkdownText(deckBody)}`.trim()
+          text: publicAlias(`${deck.title} ${deck.description || ''} ${cleanMarkdownText(deckBody)}`).trim()
         });
       }
     } catch (e) {
@@ -162,18 +167,18 @@ function main() {
       const raw = readFileSync(resumeJsonPath, 'utf-8');
       const resumeData = JSON.parse(raw);
       if (resumeData && resumeData.basics) {
-        const summaryText = resumeData.basics.summary || '';
+        const summaryText = publicAlias(resumeData.basics.summary || '');
         const skillsText = (resumeData.skills || []).map(s => `${s.name} ${s.keywords.join(' ')}`).join(' ');
         const expText = (resumeData.experience || []).map(e => `${e.company} ${e.position} ${e.summary} ${e.highlights.join(' ')}`).join(' ');
         const projText = (resumeData.projects || []).map(p => `${p.name} ${p.description} ${p.highlights.join(' ')}`).join(' ');
 
-        const fullText = `${resumeData.basics.name} ${resumeData.basics.label} ${summaryText} ${skillsText} ${expText} ${projText}`;
+        const fullText = `${PUBLIC_HANDLE} ${publicAlias(resumeData.basics.label)} ${summaryText} ${publicAlias(skillsText)} ${publicAlias(expText)} ${publicAlias(projText)}`;
 
         resume.push({
           id: 'resume:basics',
           type: 'resume',
-          title: `${resumeData.basics.name}的简历`,
-          summary: resumeData.basics.label || '个人结构化简历',
+          title: `${PUBLIC_HANDLE} 的简历`,
+          summary: publicAlias(resumeData.basics.label || '个人结构化简历'),
           url: '/resume',
           tags: (resumeData.skills || []).map(s => s.name),
           sourcePath: 'content/resume/resume.yaml',

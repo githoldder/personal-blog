@@ -11,7 +11,22 @@
         "reading"
       ],
       "annotationCount": 11,
-      "pdfAsset": "/assets/pdfs/book-book-博弈论.pdf"
+      "pdfAsset": "/assets/pdfs/book-book-博弈论.pdf",
+      "isbn": "",
+      "coverUrl": "",
+      "openLibraryUrl": "",
+      "actions": {
+        "source": {
+          "label": "看原书/书目来源",
+          "href": "/assets/pdfs/book-book-博弈论.pdf",
+          "kind": "pdf"
+        },
+        "annotator": {
+          "label": "看我的 annotator 笔记",
+          "href": "/notes/book-博弈论/",
+          "kind": "annotator"
+        }
+      }
     },
     {
       "slug": "book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
@@ -24,7 +39,22 @@
         "reading"
       ],
       "annotationCount": 1,
-      "pdfAsset": "/assets/pdfs/book-book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library.pdf"
+      "pdfAsset": "/assets/pdfs/book-book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library.pdf",
+      "isbn": "",
+      "coverUrl": "",
+      "openLibraryUrl": "",
+      "actions": {
+        "source": {
+          "label": "看原书/书目来源",
+          "href": "/assets/pdfs/book-book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library.pdf",
+          "kind": "pdf"
+        },
+        "annotator": {
+          "label": "看我的 annotator 笔记",
+          "href": "/notes/book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library/",
+          "kind": "annotator"
+        }
+      }
     },
     {
       "slug": "book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗",
@@ -37,7 +67,22 @@
         "reading"
       ],
       "annotationCount": 0,
-      "pdfAsset": ""
+      "pdfAsset": "",
+      "isbn": "",
+      "coverUrl": "",
+      "openLibraryUrl": "",
+      "actions": {
+        "source": {
+          "label": "看原书/书目来源",
+          "href": "/notes/book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗/",
+          "kind": "annotator-fallback"
+        },
+        "annotator": {
+          "label": "看我的 annotator 笔记",
+          "href": "/notes/book-市场营销-原理与实践-第16版-全新版-菲利普-科特勒-加里-阿姆斯特朗/",
+          "kind": "annotator"
+        }
+      }
     },
     {
       "slug": "book-战略管理",
@@ -50,7 +95,22 @@
         "reading"
       ],
       "annotationCount": 0,
-      "pdfAsset": "/assets/pdfs/book-book-战略管理.pdf"
+      "pdfAsset": "/assets/pdfs/book-book-战略管理.pdf",
+      "isbn": "",
+      "coverUrl": "",
+      "openLibraryUrl": "",
+      "actions": {
+        "source": {
+          "label": "看原书/书目来源",
+          "href": "/assets/pdfs/book-book-战略管理.pdf",
+          "kind": "pdf"
+        },
+        "annotator": {
+          "label": "看我的 annotator 笔记",
+          "href": "/notes/book-战略管理/",
+          "kind": "annotator"
+        }
+      }
     },
     {
       "slug": "book-正则表达式必知必会-ben-forta-z-library",
@@ -63,7 +123,22 @@
         "reading"
       ],
       "annotationCount": 3,
-      "pdfAsset": "/assets/pdfs/book-book-正则表达式必知必会-ben-forta-z-library.pdf"
+      "pdfAsset": "/assets/pdfs/book-book-正则表达式必知必会-ben-forta-z-library.pdf",
+      "isbn": "",
+      "coverUrl": "",
+      "openLibraryUrl": "",
+      "actions": {
+        "source": {
+          "label": "看原书/书目来源",
+          "href": "/assets/pdfs/book-book-正则表达式必知必会-ben-forta-z-library.pdf",
+          "kind": "pdf"
+        },
+        "annotator": {
+          "label": "看我的 annotator 笔记",
+          "href": "/notes/book-正则表达式必知必会-ben-forta-z-library/",
+          "kind": "annotator"
+        }
+      }
     },
     {
       "slug": "book-深入设计模式-1",
@@ -76,7 +151,22 @@
         "reading"
       ],
       "annotationCount": 0,
-      "pdfAsset": ""
+      "pdfAsset": "",
+      "isbn": "",
+      "coverUrl": "",
+      "openLibraryUrl": "",
+      "actions": {
+        "source": {
+          "label": "看原书/书目来源",
+          "href": "/notes/book-深入设计模式-1/",
+          "kind": "annotator-fallback"
+        },
+        "annotator": {
+          "label": "看我的 annotator 笔记",
+          "href": "/notes/book-深入设计模式-1/",
+          "kind": "annotator"
+        }
+      }
     },
     {
       "slug": "book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library",
@@ -89,7 +179,22 @@
         "reading"
       ],
       "annotationCount": 0,
-      "pdfAsset": "/assets/pdfs/book-book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library.pdf"
+      "pdfAsset": "/assets/pdfs/book-book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library.pdf",
+      "isbn": "",
+      "coverUrl": "",
+      "openLibraryUrl": "",
+      "actions": {
+        "source": {
+          "label": "看原书/书目来源",
+          "href": "/assets/pdfs/book-book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library.pdf",
+          "kind": "pdf"
+        },
+        "annotator": {
+          "label": "看我的 annotator 笔记",
+          "href": "/notes/book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library/",
+          "kind": "annotator"
+        }
+      }
     },
     {
       "slug": "book-终身成长",
@@ -102,7 +207,22 @@
         "reading"
       ],
       "annotationCount": 13,
-      "pdfAsset": "/assets/pdfs/book-book-终身成长.pdf"
+      "pdfAsset": "/assets/pdfs/book-book-终身成长.pdf",
+      "isbn": "",
+      "coverUrl": "",
+      "openLibraryUrl": "",
+      "actions": {
+        "source": {
+          "label": "看原书/书目来源",
+          "href": "/assets/pdfs/book-book-终身成长.pdf",
+          "kind": "pdf"
+        },
+        "annotator": {
+          "label": "看我的 annotator 笔记",
+          "href": "/notes/book-终身成长/",
+          "kind": "annotator"
+        }
+      }
     },
     {
       "slug": "book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹",
@@ -115,7 +235,22 @@
         "reading"
       ],
       "annotationCount": 32,
-      "pdfAsset": "/assets/pdfs/book-book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹.pdf"
+      "pdfAsset": "/assets/pdfs/book-book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹.pdf",
+      "isbn": "",
+      "coverUrl": "",
+      "openLibraryUrl": "",
+      "actions": {
+        "source": {
+          "label": "看原书/书目来源",
+          "href": "/assets/pdfs/book-book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹.pdf",
+          "kind": "pdf"
+        },
+        "annotator": {
+          "label": "看我的 annotator 笔记",
+          "href": "/notes/book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹/",
+          "kind": "annotator"
+        }
+      }
     },
     {
       "slug": "book-金字塔原理大全集-芭芭拉-明托-z-library",
@@ -128,7 +263,22 @@
         "reading"
       ],
       "annotationCount": 28,
-      "pdfAsset": "/assets/pdfs/book-book-金字塔原理大全集-芭芭拉-明托-z-library.pdf"
+      "pdfAsset": "/assets/pdfs/book-book-金字塔原理大全集-芭芭拉-明托-z-library.pdf",
+      "isbn": "",
+      "coverUrl": "",
+      "openLibraryUrl": "",
+      "actions": {
+        "source": {
+          "label": "看原书/书目来源",
+          "href": "/assets/pdfs/book-book-金字塔原理大全集-芭芭拉-明托-z-library.pdf",
+          "kind": "pdf"
+        },
+        "annotator": {
+          "label": "看我的 annotator 笔记",
+          "href": "/notes/book-金字塔原理大全集-芭芭拉-明托-z-library/",
+          "kind": "annotator"
+        }
+      }
     },
     {
       "slug": "book-金字塔原理笔记",
@@ -141,7 +291,22 @@
         "reading"
       ],
       "annotationCount": 0,
-      "pdfAsset": ""
+      "pdfAsset": "",
+      "isbn": "",
+      "coverUrl": "",
+      "openLibraryUrl": "",
+      "actions": {
+        "source": {
+          "label": "看原书/书目来源",
+          "href": "/notes/book-金字塔原理笔记/",
+          "kind": "annotator-fallback"
+        },
+        "annotator": {
+          "label": "看我的 annotator 笔记",
+          "href": "/notes/book-金字塔原理笔记/",
+          "kind": "annotator"
+        }
+      }
     }
   ],
   "warning": "OBSIDIAN_ROOT is not mounted"

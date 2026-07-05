@@ -1,0 +1,107 @@
+<div class="soft-cursor" aria-hidden="true"></div>
+
+<script>
+  const root = document.documentElement;
+  const finePointer = window.matchMedia('(pointer: fine)');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const canUseSoftCursor = () => finePointer.matches && !reducedMotion.matches;
+
+  const setInteractionPoint = (event: PointerEvent) => {
+    root.style.setProperty('--interaction-x', `${event.clientX}px`);
+    root.style.setProperty('--interaction-y', `${event.clientY}px`);
+    root.style.setProperty('--cursor-x', `${event.clientX}px`);
+    root.style.setProperty('--cursor-y', `${event.clientY}px`);
+  };
+
+  const pulse = (className: string, duration = 220) => {
+    document.body.classList.remove(className);
+    window.requestAnimationFrame(() => {
+      document.body.classList.add(className);
+      window.setTimeout(() => document.body.classList.remove(className), duration);
+    });
+  };
+
+  const isModifiedClick = (event: PointerEvent) => event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0;
+
+  const classifyTarget = (target: EventTarget | null) => {
+    const element = target instanceof Element ? target.closest('a, button, [role="button"], input, textarea, select') : null;
+    if (!element) return null;
+    if (element.matches('input, textarea, select') || element.closest('[data-utility-action]')) return 'utility';
+    return 'primary';
+  };
+
+  const markRouteStart = (target: EventTarget | null, event: PointerEvent) => {
+    if (isModifiedClick(event)) return;
+    const link = target instanceof Element ? target.closest('a[href]') : null;
+    if (!link) return;
+    const href = link.getAttribute('href') || '';
+    if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+
+    const destination = new URL(href, window.location.href);
+    if (destination.origin !== window.location.origin) return;
+    if (destination.pathname === window.location.pathname && destination.hash) return;
+
+    root.style.setProperty('--route-phase', 'start');
+    window.sessionStorage.setItem('site-route-pending', 'true');
+    document.body.classList.add('route-pending');
+    window.setTimeout(() => document.body.classList.remove('route-pending'), 520);
+  };
+
+  const refreshTargets = () => {
+    document.querySelectorAll('a, button, input, textarea, select, [role="button"]').forEach((target) => {
+      if (target instanceof HTMLElement && target.dataset.cursorReady === 'true') return;
+      if (target instanceof HTMLElement) target.dataset.cursorReady = 'true';
+      target.addEventListener('pointerenter', () => document.body.classList.add('cursor-active'));
+      target.addEventListener('pointerleave', () => document.body.classList.remove('cursor-active'));
+    });
+  };
+
+  const syncCursorMode = () => {
+    document.body.classList.toggle('has-soft-cursor', canUseSoftCursor());
+    if (canUseSoftCursor()) refreshTargets();
+  };
+
+  const markRouteComplete = () => {
+    root.style.setProperty('--route-phase', 'complete');
+    document.body.classList.remove('route-pending');
+    refreshTargets();
+    window.dispatchEvent(new CustomEvent('site-mark:route-complete'));
+    window.setTimeout(() => root.style.setProperty('--route-phase', 'idle'), 280);
+  };
+
+  window.addEventListener('pointermove', (event) => {
+    if (!canUseSoftCursor()) return;
+    setInteractionPoint(event);
+  }, { passive: true });
+
+  document.addEventListener('pointerdown', (event) => {
+    if (event.pointerType === 'touch') return;
+    if (canUseSoftCursor()) setInteractionPoint(event);
+
+    const clickType = classifyTarget(event.target);
+    if (clickType === 'primary') {
+      pulse('cursor-primary');
+    } else if (clickType === 'utility') {
+      pulse('cursor-utility', 160);
+    }
+    markRouteStart(event.target, event);
+  }, { capture: true, passive: true });
+
+  document.addEventListener('astro:before-preparation', () => {
+    root.style.setProperty('--route-phase', 'start');
+    document.body.classList.add('route-pending');
+  });
+
+  document.addEventListener('astro:page-load', () => {
+    window.sessionStorage.removeItem('site-route-pending');
+    markRouteComplete();
+  });
+
+  finePointer.addEventListener('change', syncCursorMode);
+  reducedMotion.addEventListener('change', syncCursorMode);
+  syncCursorMode();
+  if (window.sessionStorage.getItem('site-route-pending') === 'true') {
+    window.sessionStorage.removeItem('site-route-pending');
+    window.setTimeout(markRouteComplete, 40);
+  }
+</script>

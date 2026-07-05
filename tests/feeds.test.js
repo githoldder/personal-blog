@@ -67,8 +67,8 @@ test('generated feeds include public project and exclude draft note', () => {
   assert.match(rss, /<item>/);
   assert.match(atom, /<entry>/);
 
-  assert.match(rss, /https:\/\/[^/]+\/projects\/personal-knowledge-asset-os\//);
-  assert.match(atom, /https:\/\/[^/]+\/projects\/personal-knowledge-asset-os\//);
+  assert.match(rss, /https:\/\/[^/]+\/projects\/personal-blog\//);
+  assert.match(atom, /https:\/\/[^/]+\/projects\/personal-blog\//);
  
   assert.doesNotMatch(rss, /https:\/\/[^/]+\/notes\/2026-06-26-personal-knowledge-asset-os\//);
   assert.doesNotMatch(atom, /https:\/\/[^/]+\/notes\/2026-06-26-personal-knowledge-asset-os\//);
@@ -79,7 +79,7 @@ test('generated search index excludes draft note and includes done project', () 
   const index = JSON.parse(readFileSync('public/assets/search-index.json', 'utf-8'));
   
   const hasDraftNote = index.some(item => item.id === 'note:2026-06-26-personal-knowledge-asset-os');
-  const hasDoneProject = index.some(item => item.id === 'project:personal-knowledge-asset-os');
+  const hasDoneProject = index.some(item => item.id === 'project:personal-blog');
   
   assert.equal(hasDraftNote, false);
   assert.equal(hasDoneProject, true);

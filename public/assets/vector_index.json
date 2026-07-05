@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-03T11:04:35.408Z",
+  "generated_at": "2026-07-05T04:15:29.729Z",
   "model": "deterministic-hash-v1",
   "vectors": [
     {
@@ -221,6 +221,926 @@
         0.314824,
         0.285631,
         0.248425
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-002-英语语法知识体系认知地图",
+      "source_id": "note:canvas-002-英语语法知识体系认知地图",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.223015,
+        0.451041,
+        0.23805,
+        0.364592,
+        0.289418,
+        0.249326,
+        0.270625,
+        0.16037,
+        0.218003,
+        0.325752,
+        0.249326,
+        0.310717
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-AI产品经理开发流程",
+      "source_id": "note:canvas-AI产品经理开发流程",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.354587,
+        0.250874,
+        0.264889,
+        0.336367,
+        0.322352,
+        0.260685,
+        0.207426,
+        0.407845,
+        0.228449,
+        0.277503,
+        0.245268,
+        0.239662
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-AI发展史-风格化增强版",
+      "source_id": "note:canvas-AI发展史-风格化增强版",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.31923,
+        0.324551,
+        0.276666,
+        0.228782,
+        0.247403,
+        0.291298,
+        0.255384,
+        0.232772,
+        0.139663,
+        0.473525,
+        0.21415,
+        0.329871
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-GTD流程图",
+      "source_id": "note:canvas-GTD流程图",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.34565,
+        0.366155,
+        0.213835,
+        0.445245,
+        0.203582,
+        0.360297,
+        0.256309,
+        0.25045,
+        0.275349,
+        0.15525,
+        0.194794,
+        0.254844
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-GTD看板",
+      "source_id": "note:canvas-GTD看板",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.356567,
+        0.243729,
+        0.510026,
+        0.221162,
+        0.305414,
+        0.263288,
+        0.25727,
+        0.282847,
+        0.159477,
+        0.200099,
+        0.261784,
+        0.248243
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-TODO看板",
+      "source_id": "note:canvas-TODO看板",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.358256,
+        0.352501,
+        0.210062,
+        0.503573,
+        0.211501,
+        0.292072,
+        0.251787,
+        0.246031,
+        0.270491,
+        0.152511,
+        0.191358,
+        0.250348
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-TTS实现方法研究",
+      "source_id": "note:canvas-TTS实现方法研究",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.260106,
+        0.297069,
+        0.351828,
+        0.331293,
+        0.269689,
+        0.168385,
+        0.401111,
+        0.298438,
+        0.284748,
+        0.239572,
+        0.234096,
+        0.257368
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-idea的工程级项目存储结构",
+      "source_id": "note:canvas-idea的工程级项目存储结构",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.27916,
+        0.284555,
+        0.2414,
+        0.230611,
+        0.356031,
+        0.248143,
+        0.191501,
+        0.268372,
+        0.275115,
+        0.338499,
+        0.114631,
+        0.478753
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-web应用开发实验",
+      "source_id": "note:canvas-web应用开发实验",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.186727,
+        0.199857,
+        0.255291,
+        0.326773,
+        0.269879,
+        0.215903,
+        0.424513,
+        0.301973,
+        0.399713,
+        0.255291,
+        0.249456,
+        0.274256
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-云服务发展史",
+      "source_id": "note:canvas-云服务发展史",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.296488,
+        0.387371,
+        0.12664,
+        0.433557,
+        0.292018,
+        0.360553,
+        0.26073,
+        0.254771,
+        0.280099,
+        0.157928,
+        0.198155,
+        0.25924
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-互联网架构演化史",
+      "source_id": "note:canvas-互联网架构演化史",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.250588,
+        0.357982,
+        0.247604,
+        0.350524,
+        0.144684,
+        0.426595,
+        0.23418,
+        0.360965,
+        0.261029,
+        0.255062,
+        0.280419,
+        0.158109
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-人工智能发展史及应用技术迭代史",
+      "source_id": "note:canvas-人工智能发展史及应用技术迭代史",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.519843,
+        0.275711,
+        0.347371,
+        0.26235,
+        0.231986,
+        0.308505,
+        0.193119,
+        0.177329,
+        0.282998,
+        0.223484,
+        0.314578,
+        0.13239
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-多元思维模式",
+      "source_id": "note:canvas-多元思维模式",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.277064,
+        0.324781,
+        0.218573,
+        0.424832,
+        0.213955,
+        0.421754,
+        0.269368,
+        0.263211,
+        0.289378,
+        0.16316,
+        0.20472,
+        0.267829
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-如何成为一个厉害的人",
+      "source_id": "note:canvas-如何成为一个厉害的人",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.292186,
+        0.197573,
+        0.293577,
+        0.303317,
+        0.345057,
+        0.269924,
+        0.171137,
+        0.37845,
+        0.28662,
+        0.367319,
+        0.243488,
+        0.237923
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-提高工作效率的方法论",
+      "source_id": "note:canvas-提高工作效率的方法论",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.308697,
+        0.229164,
+        0.284433,
+        0.292521,
+        0.261517,
+        0.34105,
+        0.207596,
+        0.425975,
+        0.2049,
+        0.35453,
+        0.235904,
+        0.230512
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-文件格式处理场景及解决方案",
+      "source_id": "note:canvas-文件格式处理场景及解决方案",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.39588,
+        0.279214,
+        0.235955,
+        0.357865,
+        0.256929,
+        0.200562,
+        0.254307,
+        0.259551,
+        0.234644,
+        0.217603,
+        0.433896,
+        0.229401
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-日历看板",
+      "source_id": "note:canvas-日历看板",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.264757,
+        0.496221,
+        0.233049,
+        0.32183,
+        0.27744,
+        0.271098,
+        0.298049,
+        0.168049,
+        0.210854,
+        0.275854,
+        0.261586,
+        0.263171
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-日语初级-N5所有知识点概览",
+      "source_id": "note:canvas-日语初级-N5所有知识点概览",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.327502,
+        0.346181,
+        0.303842,
+        0.24407,
+        0.290145,
+        0.229127,
+        0.231618,
+        0.252787,
+        0.31754,
+        0.257768,
+        0.204222,
+        0.397237
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-管理学思维和技巧",
+      "source_id": "note:canvas-管理学思维和技巧",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.234179,
+        0.283942,
+        0.272233,
+        0.336633,
+        0.121481,
+        0.415668,
+        0.326387,
+        0.393714,
+        0.256134,
+        0.250279,
+        0.275161,
+        0.155144
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-编译原理期末复习",
+      "source_id": "note:canvas-编译原理期末复习",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.258407,
+        0.261412,
+        0.34855,
+        0.279441,
+        0.13972,
+        0.447706,
+        0.198313,
+        0.407142,
+        0.262915,
+        0.256905,
+        0.282445,
+        0.159251
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-考研数学一大纲",
+      "source_id": "note:canvas-考研数学一大纲",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.355141,
+        0.350979,
+        0.326008,
+        0.13734,
+        0.491093,
+        0.219189,
+        0.312136,
+        0.242772,
+        0.237223,
+        0.260807,
+        0.147051,
+        0.184507
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-苍穹外卖项目整体框架图和工作流",
+      "source_id": "note:canvas-苍穹外卖项目整体框架图和工作流",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.465708,
+        0.246106,
+        0.294065,
+        0.335714,
+        0.265037,
+        0.344548,
+        0.225913,
+        0.210768,
+        0.243582,
+        0.295327,
+        0.281444,
+        0.114849
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-解决问题人脑决策思维流程图",
+      "source_id": "note:canvas-解决问题人脑决策思维流程图",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.41998,
+        0.295495,
+        0.299267,
+        0.324416,
+        0.227594,
+        0.24394,
+        0.294237,
+        0.269089,
+        0.289208,
+        0.104366,
+        0.382257,
+        0.174782
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-计设赛C组教学设计_演示PPT",
+      "source_id": "note:canvas-计设赛C组教学设计_演示PPT",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.47009,
+        0.338465,
+        0.327888,
+        0.284405,
+        0.264426,
+        0.275003,
+        0.149254,
+        0.247973,
+        0.262075,
+        0.305559,
+        0.212716,
+        0.198613
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-调研流程工具箱",
+      "source_id": "note:canvas-调研流程工具箱",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.323987,
+        0.365931,
+        0.287828,
+        0.125834,
+        0.504783,
+        0.188028,
+        0.335558,
+        0.253115,
+        0.247329,
+        0.271917,
+        0.153315,
+        0.192367
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-软件体系结构期末考试复习",
+      "source_id": "note:canvas-软件体系结构期末考试复习",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.316153,
+        0.289807,
+        0.307833,
+        0.260688,
+        0.280101,
+        0.267621,
+        0.249595,
+        0.267621,
+        0.221862,
+        0.381325,
+        0.183036,
+        0.375779
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-软件工程作业四",
+      "source_id": "note:canvas-软件工程作业四",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.339427,
+        0.30354,
+        0.364847,
+        0.130089,
+        0.469516,
+        0.212329,
+        0.315503,
+        0.261673,
+        0.255692,
+        0.281111,
+        0.158499,
+        0.198871
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-软件工程期末复习",
+      "source_id": "note:canvas-软件工程期末复习",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.273064,
+        0.311234,
+        0.356745,
+        0.256915,
+        0.136532,
+        0.437489,
+        0.193787,
+        0.397851,
+        0.256915,
+        0.251043,
+        0.276,
+        0.155617
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-软件架构-层级图",
+      "source_id": "note:canvas-软件架构-层级图",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.269661,
+        0.307356,
+        0.339251,
+        0.268211,
+        0.178324,
+        0.461034,
+        0.224718,
+        0.356649,
+        0.253714,
+        0.247914,
+        0.272561,
+        0.153678
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-驾考",
+      "source_id": "note:canvas-驾考",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.316797,
+        0.427125,
+        0.275818,
+        0.269514,
+        0.296308,
+        0.167067,
+        0.209622,
+        0.274242,
+        0.260057,
+        0.261633,
+        0.122936,
+        0.427125
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-高数上-思维导图",
+      "source_id": "note:canvas-高数上-思维导图",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.274817,
+        0.338987,
+        0.359912,
+        0.294347,
+        0.198091,
+        0.385023,
+        0.284582,
+        0.343172,
+        0.244127,
+        0.238547,
+        0.262262,
+        0.147871
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-Docker的入门教程知识拆解",
+      "source_id": "note:excalidraw-Docker的入门教程知识拆解",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.309878,
+        0.22345,
+        0.258583,
+        0.196748,
+        0.278961,
+        0.321121,
+        0.415279,
+        0.3155,
+        0.311284,
+        0.309176,
+        0.230476,
+        0.22345
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-ai产业链分层",
+      "source_id": "note:excalidraw-ai产业链分层",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.298666,
+        0.314303,
+        0.293193,
+        0.225954,
+        0.240809,
+        0.222045,
+        0.254101,
+        0.211099,
+        0.307266,
+        0.344013,
+        0.402652,
+        0.289284
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-ai产业链分层及vibe coding的git版本管理",
+      "source_id": "note:excalidraw-ai产业链分层及vibe coding的git版本管理",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.249197,
+        0.197491,
+        0.264278,
+        0.204672,
+        0.303058,
+        0.358356,
+        0.407908,
+        0.32963,
+        0.293722,
+        0.294441,
+        0.243452,
+        0.24417
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-harness_engineering（Ralph组件）",
+      "source_id": "note:excalidraw-harness_engineering（Ralph组件）",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.220276,
+        0.249984,
+        0.215204,
+        0.228971,
+        0.204335,
+        0.307227,
+        0.336211,
+        0.447074,
+        0.330414,
+        0.286214,
+        0.297808,
+        0.247811
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-umll类图绘制规则",
+      "source_id": "note:excalidraw-umll类图绘制规则",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.34016,
+        0.389705,
+        0.281741,
+        0.290615,
+        0.329068,
+        0.278044,
+        0.259557,
+        0.281741,
+        0.218146,
+        0.253641,
+        0.199659,
+        0.290615
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+      "source_id": "note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.326779,
+        0.389546,
+        0.306719,
+        0.32419,
+        0.309954,
+        0.284718,
+        0.25107,
+        0.258835,
+        0.236834,
+        0.221951,
+        0.210303,
+        0.292483
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "source_id": "note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.283855,
+        0.356328,
+        0.24896,
+        0.26842,
+        0.252986,
+        0.177828,
+        0.288552,
+        0.183868,
+        0.303315,
+        0.342907,
+        0.404644,
+        0.269091
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-日综拆解",
+      "source_id": "note:excalidraw-日综拆解",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.282685,
+        0.231709,
+        0.234798,
+        0.282685,
+        0.208538,
+        0.303538,
+        0.339839,
+        0.397767,
+        0.285774,
+        0.295042,
+        0.304311,
+        0.246384
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-时间事务管理体系",
+      "source_id": "note:excalidraw-时间事务管理体系",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.289706,
+        0.3478,
+        0.322575,
+        0.249193,
+        0.232376,
+        0.234669,
+        0.207916,
+        0.275182,
+        0.206387,
+        0.300407,
+        0.336334,
+        0.393664
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-智能体工作原理_被动性资产构建工具四象限",
+      "source_id": "note:excalidraw-智能体工作原理_被动性资产构建工具四象限",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.309058,
+        0.290646,
+        0.323525,
+        0.312346,
+        0.210423,
+        0.247247,
+        0.200559,
+        0.289989,
+        0.221601,
+        0.267631,
+        0.337992,
+        0.391255
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-校园水果生鲜C2F+O2O",
+      "source_id": "note:excalidraw-校园水果生鲜C2F+O2O",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.306316,
+        0.217793,
+        0.314747,
+        0.339336,
+        0.368844,
+        0.281726,
+        0.315449,
+        0.311936,
+        0.273296,
+        0.224819,
+        0.257137,
+        0.202337
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-知识层级体系_git原理",
+      "source_id": "note:excalidraw-知识层级体系_git原理",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.22358,
+        0.344357,
+        0.350108,
+        0.38821,
+        0.290439,
+        0.333573,
+        0.351546,
+        0.233645,
+        0.204889,
+        0.219986,
+        0.219267,
+        0.214234
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-编译原理作业二",
+      "source_id": "note:excalidraw-编译原理作业二",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.326916,
+        0.30595,
+        0.299738,
+        0.230628,
+        0.256253,
+        0.194131,
+        0.238393,
+        0.209661,
+        0.305174,
+        0.34167,
+        0.39991,
+        0.287314
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-金字塔模型_漏斗模型",
+      "source_id": "note:excalidraw-金字塔模型_漏斗模型",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.398444,
+        0.398444,
+        0.291377,
+        0.299024,
+        0.304378,
+        0.316614,
+        0.219489,
+        0.227901,
+        0.188898,
+        0.215665,
+        0.206488,
+        0.300554
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-高数函数案例图",
+      "source_id": "note:excalidraw-高数函数案例图",
+      "model": "deterministic-hash-v1",
+      "dimensions": 12,
+      "vector": [
+        0.332661,
+        0.345341,
+        0.265532,
+        0.258074,
+        0.22973,
+        0.244648,
+        0.249869,
+        0.201387,
+        0.29313,
+        0.328186,
+        0.384127,
+        0.275975
       ]
     },
     {
@@ -1482,926 +2402,6 @@
         0.262187,
         0.189533
       ]
-    },
-    {
-      "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
-      "source_id": "note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.379439,
-        0.268009,
-        0.229585,
-        0.271851,
-        0.251679,
-        0.329488,
-        0.25456,
-        0.198845,
-        0.274733,
-        0.274733,
-        0.324685,
-        0.353503
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
-      "source_id": "note:obsidian-0be35e638ad661bfa204064e57457c5a",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.327638,
-        0.295107,
-        0.275355,
-        0.24631,
-        0.280003,
-        0.322991,
-        0.38573,
-        0.364817,
-        0.267223,
-        0.204483,
-        0.241662,
-        0.181247
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
-      "source_id": "note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.290832,
-        0.234029,
-        0.311281,
-        0.253342,
-        0.21358,
-        0.278335,
-        0.261294,
-        0.32037,
-        0.412391,
-        0.356724,
-        0.261294,
-        0.199947
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0c63749384221322924164e1b7defd64",
-      "source_id": "note:obsidian-0c63749384221322924164e1b7defd64",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.261235,
-        0.353672,
-        0.369749,
-        0.374571,
-        0.327951,
-        0.270881,
-        0.226672,
-        0.225868,
-        0.25159,
-        0.233906,
-        0.31509,
-        0.170406
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0c9b186483cd29e5ae87e4f57bdec3ee",
-      "source_id": "note:obsidian-0c9b186483cd29e5ae87e4f57bdec3ee",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.282982,
-        0.20213,
-        0.234696,
-        0.241433,
-        0.278491,
-        0.321163,
-        0.201007,
-        0.276245,
-        0.235819,
-        0.402015,
-        0.355974,
-        0.352605
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0d518430ba476ba8e0bc82df489315fc",
-      "source_id": "note:obsidian-0d518430ba476ba8e0bc82df489315fc",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.286984,
-        0.271187,
-        0.299271,
-        0.373869,
-        0.333498,
-        0.365093,
-        0.247491,
-        0.196588,
-        0.238714,
-        0.213263,
-        0.331743,
-        0.24047
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
-      "source_id": "note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.369991,
-        0.310792,
-        0.195567,
-        0.21988,
-        0.18711,
-        0.24208,
-        0.325592,
-        0.208252,
-        0.270622,
-        0.28225,
-        0.347791,
-        0.403819
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
-      "source_id": "note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.370545,
-        0.416489,
-        0.365552,
-        0.274663,
-        0.231716,
-        0.273664,
-        0.225723,
-        0.248695,
-        0.258683,
-        0.165797,
-        0.270668,
-        0.266673
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
-      "source_id": "note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.245417,
-        0.280476,
-        0.230078,
-        0.354978,
-        0.336352,
-        0.215835,
-        0.232269,
-        0.221313,
-        0.322109,
-        0.365934,
-        0.344022,
-        0.25199
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
-      "source_id": "note:obsidian-0f255939168b22e784f3e71b3e35cc89",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.368552,
-        0.304185,
-        0.255391,
-        0.264735,
-        0.252276,
-        0.378934,
-        0.36959,
-        0.334292,
-        0.241895,
-        0.188948,
-        0.220093,
-        0.195177
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
-      "source_id": "note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.364755,
-        0.246619,
-        0.17936,
-        0.311292,
-        0.266452,
-        0.278525,
-        0.341473,
-        0.215576,
-        0.271626,
-        0.259554,
-        0.320778,
-        0.348371
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
-      "source_id": "note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.333867,
-        0.279875,
-        0.279875,
-        0.255634,
-        0.317339,
-        0.25894,
-        0.18291,
-        0.273264,
-        0.242411,
-        0.317339,
-        0.333867,
-        0.345987
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0fd006309dd0e86057e11f5960f7a058",
-      "source_id": "note:obsidian-0fd006309dd0e86057e11f5960f7a058",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.343581,
-        0.256179,
-        0.286318,
-        0.245128,
-        0.361664,
-        0.450071,
-        0.33253,
-        0.2391,
-        0.179828,
-        0.214989,
-        0.16074,
-        0.262207
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0fd2e4accd424529d03d9675721a32d6",
-      "source_id": "note:obsidian-0fd2e4accd424529d03d9675721a32d6",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.283041,
-        0.315138,
-        0.436719,
-        0.354044,
-        0.290822,
-        0.248025,
-        0.255807,
-        0.166323,
-        0.266506,
-        0.286931,
-        0.202311,
-        0.266506
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
-      "source_id": "note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.281181,
-        0.359673,
-        0.390474,
-        0.356693,
-        0.279194,
-        0.25038,
-        0.295091,
-        0.182817,
-        0.296085,
-        0.239451,
-        0.249387,
-        0.20865
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-112fa661110db5f27a1fba58d3f407c6",
-      "source_id": "note:obsidian-112fa661110db5f27a1fba58d3f407c6",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.361512,
-        0.238093,
-        0.248783,
-        0.298345,
-        0.356653,
-        0.31195,
-        0.410103,
-        0.241008,
-        0.192418,
-        0.294458,
-        0.17201,
-        0.240036
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
-      "source_id": "note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.282627,
-        0.225218,
-        0.305811,
-        0.288147,
-        0.232946,
-        0.269379,
-        0.302499,
-        0.324579,
-        0.383092,
-        0.346659,
-        0.253923,
-        0.194306
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-14f8b98931997454721a799dd971bb15",
-      "source_id": "note:obsidian-14f8b98931997454721a799dd971bb15",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.416564,
-        0.371932,
-        0.276947,
-        0.238037,
-        0.180816,
-        0.273513,
-        0.254058,
-        0.201416,
-        0.248336,
-        0.249481,
-        0.31929,
-        0.341033
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
-      "source_id": "note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.362982,
-        0.276786,
-        0.214533,
-        0.250927,
-        0.200167,
-        0.293067,
-        0.307433,
-        0.227941,
-        0.254758,
-        0.261462,
-        0.343827,
-        0.398418
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
-      "source_id": "note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.417885,
-        0.407047,
-        0.378144,
-        0.276985,
-        0.211953,
-        0.25049,
-        0.187868,
-        0.27578,
-        0.260125,
-        0.191481,
-        0.244469,
-        0.238448
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
-      "source_id": "note:obsidian-15f69b30b581333b247b705ccd4c4938",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.292277,
-        0.234251,
-        0.306246,
-        0.258966,
-        0.335259,
-        0.247146,
-        0.232102,
-        0.264338,
-        0.217058,
-        0.33096,
-        0.362122,
-        0.337408
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-15f79b42c0a521e94e4155b80f4f1da1",
-      "source_id": "note:obsidian-15f79b42c0a521e94e4155b80f4f1da1",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.292829,
-        0.240469,
-        0.301555,
-        0.416941,
-        0.351976,
-        0.3161,
-        0.225924,
-        0.26374,
-        0.300586,
-        0.253074,
-        0.240469,
-        0.187139
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-1639497d9752084addd03e6757555719",
-      "source_id": "note:obsidian-1639497d9752084addd03e6757555719",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.269755,
-        0.250254,
-        0.19067,
-        0.274088,
-        0.312005,
-        0.228587,
-        0.236171,
-        0.287088,
-        0.358589,
-        0.398673,
-        0.340172,
-        0.249171
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-1676754dc65c12cc278c57b506b48985",
-      "source_id": "note:obsidian-1676754dc65c12cc278c57b506b48985",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.397217,
-        0.365832,
-        0.359947,
-        0.318754,
-        0.234407,
-        0.289331,
-        0.173598,
-        0.224599,
-        0.273638,
-        0.241272,
-        0.229503,
-        0.268734
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
-      "source_id": "note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.302549,
-        0.228783,
-        0.305756,
-        0.176398,
-        0.343174,
-        0.282237,
-        0.226645,
-        0.225576,
-        0.295066,
-        0.330345,
-        0.350658,
-        0.335691
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
-      "source_id": "note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.228364,
-        0.313441,
-        0.298888,
-        0.228364,
-        0.331352,
-        0.228364,
-        0.372771,
-        0.352621,
-        0.351502,
-        0.257469,
-        0.19702,
-        0.232842
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
-      "source_id": "note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.31558,
-        0.182065,
-        0.324407,
-        0.289098,
-        0.198617,
-        0.271443,
-        0.231719,
-        0.334338,
-        0.421509,
-        0.346476,
-        0.253788,
-        0.194203
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-16f85841237279ed9f23e6cd2318998c",
-      "source_id": "note:obsidian-16f85841237279ed9f23e6cd2318998c",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.338603,
-        0.469208,
-        0.379719,
-        0.278138,
-        0.212836,
-        0.251534,
-        0.18865,
-        0.276929,
-        0.261208,
-        0.192278,
-        0.245487,
-        0.239441
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
-      "source_id": "note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.348461,
-        0.404866,
-        0.393585,
-        0.288295,
-        0.220608,
-        0.260719,
-        0.195539,
-        0.287041,
-        0.270746,
-        0.199299,
-        0.254452,
-        0.248184
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
-      "source_id": "note:obsidian-178238e0db04d6cd772cce495e35f955",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.294658,
-        0.259699,
-        0.217747,
-        0.276679,
-        0.297655,
-        0.363578,
-        0.409525,
-        0.366575,
-        0.296656,
-        0.175796,
-        0.220744,
-        0.176795
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-17f1a8a8c3c99484139e2485180f7d77",
-      "source_id": "note:obsidian-17f1a8a8c3c99484139e2485180f7d77",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.329081,
-        0.276381,
-        0.322055,
-        0.445021,
-        0.367728,
-        0.269355,
-        0.206115,
-        0.24359,
-        0.182693,
-        0.268184,
-        0.252959,
-        0.186206
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-18062e14a079ba5f7b5b794f84709870",
-      "source_id": "note:obsidian-18062e14a079ba5f7b5b794f84709870",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.262658,
-        0.183748,
-        0.276185,
-        0.322404,
-        0.392296,
-        0.422733,
-        0.353968,
-        0.259276,
-        0.198402,
-        0.234476,
-        0.175857,
-        0.258149
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
-      "source_id": "note:obsidian-180fae3c2928cb3f23fc503af416b07d",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.331962,
-        0.317996,
-        0.261057,
-        0.316921,
-        0.227754,
-        0.379231,
-        0.368488,
-        0.337333,
-        0.247091,
-        0.189079,
-        0.223456,
-        0.167592
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-183665454ae199435161348053d4a3e7",
-      "source_id": "note:obsidian-183665454ae199435161348053d4a3e7",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.373842,
-        0.270096,
-        0.211069,
-        0.29335,
-        0.279934,
-        0.435553,
-        0.372053,
-        0.303188,
-        0.215541,
-        0.1744,
-        0.206597,
-        0.196759
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
-      "source_id": "note:obsidian-188b05adccb53c30e7b6a565f855cf28",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.294418,
-        0.339619,
-        0.421469,
-        0.383598,
-        0.280979,
-        0.21501,
-        0.254103,
-        0.190577,
-        0.279758,
-        0.263876,
-        0.194242,
-        0.247995
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-18f26e53563c98e7b69f6f1bc6ca53a6",
-      "source_id": "note:obsidian-18f26e53563c98e7b69f6f1bc6ca53a6",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.244504,
-        0.257662,
-        0.336605,
-        0.290555,
-        0.184201,
-        0.315773,
-        0.260951,
-        0.345376,
-        0.368401,
-        0.34428,
-        0.252179,
-        0.192972
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
-      "source_id": "note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.268088,
-        0.246203,
-        0.333742,
-        0.272465,
-        0.208999,
-        0.303104,
-        0.216659,
-        0.374229,
-        0.375323,
-        0.34359,
-        0.251674,
-        0.192586
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
-      "source_id": "note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.244305,
-        0.262743,
-        0.326124,
-        0.321514,
-        0.444819,
-        0.361847,
-        0.265048,
-        0.202819,
-        0.239695,
-        0.179771,
-        0.263895,
-        0.248914
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
-      "source_id": "note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.254904,
-        0.337478,
-        0.394921,
-        0.359019,
-        0.375774,
-        0.275248,
-        0.210625,
-        0.24892,
-        0.18669,
-        0.274052,
-        0.258494,
-        0.19028
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
-      "source_id": "note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.236307,
-        0.325502,
-        0.30581,
-        0.236307,
-        0.251366,
-        0.230516,
-        0.318552,
-        0.410063,
-        0.363728,
-        0.266425,
-        0.203873,
-        0.240941
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
-      "source_id": "note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.391435,
-        0.391435,
-        0.387731,
-        0.284007,
-        0.217327,
-        0.256841,
-        0.192631,
-        0.282772,
-        0.266719,
-        0.196335,
-        0.250667,
-        0.244493
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-      "source_id": "note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.290615,
-        0.400643,
-        0.400643,
-        0.375528,
-        0.275068,
-        0.210487,
-        0.248757,
-        0.186568,
-        0.273872,
-        0.258325,
-        0.190156,
-        0.242777
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-1a546b9f3bfa8be806de2adc35c67f77",
-      "source_id": "note:obsidian-1a546b9f3bfa8be806de2adc35c67f77",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.438547,
-        0.332183,
-        0.245455,
-        0.195546,
-        0.19391,
-        0.158728,
-        0.271637,
-        0.32891,
-        0.244637,
-        0.313365,
-        0.278183,
-        0.344456
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
-      "source_id": "note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.320762,
-        0.308425,
-        0.392541,
-        0.42058,
-        0.352166,
-        0.257956,
-        0.197392,
-        0.233282,
-        0.174961,
-        0.256834,
-        0.242254,
-        0.178326
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
-      "source_id": "note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.349516,
-        0.242595,
-        0.270448,
-        0.265057,
-        0.345922,
-        0.348618,
-        0.420498,
-        0.244392,
-        0.20935,
-        0.210249,
-        0.201264,
-        0.26326
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
-      "source_id": "note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
-      "model": "deterministic-hash-v1",
-      "dimensions": 12,
-      "vector": [
-        0.257083,
-        0.307561,
-        0.40382,
-        0.400299,
-        0.368604,
-        0.269996,
-        0.206606,
-        0.24417,
-        0.183128,
-        0.268822,
-        0.253562,
-        0.18665
-      ]
     }
   ],
   "neighbors": [
@@ -2409,30 +2409,34 @@
       "id": "chunk:note:book-博弈论",
       "nearest": [
         {
+          "id": "chunk:note:canvas-考研数学一大纲",
+          "score": 0.96042
+        },
+        {
+          "id": "chunk:note:canvas-调研流程工具箱",
+          "score": 0.954917
+        },
+        {
+          "id": "chunk:note:canvas-软件工程作业四",
+          "score": 0.952184
+        },
+        {
+          "id": "chunk:note:excalidraw-umll类图绘制规则",
+          "score": 0.948436
+        },
+        {
           "id": "chunk:note:obsidian-07adec8081d87504519dc7bf991e6a71",
           "score": 0.948322
-        },
-        {
-          "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
-          "score": 0.941493
-        },
-        {
-          "id": "chunk:note:obsidian-00675466a5316f83ed30c3317fd0342d",
-          "score": 0.940713
-        },
-        {
-          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
-          "score": 0.938417
-        },
-        {
-          "id": "chunk:note:obsidian-1676754dc65c12cc278c57b506b48985",
-          "score": 0.936392
         }
       ]
     },
     {
       "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
       "nearest": [
+        {
+          "id": "chunk:note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+          "score": 0.99002
+        },
         {
           "id": "chunk:note:obsidian-07adec8081d87504519dc7bf991e6a71",
           "score": 0.989821
@@ -2442,16 +2446,12 @@
           "score": 0.989476
         },
         {
-          "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
-          "score": 0.988584
+          "id": "chunk:note:excalidraw-umll类图绘制规则",
+          "score": 0.98893
         },
         {
           "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
           "score": 0.98836
-        },
-        {
-          "id": "chunk:note:obsidian-1676754dc65c12cc278c57b506b48985",
-          "score": 0.988241
         }
       ]
     },
@@ -2467,16 +2467,16 @@
           "score": 0.974282
         },
         {
-          "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
-          "score": 0.974223
+          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+          "score": 0.966267
         },
         {
-          "id": "chunk:note:obsidian-0fd2e4accd424529d03d9675721a32d6",
-          "score": 0.973851
+          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+          "score": 0.96437
         },
         {
-          "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
-          "score": 0.971582
+          "id": "chunk:note:obsidian-036d8332a5de4818371ebae7c17a13d8",
+          "score": 0.963742
         }
       ]
     },
@@ -2484,24 +2484,24 @@
       "id": "chunk:note:book-战略管理",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
-          "score": 0.824603
-        },
-        {
           "id": "chunk:note:book-深入设计模式-1",
           "score": 0.82268
         },
         {
-          "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
-          "score": 0.817848
+          "id": "chunk:note:obsidian-039d44a1fdbb157562193678f3020ecd",
+          "score": 0.811871
         },
         {
-          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
-          "score": 0.815495
+          "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
+          "score": 0.808873
         },
         {
-          "id": "chunk:note:obsidian-183665454ae199435161348053d4a3e7",
-          "score": 0.815485
+          "id": "chunk:note:excalidraw-金字塔模型_漏斗模型",
+          "score": 0.808354
+        },
+        {
+          "id": "chunk:note:obsidian-037c9ce97a15c2ecb51ac60145305a0e",
+          "score": 0.804262
         }
       ]
     },
@@ -2509,24 +2509,24 @@
       "id": "chunk:note:book-正则表达式必知必会-ben-forta-z-library",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
-          "score": 0.987751
+          "id": "chunk:note:excalidraw-时间事务管理体系",
+          "score": 0.989255
         },
         {
-          "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
-          "score": 0.986426
+          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+          "score": 0.987751
         },
         {
           "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
           "score": 0.985484
         },
         {
-          "id": "chunk:note:obsidian-0c9b186483cd29e5ae87e4f57bdec3ee",
-          "score": 0.98476
+          "id": "chunk:note:excalidraw-ai产业链分层",
+          "score": 0.982894
         },
         {
-          "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
-          "score": 0.984326
+          "id": "chunk:note:excalidraw-智能体工作原理_被动性资产构建工具四象限",
+          "score": 0.979391
         }
       ]
     },
@@ -2534,24 +2534,24 @@
       "id": "chunk:note:book-深入设计模式-1",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
-          "score": 0.957167
-        },
-        {
           "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
           "score": 0.955316
         },
         {
-          "id": "chunk:note:obsidian-16f85841237279ed9f23e6cd2318998c",
-          "score": 0.953458
-        },
-        {
-          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
-          "score": 0.953432
+          "id": "chunk:note:canvas-软件工程期末复习",
+          "score": 0.952927
         },
         {
           "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
           "score": 0.95227
+        },
+        {
+          "id": "chunk:note:canvas-软件架构-层级图",
+          "score": 0.952192
+        },
+        {
+          "id": "chunk:note:canvas-高数上-思维导图",
+          "score": 0.951817
         }
       ]
     },
@@ -2567,22 +2567,26 @@
           "score": 0.961032
         },
         {
-          "id": "chunk:note:obsidian-15f79b42c0a521e94e4155b80f4f1da1",
-          "score": 0.956897
-        },
-        {
           "id": "chunk:note:obsidian-07f732d360082b974905b4f9ebedadbd",
           "score": 0.954057
         },
         {
           "id": "chunk:note:obsidian-0a6ddcce65a681315573dfb985fed15e",
           "score": 0.951471
+        },
+        {
+          "id": "chunk:note:obsidian-03da95fbe5223d10b8c816673b655eac",
+          "score": 0.949355
         }
       ]
     },
     {
       "id": "chunk:note:book-终身成长",
       "nearest": [
+        {
+          "id": "chunk:note:excalidraw-知识层级体系_git原理",
+          "score": 0.959589
+        },
         {
           "id": "chunk:note:obsidian-039d44a1fdbb157562193678f3020ecd",
           "score": 0.958862
@@ -2592,16 +2596,12 @@
           "score": 0.954355
         },
         {
-          "id": "chunk:note:book-金字塔原理大全集-芭芭拉-明托-z-library",
-          "score": 0.949894
+          "id": "chunk:note:canvas-高数上-思维导图",
+          "score": 0.952797
         },
         {
-          "id": "chunk:note:book-正则表达式必知必会-ben-forta-z-library",
-          "score": 0.949434
-        },
-        {
-          "id": "chunk:note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
-          "score": 0.947767
+          "id": "chunk:note:canvas-GTD看板",
+          "score": 0.950869
         }
       ]
     },
@@ -2617,16 +2617,16 @@
           "score": 0.907464
         },
         {
-          "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
-          "score": 0.873038
+          "id": "chunk:note:canvas-GTD看板",
+          "score": 0.896218
         },
         {
-          "id": "chunk:note:obsidian-02fd883b046eaba05c9008c29b2f8690",
-          "score": 0.870179
+          "id": "chunk:note:canvas-解决问题人脑决策思维流程图",
+          "score": 0.880844
         },
         {
-          "id": "chunk:note:obsidian-039d44a1fdbb157562193678f3020ecd",
-          "score": 0.869286
+          "id": "chunk:note:canvas-TTS实现方法研究",
+          "score": 0.880487
         }
       ]
     },
@@ -2638,20 +2638,20 @@
           "score": 0.96822
         },
         {
-          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
-          "score": 0.960242
+          "id": "chunk:note:excalidraw-ai产业链分层",
+          "score": 0.961086
         },
         {
-          "id": "chunk:note:obsidian-039d44a1fdbb157562193678f3020ecd",
-          "score": 0.959933
+          "id": "chunk:note:excalidraw-Docker的入门教程知识拆解",
+          "score": 0.960513
         },
         {
-          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
-          "score": 0.959475
+          "id": "chunk:note:canvas-TTS实现方法研究",
+          "score": 0.960151
         },
         {
-          "id": "chunk:note:book-金字塔原理笔记",
-          "score": 0.955508
+          "id": "chunk:note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+          "score": 0.960132
         }
       ]
     },
@@ -2659,24 +2659,1174 @@
       "id": "chunk:note:book-金字塔原理笔记",
       "nearest": [
         {
+          "id": "chunk:note:excalidraw-ai产业链分层及vibe coding的git版本管理",
+          "score": 0.99183
+        },
+        {
+          "id": "chunk:note:excalidraw-Docker的入门教程知识拆解",
+          "score": 0.990524
+        },
+        {
+          "id": "chunk:note:excalidraw-日综拆解",
+          "score": 0.986775
+        },
+        {
           "id": "chunk:note:obsidian-07d0b6f45396132c9e94b834ed5d2aac",
           "score": 0.985135
         },
         {
-          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
-          "score": 0.984495
+          "id": "chunk:note:excalidraw-校园水果生鲜C2F+O2O",
+          "score": 0.983472
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-002-英语语法知识体系认知地图",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-日历看板",
+          "score": 0.993991
         },
         {
-          "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
-          "score": 0.982002
+          "id": "chunk:note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+          "score": 0.977183
+        },
+        {
+          "id": "chunk:note:obsidian-00675466a5316f83ed30c3317fd0342d",
+          "score": 0.976303
+        },
+        {
+          "id": "chunk:note:excalidraw-umll类图绘制规则",
+          "score": 0.974905
+        },
+        {
+          "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
+          "score": 0.97383
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-AI产品经理开发流程",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-提高工作效率的方法论",
+          "score": 0.988986
+        },
+        {
+          "id": "chunk:note:canvas-如何成为一个厉害的人",
+          "score": 0.988556
+        },
+        {
+          "id": "chunk:note:excalidraw-校园水果生鲜C2F+O2O",
+          "score": 0.982144
+        },
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.980454
+        },
+        {
+          "id": "chunk:note:obsidian-0bad078ffc81f1773ef3f686fd1a9269",
+          "score": 0.980097
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-AI发展史-风格化增强版",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-软件体系结构期末考试复习",
+          "score": 0.987791
+        },
+        {
+          "id": "chunk:note:book-正则表达式必知必会-ben-forta-z-library",
+          "score": 0.975501
+        },
+        {
+          "id": "chunk:note:excalidraw-时间事务管理体系",
+          "score": 0.967579
+        },
+        {
+          "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
+          "score": 0.963046
+        },
+        {
+          "id": "chunk:note:excalidraw-umll类图绘制规则",
+          "score": 0.962973
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-GTD流程图",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-TODO看板",
+          "score": 0.995709
+        },
+        {
+          "id": "chunk:note:canvas-多元思维模式",
+          "score": 0.9942
+        },
+        {
+          "id": "chunk:note:canvas-云服务发展史",
+          "score": 0.990737
+        },
+        {
+          "id": "chunk:note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
+          "score": 0.975786
+        },
+        {
+          "id": "chunk:note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+          "score": 0.975551
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-GTD看板",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0a642835b2616eec47b987c4727435b9",
+          "score": 0.973522
+        },
+        {
+          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
+          "score": 0.969889
+        },
+        {
+          "id": "chunk:note:obsidian-0a6ddcce65a681315573dfb985fed15e",
+          "score": 0.969476
+        },
+        {
+          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+          "score": 0.968494
+        },
+        {
+          "id": "chunk:note:obsidian-09558897dda6a39209b217240a76efc6",
+          "score": 0.968393
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-TODO看板",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-GTD流程图",
+          "score": 0.995709
+        },
+        {
+          "id": "chunk:note:canvas-云服务发展史",
+          "score": 0.985765
+        },
+        {
+          "id": "chunk:note:canvas-多元思维模式",
+          "score": 0.983992
+        },
+        {
+          "id": "chunk:note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+          "score": 0.969058
+        },
+        {
+          "id": "chunk:note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
+          "score": 0.967806
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-TTS实现方法研究",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0aa06849135e018b501707f4093e03a5",
+          "score": 0.988117
+        },
+        {
+          "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
+          "score": 0.984116
+        },
+        {
+          "id": "chunk:note:canvas-web应用开发实验",
+          "score": 0.979511
+        },
+        {
+          "id": "chunk:note:excalidraw-校园水果生鲜C2F+O2O",
+          "score": 0.978016
+        },
+        {
+          "id": "chunk:note:obsidian-03d27d1d8a5626150f870d961e7de620",
+          "score": 0.975439
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-idea的工程级项目存储结构",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-软件体系结构期末考试复习",
+          "score": 0.981907
+        },
+        {
+          "id": "chunk:note:canvas-日语初级-N5所有知识点概览",
+          "score": 0.980121
+        },
+        {
+          "id": "chunk:note:canvas-驾考",
+          "score": 0.978094
+        },
+        {
+          "id": "chunk:note:excalidraw-umll类图绘制规则",
+          "score": 0.960245
+        },
+        {
+          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+          "score": 0.959014
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-web应用开发实验",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
+          "score": 0.980291
+        },
+        {
+          "id": "chunk:note:book-金字塔原理笔记",
+          "score": 0.979835
+        },
+        {
+          "id": "chunk:note:canvas-TTS实现方法研究",
+          "score": 0.979511
+        },
+        {
+          "id": "chunk:note:obsidian-0aa06849135e018b501707f4093e03a5",
+          "score": 0.978789
+        },
+        {
+          "id": "chunk:note:obsidian-036d8332a5de4818371ebae7c17a13d8",
+          "score": 0.977218
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-云服务发展史",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-GTD流程图",
+          "score": 0.990737
+        },
+        {
+          "id": "chunk:note:canvas-多元思维模式",
+          "score": 0.98848
+        },
+        {
+          "id": "chunk:note:canvas-TODO看板",
+          "score": 0.985765
+        },
+        {
+          "id": "chunk:note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
+          "score": 0.980541
+        },
+        {
+          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+          "score": 0.972681
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-互联网架构演化史",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-管理学思维和技巧",
+          "score": 0.991566
+        },
+        {
+          "id": "chunk:note:canvas-软件架构-层级图",
+          "score": 0.989643
+        },
+        {
+          "id": "chunk:note:canvas-高数上-思维导图",
+          "score": 0.987426
+        },
+        {
+          "id": "chunk:note:canvas-软件工程期末复习",
+          "score": 0.986699
+        },
+        {
+          "id": "chunk:note:canvas-编译原理期末复习",
+          "score": 0.985734
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-人工智能发展史及应用技术迭代史",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-苍穹外卖项目整体框架图和工作流",
+          "score": 0.987631
+        },
+        {
+          "id": "chunk:note:canvas-计设赛C组教学设计_演示PPT",
+          "score": 0.980848
+        },
+        {
+          "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
+          "score": 0.970115
+        },
+        {
+          "id": "chunk:note:canvas-解决问题人脑决策思维流程图",
+          "score": 0.970016
+        },
+        {
+          "id": "chunk:note:obsidian-0bad078ffc81f1773ef3f686fd1a9269",
+          "score": 0.960693
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-多元思维模式",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-GTD流程图",
+          "score": 0.9942
+        },
+        {
+          "id": "chunk:note:canvas-云服务发展史",
+          "score": 0.98848
+        },
+        {
+          "id": "chunk:note:canvas-TODO看板",
+          "score": 0.983992
+        },
+        {
+          "id": "chunk:note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
+          "score": 0.981499
+        },
+        {
+          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+          "score": 0.97536
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-如何成为一个厉害的人",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-AI产品经理开发流程",
+          "score": 0.988556
+        },
+        {
+          "id": "chunk:note:canvas-提高工作效率的方法论",
+          "score": 0.987975
+        },
+        {
+          "id": "chunk:note:obsidian-0bad078ffc81f1773ef3f686fd1a9269",
+          "score": 0.98335
         },
         {
           "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
-          "score": 0.981696
+          "score": 0.982498
         },
         {
-          "id": "chunk:note:obsidian-06e4adaabe837b9b7e215bf8943c207c",
-          "score": 0.980771
+          "id": "chunk:note:obsidian-07d0b6f45396132c9e94b834ed5d2aac",
+          "score": 0.981971
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-提高工作效率的方法论",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-AI产品经理开发流程",
+          "score": 0.988986
+        },
+        {
+          "id": "chunk:note:canvas-如何成为一个厉害的人",
+          "score": 0.987975
+        },
+        {
+          "id": "chunk:note:obsidian-07d0b6f45396132c9e94b834ed5d2aac",
+          "score": 0.980913
+        },
+        {
+          "id": "chunk:note:excalidraw-日综拆解",
+          "score": 0.979624
+        },
+        {
+          "id": "chunk:note:obsidian-000ea51c82d267f202adb4730c67f9b5",
+          "score": 0.976617
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-文件格式处理场景及解决方案",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-解决问题人脑决策思维流程图",
+          "score": 0.984074
+        },
+        {
+          "id": "chunk:note:excalidraw-高数函数案例图",
+          "score": 0.977208
+        },
+        {
+          "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
+          "score": 0.973662
+        },
+        {
+          "id": "chunk:note:excalidraw-编译原理作业二",
+          "score": 0.973305
+        },
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.972358
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-日历看板",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-002-英语语法知识体系认知地图",
+          "score": 0.993991
+        },
+        {
+          "id": "chunk:note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+          "score": 0.98029
+        },
+        {
+          "id": "chunk:note:excalidraw-umll类图绘制规则",
+          "score": 0.978683
+        },
+        {
+          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+          "score": 0.97827
+        },
+        {
+          "id": "chunk:note:obsidian-00675466a5316f83ed30c3317fd0342d",
+          "score": 0.977761
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-日语初级-N5所有知识点概览",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-07adec8081d87504519dc7bf991e6a71",
+          "score": 0.992371
+        },
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.988139
+        },
+        {
+          "id": "chunk:note:canvas-驾考",
+          "score": 0.988124
+        },
+        {
+          "id": "chunk:note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+          "score": 0.984494
+        },
+        {
+          "id": "chunk:note:canvas-软件体系结构期末考试复习",
+          "score": 0.984473
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-管理学思维和技巧",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-互联网架构演化史",
+          "score": 0.991566
+        },
+        {
+          "id": "chunk:note:canvas-高数上-思维导图",
+          "score": 0.987115
+        },
+        {
+          "id": "chunk:note:canvas-软件架构-层级图",
+          "score": 0.986
+        },
+        {
+          "id": "chunk:note:canvas-编译原理期末复习",
+          "score": 0.985854
+        },
+        {
+          "id": "chunk:note:canvas-软件工程期末复习",
+          "score": 0.98297
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-编译原理期末复习",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-软件工程期末复习",
+          "score": 0.998191
+        },
+        {
+          "id": "chunk:note:canvas-软件架构-层级图",
+          "score": 0.996171
+        },
+        {
+          "id": "chunk:note:canvas-高数上-思维导图",
+          "score": 0.986632
+        },
+        {
+          "id": "chunk:note:canvas-管理学思维和技巧",
+          "score": 0.985854
+        },
+        {
+          "id": "chunk:note:canvas-互联网架构演化史",
+          "score": 0.985734
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-考研数学一大纲",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-调研流程工具箱",
+          "score": 0.997538
+        },
+        {
+          "id": "chunk:note:canvas-软件工程作业四",
+          "score": 0.996985
+        },
+        {
+          "id": "chunk:note:excalidraw-umll类图绘制规则",
+          "score": 0.96219
+        },
+        {
+          "id": "chunk:note:book-博弈论",
+          "score": 0.96042
+        },
+        {
+          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+          "score": 0.959446
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-苍穹外卖项目整体框架图和工作流",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-人工智能发展史及应用技术迭代史",
+          "score": 0.987631
+        },
+        {
+          "id": "chunk:note:canvas-计设赛C组教学设计_演示PPT",
+          "score": 0.981694
+        },
+        {
+          "id": "chunk:note:obsidian-0bad078ffc81f1773ef3f686fd1a9269",
+          "score": 0.975325
+        },
+        {
+          "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
+          "score": 0.975111
+        },
+        {
+          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
+          "score": 0.972544
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-解决问题人脑决策思维流程图",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-文件格式处理场景及解决方案",
+          "score": 0.984074
+        },
+        {
+          "id": "chunk:note:canvas-人工智能发展史及应用技术迭代史",
+          "score": 0.970016
+        },
+        {
+          "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
+          "score": 0.969983
+        },
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.967804
+        },
+        {
+          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
+          "score": 0.96688
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-计设赛C组教学设计_演示PPT",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
+          "score": 0.986497
+        },
+        {
+          "id": "chunk:note:canvas-苍穹外卖项目整体框架图和工作流",
+          "score": 0.981694
+        },
+        {
+          "id": "chunk:note:canvas-人工智能发展史及应用技术迭代史",
+          "score": 0.980848
+        },
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.979115
+        },
+        {
+          "id": "chunk:note:excalidraw-金字塔模型_漏斗模型",
+          "score": 0.978596
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-调研流程工具箱",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-考研数学一大纲",
+          "score": 0.997538
+        },
+        {
+          "id": "chunk:note:canvas-软件工程作业四",
+          "score": 0.993693
+        },
+        {
+          "id": "chunk:note:excalidraw-umll类图绘制规则",
+          "score": 0.956711
+        },
+        {
+          "id": "chunk:note:book-博弈论",
+          "score": 0.954917
+        },
+        {
+          "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
+          "score": 0.953135
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-软件体系结构期末考试复习",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-AI发展史-风格化增强版",
+          "score": 0.987791
+        },
+        {
+          "id": "chunk:note:canvas-日语初级-N5所有知识点概览",
+          "score": 0.984473
+        },
+        {
+          "id": "chunk:note:canvas-idea的工程级项目存储结构",
+          "score": 0.981907
+        },
+        {
+          "id": "chunk:note:excalidraw-umll类图绘制规则",
+          "score": 0.980607
+        },
+        {
+          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+          "score": 0.980276
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-软件工程作业四",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-考研数学一大纲",
+          "score": 0.996985
+        },
+        {
+          "id": "chunk:note:canvas-调研流程工具箱",
+          "score": 0.993693
+        },
+        {
+          "id": "chunk:note:obsidian-0974bd740dd05e81565e2821a5e9011a",
+          "score": 0.96332
+        },
+        {
+          "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
+          "score": 0.963139
+        },
+        {
+          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+          "score": 0.960717
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-软件工程期末复习",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-编译原理期末复习",
+          "score": 0.998191
+        },
+        {
+          "id": "chunk:note:canvas-软件架构-层级图",
+          "score": 0.997274
+        },
+        {
+          "id": "chunk:note:canvas-高数上-思维导图",
+          "score": 0.989736
+        },
+        {
+          "id": "chunk:note:canvas-互联网架构演化史",
+          "score": 0.986699
+        },
+        {
+          "id": "chunk:note:canvas-管理学思维和技巧",
+          "score": 0.98297
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-软件架构-层级图",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-软件工程期末复习",
+          "score": 0.997274
+        },
+        {
+          "id": "chunk:note:canvas-编译原理期末复习",
+          "score": 0.996171
+        },
+        {
+          "id": "chunk:note:canvas-高数上-思维导图",
+          "score": 0.993805
+        },
+        {
+          "id": "chunk:note:canvas-互联网架构演化史",
+          "score": 0.989643
+        },
+        {
+          "id": "chunk:note:canvas-管理学思维和技巧",
+          "score": 0.986
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-驾考",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-日语初级-N5所有知识点概览",
+          "score": 0.988124
+        },
+        {
+          "id": "chunk:note:obsidian-07adec8081d87504519dc7bf991e6a71",
+          "score": 0.979318
+        },
+        {
+          "id": "chunk:note:canvas-idea的工程级项目存储结构",
+          "score": 0.978094
+        },
+        {
+          "id": "chunk:note:excalidraw-umll类图绘制规则",
+          "score": 0.977645
+        },
+        {
+          "id": "chunk:note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+          "score": 0.975343
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:canvas-高数上-思维导图",
+      "nearest": [
+        {
+          "id": "chunk:note:canvas-软件架构-层级图",
+          "score": 0.993805
+        },
+        {
+          "id": "chunk:note:canvas-软件工程期末复习",
+          "score": 0.989736
+        },
+        {
+          "id": "chunk:note:obsidian-039d44a1fdbb157562193678f3020ecd",
+          "score": 0.989688
+        },
+        {
+          "id": "chunk:note:canvas-互联网架构演化史",
+          "score": 0.987426
+        },
+        {
+          "id": "chunk:note:canvas-管理学思维和技巧",
+          "score": 0.987115
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-Docker的入门教程知识拆解",
+      "nearest": [
+        {
+          "id": "chunk:note:excalidraw-ai产业链分层及vibe coding的git版本管理",
+          "score": 0.996102
+        },
+        {
+          "id": "chunk:note:book-金字塔原理笔记",
+          "score": 0.990524
+        },
+        {
+          "id": "chunk:note:obsidian-0974bd740dd05e81565e2821a5e9011a",
+          "score": 0.9904
+        },
+        {
+          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
+          "score": 0.986488
+        },
+        {
+          "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
+          "score": 0.986258
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-ai产业链分层",
+      "nearest": [
+        {
+          "id": "chunk:note:excalidraw-编译原理作业二",
+          "score": 0.998889
+        },
+        {
+          "id": "chunk:note:excalidraw-高数函数案例图",
+          "score": 0.997183
+        },
+        {
+          "id": "chunk:note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+          "score": 0.994897
+        },
+        {
+          "id": "chunk:note:obsidian-0baba57a3a85093d7ccbad708a35db2e",
+          "score": 0.990103
+        },
+        {
+          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+          "score": 0.989329
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-ai产业链分层及vibe coding的git版本管理",
+      "nearest": [
+        {
+          "id": "chunk:note:excalidraw-Docker的入门教程知识拆解",
+          "score": 0.996102
+        },
+        {
+          "id": "chunk:note:book-金字塔原理笔记",
+          "score": 0.99183
+        },
+        {
+          "id": "chunk:note:obsidian-0804c3212b169e8129bf86c0a7a5ea57",
+          "score": 0.987679
+        },
+        {
+          "id": "chunk:note:obsidian-0974bd740dd05e81565e2821a5e9011a",
+          "score": 0.986726
+        },
+        {
+          "id": "chunk:note:obsidian-036d8332a5de4818371ebae7c17a13d8",
+          "score": 0.986567
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-harness_engineering（Ralph组件）",
+      "nearest": [
+        {
+          "id": "chunk:note:excalidraw-日综拆解",
+          "score": 0.993956
+        },
+        {
+          "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
+          "score": 0.985021
+        },
+        {
+          "id": "chunk:note:obsidian-0804c3212b169e8129bf86c0a7a5ea57",
+          "score": 0.980168
+        },
+        {
+          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
+          "score": 0.979466
+        },
+        {
+          "id": "chunk:note:excalidraw-ai产业链分层及vibe coding的git版本管理",
+          "score": 0.978866
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-umll类图绘制规则",
+      "nearest": [
+        {
+          "id": "chunk:note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+          "score": 0.997796
+        },
+        {
+          "id": "chunk:note:excalidraw-金字塔模型_漏斗模型",
+          "score": 0.993658
+        },
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.98893
+        },
+        {
+          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+          "score": 0.985079
+        },
+        {
+          "id": "chunk:note:canvas-日语初级-N5所有知识点概览",
+          "score": 0.984238
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+      "nearest": [
+        {
+          "id": "chunk:note:excalidraw-umll类图绘制规则",
+          "score": 0.997796
+        },
+        {
+          "id": "chunk:note:excalidraw-金字塔模型_漏斗模型",
+          "score": 0.994248
+        },
+        {
+          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+          "score": 0.990546
+        },
+        {
+          "id": "chunk:note:obsidian-023f710ebbcde9d7b61d6e221fa44f60",
+          "score": 0.99019
+        },
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.99002
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+      "nearest": [
+        {
+          "id": "chunk:note:excalidraw-ai产业链分层",
+          "score": 0.994897
+        },
+        {
+          "id": "chunk:note:excalidraw-高数函数案例图",
+          "score": 0.994759
+        },
+        {
+          "id": "chunk:note:excalidraw-编译原理作业二",
+          "score": 0.993892
+        },
+        {
+          "id": "chunk:note:obsidian-0baba57a3a85093d7ccbad708a35db2e",
+          "score": 0.991352
+        },
+        {
+          "id": "chunk:note:obsidian-086c3bcafb1e153e7c235a46050cd9c0",
+          "score": 0.989297
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-日综拆解",
+      "nearest": [
+        {
+          "id": "chunk:note:excalidraw-harness_engineering（Ralph组件）",
+          "score": 0.993956
+        },
+        {
+          "id": "chunk:note:book-金字塔原理笔记",
+          "score": 0.986775
+        },
+        {
+          "id": "chunk:note:obsidian-07d0b6f45396132c9e94b834ed5d2aac",
+          "score": 0.98594
+        },
+        {
+          "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
+          "score": 0.983394
+        },
+        {
+          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
+          "score": 0.983387
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-时间事务管理体系",
+      "nearest": [
+        {
+          "id": "chunk:note:excalidraw-智能体工作原理_被动性资产构建工具四象限",
+          "score": 0.995071
+        },
+        {
+          "id": "chunk:note:book-正则表达式必知必会-ben-forta-z-library",
+          "score": 0.989255
+        },
+        {
+          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+          "score": 0.986618
+        },
+        {
+          "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
+          "score": 0.985949
+        },
+        {
+          "id": "chunk:note:obsidian-02fd883b046eaba05c9008c29b2f8690",
+          "score": 0.985782
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-智能体工作原理_被动性资产构建工具四象限",
+      "nearest": [
+        {
+          "id": "chunk:note:excalidraw-时间事务管理体系",
+          "score": 0.995071
+        },
+        {
+          "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
+          "score": 0.985901
+        },
+        {
+          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+          "score": 0.984413
+        },
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.983872
+        },
+        {
+          "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
+          "score": 0.981392
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-校园水果生鲜C2F+O2O",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+          "score": 0.98768
+        },
+        {
+          "id": "chunk:note:obsidian-013ff4f65e1209c89fb93912ffad85a8",
+          "score": 0.987188
+        },
+        {
+          "id": "chunk:note:book-金字塔原理笔记",
+          "score": 0.983472
+        },
+        {
+          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
+          "score": 0.983004
+        },
+        {
+          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+          "score": 0.982624
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-知识层级体系_git原理",
+      "nearest": [
+        {
+          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+          "score": 0.985424
+        },
+        {
+          "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
+          "score": 0.982176
+        },
+        {
+          "id": "chunk:note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
+          "score": 0.981374
+        },
+        {
+          "id": "chunk:note:obsidian-0a902d16ffaa92d5cbf5a6e79cdea22d",
+          "score": 0.980717
+        },
+        {
+          "id": "chunk:note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+          "score": 0.980301
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-编译原理作业二",
+      "nearest": [
+        {
+          "id": "chunk:note:excalidraw-ai产业链分层",
+          "score": 0.998889
+        },
+        {
+          "id": "chunk:note:excalidraw-高数函数案例图",
+          "score": 0.996166
+        },
+        {
+          "id": "chunk:note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+          "score": 0.993892
+        },
+        {
+          "id": "chunk:note:obsidian-086c3bcafb1e153e7c235a46050cd9c0",
+          "score": 0.987555
+        },
+        {
+          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
+          "score": 0.987317
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-金字塔模型_漏斗模型",
+      "nearest": [
+        {
+          "id": "chunk:note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+          "score": 0.994248
+        },
+        {
+          "id": "chunk:note:excalidraw-umll类图绘制规则",
+          "score": 0.993658
+        },
+        {
+          "id": "chunk:note:obsidian-037c9ce97a15c2ecb51ac60145305a0e",
+          "score": 0.986442
+        },
+        {
+          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+          "score": 0.985332
+        },
+        {
+          "id": "chunk:note:obsidian-023f710ebbcde9d7b61d6e221fa44f60",
+          "score": 0.981043
+        }
+      ]
+    },
+    {
+      "id": "chunk:note:excalidraw-高数函数案例图",
+      "nearest": [
+        {
+          "id": "chunk:note:excalidraw-ai产业链分层",
+          "score": 0.997183
+        },
+        {
+          "id": "chunk:note:excalidraw-编译原理作业二",
+          "score": 0.996166
+        },
+        {
+          "id": "chunk:note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+          "score": 0.994759
+        },
+        {
+          "id": "chunk:note:obsidian-086c3bcafb1e153e7c235a46050cd9c0",
+          "score": 0.986994
+        },
+        {
+          "id": "chunk:note:obsidian-075855a12ddf37ce7ef24b0ab97ce8ba",
+          "score": 0.986796
         }
       ]
     },
@@ -2684,24 +3834,24 @@
       "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
-          "score": 0.999963
-        },
-        {
-          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
-          "score": 0.995534
-        },
-        {
           "id": "chunk:note:obsidian-03d27d1d8a5626150f870d961e7de620",
           "score": 0.994562
         },
         {
-          "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
-          "score": 0.994093
-        },
-        {
           "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
           "score": 0.993951
+        },
+        {
+          "id": "chunk:note:obsidian-02dfbed17d9b57d937067d6d31bb00e1",
+          "score": 0.992591
+        },
+        {
+          "id": "chunk:note:obsidian-00107033f2646145e8503a682d72e890",
+          "score": 0.991135
+        },
+        {
+          "id": "chunk:note:obsidian-039d44a1fdbb157562193678f3020ecd",
+          "score": 0.990151
         }
       ]
     },
@@ -2717,30 +3867,22 @@
           "score": 0.995615
         },
         {
-          "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
-          "score": 0.995182
+          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
+          "score": 0.992385
         },
         {
-          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
-          "score": 0.994919
+          "id": "chunk:note:obsidian-0bad078ffc81f1773ef3f686fd1a9269",
+          "score": 0.991619
         },
         {
-          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
-          "score": 0.993593
+          "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
+          "score": 0.988615
         }
       ]
     },
     {
       "id": "chunk:note:obsidian-00107033f2646145e8503a682d72e890",
       "nearest": [
-        {
-          "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
-          "score": 0.99595
-        },
-        {
-          "id": "chunk:note:obsidian-183665454ae199435161348053d4a3e7",
-          "score": 0.994221
-        },
         {
           "id": "chunk:note:obsidian-02dfbed17d9b57d937067d6d31bb00e1",
           "score": 0.993875
@@ -2750,8 +3892,16 @@
           "score": 0.993733
         },
         {
-          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
-          "score": 0.993575
+          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
+          "score": 0.991135
+        },
+        {
+          "id": "chunk:note:obsidian-03d27d1d8a5626150f870d961e7de620",
+          "score": 0.988073
+        },
+        {
+          "id": "chunk:note:excalidraw-Docker的入门教程知识拆解",
+          "score": 0.982169
         }
       ]
     },
@@ -2763,10 +3913,6 @@
           "score": 0.998261
         },
         {
-          "id": "chunk:note:obsidian-0fd006309dd0e86057e11f5960f7a058",
-          "score": 0.995224
-        },
-        {
           "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
           "score": 0.995122
         },
@@ -2775,8 +3921,12 @@
           "score": 0.994418
         },
         {
-          "id": "chunk:note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
-          "score": 0.994191
+          "id": "chunk:note:obsidian-09a9b52aaca7919c633efdfdce81b6f0",
+          "score": 0.991491
+        },
+        {
+          "id": "chunk:note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
+          "score": 0.982662
         }
       ]
     },
@@ -2817,16 +3967,16 @@
           "score": 0.995122
         },
         {
-          "id": "chunk:note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
-          "score": 0.992256
+          "id": "chunk:note:obsidian-09a9b52aaca7919c633efdfdce81b6f0",
+          "score": 0.989879
         },
         {
-          "id": "chunk:note:obsidian-18062e14a079ba5f7b5b794f84709870",
-          "score": 0.991283
+          "id": "chunk:note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
+          "score": 0.986351
         },
         {
-          "id": "chunk:note:obsidian-0fd006309dd0e86057e11f5960f7a058",
-          "score": 0.990738
+          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
+          "score": 0.983961
         }
       ]
     },
@@ -2842,15 +3992,15 @@
           "score": 0.997224
         },
         {
-          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-          "score": 0.997056
-        },
-        {
           "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
           "score": 0.996638
         },
         {
           "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
+          "score": 0.99565
+        },
+        {
+          "id": "chunk:note:obsidian-0ab2aa2fd9c7df8a160cccfe9e13de6a",
           "score": 0.99565
         }
       ]
@@ -2858,10 +4008,6 @@
     {
       "id": "chunk:note:obsidian-008440bc163e50d1ed67d05b4e99cb81",
       "nearest": [
-        {
-          "id": "chunk:note:obsidian-17f1a8a8c3c99484139e2485180f7d77",
-          "score": 0.999957
-        },
         {
           "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
           "score": 0.998325
@@ -2875,8 +4021,12 @@
           "score": 0.996973
         },
         {
-          "id": "chunk:note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
-          "score": 0.996277
+          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+          "score": 0.995485
+        },
+        {
+          "id": "chunk:note:obsidian-09558897dda6a39209b217240a76efc6",
+          "score": 0.995423
         }
       ]
     },
@@ -2888,20 +4038,20 @@
           "score": 0.996096
         },
         {
-          "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
-          "score": 0.99222
-        },
-        {
           "id": "chunk:note:obsidian-0518f776fa045bc32b01bef5df461d98",
           "score": 0.992173
         },
         {
-          "id": "chunk:note:obsidian-0d518430ba476ba8e0bc82df489315fc",
-          "score": 0.99013
-        },
-        {
           "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
           "score": 0.98806
+        },
+        {
+          "id": "chunk:note:excalidraw-校园水果生鲜C2F+O2O",
+          "score": 0.987188
+        },
+        {
+          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+          "score": 0.987014
         }
       ]
     },
@@ -2917,16 +4067,16 @@
           "score": 0.993951
         },
         {
-          "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
-          "score": 0.993943
-        },
-        {
           "id": "chunk:note:obsidian-00107033f2646145e8503a682d72e890",
           "score": 0.993733
         },
         {
-          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
-          "score": 0.993592
+          "id": "chunk:note:obsidian-0804c3212b169e8129bf86c0a7a5ea57",
+          "score": 0.98997
+        },
+        {
+          "id": "chunk:note:obsidian-03d27d1d8a5626150f870d961e7de620",
+          "score": 0.987032
         }
       ]
     },
@@ -2934,24 +4084,24 @@
       "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
-          "score": 0.995268
-        },
-        {
           "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
           "score": 0.994252
         },
         {
-          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
-          "score": 0.994232
+          "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
+          "score": 0.988837
         },
         {
-          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
-          "score": 0.993947
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.987479
         },
         {
-          "id": "chunk:note:obsidian-1676754dc65c12cc278c57b506b48985",
-          "score": 0.992514
+          "id": "chunk:note:obsidian-037c9ce97a15c2ecb51ac60145305a0e",
+          "score": 0.986768
+        },
+        {
+          "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
+          "score": 0.986752
         }
       ]
     },
@@ -2963,20 +4113,20 @@
           "score": 0.994527
         },
         {
-          "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
-          "score": 0.994126
-        },
-        {
           "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
           "score": 0.993808
         },
         {
-          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-          "score": 0.993712
+          "id": "chunk:note:obsidian-00675466a5316f83ed30c3317fd0342d",
+          "score": 0.993063
         },
         {
-          "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
-          "score": 0.993181
+          "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
+          "score": 0.992281
+        },
+        {
+          "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
+          "score": 0.991453
         }
       ]
     },
@@ -2988,20 +4138,20 @@
           "score": 0.998365
         },
         {
-          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
-          "score": 0.998137
+          "id": "chunk:note:obsidian-07d0b6f45396132c9e94b834ed5d2aac",
+          "score": 0.994319
         },
         {
-          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
-          "score": 0.997123
+          "id": "chunk:note:obsidian-000ea51c82d267f202adb4730c67f9b5",
+          "score": 0.992385
         },
         {
-          "id": "chunk:note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
-          "score": 0.994782
+          "id": "chunk:note:obsidian-0bad078ffc81f1773ef3f686fd1a9269",
+          "score": 0.988604
         },
         {
-          "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
-          "score": 0.994513
+          "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
+          "score": 0.988403
         }
       ]
     },
@@ -3025,8 +4175,8 @@
           "score": 0.99797
         },
         {
-          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-          "score": 0.997661
+          "id": "chunk:note:obsidian-00675466a5316f83ed30c3317fd0342d",
+          "score": 0.997224
         }
       ]
     },
@@ -3036,10 +4186,6 @@
         {
           "id": "chunk:note:obsidian-008440bc163e50d1ed67d05b4e99cb81",
           "score": 0.993752
-        },
-        {
-          "id": "chunk:note:obsidian-17f1a8a8c3c99484139e2485180f7d77",
-          "score": 0.99348
         },
         {
           "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
@@ -3052,6 +4198,10 @@
         {
           "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
           "score": 0.991929
+        },
+        {
+          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
+          "score": 0.991817
         }
       ]
     },
@@ -3063,20 +4213,20 @@
           "score": 0.995467
         },
         {
-          "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
-          "score": 0.995358
-        },
-        {
           "id": "chunk:note:obsidian-00107033f2646145e8503a682d72e890",
           "score": 0.993875
         },
         {
-          "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
-          "score": 0.993491
+          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
+          "score": 0.992591
         },
         {
-          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
-          "score": 0.992597
+          "id": "chunk:note:obsidian-03d27d1d8a5626150f870d961e7de620",
+          "score": 0.992273
+        },
+        {
+          "id": "chunk:note:obsidian-0804c3212b169e8129bf86c0a7a5ea57",
+          "score": 0.986233
         }
       ]
     },
@@ -3092,16 +4242,16 @@
           "score": 0.987325
         },
         {
+          "id": "chunk:note:excalidraw-时间事务管理体系",
+          "score": 0.985782
+        },
+        {
+          "id": "chunk:note:canvas-日语初级-N5所有知识点概览",
+          "score": 0.978404
+        },
+        {
           "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
           "score": 0.978148
-        },
-        {
-          "id": "chunk:note:obsidian-1a546b9f3bfa8be806de2adc35c67f77",
-          "score": 0.97741
-        },
-        {
-          "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
-          "score": 0.976791
         }
       ]
     },
@@ -3109,24 +4259,24 @@
       "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-14f8b98931997454721a799dd971bb15",
-          "score": 0.999603
-        },
-        {
           "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
           "score": 0.991681
-        },
-        {
-          "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
-          "score": 0.988377
         },
         {
           "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
           "score": 0.988136
         },
         {
-          "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
-          "score": 0.987682
+          "id": "chunk:note:obsidian-07adec8081d87504519dc7bf991e6a71",
+          "score": 0.986529
+        },
+        {
+          "id": "chunk:note:excalidraw-高数函数案例图",
+          "score": 0.984821
+        },
+        {
+          "id": "chunk:note:obsidian-07b13eeb35e47a316c0bc7d6d54d0a14",
+          "score": 0.983209
         }
       ]
     },
@@ -3175,8 +4325,8 @@
           "score": 0.987377
         },
         {
-          "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
-          "score": 0.987243
+          "id": "chunk:note:obsidian-0aa06849135e018b501707f4093e03a5",
+          "score": 0.987142
         }
       ]
     },
@@ -3184,24 +4334,24 @@
       "id": "chunk:note:obsidian-037c9ce97a15c2ecb51ac60145305a0e",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
-          "score": 0.996001
-        },
-        {
-          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
-          "score": 0.995577
-        },
-        {
           "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
           "score": 0.995365
         },
         {
-          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
-          "score": 0.995124
+          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
+          "score": 0.992407
         },
         {
-          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
-          "score": 0.994286
+          "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
+          "score": 0.986768
+        },
+        {
+          "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
+          "score": 0.98673
+        },
+        {
+          "id": "chunk:note:excalidraw-金字塔模型_漏斗模型",
+          "score": 0.986442
         }
       ]
     },
@@ -3213,20 +4363,20 @@
           "score": 0.990151
         },
         {
-          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
-          "score": 0.989709
-        },
-        {
-          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
-          "score": 0.98779
-        },
-        {
-          "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
-          "score": 0.985869
+          "id": "chunk:note:canvas-高数上-思维导图",
+          "score": 0.989688
         },
         {
           "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
           "score": 0.983137
+        },
+        {
+          "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
+          "score": 0.982864
+        },
+        {
+          "id": "chunk:note:obsidian-03d27d1d8a5626150f870d961e7de620",
+          "score": 0.981036
         }
       ]
     },
@@ -3234,24 +4384,24 @@
       "id": "chunk:note:obsidian-03d27d1d8a5626150f870d961e7de620",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
-          "score": 0.996258
-        },
-        {
-          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
-          "score": 0.99461
-        },
-        {
           "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
           "score": 0.994562
         },
         {
-          "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
-          "score": 0.993181
+          "id": "chunk:note:obsidian-02dfbed17d9b57d937067d6d31bb00e1",
+          "score": 0.992273
         },
         {
-          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
-          "score": 0.992752
+          "id": "chunk:note:obsidian-00107033f2646145e8503a682d72e890",
+          "score": 0.988073
+        },
+        {
+          "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
+          "score": 0.987032
+        },
+        {
+          "id": "chunk:note:excalidraw-日综拆解",
+          "score": 0.983132
         }
       ]
     },
@@ -3259,24 +4409,24 @@
       "id": "chunk:note:obsidian-03da95fbe5223d10b8c816673b655eac",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
-          "score": 0.993312
-        },
-        {
-          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-          "score": 0.991375
-        },
-        {
           "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
           "score": 0.9887
         },
         {
-          "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
-          "score": 0.987968
-        },
-        {
           "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
           "score": 0.987771
+        },
+        {
+          "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
+          "score": 0.987446
+        },
+        {
+          "id": "chunk:note:obsidian-0ab2aa2fd9c7df8a160cccfe9e13de6a",
+          "score": 0.987446
+        },
+        {
+          "id": "chunk:note:obsidian-023f710ebbcde9d7b61d6e221fa44f60",
+          "score": 0.987409
         }
       ]
     },
@@ -3292,16 +4442,16 @@
           "score": 0.999922
         },
         {
-          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-          "score": 0.99865
-        },
-        {
           "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
           "score": 0.998354
         },
         {
           "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
           "score": 0.99797
+        },
+        {
+          "id": "chunk:note:obsidian-00675466a5316f83ed30c3317fd0342d",
+          "score": 0.99565
         }
       ]
     },
@@ -3309,24 +4459,24 @@
       "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
-          "score": 0.991385
-        },
-        {
-          "id": "chunk:note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
-          "score": 0.991031
-        },
-        {
           "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
           "score": 0.990184
         },
         {
-          "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
-          "score": 0.988764
+          "id": "chunk:note:excalidraw-ai产业链分层",
+          "score": 0.989329
         },
         {
           "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
           "score": 0.98836
+        },
+        {
+          "id": "chunk:note:book-正则表达式必知必会-ben-forta-z-library",
+          "score": 0.987751
+        },
+        {
+          "id": "chunk:note:excalidraw-编译原理作业二",
+          "score": 0.987317
         }
       ]
     },
@@ -3334,16 +4484,8 @@
       "id": "chunk:note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-0fd006309dd0e86057e11f5960f7a058",
-          "score": 0.996801
-        },
-        {
           "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
           "score": 0.994418
-        },
-        {
-          "id": "chunk:note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
-          "score": 0.992388
         },
         {
           "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
@@ -3352,16 +4494,20 @@
         {
           "id": "chunk:note:obsidian-09a9b52aaca7919c633efdfdce81b6f0",
           "score": 0.990519
+        },
+        {
+          "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
+          "score": 0.986351
+        },
+        {
+          "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
+          "score": 0.976428
         }
       ]
     },
     {
       "id": "chunk:note:obsidian-0518f776fa045bc32b01bef5df461d98",
       "nearest": [
-        {
-          "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
-          "score": 0.999999
-        },
         {
           "id": "chunk:note:obsidian-013ff4f65e1209c89fb93912ffad85a8",
           "score": 0.992173
@@ -3371,22 +4517,22 @@
           "score": 0.989721
         },
         {
-          "id": "chunk:note:obsidian-0d518430ba476ba8e0bc82df489315fc",
-          "score": 0.987996
-        },
-        {
           "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
           "score": 0.986818
+        },
+        {
+          "id": "chunk:note:excalidraw-校园水果生鲜C2F+O2O",
+          "score": 0.98076
+        },
+        {
+          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+          "score": 0.980611
         }
       ]
     },
     {
       "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
       "nearest": [
-        {
-          "id": "chunk:note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
-          "score": 0.996238
-        },
         {
           "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
           "score": 0.99258
@@ -3400,8 +4546,12 @@
           "score": 0.992056
         },
         {
-          "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
-          "score": 0.992052
+          "id": "chunk:note:obsidian-0aa06849135e018b501707f4093e03a5",
+          "score": 0.989782
+        },
+        {
+          "id": "chunk:note:obsidian-0804c3212b169e8129bf86c0a7a5ea57",
+          "score": 0.989174
         }
       ]
     },
@@ -3413,20 +4563,20 @@
           "score": 0.993884
         },
         {
-          "id": "chunk:note:obsidian-0d518430ba476ba8e0bc82df489315fc",
-          "score": 0.989116
+          "id": "chunk:note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+          "score": 0.990546
         },
         {
           "id": "chunk:note:obsidian-013ff4f65e1209c89fb93912ffad85a8",
           "score": 0.98806
         },
         {
-          "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
-          "score": 0.986873
-        },
-        {
           "id": "chunk:note:obsidian-0518f776fa045bc32b01bef5df461d98",
           "score": 0.986818
+        },
+        {
+          "id": "chunk:note:excalidraw-知识层级体系_git原理",
+          "score": 0.985424
         }
       ]
     },
@@ -3438,10 +4588,6 @@
           "score": 0.995678
         },
         {
-          "id": "chunk:note:obsidian-1639497d9752084addd03e6757555719",
-          "score": 0.99521
-        },
-        {
           "id": "chunk:note:obsidian-086c3bcafb1e153e7c235a46050cd9c0",
           "score": 0.994139
         },
@@ -3450,8 +4596,12 @@
           "score": 0.99413
         },
         {
-          "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
-          "score": 0.990111
+          "id": "chunk:note:obsidian-000ea51c82d267f202adb4730c67f9b5",
+          "score": 0.988615
+        },
+        {
+          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
+          "score": 0.988403
         }
       ]
     },
@@ -3463,10 +4613,6 @@
           "score": 0.999266
         },
         {
-          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-          "score": 0.999115
-        },
-        {
           "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
           "score": 0.998898
         },
@@ -3476,6 +4622,10 @@
         },
         {
           "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
+          "score": 0.998354
+        },
+        {
+          "id": "chunk:note:obsidian-0ab2aa2fd9c7df8a160cccfe9e13de6a",
           "score": 0.998354
         }
       ]
@@ -3492,16 +4642,16 @@
           "score": 0.997857
         },
         {
-          "id": "chunk:note:obsidian-1639497d9752084addd03e6757555719",
-          "score": 0.996118
-        },
-        {
           "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
           "score": 0.995678
         },
         {
-          "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
-          "score": 0.995116
+          "id": "chunk:note:obsidian-0baba57a3a85093d7ccbad708a35db2e",
+          "score": 0.995049
+        },
+        {
+          "id": "chunk:note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+          "score": 0.986867
         }
       ]
     },
@@ -3509,16 +4659,16 @@
       "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
-          "score": 0.994543
-        },
-        {
           "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
           "score": 0.990184
         },
         {
-          "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
-          "score": 0.988451
+          "id": "chunk:note:excalidraw-时间事务管理体系",
+          "score": 0.985949
+        },
+        {
+          "id": "chunk:note:excalidraw-智能体工作原理_被动性资产构建工具四象限",
+          "score": 0.985901
         },
         {
           "id": "chunk:note:book-正则表达式必知必会-ben-forta-z-library",
@@ -3542,16 +4692,16 @@
           "score": 0.997857
         },
         {
-          "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
-          "score": 0.996386
-        },
-        {
-          "id": "chunk:note:obsidian-1639497d9752084addd03e6757555719",
-          "score": 0.994745
-        },
-        {
           "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
           "score": 0.99413
+        },
+        {
+          "id": "chunk:note:obsidian-0baba57a3a85093d7ccbad708a35db2e",
+          "score": 0.992137
+        },
+        {
+          "id": "chunk:note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+          "score": 0.989137
         }
       ]
     },
@@ -3559,16 +4709,16 @@
       "id": "chunk:note:obsidian-07adec8081d87504519dc7bf991e6a71",
       "nearest": [
         {
+          "id": "chunk:note:canvas-日语初级-N5所有知识点概览",
+          "score": 0.992371
+        },
+        {
           "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
           "score": 0.989821
         },
         {
           "id": "chunk:note:obsidian-02fd883b046eaba05c9008c29b2f8690",
           "score": 0.987325
-        },
-        {
-          "id": "chunk:note:obsidian-1a546b9f3bfa8be806de2adc35c67f77",
-          "score": 0.987065
         },
         {
           "id": "chunk:note:obsidian-07b13eeb35e47a316c0bc7d6d54d0a14",
@@ -3588,10 +4738,6 @@
           "score": 0.990111
         },
         {
-          "id": "chunk:note:obsidian-1a546b9f3bfa8be806de2adc35c67f77",
-          "score": 0.987645
-        },
-        {
           "id": "chunk:note:obsidian-07adec8081d87504519dc7bf991e6a71",
           "score": 0.98696
         },
@@ -3600,8 +4746,12 @@
           "score": 0.983209
         },
         {
-          "id": "chunk:note:obsidian-14f8b98931997454721a799dd971bb15",
-          "score": 0.981101
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.980931
+        },
+        {
+          "id": "chunk:note:excalidraw-时间事务管理体系",
+          "score": 0.980553
         }
       ]
     },
@@ -3609,24 +4759,24 @@
       "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
-          "score": 0.995219
-        },
-        {
-          "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
-          "score": 0.99415
-        },
-        {
           "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
           "score": 0.993561
         },
         {
-          "id": "chunk:note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
-          "score": 0.989
-        },
-        {
           "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
           "score": 0.988136
+        },
+        {
+          "id": "chunk:note:excalidraw-高数函数案例图",
+          "score": 0.980078
+        },
+        {
+          "id": "chunk:note:excalidraw-智能体工作原理_被动性资产构建工具四象限",
+          "score": 0.977039
+        },
+        {
+          "id": "chunk:note:excalidraw-时间事务管理体系",
+          "score": 0.974288
         }
       ]
     },
@@ -3646,22 +4796,18 @@
           "score": 0.994319
         },
         {
-          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
-          "score": 0.994044
+          "id": "chunk:note:obsidian-0bad078ffc81f1773ef3f686fd1a9269",
+          "score": 0.986144
         },
         {
-          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
-          "score": 0.994003
+          "id": "chunk:note:excalidraw-日综拆解",
+          "score": 0.98594
         }
       ]
     },
     {
       "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
       "nearest": [
-        {
-          "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
-          "score": 0.996116
-        },
         {
           "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
           "score": 0.996076
@@ -3671,12 +4817,16 @@
           "score": 0.994175
         },
         {
-          "id": "chunk:note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
-          "score": 0.993564
-        },
-        {
           "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
           "score": 0.992567
+        },
+        {
+          "id": "chunk:note:obsidian-0804c3212b169e8129bf86c0a7a5ea57",
+          "score": 0.991751
+        },
+        {
+          "id": "chunk:note:obsidian-0aa06849135e018b501707f4093e03a5",
+          "score": 0.99066
         }
       ]
     },
@@ -3709,24 +4859,24 @@
       "id": "chunk:note:obsidian-07f732d360082b974905b4f9ebedadbd",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
-          "score": 0.988247
-        },
-        {
-          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-          "score": 0.987974
-        },
-        {
-          "id": "chunk:note:obsidian-0fd2e4accd424529d03d9675721a32d6",
-          "score": 0.986835
-        },
-        {
           "id": "chunk:note:obsidian-03da95fbe5223d10b8c816673b655eac",
           "score": 0.985229
         },
         {
-          "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
-          "score": 0.984723
+          "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
+          "score": 0.984482
+        },
+        {
+          "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
+          "score": 0.983713
+        },
+        {
+          "id": "chunk:note:obsidian-0ab2aa2fd9c7df8a160cccfe9e13de6a",
+          "score": 0.983713
+        },
+        {
+          "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
+          "score": 0.983703
         }
       ]
     },
@@ -3763,20 +4913,20 @@
           "score": 0.996096
         },
         {
-          "id": "chunk:note:obsidian-0d518430ba476ba8e0bc82df489315fc",
-          "score": 0.994832
-        },
-        {
           "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
           "score": 0.993884
         },
         {
-          "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
-          "score": 0.989766
-        },
-        {
           "id": "chunk:note:obsidian-0518f776fa045bc32b01bef5df461d98",
           "score": 0.989721
+        },
+        {
+          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+          "score": 0.983421
+        },
+        {
+          "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
+          "score": 0.982662
         }
       ]
     },
@@ -3792,16 +4942,16 @@
           "score": 0.996393
         },
         {
-          "id": "chunk:note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
-          "score": 0.995496
-        },
-        {
-          "id": "chunk:note:obsidian-112fa661110db5f27a1fba58d3f407c6",
-          "score": 0.993993
-        },
-        {
           "id": "chunk:note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
           "score": 0.991538
+        },
+        {
+          "id": "chunk:note:excalidraw-校园水果生鲜C2F+O2O",
+          "score": 0.98768
+        },
+        {
+          "id": "chunk:note:obsidian-013ff4f65e1209c89fb93912ffad85a8",
+          "score": 0.987014
         }
       ]
     },
@@ -3817,16 +4967,16 @@
           "score": 0.9979
         },
         {
-          "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
-          "score": 0.99633
-        },
-        {
-          "id": "chunk:note:obsidian-1639497d9752084addd03e6757555719",
-          "score": 0.994836
-        },
-        {
           "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
           "score": 0.994139
+        },
+        {
+          "id": "chunk:note:obsidian-0baba57a3a85093d7ccbad708a35db2e",
+          "score": 0.992267
+        },
+        {
+          "id": "chunk:note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+          "score": 0.989297
         }
       ]
     },
@@ -3863,10 +5013,6 @@
           "score": 0.999655
         },
         {
-          "id": "chunk:note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
-          "score": 0.999229
-        },
-        {
           "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
           "score": 0.999103
         },
@@ -3877,6 +5023,10 @@
         {
           "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
           "score": 0.998479
+        },
+        {
+          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
+          "score": 0.998052
         }
       ]
     },
@@ -3900,8 +5050,8 @@
           "score": 0.991882
         },
         {
-          "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
-          "score": 0.990433
+          "id": "chunk:note:excalidraw-Docker的入门教程知识拆解",
+          "score": 0.9904
         }
       ]
     },
@@ -3909,16 +5059,8 @@
       "id": "chunk:note:obsidian-09a9b52aaca7919c633efdfdce81b6f0",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-0fd006309dd0e86057e11f5960f7a058",
-          "score": 0.995556
-        },
-        {
           "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
           "score": 0.991491
-        },
-        {
-          "id": "chunk:note:obsidian-18062e14a079ba5f7b5b794f84709870",
-          "score": 0.991303
         },
         {
           "id": "chunk:note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
@@ -3927,6 +5069,14 @@
         {
           "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
           "score": 0.989879
+        },
+        {
+          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
+          "score": 0.986496
+        },
+        {
+          "id": "chunk:note:obsidian-02dfbed17d9b57d937067d6d31bb00e1",
+          "score": 0.977001
         }
       ]
     },
@@ -3942,16 +5092,16 @@
           "score": 0.998665
         },
         {
-          "id": "chunk:note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
-          "score": 0.998275
-        },
-        {
           "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
           "score": 0.998023
         },
         {
           "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
           "score": 0.997885
+        },
+        {
+          "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
+          "score": 0.997429
         }
       ]
     },
@@ -3959,24 +5109,24 @@
       "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
-          "score": 0.998918
-        },
-        {
           "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
           "score": 0.998365
         },
         {
-          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
-          "score": 0.997665
-        },
-        {
-          "id": "chunk:note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
-          "score": 0.997554
-        },
-        {
           "id": "chunk:note:obsidian-000ea51c82d267f202adb4730c67f9b5",
           "score": 0.996002
+        },
+        {
+          "id": "chunk:note:obsidian-07d0b6f45396132c9e94b834ed5d2aac",
+          "score": 0.995852
+        },
+        {
+          "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
+          "score": 0.988062
+        },
+        {
+          "id": "chunk:note:obsidian-0bad078ffc81f1773ef3f686fd1a9269",
+          "score": 0.987951
         }
       ]
     },
@@ -3992,16 +5142,16 @@
           "score": 0.998271
         },
         {
-          "id": "chunk:note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
-          "score": 0.998142
-        },
-        {
           "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
           "score": 0.997841
         },
         {
           "id": "chunk:note:obsidian-0a642835b2616eec47b987c4727435b9",
           "score": 0.997424
+        },
+        {
+          "id": "chunk:note:obsidian-09558897dda6a39209b217240a76efc6",
+          "score": 0.997255
         }
       ]
     },
@@ -4009,16 +5159,8 @@
       "id": "chunk:note:obsidian-0a902d16ffaa92d5cbf5a6e79cdea22d",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
-          "score": 0.997443
-        },
-        {
           "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
           "score": 0.996266
-        },
-        {
-          "id": "chunk:note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
-          "score": 0.995743
         },
         {
           "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
@@ -4027,6 +5169,14 @@
         {
           "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
           "score": 0.994032
+        },
+        {
+          "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
+          "score": 0.993527
+        },
+        {
+          "id": "chunk:note:obsidian-09558897dda6a39209b217240a76efc6",
+          "score": 0.993061
         }
       ]
     },
@@ -4034,16 +5184,8 @@
       "id": "chunk:note:obsidian-0aa06849135e018b501707f4093e03a5",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
-          "score": 0.997203
-        },
-        {
           "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
           "score": 0.995785
-        },
-        {
-          "id": "chunk:note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
-          "score": 0.99423
         },
         {
           "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
@@ -4052,6 +5194,14 @@
         {
           "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
           "score": 0.989782
+        },
+        {
+          "id": "chunk:note:canvas-TTS实现方法研究",
+          "score": 0.988117
+        },
+        {
+          "id": "chunk:note:obsidian-036d8332a5de4818371ebae7c17a13d8",
+          "score": 0.987142
         }
       ]
     },
@@ -4067,16 +5217,16 @@
           "score": 0.999922
         },
         {
-          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-          "score": 0.99865
-        },
-        {
           "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
           "score": 0.998354
         },
         {
           "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
           "score": 0.99797
+        },
+        {
+          "id": "chunk:note:obsidian-00675466a5316f83ed30c3317fd0342d",
+          "score": 0.99565
         }
       ]
     },
@@ -4084,34 +5234,30 @@
       "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
-          "score": 0.99426
-        },
-        {
-          "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
-          "score": 0.994251
-        },
-        {
-          "id": "chunk:note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
-          "score": 0.99395
-        },
-        {
           "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
           "score": 0.993561
         },
         {
           "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
           "score": 0.991681
+        },
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.982093
+        },
+        {
+          "id": "chunk:note:excalidraw-高数函数案例图",
+          "score": 0.98158
+        },
+        {
+          "id": "chunk:note:excalidraw-智能体工作原理_被动性资产构建工具四象限",
+          "score": 0.981392
         }
       ]
     },
     {
       "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
       "nearest": [
-        {
-          "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
-          "score": 0.999093
-        },
         {
           "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
           "score": 0.996076
@@ -4121,12 +5267,16 @@
           "score": 0.995785
         },
         {
-          "id": "chunk:note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
-          "score": 0.99416
-        },
-        {
           "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
           "score": 0.99258
+        },
+        {
+          "id": "chunk:note:obsidian-0974bd740dd05e81565e2821a5e9011a",
+          "score": 0.991882
+        },
+        {
+          "id": "chunk:note:obsidian-036d8332a5de4818371ebae7c17a13d8",
+          "score": 0.986761
         }
       ]
     },
@@ -4134,24 +5284,24 @@
       "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
-          "score": 0.999613
-        },
-        {
-          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
-          "score": 0.998294
-        },
-        {
-          "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
-          "score": 0.995843
-        },
-        {
-          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
-          "score": 0.995565
-        },
-        {
           "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
           "score": 0.995416
+        },
+        {
+          "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
+          "score": 0.994252
+        },
+        {
+          "id": "chunk:note:obsidian-037c9ce97a15c2ecb51ac60145305a0e",
+          "score": 0.992407
+        },
+        {
+          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
+          "score": 0.989476
+        },
+        {
+          "id": "chunk:note:excalidraw-世界观、价值观、人生观视图 14.08.57",
+          "score": 0.986365
         }
       ]
     },
@@ -4159,24 +5309,24 @@
       "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
       "nearest": [
         {
-          "id": "chunk:note:obsidian-16f85841237279ed9f23e6cd2318998c",
-          "score": 0.997827
-        },
-        {
-          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
-          "score": 0.997188
-        },
-        {
-          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
-          "score": 0.996519
-        },
-        {
-          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
-          "score": 0.996199
-        },
-        {
           "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
           "score": 0.995416
+        },
+        {
+          "id": "chunk:note:obsidian-037c9ce97a15c2ecb51ac60145305a0e",
+          "score": 0.995365
+        },
+        {
+          "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
+          "score": 0.988837
+        },
+        {
+          "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
+          "score": 0.983553
+        },
+        {
+          "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
+          "score": 0.982888
         }
       ]
     },
@@ -4196,12 +5346,12 @@
           "score": 0.998898
         },
         {
-          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-          "score": 0.998816
-        },
-        {
           "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
           "score": 0.998489
+        },
+        {
+          "id": "chunk:note:obsidian-00675466a5316f83ed30c3317fd0342d",
+          "score": 0.996638
         }
       ]
     },
@@ -4221,12 +5371,12 @@
           "score": 0.992137
         },
         {
-          "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
-          "score": 0.986991
+          "id": "chunk:note:excalidraw-以应试考试做题家视角解析理工科知识学习",
+          "score": 0.991352
         },
         {
-          "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
-          "score": 0.986725
+          "id": "chunk:note:excalidraw-ai产业链分层",
+          "score": 0.990103
         }
       ]
     },
@@ -4238,1170 +5388,20 @@
           "score": 0.991619
         },
         {
-          "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
-          "score": 0.99061
-        },
-        {
-          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
-          "score": 0.989745
-        },
-        {
           "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
           "score": 0.988604
         },
         {
           "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
           "score": 0.987951
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
-          "score": 0.995219
-        },
-        {
-          "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
-          "score": 0.99426
-        },
-        {
-          "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
-          "score": 0.994204
-        },
-        {
-          "id": "chunk:note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
-          "score": 0.992159
-        },
-        {
-          "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
-          "score": 0.987682
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
-          "score": 0.999963
-        },
-        {
-          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
-          "score": 0.995436
-        },
-        {
-          "id": "chunk:note:obsidian-03d27d1d8a5626150f870d961e7de620",
-          "score": 0.99461
-        },
-        {
-          "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
-          "score": 0.994372
-        },
-        {
-          "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
-          "score": 0.993592
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
-          "score": 0.998918
-        },
-        {
-          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
-          "score": 0.998137
-        },
-        {
-          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
-          "score": 0.997699
-        },
-        {
-          "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
-          "score": 0.996809
-        },
-        {
-          "id": "chunk:note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
-          "score": 0.995622
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0c63749384221322924164e1b7defd64",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
-          "score": 0.993152
-        },
-        {
-          "id": "chunk:note:obsidian-0a902d16ffaa92d5cbf5a6e79cdea22d",
-          "score": 0.992743
-        },
-        {
-          "id": "chunk:note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
-          "score": 0.991843
-        },
-        {
-          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
-          "score": 0.990876
-        },
-        {
-          "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
-          "score": 0.990847
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0c9b186483cd29e5ae87e4f57bdec3ee",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
-          "score": 0.988988
-        },
-        {
-          "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
-          "score": 0.98783
-        },
-        {
-          "id": "chunk:note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
-          "score": 0.985872
-        },
-        {
-          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
-          "score": 0.98538
-        },
-        {
-          "id": "chunk:note:book-正则表达式必知必会-ben-forta-z-library",
-          "score": 0.98476
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0d518430ba476ba8e0bc82df489315fc",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
-          "score": 0.994832
-        },
-        {
-          "id": "chunk:note:obsidian-013ff4f65e1209c89fb93912ffad85a8",
-          "score": 0.99013
-        },
-        {
-          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
-          "score": 0.989116
-        },
-        {
-          "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
-          "score": 0.988049
-        },
-        {
-          "id": "chunk:note:obsidian-0518f776fa045bc32b01bef5df461d98",
-          "score": 0.987996
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
-          "score": 0.996628
-        },
-        {
-          "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
-          "score": 0.989
-        },
-        {
-          "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
-          "score": 0.988881
-        },
-        {
-          "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
-          "score": 0.987598
-        },
-        {
-          "id": "chunk:note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
-          "score": 0.987493
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
-          "score": 0.99693
-        },
-        {
-          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
-          "score": 0.996861
-        },
-        {
-          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
-          "score": 0.996133
-        },
-        {
-          "id": "chunk:note:obsidian-037c9ce97a15c2ecb51ac60145305a0e",
-          "score": 0.996001
-        },
-        {
-          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
-          "score": 0.995843
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-075855a12ddf37ce7ef24b0ab97ce8ba",
-          "score": 0.996386
-        },
-        {
-          "id": "chunk:note:obsidian-086c3bcafb1e153e7c235a46050cd9c0",
-          "score": 0.99633
-        },
-        {
-          "id": "chunk:note:obsidian-06e4adaabe837b9b7e215bf8943c207c",
-          "score": 0.995116
-        },
-        {
-          "id": "chunk:note:obsidian-1639497d9752084addd03e6757555719",
-          "score": 0.991437
         },
         {
           "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
-          "score": 0.990111
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
-          "score": 0.997152
-        },
-        {
-          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
-          "score": 0.995534
-        },
-        {
-          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
-          "score": 0.995436
-        },
-        {
-          "id": "chunk:note:obsidian-183665454ae199435161348053d4a3e7",
-          "score": 0.994996
-        },
-        {
-          "id": "chunk:note:obsidian-00107033f2646145e8503a682d72e890",
-          "score": 0.993575
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
-          "score": 0.99395
-        },
-        {
-          "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
-          "score": 0.992482
-        },
-        {
-          "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
-          "score": 0.992159
-        },
-        {
-          "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
-          "score": 0.987934
-        },
-        {
-          "id": "chunk:note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
-          "score": 0.987493
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
-          "score": 0.995411
-        },
-        {
-          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
-          "score": 0.991385
-        },
-        {
-          "id": "chunk:note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
-          "score": 0.990367
-        },
-        {
-          "id": "chunk:note:book-向上社交-如何让优秀的人靠近你-每个和高手相交的机会-都令你更靠近成功-突破圈层的局限-获取更优质的目标资源-从提供价值开始-实现-z-library",
-          "score": 0.988584
-        },
-        {
-          "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
-          "score": 0.988451
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0fd006309dd0e86057e11f5960f7a058",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
-          "score": 0.996801
-        },
-        {
-          "id": "chunk:note:obsidian-09a9b52aaca7919c633efdfdce81b6f0",
-          "score": 0.995556
-        },
-        {
-          "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
-          "score": 0.995224
-        },
-        {
-          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
-          "score": 0.991342
-        },
-        {
-          "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
-          "score": 0.990738
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-0fd2e4accd424529d03d9675721a32d6",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
-          "score": 0.997636
-        },
-        {
-          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-          "score": 0.993584
-        },
-        {
-          "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
-          "score": 0.993065
-        },
-        {
-          "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
-          "score": 0.992609
-        },
-        {
-          "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
-          "score": 0.992417
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-10e337c022d75fd2024bc7277ef63bf4",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
-          "score": 0.994645
-        },
-        {
-          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-          "score": 0.994241
-        },
-        {
-          "id": "chunk:note:obsidian-026e79c61dc2f281f9a01f1136085c07",
-          "score": 0.994167
-        },
-        {
-          "id": "chunk:note:obsidian-023f710ebbcde9d7b61d6e221fa44f60",
-          "score": 0.993181
-        },
-        {
-          "id": "chunk:note:obsidian-0fd2e4accd424529d03d9675721a32d6",
-          "score": 0.992609
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-112fa661110db5f27a1fba58d3f407c6",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
-          "score": 0.993993
-        },
-        {
-          "id": "chunk:note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
-          "score": 0.993953
-        },
-        {
-          "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
-          "score": 0.991485
-        },
-        {
-          "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
-          "score": 0.988572
-        },
-        {
-          "id": "chunk:note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
-          "score": 0.986005
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
-          "score": 0.997699
-        },
-        {
-          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
-          "score": 0.997665
-        },
-        {
-          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
-          "score": 0.997123
-        },
-        {
-          "id": "chunk:note:obsidian-18f26e53563c98e7b69f6f1bc6ca53a6",
-          "score": 0.994813
-        },
-        {
-          "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
-          "score": 0.994471
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-14f8b98931997454721a799dd971bb15",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
-          "score": 0.999603
-        },
-        {
-          "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
-          "score": 0.990075
-        },
-        {
-          "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
-          "score": 0.987812
-        },
-        {
-          "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
-          "score": 0.987754
-        },
-        {
-          "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
-          "score": 0.987377
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-150b50d0f0b8bc819d9c9550d73fc6c6",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
-          "score": 0.996628
-        },
-        {
-          "id": "chunk:note:obsidian-0ada2093b534275849443dfa0a3400ee",
-          "score": 0.994251
-        },
-        {
-          "id": "chunk:note:obsidian-0bbe0fb527362da8078a6d9f3b2807c7",
-          "score": 0.994204
-        },
-        {
-          "id": "chunk:note:obsidian-07c5937ef3dfcb08d0194a9ee157f176",
-          "score": 0.99415
-        },
-        {
-          "id": "chunk:note:obsidian-0fb0d310087339c4f91bdf3160c20fcf",
-          "score": 0.992482
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
-          "score": 0.999316
-        },
-        {
-          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
-          "score": 0.997037
-        },
-        {
-          "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
-          "score": 0.996199
-        },
-        {
-          "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
-          "score": 0.996133
-        },
-        {
-          "id": "chunk:note:obsidian-037c9ce97a15c2ecb51ac60145305a0e",
-          "score": 0.995577
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
-          "score": 0.995411
-        },
-        {
-          "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
-          "score": 0.994543
-        },
-        {
-          "id": "chunk:note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
-          "score": 0.992001
-        },
-        {
-          "id": "chunk:note:obsidian-0c9b186483cd29e5ae87e4f57bdec3ee",
-          "score": 0.988988
-        },
-        {
-          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
-          "score": 0.988764
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-15f79b42c0a521e94e4155b80f4f1da1",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-02d9a7bf8259b453917cf0edbd5204f7",
-          "score": 0.991923
-        },
-        {
-          "id": "chunk:note:obsidian-008440bc163e50d1ed67d05b4e99cb81",
-          "score": 0.989815
-        },
-        {
-          "id": "chunk:note:obsidian-17f1a8a8c3c99484139e2485180f7d77",
-          "score": 0.989336
-        },
-        {
-          "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
-          "score": 0.987843
-        },
-        {
-          "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
-          "score": 0.987312
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-1639497d9752084addd03e6757555719",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-06e4adaabe837b9b7e215bf8943c207c",
-          "score": 0.996118
-        },
-        {
-          "id": "chunk:note:obsidian-0677b63fc10c71dba7ad49a72f9cc767",
-          "score": 0.99521
-        },
-        {
-          "id": "chunk:note:obsidian-086c3bcafb1e153e7c235a46050cd9c0",
-          "score": 0.994836
-        },
-        {
-          "id": "chunk:note:obsidian-075855a12ddf37ce7ef24b0ab97ce8ba",
-          "score": 0.994745
-        },
-        {
-          "id": "chunk:note:obsidian-0ee6829b1721bd214cb6d5e47646c5d3",
-          "score": 0.991437
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-1676754dc65c12cc278c57b506b48985",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
-          "score": 0.994568
-        },
-        {
-          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
-          "score": 0.993579
-        },
-        {
-          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
-          "score": 0.992918
-        },
-        {
-          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
-          "score": 0.992875
-        },
-        {
-          "id": "chunk:note:obsidian-01b173d4eeb6541a6146e57643fc6978",
-          "score": 0.992514
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-16be0fa649916ec4d0e7f1280409a58f",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-15f69b30b581333b247b705ccd4c4938",
-          "score": 0.992001
-        },
-        {
-          "id": "chunk:note:obsidian-047b0eb24c80716ac49129d0f8b29e59",
-          "score": 0.991031
-        },
-        {
-          "id": "chunk:note:obsidian-0fb89bea05d139cee0f0ab97fccbc100",
-          "score": 0.990367
-        },
-        {
-          "id": "chunk:note:obsidian-0c9b186483cd29e5ae87e4f57bdec3ee",
-          "score": 0.985872
-        },
-        {
-          "id": "chunk:note:obsidian-06ee80868c6c6c5c0119687afa469b9f",
-          "score": 0.983072
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
-          "score": 0.999093
-        },
-        {
-          "id": "chunk:note:obsidian-0aa06849135e018b501707f4093e03a5",
-          "score": 0.997203
-        },
-        {
-          "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
-          "score": 0.996116
-        },
-        {
-          "id": "chunk:note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
-          "score": 0.993348
-        },
-        {
-          "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
-          "score": 0.992052
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
-          "score": 0.996809
-        },
-        {
-          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
-          "score": 0.995744
-        },
-        {
-          "id": "chunk:note:obsidian-000ea51c82d267f202adb4730c67f9b5",
-          "score": 0.995182
-        },
-        {
-          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
-          "score": 0.994513
-        },
-        {
-          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
-          "score": 0.994471
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-16f85841237279ed9f23e6cd2318998c",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
-          "score": 0.997827
-        },
-        {
-          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
-          "score": 0.997437
-        },
-        {
-          "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
-          "score": 0.995443
-        },
-        {
-          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
-          "score": 0.995432
-        },
-        {
-          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
-          "score": 0.995261
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
-          "score": 0.999613
-        },
-        {
-          "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
-          "score": 0.998907
-        },
-        {
-          "id": "chunk:note:obsidian-16f85841237279ed9f23e6cd2318998c",
-          "score": 0.997437
-        },
-        {
-          "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
-          "score": 0.997188
-        },
-        {
-          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
-          "score": 0.997037
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-178238e0db04d6cd772cce495e35f955",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-00107033f2646145e8503a682d72e890",
-          "score": 0.99595
-        },
-        {
-          "id": "chunk:note:obsidian-02dfbed17d9b57d937067d6d31bb00e1",
-          "score": 0.995358
-        },
-        {
-          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
-          "score": 0.994372
-        },
-        {
-          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
-          "score": 0.994093
-        },
-        {
-          "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
-          "score": 0.993943
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-17f1a8a8c3c99484139e2485180f7d77",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-008440bc163e50d1ed67d05b4e99cb81",
-          "score": 0.999957
-        },
-        {
-          "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
-          "score": 0.997955
-        },
-        {
-          "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
-          "score": 0.997916
-        },
-        {
-          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
-          "score": 0.996548
-        },
-        {
-          "id": "chunk:note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
-          "score": 0.996208
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-18062e14a079ba5f7b5b794f84709870",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
-          "score": 0.992519
-        },
-        {
-          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
-          "score": 0.991501
-        },
-        {
-          "id": "chunk:note:obsidian-09a9b52aaca7919c633efdfdce81b6f0",
-          "score": 0.991303
-        },
-        {
-          "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
-          "score": 0.991283
-        },
-        {
-          "id": "chunk:note:obsidian-0fd006309dd0e86057e11f5960f7a058",
-          "score": 0.989304
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
-          "score": 0.997152
-        },
-        {
-          "id": "chunk:note:obsidian-03d27d1d8a5626150f870d961e7de620",
-          "score": 0.996258
-        },
-        {
-          "id": "chunk:note:obsidian-02dfbed17d9b57d937067d6d31bb00e1",
-          "score": 0.993491
-        },
-        {
-          "id": "chunk:note:obsidian-000cdc34b85eb8c0b9690446baf2d712",
-          "score": 0.99318
-        },
-        {
-          "id": "chunk:note:obsidian-0be35e638ad661bfa204064e57457c5a",
-          "score": 0.99308
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-183665454ae199435161348053d4a3e7",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-0f255939168b22e784f3e71b3e35cc89",
-          "score": 0.994996
-        },
-        {
-          "id": "chunk:note:obsidian-00107033f2646145e8503a682d72e890",
-          "score": 0.994221
-        },
-        {
-          "id": "chunk:note:obsidian-180fae3c2928cb3f23fc503af416b07d",
-          "score": 0.991738
-        },
-        {
-          "id": "chunk:note:obsidian-02dfbed17d9b57d937067d6d31bb00e1",
-          "score": 0.990583
-        },
-        {
-          "id": "chunk:note:obsidian-01679b9effaf4e60a05c7c44ee88dfd0",
-          "score": 0.988578
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-          "score": 0.997777
-        },
-        {
-          "id": "chunk:note:obsidian-0fd2e4accd424529d03d9675721a32d6",
-          "score": 0.997636
-        },
-        {
-          "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
-          "score": 0.99664
-        },
-        {
-          "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
-          "score": 0.99656
-        },
-        {
-          "id": "chunk:note:obsidian-0ab2aa2fd9c7df8a160cccfe9e13de6a",
-          "score": 0.99656
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-18f26e53563c98e7b69f6f1bc6ca53a6",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
-          "score": 0.997679
-        },
-        {
-          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
-          "score": 0.995893
-        },
-        {
-          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
-          "score": 0.995079
-        },
-        {
-          "id": "chunk:note:obsidian-12d50f6b9d0e43339544ec35058c85fa",
-          "score": 0.994813
-        },
-        {
-          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
-          "score": 0.992071
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-19286d7f9b322582b46e5bc19f36fbff",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-18f26e53563c98e7b69f6f1bc6ca53a6",
-          "score": 0.997679
-        },
-        {
-          "id": "chunk:note:obsidian-0a6d74eb9efc408e91dfabce7579d159",
-          "score": 0.997554
-        },
-        {
-          "id": "chunk:note:obsidian-0c3119b64cc4bcc185eb1a479670786c",
-          "score": 0.995622
-        },
-        {
-          "id": "chunk:note:obsidian-0262e464f87f3c403c887f3fc20fe9a2",
-          "score": 0.994782
-        },
-        {
-          "id": "chunk:note:obsidian-16f3bc3e4e363546faf9ef551c9463c7",
-          "score": 0.994095
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-194b706af1df5692fb8c5c7403e0dcec",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-0518f776fa045bc32b01bef5df461d98",
-          "score": 0.999999
-        },
-        {
-          "id": "chunk:note:obsidian-013ff4f65e1209c89fb93912ffad85a8",
-          "score": 0.99222
-        },
-        {
-          "id": "chunk:note:obsidian-083dd8fb3de4d2ed4965ec4b174a0da8",
-          "score": 0.989766
-        },
-        {
-          "id": "chunk:note:obsidian-0d518430ba476ba8e0bc82df489315fc",
-          "score": 0.988049
-        },
-        {
-          "id": "chunk:note:obsidian-064a15afbd07ce8a40ea4dca99680dc1",
-          "score": 0.986873
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
-          "score": 0.998561
-        },
-        {
-          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
-          "score": 0.997563
-        },
-        {
-          "id": "chunk:note:obsidian-0a902d16ffaa92d5cbf5a6e79cdea22d",
-          "score": 0.997443
-        },
-        {
-          "id": "chunk:note:obsidian-0a6ddcce65a681315573dfb985fed15e",
-          "score": 0.99572
-        },
-        {
-          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
-          "score": 0.995271
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-199e284b2fc5ea3624bea481cb2d3745",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-06191f9faa32249e6b7366d3f412dc72",
-          "score": 0.996238
-        },
-        {
-          "id": "chunk:note:obsidian-0aa06849135e018b501707f4093e03a5",
-          "score": 0.99423
-        },
-        {
-          "id": "chunk:note:obsidian-0b18ea498fe124f684180f7350ee5450",
-          "score": 0.99416
-        },
-        {
-          "id": "chunk:note:obsidian-07e70256f06659df5cc18b67c453469c",
-          "score": 0.993564
-        },
-        {
-          "id": "chunk:note:obsidian-16e9ecef0aec1da55189b92bb5c2e6da",
-          "score": 0.993348
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-19cd82158e5bceff4c2bd61d5bc53e7d",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-15a3fd39119774ef753d8b26feb2e01e",
-          "score": 0.999316
-        },
-        {
-          "id": "chunk:note:obsidian-170f3cdc5b48860fde87238d3b31a9eb",
-          "score": 0.998907
-        },
-        {
-          "id": "chunk:note:obsidian-0b1cc29442f6247f754a9450beb6e321",
-          "score": 0.998294
-        },
-        {
-          "id": "chunk:note:obsidian-0eab9ea52163c398c8deb53d2709cb73",
-          "score": 0.996861
-        },
-        {
-          "id": "chunk:note:obsidian-0b704c7924bba7d687c883cbe772a1d8",
-          "score": 0.996519
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-1a15ebae02c78bc71d5df38fc15fd2df",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-06d7750252ee0287029a796ccf4f45f7",
-          "score": 0.999115
-        },
-        {
-          "id": "chunk:note:obsidian-0b75b36e82164472b563061dafa7948b",
-          "score": 0.998816
-        },
-        {
-          "id": "chunk:note:obsidian-042d65970c228b553d022590707d14a8",
-          "score": 0.99865
-        },
-        {
-          "id": "chunk:note:obsidian-0ab2aa2fd9c7df8a160cccfe9e13de6a",
-          "score": 0.99865
-        },
-        {
-          "id": "chunk:note:obsidian-188b05adccb53c30e7b6a565f855cf28",
-          "score": 0.997777
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-1a546b9f3bfa8be806de2adc35c67f77",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-07b13eeb35e47a316c0bc7d6d54d0a14",
-          "score": 0.987645
-        },
-        {
-          "id": "chunk:note:obsidian-07adec8081d87504519dc7bf991e6a71",
-          "score": 0.987065
-        },
-        {
-          "id": "chunk:note:obsidian-033825fc58a99bb5ea676b8b25423830",
-          "score": 0.979795
-        },
-        {
-          "id": "chunk:note:obsidian-14f8b98931997454721a799dd971bb15",
-          "score": 0.979716
-        },
-        {
-          "id": "chunk:note:obsidian-0ddf9ceed73ff903bd91640b7d348e93",
-          "score": 0.978643
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-09558897dda6a39209b217240a76efc6",
-          "score": 0.999229
-        },
-        {
-          "id": "chunk:note:obsidian-0a642835b2616eec47b987c4727435b9",
-          "score": 0.998275
-        },
-        {
-          "id": "chunk:note:obsidian-00357f96ed1b21f0aa84ce95567e1470",
-          "score": 0.998134
-        },
-        {
-          "id": "chunk:note:obsidian-03417612e22e00099fc8f015a97b0509",
-          "score": 0.99781
-        },
-        {
-          "id": "chunk:note:obsidian-091de108d221d2ddf0a4633557224fb5",
-          "score": 0.99733
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-1b05b2c80712e7ac7cf6f737897666db",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-08420f06891b6afc612d00c03081313b",
-          "score": 0.995496
-        },
-        {
-          "id": "chunk:note:obsidian-0031f42f2a13950c12b416bcf56e57cf",
-          "score": 0.994191
-        },
-        {
-          "id": "chunk:note:obsidian-112fa661110db5f27a1fba58d3f407c6",
-          "score": 0.993953
-        },
-        {
-          "id": "chunk:note:obsidian-04e7d87fe17c34085e1315d3813dcb9d",
-          "score": 0.992388
-        },
-        {
-          "id": "chunk:note:obsidian-00533ebdd9462b8fcb357b67ac13fdc1",
-          "score": 0.992256
-        }
-      ]
-    },
-    {
-      "id": "chunk:note:obsidian-1ba0750c951be7edbda5d581a3adb81f",
-      "nearest": [
-        {
-          "id": "chunk:note:obsidian-19517c3fb0f8fa7a77b61ff2aefc4c71",
-          "score": 0.998561
-        },
-        {
-          "id": "chunk:note:obsidian-0a6ddcce65a681315573dfb985fed15e",
-          "score": 0.998142
-        },
-        {
-          "id": "chunk:note:obsidian-07f20087eeab4bc69b140299e47b252a",
-          "score": 0.997585
-        },
-        {
-          "id": "chunk:note:obsidian-1b04da22810d73b7ad05bbb7e9bc23fb",
-          "score": 0.997189
+          "score": 0.986874
         },
         {
-          "id": "chunk:note:obsidian-09558897dda6a39209b217240a76efc6",
-          "score": 0.996147
+          "id": "chunk:note:obsidian-07d0b6f45396132c9e94b834ed5d2aac",
+          "score": 0.986144
         }
       ]
     }

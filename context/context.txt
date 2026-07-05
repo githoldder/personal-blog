@@ -309,3 +309,13 @@
   3. 新增 `prds/master-prd.md`，按标准 PRD 方式整理问题定义、目标指标、产品范围、史诗、用户故事、功能/非功能需求、风险和发布策略。
   4. 将该初心文档确认为 S08-S14 后续路线的上位依据，而不是一次性临时想法。
 - **Status**: 初心已转为可执行的产品治理基准。
+## 2026-07-03T19:55:00+08:00
+- **Action**: 简历 Typst 重构、PPTX 自动化 PDF 转换、Slidev 物理构建与 O2O 真实项目找回及链接安全修正。
+- **Progress Details**:
+  - 1. 升级 `resume.yaml` 对齐个人信息，新增“学生会主席”身份。将“治慧租”项目设为私有链接 `""`，恢复“常工生鲜（springboot-lgg）”微服务创业项目的 highlights 并绑定 GitHub，更正“校园 GTD”仓库链接。
+  - 2. 重构 Typst 简历模板 `template.typ`，实现对标 `moderncv classic` 左右分栏分色布局与头像嵌入，并修改 markdown 项目描述。
+  - 3. 编写 macOS Keynote AppleScript 自动化 PPTX-to-PDF 转换。
+  - 4. 升级 `build-decks.js` 脚本，引入本地 Slidev 静态 html 物理编译，并对 PPTX 简历幻灯片生成全屏自适应 iframe HTML 预览页。
+  - 5. 改造 `server/local-api.js` 支持 POST `/source/save` 路由，保存时智能增量调用 slidev/resume 编译，打通“即改即发”。
+- **Verification**: `npm run build` 和 `npm run pm2:restart` 运行成功，Astro 1124 个页面全量生成，PM2 预览正常。
+- **Status**: 简历与演示管线全面交付上线。
