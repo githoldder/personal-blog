@@ -141,6 +141,15 @@ export function extractAnnotationMeta(data) {
 
 function readExistingBookCatalog() {
   if (!existsSync(PROJECT_NOTES_DIR)) return [];
+  let existingBySlug = new Map();
+  if (existsSync(OUTPUT_JSON)) {
+    try {
+      const current = JSON.parse(readFileSync(OUTPUT_JSON, 'utf-8'));
+      existingBySlug = new Map((current.books || []).map(book => [book.slug, book]));
+    } catch (e) {
+      existingBySlug = new Map();
+    }
+  }
 
   return readdirSync(PROJECT_NOTES_DIR)
     .filter(file => file.endsWith('.md'))
@@ -150,19 +159,21 @@ function readExistingBookCatalog() {
       const tags = frontmatter.tags || [];
       if (!Array.isArray(tags) || !tags.includes('book')) return null;
       const manualFields = getManualCatalogFields(frontmatter);
+      const slug = frontmatter.slug || basename(file, '.md');
+      const existing = existingBySlug.get(slug) || {};
 
       const book = {
-        slug: frontmatter.slug || basename(file, '.md'),
+        slug,
         title: frontmatter.title || basename(file, '.md'),
-        author: frontmatter.author || '未知作者',
+        author: frontmatter.author || existing.author || '未知作者',
         date: frontmatter.date || '',
         summary: frontmatter.summary || summarizeBody(body),
         tags,
         annotationCount: frontmatter.annotationCount || 0,
         pdfAsset: frontmatter.pdfAsset || '',
-        isbn: manualFields.isbn,
-        coverUrl: manualFields.coverUrl,
-        openLibraryUrl: manualFields.openLibraryUrl
+        isbn: manualFields.isbn || existing.isbn || '',
+        coverUrl: manualFields.coverUrl || existing.coverUrl || '',
+        openLibraryUrl: manualFields.openLibraryUrl || existing.openLibraryUrl || ''
       };
       return {
         ...book,
@@ -273,8 +284,8 @@ export function buildBookActions(book) {
   const annotatorHref = slug ? `/notes/${slug}/` : '';
   const openLibraryUrl = firstString(book?.openLibraryUrl);
   const pdfAsset = firstString(book?.pdfAsset);
-  const sourceHref = openLibraryUrl || pdfAsset || annotatorHref;
-  const sourceKind = openLibraryUrl ? 'open-library' : pdfAsset ? 'pdf' : 'annotator-fallback';
+  const sourceHref = pdfAsset || openLibraryUrl || annotatorHref;
+  const sourceKind = pdfAsset ? 'pdf' : openLibraryUrl ? 'open-library' : 'annotator-fallback';
 
   return {
     source: {

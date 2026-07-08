@@ -50,6 +50,7 @@ const navItems = [
   { label: '项目', href: '/projects' },
   { label: '图谱', href: '/lab/graph' },
   { label: '图书馆', href: '/library' },
+  { label: '音乐', href: '/music' },
   { label: '简历', href: '/resume' },
 ];
 ---
@@ -80,11 +81,11 @@ const navItems = [
     <meta property="twitter:title" content={pageTitle} />
     <meta property="twitter:description" content={pageDescription} />
   </head>
-  <body class="bg-surface-50 text-surface-900 min-h-screen flex flex-col" style={themeStyle}>
-    <header class="site-header sticky top-0 z-40 w-full border-b border-slate-200/60 bg-[#fbf8f1]/88 backdrop-blur">
-      <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between gap-4">
+  <body class="min-h-screen flex flex-col" style={themeStyle}>
+    <header class="site-header sticky top-0 z-40 w-full bg-[#f7f3eb]/92 backdrop-blur">
+      <div class="max-w-[1420px] mx-auto px-5 md:px-10 h-16 flex items-center justify-between gap-4">
         <SiteMark />
-        <nav class="site-nav flex items-center gap-1 overflow-x-auto scrollbar-none py-1 -mr-6 pr-6 sm:mr-0 sm:pr-0" aria-label="Primary">
+        <nav class="site-nav min-w-0 flex items-center gap-1 overflow-x-auto scrollbar-none py-1" aria-label="Primary">
           {navItems.map((item) => {
             const active = isActive(item.href);
             return (
@@ -92,9 +93,9 @@ const navItems = [
                 href={item.href}
                 data-nav-link
                 aria-current={active ? 'page' : undefined}
-                class={`site-nav__link text-xs sm:text-sm font-sans font-bold px-2.5 py-1.5 transition-colors shrink-0 ${
+                class={`site-nav__link text-xs sm:text-sm font-sans px-2.5 py-1.5 transition-colors shrink-0 ${
                   active
-                    ? 'site-nav__link--active text-rose-700 font-bold'
+                    ? 'site-nav__link--active text-rose-700'
                     : 'text-slate-600 hover:text-rose-700'
                 }`}
               >
@@ -104,7 +105,7 @@ const navItems = [
           })}
           <a
             href="/search"
-            class="site-nav__utility text-xs sm:text-sm font-sans font-bold px-2 py-1.5 transition-colors shrink-0 text-slate-500 hover:text-rose-700"
+            class="site-nav__utility text-xs sm:text-sm font-sans px-2 py-1.5 transition-colors shrink-0 text-slate-500 hover:text-rose-700"
             aria-label="搜索"
             title="搜索"
             data-utility-action
@@ -115,12 +116,12 @@ const navItems = [
       </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-8 md:py-10 w-full flex-grow">
+    <main class="max-w-[1420px] mx-auto px-5 md:px-10 py-7 md:py-10 w-full flex-grow">
       <slot />
     </main>
 
-    <footer class="border-t border-slate-200/60 bg-[#fbf8f1]/70 py-6 mt-auto">
-      <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-surface-400 font-mono">
+    <footer class="border-t border-[#e7dfd2] bg-[#f7f3eb]/70 py-6 mt-auto">
+      <div class="max-w-[1420px] mx-auto px-5 md:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 font-mono">
         <p>Personal Knowledge Asset OS v0.1.0</p>
         <div class="flex items-center gap-3">
           <a href="/rss.xml" class="hover:text-accent flex items-center gap-0.5">RSS Feed <span>↗</span></a>

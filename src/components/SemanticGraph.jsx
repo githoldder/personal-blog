@@ -1,3 +1,4 @@
+/* @jsxRuntime classic */
 import React, { useState, useEffect, useRef } from 'react';
 
 export default function SemanticGraph() {
@@ -207,8 +208,10 @@ export default function SemanticGraph() {
           groupsMap.get(bucketName).rawChildren.push({
             id,
             label: doc.title || id,
-            type: id.split(':')[0],
-            metadata: { date: doc.date }
+            type: doc.type || id.split(':')[0],
+            url: doc.url || '',
+            summary: doc.summary || '',
+            metadata: { date: doc.date, tags: doc.tags || [] }
           });
         });
 
@@ -329,6 +332,7 @@ export default function SemanticGraph() {
 
   const getTargetUrl = (node) => {
     if (!node) return '#';
+    if (node.url) return node.url;
     const id = node.id;
     if (id.startsWith('note:')) return `/notes/${id.replace('note:', '')}/`;
     if (id.startsWith('book:')) return `/notes/${id.replace('book:', '')}/`;
@@ -415,9 +419,9 @@ export default function SemanticGraph() {
       </div>
 
       {/* 4. 画布内浮动跳转气泡 (Popover Jump Card) */}
-      {selectedNode && popoverPosition && getTargetUrl(selectedNode) !== '#' && (
+      {selectedNode && popoverPosition && (
         <div 
-          className="absolute pointer-events-auto bg-slate-950 text-white p-2.5 rounded-lg shadow-xl flex items-center gap-2 border border-slate-800 z-20 animate-scale-up"
+          className="absolute pointer-events-auto bg-slate-950 text-white p-3 rounded-lg shadow-xl border border-slate-800 z-20 animate-scale-up max-w-[260px]"
           style={{
             left: `${popoverPosition.left}px`,
             top: `${popoverPosition.top}px`,
@@ -425,16 +429,21 @@ export default function SemanticGraph() {
             transition: 'left 0.1s ease-out, top 0.1s ease-out'
           }}
         >
-          <div className="text-[10px] leading-tight select-text">
-            <div className="font-bold font-serif truncate max-w-[140px]">{selectedNode.label}</div>
-            <div className="text-[8px] text-slate-400 capitalize">{selectedNode.type}</div>
+          <div className="text-[10px] leading-tight select-text space-y-1.5">
+            <div className="font-bold font-serif text-sm leading-snug">{selectedNode.label}</div>
+            <div className="text-[8px] text-slate-400 capitalize">{selectedNode.type} · {selectedNode.metadata?.tags?.slice(0, 2).join(' / ')}</div>
+            {selectedNode.summary && (
+              <p className="m-0 text-[9px] text-slate-300 leading-relaxed line-clamp-2">{selectedNode.summary.replace(/<[^>]+>/g, '').slice(0, 96)}</p>
+            )}
           </div>
-          <a 
-            href={getTargetUrl(selectedNode)}
-            className="px-2.5 py-1 bg-rose-800 hover:bg-rose-900 text-white text-[9px] font-bold rounded flex items-center gap-0.5 transition-colors whitespace-nowrap"
-          >
-            打开笔记 ➔
-          </a>
+          {getTargetUrl(selectedNode) !== '#' && (
+            <a 
+              href={getTargetUrl(selectedNode)}
+              className="mt-2 inline-flex px-2.5 py-1 bg-rose-800 hover:bg-rose-900 text-white text-[9px] font-bold rounded items-center gap-0.5 transition-colors whitespace-nowrap"
+            >
+              {selectedNode.type === 'project' ? '打开项目' : '打开笔记'} ➔
+            </a>
+          )}
         </div>
       )}
 

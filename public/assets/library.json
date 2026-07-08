@@ -96,9 +96,9 @@
       ],
       "annotationCount": 0,
       "pdfAsset": "/assets/pdfs/book-book-战略管理.pdf",
-      "isbn": "",
-      "coverUrl": "",
-      "openLibraryUrl": "",
+      "isbn": "9787302432784",
+      "coverUrl": "/assets/book-covers/book-战略管理.jpg",
+      "openLibraryUrl": "https://openlibrary.org/works/OL34322815W",
       "actions": {
         "source": {
           "label": "看原书/书目来源",
@@ -124,9 +124,9 @@
       ],
       "annotationCount": 3,
       "pdfAsset": "/assets/pdfs/book-book-正则表达式必知必会-ben-forta-z-library.pdf",
-      "isbn": "",
-      "coverUrl": "",
-      "openLibraryUrl": "",
+      "isbn": "9787115278348",
+      "coverUrl": "/assets/book-covers/book-正则表达式必知必会-ben-forta-z-library.png",
+      "openLibraryUrl": "https://books.google.com/books?vid=ISBN9787115278348",
       "actions": {
         "source": {
           "label": "看原书/书目来源",
@@ -152,14 +152,14 @@
       ],
       "annotationCount": 0,
       "pdfAsset": "",
-      "isbn": "",
-      "coverUrl": "",
-      "openLibraryUrl": "",
+      "isbn": "9787115520228",
+      "coverUrl": "/assets/book-covers/book-深入设计模式-1.png",
+      "openLibraryUrl": "https://books.google.com/books?vid=ISBN9787115520228",
       "actions": {
         "source": {
           "label": "看原书/书目来源",
-          "href": "/notes/book-深入设计模式-1/",
-          "kind": "annotator-fallback"
+          "href": "https://books.google.com/books?vid=ISBN9787115520228",
+          "kind": "open-library"
         },
         "annotator": {
           "label": "看我的 annotator 笔记",
@@ -180,9 +180,9 @@
       ],
       "annotationCount": 0,
       "pdfAsset": "/assets/pdfs/book-book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library.pdf",
-      "isbn": "",
-      "coverUrl": "",
-      "openLibraryUrl": "",
+      "isbn": "9787115447630",
+      "coverUrl": "/assets/book-covers/book-算法图解-美-巴尔加瓦-aditya-bhargava-著-袁国忠译-z-library.jpg",
+      "openLibraryUrl": "https://books.google.com/books?vid=ISBN9787115447630",
       "actions": {
         "source": {
           "label": "看原书/书目来源",
@@ -208,9 +208,9 @@
       ],
       "annotationCount": 13,
       "pdfAsset": "/assets/pdfs/book-book-终身成长.pdf",
-      "isbn": "",
-      "coverUrl": "",
-      "openLibraryUrl": "",
+      "isbn": "9787210096528",
+      "coverUrl": "/assets/book-covers/book-终身成长.jpg",
+      "openLibraryUrl": "https://books.google.com/books?vid=ISBN9787210096528",
       "actions": {
         "source": {
           "label": "看原书/书目来源",
@@ -236,9 +236,9 @@
       ],
       "annotationCount": 32,
       "pdfAsset": "/assets/pdfs/book-book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹.pdf",
-      "isbn": "",
-      "coverUrl": "",
-      "openLibraryUrl": "",
+      "isbn": "9787115474057",
+      "coverUrl": "/assets/book-covers/book-软技能-代码之外的生存指南-第2版-约翰-z-森梅兹.png",
+      "openLibraryUrl": "https://books.google.com/books?vid=ISBN9787115474057",
       "actions": {
         "source": {
           "label": "看原书/书目来源",
@@ -264,9 +264,9 @@
       ],
       "annotationCount": 28,
       "pdfAsset": "/assets/pdfs/book-book-金字塔原理大全集-芭芭拉-明托-z-library.pdf",
-      "isbn": "",
-      "coverUrl": "",
-      "openLibraryUrl": "",
+      "isbn": "9787544268509",
+      "coverUrl": "/assets/book-covers/book-金字塔原理大全集-芭芭拉-明托-z-library.jpg",
+      "openLibraryUrl": "https://books.google.com/books?vid=ISBN9787544268509",
       "actions": {
         "source": {
           "label": "看原书/书目来源",
@@ -292,14 +292,14 @@
       ],
       "annotationCount": 0,
       "pdfAsset": "",
-      "isbn": "",
-      "coverUrl": "",
-      "openLibraryUrl": "",
+      "isbn": "9787544268509",
+      "coverUrl": "/assets/book-covers/book-金字塔原理笔记.jpg",
+      "openLibraryUrl": "https://books.google.com/books?vid=ISBN9787544268509",
       "actions": {
         "source": {
           "label": "看原书/书目来源",
-          "href": "/notes/book-金字塔原理笔记/",
-          "kind": "annotator-fallback"
+          "href": "https://books.google.com/books?vid=ISBN9787544268509",
+          "kind": "open-library"
         },
         "annotator": {
           "label": "看我的 annotator 笔记",

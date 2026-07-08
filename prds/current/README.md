@@ -15,6 +15,7 @@ Current priority:
 8. S16 defines the quality gate for S15: white-box contracts, black-box smoke, top-down integration, visual screenshot review, accessibility/motion acceptance, regression, and release acceptance.
 9. S17 is the next implementation sprint for unfinished content-studio capabilities: multimedia upload, local text editing, deck PDF/PPTX export, Keynote adapter, Cloudflare publish gate, Typst Lab, Wiki.js-like backlinks/fuzzy search, and topic-specific reading backgrounds.
 10. S18 is the prototype-integration sprint: define the whole product route map, homepage command center, navigation model, reading modes, search command surface, library shelf, local studio shell, deck/PPTX studio, Typst compile loop, media/music/theme tools, and visual QA recovery.
+11. 2026-07-08 S18 homepage/music/library pass landed locally: first viewport gains a right-side semantic starlink preview, the resume entry is compressed, music now has record + spectrum + lyric surface and configurable external audio URL, and book cover sync uses Google Books/Open Library with local cached covers while keeping local PDF actions first.
 
 Non-goals:
 

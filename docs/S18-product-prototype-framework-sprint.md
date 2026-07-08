@@ -326,6 +326,12 @@ Acceptance:
 - Music player has playlist, play/pause, lyric placeholder, and waveform visualization.
 - Theme tuner can change preview palette without breaking contrast.
 
+Implementation note 2026-07-08:
+
+- Homepage music player now includes a rotating record, soft frequency spectrum, lyric/waveform line, play/pause control, and localStorage-backed default track settings.
+- `/music` can configure title, provider, external audio URL, lyric line, and local synth tone. External audio is treated as an optional direct URL/free-API output; proprietary QQ Music streaming is not embedded by default because public playable URLs can be rights/DRM restricted.
+- Local synth remains the fallback so the public homepage has no hard external audio dependency.
+
 ### S18-T10 Visual QA Recovery
 
 Fix visual screenshot pipeline by replacing or repairing Python Playwright dependency.
@@ -339,9 +345,9 @@ Acceptance:
 ## Implementation Order
 
 1. Commit and push the S15-S17 archive.
-2. Implement S18 route/navigation and homepage command center.
+2. Implement S18 route/navigation and homepage command center. 2026-07-08 partial pass: homepage first viewport now uses a compact identity column plus clickable semantic starlink preview; resume footprint is reduced and the core entry grid is denser.
 3. Upgrade search and note reader using wiki graph data.
-4. Upgrade library shelf and book dual actions.
+4. Upgrade library shelf and book dual actions. 2026-07-08 partial pass: Google Books/Open Library cover sync script localizes covers under `public/assets/book-covers`; local PDF source actions remain preferred over external metadata links.
 5. Build studio shell, then wire Typst/deck/media tools into it.
 6. Repair screenshot QA and run visual acceptance.
 

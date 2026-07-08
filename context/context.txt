@@ -319,3 +319,16 @@
   - 5. 改造 `server/local-api.js` 支持 POST `/source/save` 路由，保存时智能增量调用 slidev/resume 编译，打通“即改即发”。
 - **Verification**: `npm run build` 和 `npm run pm2:restart` 运行成功，Astro 1124 个页面全量生成，PM2 预览正常。
 - **Status**: 简历与演示管线全面交付上线。
+
+## 2026-07-08T20:20:00+08:00
+- **Action**: 首页首屏星链改造、音乐播放器频谱化、图书封面双源本地化和 S18 状态同步。
+- **Progress Details**:
+  1. 将首页首屏改为左侧身份/说明、右侧 Semantic Starlink 动态预览，6 个节点可直接进入 resume、projects、notes、graph、library、music。
+  2. 压缩 resume 核心入口占用，项目、经典笔记、音乐播放器形成更密集的专业工作台布局。
+  3. 升级 `MusicPlayer.astro`：唱片旋转、频谱条、lyric/waveform line、外链音频 URL 配置、本地 synth fallback。
+  4. 扩展 `/music` 设置页，支持 title、provider、audioUrl、lyric、tone，并通过 localStorage 同步首页播放器。
+  5. 扩展 `sync-google-book-covers.js` 为 Google Books + Open Library 双源封面同步，使用 `--refresh` 重抓并本地保存封面；新增《战略管理》封面。
+  6. 修正 library action 策略：有本地 PDF 时优先打开本地 PDF，外部书目链接只作为无 PDF 时的来源入口。
+  7. 同步 `docs/S18-product-prototype-framework-sprint.md`、`prds/current/README.md` 和 `context/memory.md`。
+- **Verification**: `npm run lint` 通过；localhost 浏览器检查被 Browser Use 安全策略禁止访问本地地址，改用构建与静态检查继续验证。
+- **Status**: S18 homepage/music/library pass locally implemented; pending build, commit, and push archive.

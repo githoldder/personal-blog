@@ -12,6 +12,7 @@
     "build:resume-package": "node scripts/build-resume-package.js",
     "build:decks": "node scripts/build-decks.js",
     "build:media": "node scripts/build-media-index.js",
+    "sync:book-covers": "node scripts/sync-google-book-covers.js",
     "build:wiki": "node scripts/build-wiki-index.js",
     "build:semantic": "node scripts/build-semantic-graph.js",
     "build:semantic-intelligence": "node scripts/build-semantic-intelligence.js",

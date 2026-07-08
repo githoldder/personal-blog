@@ -1,0 +1,198 @@
+---
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+---
+
+<section class={`music-player ${compact ? 'music-player--compact' : ''}`} data-music-player>
+  <div class="music-record" aria-hidden="true">
+    <div class="music-record__disc">
+      <span></span>
+    </div>
+  </div>
+  <div class="music-player__body">
+    <p class="music-player__eyebrow" data-music-provider>Local synth</p>
+    <h2 data-music-title>Quiet Knowledge Loop</h2>
+    <p data-music-meta>soft synth / focus mode / local setting</p>
+    <div class="music-spectrum" aria-hidden="true">
+      {Array.from({ length: 18 }).map((_, idx) => (
+        <span style={`--i:${idx}`}></span>
+      ))}
+    </div>
+    <p class="music-lyric" data-music-lyric>think slowly / connect clearly / ship carefully</p>
+    <div class="music-player__controls">
+      <button type="button" data-music-toggle aria-label="播放或暂停默认音乐">
+        <span data-music-state>Play</span>
+      </button>
+      <a href="/music">设置默认音乐</a>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  const players = document.querySelectorAll('[data-music-player]');
+  const defaultTrack = {
+    title: 'Quiet Knowledge Loop',
+    meta: 'soft synth / focus mode / local setting',
+    provider: 'Local synth',
+    tone: 220,
+    audioUrl: '',
+    lyric: 'think slowly / connect clearly / ship carefully'
+  };
+
+  const readTrack = () => {
+    try {
+      return { ...defaultTrack, ...JSON.parse(window.localStorage.getItem('caolei-default-track') || '{}') };
+    } catch (e) {
+      return defaultTrack;
+    }
+  };
+
+  let audioContext;
+  let oscillator;
+  let gain;
+  let analyser;
+  let sourceNode;
+  let mediaElement;
+  let spectrumFrame;
+  let playing = false;
+
+  const spectrumBars = () => document.querySelectorAll('.music-spectrum span');
+
+  const resetSpectrum = () => {
+    cancelAnimationFrame(spectrumFrame);
+    spectrumBars().forEach((bar, idx) => {
+      bar.style.setProperty('--level', String(0.18 + (idx % 5) * 0.05));
+    });
+  };
+
+  const animateSpectrum = () => {
+    const bars = spectrumBars();
+    if (!playing) return;
+
+    if (analyser) {
+      const data = new Uint8Array(analyser.frequencyBinCount);
+      analyser.getByteFrequencyData(data);
+      bars.forEach((bar, idx) => {
+        const value = data[Math.floor((idx / bars.length) * data.length)] || 0;
+        bar.style.setProperty('--level', String(Math.max(0.12, value / 255)));
+      });
+    } else {
+      const now = Date.now() / 420;
+      bars.forEach((bar, idx) => {
+        const value = 0.24 + Math.abs(Math.sin(now + idx * 0.72)) * 0.72;
+        bar.style.setProperty('--level', String(value));
+      });
+    }
+
+    spectrumFrame = requestAnimationFrame(animateSpectrum);
+  };
+
+  const stopTone = () => {
+    cancelAnimationFrame(spectrumFrame);
+    if (mediaElement) {
+      mediaElement.pause();
+      mediaElement.currentTime = 0;
+      mediaElement = null;
+    }
+    if (oscillator) {
+      oscillator.stop();
+      oscillator.disconnect();
+      oscillator = null;
+    }
+    if (sourceNode) {
+      sourceNode.disconnect();
+      sourceNode = null;
+    }
+    if (gain) {
+      gain.disconnect();
+      gain = null;
+    }
+    if (analyser) {
+      analyser.disconnect();
+      analyser = null;
+    }
+    playing = false;
+    document.body.classList.remove('music-playing');
+    document.querySelectorAll('[data-music-state]').forEach(node => node.textContent = 'Play');
+    resetSpectrum();
+  };
+
+  const startTone = async () => {
+    const track = readTrack();
+    audioContext = audioContext || new window.AudioContext();
+    analyser = audioContext.createAnalyser();
+    analyser.fftSize = 128;
+    gain = audioContext.createGain();
+    gain.gain.value = track.audioUrl ? 0.55 : 0.035;
+
+    if (track.audioUrl) {
+      mediaElement = new Audio();
+      mediaElement.crossOrigin = 'anonymous';
+      mediaElement.src = track.audioUrl;
+      mediaElement.loop = true;
+      mediaElement.volume = 0.82;
+      try {
+        sourceNode = audioContext.createMediaElementSource(mediaElement);
+        sourceNode.connect(analyser);
+        analyser.connect(gain);
+        gain.connect(audioContext.destination);
+        await mediaElement.play();
+      } catch (e) {
+        sourceNode?.disconnect();
+        sourceNode = null;
+        oscillator = audioContext.createOscillator();
+        oscillator.type = 'sine';
+        oscillator.frequency.value = Number(track.tone) || defaultTrack.tone;
+        oscillator.connect(analyser);
+        analyser.connect(gain);
+        gain.connect(audioContext.destination);
+        oscillator.start();
+      }
+    } else {
+      oscillator = audioContext.createOscillator();
+      oscillator.type = 'sine';
+      oscillator.frequency.value = Number(track.tone) || defaultTrack.tone;
+      oscillator.connect(analyser);
+      analyser.connect(gain);
+      gain.connect(audioContext.destination);
+      oscillator.start();
+    }
+
+    playing = true;
+    document.body.classList.add('music-playing');
+    document.querySelectorAll('[data-music-state]').forEach(node => node.textContent = 'Pause');
+    animateSpectrum();
+  };
+
+  const syncTrackLabels = () => {
+    const track = readTrack();
+    players.forEach(player => {
+      const title = player.querySelector('[data-music-title]');
+      const meta = player.querySelector('[data-music-meta]');
+      const provider = player.querySelector('[data-music-provider]');
+      const lyric = player.querySelector('[data-music-lyric]');
+      if (title) title.textContent = track.title || defaultTrack.title;
+      if (meta) meta.textContent = track.meta || defaultTrack.meta;
+      if (provider) provider.textContent = track.provider || (track.audioUrl ? 'External audio' : defaultTrack.provider);
+      if (lyric) lyric.textContent = track.lyric || defaultTrack.lyric;
+    });
+  };
+
+  resetSpectrum();
+  syncTrackLabels();
+  window.addEventListener('storage', syncTrackLabels);
+  window.addEventListener('caolei:music-updated', syncTrackLabels);
+
+  players.forEach(player => {
+    player.querySelector('[data-music-toggle]')?.addEventListener('click', async () => {
+      if (playing) {
+        stopTone();
+      } else {
+        await startTone();
+      }
+    });
+  });
+</script>

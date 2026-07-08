@@ -107,3 +107,18 @@
 - 清理 Excalidraw 插件噪声和 Obsidian block id。
 - 使用 Playwright 对目标笔记页做端到端检查，确认非 404、无控制台错误、无本地链接泄漏。
 - 将当前版本提交为 `f087d1c archive: capture immersive knowledge site snapshot` 并推送至 `githoldder/personal-blog`。
+
+## 首页星链、音乐频谱与书封本地化 (2026-07-08)
+
+**决策：** 首页首屏从单列长文案调整为左右分栏，右侧用轻量 CSS/SVG 星链动画表达知识图谱入口，而不是在首屏加载完整图谱 React 岛。
+
+**执行：**
+- 将 resume 入口压缩为专业的短入口，减少首屏下方空间占用。
+- 新增可点击的 Semantic Starlink 预览，连接 Resume、Projects、Notes、Graph、Library、Music。
+- 音乐播放器升级为唱片 + 频谱 + lyric/waveform surface；`/music` 支持 provider、外链音频 URL、歌词线和本地 synth tone 配置。
+- 外部音乐策略采用“可配置直链/免费 API 输出 + 本地合成 fallback”，不默认嵌入 QQ 音乐专有流媒体。
+- 书封同步脚本升级为 Google Books + Open Library 双源抓取，封面下载到 `public/assets/book-covers`，并保持有本地 PDF 的书籍优先打开本地 PDF。
+
+**影响：**
+- S18 的 homepage command center、library shelf 和 media/music tools 进入局部实现状态。
+- 后续如果要接入具体音乐 API，只需在设置页写入合法可播放的音频 URL，不需要改首页组件。

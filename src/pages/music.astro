@@ -1,0 +1,148 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MusicPlayer from '../components/MusicPlayer.astro';
+---
+
+<BaseLayout title="音乐设置 — caolei">
+  <header class="music-page-header">
+    <p>Music module</p>
+    <h1>默认音乐</h1>
+    <span>设置会保存在当前浏览器。外链音频可接免费音乐 API 返回的可播放 URL；缺省时使用本地合成音。</span>
+  </header>
+
+  <div class="music-page-grid">
+    <MusicPlayer />
+
+    <form id="music-settings-form" class="music-settings" data-music-settings>
+      <label>
+        曲名
+        <input name="title" value="Quiet Knowledge Loop" />
+      </label>
+      <label>
+        描述
+        <input name="meta" value="soft synth / focus mode / local setting" />
+      </label>
+      <label>
+        来源
+        <input name="provider" value="Local synth" />
+      </label>
+      <label>
+        外链音频 URL
+        <input name="audioUrl" type="url" placeholder="https://example.com/audio.mp3" />
+      </label>
+      <label>
+        Lyric / waveform line
+        <input name="lyric" value="think slowly / connect clearly / ship carefully" />
+      </label>
+      <label>
+        音高
+        <input name="tone" type="range" min="160" max="520" value="220" />
+      </label>
+      <button type="submit">保存默认音乐</button>
+    </form>
+  </div>
+</BaseLayout>
+
+<script>
+  const form = document.querySelector('[data-music-settings]') as HTMLFormElement | null;
+  const stored = window.localStorage.getItem('caolei-default-track');
+  if (form && stored) {
+    try {
+      const data = JSON.parse(stored);
+      if (data.title) (form.elements.namedItem('title') as HTMLInputElement).value = data.title;
+      if (data.meta) (form.elements.namedItem('meta') as HTMLInputElement).value = data.meta;
+      if (data.provider) (form.elements.namedItem('provider') as HTMLInputElement).value = data.provider;
+      if (data.audioUrl) (form.elements.namedItem('audioUrl') as HTMLInputElement).value = data.audioUrl;
+      if (data.lyric) (form.elements.namedItem('lyric') as HTMLInputElement).value = data.lyric;
+      if (data.tone) (form.elements.namedItem('tone') as HTMLInputElement).value = String(data.tone);
+    } catch (e) {
+      // ignore
+    }
+  }
+
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = {
+      title: (form.elements.namedItem('title') as HTMLInputElement).value,
+      meta: (form.elements.namedItem('meta') as HTMLInputElement).value,
+      provider: (form.elements.namedItem('provider') as HTMLInputElement).value,
+      audioUrl: (form.elements.namedItem('audioUrl') as HTMLInputElement).value,
+      lyric: (form.elements.namedItem('lyric') as HTMLInputElement).value,
+      tone: Number((form.elements.namedItem('tone') as HTMLInputElement).value)
+    };
+    window.localStorage.setItem('caolei-default-track', JSON.stringify(data));
+    window.dispatchEvent(new CustomEvent('caolei:music-updated'));
+  });
+</script>
+
+<style>
+  .music-page-header {
+    max-width: 760px;
+    margin: clamp(2rem, 6vw, 5rem) 0 2rem;
+  }
+
+  .music-page-header p {
+    margin: 0 0 0.5rem;
+    color: var(--color-gray-500);
+    font-size: 0.95rem;
+  }
+
+  .music-page-header h1 {
+    margin: 0;
+    font-size: clamp(3.2rem, 8vw, 7rem);
+    line-height: 0.96;
+    color: var(--color-gray-800);
+  }
+
+  .music-page-header span {
+    display: block;
+    margin-top: 1rem;
+    color: var(--color-gray-600);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .music-page-grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.9fr) minmax(280px, 1fr);
+    gap: clamp(1.5rem, 5vw, 4rem);
+    align-items: start;
+  }
+
+  .music-settings {
+    display: grid;
+    gap: 1rem;
+    border-top: 1px solid var(--color-tinted-cream);
+    padding-top: 1.25rem;
+  }
+
+  .music-settings label {
+    display: grid;
+    gap: 0.45rem;
+    color: var(--color-gray-600);
+    font-size: 0.9rem;
+  }
+
+  .music-settings input {
+    width: 100%;
+    border: 1px solid var(--color-tinted-cream);
+    background: rgb(255 255 255 / 0.68);
+    padding: 0.72rem 0.85rem;
+    border-radius: 6px;
+    color: var(--color-gray-800);
+  }
+
+  .music-settings button {
+    justify-self: start;
+    border: 1px solid color-mix(in srgb, var(--color-crimson) 28%, var(--color-tinted-cream));
+    background: color-mix(in srgb, var(--color-crimson) 8%, white);
+    color: var(--color-crimson);
+    font-weight: 700;
+  }
+
+  @media (max-width: 760px) {
+    .music-page-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

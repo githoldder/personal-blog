@@ -3,14 +3,16 @@ import { getCollection } from 'astro:content';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import GrowthBadge from '../components/GrowthBadge.astro';
-import CoordinateAxis from '../components/CoordinateAxis.astro';
+import MusicPlayer from '../components/MusicPlayer.astro';
 
-// 1. 读取基础简历元数据
 let basics = {
-  name: 'githoldder',
-  label: '软件工程学子 / 在校创业者 / 知识系统架构师',
-  summary: '常州工学院软件工程专业本科生。主修软件工程，构建高效实用的工程工具。'
+  name: 'caolei',
+  label: 'software engineering / knowledge systems / local-first tools',
+  summary: '把课程、项目、读书笔记和工程实践整理成一个可以继续生长的个人知识系统。',
+  email: '1745399028@qq.com',
+  phone: '+86 189-5265-3787',
+  url: 'https://caolei.dev',
+  location: '常州, 江苏'
 };
 
 const resumePath = join(process.cwd(), 'public/assets/resume.json');
@@ -18,21 +20,19 @@ if (existsSync(resumePath)) {
   try {
     const resume = JSON.parse(readFileSync(resumePath, 'utf-8'));
     if (resume?.basics) {
-      basics = resume.basics;
+      basics = {
+        ...basics,
+        ...resume.basics,
+        name: 'caolei',
+        label: resume.basics.label?.replace(/\u66f9\u78ca/g, 'caolei') ?? basics.label,
+        summary: resume.basics.summary?.replace(/\u66f9\u78ca/g, 'caolei') ?? basics.summary
+      };
     }
   } catch (e) {
     // ignore
   }
 }
 
-const publicBasics = {
-  ...basics,
-  name: 'githoldder',
-  label: basics.label?.replace(/\u66f9\u78ca/g, 'caolei') ?? 'caolei / knowledge systems / software engineering',
-  summary: basics.summary?.replace(/\u66f9\u78ca/g, 'caolei') ?? ''
-};
-
-// 2. 读取语义图谱数据得到统计
 let graphStats = { nodesCount: 0, edgesCount: 0 };
 const graphPath = join(process.cwd(), 'public/assets/semantic_graph.json');
 if (existsSync(graphPath)) {
@@ -45,7 +45,6 @@ if (existsSync(graphPath)) {
   }
 }
 
-// 3. 读取 Library 书籍用于阅读地层 (Reading Strata)
 let books = [];
 const libraryPath = join(process.cwd(), 'public/assets/library.json');
 if (existsSync(libraryPath)) {
@@ -57,470 +56,1037 @@ if (existsSync(libraryPath)) {
   }
 }
 
-// 4. 读取 Content Collections 笔记并筛选
 const allNotes = await getCollection('notes');
 const publishedNotes = allNotes.filter((entry) => entry.data.status === 'published' && !entry.data.tags.includes('book'));
 const notes = publishedNotes
-  .map((entry) => {
-    let stage = 'seedling';
-    if (entry.data.tags.includes('evergreen') || entry.id.length < 32) {
-      stage = 'evergreen';
-    } else if (entry.data.tags.includes('budding') || entry.data.title.length > 8) {
-      stage = 'budding';
-    }
-    return {
-      slug: entry.data.slug ?? entry.id,
-      title: entry.data.title,
-      date: entry.data.date,
-      tags: entry.data.tags,
-      stage
-    };
-  })
+  .map((entry) => ({
+    slug: entry.data.slug ?? entry.id,
+    title: entry.data.title,
+    date: entry.data.date,
+    tags: entry.data.tags
+  }))
   .sort((a, b) => b.date.getTime() - a.date.getTime())
+  .slice(0, 5);
+
+const classicNotes = publishedNotes
+  .map((entry) => ({
+    slug: entry.data.slug ?? entry.id,
+    title: entry.data.title,
+    date: entry.data.date,
+    tags: entry.data.tags
+  }))
+  .filter((note) => !note.slug.startsWith('obsidian-'))
+  .sort((a, b) => {
+    const score = (note: (typeof classicNotes)[number]) => (
+      (note.slug.includes('personal-knowledge-asset-os') ? 100 : 0) +
+      (note.slug.startsWith('canvas-') ? 20 : 0) +
+      (note.slug.startsWith('excalidraw-') ? 15 : 0) +
+      note.tags.length
+    );
+    return score(b) - score(a) || b.date.getTime() - a.date.getTime();
+  })
   .slice(0, 4);
 
-const tagCounts = new Map<string, number>();
-for (const entry of publishedNotes) {
-  for (const tag of entry.data.tags) {
-    if (!tag || tag === 'book') continue;
-    tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
-  }
-}
+const pinnedProjectSlugs = ['lingobridge', 'file-processor-assistant', 'personal-blog', 'springboot-lgg'];
+const allProjects = (await getCollection('projects'))
+  .filter((entry) => entry.data.status !== 'archived')
+  .map((entry) => ({
+    slug: entry.data.slug ?? entry.id,
+    title: entry.data.title.replace(/\u66f9\u78ca/g, 'caolei'),
+    description: entry.data.description.replace(/\u66f9\u78ca/g, 'caolei'),
+    tech: entry.data.tech,
+    date: entry.data.date
+  }));
 
-const topTags = Array.from(tagCounts.entries())
-  .sort((a, b) => b[1] - a[1])
-  .slice(0, 8);
+const featuredProjects = pinnedProjectSlugs
+  .map((slug) => allProjects.find((project) => project.slug === slug))
+  .filter(Boolean);
 
-const maxTagCount = Math.max(1, ...topTags.map(([, count]) => count));
-const formatDate = (date: Date) => date.toISOString().slice(0, 10);
-const buildTime = new Date().toISOString();
-basics.name = 'githoldder';
-basics.label = basics.label?.replace(/\u66f9\u78ca/g, 'caolei') || 'knowledge system builder';
-
-// 定义书脊颜色循环
-const spineColors = [
-  'bg-[#e2ecc8] text-[#3d5a23] border-[#ccd9a3] hover:bg-[#d9e5b8]', // moss-green
-  'bg-[#fde2e4] text-[#8a333a] border-[#fbc4c6] hover:bg-[#fcd2d5]', // rose-pink
-  'bg-[#fef2cd] text-[#785b00] border-[#fce498] hover:bg-[#fdeba7]', // gold-yellow
-  'bg-[#e3ecf5] text-[#2c5270] border-[#c0d5e8] hover:bg-[#d2e4f2]'  // blue-ice
-];
-
-const shelfBooks = books
+const featureBooks = books
   .slice()
   .sort((a, b) => (b.annotationCount ?? 0) - (a.annotationCount ?? 0))
-  .slice(0, 6);
+  .slice(0, 8);
 
-const featureBook = shelfBooks[0] ?? books[0];
-const hotlinks = [
+const formatDate = (date: Date) => date.toISOString().slice(0, 10);
+const coverPalettes = [
+  'cover--sage',
+  'cover--mist',
+  'cover--rose',
+  'cover--gold',
+  'cover--paper',
+  'cover--blue',
+  'cover--moss',
+  'cover--shell'
+];
+
+const projectLogos = {
+  lingobridge: 'LB',
+  'file-processor-assistant': 'FP',
+  'personal-blog': 'OS',
+  'springboot-lgg': 'LG'
+};
+
+const heroNodes = [
+  { label: 'Resume', href: '/resume', x: 18, y: 52, size: 'large' },
+  { label: 'Projects', href: '/projects', x: 40, y: 28, size: 'medium' },
+  { label: 'Notes', href: '/notes', x: 64, y: 42, size: 'large' },
+  { label: 'Graph', href: '/lab/graph', x: 78, y: 66, size: 'medium' },
+  { label: 'Library', href: '/library', x: 48, y: 74, size: 'medium' },
+  { label: 'Music', href: '/music', x: 25, y: 78, size: 'small' }
+];
+
+const patterns = [
   {
-    title: 'Knowledge Asset OS',
-    href: '/notes/2026-06-26-personal-knowledge-asset-os/',
-    meta: `${graphStats.nodesCount} nodes / ${graphStats.edgesCount} edges`
+    title: '学习路径',
+    description: '把课程、论文、项目和复盘整理成可以回溯的路线，而不是一次性的任务清单。',
+    meta: `${publishedNotes.length} notes`,
+    href: '/notes'
   },
-  { title: '全部笔记', href: '/notes', meta: `${publishedNotes.length} published` },
-  { title: '项目仪器台', href: '/projects', meta: 'shipping tools' },
-  { title: '语义图谱', href: '/lab/graph', meta: 'explore graph' },
-  { title: '图书馆', href: '/library', meta: `${books.length} books` }
+  {
+    title: '图谱化理解',
+    description: '用语义节点和边显示知识之间的暗线，帮助我发现重复、缺口和迁移关系。',
+    meta: `${graphStats.nodesCount} nodes / ${graphStats.edgesCount} edges`,
+    href: '/lab/graph'
+  },
+  {
+    title: '工程化作品',
+    description: '把工具、模板、自动化脚本和项目文档沉淀成可交付资产。',
+    meta: 'projects',
+    href: '/projects'
+  },
+  {
+    title: '阅读批注',
+    description: '书籍不是收藏品，而是被拆开、标注、连接并重新使用的思想材料。',
+    meta: `${books.length} books`,
+    href: '/library'
+  }
 ];
 ---
 
-<BaseLayout title="OS Instance Workbench" theme="systems">
-  <header class="home-hero select-none">
-    <div class="home-hero__copy">
-      <div class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[9px] font-mono font-bold tracking-widest text-rose-800 bg-rose-50 border border-rose-200/50 rounded uppercase mb-4">
-        WORKBENCH ROOT
-      </div>
-      <h1 class="text-3xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
-        {publicBasics.name}
-        <span class="text-base md:text-lg font-mono text-slate-500 block sm:inline sm:pl-3 font-normal">{publicBasics.label}</span>
+<BaseLayout title="caolei" theme="systems">
+  <header class="page-header">
+    <div class="page-header__copy">
+      <p class="small-title">Knowledge garden / personal library / engineering notes</p>
+      <h1 class="main-title">
+        caolei builds a quiet library for hard things made clear.
       </h1>
-      <p class="mt-4 font-serif text-slate-700 leading-relaxed text-sm md:text-base max-w-2xl">
-        {publicBasics.summary}
+      <p class="main-subtitle">
+        {basics.summary}
       </p>
-      <nav class="home-hotlinks" aria-label="Workbench hotlinks">
-        {hotlinks.map((link) => (
-          <a href={link.href} class="home-hotlink">
-            <span>{link.title}</span>
-            <small>{link.meta}</small>
+    </div>
+    <aside class="hero-graph" aria-label="知识图谱星链预览">
+      <div class="hero-graph__header">
+        <span>Semantic Starlink</span>
+        <strong>{graphStats.nodesCount} / {graphStats.edgesCount}</strong>
+      </div>
+      <div class="hero-graph__field">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M18 52 C28 36, 42 30, 64 42 S76 55, 78 66" />
+          <path d="M18 52 C30 65, 37 75, 48 74 S61 66, 78 66" />
+          <path d="M40 28 C45 40, 50 55, 48 74" />
+          <path d="M64 42 C56 52, 49 62, 48 74" />
+          <path d="M25 78 C35 72, 51 68, 78 66" />
+        </svg>
+        {heroNodes.map((node, idx) => (
+          <a
+            href={node.href}
+            class={`hero-node hero-node--${node.size}`}
+            style={`--x:${node.x}%;--y:${node.y}%;--delay:${idx * 0.35}s`}
+          >
+            <span>{node.label}</span>
           </a>
         ))}
-      </nav>
-    </div>
-
-    {featureBook && (
-      <aside class="book-window" aria-label="Library preview">
-        <div class="book-window__shelf">
-          {shelfBooks.slice(0, 5).map((book, idx) => (
-            <a
-              href={`/notes/${book.slug}/`}
-              class={`book-window__spine ${spineColors[idx % spineColors.length]}`}
-              style={`--book-height: ${72 + Math.min(44, (book.annotationCount ?? 0) * 2)}px`}
-              aria-label={`打开《${book.title}》的 annotator 笔记`}
-            >
-              <span>{book.title}</span>
-            </a>
-          ))}
-        </div>
-        <div class="book-window__detail">
-          <span class="font-mono text-[9px] font-bold uppercase tracking-widest text-slate-400">book window</span>
-          <h2 class="mt-2 text-xl md:text-2xl font-serif font-bold text-slate-900 line-clamp-2">《{featureBook.title}》</h2>
-          <p class="mt-2 text-xs md:text-sm leading-relaxed text-slate-600 line-clamp-3">{featureBook.summary}</p>
-          <div class="mt-4 flex items-center justify-between gap-3">
-            <span class="font-mono text-[10px] text-slate-500">{featureBook.annotationCount ?? 0} annotations</span>
-            <a href={`/notes/${featureBook.slug}/`} class="font-mono text-[10px] font-bold text-rose-700 hover:underline">
-              看 annotator 笔记
-            </a>
-          </div>
-        </div>
-      </aside>
-    )}
+        <span class="hero-orbit hero-orbit--a"></span>
+        <span class="hero-orbit hero-orbit--b"></span>
+      </div>
+      <p>Clickable map preview for projects, notes, library, and graph exploration.</p>
+    </aside>
   </header>
 
-  <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start border-t border-slate-200/60 pt-8 md:pt-10">
-    
-    <!-- Left Column: The Garden (8/12 Columns in Large View) -->
-    <div class="lg:col-span-8 space-y-12">
-      
-      <!-- Notes Garden Stream -->
-      <section class="space-y-6">
-        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
-          <h2 class="text-xl md:text-2xl font-serif font-bold text-slate-900">
-            知识生长轨迹
-          </h2>
-          <a href="/notes" class="text-xs font-mono text-rose-700 hover:underline font-bold">调阅所有笔记 ↗</a>
-        </div>
+  <section class="essence-section" aria-label="核心入口">
+    <a href="/resume" class="resume-feature">
+      <span class="resume-feature__kicker">Resume</span>
+      <strong>能力证明</strong>
+      <small>{basics.email}</small>
+    </a>
 
-        <div class="space-y-1">
-          {notes.map((note) => (
-            <article class="garden-item">
-              <div class="flex items-start justify-between gap-4">
-                <div class="space-y-1.5">
-                  <div class="flex items-center gap-2">
-                    <GrowthBadge stage={note.stage} />
-                  </div>
-                  <h3 class="font-serif font-bold text-base md:text-lg text-slate-900">
-                    <a href={`/notes/${note.slug}/`} class="hover:text-rose-700 transition-colors leading-snug">
-                      {note.title}
-                    </a>
-                  </h3>
-                  <div class="flex items-center gap-3 text-xs text-slate-400 font-mono">
-                    <time datetime={formatDate(note.date)}>{formatDate(note.date)}</time>
-                    <div class="flex gap-1">
-                      {note.tags.slice(0, 2).map((t) => (
-                        <span class="tech-tag">#{t}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <code class="text-[9px] font-mono text-slate-400/80 uppercase">/{note.slug.slice(0, 10)}</code>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      {books.length > 0 && (
-        <section class="space-y-4">
-          <CoordinateAxis label="Library Shelf" value={`${books.length} books`} />
-          <div class="compact-shelf">
-            {shelfBooks.map((book, idx) => {
-              const colorClass = spineColors[idx % spineColors.length];
-              return (
-                <a
-                  href={`/notes/${book.slug}/`}
-                  class={`compact-book ${colorClass}`}
-                  aria-label={`打开《${book.title}》`}
-                >
-                  <span class="line-clamp-2">《{book.title}》</span>
-                  <small>{book.annotationCount ?? 0} notes</small>
-                </a>
-              );
-            })}
-          </div>
-        </section>
-      )}
-    </div>
-
-    <div class="lg:col-span-4 space-y-10 lg:pl-4">
-      <section class="space-y-4">
-        <CoordinateAxis label="Graph Preview" value="live index" />
-        
-        <div class="relative aspect-square w-full rounded-full border border-dashed border-slate-300/80 overflow-hidden flex items-center justify-center bg-white/40 coordinate-grid group hover:border-rose-400 transition-colors duration-300">
-          <svg class="w-3/4 h-3/4 graph-preview-orbit" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="3.5" fill="var(--color-rose)"></circle>
-            
-            <line x1="50" y1="50" x2="25" y2="25" stroke="#cbd5e1" stroke-width="0.75" stroke-dasharray="2,2"></line>
-            <circle cx="25" cy="25" r="2" fill="var(--color-moss)"></circle>
-            
-            <line x1="50" y1="50" x2="78" y2="42" stroke="#cbd5e1" stroke-width="0.75"></line>
-            <circle cx="78" cy="42" r="3" fill="var(--color-rose)"></circle>
-            
-            <line x1="50" y1="50" x2="40" y2="78" stroke="#cbd5e1" stroke-width="0.75"></line>
-            <circle cx="40" cy="78" r="2.5" fill="var(--color-signal)"></circle>
-          </svg>
-          <div class="absolute bottom-4 text-center">
-            <a href="/lab/graph" class="inline-flex items-center justify-center px-4 py-1.5 border border-slate-900/10 hover:border-slate-900 text-[10px] font-mono font-bold text-slate-800 bg-white/90 backdrop-blur-sm rounded transition-all">
-              交互式拓扑图谱 ↗
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="space-y-4 pt-4">
-        <CoordinateAxis label="System runtime benchmarks" value={`t=${buildTime.slice(0, 10)}`} />
-        
-        <div class="font-mono text-[10px] text-slate-500 space-y-2.5">
-          <div class="flex justify-between border-b border-slate-100 pb-1.5">
-            <span>GRAPH NODES COMPUTED</span>
-            <span class="font-bold text-slate-800">{graphStats.nodesCount}</span>
-          </div>
-          <div class="flex justify-between border-b border-slate-100 pb-1.5">
-            <span>GRAPH EDGES CALCULATED</span>
-            <span class="font-bold text-slate-800">{graphStats.edgesCount}</span>
-          </div>
-          <div class="flex justify-between border-b border-slate-100 pb-1.5">
-            <span>PUBLISHABLE NOTES</span>
-            <span class="font-bold text-slate-800">{publishedNotes.length}</span>
-          </div>
-          <div class="flex justify-between border-b border-slate-100 pb-1.5">
-            <span>TOP TAGS</span>
-            <span class="font-bold text-slate-800">{topTags.length}/{maxTagCount}</span>
-          </div>
-          <div class="flex justify-between border-b border-slate-100 pb-1.5">
-            <span>PIPELINE ENGINE</span>
-            <span class="text-slate-800">ASTRO 5.10 / ESBUILD</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="pt-8 border-t border-slate-200/50">
-        <a 
-          href="/admin" 
-          class="inline-flex items-center gap-1 text-[9px] font-mono font-bold text-slate-400 hover:text-rose-700 transition-colors uppercase tracking-widest"
-        >
-          <span class="inline-block w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-rose-500"></span>
-          Offline Admin console gate ➔
+    <div class="project-feature-grid">
+      {featuredProjects.map((project) => (
+        <a href={`/projects/${project.slug}/`} class="project-feature-card">
+          <span class="project-logo-mark">{projectLogos[project.slug] || project.title.slice(0, 2)}</span>
+          <strong>{project.title}</strong>
+          <small>{project.tech.slice(0, 3).join(' / ')}</small>
         </a>
-      </section>
-
+      ))}
     </div>
-  </div>
+
+    <div class="classic-notes">
+      <div class="classic-notes__head">
+        <h2>Classic Notes <span>→</span></h2>
+        <a href="/notes">全部知识笔记</a>
+      </div>
+      <div class="classic-notes__list">
+        {classicNotes.map((note) => (
+          <a href={`/notes/${note.slug}/`}>
+            <strong>{note.title}</strong>
+            <small>{note.tags.slice(0, 2).join(' · ') || formatDate(note.date)}</small>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <MusicPlayer compact />
+  </section>
+
+  <section class="garden-section" aria-label="知识呈现形式">
+    <div class="essays-section">
+      <a href="/notes" class="header-link">
+        <h2 class="section-header">Notes <span aria-hidden="true">→</span></h2>
+      </a>
+      <p class="subheader">Fresh fragments from study, software engineering, and systems thinking.</p>
+      <div class="notes-list">
+        {notes.map((note) => (
+          <a href={`/notes/${note.slug}/`} class="index-note-card">
+            <span class="index-note-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.8 L14.4 9.6 L21.2 12 L14.4 14.4 L12 21.2 L9.6 14.4 L2.8 12 L9.6 9.6 Z"></path>
+                <circle cx="12" cy="12" r="4.7"></circle>
+              </svg>
+            </span>
+            <span>
+              <strong>{note.title}</strong>
+              <small>{note.tags.slice(0, 2).join(' · ') || formatDate(note.date)} · {formatDate(note.date)}</small>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="patterns-section">
+      <a href="/projects" class="header-link">
+        <h2 class="section-header">Patterns <span aria-hidden="true">→</span></h2>
+      </a>
+      <p class="subheader">Design patterns gathered from my own observations, coursework, and build logs.</p>
+      <div class="patterns-grid">
+        {patterns.map((pattern) => (
+          <a href={pattern.href} class="pattern-card">
+            <span class="pattern-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path class="left-leaf" d="M12 3 C7.5 5.2 5.2 7.5 3 12 C5.2 16.5 7.5 18.8 12 21"></path>
+                <path class="right-leaf" d="M12 3 C16.5 5.2 18.8 7.5 21 12 C18.8 16.5 16.5 18.8 12 21"></path>
+                <circle cx="12" cy="12" r="3.2"></circle>
+              </svg>
+            </span>
+            <span>
+              <strong>{pattern.title}</strong>
+              <em>{pattern.description}</em>
+              <small>{pattern.meta}</small>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="library-section">
+      <a href="/library" class="header-link">
+        <h2 class="section-header">Library <span aria-hidden="true">→</span></h2>
+      </a>
+      <p class="subheader">Books, annotated PDFs, and ideas that keep returning as useful tools.</p>
+      <div class="books-grid">
+        {featureBooks.map((book, idx) => (
+          <a href={`/notes/${book.slug}/`} class="book-card">
+            <span class={`book-cover ${coverPalettes[idx % coverPalettes.length]}`}>
+              {book.coverUrl ? (
+                <img src={book.coverUrl} alt={`《${book.title}》封面`} loading="lazy" />
+              ) : (
+                <>
+                  <span class="book-cover__meta">{book.annotationCount ?? 0} notes</span>
+                  <strong>{book.title}</strong>
+                  <small>{book.author && book.author !== '未知作者' ? book.author : 'caolei annotations'}</small>
+                </>
+              )}
+            </span>
+            <span class="book-title">{book.title}</span>
+            <span class="book-author">{book.author && book.author !== '未知作者' ? book.author : 'reading note'}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <aside class="system-section" aria-label="System details">
+      <h2 class="section-header">System <span aria-hidden="true">→</span></h2>
+      <p class="subheader">淡色表面下保留工程细节：索引、图谱、发布流水线和本地资产。</p>
+      <dl class="system-list">
+        <div>
+          <dt>Graph nodes</dt>
+          <dd>{graphStats.nodesCount}</dd>
+        </div>
+        <div>
+          <dt>Graph edges</dt>
+          <dd>{graphStats.edgesCount}</dd>
+        </div>
+        <div>
+          <dt>Published notes</dt>
+          <dd>{publishedNotes.length}</dd>
+        </div>
+        <div>
+          <dt>Library records</dt>
+          <dd>{books.length}</dd>
+        </div>
+      </dl>
+      <nav class="quiet-links" aria-label="Secondary links">
+        <a href="/search">Search</a>
+        <a href="/resume">Resume</a>
+        <a href={`mailto:${basics.email}`}>Email</a>
+        <a href="/admin">Admin</a>
+      </nav>
+    </aside>
+  </section>
 </BaseLayout>
 
 <style>
-  @keyframes spin-slow {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-
-  .home-hero {
-    min-height: min(560px, calc(100vh - 8rem));
+  .page-header {
     display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
-    gap: clamp(1.5rem, 5vw, 4rem);
+    grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.85fr);
+    gap: clamp(2rem, 5vw, 5rem);
     align-items: center;
-    padding: clamp(1rem, 3vw, 2.5rem) 0 clamp(2rem, 6vw, 4rem);
+    margin-top: clamp(1.4rem, 3.8vw, 3rem);
+    margin-bottom: clamp(1.4rem, 3vw, 2.4rem);
   }
 
-  .home-hero__copy {
-    max-width: 46rem;
+  .small-title {
+    font-family: Avenir, 'Avenir Next', Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+    color: var(--color-gray-800);
+    font-weight: 300;
+    line-height: 1.75;
+    margin: 0 0 0.8rem;
   }
 
-  .home-hotlinks {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 0.5rem;
-    margin-top: 1.5rem;
+  .main-title {
+    max-width: 920px;
+    font-size: clamp(3rem, 6.1vw, 6.05rem);
+    line-height: 0.94;
+    font-weight: 400;
+    color: var(--color-gray-800);
+    margin: 0;
   }
 
-  .home-hotlink {
-    min-height: 4.75rem;
-    padding: 0.75rem;
-    border: 1px solid rgb(226 232 240 / 0.85);
-    border-radius: 6px;
-    background: rgb(255 255 255 / 0.42);
-    color: rgb(15 23 42);
-    text-decoration: none;
+  .main-subtitle {
+    max-width: 820px;
+    margin: 1.05rem 0 0;
+    font-family: Avenir, 'Avenir Next', Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(1rem, 1.35vw, 1.22rem);
+    line-height: 1.68;
+    color: var(--color-gray-600);
+    font-weight: 300;
   }
 
-  .home-hotlink span,
-  .home-hotlink small {
-    display: block;
+  .hero-graph {
+    position: relative;
+    min-height: clamp(320px, 35vw, 480px);
+    border-left: 1px solid var(--color-tinted-cream);
+    padding-left: clamp(1.2rem, 2.5vw, 2.2rem);
+    color: var(--color-gray-600);
   }
 
-  .home-hotlink span {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.76rem;
-    font-weight: 800;
-    line-height: 1.2;
-  }
-
-  .home-hotlink small {
-    margin-top: 0.55rem;
+  .hero-graph__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
-    font-size: 0.58rem;
-    line-height: 1.2;
-    color: rgb(100 116 139);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-gray-500);
   }
 
-  .home-hotlink:hover,
-  .home-hotlink:focus-visible {
-    border-color: color-mix(in srgb, var(--theme-a, #4f8f68) 50%, rgb(226 232 240));
-    background: color-mix(in srgb, var(--theme-a, #4f8f68) 8%, white);
-    transform: translateY(-2px);
+  .hero-graph__header strong {
+    color: var(--color-gray-800);
+    font-weight: 700;
   }
 
-  .book-window {
-    border: 1px solid rgb(226 232 240 / 0.9);
-    border-radius: 8px;
+  .hero-graph__field {
+    position: relative;
+    height: clamp(270px, 30vw, 410px);
+    margin-top: 0.8rem;
+    border-radius: 50%;
     background:
-      linear-gradient(180deg, rgb(255 255 255 / 0.68), rgb(255 255 255 / 0.32)),
-      radial-gradient(circle at 88% 18%, color-mix(in srgb, var(--theme-b, #d9b86c) 16%, transparent), transparent 14rem);
-    padding: 1rem;
-    box-shadow: 0 16px 40px rgb(15 23 42 / 0.07);
+      radial-gradient(circle at 50% 50%, rgb(255 255 255 / 0.72), transparent 58%),
+      radial-gradient(circle at 64% 42%, color-mix(in srgb, var(--color-sea-blue) 16%, transparent), transparent 22%),
+      radial-gradient(circle at 30% 74%, color-mix(in srgb, var(--color-crimson) 10%, transparent), transparent 24%);
+    overflow: hidden;
   }
 
-  .book-window__shelf {
-    min-height: 8rem;
-    display: flex;
-    align-items: end;
-    gap: 0.5rem;
-    padding: 0.75rem 0.25rem 0.5rem;
-    border-bottom: 2px solid rgb(148 163 184 / 0.28);
+  .hero-graph__field svg {
+    position: absolute;
+    inset: 7%;
+    width: 86%;
+    height: 86%;
+    overflow: visible;
   }
 
-  .book-window__spine {
-    width: 2.05rem;
-    height: var(--book-height, 84px);
-    min-height: 4.5rem;
-    max-height: 7.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.45rem 0.25rem;
-    border-radius: 4px 4px 2px 2px;
-    writing-mode: vertical-rl;
-    text-orient: mixed;
+  .hero-graph__field path {
+    fill: none;
+    stroke: color-mix(in srgb, var(--color-sea-blue) 42%, var(--color-tinted-cream));
+    stroke-width: 0.42;
+    stroke-dasharray: 2 4;
+    stroke-linecap: round;
+    animation: starlinkTrace 9s linear infinite;
+  }
+
+  .hero-node {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    transform: translate(-50%, -50%);
+    width: 0.72rem;
+    aspect-ratio: 1;
+    border-radius: 999px;
+    background: var(--color-paper);
+    border: 1px solid var(--color-sea-blue);
+    box-shadow:
+      0 0 0 0 color-mix(in srgb, var(--color-sea-blue) 22%, transparent),
+      0 10px 24px rgb(39 78 88 / 0.12);
+    animation: heroNodePulse 4.8s ease-in-out infinite;
+    animation-delay: var(--delay);
     text-decoration: none;
-    overflow: hidden;
   }
 
-  .book-window__spine span {
-    max-height: 6.6rem;
-    overflow: hidden;
+  .hero-node--medium {
+    width: 0.92rem;
+    border-color: color-mix(in srgb, var(--color-crimson) 44%, var(--color-sea-blue));
+  }
+
+  .hero-node--large {
+    width: 1.16rem;
+    background: color-mix(in srgb, var(--color-paper) 86%, white);
+    border-color: var(--color-crimson);
+  }
+
+  .hero-node span {
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 0.45rem);
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
     font-size: 0.62rem;
-    line-height: 1.2;
-    font-weight: 800;
+    color: var(--color-gray-600);
+    opacity: 0.82;
   }
 
-  .book-window__detail {
-    padding: 1rem 0.25rem 0.25rem;
+  .hero-node:hover {
+    background: var(--color-crimson);
+    border-color: var(--color-crimson);
   }
 
-  .compact-shelf {
+  .hero-node:hover span {
+    color: var(--color-crimson);
+  }
+
+  .hero-orbit {
+    position: absolute;
+    inset: 13%;
+    border: 1px solid color-mix(in srgb, var(--color-tinted-cream) 70%, transparent);
+    border-radius: 50%;
+    animation: heroOrbitSpin 28s linear infinite;
+  }
+
+  .hero-orbit--b {
+    inset: 25% 19%;
+    transform: rotate(28deg);
+    animation-duration: 21s;
+    animation-direction: reverse;
+  }
+
+  .hero-graph p {
+    margin: 0.65rem 0 0;
+    font-size: 0.86rem;
+    line-height: 1.55;
+    color: var(--color-gray-500);
+  }
+
+  .garden-section {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.75rem;
+    grid-template-columns: minmax(280px, 0.95fr) minmax(420px, 1.55fr);
+    grid-template-areas:
+      "notes library"
+      "patterns library"
+      "system library";
+    gap: clamp(2.5rem, 5vw, 5rem);
+    align-items: start;
+    margin: 0 0 clamp(3rem, 7vw, 6rem);
   }
 
-  .compact-book {
-    min-height: 7rem;
+  .essence-section {
+    display: grid;
+    grid-template-columns: minmax(140px, 0.45fr) minmax(360px, 1.25fr) minmax(300px, 0.9fr);
+    grid-template-areas:
+      "resume projects notes"
+      "music projects notes";
+    gap: clamp(1rem, 2vw, 1.75rem);
+    align-items: stretch;
+    margin: 0 0 clamp(2.4rem, 5vw, 4.2rem);
+    padding: clamp(0.85rem, 1.5vw, 1rem) 0;
+    border-top: 1px solid var(--color-tinted-cream);
+    border-bottom: 1px solid var(--color-tinted-cream);
+  }
+
+  .resume-feature {
+    grid-area: resume;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0.85rem;
+    min-height: 7.2rem;
+    color: var(--color-gray-800);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-tinted-cream);
+    padding-bottom: 0.85rem;
+  }
+
+  .resume-feature__kicker,
+  .project-feature-card small,
+  .classic-notes small {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.68rem;
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+  }
+
+  .resume-feature strong {
+    display: block;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.65rem, 2.5vw, 2.6rem);
+    font-weight: 400;
+    line-height: 0.98;
+    color: var(--color-gray-800);
+  }
+
+  .resume-feature small {
+    color: var(--color-gray-600);
+    font-size: 0.95rem;
+  }
+
+  .project-feature-grid {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.9rem;
+  }
+
+  .project-feature-card {
+    min-height: 10.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--color-gray-800);
+    text-decoration: none;
+    border: 1px solid var(--color-tinted-cream);
     border-radius: 6px;
+    background: rgb(255 255 255 / 0.34);
+    padding: 0.9rem;
+    transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+  }
+
+  .project-feature-card:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--color-sea-blue) 54%, var(--color-tinted-cream));
+    background: rgb(255 255 255 / 0.58);
+  }
+
+  .project-logo-mark {
+    width: 3.2rem;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--color-sea-blue) 48%, var(--color-tinted-cream));
+    color: var(--color-crimson);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+  }
+
+  .project-feature-card strong {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.1rem, 1.5vw, 1.45rem);
+    font-weight: 400;
+    line-height: 1.12;
+  }
+
+  .classic-notes {
+    grid-area: notes;
+  }
+
+  .classic-notes__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .classic-notes__head h2 {
+    margin: 0;
+    font-family: Avenir, 'Avenir Next', Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-gray-800);
+  }
+
+  .classic-notes__head a {
+    font-size: 0.82rem;
+  }
+
+  .classic-notes__list {
+    display: grid;
+    gap: 0.2rem;
+  }
+
+  .classic-notes__list a {
+    display: grid;
+    gap: 0.25rem;
+    padding: 0.52rem 0;
+    border-bottom: 1px solid var(--color-tinted-cream);
+    color: var(--color-gray-800);
     text-decoration: none;
   }
 
-  .compact-book span {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 0.95rem;
-    line-height: 1.25;
-    font-weight: 800;
+  .classic-notes__list strong {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.2;
   }
 
-  .compact-book small {
-    font-family: 'JetBrains Mono', 'Fira Code', monospace;
-    font-size: 0.62rem;
+  .essence-section .music-player {
+    grid-area: music;
+    align-self: end;
+  }
+
+  @keyframes starlinkTrace {
+    to { stroke-dashoffset: -60; }
+  }
+
+  @keyframes heroNodePulse {
+    0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-sea-blue) 20%, transparent), 0 10px 24px rgb(39 78 88 / 0.12); }
+    50% { box-shadow: 0 0 0 10px transparent, 0 14px 30px rgb(39 78 88 / 0.16); }
+  }
+
+  @keyframes heroOrbitSpin {
+    to { transform: rotate(360deg); }
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0 0 0.55rem;
+    font-family: Avenir, 'Avenir Next', Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(1.25rem, 1.8vw, 1.75rem);
+    font-weight: 700;
+    color: var(--color-gray-800);
+  }
+
+  .section-header span {
+    font-weight: 300;
+    transition: transform 0.25s ease, color 0.25s ease;
+  }
+
+  .header-link {
+    display: inline-flex;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .header-link:hover .section-header span {
+    color: var(--color-sea-blue);
+    transform: translateX(0.28rem);
+  }
+
+  .subheader {
+    max-width: 54rem;
+    margin: 0 0 clamp(1.2rem, 2vw, 2rem);
+    font-family: Avenir, 'Avenir Next', Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(1.02rem, 1.6vw, 1.42rem);
+    line-height: 1.55;
+    color: var(--color-gray-600);
+    font-weight: 300;
+  }
+
+  .essays-section {
+    grid-area: notes;
+  }
+
+  .patterns-section {
+    grid-area: patterns;
+  }
+
+  .library-section {
+    grid-area: library;
+  }
+
+  .system-section {
+    grid-area: system;
+  }
+
+  .notes-list,
+  .patterns-grid {
+    display: grid;
+    gap: 0.15rem;
+  }
+
+  .index-note-card,
+  .pattern-card {
+    display: flex;
+    gap: 1rem;
+    color: var(--color-gray-800);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-tinted-cream);
+    transition: border-color 0.25s ease, transform 0.25s ease;
+  }
+
+  .index-note-card {
+    padding: 0.95rem 0 1.05rem;
+  }
+
+  .pattern-card {
+    padding: 1.05rem 0;
+  }
+
+  .index-note-card:hover,
+  .pattern-card:hover {
+    border-color: var(--color-sea-blue);
+    transform: scale(1.012);
+  }
+
+  .index-note-icon,
+  .pattern-card-icon {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 auto;
+    margin-top: 0.2rem;
+    color: var(--color-sea-blue);
+  }
+
+  .index-note-icon svg,
+  .pattern-card-icon svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .index-note-icon path,
+  .index-note-icon circle,
+  .pattern-card-icon path,
+  .pattern-card-icon circle {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .pattern-card .left-leaf,
+  .pattern-card .right-leaf {
+    transition: transform 0.3s ease;
+  }
+
+  .pattern-card:hover .left-leaf {
+    transform: translateX(2px);
+  }
+
+  .pattern-card:hover .right-leaf {
+    transform: translateX(-2px);
+  }
+
+  .index-note-card strong,
+  .pattern-card strong {
+    display: block;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.2rem, 2vw, 1.72rem);
+    line-height: 1.15;
+    font-weight: 400;
+    color: var(--color-gray-800);
+    transition: color 0.25s ease;
+  }
+
+  .index-note-card:hover strong,
+  .pattern-card:hover strong,
+  .book-card:hover .book-title {
+    color: var(--color-crimson);
+  }
+
+  .pattern-card em {
+    display: block;
+    margin-top: 0.48rem;
+    font-family: Avenir, 'Avenir Next', Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    color: var(--color-gray-600);
+    font-style: normal;
+    font-weight: 300;
+  }
+
+  .index-note-card small,
+  .pattern-card small {
+    display: block;
+    margin-top: 0.5rem;
+    font-family: Avenir, 'Avenir Next', Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.82rem;
+    color: var(--color-gray-500);
+    font-weight: 500;
+  }
+
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(140px, 1fr));
+    gap: clamp(1.25rem, 2vw, 2rem);
+  }
+
+  .book-card {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-gray-800);
+    text-decoration: none;
+    transition: transform 0.28s ease;
+  }
+
+  .book-card:hover {
+    transform: scale(1.018);
+  }
+
+  .book-cover {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    aspect-ratio: 0.66;
+    width: 100%;
+    min-height: 220px;
+    padding: 1rem;
+    border: 1px solid var(--color-tinted-cream);
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgb(53 45 36 / 0.07);
+    overflow: hidden;
+    transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .book-cover img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--color-light-cream);
+  }
+
+  .book-card:hover .book-cover {
+    opacity: 0.74;
+    box-shadow: 0 14px 34px rgb(53 45 36 / 0.12);
+  }
+
+  .book-cover::before,
+  .book-cover::after {
+    content: '';
+    position: absolute;
+    inset: auto 1rem 3.1rem 1rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.16;
+  }
+
+  .book-cover::after {
+    inset: 1rem auto 1rem 1.6rem;
+    width: 1px;
+    height: auto;
+  }
+
+  .book-cover__meta {
+    position: relative;
+    z-index: 1;
+    align-self: flex-start;
+    font-family: Avenir, 'Avenir Next', Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    color: currentColor;
+    opacity: 0.62;
+    font-weight: 700;
+  }
+
+  .book-cover strong {
+    position: relative;
+    z-index: 1;
+    display: block;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.15rem, 1.7vw, 1.9rem);
+    line-height: 1.06;
+    font-weight: 700;
+    max-height: 8.4em;
+    overflow: hidden;
+  }
+
+  .book-cover small {
+    position: relative;
+    z-index: 1;
+    display: block;
+    font-family: Avenir, 'Avenir Next', Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.25;
     opacity: 0.72;
   }
 
-  .graph-preview-orbit {
-    animation: spin-slow 60s linear infinite;
+  .cover--sage { background: #dfead5; color: #35513d; }
+  .cover--mist { background: #e6eef1; color: #405760; }
+  .cover--rose { background: #f2dddd; color: #74444a; }
+  .cover--gold { background: #f4e7bd; color: #685426; }
+  .cover--paper { background: #f8f3e7; color: #4b4942; }
+  .cover--blue { background: #d8e8ef; color: #33546a; }
+  .cover--moss { background: #d7e4cd; color: #31533a; }
+  .cover--shell { background: #f1e4d7; color: #60483d; }
+
+  .book-title {
+    display: block;
+    margin-top: 0.85rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.05rem, 1.65vw, 1.65rem);
+    line-height: 1.15;
+    color: var(--color-gray-800);
+    transition: color 0.25s ease;
   }
 
-  /* 书架 Spines Shelf 动画细节与排版 */
-  .book-spine {
-    writing-mode: vertical-rl;
-    text-orient: mixed;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    height: 280px;
-    width: 44px;
-    padding: 1.5rem 0.5rem;
-    position: relative;
-    outline: none;
-  }
-  .book-spine:focus-visible {
-    outline: 2px solid var(--color-rose);
-    outline-offset: 3px;
+  .book-author {
+    display: block;
+    margin-top: 0.35rem;
+    font-family: Avenir, 'Avenir Next', Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.92rem;
+    color: var(--color-gray-600);
   }
 
-  @media (min-width: 1024px) {
-    .book-spine:hover, .book-spine:focus {
-      width: 240px;
-      writing-mode: horizontal-tb;
-      padding: 1.5rem 1.25rem;
-    }
-    .book-spine .spine-detail {
-      opacity: 0;
-      transition: opacity 0.2s ease;
-      display: none;
-    }
-    .book-spine:hover .spine-detail, .book-spine:focus .spine-detail {
-      opacity: 1;
-      display: flex;
-    }
-    .book-spine:hover .spine-title-vertical, .book-spine:focus .spine-title-vertical {
-      display: none;
-    }
+  .system-list {
+    margin: 0;
+    display: grid;
+    gap: 0.35rem;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.72rem;
+    color: var(--color-gray-500);
   }
 
-  @media (max-width: 900px) {
-    .home-hero {
-      min-height: auto;
+  .system-list div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--color-tinted-cream);
+  }
+
+  .system-list dt,
+  .system-list dd {
+    margin: 0;
+  }
+
+  .system-list dd {
+    color: var(--color-gray-800);
+    font-weight: 700;
+  }
+
+  .quiet-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 1rem;
+    font-family: Avenir, 'Avenir Next', Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.9rem;
+  }
+
+  .quiet-links a {
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--color-sea-blue) 45%, transparent);
+    text-underline-offset: 0.25rem;
+  }
+
+  @media (max-width: 1040px) {
+    .page-header {
       grid-template-columns: 1fr;
-      padding-top: 1rem;
     }
 
-    .home-hotlinks {
+    .hero-graph {
+      border-left: 0;
+      border-top: 1px solid var(--color-tinted-cream);
+      padding-left: 0;
+      padding-top: 1rem;
+      min-height: 280px;
+    }
+
+    .essence-section {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "resume"
+        "projects"
+        "notes"
+        "music";
+    }
+
+    .resume-feature {
+      border-bottom: 1px solid var(--color-tinted-cream);
+      padding-right: 0;
+      padding-bottom: 1.2rem;
+    }
+
+    .project-feature-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .book-window {
-      max-width: 34rem;
+    .garden-section {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "notes"
+        "library"
+        "patterns"
+        "system";
+    }
+
+    .books-grid {
+      grid-template-columns: repeat(3, minmax(140px, 1fr));
     }
   }
 
-  @media (max-width: 560px) {
-    .home-hotlinks,
-    .compact-shelf {
+  @media (max-width: 640px) {
+    .page-header {
+      margin-top: 1.3rem;
+    }
+
+    .main-title {
+      font-size: clamp(3rem, 17vw, 4.6rem);
+    }
+
+    .hero-graph__field {
+      height: 250px;
+    }
+
+    .books-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.1rem;
+    }
+
+    .project-feature-grid {
       grid-template-columns: 1fr;
     }
 
-    .home-hotlink {
-      min-height: 3.4rem;
+    .project-feature-card,
+    .resume-feature {
+      min-height: 10rem;
     }
 
-    .book-window__spine {
-      width: 1.85rem;
+    .book-cover {
+      min-height: 190px;
+      padding: 0.85rem;
     }
-  }
 
-  @media (prefers-reduced-motion: reduce) {
-    .graph-preview-orbit {
-      animation: none;
+    .index-note-card,
+    .pattern-card {
+      gap: 0.75rem;
     }
   }
 </style>
