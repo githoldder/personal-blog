@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-11T00:00:00+08:00",
+  "policy": "A+B music plan: OS-native queue controls, local/legal direct audio playback, QQ Music metadata and source links only unless official authorization or compliant playable URLs are available.",
+  "tracks": [
+    {
+      "id": "local-quiet-knowledge-loop",
+      "title": "Quiet Knowledge Loop",
+      "artist": "caolei OS",
+      "album": "Local focus mode",
+      "provider": "Local synth",
+      "tone": 220,
+      "audioUrl": "",
+      "sourceUrl": "",
+      "coverUrl": "",
+      "lyric": "think slowly / connect clearly / ship carefully"
+    },
+    {
+      "id": "qq-music-playlist-placeholder",
+      "title": "QQ Music Playlist Slot",
+      "artist": "Replace with your QQ Music track",
+      "album": "Metadata and source-link mode",
+      "provider": "QQ Music",
+      "tone": 294,
+      "audioUrl": "",
+      "sourceUrl": "https://y.qq.com/",
+      "coverUrl": "",
+      "lyric": "metadata first / compliant playback later"
+    }
+  ]
+}

@@ -3,81 +3,102 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import MusicPlayer from '../components/MusicPlayer.astro';
 ---
 
-<BaseLayout title="音乐设置 — caolei">
+<BaseLayout title="音乐中心 — caolei">
   <header class="music-page-header">
     <p>Music module</p>
-    <h1>默认音乐</h1>
-    <span>设置会保存在当前浏览器。外链音频可接免费音乐 API 返回的可播放 URL；缺省时使用本地合成音。</span>
+    <h1>音乐中心</h1>
+    <span>OS 内播放优先支持本地合成音和你提供的合法直链音频；QQ 音乐条目作为歌单元数据与来源跳转保存，不绕过版权、登录和会员限制。</span>
   </header>
 
   <div class="music-page-grid">
-    <MusicPlayer />
+    <MusicPlayer showQueue />
 
-    <form id="music-settings-form" class="music-settings" data-music-settings>
-      <label>
-        曲名
-        <input name="title" value="Quiet Knowledge Loop" />
-      </label>
-      <label>
-        描述
-        <input name="meta" value="soft synth / focus mode / local setting" />
-      </label>
-      <label>
-        来源
-        <input name="provider" value="Local synth" />
-      </label>
-      <label>
-        外链音频 URL
-        <input name="audioUrl" type="url" placeholder="https://example.com/audio.mp3" />
-      </label>
-      <label>
-        Lyric / waveform line
-        <input name="lyric" value="think slowly / connect clearly / ship carefully" />
-      </label>
-      <label>
-        音高
-        <input name="tone" type="range" min="160" max="520" value="220" />
-      </label>
-      <button type="submit">保存默认音乐</button>
-    </form>
+    <section class="music-settings" aria-label="添加音乐条目">
+      <div class="music-settings__head">
+        <p>Playlist intake</p>
+        <h2>添加到 OS 歌单</h2>
+      </div>
+
+      <form id="music-settings-form" data-music-settings>
+        <label>
+          曲名
+          <input name="title" value="Quiet Knowledge Loop" required />
+        </label>
+        <label>
+          艺术家
+          <input name="artist" value="caolei OS" />
+        </label>
+        <label>
+          专辑 / 场景
+          <input name="album" value="Local focus mode" />
+        </label>
+        <label>
+          来源
+          <select name="provider">
+            <option value="Local synth">Local synth</option>
+            <option value="External audio">External audio</option>
+            <option value="QQ Music">QQ Music</option>
+          </select>
+        </label>
+        <label>
+          合法音频直链
+          <input name="audioUrl" type="url" placeholder="https://example.com/audio.mp3" />
+        </label>
+        <label>
+          QQ 音乐或来源链接
+          <input name="sourceUrl" type="url" placeholder="https://y.qq.com/..." />
+        </label>
+        <label>
+          封面 URL
+          <input name="coverUrl" type="url" placeholder="https://example.com/cover.jpg" />
+        </label>
+        <label>
+          Lyric / waveform line
+          <input name="lyric" value="think slowly / connect clearly / ship carefully" />
+        </label>
+        <label>
+          合成音音高
+          <input name="tone" type="range" min="160" max="520" value="220" />
+        </label>
+        <button type="submit">添加条目</button>
+      </form>
+
+      <div class="music-policy-note">
+        <strong>接入边界</strong>
+        <p>当前实现采用 A+B 方案：播放器功能在 OS 内完成，QQ 音乐只保存公开可见的歌单元数据和跳转链接。只有拿到官方授权、SDK 或可合规播放的 URL 时，才在站内直接播放完整歌曲。</p>
+      </div>
+    </section>
   </div>
 </BaseLayout>
 
 <script>
   const form = document.querySelector('[data-music-settings]') as HTMLFormElement | null;
-  const stored = window.localStorage.getItem('caolei-default-track');
-  if (form && stored) {
-    try {
-      const data = JSON.parse(stored);
-      if (data.title) (form.elements.namedItem('title') as HTMLInputElement).value = data.title;
-      if (data.meta) (form.elements.namedItem('meta') as HTMLInputElement).value = data.meta;
-      if (data.provider) (form.elements.namedItem('provider') as HTMLInputElement).value = data.provider;
-      if (data.audioUrl) (form.elements.namedItem('audioUrl') as HTMLInputElement).value = data.audioUrl;
-      if (data.lyric) (form.elements.namedItem('lyric') as HTMLInputElement).value = data.lyric;
-      if (data.tone) (form.elements.namedItem('tone') as HTMLInputElement).value = String(data.tone);
-    } catch (e) {
-      // ignore
-    }
-  }
 
   form?.addEventListener('submit', (event) => {
     event.preventDefault();
+    const provider = (form.elements.namedItem('provider') as HTMLSelectElement).value;
     const data = {
       title: (form.elements.namedItem('title') as HTMLInputElement).value,
-      meta: (form.elements.namedItem('meta') as HTMLInputElement).value,
-      provider: (form.elements.namedItem('provider') as HTMLInputElement).value,
+      artist: (form.elements.namedItem('artist') as HTMLInputElement).value,
+      album: (form.elements.namedItem('album') as HTMLInputElement).value,
+      provider,
       audioUrl: (form.elements.namedItem('audioUrl') as HTMLInputElement).value,
+      sourceUrl: (form.elements.namedItem('sourceUrl') as HTMLInputElement).value,
+      coverUrl: (form.elements.namedItem('coverUrl') as HTMLInputElement).value,
       lyric: (form.elements.namedItem('lyric') as HTMLInputElement).value,
       tone: Number((form.elements.namedItem('tone') as HTMLInputElement).value)
     };
-    window.localStorage.setItem('caolei-default-track', JSON.stringify(data));
-    window.dispatchEvent(new CustomEvent('caolei:music-updated'));
+
+    (window as any).caoleiMusicController?.addTrack(data);
+    form.reset();
+    (form.elements.namedItem('title') as HTMLInputElement).value = '';
+    (form.elements.namedItem('provider') as HTMLSelectElement).value = provider;
   });
 </script>
 
 <style>
   .music-page-header {
-    max-width: 760px;
+    max-width: 820px;
     margin: clamp(2rem, 6vw, 5rem) 0 2rem;
   }
 
@@ -104,7 +125,7 @@ import MusicPlayer from '../components/MusicPlayer.astro';
 
   .music-page-grid {
     display: grid;
-    grid-template-columns: minmax(280px, 0.9fr) minmax(280px, 1fr);
+    grid-template-columns: minmax(300px, 1.05fr) minmax(280px, 0.82fr);
     gap: clamp(1.5rem, 5vw, 4rem);
     align-items: start;
   }
@@ -116,6 +137,25 @@ import MusicPlayer from '../components/MusicPlayer.astro';
     padding-top: 1.25rem;
   }
 
+  .music-settings__head p {
+    margin: 0 0 0.25rem;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-gray-500);
+  }
+
+  .music-settings__head h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: var(--color-gray-800);
+  }
+
+  .music-settings form {
+    display: grid;
+    gap: 1rem;
+  }
+
   .music-settings label {
     display: grid;
     gap: 0.45rem;
@@ -123,7 +163,8 @@ import MusicPlayer from '../components/MusicPlayer.astro';
     font-size: 0.9rem;
   }
 
-  .music-settings input {
+  .music-settings input,
+  .music-settings select {
     width: 100%;
     border: 1px solid var(--color-tinted-cream);
     background: rgb(255 255 255 / 0.68);
@@ -140,7 +181,23 @@ import MusicPlayer from '../components/MusicPlayer.astro';
     font-weight: 700;
   }
 
-  @media (max-width: 760px) {
+  .music-policy-note {
+    border-top: 1px solid var(--color-tinted-cream);
+    padding-top: 1rem;
+    color: var(--color-gray-600);
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .music-policy-note strong {
+    color: var(--color-gray-800);
+  }
+
+  .music-policy-note p {
+    margin: 0.35rem 0 0;
+  }
+
+  @media (max-width: 860px) {
     .music-page-grid {
       grid-template-columns: 1fr;
     }

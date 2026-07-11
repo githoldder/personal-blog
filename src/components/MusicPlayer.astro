@@ -1,15 +1,19 @@
 ---
 interface Props {
   compact?: boolean;
+  showQueue?: boolean;
 }
 
-const { compact = false } = Astro.props;
+const { compact = false, showQueue = false } = Astro.props;
 ---
 
-<section class={`music-player ${compact ? 'music-player--compact' : ''}`} data-music-player>
+<section
+  class={`music-player ${compact ? 'music-player--compact' : ''} ${showQueue ? 'music-player--queue' : ''}`}
+  data-music-player
+>
   <div class="music-record" aria-hidden="true">
     <div class="music-record__disc">
-      <span></span>
+      <span data-music-cover></span>
     </div>
   </div>
   <div class="music-player__body">
@@ -22,136 +26,298 @@ const { compact = false } = Astro.props;
       ))}
     </div>
     <p class="music-lyric" data-music-lyric>think slowly / connect clearly / ship carefully</p>
+    <div class="music-progress">
+      <span data-music-current>0:00</span>
+      <input type="range" min="0" max="1000" value="0" data-music-seek aria-label="播放进度" />
+      <span data-music-duration>0:00</span>
+    </div>
     <div class="music-player__controls">
-      <button type="button" data-music-toggle aria-label="播放或暂停默认音乐">
+      <button type="button" data-music-prev aria-label="上一首">Prev</button>
+      <button type="button" data-music-toggle aria-label="播放或暂停">
         <span data-music-state>Play</span>
       </button>
-      <a href="/music">设置默认音乐</a>
+      <button type="button" data-music-next aria-label="下一首">Next</button>
+      <button type="button" data-music-mode aria-label="切换播放模式">List</button>
+      <label class="music-volume">
+        <span>Vol</span>
+        <input type="range" min="0" max="100" value="82" data-music-volume aria-label="音量" />
+      </label>
+      <a href="/music" data-music-settings-link>音乐中心</a>
+      <a href="#" data-music-source hidden>在来源打开</a>
     </div>
+    {showQueue && (
+      <ol class="music-queue" data-music-queue aria-label="音乐队列"></ol>
+    )}
   </div>
 </section>
 
 <script is:inline>
-  const players = document.querySelectorAll('[data-music-player]');
-  const defaultTrack = {
-    title: 'Quiet Knowledge Loop',
-    meta: 'soft synth / focus mode / local setting',
-    provider: 'Local synth',
-    tone: 220,
-    audioUrl: '',
-    lyric: 'think slowly / connect clearly / ship carefully'
-  };
-
-  const readTrack = () => {
-    try {
-      return { ...defaultTrack, ...JSON.parse(window.localStorage.getItem('caolei-default-track') || '{}') };
-    } catch (e) {
-      return defaultTrack;
+  (() => {
+    if (window.caoleiMusicController) {
+      window.caoleiMusicController.mountAll();
+      return;
     }
-  };
 
-  let audioContext;
-  let oscillator;
-  let gain;
-  let analyser;
-  let sourceNode;
-  let mediaElement;
-  let spectrumFrame;
-  let playing = false;
+    const defaultTrack = {
+      id: 'local-quiet-knowledge-loop',
+      title: 'Quiet Knowledge Loop',
+      artist: 'caolei OS',
+      album: 'Local focus mode',
+      provider: 'Local synth',
+      tone: 220,
+      audioUrl: '',
+      sourceUrl: '',
+      coverUrl: '',
+      lyric: 'think slowly / connect clearly / ship carefully'
+    };
 
-  const spectrumBars = () => document.querySelectorAll('.music-spectrum span');
+    const storageKeys = {
+      queue: 'caolei-music-queue',
+      state: 'caolei-music-state',
+      legacyTrack: 'caolei-default-track'
+    };
 
-  const resetSpectrum = () => {
-    cancelAnimationFrame(spectrumFrame);
-    spectrumBars().forEach((bar, idx) => {
-      bar.style.setProperty('--level', String(0.18 + (idx % 5) * 0.05));
+    const state = {
+      queue: [defaultTrack],
+      index: 0,
+      mode: 'list',
+      volume: 0.82,
+      playing: false,
+      ready: false
+    };
+
+    let audioContext;
+    let oscillator;
+    let gain;
+    let analyser;
+    let sourceNode;
+    let mediaElement;
+    let spectrumFrame;
+    const mounted = new Set();
+
+    const normalizeTrack = (track, idx = 0) => ({
+      ...defaultTrack,
+      ...track,
+      id: track?.id || `${track?.title || 'track'}-${idx}`.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+      tone: Number(track?.tone) || defaultTrack.tone
     });
-  };
 
-  const animateSpectrum = () => {
-    const bars = spectrumBars();
-    if (!playing) return;
-
-    if (analyser) {
-      const data = new Uint8Array(analyser.frequencyBinCount);
-      analyser.getByteFrequencyData(data);
-      bars.forEach((bar, idx) => {
-        const value = data[Math.floor((idx / bars.length) * data.length)] || 0;
-        bar.style.setProperty('--level', String(Math.max(0.12, value / 255)));
-      });
-    } else {
-      const now = Date.now() / 420;
-      bars.forEach((bar, idx) => {
-        const value = 0.24 + Math.abs(Math.sin(now + idx * 0.72)) * 0.72;
-        bar.style.setProperty('--level', String(value));
-      });
-    }
-
-    spectrumFrame = requestAnimationFrame(animateSpectrum);
-  };
-
-  const stopTone = () => {
-    cancelAnimationFrame(spectrumFrame);
-    if (mediaElement) {
-      mediaElement.pause();
-      mediaElement.currentTime = 0;
-      mediaElement = null;
-    }
-    if (oscillator) {
-      oscillator.stop();
-      oscillator.disconnect();
-      oscillator = null;
-    }
-    if (sourceNode) {
-      sourceNode.disconnect();
-      sourceNode = null;
-    }
-    if (gain) {
-      gain.disconnect();
-      gain = null;
-    }
-    if (analyser) {
-      analyser.disconnect();
-      analyser = null;
-    }
-    playing = false;
-    document.body.classList.remove('music-playing');
-    document.querySelectorAll('[data-music-state]').forEach(node => node.textContent = 'Play');
-    resetSpectrum();
-  };
-
-  const startTone = async () => {
-    const track = readTrack();
-    audioContext = audioContext || new window.AudioContext();
-    analyser = audioContext.createAnalyser();
-    analyser.fftSize = 128;
-    gain = audioContext.createGain();
-    gain.gain.value = track.audioUrl ? 0.55 : 0.035;
-
-    if (track.audioUrl) {
-      mediaElement = new Audio();
-      mediaElement.crossOrigin = 'anonymous';
-      mediaElement.src = track.audioUrl;
-      mediaElement.loop = true;
-      mediaElement.volume = 0.82;
+    const loadJson = (key, fallback) => {
       try {
-        sourceNode = audioContext.createMediaElementSource(mediaElement);
-        sourceNode.connect(analyser);
-        analyser.connect(gain);
-        gain.connect(audioContext.destination);
-        await mediaElement.play();
+        return JSON.parse(window.localStorage.getItem(key) || 'null') || fallback;
       } catch (e) {
-        sourceNode?.disconnect();
-        sourceNode = null;
-        oscillator = audioContext.createOscillator();
-        oscillator.type = 'sine';
-        oscillator.frequency.value = Number(track.tone) || defaultTrack.tone;
-        oscillator.connect(analyser);
-        analyser.connect(gain);
-        gain.connect(audioContext.destination);
-        oscillator.start();
+        return fallback;
       }
-    } else {
+    };
+
+    const saveState = () => {
+      window.localStorage.setItem(storageKeys.state, JSON.stringify({
+        index: state.index,
+        mode: state.mode,
+        volume: state.volume
+      }));
+    };
+
+    const currentTrack = () => state.queue[state.index] || defaultTrack;
+    const players = () => Array.from(document.querySelectorAll('[data-music-player]'));
+    const spectrumBars = () => document.querySelectorAll('.music-spectrum span');
+
+    const formatTime = (value) => {
+      if (!Number.isFinite(value) || value < 0) return '0:00';
+      const minutes = Math.floor(value / 60);
+      const seconds = Math.floor(value % 60);
+      return `${minutes}:${String(seconds).padStart(2, '0')}`;
+    };
+
+    const resetSpectrum = () => {
+      cancelAnimationFrame(spectrumFrame);
+      spectrumBars().forEach((bar, idx) => {
+        bar.style.setProperty('--level', String(0.18 + (idx % 5) * 0.05));
+      });
+    };
+
+    const animateSpectrum = () => {
+      if (!state.playing) return;
+      const bars = spectrumBars();
+
+      if (analyser) {
+        const data = new Uint8Array(analyser.frequencyBinCount);
+        analyser.getByteFrequencyData(data);
+        bars.forEach((bar, idx) => {
+          const value = data[Math.floor((idx / bars.length) * data.length)] || 0;
+          bar.style.setProperty('--level', String(Math.max(0.12, value / 255)));
+        });
+      } else {
+        const now = Date.now() / 420;
+        bars.forEach((bar, idx) => {
+          const value = 0.24 + Math.abs(Math.sin(now + idx * 0.72)) * 0.72;
+          bar.style.setProperty('--level', String(value));
+        });
+      }
+
+      spectrumFrame = requestAnimationFrame(animateSpectrum);
+    };
+
+    const stopNodes = ({ resetTime = false } = {}) => {
+      cancelAnimationFrame(spectrumFrame);
+      if (mediaElement) {
+        mediaElement.pause();
+        if (resetTime) mediaElement.currentTime = 0;
+      }
+      if (oscillator) {
+        oscillator.stop();
+        oscillator.disconnect();
+        oscillator = null;
+      }
+      if (sourceNode) {
+        sourceNode.disconnect();
+        sourceNode = null;
+      }
+      if (gain) {
+        gain.disconnect();
+        gain = null;
+      }
+      if (analyser) {
+        analyser.disconnect();
+        analyser = null;
+      }
+    };
+
+    const syncMediaSession = () => {
+      if (!('mediaSession' in navigator)) return;
+      const track = currentTrack();
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: track.title,
+        artist: track.artist || track.provider,
+        album: track.album || 'Personal Knowledge Asset OS',
+        artwork: track.coverUrl ? [{ src: track.coverUrl, sizes: '512x512', type: 'image/jpeg' }] : []
+      });
+      navigator.mediaSession.setActionHandler('play', () => play());
+      navigator.mediaSession.setActionHandler('pause', () => pause());
+      navigator.mediaSession.setActionHandler('previoustrack', () => previous());
+      navigator.mediaSession.setActionHandler('nexttrack', () => next());
+      navigator.mediaSession.playbackState = state.playing ? 'playing' : 'paused';
+    };
+
+    const updateProgress = () => {
+      const current = mediaElement?.currentTime || 0;
+      const duration = mediaElement?.duration || 0;
+      players().forEach(player => {
+        const seek = player.querySelector('[data-music-seek]');
+        const currentNode = player.querySelector('[data-music-current]');
+        const durationNode = player.querySelector('[data-music-duration]');
+        if (seek && duration > 0 && document.activeElement !== seek) {
+          seek.value = String(Math.round((current / duration) * 1000));
+        } else if (seek && duration <= 0) {
+          seek.value = '0';
+        }
+        if (currentNode) currentNode.textContent = formatTime(current);
+        if (durationNode) durationNode.textContent = formatTime(duration);
+      });
+    };
+
+    const render = () => {
+      const track = currentTrack();
+      document.body.classList.toggle('music-playing', state.playing);
+      players().forEach(player => {
+        const title = player.querySelector('[data-music-title]');
+        const meta = player.querySelector('[data-music-meta]');
+        const provider = player.querySelector('[data-music-provider]');
+        const lyric = player.querySelector('[data-music-lyric]');
+        const stateNode = player.querySelector('[data-music-state]');
+        const modeNode = player.querySelector('[data-music-mode]');
+        const sourceLink = player.querySelector('[data-music-source]');
+        const volume = player.querySelector('[data-music-volume]');
+        const cover = player.querySelector('[data-music-cover]');
+        const queue = player.querySelector('[data-music-queue]');
+
+        if (title) title.textContent = track.title || defaultTrack.title;
+        if (meta) meta.textContent = [track.artist, track.album].filter(Boolean).join(' / ') || track.meta || defaultTrack.meta;
+        if (provider) provider.textContent = track.provider || (track.audioUrl ? 'External audio' : defaultTrack.provider);
+        if (lyric) lyric.textContent = track.lyric || defaultTrack.lyric;
+        if (stateNode) stateNode.textContent = state.playing ? 'Pause' : 'Play';
+        if (modeNode) modeNode.textContent = state.mode === 'shuffle' ? 'Shuffle' : state.mode === 'one' ? 'One' : 'List';
+        if (volume) volume.value = String(Math.round(state.volume * 100));
+        if (sourceLink) {
+          sourceLink.hidden = !track.sourceUrl;
+          sourceLink.href = track.sourceUrl || '#';
+        }
+        if (cover) {
+          cover.style.backgroundImage = track.coverUrl ? `url("${track.coverUrl}")` : '';
+        }
+        if (queue) {
+          queue.innerHTML = '';
+          state.queue.forEach((item, idx) => {
+            const li = document.createElement('li');
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.dataset.musicPick = String(idx);
+            button.className = idx === state.index ? 'is-active' : '';
+            button.innerHTML = `<strong></strong><span></span>`;
+            button.querySelector('strong').textContent = item.title;
+            button.querySelector('span').textContent = [item.artist, item.provider].filter(Boolean).join(' / ');
+            li.append(button);
+            queue.append(li);
+          });
+        }
+      });
+      updateProgress();
+      syncMediaSession();
+    };
+
+    const pause = () => {
+      state.playing = false;
+      if (mediaElement) mediaElement.pause();
+      if (audioContext?.state === 'running') audioContext.suspend();
+      document.body.classList.remove('music-playing');
+      resetSpectrum();
+      render();
+    };
+
+    const play = async () => {
+      const track = currentTrack();
+      stopNodes();
+      audioContext = audioContext || new window.AudioContext();
+      if (audioContext.state === 'suspended') await audioContext.resume();
+      analyser = audioContext.createAnalyser();
+      analyser.fftSize = 128;
+      gain = audioContext.createGain();
+      gain.gain.value = track.audioUrl ? state.volume : Math.max(0.01, state.volume * 0.045);
+
+      if (track.audioUrl) {
+        mediaElement = new Audio();
+        mediaElement.crossOrigin = 'anonymous';
+        mediaElement.preload = 'metadata';
+        mediaElement.src = track.audioUrl;
+        mediaElement.volume = state.volume;
+        mediaElement.addEventListener('timeupdate', updateProgress);
+        mediaElement.addEventListener('loadedmetadata', updateProgress);
+        mediaElement.addEventListener('ended', () => next({ fromEnded: true }));
+        try {
+          sourceNode = audioContext.createMediaElementSource(mediaElement);
+          sourceNode.connect(analyser);
+          analyser.connect(gain);
+          gain.connect(audioContext.destination);
+          await mediaElement.play();
+        } catch (e) {
+          stopNodes();
+          await playSynth(track);
+        }
+      } else {
+        await playSynth(track);
+      }
+
+      state.playing = true;
+      animateSpectrum();
+      render();
+    };
+
+    const playSynth = async (track) => {
+      audioContext = audioContext || new window.AudioContext();
+      if (audioContext.state === 'suspended') await audioContext.resume();
+      analyser = analyser || audioContext.createAnalyser();
+      gain = gain || audioContext.createGain();
+      gain.gain.value = Math.max(0.01, state.volume * 0.045);
       oscillator = audioContext.createOscillator();
       oscillator.type = 'sine';
       oscillator.frequency.value = Number(track.tone) || defaultTrack.tone;
@@ -159,40 +325,116 @@ const { compact = false } = Astro.props;
       analyser.connect(gain);
       gain.connect(audioContext.destination);
       oscillator.start();
-    }
+    };
 
-    playing = true;
-    document.body.classList.add('music-playing');
-    document.querySelectorAll('[data-music-state]').forEach(node => node.textContent = 'Pause');
-    animateSpectrum();
-  };
+    const select = async (idx, autoplay = state.playing) => {
+      state.index = (idx + state.queue.length) % state.queue.length;
+      saveState();
+      if (autoplay) await play();
+      else render();
+    };
 
-  const syncTrackLabels = () => {
-    const track = readTrack();
-    players.forEach(player => {
-      const title = player.querySelector('[data-music-title]');
-      const meta = player.querySelector('[data-music-meta]');
-      const provider = player.querySelector('[data-music-provider]');
-      const lyric = player.querySelector('[data-music-lyric]');
-      if (title) title.textContent = track.title || defaultTrack.title;
-      if (meta) meta.textContent = track.meta || defaultTrack.meta;
-      if (provider) provider.textContent = track.provider || (track.audioUrl ? 'External audio' : defaultTrack.provider);
-      if (lyric) lyric.textContent = track.lyric || defaultTrack.lyric;
-    });
-  };
-
-  resetSpectrum();
-  syncTrackLabels();
-  window.addEventListener('storage', syncTrackLabels);
-  window.addEventListener('caolei:music-updated', syncTrackLabels);
-
-  players.forEach(player => {
-    player.querySelector('[data-music-toggle]')?.addEventListener('click', async () => {
-      if (playing) {
-        stopTone();
-      } else {
-        await startTone();
+    const next = async ({ fromEnded = false } = {}) => {
+      if (state.mode === 'one' && fromEnded) {
+        await play();
+        return;
       }
-    });
-  });
+      const idx = state.mode === 'shuffle'
+        ? Math.floor(Math.random() * state.queue.length)
+        : state.index + 1;
+      await select(idx, state.playing || fromEnded);
+    };
+
+    const previous = async () => {
+      await select(state.index - 1, state.playing);
+    };
+
+    const addTrack = (track) => {
+      state.queue = [...state.queue, normalizeTrack(track, state.queue.length)];
+      window.localStorage.setItem(storageKeys.queue, JSON.stringify(state.queue));
+      render();
+    };
+
+    const replaceQueue = (tracks) => {
+      const nextQueue = tracks.map(normalizeTrack).filter(Boolean);
+      state.queue = nextQueue.length ? nextQueue : [defaultTrack];
+      state.index = Math.min(state.index, state.queue.length - 1);
+      window.localStorage.setItem(storageKeys.queue, JSON.stringify(state.queue));
+      render();
+    };
+
+    const hydrate = async () => {
+      const persisted = loadJson(storageKeys.state, {});
+      state.mode = persisted.mode || state.mode;
+      state.volume = Number.isFinite(persisted.volume) ? persisted.volume : state.volume;
+      const storedQueue = loadJson(storageKeys.queue, []);
+      let baseQueue = [];
+      try {
+        const response = await fetch('/assets/music-library.json', { cache: 'no-store' });
+        if (response.ok) {
+          const data = await response.json();
+          baseQueue = Array.isArray(data.tracks) ? data.tracks : [];
+        }
+      } catch (e) {
+        baseQueue = [];
+      }
+
+      const legacy = loadJson(storageKeys.legacyTrack, null);
+      const legacyQueue = legacy ? [{ ...legacy, id: 'legacy-default-track' }] : [];
+      state.queue = [...baseQueue, ...legacyQueue, ...storedQueue].map(normalizeTrack);
+      if (!state.queue.length) state.queue = [defaultTrack];
+      state.index = Math.min(Number(persisted.index) || 0, state.queue.length - 1);
+      state.ready = true;
+      render();
+    };
+
+    const mountAll = () => {
+      players().forEach(player => {
+        if (mounted.has(player)) return;
+        mounted.add(player);
+        player.querySelector('[data-music-toggle]')?.addEventListener('click', async () => {
+          if (state.playing) pause();
+          else await play();
+        });
+        player.querySelector('[data-music-prev]')?.addEventListener('click', previous);
+        player.querySelector('[data-music-next]')?.addEventListener('click', () => next());
+        player.querySelector('[data-music-mode]')?.addEventListener('click', () => {
+          state.mode = state.mode === 'list' ? 'shuffle' : state.mode === 'shuffle' ? 'one' : 'list';
+          saveState();
+          render();
+        });
+        player.querySelector('[data-music-volume]')?.addEventListener('input', (event) => {
+          state.volume = Number(event.target.value) / 100;
+          if (mediaElement) mediaElement.volume = state.volume;
+          if (gain) gain.gain.value = currentTrack().audioUrl ? state.volume : Math.max(0.01, state.volume * 0.045);
+          saveState();
+        });
+        player.querySelector('[data-music-seek]')?.addEventListener('input', (event) => {
+          if (!mediaElement?.duration) return;
+          mediaElement.currentTime = (Number(event.target.value) / 1000) * mediaElement.duration;
+          updateProgress();
+        });
+        player.querySelector('[data-music-queue]')?.addEventListener('click', async (event) => {
+          const button = event.target.closest('[data-music-pick]');
+          if (!button) return;
+          await select(Number(button.dataset.musicPick), true);
+        });
+      });
+      render();
+    };
+
+    window.caoleiMusicController = {
+      mountAll,
+      addTrack,
+      replaceQueue,
+      getQueue: () => [...state.queue],
+      getState: () => ({ ...state })
+    };
+
+    resetSpectrum();
+    mountAll();
+    hydrate();
+    window.addEventListener('storage', () => hydrate());
+    window.addEventListener('caolei:music-updated', () => hydrate());
+  })();
 </script>

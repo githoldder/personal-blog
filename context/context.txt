@@ -1,5 +1,14 @@
 # ST-Memory: Context Log
 
+## 2026-07-11T00:00:00+08:00
+- **Action**: Adopted Music Control Center A+B implementation plan and started execution.
+- **Decision Details**:
+  1. Common web player capabilities will be implemented inside the OS using browser audio primitives: queue, play/pause, previous/next, progress, volume, play mode, frequency visualization, and Media Session integration.
+  2. Supported direct playback sources are local synth fallback and user-provided legal direct audio URLs.
+  3. QQ Music integration is limited to playlist metadata, source links, and jump-out behavior until official authorization, SDK access, or compliant playable URLs are available.
+  4. Reverse-engineered QQ Music playback, cookie-based private API use, DRM bypass, and membership/geographic restriction bypass are explicit non-goals.
+- **Status**: Music module implementation is active; PRD and current boundary synchronized.
+
 ## 2026-06-28T12:56:00+08:00
 - **Action**: Connected remote repository and completed first S03 milestones.
 - **Progress Details**:

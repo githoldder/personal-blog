@@ -54,6 +54,7 @@
 - Semantic Graph：多 scope 图谱、PARA 折叠、未来 embedding/cluster。
 - Admin/API：本地 source sync、publish manifest、preview contract、安全边界。
 - Semantic Lab：LLM Agent、3D Graph、MediaPipe、WebGPU 实验。
+- Music Control Center：OS 内播放控制、本地/合法直链音频、歌单队列、QQ 音乐元数据与来源跳转。
 
 ### 4.2 Out Of Scope
 
@@ -62,6 +63,7 @@
 - 远程 LLM/embedding 默认上传私有知识资产。
 - 仅依赖 3D/手势的主导航。
 - 未经审核的 Obsidian 全量公开。
+- 未经官方授权或合规播放 URL 的 QQ 音乐完整曲库播放、DRM 绕过、逆向接口登录态接入。
 
 ## 5. Epics And User Stories
 
@@ -137,6 +139,16 @@
 | US-07-03 | 作为 Owner，我希望实验 WebGPU 和手势控制。 | P3 | 遵守 lab-input-policy，显式授权。 |
 | US-07-04 | 作为 Owner，我希望 LLM Agent 能建议摘要、分类、链接和隐私风险。 | P2 | Agent 输出仅为建议，发布需人工批准。 |
 
+### EPIC-08：Music Control Center
+
+**目标**：把音乐模块从单首默认音乐升级为 OS 内的轻量播放器与歌单控制中心，同时保持版权、登录和平台边界清晰。
+
+| Story ID | 用户故事 | Priority | 验收标准 |
+|---|---|---|---|
+| US-08-01 | 作为 Owner，我希望在 OS 内播放本地合成音或合法直链音频，以便形成稳定的专注音乐体验。 | P1 | 播放器支持播放/暂停、上一首、下一首、进度、音量、播放模式和频谱反馈。 |
+| US-08-02 | 作为 Owner，我希望保存 QQ 音乐歌单条目的元数据和来源链接，以便在 OS 内组织歌单并在必要时跳转到 QQ 音乐。 | P1 | QQ 音乐条目不提供合规音频 URL 时只展示元数据与来源跳转，不站内播放完整歌曲。 |
+| US-08-03 | 作为 Owner，我希望未来可替换为官方授权音乐服务，以便在合规前提下同步私人歌单和播放完整曲目。 | P2 | 数据源层与播放器层解耦，官方 SDK/API 可作为后续 adapter 接入。 |
+
 ## 6. Functional Requirements
 
 | ID | Requirement | Priority |
@@ -151,6 +163,7 @@
 | FR-08 | 提供本地 Admin/API/source sync 合同。 | P1 |
 | FR-09 | 支持演示稿预览和 PDF/export 按钮。 | P1 |
 | FR-10 | 为 embedding、聚类、3D graph、WebGPU、MediaPipe、LLM Agent 预留实现路径。 | P2 |
+| FR-11 | 支持音乐队列、播放控制、合法音频直链播放和 QQ 音乐元数据/跳转模式。 | P1 |
 
 ## 7. Non-Functional Requirements
 
@@ -180,6 +193,7 @@
 | 资产体积过大 | Medium | selective publishing、资产审计、未来 Git LFS/R2。 |
 | 实验功能破坏核心站点 | High | 2D/静态路径默认可用，实验室 opt-in。 |
 | 本地路径阻塞公开访问 | High | S08 source config、DOM 清理、构建期路径重写。 |
+| 第三方音乐平台版权/登录限制 | High | 采用 A+B 方案：OS 内播放器只播放本地/合法直链音频，QQ 音乐仅作为元数据和跳转来源；官方授权前不接入逆向播放接口。 |
 
 ## 10. Release Strategy
 

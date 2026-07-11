@@ -16,6 +16,7 @@ Current priority:
 9. S17 is the next implementation sprint for unfinished content-studio capabilities: multimedia upload, local text editing, deck PDF/PPTX export, Keynote adapter, Cloudflare publish gate, Typst Lab, Wiki.js-like backlinks/fuzzy search, and topic-specific reading backgrounds.
 10. S18 is the prototype-integration sprint: define the whole product route map, homepage command center, navigation model, reading modes, search command surface, library shelf, local studio shell, deck/PPTX studio, Typst compile loop, media/music/theme tools, and visual QA recovery.
 11. 2026-07-08 S18 homepage/music/library pass landed locally: first viewport gains a right-side semantic starlink preview, the resume entry is compressed, music now has record + spectrum + lyric surface and configurable external audio URL, and book cover sync uses Google Books/Open Library with local cached covers while keeping local PDF actions first.
+12. 2026-07-11 Music A+B decision is active: build an OS-native playlist/player for local synth and legal direct audio URLs, while QQ Music entries are metadata/source-link records only until an official authorization, SDK, or compliant playable URL exists. Do not implement reverse-engineered QQ Music playback or DRM/login bypass.
 
 Non-goals:
 
